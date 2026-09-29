@@ -14,6 +14,8 @@
       transition ? undefined : { snapshots: false });
     const captures = events.filter((event) => event.kind === "capture").length;
     const opponent = 1 - mover;
+    const placed = game.board.phase !== "namua" || move.type === "pass" ? 0
+      : game.board.reserve[opponent] === 0 ? game.board.reserve[mover] : 1;
     const stolen = game.board.phase === "namua" && captures >= 2 && board.reserve[opponent] > 0 ? 1 : 0;
     if (stolen) {
       board.reserve[opponent] -= 1;
@@ -21,7 +23,7 @@
     }
     const next = {
       board,
-      history: [...game.history, { player: mover, move: { ...move }, captures, stolen }],
+      history: [...game.history, { player: mover, move: { ...move }, placed, captures, stolen }],
     };
     if (transition && stolen) events.push({
       kind: "steal", from: opponent, to: mover, count: 1, state: engine.clone(board),
@@ -49,8 +51,8 @@
       if (game.board.player !== entry.player) throw new Error("Wrong player in record");
       const next = apply(game, entry.move);
       const last = next.history.at(-1);
-      if (last.captures !== entry.captures || last.stolen !== entry.stolen) {
-        throw new Error("Capture result does not match record");
+      if (last.placed !== entry.placed || last.captures !== entry.captures || last.stolen !== entry.stolen) {
+        throw new Error("Placement or capture result does not match record");
       }
       return next;
     }, initialGame());

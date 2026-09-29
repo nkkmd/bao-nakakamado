@@ -1,51 +1,39 @@
-# Bao Nakakamado — 遊べる試作 v0.4
+# Bao Nakakamado — 遊べる試作 v0.5（一穴全投入の試用）
 
-Bao la Kiswahili の [`public/engine.js`](https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/public/engine.js) を、2026-09-29 時点の blob `1527bb3665228b7a5bd9f03153567aedbaaa22d7` から取り込み、`prototype/engine.js` として変更せずに使用する。試作ルールは `steal.js` に分けた。画面は元ゲームの暗緑色、金色のアクセント、盤面の配色を参考に作成した。元の分析タグ、棋譜送信機能、AI-GEN4、PWAは取り込んでいない。
+Bao la Kiswahili の [元エンジン](https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/public/engine.js) の 2026-09-29 時点の blob `1527bb3665228b7a5bd9f03153567aedbaaa22d7` を `engine.js` に変更せず保存した。実際の試作画面は、NAMUAの投入だけ変更した `bulk-engine.js` と、KETE奪取を扱う `steal.js` を使う。画面は元ゲームの盤面・配色を参考に作成し、元の分析タグ、棋譜送信、AI-GEN4、PWAは取り込んでいない。
 
-## 試作のルール
+## 試作ルール
 
-- 通常の合法手、石の移動、捕獲、勝敗判定は元のエンジンに委ねる。
-- NAMUA中の**同じ着手の中で2回以上捕獲**した場合、着手後に相手のハンドからKETEを1個、自分のハンドへ移す。捕獲3回以上でも、一手につき移すのは1個だけ。
-- 相手のハンドが空なら移動しない。MTAJI中、捕獲が1回だけの手、捕獲のない手では移動しない。終局した着手も同じ条件で扱う。
-- 捕獲回数には、最初の捕獲と、同じ着手で連続種まき中に起きた捕獲の両方を数える。複数の手番にまたがる捕獲は数えない。
-- ハンド間の移動なのでKETEの総数は変わらない。奪ったKETEは後のNAMUAの着手に使える。片方のハンドが先に空になった場合、元のエンジンのパスと段階移行の扱いに従う。
+- NAMUA中、相手のハンドが0で自分のハンドが2個以上なら、合法な穴・方向を一度選び、**自分のハンドの全KETEを選んだ一穴へ置く**。投入し終わってから元の捕獲またはtakata、連続種まき、nyumba、終局を処理する。穴から次の穴へ分配したり、途中で新しい穴・方向を選んだりはしない。
+- 自分のハンドが1個なら通常の1個投入。相手のハンドにKETEが残っている間も通常の1個投入。
+- ハンドが0の側は、両者が0になるまでは元エンジンどおりNAMUAでパスする。両者が0になればMTAJIへ移る。MTAJIの着手と勝敗判定は従来どおり。片側だけ先にMTAJIへ入る案は未実装。
+- NAMUAの**一着手内で2回以上捕獲**し、相手のハンドにKETEが残っていれば、着手後に相手から自分のハンドへ1個だけ移す。最初の捕獲と連続種まき中の捕獲を数える。3回以上でも1個。捕獲が1回以下、相手ハンド0、MTAJIの着手には適用しない。
+- KETE総数は元エンジンと同じ。勝負宣言・抽選・追加手番は削除済みで、運要素の検討は凍結中。
 
-この移動の強さ、先後差、対局時間への影響は探索的な試験段階であり、正式採用前の試作ルールとして扱う。[先攻・後攻差の試験記録](../doc/FIRST_PLAYER_BALANCE_20260929.md)では、簡易的な手選びで現行パス方式と個別MTAJI案を比較した。均衡や一般的な棋力は未確定である。元の採用ルールと既知の差異は [RULES_BASELINE.md](https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/doc/RULES_BASELINE.md) を参照。運要素の検討は凍結し、v0.1の勝負宣言・抽選・追加手番はこの試作から削除した。
-
-ハンドが先に空になった側を先にMTAJIへ移す案は[次の検討項目](../doc/HAND_EXHAUSTION_PHASE_CANDIDATE.md)に記録した。現在の試作には適用していない。
-
-相手のハンドが0のとき、自分の残りを選んだ一穴へ全投入する案も[探索的調査](../doc/FIXED_PIT_BULK_STUDY_20260930.md)に記録した。合法手なしの終局と先後差を比較したが、未採用であり試作 v0.4 の挙動は変えていない。
-
-3案の試験結果・暫定順位と人間対局の観察点は[比較記録](../doc/HAND_EXHAUSTION_OPTIONS_REVIEW_20260930.md)を参照。順位は未確定であり、画面にはまだ両候補を実装していない。
+一穴全投入は**人間での納得感を試す候補**であり、正式採用ではない。[探索的試験](../doc/FIXED_PIT_BULK_STUDY_20260930.md)ではハンドが先に空になった側の勝つ余地と `no-move` 終局、平均手数がともに増えた。均衡や楽しさの結論は出ていない。[試用版の仕様と確認点](../doc/FIXED_PIT_BULK_TRIAL_20260930.md)、[3案の暫定比較](../doc/HAND_EXHAUSTION_OPTIONS_REVIEW_20260930.md)を参照。元ルールとの差異の基準は [RULES_BASELINE.md](https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/doc/RULES_BASELINE.md)。
 
 ## 遊び方
-
-`prototype/` を静的HTTPサーバーで配信する。
 
 ```sh
 python3 -m http.server 8000 --directory prototype
 ```
 
-ブラウザーで `http://localhost:8000/` を開く。2人対戦か簡易コンピューター対戦を選び、光っている穴と着手方向を選ぶ。KETEを奪う手は着手候補に表示され、結果はハンド表示と履歴欄に反映される。
+`http://localhost:8000/` で2人対戦か簡易コンピューター対戦を選び、光る穴と着手方向を選ぶ。全投入の手番ではハンドの個数と全投入を画面・着手候補に表示する。選択後は各KETEの投入、捕獲・種まき・奪取を盤面とハンドの数で順に自動再生し、終わると次の手番へ進む。再生中は着手できない。
 
-着手後は、ハンドからの投入、持ち上げ、種まき、捕獲、連続種まき、KETEの奪取を盤面上で自動再生する。変化した穴を強調し、盤面とハンドの数を段階ごとに更新して、内容を盤面下に表示する。再生が終わると次の手番へ進み、コンピューターはその後に着手する。再生中は次の着手を受け付けない。表示間隔は元ゲームの遷移表示に準じ、イベント数と画面幅に応じて調整する。
-
-棋譜を保存すると、着手・その着手の捕獲回数・奪った数・最終局面をJSONでダウンロードする。形式は `version: 2` で、v0.1の抽選を含む棋譜とは互換性がない。画面からの棋譜読み込み・再生は実装していない。
-
-コンピューターは試作用の簡易的な一手評価で着手を選ぶ。KETE移動後の局面を評価するが、元ゲームのAI-GEN4ではなく、その棋力を示すものでもない。
+棋譜のJSONダウンロードは `version: 3`、`variantRule: "namua-steal-one-and-fixed-pit-bulk"`。各着手に `placed`（ハンドから置いた数）、`captures`、`stolen` を記録する。従来の `version: 2` と同じルールで再現できるとは限らない。画面からの棋譜読み込みは未実装。コンピューターは試作用の簡易一手評価であり、元のAI-GEN4ではない。
 
 ## 検証
 
 ```sh
-node --test prototype/steal.test.js
+node --test prototype/steal.test.js prototype/app.test.cjs tools/fixed-pit-bulk-study.test.cjs tools/fixed-pit-triggered-study.test.cjs
 ```
 
-到達可能なNAMUAの局面で、連続捕獲と単独捕獲、相手のハンドが空の場合、MTAJIでの不適用、KETE総数、棋譜からの再構築を確認する。遷移表示の各段階に局面があり、奪取段階が確定局面と一致することも確認する。一般的なバランスや棋力はまだ評価していない。
+到達可能な全投入局面の捕獲・takata・nyumba・即時 `no-move`、1個投入への切替、総数保存、各投入段階の再生、棋譜再構築、既存研究実装との一致を確認する。保存した元の `engine.js` を使用する研究ツールはこの試作で変更しない。一般的な先後均衡と人間の理解しやすさは未検証。
 
 ## Cloudflare Pages の配置
 
-GitHubリポジトリを Pages プロジェクトへ接続する場合、production branch を `main`、build command を空欄、build output directory を `prototype` にする。静的HTML/CSS/JavaScriptだけなのでビルドは不要。手動配信では `prototype/` の中身をルートに置く。
+GitHub連携時は production branch `main`、build command 空欄、build output directory `prototype`。手動配信では `prototype/` の**中身**を配信ルートへ置く。ビルドは不要。
 
 ## 出典・ライセンス
 
-取り込んだ `engine.js` は [bao-la-kiswahili-game のMIT License](ENGINE_LICENSE.txt) に従う。元の著作権表示と許諾条件をこのファイルへ保持した。試作独自のコード・説明文のライセンスは現時点で未設定であり、元ゲームの図解ルール画像・文章を複製していない。
+`engine.js` とそこから改変した `bulk-engine.js` は [bao-la-kiswahili-game のMIT License](ENGINE_LICENSE.txt) に従う。著作権表示と許諾条件を保持した。試作独自のコード・説明文のライセンスは現時点で未設定。元ゲームの図解ルール画像・文章は複製していない。

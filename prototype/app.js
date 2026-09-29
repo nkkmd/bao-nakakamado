@@ -16,6 +16,10 @@
 
   function name(player) { return player === 0 ? "SOUTH" : "NORTH"; }
   function humanTurn() { return mode === "local" || game.board.player === human; }
+  function bulkCount(board) {
+    return board.phase === "namua" && board.reserve[1 - board.player] === 0
+      && board.reserve[board.player] > 1 ? board.reserve[board.player] : 0;
+  }
   function variants() { return S.moveVariants(game); }
   function key(move) { return `${move.row}:${move.index}`; }
   function selectable() { return started && !busy && game.board.winner === null && humanTurn(); }
@@ -82,7 +86,9 @@
   function eventDescription(event) {
     const place = event.position ? pitName(event.position) : "";
     switch (event.kind) {
-      case "reserve": return `${name(event.position.player)} のハンドから ${place} にKETEを1個置きました。`;
+      case "reserve": return event.total > 1
+        ? `${name(event.position.player)} のハンドから ${place} にKETEを1個置きました。一穴全投入 ${event.placed}/${event.total}。`
+        : `${name(event.position.player)} のハンドから ${place} にKETEを1個置きました。`;
       case "lift": return `${place} からKETEを${event.count}個持ち上げました。`;
       case "sow": return `${place} にKETEを1個蒔きました。`;
       case "relay": return `${place} から${event.count}個で連続種まきします。`;
@@ -118,6 +124,7 @@
     busy = false;
     const result = game.history.at(-1);
     if (result?.stolen) lastResult = `${name(result.player)} が同じ着手で${result.captures}回捕獲し、${name(1 - result.player)} のハンドからKETEを1個奪いました。`;
+    else if (result?.placed > 1) lastResult = `${name(result.player)} がハンドのKETEを${result.placed}個、選んだ一穴へ全投入しました。`;
     render();
     scheduleComputer();
   }
@@ -174,6 +181,7 @@
     else if (state.winner !== null) $("status").textContent = `${name(state.winner)} の勝ち（${state.reason}）。`;
     else if (busy) $("status").textContent = "コンピューターが考えています…";
     else if (!humanTurn()) $("status").textContent = `${name(state.player)} の手番です。待機中…`;
+    else if (bulkCount(state)) $("status").textContent = `${name(state.player)} の手番。ハンドのKETE ${bulkCount(state)}個を選んだ一穴へ全投入します。光る穴を選んでください。`;
     else $("status").textContent = `${name(state.player)} の手番。光る穴を選んでください。`;
     if (!selectable()) return;
     const candidates = selected ? moves.filter((m) => m.row === selected.row && m.index === selected.index) : [];
@@ -187,7 +195,7 @@
       const button = document.createElement("button");
       button.type = "button";
       const preview = S.apply(game, move).history.at(-1);
-      button.textContent = `${moveLabel(move)}${preview.stolen ? "・相手のハンドからKETEを1個奪う" : ""}`;
+      button.textContent = `${moveLabel(move)}${preview.placed > 1 ? `・ハンドの${preview.placed}個を一穴へ全投入` : ""}${preview.stolen ? "・相手のハンドからKETEを1個奪う" : ""}`;
       button.addEventListener("click", () => play(move));
       choices.append(button);
     }
@@ -275,7 +283,7 @@
   });
   $("download").addEventListener("click", () => {
     if (!started || !game.history.length) return;
-    const record = { format: "bao-nakakamado-prototype", version: 2, baseRules: "R-002", variantRule: "namua-multi-capture-steal-one", mode, history: game.history, final: game.board };
+    const record = { format: "bao-nakakamado-prototype", version: 3, baseRules: "R-002", variantRule: "namua-steal-one-and-fixed-pit-bulk", mode, history: game.history, final: game.board };
     const blob = new Blob([JSON.stringify(record, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
