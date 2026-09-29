@@ -14,6 +14,8 @@ Bao la Kiswahili の [`public/engine.js`](https://github.com/nkkmd/bao-la-kiswah
 
 ハンドが先に空になった側を先にMTAJIへ移す案は[次の検討項目](../doc/HAND_EXHAUSTION_PHASE_CANDIDATE.md)に記録した。現在の試作には適用していない。
 
+相手のハンドが0のとき、自分の残りを選んだ一穴へ全投入する案も[探索的調査](../doc/FIXED_PIT_BULK_STUDY_20260930.md)に記録した。合法手なしの終局と先後差を比較したが、未採用であり試作 v0.4 の挙動は変えていない。
+
 ## 遊び方
 
 `prototype/` を静的HTTPサーバーで配信する。
