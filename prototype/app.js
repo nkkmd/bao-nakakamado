@@ -86,8 +86,8 @@
   function eventDescription(event) {
     const place = event.position ? pitName(event.position) : "";
     switch (event.kind) {
-      case "reserve": return event.total > 1
-        ? `${name(event.position.player)} のハンドから ${place} にKETEを1個置きました。一穴全投入 ${event.placed}/${event.total}。`
+      case "reserve": return event.count > 1
+        ? `${name(event.position.player)} のハンドのKETE ${event.count}個を ${place} へ一度に全投入しました。`
         : `${name(event.position.player)} のハンドから ${place} にKETEを1個置きました。`;
       case "lift": return `${place} からKETEを${event.count}個持ち上げました。`;
       case "sow": return `${place} にKETEを1個蒔きました。`;

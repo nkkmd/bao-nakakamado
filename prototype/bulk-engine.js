@@ -226,11 +226,9 @@
 
     if (state.phase === "namua") {
       const placement = state.reserve[1 - player] === 0 ? state.reserve[player] : 1;
-      for (let placed = 1; placed <= placement; placed += 1) {
-        state.reserve[player] -= 1;
-        setAt(state, cursor, countAt(state, cursor) + 1);
-        snapshotEvent(events, state, "reserve", { position: cursor, placed, total: placement });
-      }
+      state.reserve[player] -= placement;
+      setAt(state, cursor, countAt(state, cursor) + placement);
+      snapshotEvent(events, state, "reserve", { position: cursor, count: placement });
       if (captureTurn) {
         const taken = takeOpposite(state, player, cursor.index, events);
         if (finishOnEmptyFront(state, player, taken, events)) return { state, events };

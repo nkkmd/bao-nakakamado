@@ -23,7 +23,7 @@ class Element {
   click() { if (!this.disabled) this.handlers.get("click")?.(); }
 }
 
-test("automatic replay shows every KETE in a one-hole placement", () => {
+test("automatic replay shows all six KETE entering one hole at once", () => {
   const ids = ["board", "turn-number", "turn-name", "phase-name", "north-hand", "south-hand",
     "steal-count", "steal-result", "download", "move-choices", "setup", "status",
     "start", "new-game", "mode", "side"];
@@ -82,9 +82,8 @@ test("automatic replay shows every KETE in a one-hole placement", () => {
         descriptions.push(elements.status.textContent);
       }
       if (i === bulkIndex) {
-        for (let n = 1; n <= 6; n += 1) {
-          assert.ok(descriptions.some((message) => message.includes(`一穴全投入 ${n}/6`)));
-        }
+        assert.equal(descriptions.filter((message) => message.includes("一度に全投入")).length, 1);
+        assert.ok(descriptions.some((message) => message.includes("KETE 6個")));
         assert.match(elements.status.textContent, /no-move/);
       }
       assert.equal(Number(elements["south-hand"].textContent), reference.board.reserve[0]);

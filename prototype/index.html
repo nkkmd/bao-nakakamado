@@ -7,10 +7,10 @@
   <meta name="robots" content="noindex, nofollow">
   <title>Bao Nakakamado — 遊べる試作</title>
   <meta name="description" content="NAMUAの連続捕獲でKETEを奪い、相手のハンドが空になると残りを一穴へ全投入する Bao Nakakamado の試作版。">
-  <link rel="stylesheet" href="./style.css">
-  <script defer src="./bulk-engine.js"></script>
-  <script defer src="./steal.js"></script>
-  <script defer src="./app.js"></script>
+  <link rel="stylesheet" href="./style.css?v=0.5.1">
+  <script defer src="./bulk-engine.js?v=0.5.1"></script>
+  <script defer src="./steal.js?v=0.5.1"></script>
+  <script defer src="./app.js?v=0.5.1"></script>
 </head>
 <body>
   <main class="game-shell">
@@ -18,7 +18,7 @@
       <div>
         <span class="kicker">A NEW BAO EXPERIMENT</span>
         <h1>BAO NAKAKAMADO</h1>
-        <span class="prototype-badge">遊べる試作 v0.5・一穴全投入を試験中</span>
+        <span class="prototype-badge">遊べる試作 v0.5.1・一穴全投入を試験中</span>
       </div>
       <div class="toolbar">
         <button id="new-game" type="button">新しい対局</button>
@@ -88,12 +88,12 @@
       <div class="rules-grid">
         <div><b>01 / Bao の手</b><p>光っている穴を選び、表示された方向・入口を選びます。着手後はKETEの移動を一段階ずつ表示します。捕獲義務、連続種まき、nyumba、namua／mtaji、終局判定は元のルールエンジンに従います。</p></div>
         <div><b>02 / 連続捕獲</b><p>NAMUA中、一手の中で2回以上捕獲すると、相手のハンドからKETEを1個奪います。何回続いても奪うのは一手につき1個です。</p></div>
-        <div><b>03 / 一穴全投入</b><p>相手のハンドが0で、自分に2個以上あれば、次のNAMUA着手で残りを選んだ一穴へ全部置きます。その後の捕獲・連続種まきは通常どおり進みます。残り1個なら通常の着手です。</p></div>
+        <div><b>03 / 一穴全投入</b><p>相手のハンドが0で、自分に2個以上あれば、次のNAMUA着手で残りを選んだ一穴へ一度に全部置きます。通常の1個投入が全数投入になるだけで、その後の捕獲・連続種まきは同じです。残り1個なら通常の着手です。</p></div>
         <div><b>04 / 段階と終局</b><p>ハンドが0の側は両者がMTAJIになるまでパスします。全投入後に両者のハンドが0ならMTAJIへ移り、次の側に合法手がなければ終局します。</p></div>
       </div>
       <p class="footnote">これは人間同士で一穴全投入の分かりやすさを確かめる試作です。正式採用は未決定です。元ゲームの詳しいルールは <a href="https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/doc/RULES_BASELINE.md" target="_blank" rel="noopener">採用ルール基準</a>を参照してください。</p>
     </section>
-    <footer>BAO NAKAKAMADO · Prototype v0.5 trial · Based on the Bao la Kiswahili game engine</footer>
+    <footer>BAO NAKAKAMADO · Prototype v0.5.1 trial · Based on the Bao la Kiswahili game engine</footer>
   </main>
 </body>
 </html>

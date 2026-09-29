@@ -4,7 +4,7 @@ Status: 探索的な記録・ルール採否は未決定
 対象: Bao Nakakamado 試作 v0.4、試験開始時の `main` `8d6275a31a87ed485094f85a870af507a7c2c2df`  
 関連: [ハンド枯渇時の段階移行候補](HAND_EXHAUSTION_PHASE_CANDIDATE.md)、[3案の暫定比較](HAND_EXHAUSTION_OPTIONS_REVIEW_20260930.md)
 
-追記: これは**v0.4時点の現行パスと個別MTAJIの比較**。後の一穴全投入は[別の調査](FIXED_PIT_BULK_STUDY_20260930.md)を経て[試作 v0.5](FIXED_PIT_BULK_TRIAL_20260930.md)に試用実装した。下記の「現行」はv0.4を指す。
+追記: これは**v0.4時点の現行パスと個別MTAJIの比較**。後の一穴全投入は[別の調査](FIXED_PIT_BULK_STUDY_20260930.md)を経て[試作 v0.5.1](FIXED_PIT_BULK_TRIAL_20260930.md)に試用実装した。下記の「現行」はv0.4を指す。
 
 ## 問いと結論
 

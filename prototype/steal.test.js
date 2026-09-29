@@ -4,6 +4,7 @@ const test = require("node:test");
 require("./bulk-engine.js");
 const S = require("./steal.js");
 const Study = require("../tools/fixed-pit-bulk-study.cjs");
+const Original = require("./engine.js");
 
 const openings = [
   { type: "takata", phase: "namua", row: 0, index: 6, direction: "left" },
@@ -93,7 +94,7 @@ test("transition snapshots end at the same position and show the hand transfer",
   assert.deepEqual(ordinary.events.at(-1).state, ordinary.game.board);
 });
 
-test("one-hole bulk placement replays each KETE, then resolves capture and no-move", () => {
+test("six KETE enter one hole in one placement before the ordinary capture and no-move", () => {
   const { before, expected } = reachableBulk(23, "capture");
   const hand = before.board.reserve[before.board.player];
   const pitBefore = before.board.pits[before.board.player][expected.move.row][expected.move.index];
@@ -101,15 +102,12 @@ test("one-hole bulk placement replays each KETE, then resolves capture and no-mo
   assert.equal(hand, 6);
   assert.equal(after.history.at(-1).placed, hand);
   assert.equal(after.history.at(-1).stolen, 0);
-  assert.equal(events.filter((event) => event.kind === "reserve").length, hand);
-  for (let i = 0; i < hand; i += 1) {
-    const event = events[i];
-    assert.equal(event.kind, "reserve");
-    assert.equal(event.placed, i + 1);
-    assert.equal(event.total, hand);
-    assert.equal(event.state.reserve[before.board.player], hand - i - 1);
-    assert.equal(event.state.pits[before.board.player][expected.move.row][expected.move.index], pitBefore + i + 1);
-  }
+  assert.equal(events.filter((event) => event.kind === "reserve").length, 1);
+  assert.equal(events[0].kind, "reserve");
+  assert.equal(events[0].count, 6);
+  assert.equal(events[0].state.reserve[before.board.player], 0);
+  assert.equal(events[0].state.pits[before.board.player][expected.move.row][expected.move.index], pitBefore + 6);
+  assert.equal(events[1].kind, "capture");
   assert.equal(after.board.reason, "no-move");
   assert.equal(after.board.phase, "mtaji");
   assert.equal(total(after.board), total(before.board));
@@ -135,6 +133,23 @@ test("bulk takata and nyumba alternatives use the trial engine", () => {
   const stop = choices.find((m) => m.houseChoice === "stop" && m.index === house.expected.move.index);
   assert.ok(use && stop);
   assert.notDeepEqual(S.apply(house.before, use).board, S.apply(house.before, stop).board);
+});
+
+test("after the one-time placement capture and takata follow the original engine unchanged", () => {
+  for (const [seed, type] of [[23, "capture"], [32, "takata"]]) {
+    const { before, expected } = reachableBulk(seed, type);
+    const bulk = S.applyWithEvents(before, expected.move);
+    const reference = Original.clone(before.board);
+    const player = reference.player;
+    const count = reference.reserve[player];
+    reference.reserve[player] = 1;
+    reference.pits[player][expected.move.row][expected.move.index] += count - 1;
+    const ordinary = Original.applyMove(reference, expected.move);
+    assert.equal(ordinary.events[0].kind, "reserve");
+    assert.deepEqual(bulk.events[0].state, ordinary.events[0].state);
+    assert.deepEqual(bulk.events.slice(1), ordinary.events.slice(1));
+    assert.deepEqual(bulk.game.board, ordinary.state);
+  }
 });
 
 test("trial engine matches the studied rule across complete reachable games", () => {
