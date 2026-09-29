@@ -1,27 +1,20 @@
 "use strict";
 (function () {
   const E = window.BaoEngine;
-  const C = window.NakakamadoChance;
+  const S = window.NakakamadoSteal;
   const $ = (id) => document.getElementById(id);
-  let game = C.initialGame();
+  let game = S.initialGame();
   let started = false;
   let mode = "local";
   let human = 0;
   let selected = null;
   let busy = false;
   let generation = 0;
-  let lastResult = "まだ抽選はありません。";
-
-  function random() {
-    if (!window.crypto?.getRandomValues) return Math.random();
-    const value = new Uint32Array(1);
-    window.crypto.getRandomValues(value);
-    return value[0] / 4294967296;
-  }
+  let lastResult = "連続捕獲によるKETEの移動はまだありません。";
 
   function name(player) { return player === 0 ? "SOUTH" : "NORTH"; }
   function humanTurn() { return mode === "local" || game.board.player === human; }
-  function variants() { return E.moveVariantsForSearch(game.board); }
+  function variants() { return S.moveVariants(game); }
   function key(move) { return `${move.row}:${move.index}`; }
   function selectable() { return started && !busy && game.board.winner === null && humanTurn(); }
 
@@ -79,16 +72,9 @@
     $("phase-name").textContent = state.phase.toUpperCase();
     $("north-hand").textContent = state.reserve[1];
     $("south-hand").textContent = state.reserve[0];
-    $("gain-count").textContent = game.bag.gain;
-    $("loss-count").textContent = game.bag.loss;
-    const total = game.bag.gain + game.bag.loss;
-    $("chance-percent").textContent = total ? `${Math.round(game.bag.gain / total * 100)}%` : "—";
-    $("uses").textContent = `SOUTH ${game.chances[0]}回 ／ NORTH ${game.chances[1]}回`;
-    $("draw-result").textContent = lastResult;
+    $("steal-count").textContent = `SOUTH ${game.history.filter((entry) => entry.player === 0 && entry.stolen).length}個 ／ NORTH ${game.history.filter((entry) => entry.player === 1 && entry.stolen).length}個`;
+    $("steal-result").textContent = lastResult;
     $("download").disabled = !started || !game.history.length;
-    const canChooseRisk = selectable() && moves.some((m) => C.canGamble(game, m));
-    $("gamble").disabled = !canChooseRisk;
-    if (!canChooseRisk) $("gamble").checked = false;
     renderBoard(moves);
     const choices = $("move-choices");
     choices.replaceChildren();
@@ -96,8 +82,6 @@
     else if (state.winner !== null) $("status").textContent = `${name(state.winner)} の勝ち（${state.reason}）。`;
     else if (busy) $("status").textContent = "コンピューターが考えています…";
     else if (!humanTurn()) $("status").textContent = `${name(state.player)} の手番です。待機中…`;
-    else if (game.bonusTurn) $("status").textContent = `${name(state.player)} の追加手番です。穴を選んでください。`;
-    else if (game.repeatAfterNext === state.player) $("status").textContent = `${name(state.player)} はこの手の後、もう一手指せます。`;
     else $("status").textContent = `${name(state.player)} の手番。光る穴を選んでください。`;
     if (!selectable()) return;
     const candidates = selected ? moves.filter((m) => m.row === selected.row && m.index === selected.index) : [];
@@ -110,21 +94,20 @@
     for (const move of candidates) {
       const button = document.createElement("button");
       button.type = "button";
-      button.textContent = moveLabel(move);
+      const preview = S.apply(game, move).history.at(-1);
+      button.textContent = `${moveLabel(move)}${preview.stolen ? "・相手のハンドからKETEを1個奪う" : ""}`;
       button.addEventListener("click", () => play(move));
       choices.append(button);
     }
   }
 
-  function play(move, aiRisk = false) {
+  function play(move) {
     try {
-      const gamble = mode === "computer" && !humanTurn() ? aiRisk : $("gamble").checked;
       const before = game.board.player;
-      game = C.apply(game, move, gamble, undefined, random);
+      game = S.apply(game, move);
       selected = null;
-      $("gamble").checked = false;
-      const result = game.history.at(-1).result;
-      if (result) lastResult = `${name(before)} の勝負：${result === "gain" ? "当たり！ 自分に追加の一手" : "外れ。相手に追加の一手"}。残り 当たり${game.bag.gain}／外れ${game.bag.loss}`;
+      const result = game.history.at(-1);
+      if (result.stolen) lastResult = `${name(before)} が同じ着手で${result.captures}回捕獲し、${name(1 - before)} のハンドからKETEを1個奪いました。`;
       busy = false;
       render();
       scheduleComputer();
@@ -144,20 +127,14 @@
   function chooseComputerMove() {
     const player = game.board.player;
     const moves = variants();
-    let best = [];
+    let best = null;
     let bestScore = -Infinity;
     for (const move of moves) {
-      let score = evaluate(E.applyMoveForSearch(game.board, move).state, player);
+      let score = evaluate(S.apply(game, move).board, player);
       score += move.type === "capture" ? 2 : 0;
-      if (score > bestScore) { bestScore = score; best = [move]; }
-      else if (score === bestScore) best.push(move);
+      if (score > bestScore) { bestScore = score; best = move; }
     }
-    const move = best[Math.floor(random() * best.length)];
-    // A simple bounded policy: spend the one chance when immediate tempo is valuable.
-    const risk = C.canGamble(game, move)
-      && game.bag.gain / (game.bag.gain + game.bag.loss) >= 0.5
-      && (move.type === "capture" || game.board.turn > 20);
-    return { move, risk };
+    return best;
   }
 
   function scheduleComputer() {
@@ -168,21 +145,19 @@
     window.setTimeout(() => {
       if (scheduledFor !== generation) return;
       if (!started || mode !== "computer" || game.board.winner !== null || game.board.player === human) { busy = false; return; }
-      const { move, risk } = chooseComputerMove();
-      play(move, risk);
+      play(chooseComputerMove());
     }, 260);
   }
 
   function start() {
     generation += 1;
-    game = C.initialGame();
+    game = S.initialGame();
     mode = $("mode").value;
     human = Number($("side").value);
     started = true;
     selected = null;
     busy = false;
-    lastResult = "まだ抽選はありません。";
-    $("gamble").checked = false;
+    lastResult = "連続捕獲によるKETEの移動はまだありません。";
     $("setup").hidden = true;
     render();
     scheduleComputer();
@@ -192,7 +167,7 @@
   $("new-game").addEventListener("click", () => { generation += 1; started = false; busy = false; selected = null; $("setup").hidden = false; render(); });
   $("download").addEventListener("click", () => {
     if (!started || !game.history.length) return;
-    const record = { format: "bao-nakakamado-prototype", version: 1, baseRules: "R-002", chanceRule: "once-each-3-gain-3-loss-extra-turn", mode, history: game.history, final: game.board };
+    const record = { format: "bao-nakakamado-prototype", version: 2, baseRules: "R-002", variantRule: "namua-multi-capture-steal-one", mode, history: game.history, final: game.board };
     const blob = new Blob([JSON.stringify(record, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");

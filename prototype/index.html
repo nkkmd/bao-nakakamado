@@ -6,10 +6,10 @@
   <meta name="theme-color" content="#172c2b">
   <meta name="robots" content="noindex, nofollow">
   <title>Bao Nakakamado — 遊べる試作</title>
-  <meta name="description" content="Bao la Kiswahili を土台に、期待値を読む選択を加えた Bao Nakakamado の試作版。">
+  <meta name="description" content="Bao la Kiswahili を土台に、NAMUAの連続捕獲で相手のハンドからKETEを奪う Bao Nakakamado の試作版。">
   <link rel="stylesheet" href="./style.css">
   <script defer src="./engine.js"></script>
-  <script defer src="./chance.js"></script>
+  <script defer src="./steal.js"></script>
   <script defer src="./app.js"></script>
 </head>
 <body>
@@ -18,7 +18,7 @@
       <div>
         <span class="kicker">A NEW BAO EXPERIMENT</span>
         <h1>BAO NAKAKAMADO</h1>
-        <span class="prototype-badge">遊べる試作 v0.1</span>
+        <span class="prototype-badge">遊べる試作 v0.2</span>
       </div>
       <div class="toolbar">
         <button id="new-game" type="button">新しい対局</button>
@@ -29,8 +29,8 @@
     <section class="intro" aria-labelledby="intro-title">
       <div>
         <span class="eyebrow">RULE EXPERIMENT 01</span>
-        <h2 id="intro-title">読むのは、盤面と確率。</h2>
-        <p>Bao la Kiswahili の合法手を土台に、対局中に一度だけ「勝負」を宣言できます。成功なら自分に、失敗なら相手に追加の一手。残りの内訳を見て、いつ使うか判断してください。</p>
+        <h2 id="intro-title">連続捕獲で、ハンドを奪う。</h2>
+        <p>Bao la Kiswahili の着手を土台に、NAMUA中の一手で2回以上捕獲すると、相手のハンドからKETEを1個自分のハンドへ移します。捕獲の経路と相手の残りKETEを読んでください。</p>
       </div>
       <a href="#rules">試作ルールを見る ↗</a>
     </section>
@@ -72,21 +72,12 @@
           <button id="start" class="primary" type="button">対局開始</button>
           <p class="hint">コンピューターは試作用の簡易相手です。元ゲームの AI-GEN4 ではありません。</p>
         </section>
-        <section id="risk-panel" class="panel risk-panel">
-          <span class="eyebrow">CHALLENGE / EXPECTED VALUE</span>
-          <h2>勝負する？</h2>
-          <div class="odds">
-            <div><span>当たり</span><strong id="gain-count">3</strong></div>
-            <div><span>外れ</span><strong id="loss-count">3</strong></div>
-            <div><span>成功率</span><strong id="chance-percent">50%</strong></div>
-          </div>
-          <p id="uses">SOUTH 1回 ／ NORTH 1回</p>
-          <label class="gamble-control">
-            <input id="gamble" type="checkbox" disabled>
-            <span>この手で勝負する</span>
-          </label>
-          <p class="hint">宣言は手を選ぶ前。当たりは自分がもう一手、外れは相手が通常の手番に続けてもう一手。引いた札は袋へ戻りません。</p>
-          <p id="draw-result" class="draw-result" aria-live="polite">まだ抽選はありません。</p>
+        <section class="panel steal-panel">
+          <span class="eyebrow">NAMUA / KETE TRANSFER</span>
+          <h2>ハンドの奪い合い</h2>
+          <p>同じ着手で2回以上捕獲し、相手のハンドにKETEが残っていれば、1個を自分のハンドへ移します。着手候補に「奪う」と表示された手で発生します。</p>
+          <p id="steal-count">SOUTH 0個 ／ NORTH 0個</p>
+          <p id="steal-result" class="steal-result" aria-live="polite">連続捕獲によるKETEの移動はまだありません。</p>
         </section>
       </aside>
     </section>
@@ -96,10 +87,10 @@
       <h2>この試作の遊び方</h2>
       <div class="rules-grid">
         <div><b>01 / Bao の手</b><p>光っている穴を選び、表示された方向・入口を選びます。捕獲義務、連続種まき、nyumba、namua／mtaji、終局判定は元のルールエンジンに従います。</p></div>
-        <div><b>02 / 勝負の宣言</b><p>各プレイヤーは対局中に一度だけ宣言できます。通常の着手が終局させた場合、抽選は行わず権利も消費しません。追加の手番中には宣言できません。</p></div>
-        <div><b>03 / 公開された袋</b><p>最初は当たり3枚・外れ3枚。抽選後は残数が変わります。後手は先手の結果を見て確率を更新できます。勝負をしなくても通常の対局を続けられます。</p></div>
+        <div><b>02 / 連続捕獲</b><p>NAMUA中、一手の中で2回以上捕獲すると、相手のハンドからKETEを1個奪います。何回続いても奪うのは一手につき1個です。</p></div>
+        <div><b>03 / ハンドと局面</b><p>相手のハンドが空なら奪えません。奪ったKETEは次のNAMUAの着手に使えます。両者のハンドは盤の上に表示され、KETEの総数は変わりません。</p></div>
       </div>
-      <p class="footnote">これは採用済みの新ルールではありません。追加手番の強さ、先後差、対局時間は今後検証します。元ゲームの詳しいルールは <a href="https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/doc/RULES_BASELINE.md" target="_blank" rel="noopener">採用ルール基準</a>を参照してください。</p>
+      <p class="footnote">これは検証中の試作ルールです。ハンド移動の強さ、先後差、対局時間は今後検証します。元ゲームの詳しいルールは <a href="https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/doc/RULES_BASELINE.md" target="_blank" rel="noopener">採用ルール基準</a>を参照してください。</p>
     </section>
     <footer>BAO NAKAKAMADO · Prototype 01 · Based on the Bao la Kiswahili game engine</footer>
   </main>

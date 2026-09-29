@@ -1,17 +1,16 @@
-# Bao Nakakamado — 遊べる試作 v0.1
+# Bao Nakakamado — 遊べる試作 v0.2
 
-Bao la Kiswahili の [`public/engine.js`](https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/public/engine.js) を、2026-09-29 時点の blob `1527bb3665228b7a5bd9f03153567aedbaaa22d7` から取り込み、`prototype/engine.js` として変更せずに使用する。ゲーム画面は元ゲームの暗緑色、金色のアクセント、盤面の配色を参考に、この試作用に作成した。元の分析タグ、棋譜送信機能、AI-GEN4、PWAは取り込んでいない。
+Bao la Kiswahili の [`public/engine.js`](https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/public/engine.js) を、2026-09-29 時点の blob `1527bb3665228b7a5bd9f03153567aedbaaa22d7` から取り込み、`prototype/engine.js` として変更せずに使用する。試作ルールは `steal.js` に分けた。画面は元ゲームの暗緑色、金色のアクセント、盤面の配色を参考に作成した。元の分析タグ、棋譜送信機能、AI-GEN4、PWAは取り込んでいない。
 
 ## 試作のルール
 
-- 通常の合法手、石の遷移、勝敗判定は元のエンジンに委ねる。
-- 各プレイヤーは対局中に一度だけ、自分の通常手を選ぶ前に「勝負」を宣言できる。
-- 通常手を適用した後、終局していなければ、公開された有限の袋から一枚引いて取り除く。最初は当たり3枚、外れ3枚。残数と成功確率は両者に常時公開する。
-- 当たりならそのプレイヤーが直ちに一手追加で指す。外れなら相手が通常の一手を指し、続けてもう一手指す。追加手番と、外れによって相手に連続手番が約束された状態では、新たな勝負を宣言できない。
-- 通常手が終局させた場合は抽選せず、勝負の権利も消費しない。抽選結果と着手は棋譜JSONに残る。抽選は盤上の石を増減させない。
-- 追加手番を付与した側に合法手がないときは、その側が `no-move` で負ける。元エンジンが通常手を終局と判定した場合は、その結果を優先する。
+- 通常の合法手、石の移動、捕獲、勝敗判定は元のエンジンに委ねる。
+- NAMUA中の**同じ着手の中で2回以上捕獲**した場合、着手後に相手のハンドからKETEを1個、自分のハンドへ移す。捕獲3回以上でも、一手につき移すのは1個だけ。
+- 相手のハンドが空なら移動しない。MTAJI中、捕獲が1回だけの手、捕獲のない手では移動しない。終局した着手も同じ条件で扱う。
+- 捕獲回数には、最初の捕獲と、同じ着手で連続種まき中に起きた捕獲の両方を数える。複数の手番にまたがる捕獲は数えない。
+- ハンド間の移動なのでKETEの総数は変わらない。奪ったKETEは後のNAMUAの着手に使える。片方のハンドが先に空になった場合、元のエンジンのパスと段階移行の扱いに従う。
 
-この追加手番の大きさ、先後差、対局時間、最適な勝負の時期は未検証であり、試作ルールとして扱う。袋の内訳・回数・効果も検証に応じて変更し得る。元の採用ルールと既知の差異は [RULES_BASELINE.md](https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/doc/RULES_BASELINE.md) を参照。
+この移動の強さ、先後差、対局時間への影響は未検証であり、正式採用前の試作ルールとして扱う。元の採用ルールと既知の差異は [RULES_BASELINE.md](https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/doc/RULES_BASELINE.md) を参照。運要素の検討は凍結し、v0.1の勝負宣言・抽選・追加手番はこの試作から削除した。
 
 ## 遊び方
 
@@ -21,21 +20,23 @@ Bao la Kiswahili の [`public/engine.js`](https://github.com/nkkmd/bao-la-kiswah
 python3 -m http.server 8000 --directory prototype
 ```
 
-ブラウザーで `http://localhost:8000/` を開く。2人対戦か簡易コンピューター対戦を選ぶ。光っている穴を押し、表示された着手方向を選ぶ。勝負する手では、着手前にチェックを入れる。棋譜を保存すると、着手・抽選結果・最終局面のJSONをダウンロードする。現時点で画面からの棋譜読み込み・再生は実装していない。
+ブラウザーで `http://localhost:8000/` を開く。2人対戦か簡易コンピューター対戦を選び、光っている穴と着手方向を選ぶ。KETEを奪う手は着手候補に表示され、結果はハンド表示と履歴欄に反映される。
 
-コンピューターは簡易的な一手評価で着手を選び、簡単な条件で勝負を使う。元ゲームのAI-GEN4ではなく、棋力や確率判断の性能を示すものでもない。
+棋譜を保存すると、着手・その着手の捕獲回数・奪った数・最終局面をJSONでダウンロードする。形式は `version: 2` で、v0.1の抽選を含む棋譜とは互換性がない。画面からの棋譜読み込み・再生は実装していない。
+
+コンピューターは試作用の簡易的な一手評価で着手を選ぶ。KETE移動後の局面を評価するが、元ゲームのAI-GEN4ではなく、その棋力を示すものでもない。
 
 ## 検証
 
 ```sh
-node --test prototype/chance.test.js
+node --test prototype/steal.test.js
 ```
 
-テストは、当たり・外れの追加手番、権利と袋の消費、石数の保存、履歴からの局面再構築を確認する。一般的なバランスや棋力の評価はまだ行っていない。
+到達可能なNAMUAの局面で、連続捕獲と単独捕獲、相手のハンドが空の場合、MTAJIでの不適用、KETE総数、棋譜からの再構築を確認する。一般的なバランスや棋力はまだ評価していない。
 
 ## Cloudflare Pages の配置
 
-GitHubリポジトリを Pages プロジェクトへ接続する場合、production branch を `main`、build command を空欄、build output directory を `prototype` にする。静的HTML/CSS/JavaScriptだけなのでビルドは不要。カスタムドメインやデータ収集は設定しない。
+GitHubリポジトリを Pages プロジェクトへ接続する場合、production branch を `main`、build command を空欄、build output directory を `prototype` にする。静的HTML/CSS/JavaScriptだけなのでビルドは不要。手動配信では `prototype/` の中身をルートに置く。
 
 ## 出典・ライセンス
 
