@@ -2,7 +2,7 @@
 
 Status: 探索的な記録・ルール採否は未決定  
 対象: Bao Nakakamado 試作 v0.4、試験開始時の `main` `8d6275a31a87ed485094f85a870af507a7c2c2df`  
-関連: [ハンド枯渇時の段階移行候補](HAND_EXHAUSTION_PHASE_CANDIDATE.md)
+関連: [ハンド枯渇時の段階移行候補](HAND_EXHAUSTION_PHASE_CANDIDATE.md)、[3案の暫定比較](HAND_EXHAUSTION_OPTIONS_REVIEW_20260930.md)
 
 ## 問いと結論
 

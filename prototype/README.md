@@ -16,6 +16,8 @@ Bao la Kiswahili の [`public/engine.js`](https://github.com/nkkmd/bao-la-kiswah
 
 相手のハンドが0のとき、自分の残りを選んだ一穴へ全投入する案も[探索的調査](../doc/FIXED_PIT_BULK_STUDY_20260930.md)に記録した。合法手なしの終局と先後差を比較したが、未採用であり試作 v0.4 の挙動は変えていない。
 
+3案の試験結果・暫定順位と人間対局の観察点は[比較記録](../doc/HAND_EXHAUSTION_OPTIONS_REVIEW_20260930.md)を参照。順位は未確定であり、画面にはまだ両候補を実装していない。
+
 ## 遊び方
 
 `prototype/` を静的HTTPサーバーで配信する。
