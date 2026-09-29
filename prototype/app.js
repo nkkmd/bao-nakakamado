@@ -96,22 +96,8 @@
     }
   }
 
-  function renderTransition() {
-    const panel = $("transition-view");
-    panel.hidden = !animation;
-    if (!animation) {
-      for (const id of ["north-hand", "south-hand"]) {
-        $(id).parentElement.classList.remove("active-hand", "donor-hand", "recipient-hand");
-      }
-      return;
-    }
-    const { index, events } = animation;
-    $("transition-progress").textContent = `${index} / ${events.length}`;
-    $("transition-caption").textContent = index ? eventDescription(events[index - 1]) : "着手前の局面です。";
-    $("transition-toggle").textContent = animation.playing ? "一時停止" : "再生";
-    $("transition-back").disabled = index === 0;
-    $("transition-next").textContent = index === events.length ? "確定" : "進む";
-    const event = index ? events[index - 1] : null;
+  function highlightHands() {
+    const event = animation?.index ? animation.events[animation.index - 1] : null;
     for (const [player, id] of [[0, "south-hand"], [1, "north-hand"]]) {
       const hand = $(id).parentElement.classList;
       hand.toggle("active-hand", event?.kind === "reserve" && event.position.player === player);
@@ -123,12 +109,6 @@
   function clearAnimationTimer() {
     if (animation && animation.timer !== null) window.clearTimeout(animation.timer);
     if (animation) animation.timer = null;
-  }
-
-  function stepTo(index) {
-    animation.index = index;
-    view = index === 0 ? animation.initial : animation.events[index - 1].state;
-    render();
   }
 
   function finishAnimation() {
@@ -145,21 +125,27 @@
   function animationDelay() {
     const event = animation.events[animation.index - 1];
     if (!event) return 80;
-    const fast = $("transition-speed").value === "fast";
-    if (["capture", "steal", "relay", "win"].includes(event.kind)) return fast ? 160 : 420;
-    const many = animation.events.length > 80;
-    return fast ? 45 : many ? 105 : 190;
+    const count = animation.events.length;
+    const mobileScale = (window.innerWidth || 800) < 520 ? 1.6 : 1;
+    const motionScale = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ? 1.25 : 1;
+    const scale = mobileScale * motionScale;
+    if (event.kind !== "sow" && event.kind !== "reserve") return (count > 120 ? 130 : 180) * scale;
+    if (count > 160) return 100 * scale;
+    if (count > 90) return 125 * scale;
+    return 260 * scale;
   }
 
   function scheduleStep() {
-    if (!animation?.playing) return;
+    if (!animation) return;
     const current = animation;
     current.timer = window.setTimeout(() => {
       if (animation !== current || current.generation !== generation) return;
       current.timer = null;
       if (current.index === current.events.length) finishAnimation();
       else {
-        stepTo(current.index + 1);
+        current.index += 1;
+        view = current.events[current.index - 1].state;
+        render();
         scheduleStep();
       }
     }, animationDelay());
@@ -178,11 +164,13 @@
     $("steal-result").textContent = lastResult;
     $("download").disabled = !started || Boolean(animation) || !game.history.length;
     renderBoard(moves);
-    renderTransition();
+    highlightHands();
     const choices = $("move-choices");
     choices.replaceChildren();
     if (!started) $("status").textContent = "対局設定から開始してください。";
-    else if (animation) $("status").textContent = `${name(animation.mover)} の着手を${animation.playing ? "再生中" : "一時停止中"}です。下の操作で一段階ずつ確認できます。`;
+    else if (animation) $("status").textContent = animation.index
+      ? eventDescription(animation.events[animation.index - 1])
+      : `${name(animation.mover)} の着手を再生しています…`;
     else if (state.winner !== null) $("status").textContent = `${name(state.winner)} の勝ち（${state.reason}）。`;
     else if (busy) $("status").textContent = "コンピューターが考えています…";
     else if (!humanTurn()) $("status").textContent = `${name(state.player)} の手番です。待機中…`;
@@ -216,9 +204,7 @@
       busy = true;
       view = initial;
       animation = {
-        initial, events: result.events, mover, index: 0,
-        playing: !window.matchMedia?.("(prefers-reduced-motion: reduce)").matches,
-        generation, timer: null,
+        events: result.events, mover, index: 0, generation, timer: null,
       };
       render();
       scheduleStep();
@@ -286,32 +272,6 @@
     started = false; busy = false; selected = null;
     $("setup").hidden = false;
     render();
-  });
-  $("transition-toggle").addEventListener("click", () => {
-    if (!animation) return;
-    clearAnimationTimer();
-    animation.playing = !animation.playing;
-    renderTransition();
-    scheduleStep();
-  });
-  $("transition-back").addEventListener("click", () => {
-    if (!animation) return;
-    clearAnimationTimer();
-    animation.playing = false;
-    stepTo(Math.max(0, animation.index - 1));
-  });
-  $("transition-next").addEventListener("click", () => {
-    if (!animation) return;
-    clearAnimationTimer();
-    animation.playing = false;
-    if (animation.index === animation.events.length) finishAnimation();
-    else stepTo(animation.index + 1);
-  });
-  $("transition-skip").addEventListener("click", () => { if (animation) finishAnimation(); });
-  $("transition-speed").addEventListener("change", () => {
-    if (!animation?.playing) return;
-    clearAnimationTimer();
-    scheduleStep();
   });
   $("download").addEventListener("click", () => {
     if (!started || !game.history.length) return;

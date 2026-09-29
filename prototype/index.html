@@ -18,7 +18,7 @@
       <div>
         <span class="kicker">A NEW BAO EXPERIMENT</span>
         <h1>BAO NAKAKAMADO</h1>
-        <span class="prototype-badge">遊べる試作 v0.3</span>
+        <span class="prototype-badge">遊べる試作 v0.4</span>
       </div>
       <div class="toolbar">
         <button id="new-game" type="button">新しい対局</button>
@@ -48,19 +48,6 @@
             <span>SOUTH <small>手元</small> <b id="south-hand">22</b></span>
           </div>
           <div id="board" class="board" role="group" aria-label="Bao の盤面"></div>
-          <section id="transition-view" class="transition-view" aria-label="KETEの遷移" hidden>
-            <div class="transition-heading"><strong>KETEの遷移</strong><span id="transition-progress">0 / 0</span></div>
-            <p id="transition-caption" tabindex="0">着手前の局面です。</p>
-            <div class="transition-controls">
-              <button id="transition-toggle" type="button">一時停止</button>
-              <button id="transition-back" type="button">戻る</button>
-              <button id="transition-next" type="button">進む</button>
-              <button id="transition-skip" type="button">最後まで</button>
-              <label for="transition-speed">速度
-                <select id="transition-speed"><option value="normal">通常</option><option value="fast">速い</option></select>
-              </label>
-            </div>
-          </section>
           <div class="selection">
             <p id="status" role="status" aria-live="polite">対局を始めてください。</p>
             <div id="move-choices" class="move-choices"></div>
@@ -105,7 +92,7 @@
       </div>
       <p class="footnote">これは検証中の試作ルールです。ハンド移動の強さ、先後差、対局時間は今後検証します。元ゲームの詳しいルールは <a href="https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/doc/RULES_BASELINE.md" target="_blank" rel="noopener">採用ルール基準</a>を参照してください。</p>
     </section>
-    <footer>BAO NAKAKAMADO · Prototype v0.3 · Based on the Bao la Kiswahili game engine</footer>
+    <footer>BAO NAKAKAMADO · Prototype v0.4 · Based on the Bao la Kiswahili game engine</footer>
   </main>
 </body>
 </html>
