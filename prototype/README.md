@@ -10,7 +10,7 @@ Bao la Kiswahili の [`public/engine.js`](https://github.com/nkkmd/bao-la-kiswah
 - 捕獲回数には、最初の捕獲と、同じ着手で連続種まき中に起きた捕獲の両方を数える。複数の手番にまたがる捕獲は数えない。
 - ハンド間の移動なのでKETEの総数は変わらない。奪ったKETEは後のNAMUAの着手に使える。片方のハンドが先に空になった場合、元のエンジンのパスと段階移行の扱いに従う。
 
-この移動の強さ、先後差、対局時間への影響は未検証であり、正式採用前の試作ルールとして扱う。元の採用ルールと既知の差異は [RULES_BASELINE.md](https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/doc/RULES_BASELINE.md) を参照。運要素の検討は凍結し、v0.1の勝負宣言・抽選・追加手番はこの試作から削除した。
+この移動の強さ、先後差、対局時間への影響は探索的な試験段階であり、正式採用前の試作ルールとして扱う。[先攻・後攻差の試験記録](../doc/FIRST_PLAYER_BALANCE_20260929.md)では、簡易的な手選びで現行パス方式と個別MTAJI案を比較した。均衡や一般的な棋力は未確定である。元の採用ルールと既知の差異は [RULES_BASELINE.md](https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/doc/RULES_BASELINE.md) を参照。運要素の検討は凍結し、v0.1の勝負宣言・抽選・追加手番はこの試作から削除した。
 
 ハンドが先に空になった側を先にMTAJIへ移す案は[次の検討項目](../doc/HAND_EXHAUSTION_PHASE_CANDIDATE.md)に記録した。現在の試作には適用していない。
 
