@@ -12,6 +12,8 @@ Bao la Kiswahili の [`public/engine.js`](https://github.com/nkkmd/bao-la-kiswah
 
 この移動の強さ、先後差、対局時間への影響は未検証であり、正式採用前の試作ルールとして扱う。元の採用ルールと既知の差異は [RULES_BASELINE.md](https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/doc/RULES_BASELINE.md) を参照。運要素の検討は凍結し、v0.1の勝負宣言・抽選・追加手番はこの試作から削除した。
 
+ハンドが先に空になった側を先にMTAJIへ移す案は[次の検討項目](../doc/HAND_EXHAUSTION_PHASE_CANDIDATE.md)に記録した。現在の試作には適用していない。
+
 ## 遊び方
 
 `prototype/` を静的HTTPサーバーで配信する。
