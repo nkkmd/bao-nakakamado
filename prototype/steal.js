@@ -8,9 +8,10 @@
     return { board: engine.initialState(), history: [] };
   }
 
-  function apply(game, move) {
+  function resultFor(game, move, transition) {
     const mover = game.board.player;
-    const { state: board, events } = engine.applyMove(game.board, move, { snapshots: false });
+    const { state: board, events } = engine.applyMove(game.board, move,
+      transition ? undefined : { snapshots: false });
     const captures = events.filter((event) => event.kind === "capture").length;
     const opponent = 1 - mover;
     const stolen = game.board.phase === "namua" && captures >= 2 && board.reserve[opponent] > 0 ? 1 : 0;
@@ -18,11 +19,18 @@
       board.reserve[opponent] -= 1;
       board.reserve[mover] += 1;
     }
-    return {
+    const next = {
       board,
       history: [...game.history, { player: mover, move: { ...move }, captures, stolen }],
     };
+    if (transition && stolen) events.push({
+      kind: "steal", from: opponent, to: mover, count: 1, state: engine.clone(board),
+    });
+    return transition ? { game: next, events } : next;
   }
+
+  function apply(game, move) { return resultFor(game, move, false); }
+  function applyWithEvents(game, move) { return resultFor(game, move, true); }
 
   // Keep nyumba choices distinct when the new hand transfer changes the result.
   function moveVariants(game) {
@@ -48,7 +56,7 @@
     }, initialGame());
   }
 
-  const api = { initialGame, apply, moveVariants, replay };
+  const api = { initialGame, apply, applyWithEvents, moveVariants, replay };
   root.NakakamadoSteal = api;
   if (typeof module !== "undefined" && module.exports) module.exports = api;
 }(typeof window !== "undefined" ? window : globalThis));

@@ -10,6 +10,8 @@
   let selected = null;
   let busy = false;
   let generation = 0;
+  let animation = null;
+  let view = game.board;
   let lastResult = "連続捕獲によるKETEの移動はまだありません。";
 
   function name(player) { return player === 0 ? "SOUTH" : "NORTH"; }
@@ -17,6 +19,16 @@
   function variants() { return S.moveVariants(game); }
   function key(move) { return `${move.row}:${move.index}`; }
   function selectable() { return started && !busy && game.board.winner === null && humanTurn(); }
+  function pitName(position) {
+    return `${position.player === 0 ? "S" : "N"}${position.row === E.FRONT ? "F" : "B"}${position.index + 1}`;
+  }
+  function activePit() {
+    if (!animation || animation.index === 0) return null;
+    const event = animation.events[animation.index - 1];
+    return event.kind === "capture"
+      ? { player: event.player, row: E.FRONT, index: event.index }
+      : event.position || null;
+  }
 
   function moveLabel(move) {
     if (move.type === "pass") return "パス";
@@ -29,6 +41,8 @@
   function renderBoard(moves) {
     const board = $("board");
     board.replaceChildren();
+    board.setAttribute("aria-busy", String(Boolean(animation)));
+    const active = activePit();
     const rows = [
       [1, E.BACK, [7, 6, 5, 4, 3, 2, 1, 0]],
       [1, E.FRONT, [7, 6, 5, 4, 3, 2, 1, 0]],
@@ -38,12 +52,13 @@
     const available = new Set(moves.filter((m) => m.type !== "pass").map(key));
     for (const [player, row, indices] of rows) {
       for (const index of indices) {
-        const count = game.board.pits[player][row][index];
+        const count = view.pits[player][row][index];
         const pit = document.createElement("button");
         pit.type = "button";
         pit.className = "pit";
         if (!count) pit.classList.add("empty");
-        if (row === E.FRONT && index === E.HOUSE && game.board.houseOwned[player]) pit.classList.add("house");
+        if (row === E.FRONT && index === E.HOUSE && view.houseOwned[player]) pit.classList.add("house");
+        if (active?.player === player && active.row === row && active.index === index) pit.classList.add("active-step");
         const legal = selectable() && player === game.board.player && available.has(`${row}:${index}`);
         if (legal) pit.classList.add("legal");
         if (selected?.row === row && selected?.index === index && player === game.board.player) pit.classList.add("selected");
@@ -53,7 +68,7 @@
         number.className = "count";
         number.textContent = count;
         const coord = document.createElement("small");
-        coord.textContent = `${player === 0 ? "S" : "N"}${row === E.FRONT ? "F" : "B"}${index + 1}`;
+        coord.textContent = pitName({ player, row, index });
         pit.append(number, coord);
         if (legal) pit.addEventListener("click", () => {
           selected = { row, index };
@@ -64,21 +79,110 @@
     }
   }
 
+  function eventDescription(event) {
+    const place = event.position ? pitName(event.position) : "";
+    switch (event.kind) {
+      case "reserve": return `${name(event.position.player)} のハンドから ${place} にKETEを1個置きました。`;
+      case "lift": return `${place} からKETEを${event.count}個持ち上げました。`;
+      case "sow": return `${place} にKETEを1個蒔きました。`;
+      case "relay": return `${place} から${event.count}個で連続種まきします。`;
+      case "capture": return `${name(animation.mover)} が ${name(event.player)} の ${pitName({ player: event.player, row: E.FRONT, index: event.index })} からKETEを${event.count}個捕獲しました。`;
+      case "steal": return `${name(event.to)} が ${name(event.from)} のハンドからKETEを1個奪いました。`;
+      case "phase": return "MTAJIに移りました。";
+      case "win": return "終局しました。";
+      case "limit": return "連続種まきの安全上限に達しました。";
+      case "turn": return `${name(event.state.player)} の手番になりました。`;
+      default: return "局面を更新しました。";
+    }
+  }
+
+  function renderTransition() {
+    const panel = $("transition-view");
+    panel.hidden = !animation;
+    if (!animation) {
+      for (const id of ["north-hand", "south-hand"]) {
+        $(id).parentElement.classList.remove("active-hand", "donor-hand", "recipient-hand");
+      }
+      return;
+    }
+    const { index, events } = animation;
+    $("transition-progress").textContent = `${index} / ${events.length}`;
+    $("transition-caption").textContent = index ? eventDescription(events[index - 1]) : "着手前の局面です。";
+    $("transition-toggle").textContent = animation.playing ? "一時停止" : "再生";
+    $("transition-back").disabled = index === 0;
+    $("transition-next").textContent = index === events.length ? "確定" : "進む";
+    const event = index ? events[index - 1] : null;
+    for (const [player, id] of [[0, "south-hand"], [1, "north-hand"]]) {
+      const hand = $(id).parentElement.classList;
+      hand.toggle("active-hand", event?.kind === "reserve" && event.position.player === player);
+      hand.toggle("donor-hand", event?.kind === "steal" && event.from === player);
+      hand.toggle("recipient-hand", event?.kind === "steal" && event.to === player);
+    }
+  }
+
+  function clearAnimationTimer() {
+    if (animation && animation.timer !== null) window.clearTimeout(animation.timer);
+    if (animation) animation.timer = null;
+  }
+
+  function stepTo(index) {
+    animation.index = index;
+    view = index === 0 ? animation.initial : animation.events[index - 1].state;
+    render();
+  }
+
+  function finishAnimation() {
+    clearAnimationTimer();
+    animation = null;
+    view = game.board;
+    busy = false;
+    const result = game.history.at(-1);
+    if (result?.stolen) lastResult = `${name(result.player)} が同じ着手で${result.captures}回捕獲し、${name(1 - result.player)} のハンドからKETEを1個奪いました。`;
+    render();
+    scheduleComputer();
+  }
+
+  function animationDelay() {
+    const event = animation.events[animation.index - 1];
+    if (!event) return 80;
+    const fast = $("transition-speed").value === "fast";
+    if (["capture", "steal", "relay", "win"].includes(event.kind)) return fast ? 160 : 420;
+    const many = animation.events.length > 80;
+    return fast ? 45 : many ? 105 : 190;
+  }
+
+  function scheduleStep() {
+    if (!animation?.playing) return;
+    const current = animation;
+    current.timer = window.setTimeout(() => {
+      if (animation !== current || current.generation !== generation) return;
+      current.timer = null;
+      if (current.index === current.events.length) finishAnimation();
+      else {
+        stepTo(current.index + 1);
+        scheduleStep();
+      }
+    }, animationDelay());
+  }
+
   function render() {
-    const state = game.board;
-    const moves = state.winner === null ? variants() : [];
+    const state = view;
+    const moves = selectable() ? variants() : [];
     $("turn-number").textContent = `TURN ${state.turn}`;
     $("turn-name").textContent = `${state.player === 0 ? "▼" : "▲"} ${name(state.player)}`;
     $("phase-name").textContent = state.phase.toUpperCase();
     $("north-hand").textContent = state.reserve[1];
     $("south-hand").textContent = state.reserve[0];
-    $("steal-count").textContent = `SOUTH ${game.history.filter((entry) => entry.player === 0 && entry.stolen).length}個 ／ NORTH ${game.history.filter((entry) => entry.player === 1 && entry.stolen).length}個`;
+    const shownHistory = animation ? game.history.slice(0, -1) : game.history;
+    $("steal-count").textContent = `SOUTH ${shownHistory.filter((entry) => entry.player === 0 && entry.stolen).length}個 ／ NORTH ${shownHistory.filter((entry) => entry.player === 1 && entry.stolen).length}個`;
     $("steal-result").textContent = lastResult;
-    $("download").disabled = !started || !game.history.length;
+    $("download").disabled = !started || Boolean(animation) || !game.history.length;
     renderBoard(moves);
+    renderTransition();
     const choices = $("move-choices");
     choices.replaceChildren();
     if (!started) $("status").textContent = "対局設定から開始してください。";
+    else if (animation) $("status").textContent = `${name(animation.mover)} の着手を${animation.playing ? "再生中" : "一時停止中"}です。下の操作で一段階ずつ確認できます。`;
     else if (state.winner !== null) $("status").textContent = `${name(state.winner)} の勝ち（${state.reason}）。`;
     else if (busy) $("status").textContent = "コンピューターが考えています…";
     else if (!humanTurn()) $("status").textContent = `${name(state.player)} の手番です。待機中…`;
@@ -102,15 +206,22 @@
   }
 
   function play(move) {
+    if (animation) return;
     try {
-      const before = game.board.player;
-      game = S.apply(game, move);
+      const initial = E.clone(game.board);
+      const mover = game.board.player;
+      const result = S.applyWithEvents(game, move);
+      game = result.game;
       selected = null;
-      const result = game.history.at(-1);
-      if (result.stolen) lastResult = `${name(before)} が同じ着手で${result.captures}回捕獲し、${name(1 - before)} のハンドからKETEを1個奪いました。`;
-      busy = false;
+      busy = true;
+      view = initial;
+      animation = {
+        initial, events: result.events, mover, index: 0,
+        playing: !window.matchMedia?.("(prefers-reduced-motion: reduce)").matches,
+        generation, timer: null,
+      };
       render();
-      scheduleComputer();
+      scheduleStep();
     } catch (error) {
       busy = false;
       $("status").textContent = `着手できません：${error.message}`;
@@ -151,7 +262,10 @@
 
   function start() {
     generation += 1;
+    clearAnimationTimer();
+    animation = null;
     game = S.initialGame();
+    view = game.board;
     mode = $("mode").value;
     human = Number($("side").value);
     started = true;
@@ -164,7 +278,41 @@
   }
 
   $("start").addEventListener("click", start);
-  $("new-game").addEventListener("click", () => { generation += 1; started = false; busy = false; selected = null; $("setup").hidden = false; render(); });
+  $("new-game").addEventListener("click", () => {
+    generation += 1;
+    clearAnimationTimer();
+    animation = null;
+    view = game.board;
+    started = false; busy = false; selected = null;
+    $("setup").hidden = false;
+    render();
+  });
+  $("transition-toggle").addEventListener("click", () => {
+    if (!animation) return;
+    clearAnimationTimer();
+    animation.playing = !animation.playing;
+    renderTransition();
+    scheduleStep();
+  });
+  $("transition-back").addEventListener("click", () => {
+    if (!animation) return;
+    clearAnimationTimer();
+    animation.playing = false;
+    stepTo(Math.max(0, animation.index - 1));
+  });
+  $("transition-next").addEventListener("click", () => {
+    if (!animation) return;
+    clearAnimationTimer();
+    animation.playing = false;
+    if (animation.index === animation.events.length) finishAnimation();
+    else stepTo(animation.index + 1);
+  });
+  $("transition-skip").addEventListener("click", () => { if (animation) finishAnimation(); });
+  $("transition-speed").addEventListener("change", () => {
+    if (!animation?.playing) return;
+    clearAnimationTimer();
+    scheduleStep();
+  });
   $("download").addEventListener("click", () => {
     if (!started || !game.history.length) return;
     const record = { format: "bao-nakakamado-prototype", version: 2, baseRules: "R-002", variantRule: "namua-multi-capture-steal-one", mode, history: game.history, final: game.board };

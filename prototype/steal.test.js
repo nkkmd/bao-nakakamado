@@ -62,3 +62,22 @@ test("two captures in MTAJI do not activate the NAMUA rule", () => {
   assert.deepEqual(after.board.reserve, [0, 0]);
   assert.equal(total(after.board), total(mtaji.board));
 });
+
+test("transition snapshots end at the same position and show the hand transfer", () => {
+  const before = position();
+  const move = S.moveVariants(before).find((m) => m.index === 4 && m.side === "right");
+  const transition = S.applyWithEvents(before, move);
+  assert.deepEqual(transition.game, S.apply(before, move));
+  assert.equal(transition.events.filter((event) => event.kind === "capture").length, 2);
+  assert.equal(transition.events.at(-1).kind, "steal");
+  assert.deepEqual(transition.events.at(-1).state, transition.game.board);
+  assert.equal(transition.events.at(-1).from, 0);
+  assert.equal(transition.events.at(-1).to, 1);
+  assert.ok(transition.events.every((event) => event.state));
+  assert.deepEqual(before.board.reserve, [20, 21]);
+
+  const single = S.moveVariants(before).find((m) => m.index === 4 && m.side === "left");
+  const ordinary = S.applyWithEvents(before, single);
+  assert.equal(ordinary.events.some((event) => event.kind === "steal"), false);
+  assert.deepEqual(ordinary.events.at(-1).state, ordinary.game.board);
+});
