@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#172c2b">
+  <title>Bao Nakakamado — 遊べる試作</title>
+  <meta name="description" content="Bao la Kiswahili を土台に、期待値を読む選択を加えた Bao Nakakamado の試作版。">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./engine.js"></script>
+  <script defer src="./chance.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <main class="game-shell">
+    <header class="titlebar">
+      <div>
+        <span class="kicker">A NEW BAO EXPERIMENT</span>
+        <h1>BAO NAKAKAMADO</h1>
+        <span class="prototype-badge">遊べる試作 v0.1</span>
+      </div>
+      <div class="toolbar">
+        <button id="new-game" type="button">新しい対局</button>
+        <button id="download" type="button" disabled>棋譜を保存</button>
+      </div>
+    </header>
+
+    <section class="intro" aria-labelledby="intro-title">
+      <div>
+        <span class="eyebrow">RULE EXPERIMENT 01</span>
+        <h2 id="intro-title">読むのは、盤面と確率。</h2>
+        <p>Bao la Kiswahili の合法手を土台に、対局中に一度だけ「勝負」を宣言できます。成功なら自分に、失敗なら相手に追加の一手。残りの内訳を見て、いつ使うか判断してください。</p>
+      </div>
+      <a href="#rules">試作ルールを見る ↗</a>
+    </section>
+
+    <section class="game-layout" aria-label="対局">
+      <div class="play-column">
+        <div class="game-card">
+          <div class="game-top">
+            <span id="turn-number">TURN 1</span>
+            <strong id="turn-name">▼ SOUTH</strong>
+            <span id="phase-name">NAMUA</span>
+          </div>
+          <div class="reserves">
+            <span>NORTH <small>手元</small> <b id="north-hand">22</b></span>
+            <span>SOUTH <small>手元</small> <b id="south-hand">22</b></span>
+          </div>
+          <div id="board" class="board" role="group" aria-label="Bao の盤面"></div>
+          <div class="selection">
+            <p id="status" role="status" aria-live="polite">対局を始めてください。</p>
+            <div id="move-choices" class="move-choices"></div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <section id="setup" class="panel">
+          <span class="eyebrow">GAME SETUP</span>
+          <h2>対局設定</h2>
+          <label for="mode">対戦相手</label>
+          <select id="mode">
+            <option value="local">2人で対戦</option>
+            <option value="computer">簡易コンピューター</option>
+          </select>
+          <label for="side">あなたの側（コンピューター対戦）</label>
+          <select id="side">
+            <option value="0">SOUTH・先手</option>
+            <option value="1">NORTH・後手</option>
+          </select>
+          <button id="start" class="primary" type="button">対局開始</button>
+          <p class="hint">コンピューターは試作用の簡易相手です。元ゲームの AI-GEN4 ではありません。</p>
+        </section>
+        <section id="risk-panel" class="panel risk-panel">
+          <span class="eyebrow">CHALLENGE / EXPECTED VALUE</span>
+          <h2>勝負する？</h2>
+          <div class="odds">
+            <div><span>当たり</span><strong id="gain-count">3</strong></div>
+            <div><span>外れ</span><strong id="loss-count">3</strong></div>
+            <div><span>成功率</span><strong id="chance-percent">50%</strong></div>
+          </div>
+          <p id="uses">SOUTH 1回 ／ NORTH 1回</p>
+          <label class="gamble-control">
+            <input id="gamble" type="checkbox" disabled>
+            <span>この手で勝負する</span>
+          </label>
+          <p class="hint">宣言は手を選ぶ前。当たりは自分がもう一手、外れは相手が通常の手番に続けてもう一手。引いた札は袋へ戻りません。</p>
+          <p id="draw-result" class="draw-result" aria-live="polite">まだ抽選はありません。</p>
+        </section>
+      </aside>
+    </section>
+
+    <section id="rules" class="rules-panel">
+      <span class="eyebrow">HOW TO PLAY</span>
+      <h2>この試作の遊び方</h2>
+      <div class="rules-grid">
+        <div><b>01 / Bao の手</b><p>光っている穴を選び、表示された方向・入口を選びます。捕獲義務、連続種まき、nyumba、namua／mtaji、終局判定は元のルールエンジンに従います。</p></div>
+        <div><b>02 / 勝負の宣言</b><p>各プレイヤーは対局中に一度だけ宣言できます。通常の着手が終局させた場合、抽選は行わず権利も消費しません。追加の手番中には宣言できません。</p></div>
+        <div><b>03 / 公開された袋</b><p>最初は当たり3枚・外れ3枚。抽選後は残数が変わります。後手は先手の結果を見て確率を更新できます。勝負をしなくても通常の対局を続けられます。</p></div>
+      </div>
+      <p class="footnote">これは採用済みの新ルールではありません。追加手番の強さ、先後差、対局時間は今後検証します。元ゲームの詳しいルールは <a href="https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/doc/RULES_BASELINE.md" target="_blank" rel="noopener">採用ルール基準</a>を参照してください。</p>
+    </section>
+    <footer>BAO NAKAKAMADO · Prototype 01 · Based on the Bao la Kiswahili game engine</footer>
+  </main>
+</body>
+</html>
