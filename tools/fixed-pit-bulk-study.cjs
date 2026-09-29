@@ -1,5 +1,6 @@
 // Exploratory, reproducible comparison only. The playable engine is untouched.
 // node tools/fixed-pit-bulk-study.cjs summary 1000 random,noisy,greedy
+// node tools/fixed-pit-bulk-study.cjs summary 500 reply-noisy,reply-eps10 500
 // node tools/fixed-pit-bulk-study.cjs cases 1000 random 30
 // node tools/fixed-pit-bulk-study.cjs case 17 random
 "use strict";
@@ -61,17 +62,18 @@ function choose(engine,b,policy,random,steal) {
   if (!moves.length) throw new Error('No legal move without terminal state');
   if (moves.length===1) return moves[0];
   if (policy==='random') return moves[Math.floor(random()*moves.length)];
+  if (policy==='reply-eps10' && random()<0.10) return moves[Math.floor(random()*moves.length)];
   const values=moves.map(move=>{
     const after=step(engine,b,move,steal).state;
     let value=score(after,b.player)+(move.type==='capture'?2:0);
-    if (policy==='reply' && after.winner===null) {
+    if (policy.startsWith('reply') && after.winner===null) {
       value=Math.min(...engine.moveVariantsForSearch(after)
         .map(reply=>score(step(engine,after,reply,steal).state,b.player)));
     }
     return {move,value};
   });
   const best=Math.max(...values.map(x=>x.value));
-  const choice=values.filter(x=>x.value>=best-(policy==='noisy'?7:0));
+  const choice=values.filter(x=>x.value>=best-(['noisy','reply-noisy'].includes(policy)?7:0));
   return choice[Math.floor(random()*choice.length)].move;
 }
 function game(seed,policy,variant,first=0,steal=true,details=false) {
@@ -97,12 +99,12 @@ function game(seed,policy,variant,first=0,steal=true,details=false) {
     firstZeroWins:m.firstZero!==null && board.winner===m.firstZero,...(details?{trace}:{})};
 }
 function seedAt(i) {return (0x924f3aa1 + i*0x9e3779b1)>>>0;}
-function summary(n,policies) {
+function summary(n,policies,startIndex=0) {
   for(const policy of policies)for(const steal of [true,false]){
-    const pair={policy,steal,n,changedWinner:0,toFirst:0,toSecond:0,seatSymmetryErrors:0};
+    const pair={policy,steal,n,startIndex,changedWinner:0,toFirst:0,toSecond:0,seatSymmetryErrors:0};
     const results={current:[],fixed:[]};
     for(let i=0;i<n;i++){
-      const seed=seedAt(i),a=game(seed,policy,'current',0,steal),b=game(seed,policy,'fixed',0,steal);
+      const seed=seedAt(startIndex+i),a=game(seed,policy,'current',0,steal),b=game(seed,policy,'fixed',0,steal);
       if(!steal && JSON.stringify(a.board)!==JSON.stringify(b.board)) {
         throw new Error('No-steal control position diverged');
       }
@@ -116,7 +118,7 @@ function summary(n,policies) {
     console.log(JSON.stringify({pair}));
     for(const variant of ['current','fixed']){
       const r=results[variant],sum=f=>r.reduce((s,x)=>s+f(x),0);
-      console.log(JSON.stringify({policy,steal,variant,n,
+      console.log(JSON.stringify({policy,steal,variant,n,startIndex,
         firstWins:sum(x=>x.winner===0),unfinished:sum(x=>x.winner===null),
         avgPlies:sum(x=>x.plies)/n,firstZero:sum(x=>x.firstZero!==null),
         firstZeroWins:sum(x=>x.firstZeroWins),noMove:sum(x=>x.reason==='no-move'),
@@ -227,7 +229,7 @@ function printCase(i,policy){
 }
 if(require.main===module){
   const [mode='summary',amount='1000',arg='random,noisy,greedy',last='30']=process.argv.slice(2);
-  if(mode==='summary')summary(Number(amount),arg.split(','));
+  if(mode==='summary')summary(Number(amount),arg.split(','),Number(process.argv[5]||0));
   else if(mode==='cases')cases(Number(amount),arg,Number(last));
   else if(mode==='avoid')avoid(Number(amount),arg,Number(last));
   else if(mode==='case')printCase(Number(amount),arg);
