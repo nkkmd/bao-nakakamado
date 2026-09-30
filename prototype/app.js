@@ -12,7 +12,40 @@
   let generation = 0;
   let animation = null;
   let view = game.board;
+  let fast = false;
+  let sound = false;
+  let audio = null;
   let lastResult = "NYAKUAはまだ発動していません。";
+
+  function tone(frequency = 300) {
+    if (!sound) return;
+    try {
+      const Audio = window.AudioContext || window.webkitAudioContext;
+      if (!Audio) return;
+      audio ||= new Audio();
+      if (audio.state === "suspended") void audio.resume().catch(() => {});
+      const oscillator = audio.createOscillator();
+      const gain = audio.createGain();
+      oscillator.type = "square";
+      oscillator.frequency.value = frequency;
+      gain.gain.value = .025;
+      oscillator.connect(gain);
+      gain.connect(audio.destination);
+      oscillator.start();
+      gain.gain.exponentialRampToValueAtTime(.001, audio.currentTime + .05);
+      oscillator.stop(audio.currentTime + .05);
+    } catch { /* Audio is optional; a blocked device must not interrupt play. */ }
+  }
+  function updateSetup() {
+    const computer = $("mode").value === "computer";
+    $("side").disabled = !computer;
+    $("side-field").hidden = !computer;
+    $("opponent-badge").textContent = computer ? "簡易コンピューター" : "2人対戦";
+  }
+  function focusBoard() {
+    const first = Array.from($("board").children).find((pit) => !pit.disabled);
+    (first || $("move-choices").children[0])?.focus({ preventScroll: true });
+  }
 
   function name(player) { return player === 0 ? "SOUTH" : "NORTH"; }
   function humanTurn() { return mode === "local" || game.board.player === human; }
@@ -61,8 +94,15 @@
         pit.type = "button";
         pit.className = "pit";
         if (!count) pit.classList.add("empty");
-        if (row === E.FRONT && index === E.HOUSE && view.houseOwned[player]) pit.classList.add("house");
-        if (active?.player === player && active.row === row && active.index === index) pit.classList.add("active-step");
+        if (player === 1) pit.classList.add("north");
+        if (row === E.FRONT && index === E.HOUSE) {
+          pit.classList.add("house-position");
+          if (view.houseOwned[player]) pit.classList.add("house");
+        }
+        if (active?.player === player && active.row === row && active.index === index) {
+          pit.classList.add("active-step");
+          if (animation.events[animation.index - 1].kind === "capture") pit.classList.add("capture-step");
+        }
         const legal = selectable() && player === game.board.player && available.has(`${row}:${index}`);
         if (legal) pit.classList.add("legal");
         if (selected?.row === row && selected?.index === index && player === game.board.player) pit.classList.add("selected");
@@ -77,6 +117,7 @@
         if (legal) pit.addEventListener("click", () => {
           selected = { row, index };
           render();
+          $("move-choices").children[0]?.focus({ preventScroll: true });
         });
         board.append(pit);
       }
@@ -126,11 +167,13 @@
     if (result?.stolen) lastResult = `NYAKUA！ ${name(result.player)} が同じ着手で${result.captures}回捕獲し、${name(1 - result.player)} のハンドからKETEを1個奪いました。`;
     else if (result?.placed > 1) lastResult = `${name(result.player)} がハンドのKETEを${result.placed}個、選んだ一穴へ全投入しました。`;
     render();
+    if (selectable()) focusBoard();
     scheduleComputer();
   }
 
   function animationDelay() {
     const event = animation.events[animation.index - 1];
+    if (fast) return 40;
     if (!event) return 80;
     const count = animation.events.length;
     const mobileScale = (window.innerWidth || 800) < 520 ? 1.6 : 1;
@@ -151,6 +194,7 @@
       if (current.index === current.events.length) finishAnimation();
       else {
         current.index += 1;
+        tone(current.events[current.index - 1].kind === "capture" ? 420 : 300);
         view = current.events[current.index - 1].state;
         render();
         scheduleStep();
@@ -182,6 +226,7 @@
     else if (busy) $("status").textContent = "コンピューターが考えています…";
     else if (!humanTurn()) $("status").textContent = `${name(state.player)} の手番です。待機中…`;
     else if (bulkCount(state)) $("status").textContent = `${name(state.player)} の手番。ハンドのKETE ${bulkCount(state)}個を選んだ一穴へ全投入します。光る穴を選んでください。`;
+    else if (selected) $("status").textContent = `${pitName({ player: state.player, ...selected })} を選択しました。方向・入口を選んでください。`;
     else $("status").textContent = `${name(state.player)} の手番。光る穴を選んでください。`;
     if (!selectable()) return;
     const candidates = selected ? moves.filter((m) => m.row === selected.row && m.index === selected.index) : [];
@@ -267,7 +312,9 @@
     busy = false;
     lastResult = "NYAKUAはまだ発動していません。";
     $("setup").hidden = true;
+    tone();
     render();
+    if (selectable()) focusBoard();
     scheduleComputer();
   }
 
@@ -280,6 +327,7 @@
     started = false; busy = false; selected = null;
     $("setup").hidden = false;
     render();
+    $("mode").focus({ preventScroll: true });
   });
   $("download").addEventListener("click", () => {
     if (!started || !game.history.length) return;
@@ -292,7 +340,19 @@
     link.click();
     window.setTimeout(() => URL.revokeObjectURL(url), 1000);
   });
-  $("mode").addEventListener("change", () => { $("side").disabled = $("mode").value === "local"; });
-  $("side").disabled = true;
+  $("mode").addEventListener("change", updateSetup);
+  $("sound").addEventListener("click", () => {
+    sound = !sound;
+    $("sound").textContent = `サウンド ${sound ? "ON" : "OFF"}`;
+    $("sound").setAttribute("aria-pressed", String(sound));
+    tone();
+  });
+  $("speed").addEventListener("click", () => {
+    fast = !fast;
+    $("speed").textContent = `高速 ${fast ? "ON" : "OFF"}`;
+    $("speed").setAttribute("aria-pressed", String(fast));
+  });
+  updateSetup();
   render();
 }());
+
