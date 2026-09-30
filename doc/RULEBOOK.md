@@ -363,7 +363,9 @@ MTAJIでは、NAMUAの2個蒔きやNYUMBAでの特別な停止を使いません
 
 一穴全投入の手番では投入数を表示します。NYAKUAが起こる着手候補には、その旨を表示します。合法手と各処理は画面が判定します。
 
-「棋譜を保存」では対局のJSONを保存できます。現行画面から保存済み棋譜を読み込む機能はありません。対戦相手のコンピューターは試作用の簡易相手であり、元ゲームのAI-GEN4ではありません。
+上部の「高速」で再生を速められます。「サウンド」で効果音を切り替えます。どちらも初期状態はOFFです。「新しい対局」で再生を中断し、対局設定へ戻ります。
+
+盤面下の「棋譜の保存」を開き、「棋譜を保存」で対局のJSONを保存できます。現行画面から保存済み棋譜を読み込む機能はありません。対戦相手のコンピューターは試作用の簡易相手であり、元ゲームのAI-GEN4ではありません。
 
 ## 12. よくある疑問
 
@@ -438,3 +440,4 @@ MTAJIでは、NAMUAの2個蒔きやNYUMBAでの特別な停止を使いません
 基礎ルールの説明は、[Bao la Kiswahili 日本語完全ガイド](https://github.com/nkkmd/bao-la-kiswahili-ja/tree/1179267b1f19b27a2138791253f2cb9cbfe98c14)（© 2026 bao-la-kiswahili-ja contributors）および[元ゲームの図解ルール](https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/public/rules.html)（© 2026 bao-la-kiswahili-game contributors）を参照・再構成し、現行試作の実装に合わせてNYAKUA、一穴全投入、操作方法、実装上の細則を追加しました。
 
 これらの説明文の改変物である本書は、[Creative Commons Attribution-ShareAlike 4.0 International（CC BY-SA 4.0）](https://creativecommons.org/licenses/by-sa/4.0/deed.ja)で提供します。この指定は本書の文章に適用し、試作のプログラム全体のライセンスを変更するものではありません。
+

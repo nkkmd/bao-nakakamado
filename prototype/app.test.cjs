@@ -20,13 +20,14 @@ class Element {
   append(...children) { for (const child of children) { child.parentElement = this; this.children.push(child); } }
   setAttribute(name, value) { this.attrs.set(name, value); }
   addEventListener(name, fn) { this.handlers.set(name, fn); }
+  focus() {}
   click() { if (!this.disabled) this.handlers.get("click")?.(); }
 }
 
 test("automatic replay shows all six KETE entering one hole at once", () => {
   const ids = ["board", "turn-number", "turn-name", "phase-name", "north-hand", "south-hand",
     "steal-count", "steal-result", "download", "move-choices", "setup", "status",
-    "start", "new-game", "mode", "side"];
+    "start", "new-game", "mode", "side", "side-field", "opponent-badge", "sound", "speed"];
   const elements = Object.fromEntries(ids.map((id) => [id, new Element()]));
   elements["north-hand"].parentElement = new Element();
   elements["south-hand"].parentElement = new Element();
@@ -94,3 +95,4 @@ test("automatic replay shows all six KETE entering one hole at once", () => {
     delete global.window;
   }
 });
+

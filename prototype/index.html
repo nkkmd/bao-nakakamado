@@ -7,10 +7,10 @@
   <meta name="robots" content="noindex, nofollow">
   <title>Bao Nakakamado — 遊べる試作</title>
   <meta name="description" content="NAMUAのNYAKUA（ニャクア）でハンドからKETEを奪い、相手のハンドが空になると残りを一穴へ全投入する Bao Nakakamado の試作版。">
-  <link rel="stylesheet" href="./style.css?v=0.5.1">
+  <link rel="stylesheet" href="./style.css?v=0.5.1-ui2">
   <script defer src="./bulk-engine.js?v=0.5.1"></script>
   <script defer src="./steal.js?v=0.5.1"></script>
-  <script defer src="./app.js?v=0.5.1-nyakua"></script>
+  <script defer src="./app.js?v=0.5.1-ui2"></script>
 </head>
 <body>
   <main class="game-shell">
@@ -18,73 +18,75 @@
       <div>
         <span class="kicker">A NEW BAO EXPERIMENT</span>
         <h1>BAO NAKAKAMADO</h1>
-        <span class="prototype-badge">遊べる試作 v0.5.1・一穴全投入を試験中</span>
+        <span class="prototype-badge">試作 v0.5.1・一穴全投入</span>
+        <span id="opponent-badge" class="opponent-badge">2人対戦</span>
       </div>
       <div class="toolbar">
+        <button id="sound" type="button" aria-pressed="false">サウンド OFF</button>
+        <button id="speed" type="button" aria-pressed="false">高速 OFF</button>
         <button id="new-game" type="button">新しい対局</button>
-        <button id="download" type="button" disabled>棋譜を保存</button>
       </div>
     </header>
 
-    <section class="intro" aria-labelledby="intro-title">
-      <div>
-        <span class="eyebrow">RULE EXPERIMENT 01</span>
-        <h2 id="intro-title">連続捕獲で、ハンドを奪う。</h2>
-        <p>Bao la Kiswahili の着手を土台に、NAMUA中の一手で2回以上捕獲すると、相手のハンドからKETEを1個奪います。この動作がNYAKUA（ニャクア、ハンド奪取）です。相手のハンドが空になったら、次のNAMUA着手で自分の残りを選んだ一穴へ全投入します。</p>
-      </div>
-      <a href="#rules">試作ルールを見る ↗</a>
-    </section>
-
-    <section class="game-layout" aria-label="対局">
-      <div class="play-column">
-        <div class="game-card">
-          <div class="game-top">
-            <span id="turn-number">TURN 1</span>
-            <strong id="turn-name">▼ SOUTH</strong>
-            <span id="phase-name">NAMUA</span>
-          </div>
-          <div class="reserves">
-            <span>NORTH <small>手元</small> <b id="north-hand">22</b></span>
-            <span>SOUTH <small>手元</small> <b id="south-hand">22</b></span>
-          </div>
-          <div id="board" class="board" role="group" aria-label="Bao の盤面"></div>
-          <div class="selection">
-            <p id="status" role="status" aria-live="polite">対局を始めてください。</p>
-            <div id="move-choices" class="move-choices"></div>
-          </div>
+    <section class="screen-frame" aria-label="対局">
+      <section id="setup" class="start-screen" aria-labelledby="start-title">
+        <div class="start-panel">
+          <span class="kicker">GAME SETUP</span>
+          <h2 id="start-title">対局設定</h2>
+          <label class="setup-field" for="mode">
+            <span>MODE</span>
+            <select id="mode">
+              <option value="local">2人で対戦</option>
+              <option value="computer">簡易コンピューター</option>
+            </select>
+          </label>
+          <label id="side-field" class="setup-field" for="side" hidden>
+            <span>手番</span>
+            <select id="side">
+              <option value="0">先手（SOUTH）</option>
+              <option value="1">後手（NORTH）</option>
+            </select>
+          </label>
+          <button id="start" class="start-button" type="button">対局開始</button>
+          <p class="hint">NAMUAで連続捕獲するとNYAKUAが発動します。相手のハンドが空になったら、残りを一穴へ全投入します。</p>
+          <p class="hint">コンピューターは試作用の簡易相手です。</p>
+        </div>
+      </section>
+      <div class="game-info" aria-label="対局状況">
+        <div class="turn-info">
+          <span id="turn-number">TURN 1</span>
+          <strong id="turn-name">▼ SOUTH</strong>
+        </div>
+        <strong id="phase-name">NAMUA</strong>
+        <div class="reserves">
+          <span>NORTH <small class="hand-label">手元</small> <strong id="north-hand">22</strong></span>
+          <span>SOUTH <small class="hand-label">手元</small> <strong id="south-hand">22</strong></span>
         </div>
       </div>
-
-      <aside class="sidebar">
-        <section id="setup" class="panel">
-          <span class="eyebrow">GAME SETUP</span>
-          <h2>対局設定</h2>
-          <label for="mode">対戦相手</label>
-          <select id="mode">
-            <option value="local">2人で対戦</option>
-            <option value="computer">簡易コンピューター</option>
-          </select>
-          <label for="side">あなたの側（コンピューター対戦）</label>
-          <select id="side">
-            <option value="0">SOUTH・先手</option>
-            <option value="1">NORTH・後手</option>
-          </select>
-          <button id="start" class="primary" type="button">対局開始</button>
-          <p class="hint">コンピューターは試作用の簡易相手です。元ゲームの AI-GEN4 ではありません。</p>
-        </section>
-        <section class="panel steal-panel">
-          <span class="eyebrow">NAMUA / NYAKUA</span>
-          <h2>NYAKUA（ニャクア）</h2>
-          <p>同じ着手で2回以上捕獲し、相手のハンドにKETEが残っていれば、1個を自分のハンドへ移します。相手のハンドが0のときは、次の着手で残りのKETEを選んだ一穴へ全投入します。</p>
-          <p id="steal-count">SOUTH 0個 ／ NORTH 0個</p>
-          <p id="steal-result" class="steal-result" aria-live="polite">NYAKUAはまだ発動していません。</p>
-        </section>
-      </aside>
+      <div class="board-surface">
+        <div id="board" class="board" role="group" aria-label="Bao の盤面"></div>
+        <div class="board-labels" aria-hidden="true"><span>KICHWA</span><span>NYUMBA</span><span>KICHWA</span></div>
+      </div>
+      <div id="move-choices" class="move-choices" aria-label="方向・入口の選択"></div>
     </section>
+    <p id="status" class="controls" role="status" aria-live="polite">対局を始めてください。</p>
 
-    <section id="rules" class="rules-panel">
-      <span class="eyebrow">HOW TO PLAY</span>
-      <h2>この試作の遊び方</h2>
+    <section class="nyakua-status" aria-label="NYAKUAの記録">
+      <div class="nyakua-heading"><strong>NYAKUA（ニャクア）</strong><span id="steal-count">SOUTH 0個 ／ NORTH 0個</span></div>
+      <p id="steal-result" aria-live="polite">NYAKUAはまだ発動していません。</p>
+    </section>
+    <details>
+      <summary>Bao Nakakamado について</summary>
+      <div class="rules">
+        <p>Bao la Kiswahili を出発点に、NAMUA中の連続捕獲で相手のハンドからKETEを奪うNYAKUA（ニャクア）を試しています。相手のハンドが空になると、残りを選んだ一穴へ全投入します。</p>
+        <p>これは遊べる試作です。NYAKUAと一穴全投入の正式採用、公開版の仕様は未確定です。</p>
+      </div>
+    </details>
+
+    <details id="rules">
+      <summary>遊び方・試作ルール</summary>
+      <div class="rules">
+      <a class="rules-guide-link" href="https://github.com/nkkmd/bao-nakakamado/blob/main/doc/RULEBOOK.md" target="_blank" rel="noopener noreferrer"><strong>Bao Nakakamado のルールブック ↗</strong><span>初期配置からNYAKUA、一穴全投入、勝敗まで。</span></a>
       <div class="rules-grid">
         <div><b>01 / Bao の手</b><p>光っている穴を選び、表示された方向・入口を選びます。着手後はKETEの移動を一段階ずつ表示します。捕獲義務、連続種まき、nyumba、namua／mtaji、終局判定は元のルールエンジンに従います。</p></div>
         <div><b>02 / NYAKUA（ハンド奪取）</b><p>NAMUA中、一手の中で2回以上捕獲すると、相手のハンドからKETEを1個奪います。何回続いても奪うのは一手につき1個です。</p></div>
@@ -92,8 +94,21 @@
         <div><b>04 / 段階と終局</b><p>ハンドが0の側は両者がMTAJIになるまでパスします。全投入後に両者のハンドが0ならMTAJIへ移り、次の側に合法手がなければ終局します。</p></div>
       </div>
       <p class="footnote">これは人間同士で一穴全投入の分かりやすさを確かめる試作です。正式採用は未決定です。元ゲームの詳しいルールは <a href="https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/doc/RULES_BASELINE.md" target="_blank" rel="noopener">採用ルール基準</a>を参照してください。</p>
-    </section>
-    <footer>BAO NAKAKAMADO · Prototype v0.5.1 trial · Based on the Bao la Kiswahili game engine</footer>
+      </div>
+    </details>
+    <details>
+      <summary>棋譜の保存</summary>
+      <div class="rules">
+        <p>対局の棋譜をJSONファイルとして保存できます。NYAKUAの発動と一穴全投入の個数も記録します。</p>
+        <button id="download" type="button" disabled>棋譜を保存</button>
+      </div>
+    </details>
+    <footer>
+      2人対戦・簡易コンピューター対戦<br>
+      <a href="https://github.com/nkkmd/bao-nakakamado" target="_blank" rel="noopener noreferrer">GitHub</a> · 試作 v0.5.1<br>
+      Based on <a href="https://github.com/nkkmd/bao-la-kiswahili-game" target="_blank" rel="noopener noreferrer">Bao la Kiswahili</a>
+    </footer>
   </main>
 </body>
 </html>
+

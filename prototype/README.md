@@ -1,6 +1,6 @@
 # Bao Nakakamado — 遊べる試作 v0.5.1（一穴全投入の試用）
 
-Bao la Kiswahili の [元エンジン](https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/public/engine.js) の 2026-09-29 時点の blob `1527bb3665228b7a5bd9f03153567aedbaaa22d7` を `engine.js` に変更せず保存した。実際の試作画面は、NAMUAの投入だけ変更した `bulk-engine.js` と、NYAKUA（ニャクア、ハンド奪取）を扱う `steal.js` を使う。画面は元ゲームの盤面・配色を参考に作成し、元の分析タグ、棋譜送信、AI-GEN4、PWAは取り込んでいない。
+Bao la Kiswahili の [元エンジン](https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/public/engine.js) の 2026-09-29 時点の blob `1527bb3665228b7a5bd9f03153567aedbaaa22d7` を `engine.js` に変更せず保存した。実際の試作画面は、NAMUAの投入だけ変更した `bulk-engine.js` と、NYAKUA（ニャクア、ハンド奪取）を扱う `steal.js` を使う。画面は元ゲームの `public` の盤面・配色・画面構成を参考に作成し、元の分析タグ、棋譜送信、AI-GEN4、PWAは取り込んでいない。
 
 ## 試作ルール
 
@@ -22,7 +22,18 @@ python3 -m http.server 8000 --directory prototype
 
 `http://localhost:8000/` で2人対戦か簡易コンピューター対戦を選び、光る穴と着手方向を選ぶ。全投入の手番ではハンドの個数と全投入を画面・着手候補に表示する。選択後は**全数の投入を一画面で表示**し、続く捕獲・種まき・NYAKUAを盤面とハンドの数で順に自動再生する。再生中は着手できない。
 
-棋譜のJSONダウンロードは `version: 3`、`variantRule: "namua-steal-one-and-fixed-pit-bulk"`。各着手に `placed`（ハンドから置いた数）、`captures`、`stolen` を記録する。従来の `version: 2` と同じルールで再現できるとは限らない。画面からの棋譜読み込みは未実装。コンピューターは試作用の簡易一手評価であり、元のAI-GEN4ではない。
+### 画面と操作
+
+2026-09-30に、元ゲームの `public`（コミット `09ac50d4116761b400d742cffa3b2478de11ec48`）に合わせて画面を整理した。
+
+- 一列の盤面中心の構成とし、対局設定を盤面内に表示する。スマホでは設定中の盤面を隠し、設定欄がはみ出さないようにする。
+- 盤・穴の配色、円形の穴、NYUMBAの四角い枠、合法手・選択・再生中の強調、手番・段階・ハンドの配置を元ゲームに近づける。
+- 上部に「サウンド」「高速」「新しい対局」を置く。サウンドと高速は初期OFF。高速ONでも全投入・捕獲・NYAKUAを含む全イベントを順に表示し、表示間隔を短くする。
+- 「新しい対局」で再生を中断して設定へ戻る。設定で選んだ条件は「対局開始」で反映する。
+- NYAKUAの回数と直近の結果は盤面下に表示し、説明・ルール・棋譜保存は折りたたみ内にまとめる。
+- 穴はキーボードでも操作できるボタンとして保持する。選択後は着手候補へ、着手再生後は次の合法な穴へフォーカスを移す。穴の座標はルールブックと同じ `SF/SB/NF/NB` を維持する。
+
+「棋譜の保存」を開いて「棋譜を保存」を押す。棋譜のJSONダウンロードは `version: 3`、`variantRule: "namua-steal-one-and-fixed-pit-bulk"`。各着手に `placed`（ハンドから置いた数）、`captures`、`stolen` を記録する。従来の `version: 2` と同じルールで再現できるとは限らない。画面からの棋譜読み込みは未実装。コンピューターは試作用の簡易一手評価であり、元のAI-GEN4ではない。
 
 ## 検証
 
@@ -38,4 +49,5 @@ GitHub連携時は production branch `main`、build command 空欄、build outpu
 
 ## 出典・ライセンス
 
-`engine.js` とそこから改変した `bulk-engine.js` は [bao-la-kiswahili-game のMIT License](ENGINE_LICENSE.txt) に従う。著作権表示と許諾条件を保持した。試作独自のコード・説明文のライセンスは現時点で未設定。元ゲームの図解ルール画像・文章は複製していない。
+`engine.js` とそこから改変した `bulk-engine.js`、元の `public/style.css` を参考にしたスタイルは [bao-la-kiswahili-game のMIT License](ENGINE_LICENSE.txt) に従う。著作権表示と許諾条件を保持した。スタイルの著作権表示と許諾条件も同ファイルで保持する。試作独自のコード・説明文のライセンスは現時点で未設定。元ゲームの図解ルール画像・文章は複製していない。
+
