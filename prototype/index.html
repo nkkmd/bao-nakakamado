@@ -6,11 +6,11 @@
   <meta name="theme-color" content="#172c2b">
   <meta name="robots" content="noindex, nofollow">
   <title>Bao Nakakamado — 遊べる試作</title>
-  <meta name="description" content="NAMUAの連続捕獲でKETEを奪い、相手のハンドが空になると残りを一穴へ全投入する Bao Nakakamado の試作版。">
+  <meta name="description" content="NAMUAのNYAKUA（ニャクア）でハンドからKETEを奪い、相手のハンドが空になると残りを一穴へ全投入する Bao Nakakamado の試作版。">
   <link rel="stylesheet" href="./style.css?v=0.5.1">
   <script defer src="./bulk-engine.js?v=0.5.1"></script>
   <script defer src="./steal.js?v=0.5.1"></script>
-  <script defer src="./app.js?v=0.5.1"></script>
+  <script defer src="./app.js?v=0.5.1-nyakua"></script>
 </head>
 <body>
   <main class="game-shell">
@@ -30,7 +30,7 @@
       <div>
         <span class="eyebrow">RULE EXPERIMENT 01</span>
         <h2 id="intro-title">連続捕獲で、ハンドを奪う。</h2>
-        <p>Bao la Kiswahili の着手を土台に、NAMUA中の一手で2回以上捕獲すると、相手のハンドからKETEを1個奪います。相手のハンドが空になったら、次のNAMUA着手で自分の残りを選んだ一穴へ全投入します。</p>
+        <p>Bao la Kiswahili の着手を土台に、NAMUA中の一手で2回以上捕獲すると、相手のハンドからKETEを1個奪います。この動作がNYAKUA（ニャクア、ハンド奪取）です。相手のハンドが空になったら、次のNAMUA着手で自分の残りを選んだ一穴へ全投入します。</p>
       </div>
       <a href="#rules">試作ルールを見る ↗</a>
     </section>
@@ -73,11 +73,11 @@
           <p class="hint">コンピューターは試作用の簡易相手です。元ゲームの AI-GEN4 ではありません。</p>
         </section>
         <section class="panel steal-panel">
-          <span class="eyebrow">NAMUA / KETE TRANSFER</span>
-          <h2>ハンドの奪い合い</h2>
+          <span class="eyebrow">NAMUA / NYAKUA</span>
+          <h2>NYAKUA（ニャクア）</h2>
           <p>同じ着手で2回以上捕獲し、相手のハンドにKETEが残っていれば、1個を自分のハンドへ移します。相手のハンドが0のときは、次の着手で残りのKETEを選んだ一穴へ全投入します。</p>
           <p id="steal-count">SOUTH 0個 ／ NORTH 0個</p>
-          <p id="steal-result" class="steal-result" aria-live="polite">連続捕獲によるKETEの移動はまだありません。</p>
+          <p id="steal-result" class="steal-result" aria-live="polite">NYAKUAはまだ発動していません。</p>
         </section>
       </aside>
     </section>
@@ -87,7 +87,7 @@
       <h2>この試作の遊び方</h2>
       <div class="rules-grid">
         <div><b>01 / Bao の手</b><p>光っている穴を選び、表示された方向・入口を選びます。着手後はKETEの移動を一段階ずつ表示します。捕獲義務、連続種まき、nyumba、namua／mtaji、終局判定は元のルールエンジンに従います。</p></div>
-        <div><b>02 / 連続捕獲</b><p>NAMUA中、一手の中で2回以上捕獲すると、相手のハンドからKETEを1個奪います。何回続いても奪うのは一手につき1個です。</p></div>
+        <div><b>02 / NYAKUA（ハンド奪取）</b><p>NAMUA中、一手の中で2回以上捕獲すると、相手のハンドからKETEを1個奪います。何回続いても奪うのは一手につき1個です。</p></div>
         <div><b>03 / 一穴全投入</b><p>相手のハンドが0で、自分に2個以上あれば、次のNAMUA着手で残りを選んだ一穴へ一度に全部置きます。通常の1個投入が全数投入になるだけで、その後の捕獲・連続種まきは同じです。残り1個なら通常の着手です。</p></div>
         <div><b>04 / 段階と終局</b><p>ハンドが0の側は両者がMTAJIになるまでパスします。全投入後に両者のハンドが0ならMTAJIへ移り、次の側に合法手がなければ終局します。</p></div>
       </div>

@@ -12,7 +12,7 @@
   let generation = 0;
   let animation = null;
   let view = game.board;
-  let lastResult = "連続捕獲によるKETEの移動はまだありません。";
+  let lastResult = "NYAKUAはまだ発動していません。";
 
   function name(player) { return player === 0 ? "SOUTH" : "NORTH"; }
   function humanTurn() { return mode === "local" || game.board.player === human; }
@@ -93,7 +93,7 @@
       case "sow": return `${place} にKETEを1個蒔きました。`;
       case "relay": return `${place} から${event.count}個で連続種まきします。`;
       case "capture": return `${name(animation.mover)} が ${name(event.player)} の ${pitName({ player: event.player, row: E.FRONT, index: event.index })} からKETEを${event.count}個捕獲しました。`;
-      case "steal": return `${name(event.to)} が ${name(event.from)} のハンドからKETEを1個奪いました。`;
+      case "steal": return `NYAKUA！ ${name(event.to)} が ${name(event.from)} のハンドからKETEを1個奪いました。`;
       case "phase": return "MTAJIに移りました。";
       case "win": return "終局しました。";
       case "limit": return "連続種まきの安全上限に達しました。";
@@ -123,7 +123,7 @@
     view = game.board;
     busy = false;
     const result = game.history.at(-1);
-    if (result?.stolen) lastResult = `${name(result.player)} が同じ着手で${result.captures}回捕獲し、${name(1 - result.player)} のハンドからKETEを1個奪いました。`;
+    if (result?.stolen) lastResult = `NYAKUA！ ${name(result.player)} が同じ着手で${result.captures}回捕獲し、${name(1 - result.player)} のハンドからKETEを1個奪いました。`;
     else if (result?.placed > 1) lastResult = `${name(result.player)} がハンドのKETEを${result.placed}個、選んだ一穴へ全投入しました。`;
     render();
     scheduleComputer();
@@ -195,7 +195,7 @@
       const button = document.createElement("button");
       button.type = "button";
       const preview = S.apply(game, move).history.at(-1);
-      button.textContent = `${moveLabel(move)}${preview.placed > 1 ? `・ハンドの${preview.placed}個を一穴へ全投入` : ""}${preview.stolen ? "・相手のハンドからKETEを1個奪う" : ""}`;
+      button.textContent = `${moveLabel(move)}${preview.placed > 1 ? `・ハンドの${preview.placed}個を一穴へ全投入` : ""}${preview.stolen ? "・NYAKUA（ハンドから1個奪う）" : ""}`;
       button.addEventListener("click", () => play(move));
       choices.append(button);
     }
@@ -265,7 +265,7 @@
     started = true;
     selected = null;
     busy = false;
-    lastResult = "連続捕獲によるKETEの移動はまだありません。";
+    lastResult = "NYAKUAはまだ発動していません。";
     $("setup").hidden = true;
     render();
     scheduleComputer();
