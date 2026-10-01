@@ -31,3 +31,17 @@ node tools/placement62-balance/verify.cjs /tmp/placement62
 `run.cjs` の第4引数は準備確認用の局数・組数、proofではノード予算の上書き。準備確認は正式対局数に加えない。`metadata.json` に対象ルール・総KETE・ソースSHA-256・実行commit・run IDを保存する。基準ソースの不一致では実行を停止する。
 
 今回の比較では盤上とハンドを合わせた総数も44個から40個へ変わる。差を「位置だけを変えた効果」とは扱わない。画面の簡易コンピューターの固定一局、人間同士、最善プレイの勝率へは外挿しない。採用判断は試験結果を確認してから別に行う。
+
+
+## 完了した記録
+
+[報告書](../../doc/PLACEMENT62_BALANCE_20261001.md)、[集計](results/summary.json)、[検証](results/verification.json)、[実行・取得記録](results/provenance.json)を保存した。主試験29,000局と追加座席交換1,600局が通常終局し、方針によって先手・後手への偏りが変わった。初期配置は製品へ採用していない。
+
+対局ごとのmetadata・summary・全ブロックと必勝探索の記録は `records.json.gz` に保存した。以下で展開して再集計・代表54局の再現検証を実行できる。
+
+```sh
+python3 tools/placement62-balance/data.py unpack /tmp/placement62-restored tools/placement62-balance/results/records.json.gz
+node tools/placement62-balance/verify.cjs /tmp/placement62-restored
+```
+
+`build-report.py` は検証済みチェックポイントと現行の対照集計から報告書・候補集計を作成する。保存済みファイルのSHA-256は [results/SHA256.json](results/SHA256.json) に保存する。artifactのSHA-256も取得時に照合済み。

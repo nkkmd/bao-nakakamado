@@ -2,6 +2,15 @@ name: Placement 6-2 first-player balance
 on:
   push:
     branches: [experiment/placement62-balance-20261001]
+    paths:
+      - tools/placement62-balance/core.cjs
+      - tools/placement62-balance/run.cjs
+      - tools/placement62-balance/check.cjs
+      - tools/placement62-balance/reference-sources.json
+      - prototype/bounce-engine.js
+      - prototype/steal.js
+      - tools/balance-options/core.cjs
+      - tools/balance-options/variant-engine.cjs
   workflow_dispatch:
 permissions:
   contents: read

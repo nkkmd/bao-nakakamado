@@ -61,6 +61,8 @@ GitHub Actionsの[Current v0.6.1 first-player balance](https://github.com/nkkmd/
 
 後続調査の[NYUMBA残数による連続捕獲上限案](NYUMBA_CAPTURE_CAP_STUDY_20261001.md)は、別seed・別局数で成立性と先後傾向を確認し、採用を見送りました。本書の29,000局の結果と追加案の新旧8,400局は合算しません。現行v0.6.1の捕獲処理を維持します。
 
+[初期配置6・2の追加比較](PLACEMENT62_BALANCE_20261001.md)では、本書の対照と同じゲーム・探索ソース、方針・局数・seedを用い、候補29,000局を実行しました。単純方針は50%付近でしたが、4手探索34.6%、6手探索77.2%となり、方針を通じた均衡は確認できませんでした。本書の29,000局へ候補の対局を加算せず、現行の初期配置6・2・2を維持します。
+
 旧v0.6.0のハンド6個の必勝証明や、ハンド12個・8個の勝率は別ルールの結果である。今回の現行ハンド12個の判定へ引き継がない。今回の6手探索の勝率も必勝証明とは区別する。
 
 [試験設計・再実行方法](../tools/current-balance/README.md)、[全条件の集計](../tools/current-balance/results/summary.json)、[集計・再現検証](../tools/current-balance/results/verification.json)、[実行・artifact取得記録](../tools/current-balance/results/provenance.json)、[対局単位の保存データ](../tools/current-balance/results/records.json.gz)を参照する。`records.json.gz` は各タスクのmetadata・summary・blockを保存したgzip JSONで、ブロックを再展開して `verify.cjs` で再検証できる。

@@ -1,0 +1,1917 @@
+{
+  "reference": "482ac28b8be2df11df873441196be53fc505df46",
+  "runId": "36876125049",
+  "runnerCommit": "cbe866016ddb156c03c9575192bc4ef7321012a4",
+  "rulesVersion": "0.6.1",
+  "candidateTotalKete": 40,
+  "baselineTotalKete": 44,
+  "decision": "EVALUATED_ONLY",
+  "self": [
+    {
+      "reference": "482ac28b8be2df11df873441196be53fc505df46",
+      "rulesVersion": "0.6.1",
+      "variantRule": "namua-steal-one-protect-last-fixed-pit-bulk-one-row-bounce-hand12",
+      "protectLast": true,
+      "config": {
+        "id": "placement62-hand12",
+        "hands": [
+          12,
+          12
+        ],
+        "pits": [
+          0,
+          0,
+          0,
+          0,
+          6,
+          2,
+          0,
+          0
+        ],
+        "threshold": 6
+      },
+      "totalKete": 40,
+      "task": "self-random",
+      "countOverride": null,
+      "hashes": {
+        "../../prototype/bounce-engine.js": "2100a9fad218a419a5ce35e5bb8dfbee5f610f71e9e8089e16c21d1b2b9c8aa9",
+        "../../prototype/steal.js": "2f27a86f660627cb8062bb6c828c8397828ccf954dd7f81a5423697d92a952d8",
+        "../balance-options/core.cjs": "f192f29d5dff9f2c5165df335433fb00212c0e5447a25daf8415410df1034421",
+        "../balance-options/variant-engine.cjs": "2d2934ca5f0ef8747391f18649fd7401d2517956a4165262f19a74fffd751710",
+        "core.cjs": "2bdcff1d3eb6e4f5bc043baa8bcdb979a49d60efa68c413e51621850fb1a5147",
+        "check.cjs": "249e9626e94807ba1332528c1d114e911af96dd6f1a3fc885b12f2470c9248f7",
+        "run.cjs": "0db6728a66e7c7b678075610d5225a6d2c5cf6ac6019d4972effb632063d56f8",
+        "reference-sources.json": "694d65283bb35dcee63ef6074283207b44649179bcbd36455f5668f4ee25d9ac"
+      },
+      "node": "v24.19.0",
+      "runnerCommit": "cbe866016ddb156c03c9575192bc4ef7321012a4",
+      "runId": "36876125049",
+      "attempt": "1",
+      "signature": "4da9772b3e32e8215d008f40834e256d9ccee49dec3313709fad36281edfb125",
+      "policy": "random",
+      "seedStartIndex": 10000,
+      "n": 5000,
+      "firstWins": 2548,
+      "secondWins": 2452,
+      "firstWinPct": 50.96,
+      "wilson95Pct": [
+        49.57414644364055,
+        52.344379568624944
+      ],
+      "avgPlies": 20.6876,
+      "mtajiPlayedPct": 48.08,
+      "bulkPct": 38.84,
+      "nyakuaPct": 96.14,
+      "reasons": {
+        "front-empty": 3474,
+        "no-move": 1526
+      },
+      "searchNodes": 0,
+      "blocks": [
+        {
+          "n": 1000,
+          "firstWins": 527,
+          "secondWins": 473,
+          "firstWinPct": 52.7,
+          "wilson95Pct": [
+            49.60112345098614,
+            55.77821205319188
+          ],
+          "avgPlies": 20.823,
+          "mtajiPlayedPct": 48,
+          "bulkPct": 38.2,
+          "nyakuaPct": 95.9,
+          "reasons": {
+            "front-empty": 704,
+            "no-move": 296
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 501,
+          "secondWins": 499,
+          "firstWinPct": 50.1,
+          "wilson95Pct": [
+            47.0065835233753,
+            53.19265112492759
+          ],
+          "avgPlies": 20.469,
+          "mtajiPlayedPct": 47.4,
+          "bulkPct": 38,
+          "nyakuaPct": 95.6,
+          "reasons": {
+            "no-move": 310,
+            "front-empty": 690
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 511,
+          "secondWins": 489,
+          "firstWinPct": 51.1,
+          "wilson95Pct": [
+            48.00349634365892,
+            54.188084787672864
+          ],
+          "avgPlies": 20.567,
+          "mtajiPlayedPct": 47.3,
+          "bulkPct": 40.5,
+          "nyakuaPct": 96.3,
+          "reasons": {
+            "front-empty": 697,
+            "no-move": 303
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 516,
+          "secondWins": 484,
+          "firstWinPct": 51.6,
+          "wilson95Pct": [
+            48.5024152020198,
+            54.68533917082643
+          ],
+          "avgPlies": 20.948,
+          "mtajiPlayedPct": 49.1,
+          "bulkPct": 40.5,
+          "nyakuaPct": 96,
+          "reasons": {
+            "no-move": 313,
+            "front-empty": 687
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 493,
+          "secondWins": 507,
+          "firstWinPct": 49.3,
+          "wilson95Pct": [
+            46.209940740448396,
+            52.395416721431374
+          ],
+          "avgPlies": 20.631,
+          "mtajiPlayedPct": 48.6,
+          "bulkPct": 37,
+          "nyakuaPct": 96.9,
+          "reasons": {
+            "no-move": 304,
+            "front-empty": 696
+          },
+          "searchNodes": 0
+        }
+      ],
+      "mirror": {
+        "hand": {
+          "id": "placement62-hand12",
+          "hands": [
+            12,
+            12
+          ],
+          "pits": [
+            0,
+            0,
+            0,
+            0,
+            6,
+            2,
+            0,
+            0
+          ],
+          "threshold": 6
+        },
+        "policy": "random",
+        "pairs": 100,
+        "mismatches": 0
+      },
+      "completed": true
+    },
+    {
+      "reference": "482ac28b8be2df11df873441196be53fc505df46",
+      "rulesVersion": "0.6.1",
+      "variantRule": "namua-steal-one-protect-last-fixed-pit-bulk-one-row-bounce-hand12",
+      "protectLast": true,
+      "config": {
+        "id": "placement62-hand12",
+        "hands": [
+          12,
+          12
+        ],
+        "pits": [
+          0,
+          0,
+          0,
+          0,
+          6,
+          2,
+          0,
+          0
+        ],
+        "threshold": 6
+      },
+      "totalKete": 40,
+      "task": "self-noisy",
+      "countOverride": null,
+      "hashes": {
+        "../../prototype/bounce-engine.js": "2100a9fad218a419a5ce35e5bb8dfbee5f610f71e9e8089e16c21d1b2b9c8aa9",
+        "../../prototype/steal.js": "2f27a86f660627cb8062bb6c828c8397828ccf954dd7f81a5423697d92a952d8",
+        "../balance-options/core.cjs": "f192f29d5dff9f2c5165df335433fb00212c0e5447a25daf8415410df1034421",
+        "../balance-options/variant-engine.cjs": "2d2934ca5f0ef8747391f18649fd7401d2517956a4165262f19a74fffd751710",
+        "core.cjs": "2bdcff1d3eb6e4f5bc043baa8bcdb979a49d60efa68c413e51621850fb1a5147",
+        "check.cjs": "249e9626e94807ba1332528c1d114e911af96dd6f1a3fc885b12f2470c9248f7",
+        "run.cjs": "0db6728a66e7c7b678075610d5225a6d2c5cf6ac6019d4972effb632063d56f8",
+        "reference-sources.json": "694d65283bb35dcee63ef6074283207b44649179bcbd36455f5668f4ee25d9ac"
+      },
+      "node": "v24.19.0",
+      "runnerCommit": "cbe866016ddb156c03c9575192bc4ef7321012a4",
+      "runId": "36876125049",
+      "attempt": "1",
+      "signature": "679f5a0607569ab6c48520b58bf368863aa540877351215e263ec006b0eb2325",
+      "policy": "noisy",
+      "seedStartIndex": 10000,
+      "n": 5000,
+      "firstWins": 2513,
+      "secondWins": 2487,
+      "firstWinPct": 50.26,
+      "wilson95Pct": [
+        48.87444737178839,
+        51.645153423200185
+      ],
+      "avgPlies": 15.4206,
+      "mtajiPlayedPct": 11.3,
+      "bulkPct": 13,
+      "nyakuaPct": 99,
+      "reasons": {
+        "front-empty": 4464,
+        "no-move": 536
+      },
+      "searchNodes": 0,
+      "blocks": [
+        {
+          "n": 1000,
+          "firstWins": 510,
+          "secondWins": 490,
+          "firstWinPct": 51,
+          "wilson95Pct": [
+            47.903749580454594,
+            54.08859690257428
+          ],
+          "avgPlies": 15.386,
+          "mtajiPlayedPct": 11.7,
+          "bulkPct": 11.9,
+          "nyakuaPct": 99,
+          "reasons": {
+            "front-empty": 885,
+            "no-move": 115
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 499,
+          "secondWins": 501,
+          "firstWinPct": 49.9,
+          "wilson95Pct": [
+            46.8073488750724,
+            52.9934164766247
+          ],
+          "avgPlies": 15.369,
+          "mtajiPlayedPct": 11.1,
+          "bulkPct": 13.6,
+          "nyakuaPct": 98.7,
+          "reasons": {
+            "front-empty": 907,
+            "no-move": 93
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 506,
+          "secondWins": 494,
+          "firstWinPct": 50.6,
+          "wilson95Pct": [
+            47.504885836338104,
+            53.69052205347923
+          ],
+          "avgPlies": 15.45,
+          "mtajiPlayedPct": 11.1,
+          "bulkPct": 12.5,
+          "nyakuaPct": 99.7,
+          "reasons": {
+            "front-empty": 894,
+            "no-move": 106
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 475,
+          "secondWins": 525,
+          "firstWinPct": 47.5,
+          "wilson95Pct": [
+            44.4203808385514,
+            50.59875295387637
+          ],
+          "avgPlies": 15.551,
+          "mtajiPlayedPct": 11.2,
+          "bulkPct": 14.2,
+          "nyakuaPct": 98.8,
+          "reasons": {
+            "front-empty": 888,
+            "no-move": 112
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 523,
+          "secondWins": 477,
+          "firstWinPct": 52.3,
+          "wilson95Pct": [
+            49.20142012545935,
+            55.380976785507094
+          ],
+          "avgPlies": 15.347,
+          "mtajiPlayedPct": 11.4,
+          "bulkPct": 12.8,
+          "nyakuaPct": 98.8,
+          "reasons": {
+            "front-empty": 890,
+            "no-move": 110
+          },
+          "searchNodes": 0
+        }
+      ],
+      "mirror": {
+        "hand": {
+          "id": "placement62-hand12",
+          "hands": [
+            12,
+            12
+          ],
+          "pits": [
+            0,
+            0,
+            0,
+            0,
+            6,
+            2,
+            0,
+            0
+          ],
+          "threshold": 6
+        },
+        "policy": "noisy",
+        "pairs": 100,
+        "mismatches": 0
+      },
+      "completed": true
+    },
+    {
+      "reference": "482ac28b8be2df11df873441196be53fc505df46",
+      "rulesVersion": "0.6.1",
+      "variantRule": "namua-steal-one-protect-last-fixed-pit-bulk-one-row-bounce-hand12",
+      "protectLast": true,
+      "config": {
+        "id": "placement62-hand12",
+        "hands": [
+          12,
+          12
+        ],
+        "pits": [
+          0,
+          0,
+          0,
+          0,
+          6,
+          2,
+          0,
+          0
+        ],
+        "threshold": 6
+      },
+      "totalKete": 40,
+      "task": "self-greedy",
+      "countOverride": null,
+      "hashes": {
+        "../../prototype/bounce-engine.js": "2100a9fad218a419a5ce35e5bb8dfbee5f610f71e9e8089e16c21d1b2b9c8aa9",
+        "../../prototype/steal.js": "2f27a86f660627cb8062bb6c828c8397828ccf954dd7f81a5423697d92a952d8",
+        "../balance-options/core.cjs": "f192f29d5dff9f2c5165df335433fb00212c0e5447a25daf8415410df1034421",
+        "../balance-options/variant-engine.cjs": "2d2934ca5f0ef8747391f18649fd7401d2517956a4165262f19a74fffd751710",
+        "core.cjs": "2bdcff1d3eb6e4f5bc043baa8bcdb979a49d60efa68c413e51621850fb1a5147",
+        "check.cjs": "249e9626e94807ba1332528c1d114e911af96dd6f1a3fc885b12f2470c9248f7",
+        "run.cjs": "0db6728a66e7c7b678075610d5225a6d2c5cf6ac6019d4972effb632063d56f8",
+        "reference-sources.json": "694d65283bb35dcee63ef6074283207b44649179bcbd36455f5668f4ee25d9ac"
+      },
+      "node": "v24.19.0",
+      "runnerCommit": "cbe866016ddb156c03c9575192bc4ef7321012a4",
+      "runId": "36876125049",
+      "attempt": "1",
+      "signature": "3dc829b62287a815fc82476ac51adbb45e7aaafdee93b62c3639adea530b597d",
+      "policy": "greedy",
+      "seedStartIndex": 10000,
+      "n": 5000,
+      "firstWins": 2486,
+      "secondWins": 2514,
+      "firstWinPct": 49.72,
+      "wilson95Pct": [
+        48.33486492098803,
+        51.10556499210121
+      ],
+      "avgPlies": 15.5068,
+      "mtajiPlayedPct": 12.02,
+      "bulkPct": 14.9,
+      "nyakuaPct": 99.02,
+      "reasons": {
+        "front-empty": 4415,
+        "no-move": 585
+      },
+      "searchNodes": 0,
+      "blocks": [
+        {
+          "n": 1000,
+          "firstWins": 504,
+          "secondWins": 496,
+          "firstWinPct": 50.4,
+          "wilson95Pct": [
+            47.30552793350446,
+            53.491410659707086
+          ],
+          "avgPlies": 15.362,
+          "mtajiPlayedPct": 10.3,
+          "bulkPct": 13.2,
+          "nyakuaPct": 99.1,
+          "reasons": {
+            "front-empty": 901,
+            "no-move": 99
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 492,
+          "secondWins": 508,
+          "firstWinPct": 49.2,
+          "wilson95Pct": [
+            46.11041586281342,
+            52.29570695076347
+          ],
+          "avgPlies": 15.5,
+          "mtajiPlayedPct": 12.4,
+          "bulkPct": 16.2,
+          "nyakuaPct": 98.7,
+          "reasons": {
+            "front-empty": 880,
+            "no-move": 120
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 521,
+          "secondWins": 479,
+          "firstWinPct": 52.1,
+          "wilson95Pct": [
+            49.00164266054177,
+            55.182284953818915
+          ],
+          "avgPlies": 15.501,
+          "mtajiPlayedPct": 12.6,
+          "bulkPct": 14.3,
+          "nyakuaPct": 99.7,
+          "reasons": {
+            "no-move": 111,
+            "front-empty": 889
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 457,
+          "secondWins": 543,
+          "firstWinPct": 45.7,
+          "wilson95Pct": [
+            42.63483045447644,
+            48.798079668499334
+          ],
+          "avgPlies": 15.743,
+          "mtajiPlayedPct": 11.6,
+          "bulkPct": 15.8,
+          "nyakuaPct": 98.8,
+          "reasons": {
+            "front-empty": 873,
+            "no-move": 127
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 512,
+          "secondWins": 488,
+          "firstWinPct": 51.2,
+          "wilson95Pct": [
+            48.10325544060909,
+            54.287560339025575
+          ],
+          "avgPlies": 15.428,
+          "mtajiPlayedPct": 13.2,
+          "bulkPct": 15,
+          "nyakuaPct": 98.8,
+          "reasons": {
+            "front-empty": 872,
+            "no-move": 128
+          },
+          "searchNodes": 0
+        }
+      ],
+      "mirror": {
+        "hand": {
+          "id": "placement62-hand12",
+          "hands": [
+            12,
+            12
+          ],
+          "pits": [
+            0,
+            0,
+            0,
+            0,
+            6,
+            2,
+            0,
+            0
+          ],
+          "threshold": 6
+        },
+        "policy": "greedy",
+        "pairs": 100,
+        "mismatches": 0
+      },
+      "completed": true
+    },
+    {
+      "reference": "482ac28b8be2df11df873441196be53fc505df46",
+      "rulesVersion": "0.6.1",
+      "variantRule": "namua-steal-one-protect-last-fixed-pit-bulk-one-row-bounce-hand12",
+      "protectLast": true,
+      "config": {
+        "id": "placement62-hand12",
+        "hands": [
+          12,
+          12
+        ],
+        "pits": [
+          0,
+          0,
+          0,
+          0,
+          6,
+          2,
+          0,
+          0
+        ],
+        "threshold": 6
+      },
+      "totalKete": 40,
+      "task": "self-reply",
+      "countOverride": null,
+      "hashes": {
+        "../../prototype/bounce-engine.js": "2100a9fad218a419a5ce35e5bb8dfbee5f610f71e9e8089e16c21d1b2b9c8aa9",
+        "../../prototype/steal.js": "2f27a86f660627cb8062bb6c828c8397828ccf954dd7f81a5423697d92a952d8",
+        "../balance-options/core.cjs": "f192f29d5dff9f2c5165df335433fb00212c0e5447a25daf8415410df1034421",
+        "../balance-options/variant-engine.cjs": "2d2934ca5f0ef8747391f18649fd7401d2517956a4165262f19a74fffd751710",
+        "core.cjs": "2bdcff1d3eb6e4f5bc043baa8bcdb979a49d60efa68c413e51621850fb1a5147",
+        "check.cjs": "249e9626e94807ba1332528c1d114e911af96dd6f1a3fc885b12f2470c9248f7",
+        "run.cjs": "0db6728a66e7c7b678075610d5225a6d2c5cf6ac6019d4972effb632063d56f8",
+        "reference-sources.json": "694d65283bb35dcee63ef6074283207b44649179bcbd36455f5668f4ee25d9ac"
+      },
+      "node": "v24.19.0",
+      "runnerCommit": "cbe866016ddb156c03c9575192bc4ef7321012a4",
+      "runId": "36876125049",
+      "attempt": "1",
+      "signature": "124931ab4260f1ce9d28146cdc1bf48a21c4368373b8fb5ba2e35d0faeeba998",
+      "policy": "reply",
+      "seedStartIndex": 10000,
+      "n": 5000,
+      "firstWins": 1921,
+      "secondWins": 3079,
+      "firstWinPct": 38.42,
+      "wilson95Pct": [
+        37.081155657346585,
+        39.77662431970094
+      ],
+      "avgPlies": 26.2778,
+      "mtajiPlayedPct": 90.28,
+      "bulkPct": 18.32,
+      "nyakuaPct": 27.16,
+      "reasons": {
+        "no-move": 1910,
+        "front-empty": 3090
+      },
+      "searchNodes": 0,
+      "blocks": [
+        {
+          "n": 1000,
+          "firstWins": 383,
+          "secondWins": 617,
+          "firstWinPct": 38.3,
+          "wilson95Pct": [
+            35.33727313696084,
+            41.352273011601156
+          ],
+          "avgPlies": 26.191,
+          "mtajiPlayedPct": 90.1,
+          "bulkPct": 18.2,
+          "nyakuaPct": 27.3,
+          "reasons": {
+            "no-move": 374,
+            "front-empty": 626
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 364,
+          "secondWins": 636,
+          "firstWinPct": 36.4,
+          "wilson95Pct": [
+            33.4751650912775,
+            39.42892273952959
+          ],
+          "avgPlies": 26.346,
+          "mtajiPlayedPct": 90.8,
+          "bulkPct": 19.3,
+          "nyakuaPct": 27.4,
+          "reasons": {
+            "front-empty": 626,
+            "no-move": 374
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 396,
+          "secondWins": 604,
+          "firstWinPct": 39.6,
+          "wilson95Pct": [
+            36.614144983616576,
+            42.66545159288297
+          ],
+          "avgPlies": 26.232,
+          "mtajiPlayedPct": 89.1,
+          "bulkPct": 16.9,
+          "nyakuaPct": 26.8,
+          "reasons": {
+            "front-empty": 606,
+            "no-move": 394
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 388,
+          "secondWins": 612,
+          "firstWinPct": 38.8,
+          "wilson95Pct": [
+            35.82811184771855,
+            41.85760754235788
+          ],
+          "avgPlies": 26.258,
+          "mtajiPlayedPct": 90.7,
+          "bulkPct": 18.9,
+          "nyakuaPct": 27.6,
+          "reasons": {
+            "front-empty": 609,
+            "no-move": 391
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 390,
+          "secondWins": 610,
+          "firstWinPct": 39,
+          "wilson95Pct": [
+            36.02454063696288,
+            42.05964804971933
+          ],
+          "avgPlies": 26.362,
+          "mtajiPlayedPct": 90.7,
+          "bulkPct": 18.3,
+          "nyakuaPct": 26.7,
+          "reasons": {
+            "front-empty": 623,
+            "no-move": 377
+          },
+          "searchNodes": 0
+        }
+      ],
+      "mirror": {
+        "hand": {
+          "id": "placement62-hand12",
+          "hands": [
+            12,
+            12
+          ],
+          "pits": [
+            0,
+            0,
+            0,
+            0,
+            6,
+            2,
+            0,
+            0
+          ],
+          "threshold": 6
+        },
+        "policy": "reply",
+        "pairs": 100,
+        "mismatches": 0
+      },
+      "completed": true
+    },
+    {
+      "reference": "482ac28b8be2df11df873441196be53fc505df46",
+      "rulesVersion": "0.6.1",
+      "variantRule": "namua-steal-one-protect-last-fixed-pit-bulk-one-row-bounce-hand12",
+      "protectLast": true,
+      "config": {
+        "id": "placement62-hand12",
+        "hands": [
+          12,
+          12
+        ],
+        "pits": [
+          0,
+          0,
+          0,
+          0,
+          6,
+          2,
+          0,
+          0
+        ],
+        "threshold": 6
+      },
+      "totalKete": 40,
+      "task": "self-search3",
+      "countOverride": null,
+      "hashes": {
+        "../../prototype/bounce-engine.js": "2100a9fad218a419a5ce35e5bb8dfbee5f610f71e9e8089e16c21d1b2b9c8aa9",
+        "../../prototype/steal.js": "2f27a86f660627cb8062bb6c828c8397828ccf954dd7f81a5423697d92a952d8",
+        "../balance-options/core.cjs": "f192f29d5dff9f2c5165df335433fb00212c0e5447a25daf8415410df1034421",
+        "../balance-options/variant-engine.cjs": "2d2934ca5f0ef8747391f18649fd7401d2517956a4165262f19a74fffd751710",
+        "core.cjs": "2bdcff1d3eb6e4f5bc043baa8bcdb979a49d60efa68c413e51621850fb1a5147",
+        "check.cjs": "249e9626e94807ba1332528c1d114e911af96dd6f1a3fc885b12f2470c9248f7",
+        "run.cjs": "0db6728a66e7c7b678075610d5225a6d2c5cf6ac6019d4972effb632063d56f8",
+        "reference-sources.json": "694d65283bb35dcee63ef6074283207b44649179bcbd36455f5668f4ee25d9ac"
+      },
+      "node": "v24.19.0",
+      "runnerCommit": "cbe866016ddb156c03c9575192bc4ef7321012a4",
+      "runId": "36876125049",
+      "attempt": "1",
+      "signature": "7ec347c42f94d8542922c2e40ae4c157add4c2eb8f4747ed95388bef3106c4c0",
+      "policy": "search3",
+      "seedStartIndex": 10000,
+      "n": 1000,
+      "firstWins": 374,
+      "secondWins": 626,
+      "firstWinPct": 37.4,
+      "wilson95Pct": [
+        34.45460981276908,
+        40.44182450106691
+      ],
+      "avgPlies": 15.772,
+      "mtajiPlayedPct": 27.6,
+      "bulkPct": 42,
+      "nyakuaPct": 100,
+      "reasons": {
+        "no-move": 155,
+        "front-empty": 845
+      },
+      "searchNodes": 411709,
+      "blocks": [
+        {
+          "n": 1000,
+          "firstWins": 374,
+          "secondWins": 626,
+          "firstWinPct": 37.4,
+          "wilson95Pct": [
+            34.45460981276908,
+            40.44182450106691
+          ],
+          "avgPlies": 15.772,
+          "mtajiPlayedPct": 27.6,
+          "bulkPct": 42,
+          "nyakuaPct": 100,
+          "reasons": {
+            "no-move": 155,
+            "front-empty": 845
+          },
+          "searchNodes": 411709
+        }
+      ],
+      "mirror": {
+        "hand": {
+          "id": "placement62-hand12",
+          "hands": [
+            12,
+            12
+          ],
+          "pits": [
+            0,
+            0,
+            0,
+            0,
+            6,
+            2,
+            0,
+            0
+          ],
+          "threshold": 6
+        },
+        "policy": "search3",
+        "pairs": 100,
+        "mismatches": 0
+      },
+      "completed": true
+    },
+    {
+      "reference": "482ac28b8be2df11df873441196be53fc505df46",
+      "rulesVersion": "0.6.1",
+      "variantRule": "namua-steal-one-protect-last-fixed-pit-bulk-one-row-bounce-hand12",
+      "protectLast": true,
+      "config": {
+        "id": "placement62-hand12",
+        "hands": [
+          12,
+          12
+        ],
+        "pits": [
+          0,
+          0,
+          0,
+          0,
+          6,
+          2,
+          0,
+          0
+        ],
+        "threshold": 6
+      },
+      "totalKete": 40,
+      "task": "self-search4",
+      "countOverride": null,
+      "hashes": {
+        "../../prototype/bounce-engine.js": "2100a9fad218a419a5ce35e5bb8dfbee5f610f71e9e8089e16c21d1b2b9c8aa9",
+        "../../prototype/steal.js": "2f27a86f660627cb8062bb6c828c8397828ccf954dd7f81a5423697d92a952d8",
+        "../balance-options/core.cjs": "f192f29d5dff9f2c5165df335433fb00212c0e5447a25daf8415410df1034421",
+        "../balance-options/variant-engine.cjs": "2d2934ca5f0ef8747391f18649fd7401d2517956a4165262f19a74fffd751710",
+        "core.cjs": "2bdcff1d3eb6e4f5bc043baa8bcdb979a49d60efa68c413e51621850fb1a5147",
+        "check.cjs": "249e9626e94807ba1332528c1d114e911af96dd6f1a3fc885b12f2470c9248f7",
+        "run.cjs": "0db6728a66e7c7b678075610d5225a6d2c5cf6ac6019d4972effb632063d56f8",
+        "reference-sources.json": "694d65283bb35dcee63ef6074283207b44649179bcbd36455f5668f4ee25d9ac"
+      },
+      "node": "v24.19.0",
+      "runnerCommit": "cbe866016ddb156c03c9575192bc4ef7321012a4",
+      "runId": "36876125049",
+      "attempt": "1",
+      "signature": "664e437c4041dd8024c3b054844f508a6c5aa8e5b7aaea7d44fb9c4e2ba58d7b",
+      "policy": "search4",
+      "seedStartIndex": 10000,
+      "n": 1000,
+      "firstWins": 346,
+      "secondWins": 654,
+      "firstWinPct": 34.6,
+      "wilson95Pct": [
+        31.715666010206423,
+        37.60219815114867
+      ],
+      "avgPlies": 26.446,
+      "mtajiPlayedPct": 91.6,
+      "bulkPct": 38.3,
+      "nyakuaPct": 73.2,
+      "reasons": {
+        "no-move": 466,
+        "front-empty": 534
+      },
+      "searchNodes": 2153287,
+      "blocks": [
+        {
+          "n": 1000,
+          "firstWins": 346,
+          "secondWins": 654,
+          "firstWinPct": 34.6,
+          "wilson95Pct": [
+            31.715666010206423,
+            37.60219815114867
+          ],
+          "avgPlies": 26.446,
+          "mtajiPlayedPct": 91.6,
+          "bulkPct": 38.3,
+          "nyakuaPct": 73.2,
+          "reasons": {
+            "no-move": 466,
+            "front-empty": 534
+          },
+          "searchNodes": 2153287
+        }
+      ],
+      "mirror": {
+        "hand": {
+          "id": "placement62-hand12",
+          "hands": [
+            12,
+            12
+          ],
+          "pits": [
+            0,
+            0,
+            0,
+            0,
+            6,
+            2,
+            0,
+            0
+          ],
+          "threshold": 6
+        },
+        "policy": "search4",
+        "pairs": 100,
+        "mismatches": 0
+      },
+      "completed": true
+    },
+    {
+      "reference": "482ac28b8be2df11df873441196be53fc505df46",
+      "rulesVersion": "0.6.1",
+      "variantRule": "namua-steal-one-protect-last-fixed-pit-bulk-one-row-bounce-hand12",
+      "protectLast": true,
+      "config": {
+        "id": "placement62-hand12",
+        "hands": [
+          12,
+          12
+        ],
+        "pits": [
+          0,
+          0,
+          0,
+          0,
+          6,
+          2,
+          0,
+          0
+        ],
+        "threshold": 6
+      },
+      "totalKete": 40,
+      "task": "self-search6",
+      "countOverride": null,
+      "hashes": {
+        "../../prototype/bounce-engine.js": "2100a9fad218a419a5ce35e5bb8dfbee5f610f71e9e8089e16c21d1b2b9c8aa9",
+        "../../prototype/steal.js": "2f27a86f660627cb8062bb6c828c8397828ccf954dd7f81a5423697d92a952d8",
+        "../balance-options/core.cjs": "f192f29d5dff9f2c5165df335433fb00212c0e5447a25daf8415410df1034421",
+        "../balance-options/variant-engine.cjs": "2d2934ca5f0ef8747391f18649fd7401d2517956a4165262f19a74fffd751710",
+        "core.cjs": "2bdcff1d3eb6e4f5bc043baa8bcdb979a49d60efa68c413e51621850fb1a5147",
+        "check.cjs": "249e9626e94807ba1332528c1d114e911af96dd6f1a3fc885b12f2470c9248f7",
+        "run.cjs": "0db6728a66e7c7b678075610d5225a6d2c5cf6ac6019d4972effb632063d56f8",
+        "reference-sources.json": "694d65283bb35dcee63ef6074283207b44649179bcbd36455f5668f4ee25d9ac"
+      },
+      "node": "v24.19.0",
+      "runnerCommit": "cbe866016ddb156c03c9575192bc4ef7321012a4",
+      "runId": "36876125049",
+      "attempt": "1",
+      "signature": "53f1e1d908522de99166b6a48d618a729478974e857ab36c1c01d8d23ff4cfd4",
+      "policy": "search6",
+      "seedStartIndex": 10000,
+      "n": 1000,
+      "firstWins": 772,
+      "secondWins": 228,
+      "firstWinPct": 77.2,
+      "wilson95Pct": [
+        74.49850163320579,
+        79.69332270518001
+      ],
+      "avgPlies": 24.726,
+      "mtajiPlayedPct": 74.8,
+      "bulkPct": 52.2,
+      "nyakuaPct": 100,
+      "reasons": {
+        "front-empty": 482,
+        "no-move": 518
+      },
+      "searchNodes": 11122255,
+      "blocks": [
+        {
+          "n": 1000,
+          "firstWins": 772,
+          "secondWins": 228,
+          "firstWinPct": 77.2,
+          "wilson95Pct": [
+            74.49850163320579,
+            79.69332270518001
+          ],
+          "avgPlies": 24.726,
+          "mtajiPlayedPct": 74.8,
+          "bulkPct": 52.2,
+          "nyakuaPct": 100,
+          "reasons": {
+            "front-empty": 482,
+            "no-move": 518
+          },
+          "searchNodes": 11122255
+        }
+      ],
+      "mirror": {
+        "hand": {
+          "id": "placement62-hand12",
+          "hands": [
+            12,
+            12
+          ],
+          "pits": [
+            0,
+            0,
+            0,
+            0,
+            6,
+            2,
+            0,
+            0
+          ],
+          "threshold": 6
+        },
+        "policy": "search6",
+        "pairs": 100,
+        "mismatches": 0
+      },
+      "completed": true
+    },
+    {
+      "reference": "482ac28b8be2df11df873441196be53fc505df46",
+      "rulesVersion": "0.6.1",
+      "variantRule": "namua-steal-one-protect-last-fixed-pit-bulk-one-row-bounce-hand12",
+      "protectLast": true,
+      "config": {
+        "id": "placement62-hand12",
+        "hands": [
+          12,
+          12
+        ],
+        "pits": [
+          0,
+          0,
+          0,
+          0,
+          6,
+          2,
+          0,
+          0
+        ],
+        "threshold": 6
+      },
+      "totalKete": 40,
+      "task": "self-search4-mobility",
+      "countOverride": null,
+      "hashes": {
+        "../../prototype/bounce-engine.js": "2100a9fad218a419a5ce35e5bb8dfbee5f610f71e9e8089e16c21d1b2b9c8aa9",
+        "../../prototype/steal.js": "2f27a86f660627cb8062bb6c828c8397828ccf954dd7f81a5423697d92a952d8",
+        "../balance-options/core.cjs": "f192f29d5dff9f2c5165df335433fb00212c0e5447a25daf8415410df1034421",
+        "../balance-options/variant-engine.cjs": "2d2934ca5f0ef8747391f18649fd7401d2517956a4165262f19a74fffd751710",
+        "core.cjs": "2bdcff1d3eb6e4f5bc043baa8bcdb979a49d60efa68c413e51621850fb1a5147",
+        "check.cjs": "249e9626e94807ba1332528c1d114e911af96dd6f1a3fc885b12f2470c9248f7",
+        "run.cjs": "0db6728a66e7c7b678075610d5225a6d2c5cf6ac6019d4972effb632063d56f8",
+        "reference-sources.json": "694d65283bb35dcee63ef6074283207b44649179bcbd36455f5668f4ee25d9ac"
+      },
+      "node": "v24.19.0",
+      "runnerCommit": "cbe866016ddb156c03c9575192bc4ef7321012a4",
+      "runId": "36876125049",
+      "attempt": "1",
+      "signature": "1ff2513247c78e603174bf5697b59f4da2db1aaa0bbfff487be633dec9af6b5c",
+      "policy": "search4-mobility",
+      "seedStartIndex": 10000,
+      "n": 1000,
+      "firstWins": 331,
+      "secondWins": 669,
+      "firstWinPct": 33.1,
+      "wilson95Pct": [
+        30.252951383802753,
+        36.076393053009014
+      ],
+      "avgPlies": 26.595,
+      "mtajiPlayedPct": 83.8,
+      "bulkPct": 33.1,
+      "nyakuaPct": 69.1,
+      "reasons": {
+        "no-move": 427,
+        "front-empty": 573
+      },
+      "searchNodes": 2468834,
+      "blocks": [
+        {
+          "n": 1000,
+          "firstWins": 331,
+          "secondWins": 669,
+          "firstWinPct": 33.1,
+          "wilson95Pct": [
+            30.252951383802753,
+            36.076393053009014
+          ],
+          "avgPlies": 26.595,
+          "mtajiPlayedPct": 83.8,
+          "bulkPct": 33.1,
+          "nyakuaPct": 69.1,
+          "reasons": {
+            "no-move": 427,
+            "front-empty": 573
+          },
+          "searchNodes": 2468834
+        }
+      ],
+      "mirror": {
+        "hand": {
+          "id": "placement62-hand12",
+          "hands": [
+            12,
+            12
+          ],
+          "pits": [
+            0,
+            0,
+            0,
+            0,
+            6,
+            2,
+            0,
+            0
+          ],
+          "threshold": 6
+        },
+        "policy": "search4-mobility",
+        "pairs": 100,
+        "mismatches": 0
+      },
+      "completed": true
+    }
+  ],
+  "cross": [
+    {
+      "reference": "482ac28b8be2df11df873441196be53fc505df46",
+      "rulesVersion": "0.6.1",
+      "variantRule": "namua-steal-one-protect-last-fixed-pit-bulk-one-row-bounce-hand12",
+      "protectLast": true,
+      "config": {
+        "id": "placement62-hand12",
+        "hands": [
+          12,
+          12
+        ],
+        "pits": [
+          0,
+          0,
+          0,
+          0,
+          6,
+          2,
+          0,
+          0
+        ],
+        "threshold": 6
+      },
+      "totalKete": 40,
+      "task": "cross-0",
+      "countOverride": null,
+      "hashes": {
+        "../../prototype/bounce-engine.js": "2100a9fad218a419a5ce35e5bb8dfbee5f610f71e9e8089e16c21d1b2b9c8aa9",
+        "../../prototype/steal.js": "2f27a86f660627cb8062bb6c828c8397828ccf954dd7f81a5423697d92a952d8",
+        "../balance-options/core.cjs": "f192f29d5dff9f2c5165df335433fb00212c0e5447a25daf8415410df1034421",
+        "../balance-options/variant-engine.cjs": "2d2934ca5f0ef8747391f18649fd7401d2517956a4165262f19a74fffd751710",
+        "core.cjs": "2bdcff1d3eb6e4f5bc043baa8bcdb979a49d60efa68c413e51621850fb1a5147",
+        "check.cjs": "249e9626e94807ba1332528c1d114e911af96dd6f1a3fc885b12f2470c9248f7",
+        "run.cjs": "0db6728a66e7c7b678075610d5225a6d2c5cf6ac6019d4972effb632063d56f8",
+        "reference-sources.json": "694d65283bb35dcee63ef6074283207b44649179bcbd36455f5668f4ee25d9ac"
+      },
+      "node": "v24.19.0",
+      "runnerCommit": "cbe866016ddb156c03c9575192bc4ef7321012a4",
+      "runId": "36876125049",
+      "attempt": "1",
+      "signature": "d3ff55dad8b41a7d9ce410b94b05b8b419129bd929b6fb0ee6066f15c56e6362",
+      "a": "random",
+      "b": "greedy",
+      "pairs": 500,
+      "seedStartIndex": 30000,
+      "n": 1000,
+      "firstWins": 494,
+      "secondWins": 506,
+      "firstWinPct": 49.4,
+      "avgPlies": 17.232,
+      "mtajiPlayedPct": 21.5,
+      "bulkPct": 27.2,
+      "nyakuaPct": 97.4,
+      "reasons": {
+        "front-empty": 797,
+        "no-move": 203
+      },
+      "searchNodes": 0,
+      "pairFirstWins": {
+        "both": 94,
+        "split": 306,
+        "neither": 100
+      },
+      "pairCluster95Pct": [
+        46.66785916057523,
+        52.132140839424764
+      ],
+      "completed": true
+    },
+    {
+      "reference": "482ac28b8be2df11df873441196be53fc505df46",
+      "rulesVersion": "0.6.1",
+      "variantRule": "namua-steal-one-protect-last-fixed-pit-bulk-one-row-bounce-hand12",
+      "protectLast": true,
+      "config": {
+        "id": "placement62-hand12",
+        "hands": [
+          12,
+          12
+        ],
+        "pits": [
+          0,
+          0,
+          0,
+          0,
+          6,
+          2,
+          0,
+          0
+        ],
+        "threshold": 6
+      },
+      "totalKete": 40,
+      "task": "cross-1",
+      "countOverride": null,
+      "hashes": {
+        "../../prototype/bounce-engine.js": "2100a9fad218a419a5ce35e5bb8dfbee5f610f71e9e8089e16c21d1b2b9c8aa9",
+        "../../prototype/steal.js": "2f27a86f660627cb8062bb6c828c8397828ccf954dd7f81a5423697d92a952d8",
+        "../balance-options/core.cjs": "f192f29d5dff9f2c5165df335433fb00212c0e5447a25daf8415410df1034421",
+        "../balance-options/variant-engine.cjs": "2d2934ca5f0ef8747391f18649fd7401d2517956a4165262f19a74fffd751710",
+        "core.cjs": "2bdcff1d3eb6e4f5bc043baa8bcdb979a49d60efa68c413e51621850fb1a5147",
+        "check.cjs": "249e9626e94807ba1332528c1d114e911af96dd6f1a3fc885b12f2470c9248f7",
+        "run.cjs": "0db6728a66e7c7b678075610d5225a6d2c5cf6ac6019d4972effb632063d56f8",
+        "reference-sources.json": "694d65283bb35dcee63ef6074283207b44649179bcbd36455f5668f4ee25d9ac"
+      },
+      "node": "v24.19.0",
+      "runnerCommit": "cbe866016ddb156c03c9575192bc4ef7321012a4",
+      "runId": "36876125049",
+      "attempt": "1",
+      "signature": "db13208c3d242f840a88766073fb1b030863150b5933932368cd8abddd7d859b",
+      "a": "noisy",
+      "b": "reply",
+      "pairs": 500,
+      "seedStartIndex": 30000,
+      "n": 1000,
+      "firstWins": 497,
+      "secondWins": 503,
+      "firstWinPct": 49.7,
+      "avgPlies": 19.581,
+      "mtajiPlayedPct": 39.7,
+      "bulkPct": 34.5,
+      "nyakuaPct": 86.7,
+      "reasons": {
+        "front-empty": 719,
+        "no-move": 281
+      },
+      "searchNodes": 0,
+      "pairFirstWins": {
+        "both": 60,
+        "split": 377,
+        "neither": 63
+      },
+      "pairCluster95Pct": [
+        47.524277016162166,
+        51.87572298383783
+      ],
+      "completed": true
+    },
+    {
+      "reference": "482ac28b8be2df11df873441196be53fc505df46",
+      "rulesVersion": "0.6.1",
+      "variantRule": "namua-steal-one-protect-last-fixed-pit-bulk-one-row-bounce-hand12",
+      "protectLast": true,
+      "config": {
+        "id": "placement62-hand12",
+        "hands": [
+          12,
+          12
+        ],
+        "pits": [
+          0,
+          0,
+          0,
+          0,
+          6,
+          2,
+          0,
+          0
+        ],
+        "threshold": 6
+      },
+      "totalKete": 40,
+      "task": "cross-2",
+      "countOverride": null,
+      "hashes": {
+        "../../prototype/bounce-engine.js": "2100a9fad218a419a5ce35e5bb8dfbee5f610f71e9e8089e16c21d1b2b9c8aa9",
+        "../../prototype/steal.js": "2f27a86f660627cb8062bb6c828c8397828ccf954dd7f81a5423697d92a952d8",
+        "../balance-options/core.cjs": "f192f29d5dff9f2c5165df335433fb00212c0e5447a25daf8415410df1034421",
+        "../balance-options/variant-engine.cjs": "2d2934ca5f0ef8747391f18649fd7401d2517956a4165262f19a74fffd751710",
+        "core.cjs": "2bdcff1d3eb6e4f5bc043baa8bcdb979a49d60efa68c413e51621850fb1a5147",
+        "check.cjs": "249e9626e94807ba1332528c1d114e911af96dd6f1a3fc885b12f2470c9248f7",
+        "run.cjs": "0db6728a66e7c7b678075610d5225a6d2c5cf6ac6019d4972effb632063d56f8",
+        "reference-sources.json": "694d65283bb35dcee63ef6074283207b44649179bcbd36455f5668f4ee25d9ac"
+      },
+      "node": "v24.19.0",
+      "runnerCommit": "cbe866016ddb156c03c9575192bc4ef7321012a4",
+      "runId": "36876125049",
+      "attempt": "1",
+      "signature": "cf16e91b29d7b7cddefd4845c67df48a849bd36e4905e83b56678a44ba7f05db",
+      "a": "reply",
+      "b": "search4",
+      "pairs": 500,
+      "seedStartIndex": 30000,
+      "n": 1000,
+      "firstWins": 374,
+      "secondWins": 626,
+      "firstWinPct": 37.4,
+      "avgPlies": 24.28,
+      "mtajiPlayedPct": 76.1,
+      "bulkPct": 32.5,
+      "nyakuaPct": 87.7,
+      "reasons": {
+        "front-empty": 371,
+        "no-move": 629
+      },
+      "searchNodes": 1149663,
+      "pairFirstWins": {
+        "both": 0,
+        "split": 374,
+        "neither": 126
+      },
+      "pairCluster95Pct": [
+        35.49533371064865,
+        39.304666289351346
+      ],
+      "completed": true
+    },
+    {
+      "reference": "482ac28b8be2df11df873441196be53fc505df46",
+      "rulesVersion": "0.6.1",
+      "variantRule": "namua-steal-one-protect-last-fixed-pit-bulk-one-row-bounce-hand12",
+      "protectLast": true,
+      "config": {
+        "id": "placement62-hand12",
+        "hands": [
+          12,
+          12
+        ],
+        "pits": [
+          0,
+          0,
+          0,
+          0,
+          6,
+          2,
+          0,
+          0
+        ],
+        "threshold": 6
+      },
+      "totalKete": 40,
+      "task": "cross-3",
+      "countOverride": null,
+      "hashes": {
+        "../../prototype/bounce-engine.js": "2100a9fad218a419a5ce35e5bb8dfbee5f610f71e9e8089e16c21d1b2b9c8aa9",
+        "../../prototype/steal.js": "2f27a86f660627cb8062bb6c828c8397828ccf954dd7f81a5423697d92a952d8",
+        "../balance-options/core.cjs": "f192f29d5dff9f2c5165df335433fb00212c0e5447a25daf8415410df1034421",
+        "../balance-options/variant-engine.cjs": "2d2934ca5f0ef8747391f18649fd7401d2517956a4165262f19a74fffd751710",
+        "core.cjs": "2bdcff1d3eb6e4f5bc043baa8bcdb979a49d60efa68c413e51621850fb1a5147",
+        "check.cjs": "249e9626e94807ba1332528c1d114e911af96dd6f1a3fc885b12f2470c9248f7",
+        "run.cjs": "0db6728a66e7c7b678075610d5225a6d2c5cf6ac6019d4972effb632063d56f8",
+        "reference-sources.json": "694d65283bb35dcee63ef6074283207b44649179bcbd36455f5668f4ee25d9ac"
+      },
+      "node": "v24.19.0",
+      "runnerCommit": "cbe866016ddb156c03c9575192bc4ef7321012a4",
+      "runId": "36876125049",
+      "attempt": "1",
+      "signature": "458ee9c2e2b934592196170d96b30eaf4762f544bd7fe2f207525a446661655f",
+      "a": "search4",
+      "b": "search6",
+      "pairs": 500,
+      "seedStartIndex": 30000,
+      "n": 1000,
+      "firstWins": 403,
+      "secondWins": 597,
+      "firstWinPct": 40.3,
+      "avgPlies": 24.887,
+      "mtajiPlayedPct": 65.2,
+      "bulkPct": 44.1,
+      "nyakuaPct": 95.8,
+      "reasons": {
+        "front-empty": 454,
+        "no-move": 546
+      },
+      "searchNodes": 6340860,
+      "pairFirstWins": {
+        "both": 82,
+        "split": 239,
+        "neither": 179
+      },
+      "pairCluster95Pct": [
+        37.246810539835515,
+        43.353189460164494
+      ],
+      "completed": true
+    },
+    {
+      "reference": "482ac28b8be2df11df873441196be53fc505df46",
+      "rulesVersion": "0.6.1",
+      "variantRule": "namua-steal-one-protect-last-fixed-pit-bulk-one-row-bounce-hand12",
+      "protectLast": true,
+      "config": {
+        "id": "placement62-hand12",
+        "hands": [
+          12,
+          12
+        ],
+        "pits": [
+          0,
+          0,
+          0,
+          0,
+          6,
+          2,
+          0,
+          0
+        ],
+        "threshold": 6
+      },
+      "totalKete": 40,
+      "task": "cross-4",
+      "countOverride": null,
+      "hashes": {
+        "../../prototype/bounce-engine.js": "2100a9fad218a419a5ce35e5bb8dfbee5f610f71e9e8089e16c21d1b2b9c8aa9",
+        "../../prototype/steal.js": "2f27a86f660627cb8062bb6c828c8397828ccf954dd7f81a5423697d92a952d8",
+        "../balance-options/core.cjs": "f192f29d5dff9f2c5165df335433fb00212c0e5447a25daf8415410df1034421",
+        "../balance-options/variant-engine.cjs": "2d2934ca5f0ef8747391f18649fd7401d2517956a4165262f19a74fffd751710",
+        "core.cjs": "2bdcff1d3eb6e4f5bc043baa8bcdb979a49d60efa68c413e51621850fb1a5147",
+        "check.cjs": "249e9626e94807ba1332528c1d114e911af96dd6f1a3fc885b12f2470c9248f7",
+        "run.cjs": "0db6728a66e7c7b678075610d5225a6d2c5cf6ac6019d4972effb632063d56f8",
+        "reference-sources.json": "694d65283bb35dcee63ef6074283207b44649179bcbd36455f5668f4ee25d9ac"
+      },
+      "node": "v24.19.0",
+      "runnerCommit": "cbe866016ddb156c03c9575192bc4ef7321012a4",
+      "runId": "36876125049",
+      "attempt": "1",
+      "signature": "23bac20fdcff302dc54bff8a1de310f5ff24f948adafe13864b43840a9b3e030",
+      "a": "search6",
+      "b": "search4-mobility",
+      "pairs": 500,
+      "seedStartIndex": 30000,
+      "n": 1000,
+      "firstWins": 746,
+      "secondWins": 254,
+      "firstWinPct": 74.6,
+      "avgPlies": 24.192,
+      "mtajiPlayedPct": 67.8,
+      "bulkPct": 77.4,
+      "nyakuaPct": 95.3,
+      "reasons": {
+        "front-empty": 480,
+        "no-move": 520
+      },
+      "searchNodes": 7031563,
+      "pairFirstWins": {
+        "both": 246,
+        "split": 254,
+        "neither": 0
+      },
+      "pairCluster95Pct": [
+        72.40677981855296,
+        76.79322018144704
+      ],
+      "completed": true
+    }
+  ],
+  "proof": {
+    "reference": "482ac28b8be2df11df873441196be53fc505df46",
+    "rulesVersion": "0.6.1",
+    "variantRule": "namua-steal-one-protect-last-fixed-pit-bulk-one-row-bounce-hand12",
+    "protectLast": true,
+    "config": {
+      "id": "placement62-hand12",
+      "hands": [
+        12,
+        12
+      ],
+      "pits": [
+        0,
+        0,
+        0,
+        0,
+        6,
+        2,
+        0,
+        0
+      ],
+      "threshold": 6
+    },
+    "totalKete": 40,
+    "task": "proof",
+    "countOverride": null,
+    "hashes": {
+      "../../prototype/bounce-engine.js": "2100a9fad218a419a5ce35e5bb8dfbee5f610f71e9e8089e16c21d1b2b9c8aa9",
+      "../../prototype/steal.js": "2f27a86f660627cb8062bb6c828c8397828ccf954dd7f81a5423697d92a952d8",
+      "../balance-options/core.cjs": "f192f29d5dff9f2c5165df335433fb00212c0e5447a25daf8415410df1034421",
+      "../balance-options/variant-engine.cjs": "2d2934ca5f0ef8747391f18649fd7401d2517956a4165262f19a74fffd751710",
+      "core.cjs": "2bdcff1d3eb6e4f5bc043baa8bcdb979a49d60efa68c413e51621850fb1a5147",
+      "check.cjs": "249e9626e94807ba1332528c1d114e911af96dd6f1a3fc885b12f2470c9248f7",
+      "run.cjs": "0db6728a66e7c7b678075610d5225a6d2c5cf6ac6019d4972effb632063d56f8",
+      "reference-sources.json": "694d65283bb35dcee63ef6074283207b44649179bcbd36455f5668f4ee25d9ac"
+    },
+    "node": "v24.19.0",
+    "runnerCommit": "cbe866016ddb156c03c9575192bc4ef7321012a4",
+    "runId": "36876125049",
+    "attempt": "1",
+    "signature": "3448c585ff0d86e97a7173371ad39a91fa2175c9d65958a894c36e7b75e0b272",
+    "proof": {
+      "hand": {
+        "id": "placement62-hand12",
+        "hands": [
+          12,
+          12
+        ],
+        "pits": [
+          0,
+          0,
+          0,
+          0,
+          6,
+          2,
+          0,
+          0
+        ],
+        "threshold": 6
+      },
+      "records": [
+        {
+          "hand": {
+            "id": "placement62-hand12",
+            "hands": [
+              12,
+              12
+            ],
+            "pits": [
+              0,
+              0,
+              0,
+              0,
+              6,
+              2,
+              0,
+              0
+            ],
+            "threshold": 6
+          },
+          "depth": 1,
+          "result": "UNKNOWN",
+          "nodes": 3,
+          "hits": 0,
+          "tableSize": 1,
+          "elapsedMs": 3
+        },
+        {
+          "hand": {
+            "id": "placement62-hand12",
+            "hands": [
+              12,
+              12
+            ],
+            "pits": [
+              0,
+              0,
+              0,
+              0,
+              6,
+              2,
+              0,
+              0
+            ],
+            "threshold": 6
+          },
+          "depth": 2,
+          "result": "UNKNOWN",
+          "nodes": 9,
+          "hits": 0,
+          "tableSize": 3,
+          "elapsedMs": 0
+        },
+        {
+          "hand": {
+            "id": "placement62-hand12",
+            "hands": [
+              12,
+              12
+            ],
+            "pits": [
+              0,
+              0,
+              0,
+              0,
+              6,
+              2,
+              0,
+              0
+            ],
+            "threshold": 6
+          },
+          "depth": 3,
+          "result": "UNKNOWN",
+          "nodes": 24,
+          "hits": 0,
+          "tableSize": 9,
+          "elapsedMs": 3
+        },
+        {
+          "hand": {
+            "id": "placement62-hand12",
+            "hands": [
+              12,
+              12
+            ],
+            "pits": [
+              0,
+              0,
+              0,
+              0,
+              6,
+              2,
+              0,
+              0
+            ],
+            "threshold": 6
+          },
+          "depth": 4,
+          "result": "UNKNOWN",
+          "nodes": 56,
+          "hits": 0,
+          "tableSize": 24,
+          "elapsedMs": 6
+        },
+        {
+          "hand": {
+            "id": "placement62-hand12",
+            "hands": [
+              12,
+              12
+            ],
+            "pits": [
+              0,
+              0,
+              0,
+              0,
+              6,
+              2,
+              0,
+              0
+            ],
+            "threshold": 6
+          },
+          "depth": 5,
+          "result": "UNKNOWN",
+          "nodes": 147,
+          "hits": 3,
+          "tableSize": 53,
+          "elapsedMs": 8
+        },
+        {
+          "hand": {
+            "id": "placement62-hand12",
+            "hands": [
+              12,
+              12
+            ],
+            "pits": [
+              0,
+              0,
+              0,
+              0,
+              6,
+              2,
+              0,
+              0
+            ],
+            "threshold": 6
+          },
+          "depth": 6,
+          "result": "UNKNOWN",
+          "nodes": 420,
+          "hits": 4,
+          "tableSize": 142,
+          "elapsedMs": 23
+        },
+        {
+          "hand": {
+            "id": "placement62-hand12",
+            "hands": [
+              12,
+              12
+            ],
+            "pits": [
+              0,
+              0,
+              0,
+              0,
+              6,
+              2,
+              0,
+              0
+            ],
+            "threshold": 6
+          },
+          "depth": 7,
+          "result": "UNKNOWN",
+          "nodes": 1346,
+          "hits": 11,
+          "tableSize": 402,
+          "elapsedMs": 52
+        },
+        {
+          "hand": {
+            "id": "placement62-hand12",
+            "hands": [
+              12,
+              12
+            ],
+            "pits": [
+              0,
+              0,
+              0,
+              0,
+              6,
+              2,
+              0,
+              0
+            ],
+            "threshold": 6
+          },
+          "depth": 8,
+          "result": "UNKNOWN",
+          "nodes": 4250,
+          "hits": 57,
+          "tableSize": 1211,
+          "elapsedMs": 175
+        },
+        {
+          "hand": {
+            "id": "placement62-hand12",
+            "hands": [
+              12,
+              12
+            ],
+            "pits": [
+              0,
+              0,
+              0,
+              0,
+              6,
+              2,
+              0,
+              0
+            ],
+            "threshold": 6
+          },
+          "depth": 9,
+          "result": "UNKNOWN",
+          "nodes": 14346,
+          "hits": 176,
+          "tableSize": 3845,
+          "elapsedMs": 439
+        },
+        {
+          "hand": {
+            "id": "placement62-hand12",
+            "hands": [
+              12,
+              12
+            ],
+            "pits": [
+              0,
+              0,
+              0,
+              0,
+              6,
+              2,
+              0,
+              0
+            ],
+            "threshold": 6
+          },
+          "depth": 10,
+          "result": "UNKNOWN",
+          "nodes": 49812,
+          "hits": 511,
+          "tableSize": 13166,
+          "elapsedMs": 1536
+        },
+        {
+          "hand": {
+            "id": "placement62-hand12",
+            "hands": [
+              12,
+              12
+            ],
+            "pits": [
+              0,
+              0,
+              0,
+              0,
+              6,
+              2,
+              0,
+              0
+            ],
+            "threshold": 6
+          },
+          "depth": 11,
+          "result": "UNKNOWN",
+          "nodes": 174304,
+          "hits": 1493,
+          "tableSize": 44952,
+          "elapsedMs": 4162
+        },
+        {
+          "hand": {
+            "id": "placement62-hand12",
+            "hands": [
+              12,
+              12
+            ],
+            "pits": [
+              0,
+              0,
+              0,
+              0,
+              6,
+              2,
+              0,
+              0
+            ],
+            "threshold": 6
+          },
+          "depth": 12,
+          "result": "UNKNOWN",
+          "nodes": 619545,
+          "hits": 4515,
+          "tableSize": 157496,
+          "elapsedMs": 12354
+        },
+        {
+          "hand": {
+            "id": "placement62-hand12",
+            "hands": [
+              12,
+              12
+            ],
+            "pits": [
+              0,
+              0,
+              0,
+              0,
+              6,
+              2,
+              0,
+              0
+            ],
+            "threshold": 6
+          },
+          "depth": 13,
+          "result": "BUDGET_STOP",
+          "nodes": 1000001,
+          "hits": 5940,
+          "tableSize": 249567,
+          "elapsedMs": 20508
+        }
+      ],
+      "pv": []
+    },
+    "completed": true
+  },
+  "baselineSourceSha256": "e498d5ece1c483747ac42cf32952c1b530e9ff7f57f4c3b00e0deb7fa732a752",
+  "baselineRunId": "36869079611",
+  "sharedSourceHashesMatched": true
+}
