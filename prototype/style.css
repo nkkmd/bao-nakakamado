@@ -87,7 +87,8 @@ button:disabled { cursor: default; opacity: .45; }
 .pit:focus-visible { outline: 3px solid #edf3d9; outline-offset: 3px; }
 .pit.active-step { z-index: 1; border-color: #8bd7d2; outline: 2px dashed #edf3d9; outline-offset: 4px; }
 .pit.capture-step { border-color: #ff9b8f; }
-.board-labels { display: grid; grid-template-columns: repeat(8, 1fr); padding: 2.4% 2% 0; color: #edf3d9; text-align: center; font: bold clamp(8px, 1.6vw, 15px) "Courier New", monospace; }
+/* Lift the labels toward the frame without changing their occupied height. */
+.board-labels { display: grid; grid-template-columns: repeat(8, 1fr); padding: 1.6% 2% .8%; color: #edf3d9; text-align: center; font: bold clamp(8px, 1.6vw, 15px) "Courier New", monospace; }
 .board-labels span:nth-child(1) { grid-column: 1; }
 .board-labels span:nth-child(2) { grid-column: 5; }
 .board-labels span:nth-child(3) { grid-column: 8; }
