@@ -61,7 +61,7 @@ test("one-row replay shows reflection, NYAKUA and all seven bulk KETE at once", 
     let reference = S.initialGame();
     assert.equal(elements.board.children.length, 16);
     assert.equal(Number(elements["south-hand"].textContent), 12);
-    const trace = Study.game(Study.seedAt(0), "random", 0, true).trace;
+    const trace = Study.game(Study.seedAt(0), "random", 0, true, S).trace;
     const bulkIndex = trace.findIndex((entry) => entry.placed > 1);
     assert.ok(bulkIndex >= 0);
     for (let i = 0; i <= bulkIndex; i += 1) {
@@ -100,8 +100,9 @@ test("one-row replay shows reflection, NYAKUA and all seven bulk KETE at once", 
       assert.equal(Number(elements["north-hand"].textContent), reference.board.reserve[1]);
     }
     elements.download.click();
-    assert.equal(savedRecord.version, 4);
-    assert.equal(savedRecord.rulesVersion, "0.6.0");
+    assert.equal(savedRecord.version, 5);
+    assert.equal(savedRecord.rulesVersion, "0.6.1");
+    assert.equal(savedRecord.nyakuaProtectLast, true);
     assert.equal(savedRecord.initialHand, 12);
     assert.equal(savedRecord.totalKete, 44);
     assert.equal(savedRecord.boardRowsPerPlayer, 1);
@@ -141,3 +142,4 @@ test("one-row replay shows reflection, NYAKUA and all seven bulk KETE at once", 
     delete global.window;
   }
 });
+

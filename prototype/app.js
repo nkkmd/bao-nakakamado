@@ -330,7 +330,7 @@
   });
   $("download").addEventListener("click", () => {
     if (!started || !game.history.length) return;
-    const record = { format: "bao-nakakamado-prototype", version: 4, baseRules: "R-002", variantRule: E.RULE_ID, rulesVersion: "0.6.0", boardRowsPerPlayer: 1, sowingPath: "bounce", initialHand: E.INITIAL_HAND, totalKete: E.TOTAL_KETE, mode, history: game.history, final: game.board };
+    const record = { format: "bao-nakakamado-prototype", version: 5, baseRules: "R-002", variantRule: E.RULE_ID, rulesVersion: "0.6.1", boardRowsPerPlayer: 1, sowingPath: "bounce", nyakuaProtectLast: E.NYAKUA_PROTECT_LAST, initialHand: E.INITIAL_HAND, totalKete: E.TOTAL_KETE, mode, history: game.history, final: game.board };
     const blob = new Blob([JSON.stringify(record, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
@@ -354,3 +354,4 @@
   updateSetup();
   render();
 }());
+

@@ -12,6 +12,7 @@ function makeEngine(config){
  const E=context.module.exports;
  context.module={exports:{}};
  vm.runInContext(fs.readFileSync(path.join(__dirname,'../../prototype/steal.js'),'utf8'),context,{filename:'isolated-steal.js'});
- return {E,S:context.module.exports};
+ // Historical balance comparisons use the pre-protection NYAKUA rule.
+ return {E,S:context.module.exports.createForEngine(E,{protectLast:false})};
 }
 module.exports={makeEngine};

@@ -2,7 +2,8 @@
 // Reproducible exploratory study of the playable v0.6.0 rules.
 // node tools/one-row-bounce-study.cjs 1000 random,noisy,greedy
 const E = require("../prototype/bounce-engine.js");
-const S = require("../prototype/steal.js");
+// Preserve the v0.6.0 condition for reproduction of the historical report.
+const LegacyS = require("../prototype/steal.js").createForEngine(E, { protectLast: false });
 function rng(seed) {
   let x = seed >>> 0;
   return () => { x ^= x << 13; x ^= x >>> 17; x ^= x << 5; return (x >>> 0) / 4294967296; };
@@ -17,7 +18,7 @@ function score(board, side) {
   const all = p => front(p) + board.reserve[p];
   return 2 * (front(side) - front(1-side)) + all(side) - all(1-side);
 }
-function game(seed, policy = "random", first = 0, details = false) {
+function game(seed, policy = "random", first = 0, details = false, S = LegacyS) {
   const random = rng(seed);
   let game = S.initialGame(); game.board.player = first;
   const metrics = { seed, policy, first, plies: 0, stolen: 0, bulk: 0, mtaji: false };

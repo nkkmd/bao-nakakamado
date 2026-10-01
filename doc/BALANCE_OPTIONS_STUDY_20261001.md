@@ -1,5 +1,7 @@
 # Bao Nakakamado：先後バランス改善候補の段階比較
 
+> 履歴の適用範囲：本書は最後の1個を奪えるv0.6.0条件の記録です。現行v0.6.1は[最後の1個保護](NYAKUA_PROTECT_LAST_20261001.md)を暫定採用しました。本書の勝率・必勝手順・現行という記述は当時の条件に限定し、変更後へ引き継ぎません。
+
 2026年10月1日。基準：試作v0.6.0、`4e38478828319d664575dbbbfbb90e1df17eaf7f`。調査状態：完了。製品ルールへの採用は行わない。
 
 ## 結論
@@ -153,3 +155,4 @@
 長めの試験はGitHub Actionsで実行し、条件ごとに途中結果をartifactへ保存した。Node.js v24.19.0、GitHubのUbuntu runnerを使用。実行コミット、run、artifactと内容の署名・SHA256を[実行記録](../tools/balance-options/results/provenance.json)に保存する。正式結果はリポジトリにも保存するため、artifactの30日保持期間後も参照できる。
 
 [試験コードと再現方法](../tools/balance-options/README.md)、[探索的比較の索引](../tools/balance-options/results/screen-index.json)、各条件のチェックポイントJSONを参照。今後エンジンを変更して再現する場合は、冒頭の基準コミットのエンジンを使用する。
+
