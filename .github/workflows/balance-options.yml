@@ -12,13 +12,13 @@ concurrency:
   cancel-in-progress: false
 jobs:
   screen:
-    name: Stage 3 - ${{ matrix.condition }}
+    name: Combination - ${{ matrix.condition }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
     strategy:
       fail-fast: false
       matrix:
-        condition: [threshold4-12, spread433-threshold6-12, spread433-threshold4-12, reduced422-threshold4-12, spread631-threshold6-12, spread613-threshold6-12]
+        condition: [combined-equal10-613, combined-9-11-613, combined-11-9-613]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

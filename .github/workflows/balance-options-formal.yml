@@ -7,7 +7,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: balance-formal-${{ github.ref }}
+  group: balance-formal-${{ github.ref }}-${{ github.sha }}
   cancel-in-progress: false
 jobs:
   screen:
@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        condition: [asym-9-11, equal-12]
+        condition: [spread613-threshold6-12]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
