@@ -1,0 +1,18 @@
+"use strict";
+const fs = require('node:fs'), assert = require('node:assert/strict');
+const {verify} = require('./verify-certificate.cjs');
+const source = JSON.parse(fs.readFileSync('results/winning-certificate.json','utf8'));
+const copy = () => structuredClone(source);
+const missingReply = copy();
+const defender = Object.values(missingReply.nodes).find(n => n.board.player !== source.first && n.edges.length > 1);
+assert.ok(defender);
+defender.edges.pop();
+assert.throws(() => verify(missingReply));
+const alteredBoard = copy();
+alteredBoard.nodes[alteredBoard.nodes[alteredBoard.root].edges[0].to].board.reserve[0] += 1;
+assert.throws(() => verify(alteredBoard));
+const alteredMove = copy();
+alteredMove.nodes[alteredMove.root].edges[0].move.index = 99;
+assert.throws(() => verify(alteredMove));
+assert.equal(verify(source).status,'PASS');
+console.log(JSON.stringify({status:'PASS',rejectedInvalidCertificates:3}));

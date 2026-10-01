@@ -1,0 +1,23 @@
+{
+  "method": "All defender legal moves, including both house choices; display-event replay; both seats",
+  "results": [
+    {
+      "status": "PASS",
+      "first": 0,
+      "nodes": 514,
+      "edges": 519,
+      "rawDefenderMoves": 555,
+      "terminalLeaves": 123,
+      "maxPlies": 13
+    },
+    {
+      "status": "PASS",
+      "first": 1,
+      "nodes": 514,
+      "edges": 519,
+      "rawDefenderMoves": 555,
+      "terminalLeaves": 123,
+      "maxPlies": 13
+    }
+  ]
+}

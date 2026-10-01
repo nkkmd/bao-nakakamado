@@ -1,0 +1,203 @@
+{
+  "reference": "ec3961c6d178ae5c146d1ffbdeabdce274575b46",
+  "createdAt": "2026-10-01T11:17:04.978Z",
+  "mode": "self",
+  "n": 1000,
+  "seedStartIndex": 1000,
+  "rows": [
+    {
+      "hand": 6,
+      "policy": "search3",
+      "n": 1000,
+      "firstWins": 657,
+      "secondWins": 343,
+      "firstWinPct": 65.7,
+      "wilson95Pct": [
+        62.702702137815145,
+        68.57713764573843
+      ],
+      "avgPlies": 12.351,
+      "mtajiPlayedPct": 61.4,
+      "bulkPct": 100,
+      "nyakuaPct": 100,
+      "reasons": {
+        "front-empty": 613,
+        "no-move": 387
+      },
+      "searchNodes": 464525,
+      "batches": [
+        {
+          "n": 1000,
+          "firstWins": 657,
+          "secondWins": 343,
+          "firstWinPct": 65.7,
+          "wilson95Pct": [
+            62.702702137815145,
+            68.57713764573843
+          ],
+          "avgPlies": 12.351,
+          "mtajiPlayedPct": 61.4,
+          "bulkPct": 100,
+          "nyakuaPct": 100,
+          "reasons": {
+            "front-empty": 613,
+            "no-move": 387
+          },
+          "searchNodes": 464525
+        }
+      ]
+    },
+    {
+      "hand": 6,
+      "policy": "search4",
+      "n": 1000,
+      "firstWins": 657,
+      "secondWins": 343,
+      "firstWinPct": 65.7,
+      "wilson95Pct": [
+        62.702702137815145,
+        68.57713764573843
+      ],
+      "avgPlies": 11.711,
+      "mtajiPlayedPct": 63.7,
+      "bulkPct": 96,
+      "nyakuaPct": 100,
+      "reasons": {
+        "front-empty": 463,
+        "no-move": 537
+      },
+      "searchNodes": 812756,
+      "batches": [
+        {
+          "n": 1000,
+          "firstWins": 657,
+          "secondWins": 343,
+          "firstWinPct": 65.7,
+          "wilson95Pct": [
+            62.702702137815145,
+            68.57713764573843
+          ],
+          "avgPlies": 11.711,
+          "mtajiPlayedPct": 63.7,
+          "bulkPct": 96,
+          "nyakuaPct": 100,
+          "reasons": {
+            "front-empty": 463,
+            "no-move": 537
+          },
+          "searchNodes": 812756
+        }
+      ]
+    },
+    {
+      "hand": 6,
+      "policy": "search6",
+      "n": 1000,
+      "firstWins": 657,
+      "secondWins": 343,
+      "firstWinPct": 65.7,
+      "wilson95Pct": [
+        62.702702137815145,
+        68.57713764573843
+      ],
+      "avgPlies": 15.345,
+      "mtajiPlayedPct": 82.9,
+      "bulkPct": 52.2,
+      "nyakuaPct": 83.5,
+      "reasons": {
+        "front-empty": 403,
+        "no-move": 597
+      },
+      "searchNodes": 3753552,
+      "batches": [
+        {
+          "n": 1000,
+          "firstWins": 657,
+          "secondWins": 343,
+          "firstWinPct": 65.7,
+          "wilson95Pct": [
+            62.702702137815145,
+            68.57713764573843
+          ],
+          "avgPlies": 15.345,
+          "mtajiPlayedPct": 82.9,
+          "bulkPct": 52.2,
+          "nyakuaPct": 83.5,
+          "reasons": {
+            "front-empty": 403,
+            "no-move": 597
+          },
+          "searchNodes": 3753552
+        }
+      ]
+    },
+    {
+      "hand": 6,
+      "policy": "search4-mobility",
+      "n": 1000,
+      "firstWins": 657,
+      "secondWins": 343,
+      "firstWinPct": 65.7,
+      "wilson95Pct": [
+        62.702702137815145,
+        68.57713764573843
+      ],
+      "avgPlies": 11.123,
+      "mtajiPlayedPct": 52.7,
+      "bulkPct": 91.3,
+      "nyakuaPct": 100,
+      "reasons": {
+        "front-empty": 544,
+        "no-move": 456
+      },
+      "searchNodes": 753885,
+      "batches": [
+        {
+          "n": 1000,
+          "firstWins": 657,
+          "secondWins": 343,
+          "firstWinPct": 65.7,
+          "wilson95Pct": [
+            62.702702137815145,
+            68.57713764573843
+          ],
+          "avgPlies": 11.123,
+          "mtajiPlayedPct": 52.7,
+          "bulkPct": 91.3,
+          "nyakuaPct": 100,
+          "reasons": {
+            "front-empty": 544,
+            "no-move": 456
+          },
+          "searchNodes": 753885
+        }
+      ]
+    }
+  ],
+  "mirrorChecks": [
+    {
+      "hand": 6,
+      "policy": "search3",
+      "pairs": 100,
+      "mismatches": 0
+    },
+    {
+      "hand": 6,
+      "policy": "search4",
+      "pairs": 100,
+      "mismatches": 0
+    },
+    {
+      "hand": 6,
+      "policy": "search6",
+      "pairs": 100,
+      "mismatches": 0
+    },
+    {
+      "hand": 6,
+      "policy": "search4-mobility",
+      "pairs": 100,
+      "mismatches": 0
+    }
+  ]
+}
