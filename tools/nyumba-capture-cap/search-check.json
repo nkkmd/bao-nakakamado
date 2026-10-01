@@ -1,0 +1,50 @@
+{
+  "reference": "3c8024cc57fb6dbe70eb525b3db004079ecb4024",
+  "status": "PASS",
+  "rows": [
+    {
+      "rule": "base",
+      "policy": "search4-material",
+      "n": 200,
+      "firstWins": 118,
+      "secondWins": 82,
+      "firstWinPct": 59,
+      "wilson95Pct": [
+        52.07645903369208,
+        65.58432509151712
+      ],
+      "avgPlies": 18.92,
+      "mtajiPlayedPct": 55,
+      "bulkPct": 54,
+      "nyakuaPct": 100,
+      "reasons": {
+        "no-move": 52,
+        "front-empty": 148
+      },
+      "searchNodes": 307321,
+      "maxPlies": 32
+    },
+    {
+      "rule": "capped",
+      "policy": "search4-material",
+      "n": 200,
+      "firstWins": 137,
+      "secondWins": 63,
+      "firstWinPct": 68.5,
+      "wilson95Pct": [
+        61.765043914269654,
+        74.5376790097715
+      ],
+      "avgPlies": 27.375,
+      "mtajiPlayedPct": 97,
+      "bulkPct": 63,
+      "nyakuaPct": 96,
+      "reasons": {
+        "front-empty": 83,
+        "no-move": 117
+      },
+      "searchNodes": 555712,
+      "maxPlies": 34
+    }
+  ]
+}
