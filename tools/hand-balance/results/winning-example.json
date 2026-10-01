@@ -1,0 +1,236 @@
+{
+  "note": "One defender path through the verified strategy certificate; not the whole proof",
+  "path": [
+    {
+      "ply": 1,
+      "player": 0,
+      "move": {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 6,
+        "direction": "right"
+      },
+      "reserveAfter": [
+        5,
+        6
+      ],
+      "phaseAfter": "namua",
+      "winnerAfter": null
+    },
+    {
+      "ply": 2,
+      "player": 1,
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 4,
+        "direction": "right",
+        "side": "left"
+      },
+      "reserveAfter": [
+        5,
+        5
+      ],
+      "phaseAfter": "namua",
+      "winnerAfter": null
+    },
+    {
+      "ply": 3,
+      "player": 0,
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 2,
+        "direction": "right",
+        "side": "left"
+      },
+      "reserveAfter": [
+        4,
+        5
+      ],
+      "phaseAfter": "namua",
+      "winnerAfter": null
+    },
+    {
+      "ply": 4,
+      "player": 1,
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 0,
+        "direction": "right",
+        "side": "left"
+      },
+      "reserveAfter": [
+        4,
+        4
+      ],
+      "phaseAfter": "namua",
+      "winnerAfter": null
+    },
+    {
+      "ply": 5,
+      "player": 0,
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 1,
+        "direction": "right",
+        "side": "left"
+      },
+      "reserveAfter": [
+        4,
+        3
+      ],
+      "phaseAfter": "namua",
+      "winnerAfter": null
+    },
+    {
+      "ply": 6,
+      "player": 1,
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 2,
+        "direction": "right",
+        "side": "left"
+      },
+      "reserveAfter": [
+        4,
+        2
+      ],
+      "phaseAfter": "namua",
+      "winnerAfter": null
+    },
+    {
+      "ply": 7,
+      "player": 0,
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 7,
+        "direction": "left",
+        "side": "right",
+        "houseChoice": "stop"
+      },
+      "reserveAfter": [
+        3,
+        2
+      ],
+      "phaseAfter": "namua",
+      "winnerAfter": null
+    },
+    {
+      "ply": 8,
+      "player": 1,
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 2,
+        "direction": "right",
+        "side": "left"
+      },
+      "reserveAfter": [
+        3,
+        1
+      ],
+      "phaseAfter": "namua",
+      "winnerAfter": null
+    },
+    {
+      "ply": 9,
+      "player": 0,
+      "move": {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 0,
+        "direction": "right"
+      },
+      "reserveAfter": [
+        2,
+        1
+      ],
+      "phaseAfter": "namua",
+      "winnerAfter": null
+    },
+    {
+      "ply": 10,
+      "player": 1,
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 0,
+        "direction": "right",
+        "side": "left"
+      },
+      "reserveAfter": [
+        2,
+        0
+      ],
+      "phaseAfter": "namua",
+      "winnerAfter": null
+    },
+    {
+      "ply": 11,
+      "player": 0,
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 6,
+        "direction": "left",
+        "side": "right"
+      },
+      "reserveAfter": [
+        0,
+        0
+      ],
+      "phaseAfter": "mtaji",
+      "winnerAfter": null
+    },
+    {
+      "ply": 12,
+      "player": 1,
+      "move": {
+        "row": 0,
+        "index": 2,
+        "direction": "left",
+        "type": "capture",
+        "phase": "mtaji"
+      },
+      "reserveAfter": [
+        0,
+        0
+      ],
+      "phaseAfter": "mtaji",
+      "winnerAfter": null
+    },
+    {
+      "ply": 13,
+      "player": 0,
+      "move": {
+        "row": 0,
+        "index": 4,
+        "direction": "left",
+        "type": "capture",
+        "phase": "mtaji"
+      },
+      "reserveAfter": [
+        0,
+        0
+      ],
+      "phaseAfter": "mtaji",
+      "winnerAfter": 0
+    }
+  ]
+}

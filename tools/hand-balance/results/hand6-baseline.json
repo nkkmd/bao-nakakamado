@@ -1,0 +1,507 @@
+{
+  "reference": "ec3961c6d178ae5c146d1ffbdeabdce274575b46",
+  "createdAt": "2026-10-01T11:16:53.023Z",
+  "mode": "self",
+  "n": 5000,
+  "seedStartIndex": 1000,
+  "rows": [
+    {
+      "hand": 6,
+      "policy": "random",
+      "n": 5000,
+      "firstWins": 2593,
+      "secondWins": 2407,
+      "firstWinPct": 51.86,
+      "wilson95Pct": [
+        50.47415849457114,
+        53.24298565419324
+      ],
+      "avgPlies": 12.9486,
+      "mtajiPlayedPct": 58.34,
+      "bulkPct": 57.12,
+      "nyakuaPct": 92.12,
+      "reasons": {
+        "front-empty": 2804,
+        "no-move": 2196
+      },
+      "searchNodes": 0,
+      "batches": [
+        {
+          "n": 1000,
+          "firstWins": 531,
+          "secondWins": 469,
+          "firstWinPct": 53.1,
+          "wilson95Pct": [
+            50.00102483912816,
+            56.1752492582614
+          ],
+          "avgPlies": 13.195,
+          "mtajiPlayedPct": 60.2,
+          "bulkPct": 59.2,
+          "nyakuaPct": 92,
+          "reasons": {
+            "front-empty": 535,
+            "no-move": 465
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 528,
+          "secondWins": 472,
+          "firstWinPct": 52.8,
+          "wilson95Pct": [
+            49.70108021953935,
+            55.877489932941536
+          ],
+          "avgPlies": 12.926,
+          "mtajiPlayedPct": 58.7,
+          "bulkPct": 58.9,
+          "nyakuaPct": 93.1,
+          "reasons": {
+            "front-empty": 555,
+            "no-move": 445
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 523,
+          "secondWins": 477,
+          "firstWinPct": 52.3,
+          "wilson95Pct": [
+            49.20142012545935,
+            55.380976785507094
+          ],
+          "avgPlies": 12.819,
+          "mtajiPlayedPct": 58.2,
+          "bulkPct": 53.7,
+          "nyakuaPct": 91.1,
+          "reasons": {
+            "no-move": 446,
+            "front-empty": 554
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 490,
+          "secondWins": 510,
+          "firstWinPct": 49,
+          "wilson95Pct": [
+            45.911403097425705,
+            52.0962504195454
+          ],
+          "avgPlies": 12.944,
+          "mtajiPlayedPct": 57.8,
+          "bulkPct": 56.5,
+          "nyakuaPct": 91.6,
+          "reasons": {
+            "no-move": 422,
+            "front-empty": 578
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 521,
+          "secondWins": 479,
+          "firstWinPct": 52.1,
+          "wilson95Pct": [
+            49.00164266054177,
+            55.182284953818915
+          ],
+          "avgPlies": 12.859,
+          "mtajiPlayedPct": 56.8,
+          "bulkPct": 57.3,
+          "nyakuaPct": 92.8,
+          "reasons": {
+            "front-empty": 582,
+            "no-move": 418
+          },
+          "searchNodes": 0
+        }
+      ]
+    },
+    {
+      "hand": 6,
+      "policy": "noisy",
+      "n": 5000,
+      "firstWins": 2377,
+      "secondWins": 2623,
+      "firstWinPct": 47.54,
+      "wilson95Pct": [
+        46.15819327536087,
+        48.92558381820882
+      ],
+      "avgPlies": 9.7794,
+      "mtajiPlayedPct": 18.3,
+      "bulkPct": 45.84,
+      "nyakuaPct": 99.46,
+      "reasons": {
+        "front-empty": 3755,
+        "no-move": 1245
+      },
+      "searchNodes": 0,
+      "batches": [
+        {
+          "n": 1000,
+          "firstWins": 456,
+          "secondWins": 544,
+          "firstWinPct": 45.6,
+          "wilson95Pct": [
+            42.53575129275134,
+            48.69792418192155
+          ],
+          "avgPlies": 9.728,
+          "mtajiPlayedPct": 18.7,
+          "bulkPct": 45.9,
+          "nyakuaPct": 99.6,
+          "reasons": {
+            "front-empty": 779,
+            "no-move": 221
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 458,
+          "secondWins": 542,
+          "firstWinPct": 45.8,
+          "wilson95Pct": [
+            42.73392207850265,
+            48.89822269277602
+          ],
+          "avgPlies": 9.78,
+          "mtajiPlayedPct": 18.9,
+          "bulkPct": 47.1,
+          "nyakuaPct": 99.9,
+          "reasons": {
+            "no-move": 245,
+            "front-empty": 755
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 497,
+          "secondWins": 503,
+          "firstWinPct": 49.7,
+          "wilson95Pct": [
+            46.60816352651897,
+            52.794132528572355
+          ],
+          "avgPlies": 9.763,
+          "mtajiPlayedPct": 17.6,
+          "bulkPct": 44.3,
+          "nyakuaPct": 99.3,
+          "reasons": {
+            "front-empty": 749,
+            "no-move": 251
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 482,
+          "secondWins": 518,
+          "firstWinPct": 48.2,
+          "wilson95Pct": [
+            45.11584546689284,
+            51.297930863655154
+          ],
+          "avgPlies": 9.842,
+          "mtajiPlayedPct": 18,
+          "bulkPct": 46.8,
+          "nyakuaPct": 99.2,
+          "reasons": {
+            "front-empty": 736,
+            "no-move": 264
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 484,
+          "secondWins": 516,
+          "firstWinPct": 48.4,
+          "wilson95Pct": [
+            45.31466082917357,
+            51.4975847979802
+          ],
+          "avgPlies": 9.784,
+          "mtajiPlayedPct": 18.3,
+          "bulkPct": 45.1,
+          "nyakuaPct": 99.3,
+          "reasons": {
+            "front-empty": 736,
+            "no-move": 264
+          },
+          "searchNodes": 0
+        }
+      ]
+    },
+    {
+      "hand": 6,
+      "policy": "greedy",
+      "n": 5000,
+      "firstWins": 2370,
+      "secondWins": 2630,
+      "firstWinPct": 47.4,
+      "wilson95Pct": [
+        46.01849713398053,
+        48.78549491613378
+      ],
+      "avgPlies": 9.9104,
+      "mtajiPlayedPct": 20.64,
+      "bulkPct": 48.36,
+      "nyakuaPct": 99.62,
+      "reasons": {
+        "front-empty": 3730,
+        "no-move": 1270
+      },
+      "searchNodes": 0,
+      "batches": [
+        {
+          "n": 1000,
+          "firstWins": 470,
+          "secondWins": 530,
+          "firstWinPct": 47,
+          "wilson95Pct": [
+            43.923991460215,
+            50.09896909069833
+          ],
+          "avgPlies": 9.826,
+          "mtajiPlayedPct": 20.4,
+          "bulkPct": 47.1,
+          "nyakuaPct": 99.8,
+          "reasons": {
+            "front-empty": 769,
+            "no-move": 231
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 469,
+          "secondWins": 531,
+          "firstWinPct": 46.9,
+          "wilson95Pct": [
+            43.8247507417386,
+            49.99897516087184
+          ],
+          "avgPlies": 9.947,
+          "mtajiPlayedPct": 21.9,
+          "bulkPct": 48.1,
+          "nyakuaPct": 100,
+          "reasons": {
+            "no-move": 248,
+            "front-empty": 752
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 485,
+          "secondWins": 515,
+          "firstWinPct": 48.5,
+          "wilson95Pct": [
+            45.41408702709699,
+            51.597393248359666
+          ],
+          "avgPlies": 9.857,
+          "mtajiPlayedPct": 18.8,
+          "bulkPct": 47.2,
+          "nyakuaPct": 99.6,
+          "reasons": {
+            "front-empty": 755,
+            "no-move": 245
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 483,
+          "secondWins": 517,
+          "firstWinPct": 48.3,
+          "wilson95Pct": [
+            45.215246974959655,
+            51.39776400389123
+          ],
+          "avgPlies": 9.983,
+          "mtajiPlayedPct": 22,
+          "bulkPct": 50,
+          "nyakuaPct": 99.2,
+          "reasons": {
+            "front-empty": 737,
+            "no-move": 263
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 463,
+          "secondWins": 537,
+          "firstWinPct": 46.3,
+          "wilson95Pct": [
+            43.22956691542525,
+            49.39875109736786
+          ],
+          "avgPlies": 9.939,
+          "mtajiPlayedPct": 20.1,
+          "bulkPct": 49.4,
+          "nyakuaPct": 99.5,
+          "reasons": {
+            "front-empty": 717,
+            "no-move": 283
+          },
+          "searchNodes": 0
+        }
+      ]
+    },
+    {
+      "hand": 6,
+      "policy": "reply",
+      "n": 5000,
+      "firstWins": 3245,
+      "secondWins": 1755,
+      "firstWinPct": 64.9,
+      "wilson95Pct": [
+        63.5660831886383,
+        66.211039293399
+      ],
+      "avgPlies": 13.3062,
+      "mtajiPlayedPct": 48.26,
+      "bulkPct": 78.76,
+      "nyakuaPct": 92.72,
+      "reasons": {
+        "front-empty": 3088,
+        "no-move": 1912
+      },
+      "searchNodes": 0,
+      "batches": [
+        {
+          "n": 1000,
+          "firstWins": 657,
+          "secondWins": 343,
+          "firstWinPct": 65.7,
+          "wilson95Pct": [
+            62.702702137815145,
+            68.57713764573843
+          ],
+          "avgPlies": 13.383,
+          "mtajiPlayedPct": 49.9,
+          "bulkPct": 78.7,
+          "nyakuaPct": 93.2,
+          "reasons": {
+            "front-empty": 626,
+            "no-move": 374
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 661,
+          "secondWins": 339,
+          "firstWinPct": 66.1,
+          "wilson95Pct": [
+            63.109437492134354,
+            68.96734088463077
+          ],
+          "avgPlies": 13.301,
+          "mtajiPlayedPct": 48.7,
+          "bulkPct": 78.1,
+          "nyakuaPct": 91.8,
+          "reasons": {
+            "no-move": 384,
+            "front-empty": 616
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 633,
+          "secondWins": 367,
+          "firstWinPct": 63.3,
+          "wilson95Pct": [
+            60.26706264751108,
+            66.23114557677316
+          ],
+          "avgPlies": 13.399,
+          "mtajiPlayedPct": 48.1,
+          "bulkPct": 78.1,
+          "nyakuaPct": 92.6,
+          "reasons": {
+            "front-empty": 605,
+            "no-move": 395
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 650,
+          "secondWins": 350,
+          "firstWinPct": 65,
+          "wilson95Pct": [
+            61.99146825068092,
+            67.89372899475244
+          ],
+          "avgPlies": 13.178,
+          "mtajiPlayedPct": 47.9,
+          "bulkPct": 79.2,
+          "nyakuaPct": 93.3,
+          "reasons": {
+            "no-move": 376,
+            "front-empty": 624
+          },
+          "searchNodes": 0
+        },
+        {
+          "n": 1000,
+          "firstWins": 644,
+          "secondWins": 356,
+          "firstWinPct": 64.4,
+          "wilson95Pct": [
+            61.382393003402235,
+            67.30739635221377
+          ],
+          "avgPlies": 13.27,
+          "mtajiPlayedPct": 46.7,
+          "bulkPct": 79.7,
+          "nyakuaPct": 92.7,
+          "reasons": {
+            "front-empty": 617,
+            "no-move": 383
+          },
+          "searchNodes": 0
+        }
+      ]
+    }
+  ],
+  "mirrorChecks": [
+    {
+      "hand": 6,
+      "policy": "random",
+      "pairs": 100,
+      "mismatches": 0
+    },
+    {
+      "hand": 6,
+      "policy": "noisy",
+      "pairs": 100,
+      "mismatches": 0
+    },
+    {
+      "hand": 6,
+      "policy": "greedy",
+      "pairs": 100,
+      "mismatches": 0
+    },
+    {
+      "hand": 6,
+      "policy": "reply",
+      "pairs": 100,
+      "mismatches": 0
+    }
+  ]
+}

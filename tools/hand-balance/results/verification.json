@@ -1,0 +1,27 @@
+{
+  "sourceRef": "ec3961c6d178ae5c146d1ffbdeabdce274575b46",
+  "nodeVersion": "v24.19.0",
+  "formalHand6Games": 29000,
+  "existingTests": {
+    "passed": 23,
+    "failed": 0
+  },
+  "alphaBetaVersusBrute": {
+    "alphaBetaVersusIndependentBrute": 432,
+    "status": "PASS"
+  },
+  "negativeCertificateChecks": {
+    "status": "PASS",
+    "rejectedInvalidCertificates": 3
+  },
+  "displayExamples": {
+    "games": 3,
+    "mismatches": 0
+  },
+  "previousWorkingAggregatesMatched": [
+    "hand6-baseline.json",
+    "hand6-search.json",
+    "hand6-crossplay.json"
+  ],
+  "sourceHashesMatched": true
+}

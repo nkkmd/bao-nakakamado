@@ -44,6 +44,8 @@ node tools/one-row-bounce-study.cjs 1000 random,noisy,greedy
 
 [実装前の調査結果](../doc/ONE_ROW_BOUNCE_STUDY_20261001.md)と実装版の3,000対局は同じ主条件の結果になりました。全局面での停止、先後均衡、人間の操作感を保証するものではありません。
 
+[ハンド12個・8個の比較](../doc/HAND12_VS_HAND8_BALANCE_20261001.md)と[6個の追加試験](../doc/HAND6_BALANCE_20261001.md)を記録しています。6個は現行エンジン上で先手必勝手順を確認し、12個・8個も先後均衡は未確認です。試験コードは[tools/hand-balance](../tools/hand-balance/README.md)にあります。画面の初期条件は12個のままです。
+
 ## 出典・ライセンス
 
 `engine.js`、そこから改変した `bulk-engine.js` と `bounce-engine.js`、元の公開版を参考にしたスタイルは [bao-la-kiswahili-gameのMIT License](ENGINE_LICENSE.txt)に従います。著作権表示と許諾条件を保持しています。試作独自のコード・説明文のライセンスは現時点で未設定です。
