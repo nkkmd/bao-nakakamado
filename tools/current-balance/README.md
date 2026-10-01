@@ -17,7 +17,7 @@
 
 ## 実行と保存
 
-GitHub Actionsの **Current v0.6.1 first-player balance** を第一候補とする。14タスクを最大4ジョブ同時で実行し、各100局または100組のJSONを原子的に保存する。中断時も完了したブロックはartifactへ残す。再実行は同じsignatureのブロックのみ再利用できる。ソースSHA-256、対象ルール、実行commit、run IDを保存する。
+GitHub Actionsの **Current v0.6.1 first-player balance** を第一候補とする。14タスクを最大4ジョブ同時で実行し、各100局または100組のJSONを原子的に保存する。各タスク終了時は失敗時もartifactへの保存を試みる。再開する場合は、取得できた完了ブロックを出力先へ復元してから実行する。同じsignatureのブロックだけを再利用でき、GitHub Actionsの単純な再実行だけでは自動復元しない。ソースSHA-256、対象ルール、実行commit、run IDを保存する。
 
 ```sh
 node tools/current-balance/check.cjs
@@ -28,3 +28,16 @@ node tools/current-balance/run.cjs proof /tmp/current-balance/proof
 ```
 
 第4引数は準備確認だけの局数・組数、proofではノード予算の上書き。準備確認は正式集計へ足さない。各タスクの最終結果は `summary.json`、対局ごとのseed・勝敗・手番数・最終盤面SHA-256は `block-*.json` に保存する。
+
+## 完了した記録
+
+[報告書](../../doc/CURRENT_FIRST_PLAYER_BALANCE_20261001.md)、[集計](results/summary.json)、[検証](results/verification.json)、[実行記録](results/provenance.json)を保存した。主試験29,000局と追加座席交換1,600局が通常終局し、探索方針で先手への偏りが残った。必勝探索は深さ10までUNKNOWN、深さ11で予算停止した。
+
+対局単位のmetadata・summary・全ブロックを `records.json.gz` に保存した。JSONは以下で展開・再集計検証できる。展開時に各ファイルのSHA-256も照合する。
+
+```sh
+python3 tools/current-balance/data.py unpack /tmp/current-balance-restored tools/current-balance/results/records.json.gz
+node tools/current-balance/verify.cjs /tmp/current-balance-restored
+```
+
+正式試験後の取得データ検証では、全29,000局の対局数・seed・集計と、13タスクの開始・中間・末尾から54局を再実行して最終盤面SHA-256まで一致した。

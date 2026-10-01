@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "tasks": [
+    {
+      "task": "self-random",
+      "n": 5000,
+      "firstWinPct": 51.56
+    },
+    {
+      "task": "self-noisy",
+      "n": 5000,
+      "firstWinPct": 47.84
+    },
+    {
+      "task": "self-greedy",
+      "n": 5000,
+      "firstWinPct": 47.82
+    },
+    {
+      "task": "self-reply",
+      "n": 5000,
+      "firstWinPct": 53.68
+    },
+    {
+      "task": "self-search3",
+      "n": 1000,
+      "firstWinPct": 56.3
+    },
+    {
+      "task": "self-search4",
+      "n": 1000,
+      "firstWinPct": 60.8
+    },
+    {
+      "task": "self-search6",
+      "n": 1000,
+      "firstWinPct": 100
+    },
+    {
+      "task": "self-search4-mobility",
+      "n": 1000,
+      "firstWinPct": 65.6
+    },
+    {
+      "task": "cross-0",
+      "n": 1000,
+      "firstWinPct": 54.5
+    },
+    {
+      "task": "cross-1",
+      "n": 1000,
+      "firstWinPct": 52.2
+    },
+    {
+      "task": "cross-2",
+      "n": 1000,
+      "firstWinPct": 74.1
+    },
+    {
+      "task": "cross-3",
+      "n": 1000,
+      "firstWinPct": 62.1
+    },
+    {
+      "task": "cross-4",
+      "n": 1000,
+      "firstWinPct": 75.4
+    },
+    {
+      "task": "proof",
+      "records": 11,
+      "final": "BUDGET_STOP"
+    }
+  ],
+  "mainGames": 29000,
+  "mirrorGames": 1600,
+  "reproducedGames": 54
+}
