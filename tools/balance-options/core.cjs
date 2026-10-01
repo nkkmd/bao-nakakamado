@@ -2,9 +2,9 @@
 const fs = require("node:fs");
 const assert = require("node:assert/strict");
 const {makeEngine}=require("./variant-engine.cjs");
-function createCore(config){
-const {E,S}=makeEngine(config);
-const REF = "4e38478828319d664575dbbbfbb90e1df17eaf7f";
+function createCore(config,options={}){
+const {E,S}=makeEngine(config,options);
+const REF = options.reference || "4e38478828319d664575dbbbfbb90e1df17eaf7f";
 function rng(seed) { let x=seed>>>0; return ()=>{x^=x<<13;x^=x>>>17;x^=x<<5;return (x>>>0)/4294967296;}; }
 function seedAt(i) { return (0x924f3aa1 + i*0x9e3779b1)>>>0; }
 function initial(hand, first=0) { const b=E.initialState();b.reserve[first]=config.hands[0];b.reserve[1-first]=config.hands[1];b.pits[0][0]=config.pits.slice();b.pits[1][0]=config.pits.slice();b.player=first;return b; }
