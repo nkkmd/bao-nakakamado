@@ -28,6 +28,8 @@ jobs:
         run: node tools/balance-options/check.cjs tools/balance-options/results/checks.json
       - name: Run condition with separate checkpoints
         run: node tools/balance-options/run.cjs '${{ matrix.condition }}' 'tools/balance-options/results/screen/${{ matrix.condition }}' screen
+      - name: Verify any forced-win certificate
+        run: node tools/balance-options/certify.cjs 'tools/balance-options/results/screen/${{ matrix.condition }}'
       - uses: actions/upload-artifact@v4
         if: always()
         with:

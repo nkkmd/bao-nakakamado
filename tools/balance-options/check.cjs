@@ -1,5 +1,5 @@
 "use strict";
-const assert=require('node:assert/strict'),fs=require('node:fs');
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const {createCore}=require('./core.cjs'),{config,standard}=require('./configs.cjs');
 const original=require('../hand-balance/balance.cjs');
 const equivalent=(a,b)=>assert.deepEqual(JSON.parse(JSON.stringify(a)),JSON.parse(JSON.stringify(b)));
@@ -26,4 +26,5 @@ const t=four.S.applyWithEvents({board:b,history:[]},houseMove);
 assert.equal(t.events.find(e=>e.kind==='lift').count,2);
 const asym=createCore(config('asym',[9,10]));equivalent(asym.initial(null,1).reserve,[10,9]);
 const result={status:'PASS',controlTransitionsMatched:transitions,controlSelectionsMatched:selections,threshold4StartRestriction:true,houseTwoPreserved:true,asymmetricRoleMapping:true};
-fs.writeFileSync(process.argv[2]||'checks.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
+const out=process.argv[2]||'checks.json';fs.mkdirSync(path.dirname(out),{recursive:true});
+fs.writeFileSync(out,JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
