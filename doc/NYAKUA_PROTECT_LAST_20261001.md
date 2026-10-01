@@ -58,3 +58,7 @@ node tools/balance-options/check.cjs /tmp/nyakua-historical-check.json
 ```
 
 [試験コード](../tools/nyakua-protect-last-study.cjs)と[集計・到達例・実装SHA-256](../tools/nyakua-protect-last-results.json)を保存する。到達例の棋譜には最後の1個が保護される局面と一穴全投入の局面を含める。SHA-256は今回の検証に使ったソースを識別するための記録であり、旧試験のソースSHA-256を更新するものではない。
+
+## 後続の先後比較
+
+[現行v0.6.1の先後比較](CURRENT_FIRST_PLAYER_BALANCE_20261001.md)を主試験29,000局で実施しました。探索を使う方針で先手への偏りが残り、6手探索の自己対局1,000局はすべて先手勝利でした。進行に支障がないという本書の結論と、先後均衡の未達成は別の評価です。先手必勝は証明していません。

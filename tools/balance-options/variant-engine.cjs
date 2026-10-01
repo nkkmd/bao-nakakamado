@@ -1,6 +1,6 @@
 "use strict";
 const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path'),assert=require('node:assert/strict');
-function makeEngine(config){
+function makeEngine(config,{protectLast=false}={}){
  assert.ok(config.hands.length===2&&config.hands.every(x=>Number.isInteger(x)&&x>0));
  assert.ok(config.pits.length===8&&config.pits.every(x=>Number.isInteger(x)&&x>=0));
  assert.ok([4,6].includes(config.threshold));
@@ -13,6 +13,6 @@ function makeEngine(config){
  context.module={exports:{}};
  vm.runInContext(fs.readFileSync(path.join(__dirname,'../../prototype/steal.js'),'utf8'),context,{filename:'isolated-steal.js'});
  // Historical balance comparisons use the pre-protection NYAKUA rule.
- return {E,S:context.module.exports.createForEngine(E,{protectLast:false})};
+ return {E,S:context.module.exports.createForEngine(E,{protectLast})};
 }
 module.exports={makeEngine};

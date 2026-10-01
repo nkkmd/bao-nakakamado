@@ -1,0 +1,37 @@
+name: Current v0.6.1 first-player balance
+on:
+  push:
+    branches: [experiment/current-balance-20261001]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: current-balance-${{ github.ref }}-${{ github.sha }}
+  cancel-in-progress: false
+jobs:
+  investigate:
+    name: current - ${{ matrix.task }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        task: [self-random, self-noisy, self-greedy, self-reply, self-search3, self-search4, self-search6, self-search4-mobility, cross-0, cross-1, cross-2, cross-3, cross-4, proof]
+    env:
+      TASK: ${{ matrix.task }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+      - name: Verify live-rule parity and search
+        run: node tools/current-balance/check.cjs
+      - name: Run comparison with atomic checkpoints
+        run: node tools/current-balance/run.cjs "$TASK" "tools/current-balance/results/$TASK"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: current-balance-${{ matrix.task }}
+          path: tools/current-balance/results/
+          retention-days: 30

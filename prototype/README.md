@@ -46,6 +46,8 @@ node tools/nyakua-protect-last-study.cjs 1000
 
 [折り返し方式の調査](../doc/ONE_ROW_BOUNCE_STUDY_20261001.md)、[ハンド12個・8個の比較](../doc/HAND12_VS_HAND8_BALANCE_20261001.md)、[6個の追加試験](../doc/HAND6_BALANCE_20261001.md)は、最後の1個を奪えるv0.6.0の履歴です。6個の必勝手順や勝率をv0.6.1へ引き継ぎません。初期ハンドは12個のままです。
 
+[現行v0.6.1の先後比較](../doc/CURRENT_FIRST_PLAYER_BALANCE_20261001.md)を29,000局で確認しました。単純方針では先手勝率47.82〜53.68%、探索方針では56.3〜100%で、先後の偏りは残っています。6手探索の1,000局全勝は、先手必勝の証明とは区別します。
+
 ## 出典・ライセンス
 
 `engine.js`、そこから改変した `bulk-engine.js` と `bounce-engine.js`、元の公開版を参考にしたスタイルは [bao-la-kiswahili-gameのMIT License](ENGINE_LICENSE.txt)に従います。著作権表示と許諾条件を保持しています。試作独自のコード・説明文のライセンスは現時点で未設定です。

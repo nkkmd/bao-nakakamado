@@ -1,0 +1,186 @@
+{
+  "reference": "7f9160a2ac9a8e066efa3aeffd09b0bf99a47a8f",
+  "runnerCommit": "16e94e75e3c516c4b21ee7031054de677459880f",
+  "runId": 36869079611,
+  "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/36869079611",
+  "conclusion": "success",
+  "artifacts": [
+    {
+      "id": 11166835953,
+      "name": "current-balance-self-noisy",
+      "size": 279274,
+      "digest": "sha256:ca8456d93fb3031029c9360eb486193da41f32265925c7d6ea8fd49a072e61a7",
+      "expiresAt": "2026-10-31T13:30:06Z"
+    },
+    {
+      "id": 11166726361,
+      "name": "current-balance-cross-1",
+      "size": 58646,
+      "digest": "sha256:109b1d2f5470658a7a2f4b715ba0a2d35d345e555a99b0308b1e778d47acc532",
+      "expiresAt": "2026-10-31T13:31:43Z"
+    },
+    {
+      "id": 11166701626,
+      "name": "current-balance-proof",
+      "size": 2200,
+      "digest": "sha256:4fd853d1340f8ae4c2683241e1f3a55cc13c518e47036d1133ba2678eba470e5",
+      "expiresAt": "2026-10-31T13:33:20Z"
+    },
+    {
+      "id": 11166601096,
+      "name": "current-balance-self-reply",
+      "size": 253552,
+      "digest": "sha256:917197ea289646e22b7232af9085eaab9c87226a31f25c5a43deb74788fa5623",
+      "expiresAt": "2026-10-31T13:30:23Z"
+    },
+    {
+      "id": 11166556954,
+      "name": "current-balance-cross-4",
+      "size": 47539,
+      "digest": "sha256:cd357374fa3e79d853ce84758e9c97405a65ced5a52498b7f5a70479e6b246ba",
+      "expiresAt": "2026-10-31T13:35:01Z"
+    },
+    {
+      "id": 11166521336,
+      "name": "current-balance-cross-0",
+      "size": 61023,
+      "digest": "sha256:bb72ab3d0310005fb44cfe7765b96c6c5a0cfc64cf68eececce57b7399e44a6a",
+      "expiresAt": "2026-10-31T13:31:31Z"
+    },
+    {
+      "id": 11166511531,
+      "name": "current-balance-self-search4-mobility",
+      "size": 32756,
+      "digest": "sha256:18017700ae090fbbb9ad1ae0ca673c5d985a202230ac0f748d6a3b211afa173c",
+      "expiresAt": "2026-10-31T13:32:10Z"
+    },
+    {
+      "id": 11166381171,
+      "name": "current-balance-self-random",
+      "size": 310973,
+      "digest": "sha256:db03ea391ed6c97e73636d37c532825db5f323760cac13d6f8d037ef51ffcf59",
+      "expiresAt": "2026-10-31T13:30:10Z"
+    },
+    {
+      "id": 11166342736,
+      "name": "current-balance-self-search6",
+      "size": 57013,
+      "digest": "sha256:321106686420688acfe995e26bf49d59c4aed20f9e1b7395091a7e9a058d1487",
+      "expiresAt": "2026-10-31T13:39:06Z"
+    },
+    {
+      "id": 11166341051,
+      "name": "current-balance-self-greedy",
+      "size": 279360,
+      "digest": "sha256:dc292c904eede40d10b3a7ad0d6e1177739a3d9b03abeaecbe69ce136a992d09",
+      "expiresAt": "2026-10-31T13:30:03Z"
+    },
+    {
+      "id": 11165127671,
+      "name": "current-balance-self-search3",
+      "size": 44250,
+      "digest": "sha256:33fe34dd0525722ffda53d61db99ba4e942e13d86ef38a2ad7c3ff4d9286800c",
+      "expiresAt": "2026-10-31T13:31:11Z"
+    },
+    {
+      "id": 11165038567,
+      "name": "current-balance-cross-3",
+      "size": 52872,
+      "digest": "sha256:e586515d553f7f67121b1aa23b1b880644e2984ce992b34267456b5e3f57be75",
+      "expiresAt": "2026-10-31T13:34:53Z"
+    },
+    {
+      "id": 11164952905,
+      "name": "current-balance-self-search4",
+      "size": 45788,
+      "digest": "sha256:6997fbe06816b379aa0a1826ed047446c31a2bffe26f64a4faa8399ea869a11e",
+      "expiresAt": "2026-10-31T13:31:19Z"
+    },
+    {
+      "id": 11164928006,
+      "name": "current-balance-cross-2",
+      "size": 44852,
+      "digest": "sha256:b5a233a886ffce936c233ba46a843d9ed9db5fd0e56139c8c874abbbb93a3d1b",
+      "expiresAt": "2026-10-31T13:32:14Z"
+    }
+  ],
+  "jobs": [
+    {
+      "id": 110391912179,
+      "name": "current - self-search4",
+      "conclusion": "success"
+    },
+    {
+      "id": 110391912195,
+      "name": "current - self-search4-mobility",
+      "conclusion": "success"
+    },
+    {
+      "id": 110391912206,
+      "name": "current - self-random",
+      "conclusion": "success"
+    },
+    {
+      "id": 110391912255,
+      "name": "current - cross-4",
+      "conclusion": "success"
+    },
+    {
+      "id": 110391912305,
+      "name": "current - self-noisy",
+      "conclusion": "success"
+    },
+    {
+      "id": 110391912318,
+      "name": "current - cross-2",
+      "conclusion": "success"
+    },
+    {
+      "id": 110391912326,
+      "name": "current - self-greedy",
+      "conclusion": "success"
+    },
+    {
+      "id": 110391912363,
+      "name": "current - self-search3",
+      "conclusion": "success"
+    },
+    {
+      "id": 110391912396,
+      "name": "current - proof",
+      "conclusion": "success"
+    },
+    {
+      "id": 110391912428,
+      "name": "current - cross-3",
+      "conclusion": "success"
+    },
+    {
+      "id": 110391912436,
+      "name": "current - self-reply",
+      "conclusion": "success"
+    },
+    {
+      "id": 110391912455,
+      "name": "current - cross-1",
+      "conclusion": "success"
+    },
+    {
+      "id": 110391912573,
+      "name": "current - self-search6",
+      "conclusion": "success"
+    },
+    {
+      "id": 110391912667,
+      "name": "current - cross-0",
+      "conclusion": "success"
+    }
+  ],
+  "localPreparation": {
+    "liveParityTransitions": 384,
+    "protectedCandidates": 5,
+    "independentSearchCases": 144,
+    "legacyTransitions": 379,
+    "legacySelections": 40
+  }
+}
