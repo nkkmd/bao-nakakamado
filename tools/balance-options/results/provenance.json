@@ -1,0 +1,277 @@
+{
+  "reference": "4e38478828319d664575dbbbfbb90e1df17eaf7f",
+  "nodeVersion": "24.19.0",
+  "runner": "GitHub Actions ubuntu-latest",
+  "runs": [
+    {
+      "id": 36857509609,
+      "name": "Balance options investigation",
+      "head": "20d76824bc1520ef067f59a43d190931f8b715bf",
+      "status": "completed",
+      "conclusion": "success",
+      "created": "2026-10-01T11:46:53Z",
+      "updated": "2026-10-01T11:50:45Z",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/36857509609",
+      "artifacts": [
+        {
+          "id": 11160290081,
+          "name": "balance-equal-9",
+          "bytes": 19674,
+          "digest": "sha256:62b051040f018dc7e8655d721cbff980f1e40042b69c0a31f070d24b2868b868",
+          "created": "2026-10-01T11:48:47Z"
+        },
+        {
+          "id": 11160140545,
+          "name": "balance-equal-12",
+          "bytes": 19670,
+          "digest": "sha256:7b23526045f346829f8e217a9beedcf31d4dda6ffaa8e924dc8eaa60bdd03344",
+          "created": "2026-10-01T11:50:41Z"
+        },
+        {
+          "id": 11159785418,
+          "name": "balance-equal-10",
+          "bytes": 19754,
+          "digest": "sha256:bf6fa3261615f3674881aceec0fb9fe4db20bd718a4fde0f8b6e8eb35c26fe1f",
+          "created": "2026-10-01T11:49:28Z"
+        },
+        {
+          "id": 11159455735,
+          "name": "balance-equal-11",
+          "bytes": 19762,
+          "digest": "sha256:1804ed58b26c6b01fe3561c040c5dab04a89419fbca42d72420996b599d84e5e",
+          "created": "2026-10-01T11:50:16Z"
+        }
+      ]
+    },
+    {
+      "id": 36858295915,
+      "name": "Balance options investigation",
+      "head": "84b55d626a95b316c0b85aa336a0c2acfc052d8d",
+      "status": "completed",
+      "conclusion": "success",
+      "created": "2026-10-01T11:54:19Z",
+      "updated": "2026-10-01T11:58:09Z",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/36858295915",
+      "artifacts": [
+        {
+          "id": 11161050318,
+          "name": "balance-asym-9-10",
+          "bytes": 19856,
+          "digest": "sha256:8664fc015edd1156ae702b3fedf589092c87a0286182c52ccf87b8c6bcb4c483",
+          "created": "2026-10-01T11:57:11Z"
+        },
+        {
+          "id": 11160770560,
+          "name": "balance-asym-13-11",
+          "bytes": 19588,
+          "digest": "sha256:ce206f7722f0b79d6561d86062943b43bdfe22572ff1c1518882897367e2ca93",
+          "created": "2026-10-01T11:57:42Z"
+        },
+        {
+          "id": 11160451481,
+          "name": "balance-asym-9-11",
+          "bytes": 19899,
+          "digest": "sha256:5a49d83afd1a346550599bf0ad3c64868852a1a025ff5f6ef7fa792e7fba9ad1",
+          "created": "2026-10-01T11:57:20Z"
+        },
+        {
+          "id": 11160376587,
+          "name": "balance-asym-10-9",
+          "bytes": 19794,
+          "digest": "sha256:9ab80d5736d742874346c34e893518ccd7b1f243d022e4b3a4ecbfc749e74ab7",
+          "created": "2026-10-01T11:56:40Z"
+        },
+        {
+          "id": 11160136865,
+          "name": "balance-asym-11-13",
+          "bytes": 19670,
+          "digest": "sha256:e089287f0d407a0efee52b940c64716923e4d1ddcac7ff36ce928f64881e47c6",
+          "created": "2026-10-01T11:58:06Z"
+        },
+        {
+          "id": 11159936830,
+          "name": "balance-asym-11-9",
+          "bytes": 19780,
+          "digest": "sha256:cee7b94a7e48bdebbbb30f31753a421829fc3f334a55d76171d18c5751e400ac",
+          "created": "2026-10-01T11:56:25Z"
+        }
+      ]
+    },
+    {
+      "id": 36858930756,
+      "name": "Balance options investigation",
+      "head": "0d410a52856952648d8775a0019d2b06b162f450",
+      "status": "completed",
+      "conclusion": "success",
+      "created": "2026-10-01T12:00:23Z",
+      "updated": "2026-10-01T12:08:00Z",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/36858930756",
+      "artifacts": [
+        {
+          "id": 11161795200,
+          "name": "balance-spread433-threshold6-12",
+          "bytes": 20363,
+          "digest": "sha256:f2c377c046bed60b6426d905238bac663883cff9f10f02f9bdb91729c09ed5ee",
+          "created": "2026-10-01T12:04:48Z"
+        },
+        {
+          "id": 11161600237,
+          "name": "balance-threshold4-12",
+          "bytes": 19944,
+          "digest": "sha256:4efe7d245e09ee487ed98a3d0c02861ed0532a73f4070201befd38eb80d24580",
+          "created": "2026-10-01T12:04:17Z"
+        },
+        {
+          "id": 11161365481,
+          "name": "balance-spread613-threshold6-12",
+          "bytes": 20889,
+          "digest": "sha256:fe534e448a7fce3b2ee3438b30c520ea574233be3c884c4718a72a7927a83ff9",
+          "created": "2026-10-01T12:05:05Z"
+        },
+        {
+          "id": 11161345653,
+          "name": "balance-reduced422-threshold4-12",
+          "bytes": 20722,
+          "digest": "sha256:fc2493060fd2b8a4e123c12b19627f61c3a32e0489c0dbbb1eb0794a322dc6f3",
+          "created": "2026-10-01T12:05:39Z"
+        },
+        {
+          "id": 11160996388,
+          "name": "balance-spread631-threshold6-12",
+          "bytes": 20788,
+          "digest": "sha256:49cb6bacf6f9a2c4247fda9b0c3bc37a8ee5957e569079e7e8b581bc2897aef5",
+          "created": "2026-10-01T12:04:38Z"
+        },
+        {
+          "id": 11160717141,
+          "name": "balance-spread433-threshold4-12",
+          "bytes": 20478,
+          "digest": "sha256:afb8c6b80e2e6c28c2f7007aefb6a1419cab66941ff168d88874befd241d91e4",
+          "created": "2026-10-01T12:07:58Z"
+        }
+      ]
+    },
+    {
+      "id": 36860028625,
+      "name": "Balance options investigation",
+      "head": "dbcaa994976f0531756d707eed30dbd5f377cb68",
+      "status": "completed",
+      "conclusion": "success",
+      "created": "2026-10-01T12:10:38Z",
+      "updated": "2026-10-01T12:14:31Z",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/36860028625",
+      "artifacts": [
+        {
+          "id": 11161797042,
+          "name": "balance-combined-9-11-613",
+          "bytes": 20491,
+          "digest": "sha256:93a3bd1225b7713642b01c8aad6761e98c14832afce684b95302460987b4de53",
+          "created": "2026-10-01T12:14:27Z"
+        },
+        {
+          "id": 11161262149,
+          "name": "balance-combined-equal10-613",
+          "bytes": 20506,
+          "digest": "sha256:0254f809b2e9b41b272d7853022c817e14f0caee674dedd20f5727b73bae1415",
+          "created": "2026-10-01T12:13:43Z"
+        },
+        {
+          "id": 11160788025,
+          "name": "balance-combined-11-9-613",
+          "bytes": 20499,
+          "digest": "sha256:87b2e1f7c3fdf5ecce549fd48335204afdbc0212f65ed321cd5f7fb25147408b",
+          "created": "2026-10-01T12:14:21Z"
+        }
+      ]
+    },
+    {
+      "id": 36858296047,
+      "name": "Balance options formal validation",
+      "head": "84b55d626a95b316c0b85aa336a0c2acfc052d8d",
+      "status": "completed",
+      "conclusion": "success",
+      "created": "2026-10-01T11:54:19Z",
+      "updated": "2026-10-01T12:10:01Z",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/36858296047",
+      "artifacts": [
+        {
+          "id": 11160932313,
+          "name": "balance-formal-equal-10",
+          "bytes": 53490,
+          "digest": "sha256:e08d023c5f86c3544f94ca8936797542e636d8e58e3ef3a2d72c728c3f0bb26c",
+          "created": "2026-10-01T12:09:56Z"
+        }
+      ]
+    },
+    {
+      "id": 36858930781,
+      "name": "Balance options formal validation",
+      "head": "0d410a52856952648d8775a0019d2b06b162f450",
+      "status": "completed",
+      "conclusion": "success",
+      "created": "2026-10-01T12:00:23Z",
+      "updated": "2026-10-01T12:28:43Z",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/36858930781",
+      "artifacts": [
+        {
+          "id": 11161995446,
+          "name": "balance-formal-equal-12",
+          "bytes": 53454,
+          "digest": "sha256:d763bab1cb86b01e1e2891c5949ee414bf2fc70f95ae9f230ab5333aded474b0",
+          "created": "2026-10-01T12:28:39Z"
+        },
+        {
+          "id": 11161862710,
+          "name": "balance-formal-asym-9-11",
+          "bytes": 53821,
+          "digest": "sha256:d853c5c2a70737070dd4eb89d2cf17568e07131c37cfa8dc5fef5b55ea7d5618",
+          "created": "2026-10-01T12:18:19Z"
+        }
+      ]
+    },
+    {
+      "id": 36860028813,
+      "name": "Balance options formal validation",
+      "head": "dbcaa994976f0531756d707eed30dbd5f377cb68",
+      "status": "completed",
+      "conclusion": "success",
+      "created": "2026-10-01T12:10:38Z",
+      "updated": "2026-10-01T12:33:15Z",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/36860028813",
+      "artifacts": [
+        {
+          "id": 11162835648,
+          "name": "balance-formal-spread613-threshold6-12",
+          "bytes": 54605,
+          "digest": "sha256:baf08ab9f000ca9c4caa076cfb5851fd9fc0365c53ba1f3c5485c6070ff121c1",
+          "created": "2026-10-01T12:33:10Z"
+        }
+      ]
+    },
+    {
+      "id": 36860836057,
+      "name": "Balance options formal validation",
+      "head": "862df39698d3bade88a42808cd7494851eb5799e",
+      "status": "completed",
+      "conclusion": "success",
+      "created": "2026-10-01T12:17:59Z",
+      "updated": "2026-10-01T12:37:19Z",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/36860836057",
+      "artifacts": [
+        {
+          "id": 11162536602,
+          "name": "balance-formal-combined-equal10-613",
+          "bytes": 53519,
+          "digest": "sha256:4b2b777f672ade261dff60964fd01f23111a50a819a8054ce5e7add13886bca1",
+          "created": "2026-10-01T12:37:14Z"
+        }
+      ]
+    }
+  ],
+  "excludedRun": {
+    "id": 36857243834,
+    "reason": "Output-parent directory was missing; failed before any game. Corrected before successful comparison."
+  },
+  "recordedResultFiles": "Each condition's summary.json and certificate-check.json; summaries include settings, source hashes, signatures and all checkpoint contents.",
+  "productionRuleChanges": false
+}

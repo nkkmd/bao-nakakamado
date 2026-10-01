@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "reference": "4e38478828319d664575dbbbfbb90e1df17eaf7f",
+  "existingProductionTests": {
+    "pass": 23,
+    "fail": 0
+  },
+  "controlTransitionsMatched": 379,
+  "controlSelectionsMatched": 40,
+  "alphaBetaVsMinimaxCases": 342,
+  "alphaBetaMismatches": 0,
+  "summarySignaturesVerified": 24,
+  "productionEngineBlobsUnchanged": true,
+  "restoredCheckpointResume": "PASS (screen/equal-9 and matching runner signature)",
+  "workflowManualDispatchAndEnvironmentInterpolation": "PASS",
+  "statisticalGames": 255200,
+  "mirrorPairs": 5520,
+  "mirrorMismatches": 0,
+  "thresholdDiagnosticPairs": 240,
+  "thresholdDiagnosticMismatches": 0,
+  "forcedWinCertificatesForCandidates": 0,
+  "boundedProofInterpretation": "Budget stop / UNKNOWN does not establish balance or absence of winning strategies."
+}

@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "scope": "Sampled played trajectories only; not all branches or all reachable positions",
+  "rows": [
+    {
+      "policy": "random",
+      "games": 100,
+      "pairedTrajectoryMismatches": 0,
+      "ownedHouseFourOrFiveAtTurnEnds": 0
+    },
+    {
+      "policy": "noisy",
+      "games": 20,
+      "pairedTrajectoryMismatches": 0,
+      "ownedHouseFourOrFiveAtTurnEnds": 0
+    },
+    {
+      "policy": "greedy",
+      "games": 20,
+      "pairedTrajectoryMismatches": 0,
+      "ownedHouseFourOrFiveAtTurnEnds": 0
+    },
+    {
+      "policy": "reply",
+      "games": 20,
+      "pairedTrajectoryMismatches": 0,
+      "ownedHouseFourOrFiveAtTurnEnds": 0
+    },
+    {
+      "policy": "search3",
+      "games": 20,
+      "pairedTrajectoryMismatches": 0,
+      "ownedHouseFourOrFiveAtTurnEnds": 0
+    },
+    {
+      "policy": "search4",
+      "games": 20,
+      "pairedTrajectoryMismatches": 0,
+      "ownedHouseFourOrFiveAtTurnEnds": 0
+    },
+    {
+      "policy": "search6",
+      "games": 20,
+      "pairedTrajectoryMismatches": 0,
+      "ownedHouseFourOrFiveAtTurnEnds": 0
+    },
+    {
+      "policy": "search4-mobility",
+      "games": 20,
+      "pairedTrajectoryMismatches": 0,
+      "ownedHouseFourOrFiveAtTurnEnds": 0
+    }
+  ]
+}

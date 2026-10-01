@@ -1,0 +1,35 @@
+{
+  "stage": 1,
+  "runId": 36857509609,
+  "head": "20d76824bc1520ef067f59a43d190931f8b715bf",
+  "ranking": [
+    {
+      "id": "equal-10",
+      "maxDeviationPoints": 39.5
+    },
+    {
+      "id": "equal-12",
+      "maxDeviationPoints": 41.5
+    },
+    {
+      "id": "equal-11",
+      "maxDeviationPoints": 50
+    },
+    {
+      "id": "equal-9",
+      "maxDeviationPoints": 50
+    }
+  ],
+  "selectedForHoldout": "equal-10",
+  "additionalAsymmetricHands": [
+    [
+      9,
+      11
+    ],
+    [
+      11,
+      9
+    ]
+  ],
+  "balancedConfirmed": false
+}

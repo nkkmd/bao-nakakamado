@@ -1,37 +1,41 @@
 name: Balance options formal validation
 on:
-  push:
-    branches: [experiment/balance-options-20261001]
-    paths:
-      - '.github/workflows/balance-options-formal.yml'
+  workflow_dispatch:
+    inputs:
+      conditions:
+        description: 'Configuration IDs as a JSON array'
+        required: true
+        default: '["equal-12","equal-10","asym-9-11","spread613-threshold6-12","combined-equal10-613"]'
 permissions:
   contents: read
 concurrency:
   group: balance-formal-${{ github.ref }}-${{ github.sha }}
   cancel-in-progress: false
 jobs:
-  screen:
-    name: Formal - ${{ matrix.condition }}
+  investigate:
+    name: formal - ${{ matrix.condition }}
     runs-on: ubuntu-latest
     timeout-minutes: 60
     strategy:
       fail-fast: false
       matrix:
-        condition: [combined-equal10-613]
+        condition: ${{ fromJSON(inputs.conditions) }}
+    env:
+      CONDITION: ${{ matrix.condition }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '24.19.0'
       - name: Check isolated engine and search
-        run: node tools/balance-options/check.cjs tools/balance-options/results/checks.json
+        run: node tools/balance-options/check.cjs tools/balance-options/results/reproduced/checks.json
       - name: Run condition with separate checkpoints
-        run: node tools/balance-options/run.cjs '${{ matrix.condition }}' 'tools/balance-options/results/formal/${{ matrix.condition }}' formal
+        run: node tools/balance-options/run.cjs "$CONDITION" "tools/balance-options/results/reproduced/formal/$CONDITION" formal
       - name: Verify any forced-win certificate
-        run: node tools/balance-options/certify.cjs 'tools/balance-options/results/formal/${{ matrix.condition }}'
+        run: node tools/balance-options/certify.cjs "tools/balance-options/results/reproduced/formal/$CONDITION"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: balance-formal-${{ matrix.condition }}
-          path: tools/balance-options/results/
+          path: tools/balance-options/results/reproduced/
           retention-days: 30
