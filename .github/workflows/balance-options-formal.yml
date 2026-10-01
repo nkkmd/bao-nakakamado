@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        condition: [spread613-threshold6-12]
+        condition: [combined-equal10-613]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
