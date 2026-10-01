@@ -1,61 +1,40 @@
-# Bao Nakakamado — 試作 v0.6.1（1列・折り返し）
+# Bao Nakakamado：遊べる試作v0.7.0
 
-各人8穴、端で折り返す種まき、初期ハンド12個を採用した遊べる試作です。NYAKUA（ニャクア）と一穴全投入を維持しています。[現行ルールブック](../doc/RULEBOOK.md)と[最後の1個保護の実装・確認](../doc/NYAKUA_PROTECT_LAST_20261001.md)を参照してください。
+各人の前列・後列16穴、ハンド22個のBao la Kiswahiliの実装を基準に、NYAKUA（ニャクア）を追加しています。**最後の1個保護と一穴全投入は現行仕様として固定**しました。[ルールブック](../doc/RULEBOOK.md)と[変更・検証記録](../doc/FOUR_ROW_NYAKUA_FIXED_20261002.md)を参照してください。
+
+## 起動
+
+`prototype/` を静的HTTPサーバーで配信します。
+
+```sh
+cd prototype
+python3 -m http.server 8000
+```
+
+2人対戦、簡易コンピューター対戦、着手の再生、サウンド、高速表示、棋譜JSON保存に対応します。コンピューターは簡易評価による相手で、元ゲームの公開AI-GEN4ではありません。
 
 ## 試作ルール
 
-- 盤は両者合計2列16穴。初期盤上は各人 `0,0,0,0,6,2,2,0` の10個、ハンド12個。総数44個です。
-- 自分の8穴だけへ種まきし、8番の次は7番、1番の次は2番へ折り返します。同じ着手では反転後の方向を連続種まきへ引き継ぎます。端の開始方向は内向きの1つだけです。
-- NAMUAで一着手2回以上捕獲すると、相手のハンドが2個以上なら1個奪うNYAKUAが発動します。3回以上でも1個。相手ハンド0〜1個、MTAJIでは発動しません。
-- 相手ハンド0で自分に2個以上あれば、合法な開始穴へ残り全部を一度に置き、通常の捕獲またはtakataを続けます。NYUMBAの2個蒔きも維持します。
-- ハンド0側へのパス処理は保持しますが、最後の1個を保護する現行初期局面からはパスが生じません。両者ハンド0で共通MTAJIへ移行します。相手の8穴全空または相手手番で合法手なしが勝利条件です。
-- MTAJIの捕獲開始個数は2〜15個。折り返しによる再訪を含め、最後の1個を置く直前の占有状態で捕獲を判定します。
+- 各人の前列8穴・後列8穴、両者4列32穴。種まきは自分の前後列を循環します。
+- 初期前列は `0,0,0,0,6,2,2,0`、後列は空。ハンド22個ずつ、合計64個。
+- NAMUAの一着手で捕獲2回以上、相手ハンド2個以上なら、着手後に1個だけ奪います。最後の1個は奪いません。
+- 相手ハンド0なら、残り2個以上のハンドを通常の合法な開始穴へ一度に全投入。捕獲義務、連続種まき、NYUMBAの2個蒔きを維持します。
+- 両者のハンド0で共通MTAJIへ移ります。通常の初期局面からパスは生じませんが、人工局面用の互換処理は残します。
+- 捕獲は相手前列から毎回全捕獲。相手前列全空、または相手の合法手なしで勝ち。後列に残数があっても前列全空なら負けです。
 
-試作画面は `bounce-engine.js` と `steal.js` を使います。元の `engine.js` と旧試作の `bulk-engine.js` は、過去の4列盤の試験を再現するため残しています。現行画面では読み込みません。
+## 実装と棋譜
 
-## 起動と配信
+読み込み順は `bulk-engine.js` → `four-row-engine.js` → `steal.js` → `app.js`。`four-row-engine.js` は現行仕様の定数を固定する接続層で、保存済み4列エンジンを使います。`engine.js`、`bulk-engine.js`、`bounce-engine.js` と歴史的な試験を変更しないため、過去の結果を元の条件で再現できます。
 
-```sh
-python3 -m http.server 8000 --directory prototype
-```
+棋譜JSONはversion 6、`rulesVersion: "0.7.0"`、`variantRule: "namua-steal-one-protect-last-fixed-pit-bulk-two-row-ring-hand22"`。前後列・循環・ハンド22個・総数64個、最後の1個保護・一穴全投入も明記します。各手の `placed`・`captures`・`stolen` を維持します。旧1列盤の棋譜と区別し、画面での棋譜読み込みは未実装です。
 
-`http://localhost:8000/` で2人対戦か簡易コンピューター対戦を選びます。光る穴を選び、表示された方向・入口を選択してください。
+## 確認
 
-Cloudflare Pagesでは production branch `main`、build command空欄、build output directory `prototype`。手動配信では、`index.html`、`style.css`、`app.js`、`bounce-engine.js`、`steal.js`、`ENGINE_LICENSE.txt` を配信ルートへ置きます。ビルドは不要です。
-
-## 画面と棋譜
-
-元ゲームの公開版に寄せた配色と操作を保持し、盤だけを2列16穴へ変更しました。2026年10月1日の配置調整では、盤面を少し下げ、枠下のKICHWA／NYUMBA表示は盤面に近づけて、上下の余白を整えました。盤面領域の高さと穴の寸法・間隔は維持しています。各穴の座標は `SF1〜SF8 / NF1〜NF8`、初期ハンド表示は12個です。
-
-全投入は一度の投入として表示し、その後の捕獲・種まき・NYAKUAを自動再生します。端で折り返した際は状態文にも反転を表示します。「高速」は表示間隔を短くし、「新しい対局」は再生を中断して対局設定へ戻ります。サウンドと高速は初期OFFです。
-
-棋譜JSONは `version: 5`、`rulesVersion: "0.6.1"`、`variantRule: "namua-steal-one-protect-last-fixed-pit-bulk-one-row-bounce-hand12"`。`nyakuaProtectLast: true`、1列、折り返し、初期ハンド12個、合計44個も明記します。各手の `placed`、`captures`、`stolen` を維持しています。旧v0.6.0・4列盤の棋譜と同じルールでは再現できません。画面からの棋譜読み込みは未実装です。
-
-簡易コンピューターは一手評価の試作用の相手です。元のAI-GEN4、分析タグ、棋譜送信、PWAは取り込んでいません。
-
-## 検証
+リポジトリ直下で実行します。
 
 ```sh
-node --test prototype/bounce.test.cjs prototype/app.test.cjs prototype/steal.test.js tools/fixed-pit-bulk-study.test.cjs tools/fixed-pit-triggered-study.test.cjs
-node tools/nyakua-protect-last-study.cjs 1000
+node --test prototype/four-row.test.cjs prototype/app.test.cjs prototype/bounce.test.cjs prototype/steal.test.js tools/fixed-pit-bulk-study.test.cjs tools/fixed-pit-triggered-study.test.cjs
+node tools/four-row-nyakua-check.cjs 100 /tmp/four-row-nyakua-reproduced.json
 ```
 
-折り返し、MTAJIの帰着判定、NYAKUA、パス、一穴全投入、スナップショット、棋譜再構築、総数保存、盤面側の対称性を確認します。過去の4列盤の試験も保持しています。
-
-[最後の1個保護の進行確認](../doc/NYAKUA_PROTECT_LAST_20261001.md)では、新旧各4,000対局、候補手10,451件、座席交換200局、棋譜再構築200局を確認しました。全局面での停止、先後均衡、人間の操作感を保証するものではありません。
-
-[折り返し方式の調査](../doc/ONE_ROW_BOUNCE_STUDY_20261001.md)、[ハンド12個・8個の比較](../doc/HAND12_VS_HAND8_BALANCE_20261001.md)、[6個の追加試験](../doc/HAND6_BALANCE_20261001.md)は、最後の1個を奪えるv0.6.0の履歴です。6個の必勝手順や勝率をv0.6.1へ引き継ぎません。初期ハンドは12個のままです。
-
-[現行v0.6.1の先後比較](../doc/CURRENT_FIRST_PLAYER_BALANCE_20261001.md)を29,000局で確認しました。単純方針では先手勝率47.82〜53.68%、探索方針では56.3〜100%で、先後の偏りは残っています。6手探索の1,000局全勝は、先手必勝の証明とは区別します。
-
-[NYUMBA残数による後続捕獲の上限案](../doc/NYUMBA_CAPTURE_CAP_STUDY_20261001.md)は成立試験後に採用を見送りました。この試作の捕獲は、初回・後続とも相手穴の全KETEを奪います。
-
-[初期配置6・2の比較](../doc/PLACEMENT62_BALANCE_20261001.md)は29,000局で完了しましたが、先後均衡は確認できず、試作の初期配置は6・2・2のままです。
-
-## 出典・ライセンス
-
-`engine.js`、そこから改変した `bulk-engine.js` と `bounce-engine.js`、元の公開版を参考にしたスタイルは [bao-la-kiswahili-gameのMIT License](ENGINE_LICENSE.txt)に従います。著作権表示と許諾条件を保持しています。試作独自のコード・説明文のライセンスは現時点で未設定です。
-
-同数ハンド・先後のハンド差・NYUMBA4個基準・配置分散を順に調べた[先後バランス改善候補の比較報告](../doc/BALANCE_OPTIONS_STUDY_20261001.md)も保存しました。19条件と5条件の別seed確認で改善傾向はありましたが、方針を通じた均衡は確認できず、その初期条件案は製品ルールへ採用していません。最後の1個保護は別途v0.6.1へ採用しました。
-
-
+[保存済み進行確認](../tools/four-row-nyakua-results.json)には400局、40組の南北交換、40局の棋譜再構築、8,873候補遷移のイベント照合を記録しました。これは先後均衡や全局面の停止の証明ではありません。takasia未実装と連続種まき安全上限など、元エンジンの制約を引き継ぎます。

@@ -1,0 +1,50 @@
+{
+  "rulesVersion": "0.7.0",
+  "ruleId": "namua-steal-one-protect-last-fixed-pit-bulk-two-row-ring-hand22",
+  "node": "v24.19.0",
+  "nPerPolicy": 100,
+  "mainGames": 400,
+  "mirrorPairs": 40,
+  "replays": 40,
+  "transitions": 8873,
+  "hashes": {
+    "prototype/engine.js": "2c5d245d731bbfd682eec7a0bbd8324c680ad6fbabd567286752d61b985d1bd3",
+    "prototype/bulk-engine.js": "23df9b5c45fe3f7ab117c676e06d9d5a32605ae810ac0d3cd909b025c07fe657",
+    "prototype/four-row-engine.js": "e119ec422a2ebf842624d3fe627bc2f44003e0c49e28bb8351ed09cefb285a2a",
+    "prototype/steal.js": "2f27a86f660627cb8062bb6c828c8397828ccf954dd7f81a5423697d92a952d8"
+  },
+  "summaries": [
+    {
+      "policy": "random",
+      "n": 100,
+      "firstWins": 55,
+      "avgPlies": 52.95,
+      "bulkGames": 71,
+      "nyakuaGames": 100
+    },
+    {
+      "policy": "noisy",
+      "n": 100,
+      "firstWins": 53,
+      "avgPlies": 39.81,
+      "bulkGames": 29,
+      "nyakuaGames": 100
+    },
+    {
+      "policy": "greedy",
+      "n": 100,
+      "firstWins": 51,
+      "avgPlies": 40.07,
+      "bulkGames": 41,
+      "nyakuaGames": 100
+    },
+    {
+      "policy": "reply",
+      "n": 100,
+      "firstWins": 60,
+      "avgPlies": 96.02,
+      "bulkGames": 0,
+      "nyakuaGames": 0
+    }
+  ]
+}

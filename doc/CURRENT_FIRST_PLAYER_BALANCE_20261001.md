@@ -1,5 +1,7 @@
 # 現行v0.6.1の先攻・後攻の有利不利
 
+> 履歴：本書は各人1列・折り返し・ハンド12個のv0.6.1条件の記録です。現行v0.7.0は[前後列・ハンド22個とNYAKUA仕様の固定](FOUR_ROW_NYAKUA_FIXED_20261002.md)へ移行しました。本書の「現行」・勝率・採用時点の記述は当時の条件に限定します。
+
 2026年10月1日。対象：main `7f9160a2ac9a8e066efa3aeffd09b0bf99a47a8f`。状態：試験・集計検証完了。現行の各人1列8穴、折り返し、盤上各人6・2・2配置、初期ハンド各12個、NYUMBA6個基準、NYAKUAで相手の最後の1個を保護、一穴全投入、共通MTAJI移行を固定した。
 
 ## 結論
@@ -66,4 +68,3 @@ GitHub Actionsの[Current v0.6.1 first-player balance](https://github.com/nkkmd/
 旧v0.6.0のハンド6個の必勝証明や、ハンド12個・8個の勝率は別ルールの結果である。今回の現行ハンド12個の判定へ引き継がない。今回の6手探索の勝率も必勝証明とは区別する。
 
 [試験設計・再実行方法](../tools/current-balance/README.md)、[全条件の集計](../tools/current-balance/results/summary.json)、[集計・再現検証](../tools/current-balance/results/verification.json)、[実行・artifact取得記録](../tools/current-balance/results/provenance.json)、[対局単位の保存データ](../tools/current-balance/results/records.json.gz)を参照する。`records.json.gz` は各タスクのmetadata・summary・blockを保存したgzip JSONで、ブロックを再展開して `verify.cjs` で再検証できる。
-

@@ -1,0 +1,40 @@
+name: Playable prototype checks
+on:
+  push:
+    paths:
+      - 'prototype/**'
+      - 'tools/four-row-*'
+      - '.github/workflows/prototype-check.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  prototype:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Rule and DOM tests
+        run: node --test prototype/four-row.test.cjs prototype/app.test.cjs prototype/bounce.test.cjs prototype/steal.test.js tools/fixed-pit-bulk-study.test.cjs tools/fixed-pit-triggered-study.test.cjs
+      - name: Reachable games and replay consistency
+        run: node tools/four-row-nyakua-check.cjs 100 "$RUNNER_TEMP/four-row-nyakua-results.json"
+      - name: Install pinned browser test dependencies
+        run: |
+          npm install --prefix "$RUNNER_TEMP/bao-browser" --no-audit --no-fund playwright@1.62.1
+          node "$RUNNER_TEMP/bao-browser/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Real browser desktop, mobile and full-game replay
+        env:
+          NODE_PATH: ${{ runner.temp }}/bao-browser/node_modules
+          BAO_UI_OUTPUT: ${{ runner.temp }}/bao-four-row-ui
+        run: node tools/four-row-browser-check.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: four-row-prototype-verification
+          path: |
+            ${{ runner.temp }}/four-row-nyakua-results.json
+            ${{ runner.temp }}/bao-four-row-ui/
+          retention-days: 30
