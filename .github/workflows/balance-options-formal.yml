@@ -1,24 +1,23 @@
-name: Balance options investigation
+name: Balance options formal validation
 on:
   push:
     branches: [experiment/balance-options-20261001]
     paths:
-      - '.github/workflows/balance-options.yml'
-      - 'tools/balance-options/*.cjs'
+      - '.github/workflows/balance-options-formal.yml'
 permissions:
   contents: read
 concurrency:
-  group: balance-screen-${{ github.ref }}
+  group: balance-formal-${{ github.ref }}
   cancel-in-progress: false
 jobs:
   screen:
-    name: Stage 2 - ${{ matrix.condition }}
+    name: Formal - ${{ matrix.condition }}
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     strategy:
       fail-fast: false
       matrix:
-        condition: [asym-11-13, asym-13-11, asym-9-10, asym-10-9, asym-9-11, asym-11-9]
+        condition: [equal-10]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -27,12 +26,12 @@ jobs:
       - name: Check isolated engine and search
         run: node tools/balance-options/check.cjs tools/balance-options/results/checks.json
       - name: Run condition with separate checkpoints
-        run: node tools/balance-options/run.cjs '${{ matrix.condition }}' 'tools/balance-options/results/screen/${{ matrix.condition }}' screen
+        run: node tools/balance-options/run.cjs '${{ matrix.condition }}' 'tools/balance-options/results/formal/${{ matrix.condition }}' formal
       - name: Verify any forced-win certificate
-        run: node tools/balance-options/certify.cjs 'tools/balance-options/results/screen/${{ matrix.condition }}'
+        run: node tools/balance-options/certify.cjs 'tools/balance-options/results/formal/${{ matrix.condition }}'
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: balance-${{ matrix.condition }}
+          name: balance-formal-${{ matrix.condition }}
           path: tools/balance-options/results/
           retention-days: 30

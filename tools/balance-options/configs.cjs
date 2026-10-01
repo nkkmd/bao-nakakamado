@@ -11,4 +11,5 @@ const nyumba=[
  config('spread631-threshold6-12',[12,12],[0,0,0,0,6,3,1,0],6),
  config('spread613-threshold6-12',[12,12],[0,0,0,0,6,1,3,0],6)
 ];
-module.exports={config,standard,equal,asym,nyumba};
+const extra=[config('asym-9-11',[9,11]),config('asym-11-9',[11,9])];
+module.exports={config,standard,equal,asym,nyumba,extra};
