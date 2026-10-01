@@ -81,8 +81,10 @@
     board.setAttribute("aria-busy", String(Boolean(animation)));
     const active = activePit();
     const rows = [
+      [1, E.BACK, [7, 6, 5, 4, 3, 2, 1, 0]],
       [1, E.FRONT, [7, 6, 5, 4, 3, 2, 1, 0]],
       [0, E.FRONT, [0, 1, 2, 3, 4, 5, 6, 7]],
+      [0, E.BACK, [0, 1, 2, 3, 4, 5, 6, 7]],
     ];
     const available = new Set(moves.filter((m) => m.type !== "pass").map(key));
     for (const [player, row, indices] of rows) {
@@ -129,7 +131,7 @@
         ? `${name(event.position.player)} のハンドのKETE ${event.count}個を ${place} へ一度に全投入しました。`
         : `${name(event.position.player)} のハンドから ${place} にKETEを1個置きました。`;
       case "lift": return `${place} からKETEを${event.count}個持ち上げました。`;
-      case "sow": return `${place} にKETEを1個蒔きました。${event.reflected ? `端で折り返し、${event.direction === "left" ? "左" : "右"}へ進みます。` : ""}`;
+      case "sow": return `${place} にKETEを1個蒔きました。`;
       case "relay": return `${place} から${event.count}個で連続種まきします。`;
       case "capture": return `${name(animation.mover)} が ${name(event.player)} の ${pitName({ player: event.player, row: E.FRONT, index: event.index })} からKETEを${event.count}個捕獲しました。`;
       case "steal": return `NYAKUA！ ${name(event.to)} が ${name(event.from)} のハンドからKETEを1個奪いました。`;
@@ -330,7 +332,7 @@
   });
   $("download").addEventListener("click", () => {
     if (!started || !game.history.length) return;
-    const record = { format: "bao-nakakamado-prototype", version: 5, baseRules: "R-002", variantRule: E.RULE_ID, rulesVersion: "0.6.1", boardRowsPerPlayer: 1, sowingPath: "bounce", nyakuaProtectLast: E.NYAKUA_PROTECT_LAST, initialHand: E.INITIAL_HAND, totalKete: E.TOTAL_KETE, mode, history: game.history, final: game.board };
+    const record = { format: "bao-nakakamado-prototype", version: 6, baseRules: "R-002", variantRule: E.RULE_ID, rulesVersion: E.RULES_VERSION, boardRowsPerPlayer: E.BOARD_ROWS_PER_PLAYER, sowingPath: E.SOWING_PATH, nyakuaProtectLast: E.NYAKUA_PROTECT_LAST, nyakuaFixedPitBulk: E.NYAKUA_FIXED_PIT_BULK, initialHand: E.INITIAL_HAND, totalKete: E.TOTAL_KETE, mode, history: game.history, final: game.board };
     const blob = new Blob([JSON.stringify(record, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
@@ -354,4 +356,3 @@
   updateSetup();
   render();
 }());
-

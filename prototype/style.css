@@ -63,8 +63,8 @@ button:disabled { cursor: default; opacity: .45; }
 /* Move the board and labels down together; keep the total vertical padding at 3%. */
 .board-surface { padding: 2.6% 4% .4%; background: #a8c98b; }
 .board {
-  display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); grid-template-rows: 1fr 16% 1fr;
-  aspect-ratio: 588 / 194; position: relative; padding: 1.8% 1%; align-items: center;
+  display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); grid-template-rows: 1fr 1fr 10% 1fr 1fr;
+  aspect-ratio: 588 / 380; position: relative; padding: 2.8% 1%; align-items: center;
   border: clamp(5px, 1vw, 8px) solid #e2c36b; outline: clamp(3px, .6vw, 6px) solid #34544a;
   background: linear-gradient(to bottom, #52684a 0 48.4%, #172c2b 48.4% 51.6%, #52684a 51.6%);
 }
@@ -74,7 +74,10 @@ button:disabled { cursor: default; opacity: .45; }
   border-radius: 50%; border: 2px solid #78998a; background: #172c2b; color: #d3e4a5;
   font: bold clamp(16px, 3.4vw, 31px)/1 "Courier New", monospace;
 }
-.pit:nth-child(n+9) { grid-row: 3; }
+.pit:nth-child(-n+8) { grid-row: 1; }
+.pit:nth-child(n+9):nth-child(-n+16) { grid-row: 2; }
+.pit:nth-child(n+17):nth-child(-n+24) { grid-row: 4; }
+.pit:nth-child(n+25) { grid-row: 5; }
 .pit:disabled { opacity: 1; }
 .pit .count { pointer-events: none; }
 .pit small { position: absolute; right: 75%; bottom: 100%; font-size: clamp(8px, 1.7vw, 16px); color: #edf3d9; pointer-events: none; }
