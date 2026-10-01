@@ -1,5 +1,7 @@
 # 一穴全投入 — v0.5.1試用版の仕様・確認記録
 
+**過去の4列盤での検討記録です。現在はv0.6.0の各人1列・折り返し・ハンド12個を試用しています。[現在の仕様](ONE_ROW_BOUNCE_TRIAL_20261001.md)を参照してください。本書の数値や暫定評価は新しい盤へ引き継ぎません。**
+
 Status: 人間対局のための試用実装・**正式採用未決定**  
 記録日: 2026-09-30（日本時間）  
 前提: [探索的調査](FIXED_PIT_BULK_STUDY_20260930.md)、[3案の暫定比較](HAND_EXHAUSTION_OPTIONS_REVIEW_20260930.md)
@@ -31,3 +33,4 @@ node --test prototype/steal.test.js prototype/app.test.cjs tools/fixed-pit-bulk-
 - 先後を入れ替え、全投入前の残数が少数と多数、捕獲とtakata、即時終局と継続の例を比べる。
 
 この試用の結果を受けて[暫定順位](HAND_EXHAUSTION_OPTIONS_REVIEW_20260930.md)を再検討する。
+

@@ -1,53 +1,50 @@
-# Bao Nakakamado — 遊べる試作 v0.5.1（一穴全投入の試用）
+# Bao Nakakamado — 試作 v0.6.0（1列・折り返し）
 
-Bao la Kiswahili の [元エンジン](https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/public/engine.js) の 2026-09-29 時点の blob `1527bb3665228b7a5bd9f03153567aedbaaa22d7` を `engine.js` に変更せず保存した。実際の試作画面は、NAMUAの投入だけ変更した `bulk-engine.js` と、NYAKUA（ニャクア、ハンド奪取）を扱う `steal.js` を使う。画面は元ゲームの `public` の盤面・配色・画面構成を参考に作成し、元の分析タグ、棋譜送信、AI-GEN4、PWAは取り込んでいない。
+各人8穴、端で折り返す種まき、初期ハンド12個を採用した遊べる試作です。NYAKUA（ニャクア）と一穴全投入を維持しています。[現行ルールブック](../doc/RULEBOOK.md)と[実装・試用条件](../doc/ONE_ROW_BOUNCE_TRIAL_20261001.md)を参照してください。
 
 ## 試作ルール
 
-基本の遊び方と例外を含む一通りの説明は、[現行試作のルールブック](../doc/RULEBOOK.md)を参照。
+- 盤は両者合計2列16穴。初期盤上は各人 `0,0,0,0,6,2,2,0` の10個、ハンド12個。総数44個です。
+- 自分の8穴だけへ種まきし、8番の次は7番、1番の次は2番へ折り返します。同じ着手では反転後の方向を連続種まきへ引き継ぎます。端の開始方向は内向きの1つだけです。
+- NAMUAで一着手2回以上捕獲すると、相手のハンドから1個奪うNYAKUAが発動します。3回以上でも1個。相手ハンド0、MTAJIでは発動しません。
+- 相手ハンド0で自分に2個以上あれば、合法な開始穴へ残り全部を一度に置き、通常の捕獲またはtakataを続けます。NYUMBAの2個蒔きも維持します。
+- ハンド0側はパス。両者ハンド0で共通MTAJIへ移行します。相手の8穴全空または相手手番で合法手なしが勝利条件です。
+- MTAJIの捕獲開始個数は2〜15個。折り返しによる再訪を含め、最後の1個を置く直前の占有状態で捕獲を判定します。
 
-- NAMUA中、相手のハンドが0で自分のハンドが2個以上なら、合法な穴・方向を一度選び、**自分のハンドの全KETEを選んだ一穴へ一度に置く**。通常の1個投入が残数の一括投入に置き換わるだけで、その後の捕獲またはtakata、連続種まき、nyumba、終局は元の処理を使う。穴から次の穴へ分配したり、途中で新しい穴・方向を選んだりはしない。
-- 自分のハンドが1個なら通常の1個投入。相手のハンドにKETEが残っている間も通常の1個投入。
-- ハンドが0の側は、両者が0になるまでは元エンジンどおりNAMUAでパスする。両者が0になればMTAJIへ移る。MTAJIの着手と勝敗判定は従来どおり。片側だけ先にMTAJIへ入る案は未実装。
-- **[NYAKUA（ニャクア）](../doc/TERMINOLOGY.md)**：NAMUAの**一着手内で2回以上捕獲**し、相手のハンドにKETEが残っていれば、着手後に相手から自分のハンドへ1個だけ移す。最初の捕獲と連続種まき中の捕獲を数える。3回以上でも1個。捕獲が1回以下、相手ハンド0、MTAJIの着手には適用しない。
-- KETE総数は元エンジンと同じ。勝負宣言・抽選・追加手番は削除済みで、運要素の検討は凍結中。
+試作画面は `bounce-engine.js` と `steal.js` を使います。元の `engine.js` と旧試作の `bulk-engine.js` は、過去の4列盤の試験を再現するため残しています。現行画面では読み込みません。
 
-一穴全投入は**人間での納得感を試す候補**であり、正式採用ではない。[探索的試験](../doc/FIXED_PIT_BULK_STUDY_20260930.md)ではハンドが先に空になった側の勝つ余地と `no-move` 終局、平均手数がともに増えた。均衡や楽しさの結論は出ていない。[試用版の仕様と確認点](../doc/FIXED_PIT_BULK_TRIAL_20260930.md)、[3案の暫定比較](../doc/HAND_EXHAUSTION_OPTIONS_REVIEW_20260930.md)を参照。元ルールとの差異の基準は [RULES_BASELINE.md](https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/doc/RULES_BASELINE.md)。
-
-## 遊び方
+## 起動と配信
 
 ```sh
 python3 -m http.server 8000 --directory prototype
 ```
 
-`http://localhost:8000/` で2人対戦か簡易コンピューター対戦を選び、光る穴と着手方向を選ぶ。全投入の手番ではハンドの個数と全投入を画面・着手候補に表示する。選択後は**全数の投入を一画面で表示**し、続く捕獲・種まき・NYAKUAを盤面とハンドの数で順に自動再生する。再生中は着手できない。
+`http://localhost:8000/` で2人対戦か簡易コンピューター対戦を選びます。光る穴を選び、表示された方向・入口を選択してください。
 
-### 画面と操作
+Cloudflare Pagesでは production branch `main`、build command空欄、build output directory `prototype`。手動配信では、`index.html`、`style.css`、`app.js`、`bounce-engine.js`、`steal.js`、`ENGINE_LICENSE.txt` を配信ルートへ置きます。ビルドは不要です。
 
-2026-09-30に、元ゲームの `public`（コミット `09ac50d4116761b400d742cffa3b2478de11ec48`）に合わせて画面を整理した。
+## 画面と棋譜
 
-- 一列の盤面中心の構成とし、対局設定を盤面内に表示する。スマホでは設定中の盤面を隠し、設定欄がはみ出さないようにする。
-- 盤・穴の配色、円形の穴、NYUMBAの四角い枠、合法手・選択・再生中の強調、手番・段階・ハンドの配置を元ゲームに近づける。
-- 上部に「サウンド」「高速」「新しい対局」を置く。サウンドと高速は初期OFF。高速ONでも全投入・捕獲・NYAKUAを含む全イベントを順に表示し、表示間隔を短くする。
-- 「新しい対局」で再生を中断して設定へ戻る。設定で選んだ条件は「対局開始」で反映する。
-- NYAKUAの回数と直近の結果は盤面下に表示し、説明・ルール・棋譜保存は折りたたみ内にまとめる。
-- 穴はキーボードでも操作できるボタンとして保持する。選択後は着手候補へ、着手再生後は次の合法な穴へフォーカスを移す。穴の座標はルールブックと同じ `SF/SB/NF/NB` を維持する。
+元ゲームの公開版に寄せた配色と操作を保持し、盤だけを2列16穴へ変更しました。各穴の座標は `SF1〜SF8 / NF1〜NF8`、初期ハンド表示は12個です。
 
-「棋譜の保存」を開いて「棋譜を保存」を押す。棋譜のJSONダウンロードは `version: 3`、`variantRule: "namua-steal-one-and-fixed-pit-bulk"`。各着手に `placed`（ハンドから置いた数）、`captures`、`stolen` を記録する。従来の `version: 2` と同じルールで再現できるとは限らない。画面からの棋譜読み込みは未実装。コンピューターは試作用の簡易一手評価であり、元のAI-GEN4ではない。
+全投入は一度の投入として表示し、その後の捕獲・種まき・NYAKUAを自動再生します。端で折り返した際は状態文にも反転を表示します。「高速」は表示間隔を短くし、「新しい対局」は再生を中断して対局設定へ戻ります。サウンドと高速は初期OFFです。
+
+棋譜JSONは `version: 4`、`rulesVersion: "0.6.0"`、`variantRule: "namua-steal-one-fixed-pit-bulk-one-row-bounce-hand12"`。1列、折り返し、初期ハンド12個、合計44個も明記します。各手の `placed`、`captures`、`stolen` を維持しています。旧4列盤の棋譜と同じルールでは再現できません。画面からの棋譜読み込みは未実装です。
+
+簡易コンピューターは一手評価の試作用の相手です。元のAI-GEN4、分析タグ、棋譜送信、PWAは取り込んでいません。
 
 ## 検証
 
 ```sh
-node --test prototype/steal.test.js prototype/app.test.cjs tools/fixed-pit-bulk-study.test.cjs tools/fixed-pit-triggered-study.test.cjs
+node --test prototype/bounce.test.cjs prototype/app.test.cjs prototype/steal.test.js tools/fixed-pit-bulk-study.test.cjs tools/fixed-pit-triggered-study.test.cjs
+node tools/one-row-bounce-study.cjs 1000 random,noisy,greedy
 ```
 
-到達可能な全投入局面の捕獲・takata・nyumba・即時 `no-move`、1個投入への切替、総数保存、一度の全数投入表示と以降の元エンジンとの一致、棋譜再構築、既存研究実装との一致を確認する。保存した元の `engine.js` を使用する研究ツールはこの試作で変更しない。一般的な先後均衡と人間の理解しやすさは未検証。
+折り返し、MTAJIの帰着判定、NYAKUA、パス、一穴全投入、スナップショット、棋譜再構築、総数保存、盤面側の対称性を確認します。過去の4列盤の試験も保持しています。
 
-## Cloudflare Pages の配置
-
-GitHub連携時は production branch `main`、build command 空欄、build output directory `prototype`。手動配信では `prototype/` の**中身**を配信ルートへ置く。ビルドは不要。
+[実装前の調査結果](../doc/ONE_ROW_BOUNCE_STUDY_20261001.md)と実装版の3,000対局は同じ主条件の結果になりました。全局面での停止、先後均衡、人間の操作感を保証するものではありません。
 
 ## 出典・ライセンス
 
-`engine.js` とそこから改変した `bulk-engine.js`、元の `public/style.css` を参考にしたスタイルは [bao-la-kiswahili-game のMIT License](ENGINE_LICENSE.txt) に従う。著作権表示と許諾条件を保持した。スタイルの著作権表示と許諾条件も同ファイルで保持する。試作独自のコード・説明文のライセンスは現時点で未設定。元ゲームの図解ルール画像・文章は複製していない。
+`engine.js`、そこから改変した `bulk-engine.js` と `bounce-engine.js`、元の公開版を参考にしたスタイルは [bao-la-kiswahili-gameのMIT License](ENGINE_LICENSE.txt)に従います。著作権表示と許諾条件を保持しています。試作独自のコード・説明文のライセンスは現時点で未設定です。
 

@@ -70,7 +70,7 @@
   function moveLabel(move) {
     if (move.type === "pass") return "パス";
     const side = move.side ? `・${move.side === "left" ? "左入口" : "右入口"}` : "";
-    const direction = move.direction === "left" ? "左回り" : "右回り";
+    const direction = move.direction === "left" ? "左へ蒔く" : "右へ蒔く";
     const house = move.houseChoice ? `・nyumbaを${move.houseChoice === "use" ? "使う" : "止める"}` : "";
     return `${move.type === "capture" ? "捕獲" : "種まき"}・${direction}${side}${house}`;
   }
@@ -81,10 +81,8 @@
     board.setAttribute("aria-busy", String(Boolean(animation)));
     const active = activePit();
     const rows = [
-      [1, E.BACK, [7, 6, 5, 4, 3, 2, 1, 0]],
       [1, E.FRONT, [7, 6, 5, 4, 3, 2, 1, 0]],
       [0, E.FRONT, [0, 1, 2, 3, 4, 5, 6, 7]],
-      [0, E.BACK, [0, 1, 2, 3, 4, 5, 6, 7]],
     ];
     const available = new Set(moves.filter((m) => m.type !== "pass").map(key));
     for (const [player, row, indices] of rows) {
@@ -131,7 +129,7 @@
         ? `${name(event.position.player)} のハンドのKETE ${event.count}個を ${place} へ一度に全投入しました。`
         : `${name(event.position.player)} のハンドから ${place} にKETEを1個置きました。`;
       case "lift": return `${place} からKETEを${event.count}個持ち上げました。`;
-      case "sow": return `${place} にKETEを1個蒔きました。`;
+      case "sow": return `${place} にKETEを1個蒔きました。${event.reflected ? `端で折り返し、${event.direction === "left" ? "左" : "右"}へ進みます。` : ""}`;
       case "relay": return `${place} から${event.count}個で連続種まきします。`;
       case "capture": return `${name(animation.mover)} が ${name(event.player)} の ${pitName({ player: event.player, row: E.FRONT, index: event.index })} からKETEを${event.count}個捕獲しました。`;
       case "steal": return `NYAKUA！ ${name(event.to)} が ${name(event.from)} のハンドからKETEを1個奪いました。`;
@@ -225,6 +223,7 @@
     else if (state.winner !== null) $("status").textContent = `${name(state.winner)} の勝ち（${state.reason}）。`;
     else if (busy) $("status").textContent = "コンピューターが考えています…";
     else if (!humanTurn()) $("status").textContent = `${name(state.player)} の手番です。待機中…`;
+    else if (moves.length === 1 && moves[0].type === "pass") $("status").textContent = `${name(state.player)} のハンドが0です。パスして相手へ手番を渡してください。`;
     else if (bulkCount(state)) $("status").textContent = `${name(state.player)} の手番。ハンドのKETE ${bulkCount(state)}個を選んだ一穴へ全投入します。光る穴を選んでください。`;
     else if (selected) $("status").textContent = `${pitName({ player: state.player, ...selected })} を選択しました。方向・入口を選んでください。`;
     else $("status").textContent = `${name(state.player)} の手番。光る穴を選んでください。`;
@@ -232,7 +231,7 @@
     const candidates = selected ? moves.filter((m) => m.row === selected.row && m.index === selected.index) : [];
     if (moves.length === 1 && moves[0].type === "pass") {
       const button = document.createElement("button");
-      button.textContent = "合法手なし・パス";
+      button.textContent = "ハンド0・パス";
       button.addEventListener("click", () => play(moves[0]));
       choices.append(button);
     }
@@ -331,7 +330,7 @@
   });
   $("download").addEventListener("click", () => {
     if (!started || !game.history.length) return;
-    const record = { format: "bao-nakakamado-prototype", version: 3, baseRules: "R-002", variantRule: "namua-steal-one-and-fixed-pit-bulk", mode, history: game.history, final: game.board };
+    const record = { format: "bao-nakakamado-prototype", version: 4, baseRules: "R-002", variantRule: E.RULE_ID, rulesVersion: "0.6.0", boardRowsPerPlayer: 1, sowingPath: "bounce", initialHand: E.INITIAL_HAND, totalKete: E.TOTAL_KETE, mode, history: game.history, final: game.board };
     const blob = new Blob([JSON.stringify(record, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
@@ -355,4 +354,3 @@
   updateSetup();
   render();
 }());
-
