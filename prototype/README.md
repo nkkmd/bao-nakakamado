@@ -49,3 +49,5 @@ node tools/one-row-bounce-study.cjs 1000 random,noisy,greedy
 ## 出典・ライセンス
 
 `engine.js`、そこから改変した `bulk-engine.js` と `bounce-engine.js`、元の公開版を参考にしたスタイルは [bao-la-kiswahili-gameのMIT License](ENGINE_LICENSE.txt)に従います。著作権表示と許諾条件を保持しています。試作独自のコード・説明文のライセンスは現時点で未設定です。
+
+同数ハンド・先後のハンド差・NYUMBA4個基準・配置分散を順に調べた[先後バランス改善候補の比較報告](../doc/BALANCE_OPTIONS_STUDY_20261001.md)も保存しました。19条件と5条件の別seed確認で改善傾向はありましたが、方針を通じた均衡は確認できず、製品ルールへの採用は行っていません。

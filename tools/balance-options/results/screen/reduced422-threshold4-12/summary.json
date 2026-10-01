@@ -1,0 +1,3459 @@
+{
+  "reference": "4e38478828319d664575dbbbfbb90e1df17eaf7f",
+  "config": {
+    "id": "reduced422-threshold4-12",
+    "hands": [
+      12,
+      12
+    ],
+    "pits": [
+      0,
+      0,
+      0,
+      0,
+      4,
+      2,
+      2,
+      0
+    ],
+    "threshold": 4
+  },
+  "profile": "screen",
+  "settings": {
+    "basic": 1000,
+    "search": 200,
+    "pairs": 100,
+    "mirror": 10,
+    "seedStart": 1000,
+    "crossSeed": 20000,
+    "proofDepth": 16,
+    "proofBudget": 300000
+  },
+  "hashes": {
+    "core.cjs": "4a5c80ac13feb723a55b6d86e5f5bf3d843c49fd9ce1eb01476fd880ed281904",
+    "variant-engine.cjs": "4fcbe1314ac76a8bc7cfc1cb0a1f1e7cda989f14f4f503c2f5f325a403edf7dc",
+    "run.cjs": "5583b22c0f17f09737f568d1d38de3301281a05a29c2fdeb91e4365fa0fbb0f5",
+    "../../prototype/bounce-engine.js": "35d94b944a79b7357011fe1aea55b7c8e39bcaf8b4a872541bc2d84560e04a39",
+    "../../prototype/steal.js": "b1cc40e09688aeeda66178a710897608391e9c1f5ec17609ddf33595453b3f64"
+  },
+  "signature": "783952d7dd5c9ed7b7920eca7f3ffae589698ea426b4d5bbc3e49c7757c110fc",
+  "completed": true,
+  "self": [
+    {
+      "signature": "783952d7dd5c9ed7b7920eca7f3ffae589698ea426b4d5bbc3e49c7757c110fc",
+      "policy": "random",
+      "n": 1000,
+      "firstWins": 505,
+      "secondWins": 495,
+      "firstWinPct": 50.5,
+      "wilson95Pct": [
+        47.40520072158691,
+        53.59097251992754
+      ],
+      "avgPlies": 18.363,
+      "mtajiPlayedPct": 33.5,
+      "bulkPct": 43.8,
+      "nyakuaPct": 100,
+      "reasons": {
+        "front-empty": 754,
+        "no-move": 246
+      },
+      "searchNodes": 0,
+      "blocks": [
+        {
+          "n": 1000,
+          "firstWins": 505,
+          "secondWins": 495,
+          "firstWinPct": 50.5,
+          "wilson95Pct": [
+            47.40520072158691,
+            53.59097251992754
+          ],
+          "avgPlies": 18.363,
+          "mtajiPlayedPct": 33.5,
+          "bulkPct": 43.8,
+          "nyakuaPct": 100,
+          "reasons": {
+            "front-empty": 754,
+            "no-move": 246
+          },
+          "searchNodes": 0
+        }
+      ]
+    },
+    {
+      "signature": "783952d7dd5c9ed7b7920eca7f3ffae589698ea426b4d5bbc3e49c7757c110fc",
+      "policy": "noisy",
+      "n": 1000,
+      "firstWins": 590,
+      "secondWins": 410,
+      "firstWinPct": 59,
+      "wilson95Pct": [
+        55.922844111867086,
+        62.00827423539291
+      ],
+      "avgPlies": 12.598,
+      "mtajiPlayedPct": 5,
+      "bulkPct": 14.6,
+      "nyakuaPct": 100,
+      "reasons": {
+        "front-empty": 913,
+        "no-move": 87
+      },
+      "searchNodes": 0,
+      "blocks": [
+        {
+          "n": 1000,
+          "firstWins": 590,
+          "secondWins": 410,
+          "firstWinPct": 59,
+          "wilson95Pct": [
+            55.922844111867086,
+            62.00827423539291
+          ],
+          "avgPlies": 12.598,
+          "mtajiPlayedPct": 5,
+          "bulkPct": 14.6,
+          "nyakuaPct": 100,
+          "reasons": {
+            "front-empty": 913,
+            "no-move": 87
+          },
+          "searchNodes": 0
+        }
+      ]
+    },
+    {
+      "signature": "783952d7dd5c9ed7b7920eca7f3ffae589698ea426b4d5bbc3e49c7757c110fc",
+      "policy": "greedy",
+      "n": 1000,
+      "firstWins": 594,
+      "secondWins": 406,
+      "firstWinPct": 59.4,
+      "wilson95Pct": [
+        56.32592745396629,
+        62.40212948650527
+      ],
+      "avgPlies": 12.536,
+      "mtajiPlayedPct": 5.5,
+      "bulkPct": 12.5,
+      "nyakuaPct": 100,
+      "reasons": {
+        "front-empty": 913,
+        "no-move": 87
+      },
+      "searchNodes": 0,
+      "blocks": [
+        {
+          "n": 1000,
+          "firstWins": 594,
+          "secondWins": 406,
+          "firstWinPct": 59.4,
+          "wilson95Pct": [
+            56.32592745396629,
+            62.40212948650527
+          ],
+          "avgPlies": 12.536,
+          "mtajiPlayedPct": 5.5,
+          "bulkPct": 12.5,
+          "nyakuaPct": 100,
+          "reasons": {
+            "front-empty": 913,
+            "no-move": 87
+          },
+          "searchNodes": 0
+        }
+      ]
+    },
+    {
+      "signature": "783952d7dd5c9ed7b7920eca7f3ffae589698ea426b4d5bbc3e49c7757c110fc",
+      "policy": "reply",
+      "n": 1000,
+      "firstWins": 508,
+      "secondWins": 492,
+      "firstWinPct": 50.8,
+      "wilson95Pct": [
+        47.70429304923653,
+        53.88958413718659
+      ],
+      "avgPlies": 21.082,
+      "mtajiPlayedPct": 40.7,
+      "bulkPct": 63,
+      "nyakuaPct": 99.1,
+      "reasons": {
+        "no-move": 309,
+        "front-empty": 691
+      },
+      "searchNodes": 0,
+      "blocks": [
+        {
+          "n": 1000,
+          "firstWins": 508,
+          "secondWins": 492,
+          "firstWinPct": 50.8,
+          "wilson95Pct": [
+            47.70429304923653,
+            53.88958413718659
+          ],
+          "avgPlies": 21.082,
+          "mtajiPlayedPct": 40.7,
+          "bulkPct": 63,
+          "nyakuaPct": 99.1,
+          "reasons": {
+            "no-move": 309,
+            "front-empty": 691
+          },
+          "searchNodes": 0
+        }
+      ]
+    },
+    {
+      "signature": "783952d7dd5c9ed7b7920eca7f3ffae589698ea426b4d5bbc3e49c7757c110fc",
+      "policy": "search3",
+      "n": 200,
+      "firstWins": 103,
+      "secondWins": 97,
+      "firstWinPct": 51.5,
+      "wilson95Pct": [
+        44.61084919274572,
+        58.33261482812249
+      ],
+      "avgPlies": 16.935,
+      "mtajiPlayedPct": 35.5,
+      "bulkPct": 46.5,
+      "nyakuaPct": 100,
+      "reasons": {
+        "no-move": 57,
+        "front-empty": 143
+      },
+      "searchNodes": 139910,
+      "blocks": [
+        {
+          "n": 200,
+          "firstWins": 103,
+          "secondWins": 97,
+          "firstWinPct": 51.5,
+          "wilson95Pct": [
+            44.61084919274572,
+            58.33261482812249
+          ],
+          "avgPlies": 16.935,
+          "mtajiPlayedPct": 35.5,
+          "bulkPct": 46.5,
+          "nyakuaPct": 100,
+          "reasons": {
+            "no-move": 57,
+            "front-empty": 143
+          },
+          "searchNodes": 139910
+        }
+      ]
+    },
+    {
+      "signature": "783952d7dd5c9ed7b7920eca7f3ffae589698ea426b4d5bbc3e49c7757c110fc",
+      "policy": "search4",
+      "n": 200,
+      "firstWins": 86,
+      "secondWins": 114,
+      "firstWinPct": 43,
+      "wilson95Pct": [
+        36.334322333434415,
+        49.92951223584731
+      ],
+      "avgPlies": 24.6,
+      "mtajiPlayedPct": 80.5,
+      "bulkPct": 54,
+      "nyakuaPct": 100,
+      "reasons": {
+        "front-empty": 79,
+        "no-move": 121
+      },
+      "searchNodes": 473270,
+      "blocks": [
+        {
+          "n": 200,
+          "firstWins": 86,
+          "secondWins": 114,
+          "firstWinPct": 43,
+          "wilson95Pct": [
+            36.334322333434415,
+            49.92951223584731
+          ],
+          "avgPlies": 24.6,
+          "mtajiPlayedPct": 80.5,
+          "bulkPct": 54,
+          "nyakuaPct": 100,
+          "reasons": {
+            "front-empty": 79,
+            "no-move": 121
+          },
+          "searchNodes": 473270
+        }
+      ]
+    },
+    {
+      "signature": "783952d7dd5c9ed7b7920eca7f3ffae589698ea426b4d5bbc3e49c7757c110fc",
+      "policy": "search6",
+      "n": 200,
+      "firstWins": 200,
+      "secondWins": 0,
+      "firstWinPct": 100,
+      "wilson95Pct": [
+        98.11546736227335,
+        100
+      ],
+      "avgPlies": 21.77,
+      "mtajiPlayedPct": 42,
+      "bulkPct": 94,
+      "nyakuaPct": 100,
+      "reasons": {
+        "front-empty": 119,
+        "no-move": 81
+      },
+      "searchNodes": 1658440,
+      "blocks": [
+        {
+          "n": 200,
+          "firstWins": 200,
+          "secondWins": 0,
+          "firstWinPct": 100,
+          "wilson95Pct": [
+            98.11546736227335,
+            100
+          ],
+          "avgPlies": 21.77,
+          "mtajiPlayedPct": 42,
+          "bulkPct": 94,
+          "nyakuaPct": 100,
+          "reasons": {
+            "front-empty": 119,
+            "no-move": 81
+          },
+          "searchNodes": 1658440
+        }
+      ]
+    },
+    {
+      "signature": "783952d7dd5c9ed7b7920eca7f3ffae589698ea426b4d5bbc3e49c7757c110fc",
+      "policy": "search4-mobility",
+      "n": 200,
+      "firstWins": 200,
+      "secondWins": 0,
+      "firstWinPct": 100,
+      "wilson95Pct": [
+        98.11546736227335,
+        100
+      ],
+      "avgPlies": 25.14,
+      "mtajiPlayedPct": 16.5,
+      "bulkPct": 0,
+      "nyakuaPct": 100,
+      "reasons": {
+        "front-empty": 171,
+        "no-move": 29
+      },
+      "searchNodes": 887468,
+      "blocks": [
+        {
+          "n": 200,
+          "firstWins": 200,
+          "secondWins": 0,
+          "firstWinPct": 100,
+          "wilson95Pct": [
+            98.11546736227335,
+            100
+          ],
+          "avgPlies": 25.14,
+          "mtajiPlayedPct": 16.5,
+          "bulkPct": 0,
+          "nyakuaPct": 100,
+          "reasons": {
+            "front-empty": 171,
+            "no-move": 29
+          },
+          "searchNodes": 887468
+        }
+      ]
+    }
+  ],
+  "cross": [
+    {
+      "signature": "783952d7dd5c9ed7b7920eca7f3ffae589698ea426b4d5bbc3e49c7757c110fc",
+      "a": "random",
+      "b": "greedy",
+      "n": 200,
+      "firstWins": 98,
+      "secondWins": 102,
+      "firstWinPct": 49,
+      "avgPlies": 14.63,
+      "mtajiPlayedPct": 9.5,
+      "bulkPct": 28,
+      "nyakuaPct": 100,
+      "reasons": {
+        "front-empty": 180,
+        "no-move": 20
+      },
+      "searchNodes": 0,
+      "pairDetails": [
+        {
+          "seed": 1079140033,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 3733575794,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2093044259,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 452512724,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3106948485,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1466416950,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 4120852711,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 2480321176,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 839789641,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 3494225402,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 1853693867,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 213162332,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2867598093,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 1227066558,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 3881502319,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2240970784,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 600439249,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3254875010,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 1614343475,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 4268779236,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2628247701,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 987716166,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3642151927,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2001620392,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 361088857,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3015524618,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 1374993083,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 4029428844,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2388897309,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 748365774,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 3402801535,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1762270000,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 121738465,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2776174226,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1135642691,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3790078452,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 2149546917,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 509015382,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3163451143,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1522919608,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 4177355369,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2536823834,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 896292299,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3550728060,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1910196525,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 269664990,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2924100751,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1283569216,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3938004977,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2297473442,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 656941907,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 3311377668,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1670846133,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 30314598,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2684750359,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1044218824,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3698654585,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 2058123050,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 417591515,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3072027276,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1431495741,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 4085931502,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2445399967,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 804868432,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 3459304193,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1818772658,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 178241123,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 2832676884,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 1192145349,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 3846581110,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2206049575,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 565518040,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3219953801,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 1579422266,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 4233858027,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2593326492,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 952794957,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3607230718,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1966699183,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 326167648,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2980603409,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 1340071874,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3994507635,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 2353976100,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 713444565,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3367880326,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 1727348791,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 86817256,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 2741253017,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 1100721482,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 3755157243,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 2114625708,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 474094173,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 3128529934,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 1487998399,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 4142434160,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2501902625,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 861371090,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3515806851,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1875275316,
+          "firstWins": 1,
+          "aWins": 0
+        }
+      ]
+    },
+    {
+      "signature": "783952d7dd5c9ed7b7920eca7f3ffae589698ea426b4d5bbc3e49c7757c110fc",
+      "a": "noisy",
+      "b": "reply",
+      "n": 200,
+      "firstWins": 105,
+      "secondWins": 95,
+      "firstWinPct": 52.5,
+      "avgPlies": 16.655,
+      "mtajiPlayedPct": 20.5,
+      "bulkPct": 37.5,
+      "nyakuaPct": 100,
+      "reasons": {
+        "front-empty": 157,
+        "no-move": 43
+      },
+      "searchNodes": 0,
+      "pairDetails": [
+        {
+          "seed": 1079140033,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3733575794,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2093044259,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 452512724,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3106948485,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1466416950,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 4120852711,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 2480321176,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 839789641,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3494225402,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1853693867,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 213162332,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2867598093,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 1227066558,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3881502319,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2240970784,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 600439249,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3254875010,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 1614343475,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 4268779236,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2628247701,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 987716166,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3642151927,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2001620392,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 361088857,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 3015524618,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 1374993083,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 4029428844,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2388897309,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 748365774,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3402801535,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 1762270000,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 121738465,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2776174226,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 1135642691,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3790078452,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 2149546917,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 509015382,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 3163451143,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 1522919608,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 4177355369,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 2536823834,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 896292299,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3550728060,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1910196525,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 269664990,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2924100751,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1283569216,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3938004977,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 2297473442,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 656941907,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3311377668,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 1670846133,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 30314598,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2684750359,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1044218824,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 3698654585,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2058123050,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 417591515,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3072027276,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1431495741,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 4085931502,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2445399967,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 804868432,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3459304193,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1818772658,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 178241123,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 2832676884,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 1192145349,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 3846581110,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2206049575,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 565518040,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 3219953801,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1579422266,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 4233858027,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 2593326492,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 952794957,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3607230718,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 1966699183,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 326167648,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2980603409,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1340071874,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 3994507635,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 2353976100,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 713444565,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 3367880326,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1727348791,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 86817256,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2741253017,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1100721482,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3755157243,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2114625708,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 474094173,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3128529934,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1487998399,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 4142434160,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2501902625,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 861371090,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3515806851,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1875275316,
+          "firstWins": 2,
+          "aWins": 1
+        }
+      ]
+    },
+    {
+      "signature": "783952d7dd5c9ed7b7920eca7f3ffae589698ea426b4d5bbc3e49c7757c110fc",
+      "a": "reply",
+      "b": "search4",
+      "n": 200,
+      "firstWins": 114,
+      "secondWins": 86,
+      "firstWinPct": 57,
+      "avgPlies": 16.43,
+      "mtajiPlayedPct": 22.5,
+      "bulkPct": 45,
+      "nyakuaPct": 100,
+      "reasons": {
+        "front-empty": 156,
+        "no-move": 44
+      },
+      "searchNodes": 150618,
+      "pairDetails": [
+        {
+          "seed": 1079140033,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3733575794,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2093044259,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 452512724,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3106948485,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1466416950,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 4120852711,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2480321176,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 839789641,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3494225402,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1853693867,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 213162332,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2867598093,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1227066558,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3881502319,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2240970784,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 600439249,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3254875010,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1614343475,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 4268779236,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2628247701,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 987716166,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3642151927,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2001620392,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 361088857,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 3015524618,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1374993083,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 4029428844,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2388897309,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 748365774,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3402801535,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 1762270000,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 121738465,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2776174226,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1135642691,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3790078452,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2149546917,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 509015382,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 3163451143,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1522919608,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 4177355369,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2536823834,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 896292299,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3550728060,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1910196525,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 269664990,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 2924100751,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1283569216,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3938004977,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2297473442,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 656941907,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3311377668,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 1670846133,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 30314598,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2684750359,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1044218824,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3698654585,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2058123050,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 417591515,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3072027276,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1431495741,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 4085931502,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2445399967,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 804868432,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3459304193,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1818772658,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 178241123,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 2832676884,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1192145349,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3846581110,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2206049575,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 565518040,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 3219953801,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1579422266,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 4233858027,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2593326492,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 952794957,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3607230718,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1966699183,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 326167648,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2980603409,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1340071874,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3994507635,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2353976100,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 713444565,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3367880326,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1727348791,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 86817256,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 2741253017,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1100721482,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3755157243,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2114625708,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 474094173,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3128529934,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1487998399,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 4142434160,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 2501902625,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 861371090,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 3515806851,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1875275316,
+          "firstWins": 1,
+          "aWins": 0
+        }
+      ]
+    },
+    {
+      "signature": "783952d7dd5c9ed7b7920eca7f3ffae589698ea426b4d5bbc3e49c7757c110fc",
+      "a": "search4",
+      "b": "search6",
+      "n": 200,
+      "firstWins": 121,
+      "secondWins": 79,
+      "firstWinPct": 60.5,
+      "avgPlies": 23.965,
+      "mtajiPlayedPct": 75.5,
+      "bulkPct": 100,
+      "nyakuaPct": 100,
+      "reasons": {
+        "front-empty": 101,
+        "no-move": 99
+      },
+      "searchNodes": 1135868,
+      "pairDetails": [
+        {
+          "seed": 1079140033,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3733575794,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2093044259,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 452512724,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3106948485,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 1466416950,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 4120852711,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2480321176,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 839789641,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3494225402,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1853693867,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 213162332,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2867598093,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1227066558,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3881502319,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2240970784,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 600439249,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3254875010,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1614343475,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 4268779236,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 2628247701,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 987716166,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 3642151927,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2001620392,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 361088857,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3015524618,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1374993083,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 4029428844,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2388897309,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 748365774,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3402801535,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1762270000,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 121738465,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2776174226,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1135642691,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3790078452,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 2149546917,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 509015382,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3163451143,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1522919608,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 4177355369,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 2536823834,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 896292299,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3550728060,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 1910196525,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 269664990,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2924100751,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 1283569216,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3938004977,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2297473442,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 656941907,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3311377668,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1670846133,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 30314598,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 2684750359,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1044218824,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3698654585,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2058123050,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 417591515,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 3072027276,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1431495741,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 4085931502,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2445399967,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 804868432,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 3459304193,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1818772658,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 178241123,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2832676884,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1192145349,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3846581110,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2206049575,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 565518040,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3219953801,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1579422266,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 4233858027,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2593326492,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 952794957,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 3607230718,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1966699183,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 326167648,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2980603409,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1340071874,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3994507635,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 2353976100,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 713444565,
+          "firstWins": 2,
+          "aWins": 1
+        },
+        {
+          "seed": 3367880326,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1727348791,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 86817256,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2741253017,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1100721482,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3755157243,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2114625708,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 474094173,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3128529934,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1487998399,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 4142434160,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 2501902625,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 861371090,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 3515806851,
+          "firstWins": 1,
+          "aWins": 0
+        },
+        {
+          "seed": 1875275316,
+          "firstWins": 1,
+          "aWins": 0
+        }
+      ]
+    },
+    {
+      "signature": "783952d7dd5c9ed7b7920eca7f3ffae589698ea426b4d5bbc3e49c7757c110fc",
+      "a": "search6",
+      "b": "search4-mobility",
+      "n": 200,
+      "firstWins": 52,
+      "secondWins": 148,
+      "firstWinPct": 26,
+      "avgPlies": 23.64,
+      "mtajiPlayedPct": 100,
+      "bulkPct": 100,
+      "nyakuaPct": 100,
+      "reasons": {
+        "no-move": 116,
+        "front-empty": 84
+      },
+      "searchNodes": 1290259,
+      "pairDetails": [
+        {
+          "seed": 1079140033,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 3733575794,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 2093044259,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 452512724,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 3106948485,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 1466416950,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 4120852711,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 2480321176,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 839789641,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 3494225402,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 1853693867,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 213162332,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 2867598093,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 1227066558,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 3881502319,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 2240970784,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 600439249,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 3254875010,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 1614343475,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 4268779236,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 2628247701,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 987716166,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 3642151927,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 2001620392,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 361088857,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 3015524618,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 1374993083,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 4029428844,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 2388897309,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 748365774,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 3402801535,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 1762270000,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 121738465,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 2776174226,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 1135642691,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 3790078452,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 2149546917,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 509015382,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 3163451143,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 1522919608,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 4177355369,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 2536823834,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 896292299,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 3550728060,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 1910196525,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 269664990,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 2924100751,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 1283569216,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 3938004977,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 2297473442,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 656941907,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 3311377668,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 1670846133,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 30314598,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 2684750359,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 1044218824,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 3698654585,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 2058123050,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 417591515,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 3072027276,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 1431495741,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 4085931502,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 2445399967,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 804868432,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 3459304193,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 1818772658,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 178241123,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 2832676884,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 1192145349,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 3846581110,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 2206049575,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 565518040,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 3219953801,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 1579422266,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 4233858027,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 2593326492,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 952794957,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 3607230718,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 1966699183,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 326167648,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 2980603409,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 1340071874,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 3994507635,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 2353976100,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 713444565,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 3367880326,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 1727348791,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 86817256,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 2741253017,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 1100721482,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 3755157243,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 2114625708,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 474094173,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 3128529934,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 1487998399,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 4142434160,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 2501902625,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 861371090,
+          "firstWins": 1,
+          "aWins": 2
+        },
+        {
+          "seed": 3515806851,
+          "firstWins": 0,
+          "aWins": 1
+        },
+        {
+          "seed": 1875275316,
+          "firstWins": 0,
+          "aWins": 1
+        }
+      ]
+    }
+  ],
+  "mirrors": [
+    {
+      "signature": "783952d7dd5c9ed7b7920eca7f3ffae589698ea426b4d5bbc3e49c7757c110fc",
+      "hand": {
+        "id": "reduced422-threshold4-12",
+        "hands": [
+          12,
+          12
+        ],
+        "pits": [
+          0,
+          0,
+          0,
+          0,
+          4,
+          2,
+          2,
+          0
+        ],
+        "threshold": 4
+      },
+      "policy": "random",
+      "pairs": 10,
+      "mismatches": 0
+    },
+    {
+      "signature": "783952d7dd5c9ed7b7920eca7f3ffae589698ea426b4d5bbc3e49c7757c110fc",
+      "hand": {
+        "id": "reduced422-threshold4-12",
+        "hands": [
+          12,
+          12
+        ],
+        "pits": [
+          0,
+          0,
+          0,
+          0,
+          4,
+          2,
+          2,
+          0
+        ],
+        "threshold": 4
+      },
+      "policy": "noisy",
+      "pairs": 10,
+      "mismatches": 0
+    },
+    {
+      "signature": "783952d7dd5c9ed7b7920eca7f3ffae589698ea426b4d5bbc3e49c7757c110fc",
+      "hand": {
+        "id": "reduced422-threshold4-12",
+        "hands": [
+          12,
+          12
+        ],
+        "pits": [
+          0,
+          0,
+          0,
+          0,
+          4,
+          2,
+          2,
+          0
+        ],
+        "threshold": 4
+      },
+      "policy": "greedy",
+      "pairs": 10,
+      "mismatches": 0
+    },
+    {
+      "signature": "783952d7dd5c9ed7b7920eca7f3ffae589698ea426b4d5bbc3e49c7757c110fc",
+      "hand": {
+        "id": "reduced422-threshold4-12",
+        "hands": [
+          12,
+          12
+        ],
+        "pits": [
+          0,
+          0,
+          0,
+          0,
+          4,
+          2,
+          2,
+          0
+        ],
+        "threshold": 4
+      },
+      "policy": "reply",
+      "pairs": 10,
+      "mismatches": 0
+    },
+    {
+      "signature": "783952d7dd5c9ed7b7920eca7f3ffae589698ea426b4d5bbc3e49c7757c110fc",
+      "hand": {
+        "id": "reduced422-threshold4-12",
+        "hands": [
+          12,
+          12
+        ],
+        "pits": [
+          0,
+          0,
+          0,
+          0,
+          4,
+          2,
+          2,
+          0
+        ],
+        "threshold": 4
+      },
+      "policy": "search3",
+      "pairs": 10,
+      "mismatches": 0
+    },
+    {
+      "signature": "783952d7dd5c9ed7b7920eca7f3ffae589698ea426b4d5bbc3e49c7757c110fc",
+      "hand": {
+        "id": "reduced422-threshold4-12",
+        "hands": [
+          12,
+          12
+        ],
+        "pits": [
+          0,
+          0,
+          0,
+          0,
+          4,
+          2,
+          2,
+          0
+        ],
+        "threshold": 4
+      },
+      "policy": "search4",
+      "pairs": 10,
+      "mismatches": 0
+    },
+    {
+      "signature": "783952d7dd5c9ed7b7920eca7f3ffae589698ea426b4d5bbc3e49c7757c110fc",
+      "hand": {
+        "id": "reduced422-threshold4-12",
+        "hands": [
+          12,
+          12
+        ],
+        "pits": [
+          0,
+          0,
+          0,
+          0,
+          4,
+          2,
+          2,
+          0
+        ],
+        "threshold": 4
+      },
+      "policy": "search6",
+      "pairs": 10,
+      "mismatches": 0
+    },
+    {
+      "signature": "783952d7dd5c9ed7b7920eca7f3ffae589698ea426b4d5bbc3e49c7757c110fc",
+      "hand": {
+        "id": "reduced422-threshold4-12",
+        "hands": [
+          12,
+          12
+        ],
+        "pits": [
+          0,
+          0,
+          0,
+          0,
+          4,
+          2,
+          2,
+          0
+        ],
+        "threshold": 4
+      },
+      "policy": "search4-mobility",
+      "pairs": 10,
+      "mismatches": 0
+    }
+  ],
+  "proof": {
+    "signature": "783952d7dd5c9ed7b7920eca7f3ffae589698ea426b4d5bbc3e49c7757c110fc",
+    "hand": {
+      "id": "reduced422-threshold4-12",
+      "hands": [
+        12,
+        12
+      ],
+      "pits": [
+        0,
+        0,
+        0,
+        0,
+        4,
+        2,
+        2,
+        0
+      ],
+      "threshold": 4
+    },
+    "records": [
+      {
+        "hand": {
+          "id": "reduced422-threshold4-12",
+          "hands": [
+            12,
+            12
+          ],
+          "pits": [
+            0,
+            0,
+            0,
+            0,
+            4,
+            2,
+            2,
+            0
+          ],
+          "threshold": 4
+        },
+        "depth": 1,
+        "result": "UNKNOWN",
+        "nodes": 5,
+        "hits": 0,
+        "tableSize": 1,
+        "elapsedMs": 0
+      },
+      {
+        "hand": {
+          "id": "reduced422-threshold4-12",
+          "hands": [
+            12,
+            12
+          ],
+          "pits": [
+            0,
+            0,
+            0,
+            0,
+            4,
+            2,
+            2,
+            0
+          ],
+          "threshold": 4
+        },
+        "depth": 2,
+        "result": "UNKNOWN",
+        "nodes": 19,
+        "hits": 0,
+        "tableSize": 5,
+        "elapsedMs": 0
+      },
+      {
+        "hand": {
+          "id": "reduced422-threshold4-12",
+          "hands": [
+            12,
+            12
+          ],
+          "pits": [
+            0,
+            0,
+            0,
+            0,
+            4,
+            2,
+            2,
+            0
+          ],
+          "threshold": 4
+        },
+        "depth": 3,
+        "result": "UNKNOWN",
+        "nodes": 56,
+        "hits": 0,
+        "tableSize": 19,
+        "elapsedMs": 2
+      },
+      {
+        "hand": {
+          "id": "reduced422-threshold4-12",
+          "hands": [
+            12,
+            12
+          ],
+          "pits": [
+            0,
+            0,
+            0,
+            0,
+            4,
+            2,
+            2,
+            0
+          ],
+          "threshold": 4
+        },
+        "depth": 4,
+        "result": "UNKNOWN",
+        "nodes": 157,
+        "hits": 0,
+        "tableSize": 54,
+        "elapsedMs": 3
+      },
+      {
+        "hand": {
+          "id": "reduced422-threshold4-12",
+          "hands": [
+            12,
+            12
+          ],
+          "pits": [
+            0,
+            0,
+            0,
+            0,
+            4,
+            2,
+            2,
+            0
+          ],
+          "threshold": 4
+        },
+        "depth": 5,
+        "result": "UNKNOWN",
+        "nodes": 529,
+        "hits": 7,
+        "tableSize": 148,
+        "elapsedMs": 12
+      },
+      {
+        "hand": {
+          "id": "reduced422-threshold4-12",
+          "hands": [
+            12,
+            12
+          ],
+          "pits": [
+            0,
+            0,
+            0,
+            0,
+            4,
+            2,
+            2,
+            0
+          ],
+          "threshold": 4
+        },
+        "depth": 6,
+        "result": "UNKNOWN",
+        "nodes": 1696,
+        "hits": 5,
+        "tableSize": 502,
+        "elapsedMs": 35
+      },
+      {
+        "hand": {
+          "id": "reduced422-threshold4-12",
+          "hands": [
+            12,
+            12
+          ],
+          "pits": [
+            0,
+            0,
+            0,
+            0,
+            4,
+            2,
+            2,
+            0
+          ],
+          "threshold": 4
+        },
+        "depth": 7,
+        "result": "UNKNOWN",
+        "nodes": 6259,
+        "hits": 19,
+        "tableSize": 1624,
+        "elapsedMs": 147
+      },
+      {
+        "hand": {
+          "id": "reduced422-threshold4-12",
+          "hands": [
+            12,
+            12
+          ],
+          "pits": [
+            0,
+            0,
+            0,
+            0,
+            4,
+            2,
+            2,
+            0
+          ],
+          "threshold": 4
+        },
+        "depth": 8,
+        "result": "UNKNOWN",
+        "nodes": 22262,
+        "hits": 147,
+        "tableSize": 5898,
+        "elapsedMs": 542
+      },
+      {
+        "hand": {
+          "id": "reduced422-threshold4-12",
+          "hands": [
+            12,
+            12
+          ],
+          "pits": [
+            0,
+            0,
+            0,
+            0,
+            4,
+            2,
+            2,
+            0
+          ],
+          "threshold": 4
+        },
+        "depth": 9,
+        "result": "UNKNOWN",
+        "nodes": 82478,
+        "hits": 386,
+        "tableSize": 20336,
+        "elapsedMs": 2004
+      },
+      {
+        "hand": {
+          "id": "reduced422-threshold4-12",
+          "hands": [
+            12,
+            12
+          ],
+          "pits": [
+            0,
+            0,
+            0,
+            0,
+            4,
+            2,
+            2,
+            0
+          ],
+          "threshold": 4
+        },
+        "depth": 10,
+        "result": "BUDGET_STOP",
+        "nodes": 300001,
+        "hits": 2186,
+        "tableSize": 74622,
+        "elapsedMs": 7817
+      }
+    ],
+    "pv": []
+  }
+}

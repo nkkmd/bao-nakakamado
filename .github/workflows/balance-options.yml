@@ -1,0 +1,41 @@
+name: Balance options investigation
+on:
+  workflow_dispatch:
+    inputs:
+      conditions:
+        description: 'Configuration IDs as a JSON array'
+        required: true
+        default: '["equal-9","equal-10","equal-11","equal-12"]'
+permissions:
+  contents: read
+concurrency:
+  group: balance-screen-${{ github.ref }}-${{ github.sha }}
+  cancel-in-progress: false
+jobs:
+  investigate:
+    name: screen - ${{ matrix.condition }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        condition: ${{ fromJSON(inputs.conditions) }}
+    env:
+      CONDITION: ${{ matrix.condition }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+      - name: Check isolated engine and search
+        run: node tools/balance-options/check.cjs tools/balance-options/results/reproduced/checks.json
+      - name: Run condition with separate checkpoints
+        run: node tools/balance-options/run.cjs "$CONDITION" "tools/balance-options/results/reproduced/screen/$CONDITION" screen
+      - name: Verify any forced-win certificate
+        run: node tools/balance-options/certify.cjs "tools/balance-options/results/reproduced/screen/$CONDITION"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: balance-${{ matrix.condition }}
+          path: tools/balance-options/results/reproduced/
+          retention-days: 30
