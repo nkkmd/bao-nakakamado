@@ -413,6 +413,7 @@ MTAJIでは、NAMUAの2個蒔きやNYUMBAでの特別な停止を使いません
 | NYAKUAで相手の最後の1個は奪えない | 2026年10月1日にv0.6.1へ暫定採用 |
 | 相手ハンド0での一穴全投入 | v0.6.1でも維持。最終的な公開版の仕様は未確定 |
 | 後列廃止・端で折り返し・初期ハンド12個 | v0.6.0へ実装して試用中 |
+| NYUMBA残数で2回目以降の捕獲数を制限する案 | 2026年10月1日に[採用見送り](NYUMBA_CAPTURE_CAP_STUDY_20261001.md)。毎回全捕獲を維持 |
 | 片側だけ先にMTAJIへ入る案 | 未実装 |
 | 勝負宣言・抽選・追加手番 | 現行試作にはない。運要素の検討は凍結中 |
 | takasiaの特殊制約 | 適用しない |
@@ -447,5 +448,6 @@ MTAJIでは、NAMUAの2個蒔きやNYUMBAでの特別な停止を使いません
 基礎ルールの説明は、[Bao la Kiswahili 日本語完全ガイド](https://github.com/nkkmd/bao-la-kiswahili-ja/tree/1179267b1f19b27a2138791253f2cb9cbfe98c14)（© 2026 bao-la-kiswahili-ja contributors）および[元ゲームの図解ルール](https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/public/rules.html)（© 2026 bao-la-kiswahili-game contributors）を参照・再構成し、現行試作の実装に合わせてNYAKUA、一穴全投入、1列折り返し、初期ハンド12個、操作方法、実装上の細則を追加しました。
 
 これらの説明文の改変物である本書は、[Creative Commons Attribution-ShareAlike 4.0 International（CC BY-SA 4.0）](https://creativecommons.org/licenses/by-sa/4.0/deed.ja)で提供します。この指定は本書の文章に適用し、試作のプログラム全体のライセンスを変更するものではありません。
+
 
 

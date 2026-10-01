@@ -1,0 +1,57 @@
+{
+  "dateJst": "2026-10-01",
+  "decision": "NOT_ADOPTED",
+  "reference": "3c8024cc57fb6dbe70eb525b3db004079ecb4024",
+  "runtime": "Node.js v24.19.0",
+  "execution": "Local isolated VM; no GitHub Actions run",
+  "mainStudy": {
+    "seedIndexStart": 20000,
+    "nPerPolicyAndRule": 1000,
+    "policies": [
+      "random",
+      "noisy",
+      "greedy",
+      "reply"
+    ],
+    "rules": [
+      "base",
+      "capped"
+    ],
+    "totalGames": 8000,
+    "maxPlies": 400,
+    "syntheticSeed": 449083537,
+    "syntheticPositionsPerPhase": 2000,
+    "replayGames": 200,
+    "mirrorPairs": 200
+  },
+  "searchCheck": {
+    "seedIndexStart": 50000,
+    "nPerRule": 200,
+    "policy": "search4-material",
+    "totalGames": 400
+  },
+  "originalArtifactSourceSha256": {
+    "prototype/bounce-engine.js": "bf772d8db806fb6168e44cf8dda43a9ed1a448dfc804101cfc4783053d67dea4",
+    "prototype/steal.js": "f21adc85146a97eccb6227e61140feffacf7229e5d116b09496017ba43c51523",
+    "tools/balance-options/core.cjs": "fea71d7008251ea3f0e4f2ec92915774bf7627d1829a3f3d098964580acc2487",
+    "tools/one-row-bounce-study.cjs": "d6872425090ad46e8dd1a10d7dca2ef89a1a5f204a5684d1768354d43aab9a19"
+  },
+  "sourceNote": "Original downloaded source snapshots had one additional trailing LF compared with the fixed GitHub blobs. The repository runners use the exact fixed reference source; no executable code differs. Result JSON sourceSha256 preserves original execution hashes. Migrated runners change paths and add source guards only.",
+  "originalArtifactManifest": {
+    "Bao-Nakakamado-Nyumba-Capture-Cap-Check-20261001.md": "d93846c0cd5aff487c8b001317aa7a90f8775d0f2a0eab97899fd0720e12175c",
+    "analysis/boundaries.cjs": "c12e127f99f9bcfb1f5614e6959441f47eb4d01e1b014e85375bbdad00309fb2",
+    "analysis/capped-engine.cjs": "9e943387d13d8e7ce6af9ebaf8409beb4378e6b11b6dbb34f75a9a86dab1fc26",
+    "analysis/search-check.json": "7ae3eff6f6fabce83f3ff5b642c1bcf2d6e97944c8a126b458efe013f4caaf71",
+    "analysis/README.md": "e49204e42030da7a9da4c738dd82b6559ed3ce5dda8840c7a0093a4bb7e9a5a5",
+    "analysis/study.cjs": "734a0e15e12fb8ddca8b9f146cf5d2c07018a67832b0ddb568d9ddaf9b29244c",
+    "analysis/boundaries.json": "1ba6d1ab84183bbeaff84a03e6f43153d6bde6bd499e191badd44c21020599a0",
+    "analysis/search-check.cjs": "c4f6d6ac486ed715552c3c617cb1c9d92c771b40d326c7c80e0c519ee44f049d",
+    "analysis/results.json": "f8d9b650c81a4628c1034e81b3a241c61cdad589e2c2f3575cc0f00786947708",
+    "bao-nakakamado/prototype/bounce-engine.js": "bf772d8db806fb6168e44cf8dda43a9ed1a448dfc804101cfc4783053d67dea4",
+    "bao-nakakamado/prototype/steal.js": "f21adc85146a97eccb6227e61140feffacf7229e5d116b09496017ba43c51523",
+    "bao-nakakamado/prototype/bounce.test.cjs": "72d9b9cdd27cf71e26d6f73c3fd2d7f22b47707cf328edbc4393db0b73aa33af",
+    "bao-nakakamado/prototype/ENGINE_LICENSE.txt": "c1171d05179a0b38e395f7c0dff6a5e6450c842d04947b111fbede40e98e5f4f",
+    "bao-nakakamado/tools/one-row-bounce-study.cjs": "d6872425090ad46e8dd1a10d7dca2ef89a1a5f204a5684d1768354d43aab9a19",
+    "bao-nakakamado/tools/balance-options/core.cjs": "fea71d7008251ea3f0e4f2ec92915774bf7627d1829a3f3d098964580acc2487"
+  }
+}
