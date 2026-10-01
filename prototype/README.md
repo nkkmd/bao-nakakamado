@@ -25,7 +25,7 @@ Cloudflare Pagesでは production branch `main`、build command空欄、build ou
 
 ## 画面と棋譜
 
-元ゲームの公開版に寄せた配色と操作を保持し、盤だけを2列16穴へ変更しました。各穴の座標は `SF1〜SF8 / NF1〜NF8`、初期ハンド表示は12個です。
+元ゲームの公開版に寄せた配色と操作を保持し、盤だけを2列16穴へ変更しました。2026年10月1日の配置調整では、盤面と下のKICHWA／NYUMBA表示を少し下げ、上下の余白を整えました。盤面領域の高さと穴の寸法・間隔は維持しています。各穴の座標は `SF1〜SF8 / NF1〜NF8`、初期ハンド表示は12個です。
 
 全投入は一度の投入として表示し、その後の捕獲・種まき・NYAKUAを自動再生します。端で折り返した際は状態文にも反転を表示します。「高速」は表示間隔を短くし、「新しい対局」は再生を中断して対局設定へ戻ります。サウンドと高速は初期OFFです。
 
@@ -47,4 +47,3 @@ node tools/one-row-bounce-study.cjs 1000 random,noisy,greedy
 ## 出典・ライセンス
 
 `engine.js`、そこから改変した `bulk-engine.js` と `bounce-engine.js`、元の公開版を参考にしたスタイルは [bao-la-kiswahili-gameのMIT License](ENGINE_LICENSE.txt)に従います。著作権表示と許諾条件を保持しています。試作独自のコード・説明文のライセンスは現時点で未設定です。
-

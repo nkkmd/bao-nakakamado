@@ -60,7 +60,8 @@ button:disabled { cursor: default; opacity: .45; }
 .reserves :is(.active-hand, .donor-hand, .recipient-hand),
 .reserves :is(.active-hand, .donor-hand, .recipient-hand) :is(strong, small) { color: #172c2b; }
 /* DOM buttons retain native keyboard access; geometry follows the public board. */
-.board-surface { padding: 1.6% 4% 1.4%; background: #a8c98b; }
+/* Move the board and labels down together; keep the total vertical padding at 3%. */
+.board-surface { padding: 2.6% 4% .4%; background: #a8c98b; }
 .board {
   display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); grid-template-rows: 1fr 16% 1fr;
   aspect-ratio: 588 / 194; position: relative; padding: 1.8% 1%; align-items: center;
