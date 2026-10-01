@@ -1,6 +1,6 @@
 "use strict";
 
-// Bao Nakakamado v0.6.0, derived from Bao la Kiswahili (MIT; ENGINE_LICENSE.txt).
+// Bao Nakakamado v0.6.1, derived from Bao la Kiswahili (MIT; ENGINE_LICENSE.txt).
 // Each player has eight pits and twelve initial hand KETE. Sowing reflects at
 // either endpoint, retaining the reflected direction through the current move.
 // NYAKUA lives in steal.js; fixed-pit bulk placement is retained below.
@@ -10,7 +10,8 @@
   const HOUSE = 4;
   const INITIAL_HAND = 12;
   const TOTAL_KETE = 44;
-  const RULE_ID = "namua-steal-one-fixed-pit-bulk-one-row-bounce-hand12";
+  const RULE_ID = "namua-steal-one-protect-last-fixed-pit-bulk-one-row-bounce-hand12";
+  const NYAKUA_PROTECT_LAST = true;
   const MAX_RELAY = 512;
   const compactEventLists = new WeakSet();
   const SEARCH_RECORDING = Object.freeze({ snapshots: false });
@@ -375,7 +376,7 @@
     return moveVariants(state, moves, SEARCH_RECORDING);
   }
 
-  const api = { applyMoveForSearch, moveVariantsForSearch, initialState, legalMoves, moveVariants, applyMove, nextPit, clone, FRONT, HOUSE, INITIAL_HAND, TOTAL_KETE, RULE_ID };
+  const api = { applyMoveForSearch, moveVariantsForSearch, initialState, legalMoves, moveVariants, applyMove, nextPit, clone, FRONT, HOUSE, INITIAL_HAND, TOTAL_KETE, RULE_ID, NYAKUA_PROTECT_LAST };
   root.BaoEngine = api;
   if (typeof module !== "undefined" && module.exports) module.exports = api;
 }(typeof window !== "undefined" ? window : globalThis));

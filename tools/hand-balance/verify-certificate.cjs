@@ -1,7 +1,9 @@
 "use strict";
 // No search/evaluator import. Replays a strategy and covers every defender move.
 const fs=require('node:fs'),assert=require('node:assert/strict');
-const E=require('../../prototype/bounce-engine.js'),S=require('../../prototype/steal.js');
+const E=require('../../prototype/bounce-engine.js');
+// The saved v0.6.0 certificate allows taking the last opposing hand KETE.
+const S=require('../../prototype/steal.js').createForEngine(E,{protectLast:false});
 function verify(c){
  assert.equal(c.hand,6);assert.ok(c.first===0||c.first===1);assert.equal(c.maxPlies,13);
  const root=E.initialState();root.reserve=[6,6];root.player=c.first;

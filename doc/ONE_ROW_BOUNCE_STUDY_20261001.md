@@ -1,5 +1,7 @@
 # Bao Nakakamado：後列廃止・折り返し方式の検証
 
+> 履歴の適用範囲：本書は最後の1個を奪えるv0.6.0条件の記録です。現行v0.6.1は[最後の1個保護](NYAKUA_PROTECT_LAST_20261001.md)を暫定採用しました。本書の勝率・必勝手順・現行という記述は当時の条件に限定し、変更後へ引き継ぎません。
+
 調査日：2026年10月1日。基準実装はコミット `a7ea305d0ee56e731090fe9ac95b60bfd88d0421` の試作 v0.5.1。前回の8穴循環方式の調査に続き、端で折り返す方式を隔離した計算用コードで試験した。GitHubの実装、現行ルール、配信物には変更していない。
 
 **本書は実装前の調査記録です。調査後、ユーザーの指示によりこの方式をv0.6.0へ実装しました。[実装・試用条件](ONE_ROW_BOUNCE_TRIAL_20261001.md)と[現行ルール](RULEBOOK.md)を参照してください。**
@@ -93,3 +95,4 @@ node bounce-followup.cjs
 seed列は前回と同じ `(0x924f3aa1 + i * 0x9e3779b1) >>> 0`。元コード、前回の循環証拠、今回の仮仕様のコード、結果JSONを収録。
 
 基準：[一穴全投入エンジン](https://github.com/nkkmd/bao-nakakamado/blob/a7ea305d0ee56e731090fe9ac95b60bfd88d0421/prototype/bulk-engine.js)、[NYAKUA層](https://github.com/nkkmd/bao-nakakamado/blob/a7ea305d0ee56e731090fe9ac95b60bfd88d0421/prototype/steal.js)。
+

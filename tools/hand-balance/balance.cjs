@@ -2,7 +2,8 @@
 const fs = require("node:fs");
 const assert = require("node:assert/strict");
 const E = require("../../prototype/bounce-engine.js");
-const S = require("../../prototype/steal.js");
+// Historical v0.6.0 studies allow taking the opponent's last hand KETE.
+const S = require("../../prototype/steal.js").createForEngine(E, { protectLast: false });
 const REF = "ec3961c6d178ae5c146d1ffbdeabdce274575b46";
 function rng(seed) { let x=seed>>>0; return ()=>{x^=x<<13;x^=x>>>17;x^=x<<5;return (x>>>0)/4294967296;}; }
 function seedAt(i) { return (0x924f3aa1 + i*0x9e3779b1)>>>0; }

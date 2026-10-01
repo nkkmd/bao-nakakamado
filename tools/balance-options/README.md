@@ -1,5 +1,7 @@
 # 先後バランス候補の調査コード
 
+> このコードは旧v0.6.0の再現用です。`createForEngine(E, { protectLast: false })` を明示し、最後の1個を奪える旧条件を保持します。現行v0.6.1の進行確認は `node tools/nyakua-protect-last-study.cjs 1000` です。
+
 [調査計画](../../doc/BALANCE_OPTIONS_PLAN_20261001.md)に従い、同数ハンド、非対称ハンド、NYUMBA機能と配置の順に比較する。[完了した報告](../../doc/BALANCE_OPTIONS_STUDY_20261001.md)は19条件・別seed確認5条件、計255,200局をまとめる。基準エンジンはv0.6.0、`4e38478828319d664575dbbbfbb90e1df17eaf7f`。試作本体のルールは変更しない。
 
 ## 条件と実行
@@ -56,3 +58,4 @@ python3 tools/balance-options/report.py
 ```
 
 [実行記録](results/provenance.json)、[全体索引](results/study-index.json)、[検証結果](results/verification.json)、[保存ファイルのSHA256](results/SHA256.json)を参照。
+

@@ -42,7 +42,7 @@ test("endpoint aliases are represented once", () => {
   assert.equal(moves.length, 1); assert.equal(moves[0].direction, "left");
 });
 test("reachable NYAKUA and seven-KETE bulk placement retain snapshots and replay", () => {
-  const trace = Study.game(Study.seedAt(0), "random", 0, true).trace;
+  const trace = Study.game(Study.seedAt(0), "random", 0, true, S).trace;
   let game = S.initialGame(), sawNyakua = false, sawPass = false, sawBulk = false, sawReflection = false;
   for (const t of trace) {
     const { game: next, events } = S.applyWithEvents(game, t.move);
@@ -66,29 +66,61 @@ test("reachable NYAKUA and seven-KETE bulk placement retain snapshots and replay
   const altered = E.clone(game.history); altered[0].placed = 2;
   assert.throws(() => S.replay(altered), /does not match/);
 });
-test("an exhausted hand must pass before the opponent's full-hand placement", () => {
-  for (let i = 0; i < 100; i++) {
-    const trace = Study.game(Study.seedAt(i), "random", 0, true).trace;
-    const index = trace.findIndex(t => t.move.type === "pass");
-    if (index < 0) continue;
-    const before = { board: trace[index].before, history: [] };
-    assert.equal(before.board.reserve[before.board.player], 0);
-    assert.deepEqual(S.moveVariants(before), [{ type: "pass" }]);
-    const passed = S.apply(before, { type: "pass" });
-    assert.equal(passed.board.player, 1-before.board.player);
-    assert.equal(passed.board.phase, "namua");
-    assert.ok(S.apply(passed, S.moveVariants(passed)[0]).history.at(-1).placed > 1);
-    return;
-  }
-  assert.fail("No reachable pass found");
+test("a loaded exhausted-hand position still offers pass before bulk placement", () => {
+  // The protected rule no longer creates a reachable pass from the initial state.
+  const board = E.initialState(); board.reserve = [0, 7];
+  board.pits[0][0][4] += 17;
+  const before = { board, history: [] };
+  assert.deepEqual(S.moveVariants(before), [{ type: "pass" }]);
+  const passed = S.apply(before, { type: "pass" });
+  assert.equal(passed.board.player, 1);
+  assert.equal(passed.board.phase, "namua");
+  const after = S.apply(passed, S.moveVariants(passed)[0]);
+  assert.equal(after.history.at(-1).placed, 7);
+  assert.equal(Study.total(after.board), 44);
+});
+test("NYAKUA preserves the last hand KETE with three captures and matching snapshots", () => {
+  const trace = Study.game(Study.seedAt(1001), "random", 0, true, S).trace;
+  const index = trace.findIndex(t => t.before.phase === "namua" && t.captures >= 2
+    && t.before.reserve[1-t.player] === 1);
+  assert.ok(index >= 0);
+  const before = trace.slice(0,index).reduce((g,t)=>S.apply(g,t.move),S.initialGame());
+  const t = trace[index];
+  const result = S.applyWithEvents(before,t.move);
+  assert.deepEqual(result.game, S.apply(before,t.move));
+  assert.equal(result.game.history.at(-1).captures, 3);
+  assert.equal(result.game.history.at(-1).stolen, 0);
+  assert.deepEqual(result.game.board.reserve, [0,1]);
+  assert.equal(result.game.board.phase, "namua");
+  assert.equal(result.events.some(e=>e.kind === "steal"), false);
+  assert.deepEqual(result.events.at(-1).state, result.game.board);
+  assert.equal(Study.total(result.game.board), 44);
+  assert.deepEqual(S.replay(result.game.history),result.game);
+  const next = S.apply(result.game,trace[index+1].move);
+  assert.equal(next.history.at(-1).placed,1);
+  assert.deepEqual(next.board.reserve,[0,0]);
+  assert.equal(next.board.phase,"mtaji");
+  assert.equal(next.board.winner, null);
+});
+test("two opposing hand KETE allow one transfer and leave one", () => {
+  const trace = Study.game(Study.seedAt(1005), "random", 0, true, S).trace;
+  const t = trace.find(t=>t.before.phase === "namua" && t.captures >= 2
+    && t.before.reserve[1-t.player] === 2);
+  assert.ok(t);
+  const before = {board:t.before,history:[]}, result = S.applyWithEvents(before,t.move);
+  assert.equal(result.game.history.at(-1).stolen,1);
+  assert.equal(result.game.board.reserve[1-t.player],1);
+  assert.equal(result.events.filter(e=>e.kind === "steal").length,1);
+  assert.equal(Study.total(result.game.board),44);
 });
 test("complete reachable games preserve stones, mirrors and records", () => {
   for (let i = 0; i < 100; i++) {
-    const a = Study.game(Study.seedAt(i), "random", 0, true);
-    const b = Study.game(Study.seedAt(i), "random", 1);
+    const a = Study.game(Study.seedAt(i), "random", 0, true, S);
+    const b = Study.game(Study.seedAt(i), "random", 1, false, S);
     assert.equal(b.winner, 1-a.winner); assert.equal(b.plies, a.plies); assert.equal(b.reason, a.reason);
     const replayed = S.replay(a.trace);
     assert.deepEqual(replayed.board, a.board);
     assert.equal(Study.total(a.board), 44);
   }
 });
+
