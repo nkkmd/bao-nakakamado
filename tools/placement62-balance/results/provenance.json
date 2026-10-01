@@ -1,0 +1,217 @@
+{
+  "reference": "482ac28b8be2df11df873441196be53fc505df46",
+  "runnerCommit": "cbe866016ddb156c03c9575192bc4ef7321012a4",
+  "runId": 36876125049,
+  "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/36876125049",
+  "conclusion": "success",
+  "baselineRunId": 36869079611,
+  "baselineCodeHashesMatched": {
+    "prototype/bounce-engine.js": "2100a9fad218a419a5ce35e5bb8dfbee5f610f71e9e8089e16c21d1b2b9c8aa9",
+    "prototype/steal.js": "2f27a86f660627cb8062bb6c828c8397828ccf954dd7f81a5423697d92a952d8",
+    "tools/balance-options/core.cjs": "f192f29d5dff9f2c5165df335433fb00212c0e5447a25daf8415410df1034421",
+    "tools/balance-options/variant-engine.cjs": "2d2934ca5f0ef8747391f18649fd7401d2517956a4165262f19a74fffd751710"
+  },
+  "artifacts": [
+    {
+      "id": 11170085600,
+      "name": "placement62-balance-self-reply",
+      "size": 249132,
+      "digest": "sha256:cc517a005d618aba79e6fa790a8af59d7a4a4494ee16d4c20737f7982b44a2b2",
+      "expiresAt": "2026-10-31T14:25:34Z",
+      "downloadSha256Verified": true
+    },
+    {
+      "id": 11169771327,
+      "name": "placement62-balance-self-noisy",
+      "size": 297511,
+      "digest": "sha256:efd7dcb9f8503472de13656482558ec630cf5d9b8a9c31084389130a43ec2498",
+      "expiresAt": "2026-10-31T14:25:12Z",
+      "downloadSha256Verified": true
+    },
+    {
+      "id": 11169602692,
+      "name": "placement62-balance-self-search6",
+      "size": 60255,
+      "digest": "sha256:f718adc1b7dae5e05c87c951e55c5f7fd272de345b8d15ec0c999cf2bfbbc488",
+      "expiresAt": "2026-10-31T14:33:11Z",
+      "downloadSha256Verified": true
+    },
+    {
+      "id": 11169557358,
+      "name": "placement62-balance-proof",
+      "size": 2807,
+      "digest": "sha256:e5c655f583d5e41ec62a8c63b2a9e5430caffb55ff6ab5a327f156d665c7128c",
+      "expiresAt": "2026-10-31T14:29:55Z",
+      "downloadSha256Verified": true
+    },
+    {
+      "id": 11169537692,
+      "name": "placement62-balance-cross-4",
+      "size": 53668,
+      "digest": "sha256:9335ffa489e518593ff005236493acad4ea035bb8886fe1504962b36f089ad5b",
+      "expiresAt": "2026-10-31T14:32:53Z",
+      "downloadSha256Verified": true
+    },
+    {
+      "id": 11169301647,
+      "name": "placement62-balance-self-random",
+      "size": 315839,
+      "digest": "sha256:f65002604b4c94d1c77f9d046fecf34bc2ecb59e0769445504a411b556e1a618",
+      "expiresAt": "2026-10-31T14:25:12Z",
+      "downloadSha256Verified": true
+    },
+    {
+      "id": 11169102496,
+      "name": "placement62-balance-cross-3",
+      "size": 56192,
+      "digest": "sha256:6b4369d6932c17e7ac253f10d8085cca02191892f336c60710ab80a8286eb70c",
+      "expiresAt": "2026-10-31T14:30:29Z",
+      "downloadSha256Verified": true
+    },
+    {
+      "id": 11168852604,
+      "name": "placement62-balance-cross-1",
+      "size": 65854,
+      "digest": "sha256:9f3dd87666d6e9a278d7d2557b78207c49c4885ed77391a3a2684982638729d6",
+      "expiresAt": "2026-10-31T14:26:31Z",
+      "downloadSha256Verified": true
+    },
+    {
+      "id": 11168827421,
+      "name": "placement62-balance-self-greedy",
+      "size": 296871,
+      "digest": "sha256:6854f5a8295f22de12d2c756f968893976004550ad1898d4c913ffaf6078c2bc",
+      "expiresAt": "2026-10-31T14:25:08Z",
+      "downloadSha256Verified": true
+    },
+    {
+      "id": 11168723018,
+      "name": "placement62-balance-cross-2",
+      "size": 56252,
+      "digest": "sha256:88eb40955e7b3be5be648aa56c0ef05e616c96e114ce13d90ddcb04680a60fa1",
+      "expiresAt": "2026-10-31T14:27:22Z",
+      "downloadSha256Verified": true
+    },
+    {
+      "id": 11168669299,
+      "name": "placement62-balance-self-search3",
+      "size": 37907,
+      "digest": "sha256:fd2c91e85572316c25c6954866fe522ed89ca2236b3a81e53ba205491ef0d98e",
+      "expiresAt": "2026-10-31T14:25:49Z",
+      "downloadSha256Verified": true
+    },
+    {
+      "id": 11168654501,
+      "name": "placement62-balance-self-search4",
+      "size": 58592,
+      "digest": "sha256:f2da229e3e9234ebe6e806ecc8c593d05bd437110a3ed643505d0a07df0e3502",
+      "expiresAt": "2026-10-31T14:26:22Z",
+      "downloadSha256Verified": true
+    },
+    {
+      "id": 11168618705,
+      "name": "placement62-balance-cross-0",
+      "size": 65407,
+      "digest": "sha256:7f17562ce3fc5146cc0b4f1aecf4dfb09bbf403e19e599d09d0d3fa24e5ff83c",
+      "expiresAt": "2026-10-31T14:26:08Z",
+      "downloadSha256Verified": true
+    },
+    {
+      "id": 11168594815,
+      "name": "placement62-balance-self-search4-mobility",
+      "size": 46744,
+      "digest": "sha256:d78ff24c91facf5f1a047f12bebd354314913b4b79778d09d037d50d2a3e34cc",
+      "expiresAt": "2026-10-31T14:28:51Z",
+      "downloadSha256Verified": true
+    }
+  ],
+  "jobs": [
+    {
+      "id": 110415901271,
+      "name": "placement62 - self-search4",
+      "conclusion": "success"
+    },
+    {
+      "id": 110415901338,
+      "name": "placement62 - self-search3",
+      "conclusion": "success"
+    },
+    {
+      "id": 110415901410,
+      "name": "placement62 - self-random",
+      "conclusion": "success"
+    },
+    {
+      "id": 110415901455,
+      "name": "placement62 - self-search6",
+      "conclusion": "success"
+    },
+    {
+      "id": 110415901474,
+      "name": "placement62 - cross-2",
+      "conclusion": "success"
+    },
+    {
+      "id": 110415901480,
+      "name": "placement62 - cross-1",
+      "conclusion": "success"
+    },
+    {
+      "id": 110415901486,
+      "name": "placement62 - self-search4-mobility",
+      "conclusion": "success"
+    },
+    {
+      "id": 110415901527,
+      "name": "placement62 - self-noisy",
+      "conclusion": "success"
+    },
+    {
+      "id": 110415901560,
+      "name": "placement62 - self-reply",
+      "conclusion": "success"
+    },
+    {
+      "id": 110415901571,
+      "name": "placement62 - cross-0",
+      "conclusion": "success"
+    },
+    {
+      "id": 110415901679,
+      "name": "placement62 - proof",
+      "conclusion": "success"
+    },
+    {
+      "id": 110415901687,
+      "name": "placement62 - cross-4",
+      "conclusion": "success"
+    },
+    {
+      "id": 110415901688,
+      "name": "placement62 - self-greedy",
+      "conclusion": "success"
+    },
+    {
+      "id": 110415901784,
+      "name": "placement62 - cross-3",
+      "conclusion": "success"
+    }
+  ],
+  "localPreparation": {
+    "candidateTransitions": 504,
+    "protectedCandidates": 8,
+    "independentSearchCases": 144
+  },
+  "candidateInitialPits": [
+    0,
+    0,
+    0,
+    0,
+    6,
+    2,
+    0,
+    0
+  ],
+  "initialHand": 12,
+  "totalKete": 40
+}

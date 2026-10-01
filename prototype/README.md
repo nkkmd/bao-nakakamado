@@ -50,6 +50,8 @@ node tools/nyakua-protect-last-study.cjs 1000
 
 [NYUMBA残数による後続捕獲の上限案](../doc/NYUMBA_CAPTURE_CAP_STUDY_20261001.md)は成立試験後に採用を見送りました。この試作の捕獲は、初回・後続とも相手穴の全KETEを奪います。
 
+[初期配置6・2の比較](../doc/PLACEMENT62_BALANCE_20261001.md)は29,000局で完了しましたが、先後均衡は確認できず、試作の初期配置は6・2・2のままです。
+
 ## 出典・ライセンス
 
 `engine.js`、そこから改変した `bulk-engine.js` と `bounce-engine.js`、元の公開版を参考にしたスタイルは [bao-la-kiswahili-gameのMIT License](ENGINE_LICENSE.txt)に従います。著作権表示と許諾条件を保持しています。試作独自のコード・説明文のライセンスは現時点で未設定です。

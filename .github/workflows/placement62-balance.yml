@@ -1,0 +1,49 @@
+name: Placement 6-2 first-player balance
+on:
+  push:
+    branches: [experiment/placement62-balance-20261001]
+    paths:
+      - tools/placement62-balance/core.cjs
+      - tools/placement62-balance/run.cjs
+      - tools/placement62-balance/check.cjs
+      - tools/placement62-balance/reference-sources.json
+      - prototype/bounce-engine.js
+      - prototype/steal.js
+      - tools/balance-options/core.cjs
+      - tools/balance-options/variant-engine.cjs
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: placement62-balance-${{ github.ref }}-${{ github.sha }}
+  cancel-in-progress: false
+jobs:
+  investigate:
+    name: placement62 - ${{ matrix.task }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        task: [self-random, self-noisy, self-greedy, self-reply, self-search3, self-search4, self-search6, self-search4-mobility, cross-0, cross-1, cross-2, cross-3, cross-4, proof]
+    env:
+      TASK: ${{ matrix.task }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+      - name: Verify candidate transitions and independent search
+        run: node tools/placement62-balance/check.cjs
+      - name: Run with atomic checkpoints
+        run: node tools/placement62-balance/run.cjs "$TASK" "tools/placement62-balance/results/$TASK"
+      - name: Certify any bounded forced win
+        if: env.TASK == 'proof'
+        run: node tools/placement62-balance/certify.cjs "tools/placement62-balance/results/$TASK"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: placement62-balance-${{ matrix.task }}
+          path: tools/placement62-balance/results/
+          retention-days: 30
