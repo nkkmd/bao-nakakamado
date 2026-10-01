@@ -1,0 +1,36 @@
+name: Balance options investigation
+on:
+  push:
+    branches: [experiment/balance-options-20261001]
+    paths:
+      - '.github/workflows/balance-options.yml'
+      - 'tools/balance-options/*.cjs'
+permissions:
+  contents: read
+concurrency:
+  group: balance-options-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  screen:
+    name: Stage 1 - ${{ matrix.condition }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        condition: [equal-9, equal-10, equal-11, equal-12]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+      - name: Check isolated engine and search
+        run: node tools/balance-options/check.cjs tools/balance-options/results/checks.json
+      - name: Run condition with separate checkpoints
+        run: node tools/balance-options/run.cjs '${{ matrix.condition }}' 'tools/balance-options/results/screen/${{ matrix.condition }}' screen
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: balance-${{ matrix.condition }}
+          path: tools/balance-options/results/
+          retention-days: 30
