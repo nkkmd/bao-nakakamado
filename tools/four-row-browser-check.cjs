@@ -18,7 +18,7 @@ async function main() {
   browser=await chromium.launch({headless:true});
   const page=await browser.newPage({viewport:{width:1000,height:1000},acceptDownloads:true});
   page.on("pageerror",e=>errors.push(e.message));
-  await page.addInitScript(()=>{const native=window.setTimeout;window.setTimeout=(fn,ms,...args)=>native(fn,0,...args);});
+  await page.addInitScript(()=>{const native=window.setTimeout;window.setTimeout=(fn,ms,...args)=>native(fn,ms<500?0:ms,...args);});
   await page.goto(`http://127.0.0.1:${server.address().port}/`);
   await page.getByRole("button",{name:"対局開始",exact:true}).click();
   assert.equal(await page.locator(".pit").count(),32);
@@ -46,8 +46,9 @@ async function main() {
    assert.equal(Number(await page.locator("#north-hand").innerText()),reference.board.reserve[1]);
   }
   assert.ok(rearMoves>0&&bulkMoves>0);assert.ok(reference.history.some(e=>e.stolen));
-  const downloadPromise=page.waitForEvent("download");await page.getByRole("button",{name:"棋譜を保存",exact:true}).click();
-  const download=await downloadPromise;const file=path.join(out,"game.json");await download.saveAs(file);
+  await page.locator("summary").filter({hasText:"棋譜の保存"}).click();
+  const [download]=await Promise.all([page.waitForEvent("download"),page.getByRole("button",{name:"棋譜を保存",exact:true}).click()]);
+  const file=path.join(out,"game.json");await download.saveAs(file);
   const record=JSON.parse(fs.readFileSync(file));
   assert.equal(record.version,6);assert.equal(record.rulesVersion,"0.7.0");
   assert.equal(record.boardRowsPerPlayer,2);assert.equal(record.initialHand,22);assert.equal(record.totalKete,64);
