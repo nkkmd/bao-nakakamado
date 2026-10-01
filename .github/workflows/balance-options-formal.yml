@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        condition: [equal-10]
+        condition: [asym-9-11, equal-12]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
