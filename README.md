@@ -2,6 +2,8 @@
 
 Bao la Kiswahili の実装を出発点に、NYAKUA（ニャクア、ハンド奪取）を追加したBaoです。
 
+**Bao Nakakamado・NYAKUAの考案者：nkkmd／初公開日：2026年9月30日。** [考案・公開・変更履歴](doc/ORIGIN_AND_HISTORY.md)に、考案・名称採用・各版の変更と根拠を記録しています。
+
 **現行は試作v0.8.0：各人の前列・後列16穴、循環種まき、ハンド22個。NYAKUAの最後の1個保護と、別確保した奪取分を次の自分の手番で使う3個投入を採用しています。**
 
 ## 遊べる試作
@@ -37,3 +39,11 @@ Bao la Kiswahili の実装を出発点に、NYAKUA（ニャクア、ハンド奪
 元ゲームの公開AIの強さや研究結果を、今回の試作へそのまま適用しません。片側だけ先にMTAJIへ入る案は採用していません。勝負宣言・抽選・追加手番は削除済みで、運要素の検討は凍結しています。
 
 [v0.8.0のファイル整合監査](doc/V080_CONSISTENCY_AUDIT_20261002.md)に、文書・試験案内・CIの更新内容と検証結果を記録しています。
+
+## ライセンスと管理
+
+プログラム・画面の構造・CSS・テスト・設定は[MIT](LICENSE)、ルールブックなどの説明文・図表は[CC BY-SA 4.0](LICENSE-CC-BY-SA-4.0.txt)です。文書中の実行可能なコード例はMIT。対象ごとの[適用範囲・元資料のクレジット・変更表示](LICENSES.md)を参照してください。
+
+基礎ルールの説明は「Bao la Kiswahili 日本語完全ガイド」（© 2026 bao-la-kiswahili-ja contributors）と元ゲームの図解ルール（© 2026 bao-la-kiswahili-game contributors）を参照・再構成し、NYAKUAなどを追加しました。元プログラムのMIT表示（© 2026 cultivationdata.net）は[ENGINE_LICENSE.txt](prototype/ENGINE_LICENSE.txt)に保持しています。
+
+考案者・公開日・変更履歴・ライセンスを今後も維持する手順は[リポジトリ管理ルール](AGENTS.md)に定めます。ゲームの仕組み自体に独占権を主張するものではありません。

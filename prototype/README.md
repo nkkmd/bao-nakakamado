@@ -2,6 +2,8 @@
 
 4列32穴・初期ハンド22個のBaoを基準に、NYAKUA（ニャクア）と次の自分の手番での3個投入を採用しました。[ルールブック](../doc/RULEBOOK.md)、[比較調査](../doc/NYAKUA_THREE_STUDY_20261002.md)、[実装・検証記録](../doc/NYAKUA_THREE_ADOPTION_20261002.md)を参照してください。
 
+Bao Nakakamado・NYAKUAの考案者は **nkkmd**、初公開日は **2026年9月30日**です。[考案・公開・変更履歴](../doc/ORIGIN_AND_HISTORY.md)を参照してください。
+
 ## 起動
 
 `prototype/` を静的HTTPサーバーで配信します。
@@ -12,6 +14,26 @@ python3 -m http.server 8000
 ```
 
 2人対戦、簡易コンピューター対戦、着手の再生、サウンド、高速表示、棋譜JSON保存に対応します。コンピューターは簡易評価による相手で、元ゲームの公開AI-GEN4ではありません。
+
+## ライセンス・配信
+
+コード・画面の構造・CSSは[MIT](LICENSE)、このREADMEや画面の指定した説明文は[CC BY-SA 4.0](LICENSE-CC-BY-SA-4.0.txt)です。元資料のクレジットと具体的な適用範囲は[ライセンスと出典](../LICENSES.md)、配信先で読める案内は[licenses.html](licenses.html)を参照してください。
+
+`prototype/` だけを配信する場合も、`licenses.html`・`LICENSE`・`LICENSE-CC-BY-SA-4.0.txt`・`ENGINE_LICENSE.txt` を残します。フラットな配信用ZIPには次の9ファイルを直下へ入れます。
+
+```text
+index.html
+style.css
+next-turn-engine.js
+steal.js
+app.js
+licenses.html
+LICENSE
+LICENSE-CC-BY-SA-4.0.txt
+ENGINE_LICENSE.txt
+```
+
+ルートと配信先の同名ライセンス条文は同一に保ちます。実際に版を配信した際は公開日・版・配信URLを変更履歴へ追記してください。考案者・日付・出典の維持手順は[管理ルール](../AGENTS.md)に定めます。
 
 ## 試作ルール
 
