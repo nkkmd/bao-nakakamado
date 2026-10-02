@@ -32,4 +32,4 @@
 
 調査コード・結果は実行時のコミットとSHA-256を記録しています。研究の原記録を厳密に再現する場合は、結果のmetadataが指定するコミットを使用してください。v0.7.0以前のエンジンと試験は保存しています。
 
-配信用zipはmainの `index.html`・`style.css`・`next-turn-engine.js`・`steal.js`・`app.js`・`ENGINE_LICENSE.txt` を直下へ配置します。
+配信用zipはmainの `prototype/` から `index.html`・`style.css`・`next-turn-engine.js`・`steal.js`・`app.js`・`licenses.html`・`LICENSE`・`LICENSE-CC-BY-SA-4.0.txt`・`ENGINE_LICENSE.txt` を直下へ配置します。2026年10月2日の[ライセンス整備](../LICENSES.md)により、条文と出典・考案者の表示を同梱する方針を追加しました。規則と検証結果は変更していません。
