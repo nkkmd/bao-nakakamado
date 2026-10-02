@@ -49,9 +49,10 @@
 
   function name(player) { return player === 0 ? "SOUTH" : "NORTH"; }
   function humanTurn() { return mode === "local" || game.board.player === human; }
-  function bulkCount(board) {
-    return board.phase === "namua" && board.reserve[1 - board.player] === 0
-      && board.reserve[board.player] > 1 ? board.reserve[board.player] : 0;
+  function placementCount(board) {
+    if (board.phase !== "namua") return 0;
+    const extra = board.nyakuaReserve[board.player];
+    return Math.min(board.reserve[board.player], extra ? 2 : 1) + extra;
   }
   function variants() { return S.moveVariants(game); }
   function key(move) { return `${move.row}:${move.index}`; }
@@ -127,14 +128,14 @@
   function eventDescription(event) {
     const place = event.position ? pitName(event.position) : "";
     switch (event.kind) {
-      case "reserve": return event.count > 1
-        ? `${name(event.position.player)} のハンドのKETE ${event.count}個を ${place} へ一度に全投入しました。`
+      case "reserve": return event.nyakuaCount
+        ? `${name(event.position.player)} が通常ハンド${event.ordinaryCount}個＋確保分${event.nyakuaCount}個、計${event.count}個を ${place} へ一度に投入しました。`
         : `${name(event.position.player)} のハンドから ${place} にKETEを1個置きました。`;
       case "lift": return `${place} からKETEを${event.count}個持ち上げました。`;
       case "sow": return `${place} にKETEを1個蒔きました。`;
       case "relay": return `${place} から${event.count}個で連続種まきします。`;
       case "capture": return `${name(animation.mover)} が ${name(event.player)} の ${pitName({ player: event.player, row: E.FRONT, index: event.index })} からKETEを${event.count}個捕獲しました。`;
-      case "steal": return `NYAKUA！ ${name(event.to)} が ${name(event.from)} のハンドからKETEを1個奪いました。`;
+      case "steal": return `NYAKUA！ ${name(event.to)} が ${name(event.from)} のハンドから1個奪い、次の自分の手番用に確保しました。`;
       case "phase": return "MTAJIに移りました。";
       case "win": return "終局しました。";
       case "limit": return "連続種まきの安全上限に達しました。";
@@ -164,8 +165,8 @@
     view = game.board;
     busy = false;
     const result = game.history.at(-1);
-    if (result?.stolen) lastResult = `NYAKUA！ ${name(result.player)} が同じ着手で${result.captures}回捕獲し、${name(1 - result.player)} のハンドからKETEを1個奪いました。`;
-    else if (result?.placed > 1) lastResult = `${name(result.player)} がハンドのKETEを${result.placed}個、選んだ一穴へ全投入しました。`;
+    if (result?.stolen) lastResult = `NYAKUA！ ${name(result.player)} が同じ着手で${result.captures}回捕獲し、${name(1 - result.player)} のハンドから1個確保しました。次の自分の手番で必ず使います。`;
+    else if (result?.reservedPlaced) lastResult = `${name(result.player)} が通常ハンド${result.ordinaryPlaced}個＋確保分${result.reservedPlaced}個、計${result.placed}個を一穴へ投入しました。`;
     render();
     if (selectable()) focusBoard();
     scheduleComputer();
@@ -210,6 +211,8 @@
     $("phase-name").textContent = state.phase.toUpperCase();
     $("north-hand").textContent = state.reserve[1];
     $("south-hand").textContent = state.reserve[0];
+    $("north-nyakua").textContent = state.nyakuaReserve[1];
+    $("south-nyakua").textContent = state.nyakuaReserve[0];
     const shownHistory = animation ? game.history.slice(0, -1) : game.history;
     $("steal-count").textContent = `SOUTH ${shownHistory.filter((entry) => entry.player === 0 && entry.stolen).length}個 ／ NORTH ${shownHistory.filter((entry) => entry.player === 1 && entry.stolen).length}個`;
     $("steal-result").textContent = lastResult;
@@ -222,11 +225,12 @@
     else if (animation) $("status").textContent = animation.index
       ? eventDescription(animation.events[animation.index - 1])
       : `${name(animation.mover)} の着手を再生しています…`;
-    else if (state.winner !== null) $("status").textContent = `${name(state.winner)} の勝ち（${state.reason}）。`;
+    else if (state.reason === "relay-limit") $("status").textContent = "連続種まきの安全上限に達したため対局を停止しました。通常の勝敗は未判定です。";
+    else if (state.winner !== null) $("status").textContent = `${name(state.winner)} の勝ち（${state.reason === "front-empty" ? "前列が全空" : "合法手なし"}）。`;
     else if (busy) $("status").textContent = "コンピューターが考えています…";
     else if (!humanTurn()) $("status").textContent = `${name(state.player)} の手番です。待機中…`;
     else if (moves.length === 1 && moves[0].type === "pass") $("status").textContent = `${name(state.player)} のハンドが0です。パスして相手へ手番を渡してください。`;
-    else if (bulkCount(state)) $("status").textContent = `${name(state.player)} の手番。ハンドのKETE ${bulkCount(state)}個を選んだ一穴へ全投入します。光る穴を選んでください。`;
+    else if (state.nyakuaReserve[state.player]) $("status").textContent = `${name(state.player)} の手番。通常ハンド${placementCount(state) - 1}個＋確保分1個、計${placementCount(state)}個を一穴へ投入します。${selected ? "方向・入口を選んでください。" : "光る穴を選んでください。"}`;
     else if (selected) $("status").textContent = `${pitName({ player: state.player, ...selected })} を選択しました。方向・入口を選んでください。`;
     else $("status").textContent = `${name(state.player)} の手番。光る穴を選んでください。`;
     if (!selectable()) return;
@@ -241,7 +245,7 @@
       const button = document.createElement("button");
       button.type = "button";
       const preview = S.apply(game, move).history.at(-1);
-      button.textContent = `${moveLabel(move)}${preview.placed > 1 ? `・ハンドの${preview.placed}個を一穴へ全投入` : ""}${preview.stolen ? "・NYAKUA（ハンドから1個奪う）" : ""}`;
+      button.textContent = `${moveLabel(move)}${preview.reservedPlaced ? `・通常${preview.ordinaryPlaced}個＋確保1個（計${preview.placed}個）` : ""}${preview.stolen ? "・NYAKUA（次の自分の手番用に1個確保）" : ""}`;
       button.addEventListener("click", () => play(move));
       choices.append(button);
     }
@@ -255,6 +259,12 @@
       const result = S.applyWithEvents(game, move);
       game = result.game;
       selected = null;
+      if (game.board.reason === "relay-limit") {
+        view = game.board;
+        busy = false;
+        render();
+        return;
+      }
       busy = true;
       view = initial;
       animation = {
@@ -269,9 +279,10 @@
   }
 
   function evaluate(board, player) {
+    if (board.reason === "relay-limit") return 0;
     if (board.winner !== null) return board.winner === player ? 100000 : -100000;
     const front = (side) => board.pits[side][E.FRONT].reduce((a, b) => a + b, 0);
-    const all = (side) => board.reserve[side] + board.pits[side].flat().reduce((a, b) => a + b, 0);
+    const all = (side) => board.reserve[side] + board.nyakuaReserve[side] + board.pits[side].flat().reduce((a, b) => a + b, 0);
     return 2 * (front(player) - front(1 - player)) + all(player) - all(1 - player);
   }
 
@@ -332,7 +343,7 @@
   });
   $("download").addEventListener("click", () => {
     if (!started || !game.history.length) return;
-    const record = { format: "bao-nakakamado-prototype", version: 6, baseRules: "R-002", variantRule: E.RULE_ID, rulesVersion: E.RULES_VERSION, boardRowsPerPlayer: E.BOARD_ROWS_PER_PLAYER, sowingPath: E.SOWING_PATH, nyakuaProtectLast: E.NYAKUA_PROTECT_LAST, nyakuaFixedPitBulk: E.NYAKUA_FIXED_PIT_BULK, initialHand: E.INITIAL_HAND, totalKete: E.TOTAL_KETE, mode, history: game.history, final: game.board };
+    const record = { format: "bao-nakakamado-prototype", version: 7, baseRules: "R-002", variantRule: E.RULE_ID, rulesVersion: E.RULES_VERSION, boardRowsPerPlayer: E.BOARD_ROWS_PER_PLAYER, sowingPath: E.SOWING_PATH, nyakuaProtectLast: E.NYAKUA_PROTECT_LAST, nyakuaFixedPitBulk: E.NYAKUA_FIXED_PIT_BULK, nyakuaNextTurnThree: E.NYAKUA_NEXT_TURN_THREE, nyakuaReservedProtected: E.NYAKUA_RESERVED_PROTECTED, initialHand: E.INITIAL_HAND, totalKete: E.TOTAL_KETE, mode, history: game.history, final: game.board, adjudication: game.board.reason === "relay-limit" ? "safety-stop" : game.board.winner === null ? "ongoing" : "normal" };
     const blob = new Blob([JSON.stringify(record, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
