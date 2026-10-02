@@ -1,0 +1,75 @@
+name: NYAKUA next-turn three-kete study
+on:
+  push:
+    branches: [experiment/nyakua-three-20261002]
+    paths: ['tools/nyakua-three/*.cjs', 'tools/nyakua-three/README.md', '.github/workflows/nyakua-three.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: nyakua-three-${{ github.ref }}-${{ github.sha }}
+  cancel-in-progress: false
+jobs:
+  study:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        task: [self-random, self-noisy, self-greedy, self-reply, self-search3, self-search4, self-search6, self-search4-mobility, cross-0, cross-1, cross-2, proof]
+    env:
+      TASK: ${{ matrix.task }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+      - name: Baseline and candidate checks
+        run: |
+          node --test prototype/four-row.test.cjs
+          mkdir -p tools/nyakua-three/results
+          node tools/nyakua-three/check.cjs tools/nyakua-three/results/checks.json
+      - name: Checkpointed comparison
+        run: node tools/nyakua-three/run.cjs "$TASK" "tools/nyakua-three/results/$TASK"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nyakua-three-${{ matrix.task }}
+          path: tools/nyakua-three/results/
+          retention-days: 30
+  report:
+    needs: study
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: nyakua-three-*
+          path: tools/nyakua-three/results
+          merge-multiple: true
+      - name: Verify records and generate report
+        run: node tools/nyakua-three/report.cjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nyakua-three-final
+          path: |
+            tools/nyakua-three/results/
+            doc/NYAKUA_THREE_STUDY_20261002.md
+          retention-days: 30
+      - name: Preserve results on the investigation branch
+        env:
+          STUDY_BRANCH: ${{ github.ref_name }}
+        run: |
+          test "$STUDY_BRANCH" = experiment/nyakua-three-20261002
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add tools/nyakua-three/results doc/NYAKUA_THREE_STUDY_20261002.md
+          git commit -m "docs: record NYAKUA next-turn three-kete study results"
+          git push origin "HEAD:$STUDY_BRANCH"

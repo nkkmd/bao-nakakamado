@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "study": "NYAKUA-THREE-20261002",
+    "reference": "db84f8b431b80efb6fa072761a0968b293c50c04",
+    "task": "cross-2",
+    "override": null,
+    "hashes": {
+      "engine.cjs": "20fa3bb06b28b990e83cb6128f7734d6692aa18da1a3fc823584e559b76eee6e",
+      "core.cjs": "6b5d7658f80fe2b5611d82b23f91863e58964991f40477ab91f07c6f82581f93",
+      "run.cjs": "76c85a03f728183f9cf8b8f106368701e17a2a071ad5e19c5748059f77ecb36d",
+      "check.cjs": "e501dcc78d8f1ea59dfb28a6cb346d92887477a2b31fc2fad8470cab4cf5db0e",
+      "../../prototype/bulk-engine.js": "23df9b5c45fe3f7ab117c676e06d9d5a32605ae810ac0d3cd909b025c07fe657",
+      "../../prototype/four-row-engine.js": "e119ec422a2ebf842624d3fe627bc2f44003e0c49e28bb8351ed09cefb285a2a",
+      "../../prototype/steal.js": "2f27a86f660627cb8062bb6c828c8397828ccf954dd7f81a5423697d92a952d8"
+    },
+    "node": "v24.19.0",
+    "runId": "36970748063",
+    "commit": "1c266fe03581865064521910d0bc9fb2740d471e"
+  },
+  "signature": "a82666187734d5d89a676d6210079f98616e97657c51e3e25ff3a0ad2515da12",
+  "completed": true,
+  "results": [
+    {
+      "model": "current",
+      "policy": null,
+      "pair": [
+        "search4",
+        "search6"
+      ],
+      "n": 200,
+      "completed": 200,
+      "firstWins": 71,
+      "secondWins": 129,
+      "firstWinPct": 35.5,
+      "avgPlies": 57.575,
+      "medianPlies": 56,
+      "p95Plies": 72,
+      "maxPlies": 104,
+      "avgNamuaMoves": 41.78,
+      "avgMtajiMoves": 15.795,
+      "mtajiPlayedPct": 99.5,
+      "avgNyakua": 4.23,
+      "nyakuaPct": 90.5,
+      "passes": 0,
+      "budgetStops": 0,
+      "searchNodes": 5537080,
+      "reasons": {
+        "no-move": 26,
+        "front-empty": 174
+      },
+      "pairs": 100,
+      "pairCluster95Pct": [
+        28.35746977450849,
+        42.642530225491505
+      ]
+    },
+    {
+      "model": "three",
+      "policy": null,
+      "pair": [
+        "search4",
+        "search6"
+      ],
+      "n": 200,
+      "completed": 200,
+      "firstWins": 108,
+      "secondWins": 92,
+      "firstWinPct": 54,
+      "avgPlies": 49.66,
+      "medianPlies": 49,
+      "p95Plies": 62,
+      "maxPlies": 85,
+      "avgNamuaMoves": 37.77,
+      "avgMtajiMoves": 11.89,
+      "mtajiPlayedPct": 99,
+      "avgNyakua": 3.355,
+      "nyakuaPct": 95.5,
+      "passes": 0,
+      "budgetStops": 6,
+      "searchNodes": 4709690,
+      "reasons": {
+        "front-empty": 161,
+        "no-move": 39
+      },
+      "pairs": 100,
+      "pairCluster95Pct": [
+        46.411648360514825,
+        61.58835163948518
+      ]
+    }
+  ]
+}

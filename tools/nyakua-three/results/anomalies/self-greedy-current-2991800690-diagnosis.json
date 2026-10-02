@@ -1,0 +1,220 @@
+{
+  "model": "current",
+  "seed": 2991800690,
+  "policies": [
+    "greedy",
+    "greedy"
+  ],
+  "plies": 49,
+  "phase": "mtaji",
+  "move": {
+    "row": 0,
+    "index": 1,
+    "direction": "left",
+    "type": "takata",
+    "phase": "mtaji"
+  },
+  "placed": 0,
+  "reason": "relay-limit",
+  "mtajiSameInBothEngines": true,
+  "extendedLimit": 65536,
+  "extendedRelaysObserved": 100,
+  "extendedReason": "PROVEN_RELAY_CYCLE",
+  "extendedWinner": null,
+  "extendedFinishedNormally": false,
+  "cycles": [
+    {
+      "firstRelay": 1,
+      "repeatedRelay": 101,
+      "period": 100,
+      "checkpoint": {
+        "state": {
+          "pits": [
+            [
+              [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                7,
+                0
+              ],
+              [
+                2,
+                2,
+                1,
+                2,
+                1,
+                0,
+                2,
+                1
+              ]
+            ],
+            [
+              [
+                0,
+                3,
+                1,
+                4,
+                1,
+                5,
+                3,
+                1
+              ],
+              [
+                3,
+                0,
+                4,
+                5,
+                6,
+                4,
+                2,
+                1
+              ]
+            ]
+          ],
+          "reserve": [
+            0,
+            0
+          ],
+          "houseOwned": [
+            false,
+            false
+          ],
+          "player": 0,
+          "phase": "mtaji",
+          "winner": null,
+          "reason": "",
+          "turn": 49,
+          "pending": [
+            0,
+            0
+          ],
+          "studyPlacement": 0
+        },
+        "cursor": {
+          "player": 0,
+          "row": 1,
+          "index": 0
+        },
+        "direction": "left",
+        "wasEmpty": false,
+        "captureTurn": false
+      }
+    }
+  ],
+  "alternatives": [
+    {
+      "move": {
+        "row": 0,
+        "index": 1,
+        "direction": "left",
+        "type": "takata",
+        "phase": "mtaji"
+      },
+      "reason": "relay-limit",
+      "winner": 1
+    },
+    {
+      "move": {
+        "row": 0,
+        "index": 1,
+        "direction": "right",
+        "type": "takata",
+        "phase": "mtaji"
+      },
+      "reason": "",
+      "winner": null
+    },
+    {
+      "move": {
+        "row": 0,
+        "index": 6,
+        "direction": "left",
+        "type": "takata",
+        "phase": "mtaji"
+      },
+      "reason": "",
+      "winner": null
+    },
+    {
+      "move": {
+        "row": 0,
+        "index": 6,
+        "direction": "right",
+        "type": "takata",
+        "phase": "mtaji"
+      },
+      "reason": "",
+      "winner": null
+    }
+  ],
+  "nonLimitAlternatives": 3,
+  "before": {
+    "pits": [
+      [
+        [
+          0,
+          2,
+          1,
+          0,
+          1,
+          0,
+          7,
+          0
+        ],
+        [
+          1,
+          2,
+          1,
+          2,
+          1,
+          0,
+          2,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          3,
+          1,
+          4,
+          1,
+          5,
+          3,
+          1
+        ],
+        [
+          3,
+          0,
+          4,
+          5,
+          6,
+          4,
+          2,
+          1
+        ]
+      ]
+    ],
+    "reserve": [
+      0,
+      0
+    ],
+    "houseOwned": [
+      false,
+      false
+    ],
+    "player": 0,
+    "phase": "mtaji",
+    "winner": null,
+    "reason": "",
+    "turn": 49,
+    "pending": [
+      0,
+      0
+    ]
+  }
+}

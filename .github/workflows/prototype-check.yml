@@ -4,6 +4,7 @@ on:
     paths:
       - 'prototype/**'
       - 'tools/four-row-*'
+      - 'tools/next-turn-*'
       - '.github/workflows/prototype-check.yml'
   workflow_dispatch:
 permissions:
@@ -18,9 +19,9 @@ jobs:
         with:
           node-version: '24'
       - name: Rule and DOM tests
-        run: node --test prototype/four-row.test.cjs prototype/app.test.cjs prototype/bounce.test.cjs prototype/steal.test.js tools/fixed-pit-bulk-study.test.cjs tools/fixed-pit-triggered-study.test.cjs
+        run: node --test prototype/next-turn.test.cjs prototype/four-row.test.cjs prototype/app.test.cjs prototype/bounce.test.cjs prototype/steal.test.js tools/fixed-pit-bulk-study.test.cjs tools/fixed-pit-triggered-study.test.cjs
       - name: Reachable games and replay consistency
-        run: node tools/four-row-nyakua-check.cjs 100 "$RUNNER_TEMP/four-row-nyakua-results.json"
+        run: node tools/next-turn-live-check.cjs 100 "$RUNNER_TEMP/next-turn-live-results.json"
       - name: Install pinned browser test dependencies
         run: |
           npm install --prefix "$RUNNER_TEMP/bao-browser" --no-audit --no-fund playwright@1.62.1
@@ -28,13 +29,13 @@ jobs:
       - name: Real browser desktop, mobile and full-game replay
         env:
           NODE_PATH: ${{ runner.temp }}/bao-browser/node_modules
-          BAO_UI_OUTPUT: ${{ runner.temp }}/bao-four-row-ui
+          BAO_UI_OUTPUT: ${{ runner.temp }}/bao-next-turn-ui
         run: node tools/four-row-browser-check.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: four-row-prototype-verification
+          name: next-turn-prototype-verification
           path: |
-            ${{ runner.temp }}/four-row-nyakua-results.json
-            ${{ runner.temp }}/bao-four-row-ui/
+            ${{ runner.temp }}/next-turn-live-results.json
+            ${{ runner.temp }}/bao-next-turn-ui/
           retention-days: 30

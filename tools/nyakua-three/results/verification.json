@@ -1,0 +1,59 @@
+{
+  "totalGames": 19400,
+  "exampleReplays": 84,
+  "completedTasks": 12,
+  "checks": {
+    "accounting": {
+      "states": 170,
+      "edges": 323,
+      "passes": 0,
+      "note": "All abstract NYAKUA yes/no choices. Independent of board legality; no artificial initial states."
+    },
+    "boundaryCases": 145,
+    "oracleTransitions": 12497,
+    "mirrorPairs": 60,
+    "replays": 60
+  },
+  "anomalies": [
+    {
+      "id": "self-greedy-current-2991800690",
+      "task": "self-greedy",
+      "model": "current",
+      "seed": 2991800690,
+      "phase": "mtaji",
+      "plies": 49,
+      "reason": "relay-limit",
+      "extendedReason": "PROVEN_RELAY_CYCLE",
+      "period": 100,
+      "mtajiSameInBothEngines": true,
+      "nonLimitAlternatives": 3
+    },
+    {
+      "id": "self-random-current-3026721899",
+      "task": "self-random",
+      "model": "current",
+      "seed": 3026721899,
+      "phase": "mtaji",
+      "plies": 134,
+      "reason": "relay-limit",
+      "extendedReason": "relay-limit",
+      "period": null,
+      "mtajiSameInBothEngines": true,
+      "nonLimitAlternatives": 7
+    },
+    {
+      "id": "self-random-three-3435580265",
+      "task": "self-random",
+      "model": "three",
+      "seed": 3435580265,
+      "phase": "mtaji",
+      "plies": 41,
+      "reason": "relay-limit",
+      "extendedReason": "PROVEN_RELAY_CYCLE",
+      "period": 34498,
+      "mtajiSameInBothEngines": true,
+      "nonLimitAlternatives": 9
+    }
+  ],
+  "reportRunId": "36971759741"
+}

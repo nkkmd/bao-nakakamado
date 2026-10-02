@@ -54,6 +54,8 @@ button:disabled { cursor: default; opacity: .45; }
 .reserves > span { display: flex; align-items: baseline; gap: 8px; }
 .reserves strong { color: #edf3d9; font-size: 21px; min-width: 2ch; text-align: right; }
 .hand-label { color: #a4b9a7; font-size: 12px; }
+.reserves .reserved-label { display: inline-flex; gap: 5px; align-items: baseline; color: #e2c36b; font-size: 12px; }
+.reserves .reserved-count { min-width: 1ch; font-size: 16px; color: #e2c36b; }
 .reserves .active-hand { background: #e2c36b; }
 .reserves .donor-hand { background: #ff9b8f; }
 .reserves .recipient-hand { background: #8bd7d2; }
@@ -127,11 +129,12 @@ footer { margin-top: 22px; font-size: 12px; line-height: 1.9; color: #9ab3a5; te
   .toolbar { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
   .toolbar button { padding: 9px 4px; font-size: 12px; }
   #new-game { margin-left: 0; }
-  .game-info { gap: 8px; padding: 12px 10px; }
+  .game-info { grid-template-columns: 1fr auto; gap: 8px; padding: 12px 10px; }
   #turn-name { font-size: 18px; }
   #phase-name { font-size: 12px; padding: 5px; }
-  .reserves { font-size: 12px; }
-  .reserves > span { gap: 5px; }
+  .reserves { grid-column: 1 / -1; grid-template-columns: repeat(2, minmax(0, 1fr)); justify-self: stretch; font-size: 12px; }
+  .reserves > span { flex-wrap: wrap; gap: 5px; }
+  .reserves .reserved-label { flex-basis: 100%; }
   .reserves strong { font-size: 18px; }
   .start-screen:not([hidden]) { position: relative; inset: auto; padding: 12px; }
   .start-screen:not([hidden]) ~ :is(.game-info, .board-surface, .move-choices) { display: none; }

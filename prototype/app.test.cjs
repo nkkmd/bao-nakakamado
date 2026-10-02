@@ -1,7 +1,7 @@
 "use strict";
 const assert = require("node:assert/strict");
 const test = require("node:test");
-const Study = require("../tools/four-row-nyakua-check.cjs");
+const Study = require("../tools/next-turn-live-check.cjs");
 
 class Element {
   constructor() {
@@ -24,8 +24,8 @@ class Element {
   click() { if (!this.disabled) this.handlers.get("click")?.(); }
 }
 
-test("four-row replay handles rear moves, NYAKUA, fixed-pit bulk and record metadata", () => {
-  const ids = ["board", "turn-number", "turn-name", "phase-name", "north-hand", "south-hand",
+test("four-row replay handles rear moves, NYAKUA, next-turn three-KETE placement and record metadata", () => {
+  const ids = ["board", "turn-number", "turn-name", "phase-name", "north-hand", "south-hand", "north-nyakua", "south-nyakua",
     "steal-count", "steal-result", "download", "move-choices", "setup", "status",
     "start", "new-game", "mode", "side", "side-field", "opponent-badge", "sound", "speed"];
   const elements = Object.fromEntries(ids.map((id) => [id, new Element()]));
@@ -53,7 +53,7 @@ test("four-row replay handles rear moves, NYAKUA, fixed-pit bulk and record meta
     clearTimeout: (id) => timers.delete(id),
   };
   try {
-    window.BaoEngine = require("./four-row-engine.js");
+    window.BaoEngine = require("./next-turn-engine.js");
     const S = require("./steal.js").createForEngine(window.BaoEngine);
     window.NakakamadoSteal = S;
     require("./app.js");
@@ -69,7 +69,7 @@ test("four-row replay handles rear moves, NYAKUA, fixed-pit bulk and record meta
     assert.ok(trace.some(t => t.stolen));
     for (let i = 0; i < trace.length; i += 1) {
       const move = trace[i].move;
-      if (i === bulkIndex) assert.match(elements.status.textContent, new RegExp(`${bulkHand}個を選んだ一穴へ全投入`));
+      if (i === bulkIndex) assert.ok(elements.status.textContent.includes(`計${bulkHand}個を一穴へ投入`));
       if (move.type === "pass") {
         assert.equal(elements["move-choices"].children.length, 1);
         elements["move-choices"].children[0].click();
@@ -82,7 +82,7 @@ test("four-row replay handles rear moves, NYAKUA, fixed-pit bulk and record meta
         const choiceIndex = candidates.findIndex((m) => JSON.stringify(m) === JSON.stringify(move));
         assert.ok(choiceIndex >= 0, `Missing choice for ${coordinate}`);
         const choice = elements["move-choices"].children[choiceIndex];
-        if (i === bulkIndex) assert.match(choice.textContent, new RegExp(`ハンドの${bulkHand}個を一穴へ全投入`));
+        if (i === bulkIndex) assert.ok(choice.textContent.includes(`計${bulkHand}個`));
         choice.click();
       }
       reference = S.apply(reference, move);
@@ -96,11 +96,13 @@ test("four-row replay handles rear moves, NYAKUA, fixed-pit bulk and record meta
         descriptions.push(elements.status.textContent);
       }
       if (i === bulkIndex) {
-        assert.equal(descriptions.filter((message) => message.includes("一度に全投入")).length, 1);
-        assert.ok(descriptions.some((message) => message.includes(`KETE ${bulkHand}個`)));
+        assert.equal(descriptions.filter((message) => message.includes("一度に投入")).length, 1);
+        assert.ok(descriptions.some((message) => message.includes(`計${bulkHand}個`)));
       }
       assert.equal(Number(elements["south-hand"].textContent), reference.board.reserve[0]);
       assert.equal(Number(elements["north-hand"].textContent), reference.board.reserve[1]);
+      assert.equal(Number(elements["south-nyakua"].textContent), reference.board.nyakuaReserve[0]);
+      assert.equal(Number(elements["north-nyakua"].textContent), reference.board.nyakuaReserve[1]);
       for (const pit of elements.board.children) {
         const coord = pit.children[1].textContent;
         const player = coord[0] === "S" ? 0 : 1;
@@ -109,16 +111,38 @@ test("four-row replay handles rear moves, NYAKUA, fixed-pit bulk and record meta
       }
     }
     elements.download.click();
-    assert.equal(savedRecord.version, 6);
-    assert.equal(savedRecord.rulesVersion, "0.7.0");
+    assert.equal(savedRecord.version, 7);
+    assert.equal(savedRecord.rulesVersion, "0.8.0");
     assert.equal(savedRecord.nyakuaProtectLast, true);
-    assert.equal(savedRecord.nyakuaFixedPitBulk, true);
+    assert.equal(savedRecord.nyakuaFixedPitBulk, false);
+    assert.equal(savedRecord.nyakuaNextTurnThree, true);
+    assert.equal(savedRecord.nyakuaReservedProtected, true);
+    assert.equal(savedRecord.adjudication, "normal");
     assert.equal(savedRecord.initialHand, 22);
     assert.equal(savedRecord.totalKete, 64);
     assert.equal(savedRecord.boardRowsPerPlayer, 2);
     assert.equal(savedRecord.sowingPath, "ring");
     assert.equal(savedRecord.variantRule, window.BaoEngine.RULE_ID);
     assert.deepEqual(JSON.parse(JSON.stringify(S.replay(savedRecord.history).board)), savedRecord.final);
+
+    // A real reachable relay-limit counterexample stops without playing thousands of frames.
+    const cycle = require("../tools/nyakua-three/results/anomalies/self-random-three-3435580265-game.json");
+    const cycleHistory = cycle.path.map(step => step.entry);
+    const beforeCycle = S.replay(cycleHistory.slice(0, -1));
+    const originalInitial = S.initialGame;
+    S.initialGame = () => window.BaoEngine.clone(beforeCycle);
+    elements["new-game"].click(); elements.start.click();
+    const cycleMove = cycleHistory.at(-1).move;
+    const cycleCoord = `${beforeCycle.board.player === 0 ? "S" : "N"}F${cycleMove.index + 1}`;
+    elements.board.children.find(item => item.children[1]?.textContent === cycleCoord).click();
+    const cycleMoves = S.moveVariants(beforeCycle).filter(m => m.row === cycleMove.row && m.index === cycleMove.index);
+    elements["move-choices"].children[cycleMoves.findIndex(m => JSON.stringify(m) === JSON.stringify(cycleMove))].click();
+    assert.equal(elements.board.attrs.get("aria-busy"), "false");
+    assert.match(elements.status.textContent, /対局を停止.*勝敗は未判定/);
+    elements.download.click(); assert.equal(savedRecord.adjudication, "safety-stop");
+    assert.equal(savedRecord.final.reason, "relay-limit");
+    assert.deepEqual(JSON.parse(JSON.stringify(S.replay(savedRecord.history).board)), savedRecord.final);
+    S.initialGame = originalInitial;
 
     // Cancelling a scheduled computer turn must leave the setup visible.
     elements["new-game"].click();

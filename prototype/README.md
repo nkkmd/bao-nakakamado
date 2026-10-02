@@ -1,6 +1,6 @@
-# Bao Nakakamado：遊べる試作v0.7.0
+# Bao Nakakamado：遊べる試作v0.8.0
 
-各人の前列・後列16穴、ハンド22個のBao la Kiswahiliの実装を基準に、NYAKUA（ニャクア）を追加しています。**最後の1個保護と一穴全投入は現行仕様として固定**しました。[ルールブック](../doc/RULEBOOK.md)と[変更・検証記録](../doc/FOUR_ROW_NYAKUA_FIXED_20261002.md)を参照してください。
+4列32穴・初期ハンド22個のBaoを基準に、NYAKUA（ニャクア）と次の自分の手番での3個投入を採用しました。[ルールブック](../doc/RULEBOOK.md)、[比較調査](../doc/NYAKUA_THREE_STUDY_20261002.md)、[実装・検証記録](../doc/NYAKUA_THREE_ADOPTION_20261002.md)を参照してください。
 
 ## 起動
 
@@ -15,26 +15,30 @@ python3 -m http.server 8000
 
 ## 試作ルール
 
-- 各人の前列8穴・後列8穴、両者4列32穴。種まきは自分の前後列を循環します。
-- 初期前列は `0,0,0,0,6,2,2,0`、後列は空。ハンド22個ずつ、合計64個。
-- NAMUAの一着手で捕獲2回以上、相手ハンド2個以上なら、着手後に1個だけ奪います。最後の1個は奪いません。
-- 相手ハンド0なら、残り2個以上のハンドを通常の合法な開始穴へ一度に全投入。捕獲義務、連続種まき、NYUMBAの2個蒔きを維持します。
-- 両者のハンド0で共通MTAJIへ移ります。通常の初期局面からパスは生じませんが、人工局面用の互換処理は残します。
-- 捕獲は相手前列から毎回全捕獲。相手前列全空、または相手の合法手なしで勝ち。後列に残数があっても前列全空なら負けです。
+- 各人の前列8穴・後列8穴、両者4列32穴。初期前列は `0,0,0,0,6,2,2,0`、後列は空。通常ハンド22個ずつ、確保分0、合計64個。
+- NAMUAの一着手で捕獲2回以上、相手の通常ハンド2個以上なら1個だけ奪い、通常ハンドと別に確保します。相手の最後の1個と確保分は奪えません。
+- 次の自分の手番で通常ハンド2個＋確保分1個を同じ合法な開始穴へ一度に投入。通常ハンドが1個なら計2個、0個なら確保分1個のみ。確保分は必ず使い、その手でもNYAKUAが発動します。
+- 確保分がなければ通常1個投入。捕獲義務・捕獲入口・連続種まき・NYUMBAの2個蒔きを維持します。
+- 両者の通常ハンドと確保分がすべて0で共通MTAJIへ移行。通常の初期局面ではハンド枯渇によるパスは生じません。人工局面用の互換パス処理は残します。
+- 相手前列から毎回全捕獲。相手前列全空、または相手の合法手なしで勝ち。後列に残数があっても前列全空なら負けです。
 
 ## 実装と棋譜
 
-読み込み順は `bulk-engine.js` → `four-row-engine.js` → `steal.js` → `app.js`。`four-row-engine.js` は現行仕様の定数を固定する接続層で、保存済み4列エンジンを使います。`engine.js`、`bulk-engine.js`、`bounce-engine.js` と歴史的な試験を変更しないため、過去の結果を元の条件で再現できます。
+読み込み順は `next-turn-engine.js` → `steal.js` → `app.js`。`engine.js`・`bulk-engine.js`・`bounce-engine.js`・`four-row-engine.js` は過去条件の再現用です。`steal.js` はエンジンの定数で奪取先を切り替え、過去条件では従来のハンド移動を維持します。
 
-棋譜JSONはversion 6、`rulesVersion: "0.7.0"`、`variantRule: "namua-steal-one-protect-last-fixed-pit-bulk-two-row-ring-hand22"`。前後列・循環・ハンド22個・総数64個、最後の1個保護・一穴全投入も明記します。各手の `placed`・`captures`・`stolen` を維持します。旧1列盤の棋譜と区別し、画面での棋譜読み込みは未実装です。
+画面では通常ハンドと「確保」を別表示。棋譜JSONはversion 7、`rulesVersion: "0.8.0"`、`nyakuaFixedPitBulk: false`、`nyakuaNextTurnThree: true`、`nyakuaReservedProtected: true`。盤の `reserve` は通常ハンド、`nyakuaReserve` は確保分、`pending` は終局時の捕獲保留です。各手に `placed`・`ordinaryPlaced`・`reservedPlaced`・`captures`・`stolen` を記録し、再構築時は両種の投入数も検査します。画面での棋譜読み込みは未実装です。
 
 ## 確認
 
 リポジトリ直下で実行します。
 
 ```sh
-node --test prototype/four-row.test.cjs prototype/app.test.cjs prototype/bounce.test.cjs prototype/steal.test.js tools/fixed-pit-bulk-study.test.cjs tools/fixed-pit-triggered-study.test.cjs
-node tools/four-row-nyakua-check.cjs 100 /tmp/four-row-nyakua-reproduced.json
+node --test prototype/next-turn.test.cjs prototype/four-row.test.cjs prototype/app.test.cjs prototype/bounce.test.cjs prototype/steal.test.js tools/fixed-pit-bulk-study.test.cjs tools/fixed-pit-triggered-study.test.cjs
+node tools/next-turn-live-check.cjs 100 /tmp/next-turn-live-results.json
 ```
 
-[保存済み進行確認](../tools/four-row-nyakua-results.json)には400局、40組の南北交換、40局の棋譜再構築、8,873候補遷移のイベント照合を記録しました。これは先後均衡や全局面の停止の証明ではありません。takasia未実装と連続種まき安全上限など、元エンジンの制約を引き継ぎます。
+実画面は `tools/four-row-browser-check.cjs` でデスクトップ・スマホ幅320/390/432px、通常ハンド・確保分、全対局の盤面、棋譜保存、コンピューター、リセットを確認します。GitHub Actionsの `Playable prototype checks` がブラウザー依存を準備して実行します。
+
+## 既知の制約
+
+先後均衡と長い必勝ルートは未判定です。takasia未実装、MTAJIの一部局面での一着手内の種まき循環を含む元エンジンの制約を引き継ぎます。連続種まき512回の安全上限で対局を停止し、画面と棋譜の `adjudication: "safety-stop"` で正規終局と区別します。再現用の内部 `winner` は通常の勝者と解釈しないでください。正式な循環停止規定は別途検討が必要です。
