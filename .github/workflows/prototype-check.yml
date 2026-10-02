@@ -5,6 +5,7 @@ on:
       - 'prototype/**'
       - 'tools/four-row-*'
       - 'tools/next-turn-*'
+      - 'tools/nyakua-three/**'
       - '.github/workflows/prototype-check.yml'
   workflow_dispatch:
 permissions:

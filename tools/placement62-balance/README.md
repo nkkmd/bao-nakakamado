@@ -1,6 +1,20 @@
-# 初期配置6・2と現行6・2・2の先後比較
+# 初期配置6・2と当時の6・2・2の先後比較
+
+> v0.6.1の履歴再現用です。以下の「現行」・対照・製品は記録当時の1列盤を指します。現行v0.8.0の4列盤・次手3個投入の確認は[試作README](../../prototype/README.md)を参照してください。
 
 対象：main `482ac28b8be2df11df873441196be53fc505df46` のv0.6.1。候補は各人 `0,0,0,0,6,2,0,0`、ハンド12個。NYUMBAに6個、隣の6番穴に2個を置き、7番穴は空にする。盤上各8個、合計40個。配置以外は、毎回全捕獲、NYAKUAの最後の1個保護、一穴全投入、共通MTAJI移行などの現行規則を維持する。製品エンジン・画面は変更しない。
+
+## v0.8.0から履歴を再現する準備
+
+v0.8.0の `steal.js` をそのまま使うと `reference-sources.json` の署名検査が拒否します。保存済みの試験コード・結果を含むHEADから別の作業ツリーを作り、指定した4ソースだけを対照コミットから復元してから、以下の実行・データ展開・検証を行ってください。
+
+```sh
+git worktree add --detach /tmp/bao-placement62-replay HEAD
+git -C /tmp/bao-placement62-replay restore --source=482ac28b8be2df11df873441196be53fc505df46 -- prototype/bounce-engine.js prototype/steal.js tools/balance-options/core.cjs tools/balance-options/variant-engine.cjs
+cd /tmp/bao-placement62-replay
+```
+
+`results/SHA256.json` は研究記録を配置した時点の署名です。READMEの今回の説明更新に合わせて原記録の署名を変更しません。
 
 ## 対照と実行条件
 

@@ -1,6 +1,6 @@
 # NYUMBA残数による連続捕獲上限：調査履歴
 
-**採用判断：2026年10月1日、ユーザー判断により採用見送り。** 現行v0.6.1は各捕獲で相手穴の全KETEを奪います。このディレクトリの検証用エンジンは、遊べる試作へ組み込んでいません。
+**採用判断：2026年10月1日、ユーザー判断により採用見送り。** 対照の旧v0.6.1は各捕獲で相手穴の全KETEを奪います。現行v0.8.0も部分捕獲上限を採用せず、全捕獲を維持しています。[現行仕様](../../prototype/README.md)を参照してください。このディレクトリの検証用エンジンは、遊べる試作へ組み込んでいません。
 
 [結果と採用判断](../../doc/NYUMBA_CAPTURE_CAP_STUDY_20261001.md)を参照してください。基準はmain `3c8024cc57fb6dbe70eb525b3db004079ecb4024`、Node.js v24.19.0。ローカルの隔離したVMで実行しました。GitHub Actionsで実行した記録ではありません。
 
@@ -12,9 +12,12 @@ NAMUA/MTAJIの同一着手内で、最初の捕獲は全捕獲。2回目以降�
 
 ## 再現方法
 
-リポジトリのルートから、外部依存なしで実行できます。
+v0.8.0の `steal.js` は別確保対応で変わったため、そのままでは基準ソースの署名検査が拒否します。以下のように別の作業ツリーを作り、指定した4ソースだけを固定コミットから復元します。研究コードと結果は現在のHEADに保存されたものを使います。既存の作業ツリーのソースは変えません。
 
 ```sh
+git worktree add --detach /tmp/bao-nyumba-replay HEAD
+git -C /tmp/bao-nyumba-replay restore --source=3c8024cc57fb6dbe70eb525b3db004079ecb4024 -- prototype/bounce-engine.js prototype/steal.js tools/balance-options/core.cjs tools/one-row-bounce-study.cjs
+cd /tmp/bao-nyumba-replay
 node tools/nyumba-capture-cap/boundaries.cjs
 node tools/nyumba-capture-cap/study.cjs 1000
 node tools/nyumba-capture-cap/search-check.cjs
@@ -23,7 +26,7 @@ node tools/nyumba-capture-cap/verify.cjs
 
 再実行の出力先は `tools/nyumba-capture-cap/runs/` です。保存済みJSONを上書きしません。`BAO_CAP_OUTPUT_DIR` で出力先を変更できます。検証器も同じ環境変数で指定した出力先を参照します。
 
-`capped-engine.cjs` は基準ソースをSHA-256で確認し、最小限の置換後に独立したVMへ読み込みます。将来、参照先のゲームコードが変われば実行を停止します。その場合は固定参照コミットを別の作業ツリーへ取得し、このディレクトリを配置して実行してください。既存の作業ツリーを過去コミットへ戻す必要はありません。
+`capped-engine.cjs` は基準ソースをSHA-256で確認し、最小限の置換後に独立したVMへ読み込みます。参照先のゲームコードが変われば実行を停止します。v0.8.0では上記の復元手順を使ってください。既存の作業ツリーを過去コミットへ戻す必要はありません。
 
 `study.cjs` は4方針×新旧各1,000局＝8,000局、候補側の一部対局の実着手と全合法応手、さらにNAMUA/MTAJI各2,000個、計4,000個の人工局面の全合法応手を検査します。人工局面は初期局面からの到達可能性を保証しません。主試験のseed indexは20,000から、人工局面の乱数seedは `0x1ac47891` です。
 
@@ -36,7 +39,7 @@ node tools/nyumba-capture-cap/verify.cjs
 - [4手探索の追加結果](search-check.json)：新旧各200局、勝率・進行・探索ノード数。
 - [実行記録](provenance.json)：実行環境、局数・seed、採用判断、元の成果物のハッシュ。
 - [基準ソースのSHA-256](reference-sources.json)：固定コミットの正確なファイル内容を照合。
-- [保存ファイルのSHA-256](SHA256.json)：今回リポジトリに配置したコード・データの照合。
+- [保存ファイルのSHA-256](SHA256.json)：研究記録を配置した時点のコード・文書・データの署名。現在のREADMEの署名ではありません。原記録として固定しています。
 - [配置後の検証](verification.json)：保存結果の整合、再実行結果との一致、部分捕獲の再生確認。
 
 元の取得ソースには固定GitHubファイルより末尾改行が1つ多く含まれていました。実行するコードの内容は同じです。JSONの `sourceSha256` は当初の実行時のバイト列の記録を保存し、移設後のソース照合は `reference-sources.json`、保存ファイルの照合は `SHA256.json` を使います。違いと元のハッシュは `provenance.json` に明記しています。

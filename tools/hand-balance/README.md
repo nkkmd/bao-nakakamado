@@ -1,6 +1,6 @@
 # 初期ハンド12個・8個・6個の比較試験
 
-> このコードは旧v0.6.0の再現用です。`createForEngine(E, { protectLast: false })` を明示し、最後の1個を奪える旧条件を保持します。現行v0.6.1の進行確認は `node tools/nyakua-protect-last-study.cjs 1000` です。
+> このコードは旧v0.6.0の再現用です。`createForEngine(E, { protectLast: false })` を明示し、最後の1個を奪える旧条件を保持します。v0.6.1の履歴確認は `node tools/nyakua-protect-last-study.cjs 1000`、現行v0.8.0の確認は `node tools/next-turn-live-check.cjs 100 /tmp/next-turn-live-results.json` です。[現行仕様](../../prototype/README.md)を参照してください。
 
 基準：試作v0.6.0、`ec3961c6d178ae5c146d1ffbdeabdce274575b46`。製品の初期ハンド12個は変更せず、試験の初期局面だけ上書きします。共通の `../../prototype/bounce-engine.js` と `../../prototype/steal.js` を使用します。
 
@@ -48,3 +48,7 @@ node examples.cjs
 
 将来、製品エンジンのルールが変わった場合、基準コミットのエンジンで再現してください。実行時間は環境・負荷で変わります。方針群、先後交代、必勝探索、証明生成を別プロセスで実行でき、出力を個別に保存します。証明データの再生成と検証は短時間で実行できます。
 
+
+## 保存署名の適用範囲
+
+`results/SHA256.json` と各結果のソース署名は研究記録作成時のバイト列を保存したものです。その後の文書更新やv0.8.0への対応で、現在のファイルと異なる場合があります。厳密な再現・チェックポイント再開・署名照合には、各結果の実行記録が指定するコミットを別の作業ツリーで使用してください。原記録のハッシュを現在のソースに合わせて置き換えません。
