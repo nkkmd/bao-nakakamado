@@ -1,6 +1,6 @@
 # 先後バランス候補の調査コード
 
-> このコードは旧v0.6.0の再現用です。`createForEngine(E, { protectLast: false })` を明示し、最後の1個を奪える旧条件を保持します。現行v0.6.1の進行確認は `node tools/nyakua-protect-last-study.cjs 1000` です。
+> このコードは旧v0.6.0の再現用です。`createForEngine(E, { protectLast: false })` を明示し、最後の1個を奪える旧条件を保持します。v0.6.1の履歴確認は `node tools/nyakua-protect-last-study.cjs 1000`、現行v0.8.0の確認は `node tools/next-turn-live-check.cjs 100 /tmp/next-turn-live-results.json` です。[現行仕様](../../prototype/README.md)を参照してください。
 
 [調査計画](../../doc/BALANCE_OPTIONS_PLAN_20261001.md)に従い、同数ハンド、非対称ハンド、NYUMBA機能と配置の順に比較する。[完了した報告](../../doc/BALANCE_OPTIONS_STUDY_20261001.md)は19条件・別seed確認5条件、計255,200局をまとめる。基準エンジンはv0.6.0、`4e38478828319d664575dbbbfbb90e1df17eaf7f`。試作本体のルールは変更しない。
 
@@ -59,3 +59,7 @@ python3 tools/balance-options/report.py
 
 [実行記録](results/provenance.json)、[全体索引](results/study-index.json)、[検証結果](results/verification.json)、[保存ファイルのSHA256](results/SHA256.json)を参照。
 
+
+## 保存署名の適用範囲
+
+`results/SHA256.json` と各結果のソース署名は研究記録作成時のバイト列を保存したものです。その後の文書更新やv0.8.0への対応で、現在のファイルと異なる場合があります。厳密な再現・チェックポイント再開・署名照合には、各結果の実行記録が指定するコミットを別の作業ツリーで使用してください。原記録のハッシュを現在のソースに合わせて置き換えません。
