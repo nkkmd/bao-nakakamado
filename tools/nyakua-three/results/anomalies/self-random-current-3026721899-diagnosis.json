@@ -1,0 +1,182 @@
+{
+  "model": "current",
+  "seed": 3026721899,
+  "policies": [
+    "random",
+    "random"
+  ],
+  "plies": 134,
+  "phase": "mtaji",
+  "move": {
+    "row": 0,
+    "index": 6,
+    "direction": "left",
+    "type": "takata",
+    "phase": "mtaji"
+  },
+  "placed": 0,
+  "reason": "relay-limit",
+  "mtajiSameInBothEngines": true,
+  "extendedLimit": 65536,
+  "extendedRelaysObserved": 65536,
+  "extendedReason": "relay-limit",
+  "extendedWinner": 0,
+  "extendedFinishedNormally": false,
+  "cycles": [],
+  "alternatives": [
+    {
+      "move": {
+        "row": 0,
+        "index": 2,
+        "direction": "left",
+        "type": "takata",
+        "phase": "mtaji"
+      },
+      "reason": "",
+      "winner": null
+    },
+    {
+      "move": {
+        "row": 0,
+        "index": 2,
+        "direction": "right",
+        "type": "takata",
+        "phase": "mtaji"
+      },
+      "reason": "",
+      "winner": null
+    },
+    {
+      "move": {
+        "row": 0,
+        "index": 3,
+        "direction": "left",
+        "type": "takata",
+        "phase": "mtaji"
+      },
+      "reason": "",
+      "winner": null
+    },
+    {
+      "move": {
+        "row": 0,
+        "index": 3,
+        "direction": "right",
+        "type": "takata",
+        "phase": "mtaji"
+      },
+      "reason": "",
+      "winner": null
+    },
+    {
+      "move": {
+        "row": 0,
+        "index": 4,
+        "direction": "left",
+        "type": "takata",
+        "phase": "mtaji"
+      },
+      "reason": "",
+      "winner": null
+    },
+    {
+      "move": {
+        "row": 0,
+        "index": 4,
+        "direction": "right",
+        "type": "takata",
+        "phase": "mtaji"
+      },
+      "reason": "",
+      "winner": null
+    },
+    {
+      "move": {
+        "row": 0,
+        "index": 6,
+        "direction": "left",
+        "type": "takata",
+        "phase": "mtaji"
+      },
+      "reason": "relay-limit",
+      "winner": 0
+    },
+    {
+      "move": {
+        "row": 0,
+        "index": 6,
+        "direction": "right",
+        "type": "takata",
+        "phase": "mtaji"
+      },
+      "reason": "",
+      "winner": null
+    }
+  ],
+  "nonLimitAlternatives": 7,
+  "before": {
+    "pits": [
+      [
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          1,
+          1,
+          0,
+          4,
+          0,
+          1,
+          2
+        ]
+      ],
+      [
+        [
+          1,
+          0,
+          16,
+          4,
+          3,
+          0,
+          8,
+          1
+        ],
+        [
+          2,
+          1,
+          0,
+          4,
+          3,
+          0,
+          1,
+          6
+        ]
+      ]
+    ],
+    "reserve": [
+      0,
+      0
+    ],
+    "houseOwned": [
+      false,
+      false
+    ],
+    "player": 1,
+    "phase": "mtaji",
+    "winner": null,
+    "reason": "",
+    "turn": 134,
+    "pending": [
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,1779 @@
+{
+  "reference": "db84f8b431b80efb6fa072761a0968b293c50c04",
+  "verification": {
+    "totalGames": 19400,
+    "exampleReplays": 84,
+    "completedTasks": 12,
+    "checks": {
+      "accounting": {
+        "states": 170,
+        "edges": 323,
+        "passes": 0,
+        "note": "All abstract NYAKUA yes/no choices. Independent of board legality; no artificial initial states."
+      },
+      "boundaryCases": 145,
+      "oracleTransitions": 12497,
+      "mirrorPairs": 60,
+      "replays": 60
+    },
+    "anomalies": [
+      {
+        "id": "self-greedy-current-2991800690",
+        "task": "self-greedy",
+        "model": "current",
+        "seed": 2991800690,
+        "phase": "mtaji",
+        "plies": 49,
+        "reason": "relay-limit",
+        "extendedReason": "PROVEN_RELAY_CYCLE",
+        "period": 100,
+        "mtajiSameInBothEngines": true,
+        "nonLimitAlternatives": 3
+      },
+      {
+        "id": "self-random-current-3026721899",
+        "task": "self-random",
+        "model": "current",
+        "seed": 3026721899,
+        "phase": "mtaji",
+        "plies": 134,
+        "reason": "relay-limit",
+        "extendedReason": "relay-limit",
+        "period": null,
+        "mtajiSameInBothEngines": true,
+        "nonLimitAlternatives": 7
+      },
+      {
+        "id": "self-random-three-3435580265",
+        "task": "self-random",
+        "model": "three",
+        "seed": 3435580265,
+        "phase": "mtaji",
+        "plies": 41,
+        "reason": "relay-limit",
+        "extendedReason": "PROVEN_RELAY_CYCLE",
+        "period": 34498,
+        "mtajiSameInBothEngines": true,
+        "nonLimitAlternatives": 9
+      }
+    ],
+    "reportRunId": "36971759741"
+  },
+  "rows": [
+    {
+      "task": "cross-0",
+      "model": "current",
+      "policy": null,
+      "pair": [
+        "noisy",
+        "reply"
+      ],
+      "n": 200,
+      "completed": 200,
+      "firstWins": 99,
+      "secondWins": 101,
+      "firstWinPct": 49.5,
+      "avgPlies": 42.885,
+      "medianPlies": 44,
+      "p95Plies": 63,
+      "maxPlies": 92,
+      "avgNamuaMoves": 35.73,
+      "avgMtajiMoves": 7.155,
+      "mtajiPlayedPct": 63.5,
+      "avgNyakua": 6.56,
+      "nyakuaPct": 98.5,
+      "passes": 0,
+      "budgetStops": 0,
+      "searchNodes": 0,
+      "reasons": {
+        "no-move": 36,
+        "front-empty": 164
+      },
+      "pairs": 100,
+      "pairCluster95Pct": [
+        44.77752152469212,
+        54.22247847530788
+      ]
+    },
+    {
+      "task": "cross-0",
+      "model": "three",
+      "policy": null,
+      "pair": [
+        "noisy",
+        "reply"
+      ],
+      "n": 200,
+      "completed": 200,
+      "firstWins": 106,
+      "secondWins": 94,
+      "firstWinPct": 53,
+      "avgPlies": 39.51,
+      "medianPlies": 38,
+      "p95Plies": 63,
+      "maxPlies": 120,
+      "avgNamuaMoves": 30.935,
+      "avgMtajiMoves": 8.575,
+      "mtajiPlayedPct": 63.5,
+      "avgNyakua": 5.015,
+      "nyakuaPct": 98.5,
+      "passes": 0,
+      "budgetStops": 0,
+      "searchNodes": 0,
+      "reasons": {
+        "front-empty": 168,
+        "no-move": 32
+      },
+      "pairs": 100,
+      "pairCluster95Pct": [
+        48.86334033325192,
+        57.13665966674808
+      ]
+    },
+    {
+      "task": "cross-1",
+      "model": "current",
+      "policy": null,
+      "pair": [
+        "reply",
+        "search4"
+      ],
+      "n": 200,
+      "completed": 200,
+      "firstWins": 112,
+      "secondWins": 88,
+      "firstWinPct": 56,
+      "avgPlies": 51.05,
+      "medianPlies": 48,
+      "p95Plies": 72,
+      "maxPlies": 94,
+      "avgNamuaMoves": 40.495,
+      "avgMtajiMoves": 10.555,
+      "mtajiPlayedPct": 93,
+      "avgNyakua": 3.935,
+      "nyakuaPct": 91.5,
+      "passes": 0,
+      "budgetStops": 0,
+      "searchNodes": 714604,
+      "reasons": {
+        "front-empty": 162,
+        "no-move": 38
+      },
+      "pairs": 100,
+      "pairCluster95Pct": [
+        51.118933970224575,
+        60.88106602977543
+      ]
+    },
+    {
+      "task": "cross-1",
+      "model": "three",
+      "policy": null,
+      "pair": [
+        "reply",
+        "search4"
+      ],
+      "n": 200,
+      "completed": 200,
+      "firstWins": 99,
+      "secondWins": 101,
+      "firstWinPct": 49.5,
+      "avgPlies": 51.495,
+      "medianPlies": 50,
+      "p95Plies": 73,
+      "maxPlies": 94,
+      "avgNamuaMoves": 38.835,
+      "avgMtajiMoves": 12.66,
+      "mtajiPlayedPct": 97,
+      "avgNyakua": 2.67,
+      "nyakuaPct": 92.5,
+      "passes": 0,
+      "budgetStops": 0,
+      "searchNodes": 726424,
+      "reasons": {
+        "front-empty": 162,
+        "no-move": 38
+      },
+      "pairs": 100,
+      "pairCluster95Pct": [
+        45.44026962651972,
+        53.55973037348028
+      ]
+    },
+    {
+      "task": "cross-2",
+      "model": "current",
+      "policy": null,
+      "pair": [
+        "search4",
+        "search6"
+      ],
+      "n": 200,
+      "completed": 200,
+      "firstWins": 71,
+      "secondWins": 129,
+      "firstWinPct": 35.5,
+      "avgPlies": 57.575,
+      "medianPlies": 56,
+      "p95Plies": 72,
+      "maxPlies": 104,
+      "avgNamuaMoves": 41.78,
+      "avgMtajiMoves": 15.795,
+      "mtajiPlayedPct": 99.5,
+      "avgNyakua": 4.23,
+      "nyakuaPct": 90.5,
+      "passes": 0,
+      "budgetStops": 0,
+      "searchNodes": 5537080,
+      "reasons": {
+        "no-move": 26,
+        "front-empty": 174
+      },
+      "pairs": 100,
+      "pairCluster95Pct": [
+        28.35746977450849,
+        42.642530225491505
+      ]
+    },
+    {
+      "task": "cross-2",
+      "model": "three",
+      "policy": null,
+      "pair": [
+        "search4",
+        "search6"
+      ],
+      "n": 200,
+      "completed": 200,
+      "firstWins": 108,
+      "secondWins": 92,
+      "firstWinPct": 54,
+      "avgPlies": 49.66,
+      "medianPlies": 49,
+      "p95Plies": 62,
+      "maxPlies": 85,
+      "avgNamuaMoves": 37.77,
+      "avgMtajiMoves": 11.89,
+      "mtajiPlayedPct": 99,
+      "avgNyakua": 3.355,
+      "nyakuaPct": 95.5,
+      "passes": 0,
+      "budgetStops": 6,
+      "searchNodes": 4709690,
+      "reasons": {
+        "front-empty": 161,
+        "no-move": 39
+      },
+      "pairs": 100,
+      "pairCluster95Pct": [
+        46.411648360514825,
+        61.58835163948518
+      ]
+    },
+    {
+      "task": "self-greedy",
+      "model": "current",
+      "policy": "greedy",
+      "pair": null,
+      "n": 2000,
+      "completed": 1999,
+      "firstWins": 870,
+      "secondWins": 1129,
+      "firstWinPct": 43.52176088044022,
+      "wilson95Pct": [
+        41.36285672546465,
+        45.70551561866156
+      ],
+      "avgPlies": 39.1375,
+      "medianPlies": 39,
+      "p95Plies": 63,
+      "maxPlies": 107,
+      "avgNamuaMoves": 34.3975,
+      "avgMtajiMoves": 4.74,
+      "mtajiPlayedPct": 46.85,
+      "avgNyakua": 12.676,
+      "nyakuaPct": 100,
+      "passes": 0,
+      "budgetStops": 0,
+      "searchNodes": 0,
+      "reasons": {
+        "front-empty": 1596,
+        "no-move": 403,
+        "relay-limit": 1
+      }
+    },
+    {
+      "task": "self-greedy",
+      "model": "three",
+      "policy": "greedy",
+      "pair": null,
+      "n": 2000,
+      "completed": 2000,
+      "firstWins": 941,
+      "secondWins": 1059,
+      "firstWinPct": 47.05,
+      "wilson95Pct": [
+        44.87025666307817,
+        49.2410539160593
+      ],
+      "avgPlies": 32.5625,
+      "medianPlies": 32,
+      "p95Plies": 52,
+      "maxPlies": 103,
+      "avgNamuaMoves": 25.1655,
+      "avgMtajiMoves": 7.397,
+      "mtajiPlayedPct": 68.75,
+      "avgNyakua": 8.582,
+      "nyakuaPct": 100,
+      "passes": 0,
+      "budgetStops": 0,
+      "searchNodes": 0,
+      "reasons": {
+        "front-empty": 1461,
+        "no-move": 539
+      }
+    },
+    {
+      "task": "self-noisy",
+      "model": "current",
+      "policy": "noisy",
+      "pair": null,
+      "n": 2000,
+      "completed": 2000,
+      "firstWins": 981,
+      "secondWins": 1019,
+      "firstWinPct": 49.05,
+      "wilson95Pct": [
+        46.86301068232789,
+        51.24063170756384
+      ],
+      "avgPlies": 39.0915,
+      "medianPlies": 39,
+      "p95Plies": 62,
+      "maxPlies": 106,
+      "avgNamuaMoves": 34.2165,
+      "avgMtajiMoves": 4.875,
+      "mtajiPlayedPct": 45.35,
+      "avgNyakua": 10.548,
+      "nyakuaPct": 99.6,
+      "passes": 0,
+      "budgetStops": 0,
+      "searchNodes": 0,
+      "reasons": {
+        "front-empty": 1836,
+        "no-move": 164
+      }
+    },
+    {
+      "task": "self-noisy",
+      "model": "three",
+      "policy": "noisy",
+      "pair": null,
+      "n": 2000,
+      "completed": 2000,
+      "firstWins": 1014,
+      "secondWins": 986,
+      "firstWinPct": 50.7,
+      "wilson95Pct": [
+        48.50966726603417,
+        52.88764886772982
+      ],
+      "avgPlies": 33.295,
+      "medianPlies": 33,
+      "p95Plies": 54,
+      "maxPlies": 97,
+      "avgNamuaMoves": 26.635,
+      "avgMtajiMoves": 6.66,
+      "mtajiPlayedPct": 64.55,
+      "avgNyakua": 7.1955,
+      "nyakuaPct": 99.6,
+      "passes": 0,
+      "budgetStops": 0,
+      "searchNodes": 0,
+      "reasons": {
+        "front-empty": 1710,
+        "no-move": 290
+      }
+    },
+    {
+      "task": "self-random",
+      "model": "current",
+      "policy": "random",
+      "pair": null,
+      "n": 2000,
+      "completed": 1999,
+      "firstWins": 1014,
+      "secondWins": 985,
+      "firstWinPct": 50.72536268134067,
+      "wilson95Pct": [
+        48.53445003188656,
+        52.91349283305683
+      ],
+      "avgPlies": 51.707,
+      "medianPlies": 49,
+      "p95Plies": 90,
+      "maxPlies": 212,
+      "avgNamuaMoves": 37.4055,
+      "avgMtajiMoves": 14.3015,
+      "mtajiPlayedPct": 73.65,
+      "avgNyakua": 7.7815,
+      "nyakuaPct": 99.3,
+      "passes": 0,
+      "budgetStops": 0,
+      "searchNodes": 0,
+      "reasons": {
+        "front-empty": 1713,
+        "no-move": 286,
+        "relay-limit": 1
+      }
+    },
+    {
+      "task": "self-random",
+      "model": "three",
+      "policy": "random",
+      "pair": null,
+      "n": 2000,
+      "completed": 1999,
+      "firstWins": 1020,
+      "secondWins": 979,
+      "firstWinPct": 51.02551275637819,
+      "wilson95Pct": [
+        48.834254166477876,
+        53.21283747016624
+      ],
+      "avgPlies": 46.5675,
+      "medianPlies": 43,
+      "p95Plies": 84,
+      "maxPlies": 168,
+      "avgNamuaMoves": 30.569,
+      "avgMtajiMoves": 15.9985,
+      "mtajiPlayedPct": 80.35,
+      "avgNyakua": 5.735,
+      "nyakuaPct": 99.3,
+      "passes": 0,
+      "budgetStops": 0,
+      "searchNodes": 0,
+      "reasons": {
+        "front-empty": 1694,
+        "no-move": 305,
+        "relay-limit": 1
+      }
+    },
+    {
+      "task": "self-reply",
+      "model": "current",
+      "policy": "reply",
+      "pair": null,
+      "n": 2000,
+      "completed": 2000,
+      "firstWins": 1281,
+      "secondWins": 719,
+      "firstWinPct": 64.05,
+      "wilson95Pct": [
+        61.921895855096395,
+        66.1242351154522
+      ],
+      "avgPlies": 94.5035,
+      "medianPlies": 95,
+      "p95Plies": 114,
+      "maxPlies": 162,
+      "avgNamuaMoves": 44,
+      "avgMtajiMoves": 50.5035,
+      "mtajiPlayedPct": 100,
+      "avgNyakua": 0,
+      "nyakuaPct": 0,
+      "passes": 0,
+      "budgetStops": 0,
+      "searchNodes": 0,
+      "reasons": {
+        "front-empty": 1621,
+        "no-move": 379
+      }
+    },
+    {
+      "task": "self-reply",
+      "model": "three",
+      "policy": "reply",
+      "pair": null,
+      "n": 2000,
+      "completed": 2000,
+      "firstWins": 1281,
+      "secondWins": 719,
+      "firstWinPct": 64.05,
+      "wilson95Pct": [
+        61.921895855096395,
+        66.1242351154522
+      ],
+      "avgPlies": 94.5035,
+      "medianPlies": 95,
+      "p95Plies": 114,
+      "maxPlies": 162,
+      "avgNamuaMoves": 44,
+      "avgMtajiMoves": 50.5035,
+      "mtajiPlayedPct": 100,
+      "avgNyakua": 0,
+      "nyakuaPct": 0,
+      "passes": 0,
+      "budgetStops": 0,
+      "searchNodes": 0,
+      "reasons": {
+        "front-empty": 1621,
+        "no-move": 379
+      }
+    },
+    {
+      "task": "self-search3",
+      "model": "current",
+      "policy": "search3",
+      "pair": null,
+      "n": 400,
+      "completed": 400,
+      "firstWins": 216,
+      "secondWins": 184,
+      "firstWinPct": 54,
+      "wilson95Pct": [
+        49.10088229390023,
+        58.823019350236315
+      ],
+      "avgPlies": 47.27,
+      "medianPlies": 48,
+      "p95Plies": 63,
+      "maxPlies": 100,
+      "avgNamuaMoves": 39.71,
+      "avgMtajiMoves": 7.56,
+      "mtajiPlayedPct": 81,
+      "avgNyakua": 9.135,
+      "nyakuaPct": 100,
+      "passes": 0,
+      "budgetStops": 0,
+      "searchNodes": 1392591,
+      "reasons": {
+        "front-empty": 260,
+        "no-move": 140
+      }
+    },
+    {
+      "task": "self-search3",
+      "model": "three",
+      "policy": "search3",
+      "pair": null,
+      "n": 400,
+      "completed": 400,
+      "firstWins": 300,
+      "secondWins": 100,
+      "firstWinPct": 75,
+      "wilson95Pct": [
+        70.53228667006465,
+        78.99209860578871
+      ],
+      "avgPlies": 35.905,
+      "medianPlies": 27,
+      "p95Plies": 64,
+      "maxPlies": 79,
+      "avgNamuaMoves": 28.1875,
+      "avgMtajiMoves": 7.7175,
+      "mtajiPlayedPct": 99.75,
+      "avgNyakua": 8.35,
+      "nyakuaPct": 100,
+      "passes": 0,
+      "budgetStops": 0,
+      "searchNodes": 1412113,
+      "reasons": {
+        "front-empty": 163,
+        "no-move": 237
+      }
+    },
+    {
+      "task": "self-search4",
+      "model": "current",
+      "policy": "search4",
+      "pair": null,
+      "n": 300,
+      "completed": 300,
+      "firstWins": 191,
+      "secondWins": 109,
+      "firstWinPct": 63.666666666666664,
+      "wilson95Pct": [
+        58.083162442713096,
+        68.90459633843322
+      ],
+      "avgPlies": 56.163333333333334,
+      "medianPlies": 57,
+      "p95Plies": 79,
+      "maxPlies": 92,
+      "avgNamuaMoves": 40.92333333333333,
+      "avgMtajiMoves": 15.24,
+      "mtajiPlayedPct": 95.66666666666667,
+      "avgNyakua": 5.873333333333333,
+      "nyakuaPct": 100,
+      "passes": 0,
+      "budgetStops": 0,
+      "searchNodes": 2635612,
+      "reasons": {
+        "no-move": 50,
+        "front-empty": 250
+      }
+    },
+    {
+      "task": "self-search4",
+      "model": "three",
+      "policy": "search4",
+      "pair": null,
+      "n": 300,
+      "completed": 300,
+      "firstWins": 120,
+      "secondWins": 180,
+      "firstWinPct": 40,
+      "wilson95Pct": [
+        34.616519017644414,
+        45.63634041078512
+      ],
+      "avgPlies": 54.89333333333333,
+      "medianPlies": 52,
+      "p95Plies": 78,
+      "maxPlies": 98,
+      "avgNamuaMoves": 36.29666666666667,
+      "avgMtajiMoves": 18.596666666666668,
+      "mtajiPlayedPct": 99.66666666666667,
+      "avgNyakua": 4.013333333333334,
+      "nyakuaPct": 100,
+      "passes": 0,
+      "budgetStops": 0,
+      "searchNodes": 2549295,
+      "reasons": {
+        "no-move": 48,
+        "front-empty": 252
+      }
+    },
+    {
+      "task": "self-search4-mobility",
+      "model": "current",
+      "policy": "search4-mobility",
+      "pair": null,
+      "n": 300,
+      "completed": 300,
+      "firstWins": 121,
+      "secondWins": 179,
+      "firstWinPct": 40.333333333333336,
+      "wilson95Pct": [
+        34.93821696692794,
+        45.97288048055395
+      ],
+      "avgPlies": 57.79666666666667,
+      "medianPlies": 59,
+      "p95Plies": 68,
+      "maxPlies": 72,
+      "avgNamuaMoves": 41.53666666666667,
+      "avgMtajiMoves": 16.26,
+      "mtajiPlayedPct": 92.33333333333333,
+      "avgNyakua": 6.203333333333333,
+      "nyakuaPct": 100,
+      "passes": 0,
+      "budgetStops": 0,
+      "searchNodes": 2488944,
+      "reasons": {
+        "no-move": 51,
+        "front-empty": 249
+      }
+    },
+    {
+      "task": "self-search4-mobility",
+      "model": "three",
+      "policy": "search4-mobility",
+      "pair": null,
+      "n": 300,
+      "completed": 300,
+      "firstWins": 144,
+      "secondWins": 156,
+      "firstWinPct": 48,
+      "wilson95Pct": [
+        42.40768004291448,
+        53.64289184277142
+      ],
+      "avgPlies": 56.013333333333335,
+      "medianPlies": 54,
+      "p95Plies": 59,
+      "maxPlies": 65,
+      "avgNamuaMoves": 32.48,
+      "avgMtajiMoves": 23.533333333333335,
+      "mtajiPlayedPct": 100,
+      "avgNyakua": 6,
+      "nyakuaPct": 100,
+      "passes": 0,
+      "budgetStops": 0,
+      "searchNodes": 2940115,
+      "reasons": {
+        "no-move": 77,
+        "front-empty": 223
+      }
+    },
+    {
+      "task": "self-search6",
+      "model": "current",
+      "policy": "search6",
+      "pair": null,
+      "n": 100,
+      "completed": 100,
+      "firstWins": 25,
+      "secondWins": 75,
+      "firstWinPct": 25,
+      "wilson95Pct": [
+        17.545211311910354,
+        34.304463626539466
+      ],
+      "avgPlies": 52.83,
+      "medianPlies": 52,
+      "p95Plies": 57,
+      "maxPlies": 62,
+      "avgNamuaMoves": 41.91,
+      "avgMtajiMoves": 10.92,
+      "mtajiPlayedPct": 100,
+      "avgNyakua": 2.25,
+      "nyakuaPct": 100,
+      "passes": 0,
+      "budgetStops": 0,
+      "searchNodes": 3005727,
+      "reasons": {
+        "front-empty": 60,
+        "no-move": 40
+      }
+    },
+    {
+      "task": "self-search6",
+      "model": "three",
+      "policy": "search6",
+      "pair": null,
+      "n": 100,
+      "completed": 100,
+      "firstWins": 50,
+      "secondWins": 50,
+      "firstWinPct": 50,
+      "wilson95Pct": [
+        40.38315296354929,
+        59.61684703645071
+      ],
+      "avgPlies": 74.86,
+      "medianPlies": 66,
+      "p95Plies": 94,
+      "maxPlies": 98,
+      "avgNamuaMoves": 41.27,
+      "avgMtajiMoves": 33.59,
+      "mtajiPlayedPct": 100,
+      "avgNyakua": 1.49,
+      "nyakuaPct": 100,
+      "passes": 0,
+      "budgetStops": 0,
+      "searchNodes": 5245688,
+      "reasons": {
+        "no-move": 24,
+        "front-empty": 76
+      }
+    }
+  ],
+  "proof": [
+    {
+      "model": "current",
+      "records": [
+        {
+          "depth": 1,
+          "result": "UNKNOWN",
+          "nodes": 4,
+          "hits": 0,
+          "elapsedMs": 2,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "result": "UNKNOWN",
+          "nodes": 18,
+          "hits": 0,
+          "elapsedMs": 2,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "result": "UNKNOWN",
+          "nodes": 56,
+          "hits": 0,
+          "elapsedMs": 4,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "result": "UNKNOWN",
+          "nodes": 180,
+          "hits": 0,
+          "elapsedMs": 7,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "result": "UNKNOWN",
+          "nodes": 561,
+          "hits": 5,
+          "elapsedMs": 17,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 6,
+          "result": "UNKNOWN",
+          "nodes": 1858,
+          "hits": 9,
+          "elapsedMs": 50,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 7,
+          "result": "UNKNOWN",
+          "nodes": 6511,
+          "hits": 47,
+          "elapsedMs": 152,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 8,
+          "result": "UNKNOWN",
+          "nodes": 24038,
+          "hits": 226,
+          "elapsedMs": 370,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 9,
+          "result": "UNKNOWN",
+          "nodes": 97052,
+          "hits": 679,
+          "elapsedMs": 1307,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 10,
+          "result": "UNKNOWN",
+          "nodes": 412310,
+          "hits": 3218,
+          "elapsedMs": 8039,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 11,
+          "result": "NODE_BUDGET",
+          "nodes": 500001,
+          "hits": 2510,
+          "elapsedMs": 6967
+        }
+      ]
+    },
+    {
+      "model": "three",
+      "records": [
+        {
+          "depth": 1,
+          "result": "UNKNOWN",
+          "nodes": 4,
+          "hits": 0,
+          "elapsedMs": 1,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "result": "UNKNOWN",
+          "nodes": 18,
+          "hits": 0,
+          "elapsedMs": 2,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "result": "UNKNOWN",
+          "nodes": 56,
+          "hits": 0,
+          "elapsedMs": 5,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "result": "UNKNOWN",
+          "nodes": 180,
+          "hits": 0,
+          "elapsedMs": 6,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "result": "UNKNOWN",
+          "nodes": 561,
+          "hits": 5,
+          "elapsedMs": 18,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 6,
+          "result": "UNKNOWN",
+          "nodes": 1859,
+          "hits": 9,
+          "elapsedMs": 53,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 7,
+          "result": "UNKNOWN",
+          "nodes": 6506,
+          "hits": 45,
+          "elapsedMs": 128,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 8,
+          "result": "UNKNOWN",
+          "nodes": 24199,
+          "hits": 211,
+          "elapsedMs": 422,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 9,
+          "result": "UNKNOWN",
+          "nodes": 99470,
+          "hits": 577,
+          "elapsedMs": 1710,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 10,
+          "result": "UNKNOWN",
+          "nodes": 436203,
+          "hits": 2429,
+          "elapsedMs": 7842,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 11,
+          "result": "NODE_BUDGET",
+          "nodes": 500001,
+          "hits": 1575,
+          "elapsedMs": 9411
+        }
+      ]
+    }
+  ]
+}

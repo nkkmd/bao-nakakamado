@@ -1,0 +1,1028 @@
+{
+  "metadata": {
+    "study": "NYAKUA-THREE-20261002",
+    "reference": "db84f8b431b80efb6fa072761a0968b293c50c04",
+    "task": "proof",
+    "override": null,
+    "hashes": {
+      "engine.cjs": "20fa3bb06b28b990e83cb6128f7734d6692aa18da1a3fc823584e559b76eee6e",
+      "core.cjs": "6b5d7658f80fe2b5611d82b23f91863e58964991f40477ab91f07c6f82581f93",
+      "run.cjs": "76c85a03f728183f9cf8b8f106368701e17a2a071ad5e19c5748059f77ecb36d",
+      "check.cjs": "e501dcc78d8f1ea59dfb28a6cb346d92887477a2b31fc2fad8470cab4cf5db0e",
+      "../../prototype/bulk-engine.js": "23df9b5c45fe3f7ab117c676e06d9d5a32605ae810ac0d3cd909b025c07fe657",
+      "../../prototype/four-row-engine.js": "e119ec422a2ebf842624d3fe627bc2f44003e0c49e28bb8351ed09cefb285a2a",
+      "../../prototype/steal.js": "2f27a86f660627cb8062bb6c828c8397828ccf954dd7f81a5423697d92a952d8"
+    },
+    "node": "v24.19.0",
+    "runId": "36970748063",
+    "commit": "1c266fe03581865064521910d0bc9fb2740d471e"
+  },
+  "signature": "48ad33c1dc5b43e22a16fc7f887b24618b86c7f5c9f4febfd79c605f9be67dd6",
+  "completed": true,
+  "results": [
+    {
+      "model": "current",
+      "records": [
+        {
+          "depth": 1,
+          "result": "UNKNOWN",
+          "nodes": 4,
+          "hits": 0,
+          "elapsedMs": 2,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "result": "UNKNOWN",
+          "nodes": 18,
+          "hits": 0,
+          "elapsedMs": 2,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "result": "UNKNOWN",
+          "nodes": 56,
+          "hits": 0,
+          "elapsedMs": 4,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "result": "UNKNOWN",
+          "nodes": 180,
+          "hits": 0,
+          "elapsedMs": 7,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "result": "UNKNOWN",
+          "nodes": 561,
+          "hits": 5,
+          "elapsedMs": 17,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 6,
+          "result": "UNKNOWN",
+          "nodes": 1858,
+          "hits": 9,
+          "elapsedMs": 50,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 7,
+          "result": "UNKNOWN",
+          "nodes": 6511,
+          "hits": 47,
+          "elapsedMs": 152,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 8,
+          "result": "UNKNOWN",
+          "nodes": 24038,
+          "hits": 226,
+          "elapsedMs": 370,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 9,
+          "result": "UNKNOWN",
+          "nodes": 97052,
+          "hits": 679,
+          "elapsedMs": 1307,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 10,
+          "result": "UNKNOWN",
+          "nodes": 412310,
+          "hits": 3218,
+          "elapsedMs": 8039,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 11,
+          "result": "NODE_BUDGET",
+          "nodes": 500001,
+          "hits": 2510,
+          "elapsedMs": 6967
+        }
+      ]
+    },
+    {
+      "model": "three",
+      "records": [
+        {
+          "depth": 1,
+          "result": "UNKNOWN",
+          "nodes": 4,
+          "hits": 0,
+          "elapsedMs": 1,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "result": "UNKNOWN",
+          "nodes": 18,
+          "hits": 0,
+          "elapsedMs": 2,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "result": "UNKNOWN",
+          "nodes": 56,
+          "hits": 0,
+          "elapsedMs": 5,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "result": "UNKNOWN",
+          "nodes": 180,
+          "hits": 0,
+          "elapsedMs": 6,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "result": "UNKNOWN",
+          "nodes": 561,
+          "hits": 5,
+          "elapsedMs": 18,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 6,
+          "result": "UNKNOWN",
+          "nodes": 1859,
+          "hits": 9,
+          "elapsedMs": 53,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 7,
+          "result": "UNKNOWN",
+          "nodes": 6506,
+          "hits": 45,
+          "elapsedMs": 128,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 8,
+          "result": "UNKNOWN",
+          "nodes": 24199,
+          "hits": 211,
+          "elapsedMs": 422,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 9,
+          "result": "UNKNOWN",
+          "nodes": 99470,
+          "hits": 577,
+          "elapsedMs": 1710,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 10,
+          "result": "UNKNOWN",
+          "nodes": 436203,
+          "hits": 2429,
+          "elapsedMs": 7842,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 11,
+          "result": "NODE_BUDGET",
+          "nodes": 500001,
+          "hits": 1575,
+          "elapsedMs": 9411
+        }
+      ]
+    }
+  ]
+}
