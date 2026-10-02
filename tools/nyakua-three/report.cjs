@@ -3,11 +3,12 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
 const c=require('./core.cjs');
 const dir=process.argv[2]||path.join(__dirname,'results');
 const summaries=[];let replays=0,totalGames=0;
-for(const task of fs.readdirSync(dir).filter(n=>fs.statSync(path.join(dir,n)).isDirectory()).sort()){
+for(const task of fs.readdirSync(dir).filter(n=>n!=='anomalies'&&fs.statSync(path.join(dir,n)).isDirectory()).sort()){
  const root=path.join(dir,task),summary=JSON.parse(fs.readFileSync(path.join(root,'summary.json')));assert.equal(summary.completed,true);summaries.push(summary);
  if(task!=='proof')for(const model of ['current','three']){
-  const rows=fs.readdirSync(root).filter(n=>new RegExp('^'+model+'-\\d+\\.json$').test(n)).flatMap(n=>JSON.parse(fs.readFileSync(path.join(root,n))).rows),games=rows.flatMap(r=>r.games);totalGames+=games.length;
-  assert.deepEqual(c.summarize(games),Object.fromEntries(Object.entries(summary.results.find(r=>r.model===model)).filter(([k])=>Object.hasOwn(c.summarize(games),k))));
+  const rows=fs.readdirSync(root).filter(n=>new RegExp('^'+model+'-\\d+\\.json$').test(n)).flatMap(n=>{const block=JSON.parse(fs.readFileSync(path.join(root,n)));assert.equal(block.signature,summary.signature);return block.rows;}),games=rows.flatMap(r=>r.games);totalGames+=games.length;
+  const actual=c.summarize(games),stored=summary.results.find(r=>r.model===model);if(!stored.policy)delete actual.wilson95Pct;
+  assert.deepEqual(actual,Object.fromEntries(Object.entries(stored).filter(([k])=>Object.hasOwn(actual,k))));
  }
  for(const name of fs.readdirSync(root).filter(n=>n.startsWith('example-'))){
   const g=JSON.parse(fs.readFileSync(path.join(root,name)));let b=c.engines[g.model].initial();b.player=g.first;
@@ -15,7 +16,7 @@ for(const task of fs.readdirSync(dir).filter(n=>fs.statSync(path.join(dir,n)).is
   assert.equal(c.key(b),c.key(g.final));replays++;
  }
 }
-const checks=JSON.parse(fs.readFileSync(path.join(dir,'checks.json'))),verification={totalGames,exampleReplays:replays,completedTasks:summaries.length,checks};
+const checks=JSON.parse(fs.readFileSync(path.join(dir,'checks.json'))),anomalies=fs.existsSync(path.join(dir,'anomalies/summary.json'))?JSON.parse(fs.readFileSync(path.join(dir,'anomalies/summary.json'))).anomalies:[],verification={totalGames,exampleReplays:replays,completedTasks:summaries.length,checks,anomalies,reportRunId:process.env.GITHUB_RUN_ID||null};
 fs.writeFileSync(path.join(dir,'verification.json'),JSON.stringify(verification,null,2)+'\n');
 const rows=summaries.filter(s=>s.metadata.task!=='proof').flatMap(s=>s.results.map(r=>({task:s.metadata.task,...r})));const all={reference:'db84f8b431b80efb6fa072761a0968b293c50c04',verification,rows,proof:summaries.find(s=>s.metadata.task==='proof').results};
 fs.writeFileSync(path.join(dir,'summary.json'),JSON.stringify(all,null,2)+'\n');
@@ -33,12 +34,14 @@ for(const r of rows.filter(r=>!r.policy))md+='| '+r.pair.join(' / ')+' | '+label
 md+='\n方針Aを先手・Bを後手にした対局と、その逆を同一seedで組にしました。乱数列は方針の主体とともに入れ替えます。区間は自己対戦ではWilson、交差対戦では組を単位とした標準誤差から計算。方針ごとに同じseed集合を再利用しているため、全方針の局数を合算して独立標本の区間を計算しません。50%を含むことは均衡の証明ではなく、50%を外れることも完全最善手の先後評価ではありません。\n\n## 進行・異常\n\n'+
  '| 方針 | 条件 | 通常終局 | パス | 終局理由 | 平均NAMUA手数 | 平均MTAJI手数 | 平均ニャクア回数 |\n|---|---|---:|---:|---|---:|---:|---:|\n';
 for(const r of rows)md+='| '+(r.policy||r.pair.join('/'))+' | '+label[r.model]+' | '+r.completed+'/'+r.n+' | '+r.passes+' | '+Object.entries(r.reasons).map(([k,v])=>k+':'+v).join(', ')+' | '+pct(r.avgNamuaMoves)+' | '+pct(r.avgMtajiMoves)+' | '+pct(r.avgNyakua)+' |\n';
+if(anomalies.length){md+='\n### 安全上限に達した対局の追加確認\n\n| 条件・方針 | seed | 手数 | 段階 | 上限を延ばした結果 | 現行・新案の同一局面照合 |\n|---|---:|---:|---|---|---|\n';for(const a of anomalies)md+='| '+label[a.model]+' / '+a.task.replace('self-','')+' | '+a.seed+' | '+a.plies+' | '+a.phase+' | '+(a.period?'周期'+a.period+'の循環を確認':'65,536回まで停止・循環を確定できず')+' | '+(a.mtajiSameInBothEngines?'同じ挙動':'対象外・要確認')+' |\n';md+='\n新案のランダム対局で到達した局面では、同じ盤・種まき終点・方向・所有状態へ戻るため、上限を外すとこの一手は終わりません。途中で相手の手番も来ません。通常の対局反復とは別の、一着手内の循環です。この局面のMTAJI処理は現行・新案で一致するため、新案の3個投入処理に限った不具合ではありません。しかし新案からも実際に到達でき、破綻なしとは言えません。他の合法手では安全上限に達しない選択肢がありました。再現棋譜・開始局面・周期を示すチェックポイント・代替手は [異常対局の記録](../tools/nyakua-three/results/anomalies/summary.json) と同じフォルダへ保存しています。\n';}
 md+='\n連続種まき512回の安全上限、同じ局面の再出現、400手打切りは通常の勝敗と分け、勝率の分母から除外します。手数統計は全試験局の停止までの長さであり、打切りがある条件では真の終局平均ではありません。総数保存と非負整数条件は全対局の全着手後に検査しました。平均NAMUA手数はNAMUAで終局した対局も含み、MTAJI移行に要する平均とは区別します。\n\n## 初期局面からの必勝探索\n\n'+
  '実際の通常終局だけを勝敗の根拠にしたAND/OR探索です。勝つ側は1つの手を示せば足り、相手の番ではすべての合法手・NYUMBA選択に勝てる必要があります。未終局の探索末端はUNKNOWN。安全上限による終局もUNKNOWNとして扱います。各深さ50万ノード、各条件約550秒を上限としました。\n\n'+
  '| 条件 | 深さ | 判定 | 探索ノード | 時間（秒） |\n|---|---:|---|---:|---:|\n';
 for(const p of all.proof)for(const r of p.records)md+='| '+label[p.model]+' | '+r.depth+' | '+r.result+' | '+r.nodes+' | '+(r.elapsedMs/1000).toFixed(1)+' |\n';
 md+='\nUNKNOWNは、その深さ以内の必勝が見つからないことだけを意味します。NODE_BUDGET/TIME_BUDGETではその深さの探索が未完了です。したがって、未検出を「必勝ルートなし」と解釈しません。もし必勝判定が得られた場合は、相手の全応答を含む証明書を別に生成し、合法手と終局葉を検証します。各初手の結果は結果JSONに保存しています。\n\n## 再現・記録\n\n'+
  '- [検証・実行方法](../tools/nyakua-three/README.md)\n- [集約結果](../tools/nyakua-three/results/summary.json)、[検証結果](../tools/nyakua-three/results/verification.json)\n- チェックポイント・seed・方針・終局理由・最終局面ハッシュ・代表棋譜は `tools/nyakua-three/results/` 配下。各実行のコードSHA-256とActions実行IDは各taskのsummaryに保存。\n- 正式調査はGitHub Actions。20単位ごとの原子的チェックポイントとartifactを保存し、最後にこの調査ブランチへ記録します。公開実装の採用判断・mainへの統合は今回の調査に含めません。\n';
+if(totalGames===19400){const conclusion='## 調査結果\n\n計19,400局（現行9,700局、新案9,700局）を比較しました。新案は9,699局が通常終局し、パス0件・総KETEの保存違反0件でした。一方、1局に一着手内の種まき循環があり、盤上の進行がすべて正常とは判定できません。現行にも安全上限に達した対局が2局あり、新案の循環局面は現行エンジンでも同じ挙動でした。\n\n平均手数は方針によって変わります。新案はランダムで46.6手（現行51.7手）、3手先探索で35.9手（47.3手）、4手先探索で54.9手（56.2手）。6手先探索では74.9手（52.8手）と長くなりました。ニャクアが発動しなかったreply自己対戦は両条件とも94.5手です。一般に必ず短くなる変更ではありません。\n\n先手勝率は新案の3手先探索75.0%（95%区間70.5–79.0%）、4手先探索40.0%（34.6–45.6%）と方針によって逆転。6手先探索は50.0%ですが100局・区間40.4–59.6%であり、均衡を断定できません。先後均衡は未確認です。異なる方針の先後交換では新案の先手勝率49.5–54.0%で、3組すべての組単位区間が50%を含みました。\n\n初期局面から双方の10手以内の強制勝ちを検出せず、11手先は50万ノード上限で未完了でした。長い必勝ルートの有無は未判定です。\n\n3個投入案はハンド枯渇によるパスを防げますが、採用前には共通MTAJIの循環処理について停止規定を定め、別評価・より深い探索でも先後傾向を確認する必要があります。今回の調査では公開実装のルール変更を行っていません。\n\n';md=md.replace('## 条件\n\n',conclusion+'## 条件\n\n');}
 fs.mkdirSync(path.join(__dirname,'../../doc'),{recursive:true});fs.writeFileSync(path.join(__dirname,'../../doc/NYAKUA_THREE_STUDY_20261002.md'),md);
 const hashes={};function walk(p){for(const n of fs.readdirSync(p)){const full=path.join(p,n);if(fs.statSync(full).isDirectory())walk(full);else if(n!=='SHA256.json')hashes[path.relative(dir,full)]=crypto.createHash('sha256').update(fs.readFileSync(full)).digest('hex');}}walk(dir);fs.writeFileSync(path.join(dir,'SHA256.json'),JSON.stringify(hashes,null,2)+'\n');
 console.log(JSON.stringify({verification,rows,proof:all.proof}));
