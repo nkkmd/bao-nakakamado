@@ -12,4 +12,9 @@ for(const policy of ['random','noisy','greedy','reply','search3','search4-mobili
  }
  assert.deepEqual(c.S.replay(g.path.map(x=>x.entry)).board,g.final);replays++;
 }
-const result={passed:true,rules:c.E.RULES_VERSION,transitions,mirrorStates,replays,searchChecks};console.log(JSON.stringify(result));if(process.argv[2])fs.writeFileSync(process.argv[2],JSON.stringify(result,null,2)+'\n');
+let openingStreamChecks=0;
+for(const policy of ['random','search3','search4','search6'])for(let i=0;i<10;i++){
+ const seed=c.seedAt(980000+i),a=c.play('live',[policy,policy],seed,0,true),idx=c.children('live',c.E.initialState()).findIndex(x=>JSON.stringify(x.m)===JSON.stringify(a.path[0].move));
+ const b=c.play('live',[policy,policy],seed,0,true,false,idx);assert.deepEqual(a.path,b.path);assert.deepEqual(a.final,b.final);openingStreamChecks++;
+}
+const result={passed:true,openingStreamChecks,rules:c.E.RULES_VERSION,transitions,mirrorStates,replays,searchChecks};console.log(JSON.stringify(result));if(process.argv[2])fs.writeFileSync(process.argv[2],JSON.stringify(result,null,2)+'\n');

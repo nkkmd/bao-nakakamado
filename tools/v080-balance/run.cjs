@@ -5,7 +5,7 @@ if(override){if(cfg.kind==='proof')cfg.budget=override;else cfg.n=override;}
 fs.mkdirSync(out,{recursive:true});
 const files=['core.cjs','config.cjs','run.cjs','check.cjs','../../prototype/next-turn-engine.js','../../prototype/steal.js'];
 const hashes=Object.fromEntries(files.map(p=>[p,crypto.createHash('sha256').update(fs.readFileSync(path.join(__dirname,p))).digest('hex')]));
-const metadata={study:'V080-BALANCE-20261003',rules:c.E.RULES_VERSION,task,cfg,hashes,node:process.version,runId:process.env.GITHUB_RUN_ID||null,commit:process.env.GITHUB_SHA||null};
+const metadata={study:'V080-BALANCE-20261003-R2',rules:c.E.RULES_VERSION,task,cfg,hashes,node:process.version,runId:process.env.GITHUB_RUN_ID||null,commit:process.env.GITHUB_SHA||null};
 const signature=crypto.createHash('sha256').update(JSON.stringify({...metadata,node:undefined,runId:undefined,commit:undefined})).digest('hex');
 function save(name,data){const p=path.join(out,name);fs.writeFileSync(p+'.tmp',JSON.stringify(data)+'\n');fs.renameSync(p+'.tmp',p);}
 function compact(g){const {final,path,...r}=g;return {...r,finalHash:crypto.createHash('sha256').update(JSON.stringify(final)).digest('hex')};}

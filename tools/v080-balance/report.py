@@ -23,18 +23,18 @@ for x in a:
     if x['metadata']['cfg']['kind']=='opening': z['openingForced']=[subset([g for r in x['rows'] if r['opening']==i for g in r['games']]) for i in range(4)]
     if x['metadata']['cfg']['kind']=='cross': z['policySeatScores']=[{'policy':p,'first':subset([g for g in gs if g['policies'][0]==p]),'second':subset([g for g in gs if g['policies'][1]==p])} for p in x['metadata']['cfg']['policies']]
     summaries.append(z)
-summary={'study':'V080-BALANCE-20261003','dateJST':'2026-10-03','totalGames':sum(x.get('summary',{}).get('n',0) for x in summaries),'tasks':summaries}
+summary={'study':'V080-BALANCE-20261003-R2','dateJST':'2026-10-03','totalGames':sum(x.get('summary',{}).get('n',0) for x in summaries),'tasks':summaries}
 (root/'summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n')
 def f(v):return f'{v:.1f}' if v is not None else '—'
 def interval(x,k='wilson95Pct'):return '–'.join(f(v) for v in x[k]) if k in x else '—'
-lines=['# v0.8.0の先攻・後攻の有利不利：詳細調査','', '調査日：2026年10月3日（日本時間）。調査ID：V080-BALANCE-20261003。','',
+lines=['# v0.8.0の先攻・後攻の有利不利：詳細調査','', '調査日：2026年10月3日（日本時間）。調査ID：V080-BALANCE-20261003-R2。','',
 '対象は現行の `prototype/next-turn-engine.js` と `prototype/steal.js`。4列32穴、ハンド22個ずつ、NYAKUAの最後の1個保護、別確保分の次手3個投入、共通MTAJI、512回安全上限を使用した。初期配置と製品コードを変更していない。','',
 f"正式対局は計{summary['totalGames']:,}局。旧試験と今回の準備試験はこの対局数に加えない。全局の全着手で総KETE64個と非負整数を検査した。",'',
-'## 同じ方針同士の比較','', '|方針|局数|先攻勝|後攻勝|未決着|先攻勝率|95%区間|平均手数|平均NYAKUA|', '|---|---:|---:|---:|---:|---:|---:|---:|---:|']
+'本書はR2（乱数方式修正後）の正式結果。初回のxorshift・固定XORで生成した2人の乱数列には選択相関が残るため、初回19,600局は参考記録として分離した。R2はseed・主体・呼出番号を分けたSHA-256カウンター式擬似乱数。初手を固定する場合も通常と同じ乱数1回分を消費し、以後の列をずらさない。実装詳細と初回記録は試験READMEを参照。','', '## 同じ方針同士の比較','', '|方針|局数|先攻勝|後攻勝|未決着|先攻勝率|95%区間|平均手数|平均NYAKUA|', '|---|---:|---:|---:|---:|---:|---:|---:|---:|']
 for x in summaries:
  if not x['task'].startswith('self-'):continue
  s=x['summary'];lines.append(f"|{x['task'][5:]}|{s['n']}|{s['firstWins']}|{s['secondWins']}|{s['n']-s['completed']}|{f(s['firstWinPct'])}%|{interval(s)}%|{f(s['avgPlies'])}|{f(s['avgNyakua'])}|")
-lines+=['','randomは全合法な選択肢から一様選択。noisyは即時評価の最良値から7点以内をランダム選択、greedyは即時評価、replyは相手の1手応答まで。search3/4/5/6は3/4/5/6手先の反復深化ミニマックスで、6手先は一着手30,000ノード上限。評価は `2×前列KETE差＋盤上・ハンド・確保分の総KETE差`。mobility付きは合法手数の差を2倍、前列占有穴数差を加える。根で同点の手は乱数で選択する。公開AI-GEN4や人間の熟練者の実力を再現したものではない。','',
+lines+=['','randomは全合法な選択肢から一様選択。noisyは即時評価の最良値から7点以内をランダム選択、greedyは即時評価、replyは相手の1手応答まで。search3/4/5/6は3/4/5/6手先の反復深化ミニマックスで、6手先は一着手30,000ノード上限。評価は `2×前列KETE差＋盤上・ハンド・確保分の総KETE差`。mobility付きは合法手数の差を2倍、前列占有穴数差を加える。greedy/noisyは開始手がcaptureなら2点を加える。根で同点の手は乱数で選択する。公開AI-GEN4や人間の熟練者の実力を再現したものではない。','',
 '深さは要求値であり、ノード予算で未完了なら直前に完了した深さの評価を使用する。完了深さの頻度は集約JSONの `diagnostics.completedDepths` に保存。合法手が1つの着手は探索を省略する。','',
 '## 異なる方針の先後交換','', '|方針A / B|組数|局数|先攻勝率|組単位95%区間|2局とも後攻勝 / 分割 / 2局とも先攻勝|', '|---|---:|---:|---:|---:|---|']
 for x in summaries:
@@ -45,7 +45,7 @@ lines+=['','Aが先攻・Bが後攻の対局と、Bが先攻・Aが後攻の対�
 for x in summaries:
  if not x['task'].startswith('open-'):continue
  for i,s in enumerate(x['openingForced']):lines.append(f"|{x['task'][5:]}|前列index {[5,5,6,6][i]}・{['left','right','left','right'][i]}|{s['n']}|{f(s['firstWinPct'])}%|{s['unresolved']}|")
-lines+=['','indexは0始まり。南側の盤表示ではindex 5がA6、index 6がA7に対応する。','',
+lines+=['','indexは0始まり。南側の盤表示ではindex 5がSF6、index 6がSF7に対応する。','',
 '## NYAKUA・段階移行の観察','', '|方針|NYAKUA平均：先攻 / 後攻|最初のNYAKUAが先攻：局数 / 先攻勝率|最初が後攻：局数 / 先攻勝率|NYAKUAなし：局数 / 先攻勝率|MTAJI移行時平均総KETE差（先攻−後攻）|', '|---|---:|---:|---:|---:|---:|']
 for x in summaries:
  if not x['task'].startswith('self-'):continue

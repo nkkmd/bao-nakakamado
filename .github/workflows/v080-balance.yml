@@ -1,7 +1,7 @@
-name: v0.8.0 detailed first-player balance
+name: v0.8.0 balance with independent random streams
 on:
   push:
-    branches: [experiment/v080-balance-20261003]
+    branches: [experiment/v080-balance-20261003-independent]
     paths: ['tools/v080-balance/*.cjs', 'tools/v080-balance/*.py', '.github/workflows/v080-balance.yml']
   workflow_dispatch:
 permissions:
@@ -34,7 +34,7 @@ jobs:
     timeout-minutes: 60
     strategy:
       fail-fast: false
-      max-parallel: 4
+      max-parallel: 8
       matrix:
         task: [self-random, self-noisy, self-greedy, self-reply, self-search3, self-search4, self-search5, self-search6, self-search4-mobility, self-search6-mobility, cross-0, cross-1, cross-2, cross-3, open-search4, open-search6, proof]
     env:
@@ -81,7 +81,7 @@ jobs:
         env:
           STUDY_BRANCH: ${{ github.ref_name }}
         run: |
-          test "$STUDY_BRANCH" = experiment/v080-balance-20261003
+          test "$STUDY_BRANCH" = experiment/v080-balance-20261003-independent
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add tools/v080-balance/results/summary.json tools/v080-balance/results/verification.json tools/v080-balance/results/checkpoints.json.gz tools/v080-balance/results/SHA256.json doc/V080_FIRST_PLAYER_BALANCE_20261003.md

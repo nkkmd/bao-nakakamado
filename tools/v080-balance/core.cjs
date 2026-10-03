@@ -1,10 +1,11 @@
 "use strict";
-const assert=require('node:assert/strict');
+const assert=require('node:assert/strict'),crypto=require('node:crypto');
 const E=require('../../prototype/next-turn-engine.js');
 const S=require('../../prototype/steal.js').createForEngine(E);
 const T={E},B=E;
 const engines={live:{E,initial:()=>E.initialState(),advance:(b,m)=>{const g=S.apply({board:b,history:[]},m);return {b:g.board,entry:g.history[0]};}}};
-function rng(seed){let x=seed>>>0;return()=>{x^=x<<13;x^=x>>>17;x^=x<<5;return(x>>>0)/4294967296;};}
+// Domain-separated counter streams avoid the fixed XOR relationship of xorshift(seed XOR role).
+function rng(seed){let counter=0;return()=>{const h=crypto.createHash('sha256').update('V080-R2:'+String(seed)+':'+counter++).digest();return h.readUIntBE(0,6)/281474976710656;};}
 function seedAt(i){return(0x924f3aa1+i*0x9e3779b1)>>>0;}
 function key(b){return JSON.stringify([b.pits,b.reserve,b.nyakuaReserve||[0,0],b.pending,b.houseOwned,b.player,b.phase,b.winner]);}
 function total(b){return [...b.pits.flat(2),...b.reserve,...b.pending,...(b.nyakuaReserve||[])].reduce((a,n)=>a+n,0);}
@@ -45,11 +46,12 @@ function choose(model,b,policy,random,stats){
 }
 function play(model,policies,seed,first=0,trace=false,swapStreams=false,opening=null){
  let b=engines[model].initial();b.player=first;
- const streams=[rng(seed^0xa341316c),rng(seed^0xc8013ea4)];if(swapStreams)streams.reverse();
+ const streams=[rng(seed+':role-A'),rng(seed+':role-B')];if(swapStreams)streams.reverse();
  const stats={plies:0,namuaMoves:0,mtajiMoves:0,nyakua:0,multiPlacements:0,passes:0,searchNodes:0,budgetStops:0,
  nyakuaByRole:[0,0],capturesByRole:[0,0],multiByRole:[0,0],firstNyakuaRole:null,mtajiEntry:null,snapshots:{},opening:null};
  const path=[],seen=new Set([key(b)]);let cutoff=null;
  while(b.winner===null&&stats.plies<400){const before=b,role=b.player===first?0:1;
+  if(stats.plies===0&&opening!==null)streams[role]();
   const c=stats.plies===0&&opening!==null?children(model,b)[opening]:choose(model,b,policies[role],streams[role],stats);assert.ok(c);b=c.b;validate(b);
   stats.plies++;stats.namuaMoves+=before.phase==='namua';stats.mtajiMoves+=before.phase==='mtaji';stats.nyakua+=c.entry.stolen;stats.multiPlacements+=c.entry.placed>1;stats.passes+=c.m.type==='pass';
   stats.nyakuaByRole[role]+=c.entry.stolen;stats.capturesByRole[role]+=c.entry.captures;stats.multiByRole[role]+=c.entry.placed>1;
