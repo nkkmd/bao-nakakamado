@@ -1,0 +1,89 @@
+name: v0.8.0 detailed first-player balance
+on:
+  push:
+    branches: [experiment/v080-balance-20261003]
+    paths: ['tools/v080-balance/*.cjs', 'tools/v080-balance/*.py', '.github/workflows/v080-balance.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: v080-balance-${{ github.ref }}-${{ github.sha }}
+  cancel-in-progress: false
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+      - run: node --test prototype/four-row.test.cjs prototype/next-turn.test.cjs prototype/steal.test.js
+      - run: |
+          mkdir -p tools/v080-balance/results/validate
+          node tools/v080-balance/check.cjs tools/v080-balance/results/validate/checks.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v080-balance-validate
+          path: tools/v080-balance/results/
+          retention-days: 30
+  study:
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        task: [self-random, self-noisy, self-greedy, self-reply, self-search3, self-search4, self-search5, self-search6, self-search4-mobility, self-search6-mobility, cross-0, cross-1, cross-2, cross-3, open-search4, open-search6, proof]
+    env:
+      TASK: ${{ matrix.task }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+      - run: node tools/v080-balance/run.cjs "$TASK" "tools/v080-balance/results/$TASK"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v080-balance-${{ matrix.task }}
+          path: tools/v080-balance/results/
+          retention-days: 30
+  report:
+    needs: study
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: v080-balance-*
+          path: tools/v080-balance/results
+          merge-multiple: true
+      - run: node tools/v080-balance/verify.cjs
+      - run: python3 tools/v080-balance/report.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v080-balance-final
+          path: |
+            tools/v080-balance/results/
+            doc/V080_FIRST_PLAYER_BALANCE_20261003.md
+          retention-days: 30
+      - name: Preserve study on investigation branch
+        env:
+          STUDY_BRANCH: ${{ github.ref_name }}
+        run: |
+          test "$STUDY_BRANCH" = experiment/v080-balance-20261003
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add tools/v080-balance/results/summary.json tools/v080-balance/results/verification.json tools/v080-balance/results/checkpoints.json.gz tools/v080-balance/results/SHA256.json doc/V080_FIRST_PLAYER_BALANCE_20261003.md
+          git commit -m "docs: preserve detailed v0.8.0 first-player balance results"
+          git push origin "HEAD:$STUDY_BRANCH"
