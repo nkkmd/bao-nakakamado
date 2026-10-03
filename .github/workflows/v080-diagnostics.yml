@@ -1,0 +1,60 @@
+name: v0.8.0 balance additional diagnostics
+on:
+  push:
+    branches: [experiment/v080-balance-20261003-independent]
+    paths: ['.github/workflows/v080-diagnostics.yml', 'tools/v080-balance/opening-diagnostic.js', 'tools/v080-balance/sampler-audit.js', 'tools/v080-balance/statistical-diagnostic.js']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: v080-diagnostics-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  diagnostics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+      - name: Generate and verify additional diagnostics
+        run: |
+          node tools/v080-balance/opening-diagnostic.js
+          node tools/v080-balance/sampler-audit.js
+          node tools/v080-balance/statistical-diagnostic.js
+          node <<'JS'
+          const fs=require('node:fs'),crypto=require('node:crypto'),assert=require('node:assert/strict');
+          const root='tools/v080-balance/results/',hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+          const summary=JSON.parse(fs.readFileSync(root+'summary.json'));assert.equal(summary.totalGames,19600);
+          assert.equal(hash('tools/v080-balance/core.cjs'),summary.tasks[0].metadata.hashes['core.cjs']);
+          const old=JSON.parse(fs.readFileSync(root+'SHA256.json')),checks={};for(const [p,h] of Object.entries(old)){const name=p.split('/').at(-1);assert.equal(hash(root+name),h);checks[root+name]=h;}
+          const tests=[[3000,1431,0.012362241413676558],[799,457,5.3565532574671334e-5],[400,227,0.007969830575801142],[400,231,0.0022482081044708107],[800,609,1.3232686413342494e-51]],fn=require('./tools/v080-balance/statistical-diagnostic.js').binomialTwoSided;
+          for(const [n,w,ref] of tests)assert.ok(Math.abs(fn(n,w)-ref)<1e-8*ref);
+          const sources=['tools/v080-balance/opening-diagnostic.js','tools/v080-balance/sampler-audit.js','tools/v080-balance/statistical-diagnostic.js','tools/v080-balance/core.cjs','.github/workflows/v080-diagnostics.yml'];
+          fs.writeFileSync(root+'diagnostic-provenance.json',JSON.stringify({study:summary.study,runId:process.env.GITHUB_RUN_ID,commit:process.env.GITHUB_SHA,node:process.version,primaryRunId:summary.tasks[0].metadata.runId,sourceHashes:Object.fromEntries(sources.map(p=>[p,hash(p)])),referencePValueChecks:tests.length},null,2)+'\n');
+          for(const name of ['opening-diagnostic.json','sampler-audit.json','statistical-diagnostic.json','diagnostic-provenance.json'])checks[root+name]=hash(root+name);
+          fs.writeFileSync(root+'SHA256.json',JSON.stringify(checks,null,2)+'\n');
+          const docs=['README.md','prototype/README.md','doc/NYAKUA_THREE_STUDY_20261002.md','tools/nyakua-three/README.md','tools/v080-balance/README.md','doc/V080_FIRST_PLAYER_BALANCE_20261003.md'],path=require('node:path');
+          for(const p of docs){const text=fs.readFileSync(p,'utf8');for(const m of text.matchAll(/\]\(([^)]+)\)/g)){const target=m[1];if(/^(https?:|#)/.test(target))continue;assert.ok(fs.existsSync(path.resolve(path.dirname(p),target.split('#')[0])),p+': '+target);}}
+          console.log('Additional diagnostics, source and result hashes, reference p-values and relative links passed');
+          JS
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v080-balance-additional-diagnostics
+          path: |
+            tools/v080-balance/results/*diagnostic*.json
+            tools/v080-balance/results/sampler-audit.json
+            tools/v080-balance/results/SHA256.json
+          retention-days: 30
+      - name: Preserve additional records on study branch
+        env:
+          STUDY_BRANCH: ${{ github.ref_name }}
+        run: |
+          test "$STUDY_BRANCH" = experiment/v080-balance-20261003-independent
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add tools/v080-balance/results/opening-diagnostic.json tools/v080-balance/results/sampler-audit.json tools/v080-balance/results/statistical-diagnostic.json tools/v080-balance/results/diagnostic-provenance.json tools/v080-balance/results/SHA256.json
+          git commit -m "docs: preserve verified balance diagnostics"
+          git push origin "HEAD:$STUDY_BRANCH"

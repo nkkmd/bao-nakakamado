@@ -26,3 +26,7 @@ node tools/nyakua-three/run.cjs proof tools/nyakua-three/results/proof
 v0.8.0では `prototype/steal.js` が別確保対応へ変わりました。ゲーム規則の照合は成功していますが、研究実行時とバイト列が異なるため、保存済みチェックポイントの署名はそのままでは一致せず、`audit.cjs` のソース検査も拒否します。原記録を再検証する場合は、HEADから別の作業ツリーを作り、各taskの `summary.json` の `metadata.commit` と `metadata.hashes` に指定された7ソースを復元してください。正式対局の実行commitは `1c266fe03581865064521910d0bc9fb2740d471e` です。
 
 `report.cjs` は調査当時の比較報告を再生成します。現在の文書の冒頭にあるv0.8.0採用済みの案内は、再生成後に維持してください。現行v0.8.0の検証は[試作README](../../prototype/README.md)の手順で行い、調査時の対照 `current` と区別します。
+
+## 先後勝率の解釈に関する追加注記（2026年10月3日）
+
+この系列のxorshift乱数では、2人の初期seedを同じseedと異なる定数のXORで作るため、同じ呼出回数の出力間にseedに依存しない固定XOR関係がある。先後交換だけではこの相関は除けない。原記録の数値と署名は保持し、現行の先後評価には[主体別カウンター方式のR2調査](../v080-balance/README.md)を使用する。別の過去試験系列まで点検済みとはしない。

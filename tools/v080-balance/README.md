@@ -34,3 +34,15 @@ python3 tools/v080-balance/report.py
 初回実行は[Actions 37112608419](https://github.com/nkkmd/bao-nakakamado/actions/runs/37112608419)と `experiment/v080-balance-20261003` に保存する参考記録。旧xorshift方式では `seed XOR 定数A/B` から作った2人の乱数列にseedに依存しない固定XOR関係があり、先後交換でも消えない選択相関が残る。初手固定時に乱数消費を省略した問題もあるため、その数値を正式判断に使用しない。
 
 R2ではseed・主体A/B・呼出番号を区別したSHA-256のカウンター方式を使用し、上位48ビットから[0,1)へ変換する。固定XOR関係を持たない擬似乱数であり、数学的な独立性の証明を主張しない。交差対戦では主体の列を交換する。初手を強制するときも通常と同じ1回分の乱数を消費し、自然に選ばれた初手を同じseedで強制した場合、その後の全棋譜が一致することを40局で検査する。
+
+## 追加診断と報告の再生成
+
+```sh
+node tools/v080-balance/opening-diagnostic.js
+node tools/v080-balance/sampler-audit.js
+node tools/v080-balance/statistical-diagnostic.js
+```
+
+初手1〜8手先の枝刈りなし評価、画面AIの固定選択、旧方式の乱数関係、10条件の正確二項検定＋Holm補正、初手別Wilson区間、先後交換のHoeffding保守区間を保存する。元の組単位標準誤差が0になった条件では、幅0の区間を精度評価に使用しない。各主体別成績も記録する。
+
+`report.py` は元の集約数値を生成する。その後に詳細報告の判断・保守区間・段階移行・追加診断の説明を編集しているため、再生成時は追記を保持する。元の `summary.json`・`checkpoints.json.gz` は原記録として維持する。追加診断は正式対局数に加算しない。追加診断は専用Actionsで再生成・保存し、実行元・run ID・ソースハッシュを `diagnostic-provenance.json` に記録する。
