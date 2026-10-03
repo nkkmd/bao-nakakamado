@@ -1,0 +1,4249 @@
+{
+  "study": "V080-BALANCE-20261003-R2",
+  "dateJST": "2026-10-03",
+  "totalGames": 19600,
+  "tasks": [
+    {
+      "task": "self-random",
+      "metadata": {
+        "study": "V080-BALANCE-20261003-R2",
+        "rules": "0.8.0",
+        "task": "self-random",
+        "cfg": {
+          "kind": "self",
+          "policies": [
+            "random",
+            "random"
+          ],
+          "n": 3000,
+          "offset": 500000
+        },
+        "hashes": {
+          "core.cjs": "b821c0473aea6fb91691f828ac98173f8a5d7133893a4e6c1cc2258622f318f2",
+          "config.cjs": "73b5d5009a2879ce85b145cb3381309293f4ddcd3cba19e62682e344f60c3a35",
+          "run.cjs": "f95e25166d6aea92e25643c1b21d051372d6eab5e5bd41889ce22dabd5ad8ce2",
+          "check.cjs": "80c45c4f86efef29b35ed8484192bdd10086543ebb644c1a80df5620734f2abd",
+          "../../prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+          "../../prototype/steal.js": "41e4dbd52ec697b02dd0c33f2b5f1e7030345cd6b6a31ed985126936dd476fcf"
+        },
+        "node": "v24.19.0",
+        "runId": "37113643263",
+        "commit": "faa782565d5a95f384c0a32a8d279cd8edae2205"
+      },
+      "signature": "b1ecab1c90bd32274d6eef27d296be5b5f696a8cece111436a8e62d666f63d27",
+      "completed": true,
+      "summary": {
+        "n": 3000,
+        "completed": 3000,
+        "firstWins": 1503,
+        "secondWins": 1497,
+        "firstWinPct": 50.1,
+        "wilson95Pct": [
+          48.31182594917938,
+          51.887918281071535
+        ],
+        "avgPlies": 45.24366666666667,
+        "medianPlies": 42,
+        "p95Plies": 84,
+        "maxPlies": 178,
+        "avgNamuaMoves": 29.833666666666666,
+        "avgMtajiMoves": 15.41,
+        "mtajiPlayedPct": 78.2,
+        "avgNyakua": 5.951666666666667,
+        "nyakuaPct": 99.3,
+        "passes": 0,
+        "budgetStops": 0,
+        "searchNodes": 0,
+        "reasons": {
+          "front-empty": 2473,
+          "no-move": 527
+        }
+      },
+      "diagnostics": {
+        "uniqueFinalHashes": 2979,
+        "firstNyakua": [
+          {
+            "n": 1427,
+            "completed": 1427,
+            "firstWins": 792,
+            "secondWins": 635,
+            "unresolved": 0,
+            "firstWinPct": 55.5010511562719,
+            "allGameFirstWinBoundsPct": [
+              55.5010511562719,
+              55.5010511562719
+            ]
+          },
+          {
+            "n": 1552,
+            "completed": 1552,
+            "firstWins": 702,
+            "secondWins": 850,
+            "unresolved": 0,
+            "firstWinPct": 45.2319587628866,
+            "allGameFirstWinBoundsPct": [
+              45.2319587628866,
+              45.2319587628866
+            ]
+          },
+          {
+            "n": 21,
+            "completed": 21,
+            "firstWins": 9,
+            "secondWins": 12,
+            "unresolved": 0,
+            "firstWinPct": 42.857142857142854,
+            "allGameFirstWinBoundsPct": [
+              42.857142857142854,
+              42.857142857142854
+            ]
+          }
+        ],
+        "byOpening": {
+          "5-left": {
+            "n": 741,
+            "completed": 741,
+            "firstWins": 362,
+            "secondWins": 379,
+            "unresolved": 0,
+            "firstWinPct": 48.852901484480434,
+            "allGameFirstWinBoundsPct": [
+              48.852901484480434,
+              48.852901484480434
+            ]
+          },
+          "5-right": {
+            "n": 748,
+            "completed": 748,
+            "firstWins": 386,
+            "secondWins": 362,
+            "unresolved": 0,
+            "firstWinPct": 51.60427807486631,
+            "allGameFirstWinBoundsPct": [
+              51.60427807486631,
+              51.60427807486631
+            ]
+          },
+          "6-left": {
+            "n": 757,
+            "completed": 757,
+            "firstWins": 370,
+            "secondWins": 387,
+            "unresolved": 0,
+            "firstWinPct": 48.87714663143989,
+            "allGameFirstWinBoundsPct": [
+              48.87714663143989,
+              48.87714663143989
+            ]
+          },
+          "6-right": {
+            "n": 754,
+            "completed": 754,
+            "firstWins": 385,
+            "secondWins": 369,
+            "unresolved": 0,
+            "firstWinPct": 51.06100795755968,
+            "allGameFirstWinBoundsPct": [
+              51.06100795755968,
+              51.06100795755968
+            ]
+          }
+        },
+        "avgNyakuaByRole": [
+          3.012,
+          2.9396666666666667
+        ],
+        "avgCapturesByRole": [
+          30.083333333333332,
+          30.374666666666666
+        ],
+        "mtajiEntryByNextRole": [
+          {
+            "n": 1736,
+            "completed": 1736,
+            "firstWins": 837,
+            "secondWins": 899,
+            "unresolved": 0,
+            "firstWinPct": 48.214285714285715,
+            "allGameFirstWinBoundsPct": [
+              48.214285714285715,
+              48.214285714285715
+            ]
+          },
+          {
+            "n": 610,
+            "completed": 610,
+            "firstWins": 343,
+            "secondWins": 267,
+            "unresolved": 0,
+            "firstWinPct": 56.22950819672131,
+            "allGameFirstWinBoundsPct": [
+              56.22950819672131,
+              56.22950819672131
+            ]
+          }
+        ],
+        "meanMtajiMaterialDiff": -1.5004233700254022,
+        "meanMtajiFrontDiff": -1.9864521591871296,
+        "snapshots": {
+          "10": {
+            "n": 2967,
+            "materialDiff": -1.0589821368385575,
+            "frontDiff": -1.728345129760701,
+            "handDiff": -0.014155712841253791
+          },
+          "20": {
+            "n": 2790,
+            "materialDiff": -3.5232974910394264,
+            "frontDiff": -3.8774193548387097,
+            "handDiff": -0.015770609318996417
+          },
+          "30": {
+            "n": 2471,
+            "materialDiff": -3.7377579927155,
+            "frontDiff": -3.960339943342776,
+            "handDiff": 0.03318494536624848
+          },
+          "40": {
+            "n": 1708,
+            "materialDiff": -5.359484777517564,
+            "frontDiff": -4.820257611241217,
+            "handDiff": 0.00585480093676815
+          }
+        },
+        "completedDepths": {}
+      }
+    },
+    {
+      "task": "self-noisy",
+      "metadata": {
+        "study": "V080-BALANCE-20261003-R2",
+        "rules": "0.8.0",
+        "task": "self-noisy",
+        "cfg": {
+          "kind": "self",
+          "policies": [
+            "noisy",
+            "noisy"
+          ],
+          "n": 3000,
+          "offset": 510000
+        },
+        "hashes": {
+          "core.cjs": "b821c0473aea6fb91691f828ac98173f8a5d7133893a4e6c1cc2258622f318f2",
+          "config.cjs": "73b5d5009a2879ce85b145cb3381309293f4ddcd3cba19e62682e344f60c3a35",
+          "run.cjs": "f95e25166d6aea92e25643c1b21d051372d6eab5e5bd41889ce22dabd5ad8ce2",
+          "check.cjs": "80c45c4f86efef29b35ed8484192bdd10086543ebb644c1a80df5620734f2abd",
+          "../../prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+          "../../prototype/steal.js": "41e4dbd52ec697b02dd0c33f2b5f1e7030345cd6b6a31ed985126936dd476fcf"
+        },
+        "node": "v24.19.0",
+        "runId": "37113643263",
+        "commit": "faa782565d5a95f384c0a32a8d279cd8edae2205"
+      },
+      "signature": "d81f5f5fd4745be23549f7d719319c6dee267c1fb8407496612d5572e10398ad",
+      "completed": true,
+      "summary": {
+        "n": 3000,
+        "completed": 3000,
+        "firstWins": 1503,
+        "secondWins": 1497,
+        "firstWinPct": 50.1,
+        "wilson95Pct": [
+          48.31182594917938,
+          51.887918281071535
+        ],
+        "avgPlies": 32.72233333333333,
+        "medianPlies": 32,
+        "p95Plies": 54,
+        "maxPlies": 101,
+        "avgNamuaMoves": 26.115666666666666,
+        "avgMtajiMoves": 6.6066666666666665,
+        "mtajiPlayedPct": 62.333333333333336,
+        "avgNyakua": 7.366666666666666,
+        "nyakuaPct": 99.93333333333334,
+        "passes": 0,
+        "budgetStops": 0,
+        "searchNodes": 0,
+        "reasons": {
+          "front-empty": 2565,
+          "no-move": 435
+        }
+      },
+      "diagnostics": {
+        "uniqueFinalHashes": 2941,
+        "firstNyakua": [
+          {
+            "n": 1290,
+            "completed": 1290,
+            "firstWins": 704,
+            "secondWins": 586,
+            "unresolved": 0,
+            "firstWinPct": 54.57364341085271,
+            "allGameFirstWinBoundsPct": [
+              54.57364341085271,
+              54.57364341085271
+            ]
+          },
+          {
+            "n": 1708,
+            "completed": 1708,
+            "firstWins": 798,
+            "secondWins": 910,
+            "unresolved": 0,
+            "firstWinPct": 46.721311475409834,
+            "allGameFirstWinBoundsPct": [
+              46.721311475409834,
+              46.721311475409834
+            ]
+          },
+          {
+            "n": 2,
+            "completed": 2,
+            "firstWins": 1,
+            "secondWins": 1,
+            "unresolved": 0,
+            "firstWinPct": 50.0,
+            "allGameFirstWinBoundsPct": [
+              50.0,
+              50.0
+            ]
+          }
+        ],
+        "byOpening": {
+          "5-left": {
+            "n": 804,
+            "completed": 804,
+            "firstWins": 375,
+            "secondWins": 429,
+            "unresolved": 0,
+            "firstWinPct": 46.64179104477612,
+            "allGameFirstWinBoundsPct": [
+              46.64179104477612,
+              46.64179104477612
+            ]
+          },
+          "5-right": {
+            "n": 706,
+            "completed": 706,
+            "firstWins": 345,
+            "secondWins": 361,
+            "unresolved": 0,
+            "firstWinPct": 48.86685552407932,
+            "allGameFirstWinBoundsPct": [
+              48.86685552407932,
+              48.86685552407932
+            ]
+          },
+          "6-left": {
+            "n": 745,
+            "completed": 745,
+            "firstWins": 366,
+            "secondWins": 379,
+            "unresolved": 0,
+            "firstWinPct": 49.12751677852349,
+            "allGameFirstWinBoundsPct": [
+              49.12751677852349,
+              49.12751677852349
+            ]
+          },
+          "6-right": {
+            "n": 745,
+            "completed": 745,
+            "firstWins": 417,
+            "secondWins": 328,
+            "unresolved": 0,
+            "firstWinPct": 55.97315436241611,
+            "allGameFirstWinBoundsPct": [
+              55.97315436241611,
+              55.97315436241611
+            ]
+          }
+        },
+        "avgNyakuaByRole": [
+          3.6726666666666667,
+          3.694
+        ],
+        "avgCapturesByRole": [
+          23.895666666666667,
+          24.18
+        ],
+        "mtajiEntryByNextRole": [
+          {
+            "n": 1063,
+            "completed": 1063,
+            "firstWins": 470,
+            "secondWins": 593,
+            "unresolved": 0,
+            "firstWinPct": 44.21448730009407,
+            "allGameFirstWinBoundsPct": [
+              44.21448730009407,
+              44.21448730009407
+            ]
+          },
+          {
+            "n": 807,
+            "completed": 807,
+            "firstWins": 479,
+            "secondWins": 328,
+            "unresolved": 0,
+            "firstWinPct": 59.355638166047086,
+            "allGameFirstWinBoundsPct": [
+              59.355638166047086,
+              59.355638166047086
+            ]
+          }
+        ],
+        "meanMtajiMaterialDiff": -0.24449108079748164,
+        "meanMtajiFrontDiff": -0.7429171038824763,
+        "snapshots": {
+          "10": {
+            "n": 2974,
+            "materialDiff": -2.7175521183591123,
+            "frontDiff": -2.63920645595158,
+            "handDiff": -0.03093476798924008
+          },
+          "20": {
+            "n": 2621,
+            "materialDiff": -6.471575734452499,
+            "frontDiff": -5.998855398702785,
+            "handDiff": -0.011827546737886304
+          },
+          "30": {
+            "n": 1773,
+            "materialDiff": -6.631697687535251,
+            "frontDiff": -6.354765933446137,
+            "handDiff": 0.014664410603496898
+          },
+          "40": {
+            "n": 749,
+            "materialDiff": -7.500667556742323,
+            "frontDiff": -6.93324432576769,
+            "handDiff": 0.004005340453938585
+          }
+        },
+        "completedDepths": {}
+      }
+    },
+    {
+      "task": "self-greedy",
+      "metadata": {
+        "study": "V080-BALANCE-20261003-R2",
+        "rules": "0.8.0",
+        "task": "self-greedy",
+        "cfg": {
+          "kind": "self",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "n": 3000,
+          "offset": 520000
+        },
+        "hashes": {
+          "core.cjs": "b821c0473aea6fb91691f828ac98173f8a5d7133893a4e6c1cc2258622f318f2",
+          "config.cjs": "73b5d5009a2879ce85b145cb3381309293f4ddcd3cba19e62682e344f60c3a35",
+          "run.cjs": "f95e25166d6aea92e25643c1b21d051372d6eab5e5bd41889ce22dabd5ad8ce2",
+          "check.cjs": "80c45c4f86efef29b35ed8484192bdd10086543ebb644c1a80df5620734f2abd",
+          "../../prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+          "../../prototype/steal.js": "41e4dbd52ec697b02dd0c33f2b5f1e7030345cd6b6a31ed985126936dd476fcf"
+        },
+        "node": "v24.19.0",
+        "runId": "37113643263",
+        "commit": "faa782565d5a95f384c0a32a8d279cd8edae2205"
+      },
+      "signature": "6a43ea6a7cdf5477fdc8cf75eeb3ef9ab214611c6da6cd6d91ba947a00c0e1f3",
+      "completed": true,
+      "summary": {
+        "n": 3000,
+        "completed": 3000,
+        "firstWins": 1431,
+        "secondWins": 1569,
+        "firstWinPct": 47.7,
+        "wilson95Pct": [
+          45.91678195122785,
+          49.489100753001324
+        ],
+        "avgPlies": 30.274333333333335,
+        "medianPlies": 30,
+        "p95Plies": 50,
+        "maxPlies": 93,
+        "avgNamuaMoves": 23.677333333333333,
+        "avgMtajiMoves": 6.597,
+        "mtajiPlayedPct": 64.16666666666667,
+        "avgNyakua": 8.575333333333333,
+        "nyakuaPct": 100,
+        "passes": 0,
+        "budgetStops": 0,
+        "searchNodes": 0,
+        "reasons": {
+          "front-empty": 2153,
+          "no-move": 847
+        }
+      },
+      "diagnostics": {
+        "uniqueFinalHashes": 2399,
+        "firstNyakua": [
+          {
+            "n": 1049,
+            "completed": 1049,
+            "firstWins": 525,
+            "secondWins": 524,
+            "unresolved": 0,
+            "firstWinPct": 50.047664442326024,
+            "allGameFirstWinBoundsPct": [
+              50.047664442326024,
+              50.047664442326024
+            ]
+          },
+          {
+            "n": 1951,
+            "completed": 1951,
+            "firstWins": 906,
+            "secondWins": 1045,
+            "unresolved": 0,
+            "firstWinPct": 46.43772424397745,
+            "allGameFirstWinBoundsPct": [
+              46.43772424397745,
+              46.43772424397745
+            ]
+          },
+          {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          }
+        ],
+        "byOpening": {
+          "5-left": {
+            "n": 1490,
+            "completed": 1490,
+            "firstWins": 811,
+            "secondWins": 679,
+            "unresolved": 0,
+            "firstWinPct": 54.42953020134228,
+            "allGameFirstWinBoundsPct": [
+              54.42953020134228,
+              54.42953020134228
+            ]
+          },
+          "5-right": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          "6-left": {
+            "n": 1510,
+            "completed": 1510,
+            "firstWins": 620,
+            "secondWins": 890,
+            "unresolved": 0,
+            "firstWinPct": 41.05960264900662,
+            "allGameFirstWinBoundsPct": [
+              41.05960264900662,
+              41.05960264900662
+            ]
+          },
+          "6-right": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          }
+        },
+        "avgNyakuaByRole": [
+          4.080333333333333,
+          4.495
+        ],
+        "avgCapturesByRole": [
+          25.120333333333335,
+          26.467333333333332
+        ],
+        "mtajiEntryByNextRole": [
+          {
+            "n": 1027,
+            "completed": 1027,
+            "firstWins": 407,
+            "secondWins": 620,
+            "unresolved": 0,
+            "firstWinPct": 39.62999026290166,
+            "allGameFirstWinBoundsPct": [
+              39.62999026290166,
+              39.62999026290166
+            ]
+          },
+          {
+            "n": 898,
+            "completed": 898,
+            "firstWins": 510,
+            "secondWins": 388,
+            "unresolved": 0,
+            "firstWinPct": 56.792873051224944,
+            "allGameFirstWinBoundsPct": [
+              56.792873051224944,
+              56.792873051224944
+            ]
+          }
+        ],
+        "meanMtajiMaterialDiff": -1.6207766011094302,
+        "meanMtajiFrontDiff": -0.497226424609178,
+        "snapshots": {
+          "10": {
+            "n": 2985,
+            "materialDiff": -5.1410385259631495,
+            "frontDiff": -3.563149078726968,
+            "handDiff": 0.01407035175879397
+          },
+          "20": {
+            "n": 2478,
+            "materialDiff": -10.085552865213883,
+            "frontDiff": -7.716707021791768,
+            "handDiff": -0.03389830508474576
+          },
+          "30": {
+            "n": 1552,
+            "materialDiff": -8.724226804123711,
+            "frontDiff": -7.199742268041237,
+            "handDiff": 0.010309278350515464
+          },
+          "40": {
+            "n": 523,
+            "materialDiff": -7.732313575525812,
+            "frontDiff": -6.659655831739962,
+            "handDiff": 0.0
+          }
+        },
+        "completedDepths": {}
+      }
+    },
+    {
+      "task": "self-reply",
+      "metadata": {
+        "study": "V080-BALANCE-20261003-R2",
+        "rules": "0.8.0",
+        "task": "self-reply",
+        "cfg": {
+          "kind": "self",
+          "policies": [
+            "reply",
+            "reply"
+          ],
+          "n": 3000,
+          "offset": 530000
+        },
+        "hashes": {
+          "core.cjs": "b821c0473aea6fb91691f828ac98173f8a5d7133893a4e6c1cc2258622f318f2",
+          "config.cjs": "73b5d5009a2879ce85b145cb3381309293f4ddcd3cba19e62682e344f60c3a35",
+          "run.cjs": "f95e25166d6aea92e25643c1b21d051372d6eab5e5bd41889ce22dabd5ad8ce2",
+          "check.cjs": "80c45c4f86efef29b35ed8484192bdd10086543ebb644c1a80df5620734f2abd",
+          "../../prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+          "../../prototype/steal.js": "41e4dbd52ec697b02dd0c33f2b5f1e7030345cd6b6a31ed985126936dd476fcf"
+        },
+        "node": "v24.19.0",
+        "runId": "37113643263",
+        "commit": "faa782565d5a95f384c0a32a8d279cd8edae2205"
+      },
+      "signature": "4fd3e9ce19c58757014fe8342e5b8ca994ecd74aca0d43c2c604a0c2b5735829",
+      "completed": true,
+      "summary": {
+        "n": 3000,
+        "completed": 3000,
+        "firstWins": 1819,
+        "secondWins": 1181,
+        "firstWinPct": 60.63333333333333,
+        "wilson95Pct": [
+          58.87253423438016,
+          62.36693558229939
+        ],
+        "avgPlies": 95.88833333333334,
+        "medianPlies": 95,
+        "p95Plies": 115,
+        "maxPlies": 198,
+        "avgNamuaMoves": 44,
+        "avgMtajiMoves": 51.888333333333335,
+        "mtajiPlayedPct": 100,
+        "avgNyakua": 0,
+        "nyakuaPct": 0,
+        "passes": 0,
+        "budgetStops": 0,
+        "searchNodes": 0,
+        "reasons": {
+          "front-empty": 2423,
+          "no-move": 577
+        }
+      },
+      "diagnostics": {
+        "uniqueFinalHashes": 718,
+        "firstNyakua": [
+          {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          {
+            "n": 3000,
+            "completed": 3000,
+            "firstWins": 1819,
+            "secondWins": 1181,
+            "unresolved": 0,
+            "firstWinPct": 60.63333333333333,
+            "allGameFirstWinBoundsPct": [
+              60.63333333333333,
+              60.63333333333333
+            ]
+          }
+        ],
+        "byOpening": {
+          "5-left": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          "5-right": {
+            "n": 3000,
+            "completed": 3000,
+            "firstWins": 1819,
+            "secondWins": 1181,
+            "unresolved": 0,
+            "firstWinPct": 60.63333333333333,
+            "allGameFirstWinBoundsPct": [
+              60.63333333333333,
+              60.63333333333333
+            ]
+          },
+          "6-left": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          "6-right": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          }
+        },
+        "avgNyakuaByRole": [
+          0.0,
+          0.0
+        ],
+        "avgCapturesByRole": [
+          40.108666666666664,
+          32.83733333333333
+        ],
+        "mtajiEntryByNextRole": [
+          {
+            "n": 3000,
+            "completed": 3000,
+            "firstWins": 1819,
+            "secondWins": 1181,
+            "unresolved": 0,
+            "firstWinPct": 60.63333333333333,
+            "allGameFirstWinBoundsPct": [
+              60.63333333333333,
+              60.63333333333333
+            ]
+          },
+          {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          }
+        ],
+        "meanMtajiMaterialDiff": 0.0,
+        "meanMtajiFrontDiff": 0.0,
+        "snapshots": {
+          "10": {
+            "n": 3000,
+            "materialDiff": 0.0,
+            "frontDiff": 0.0,
+            "handDiff": 0.0
+          },
+          "20": {
+            "n": 3000,
+            "materialDiff": 0.0,
+            "frontDiff": 0.0,
+            "handDiff": 0.0
+          },
+          "30": {
+            "n": 3000,
+            "materialDiff": 0.0,
+            "frontDiff": 0.0,
+            "handDiff": 0.0
+          },
+          "40": {
+            "n": 3000,
+            "materialDiff": 0.0,
+            "frontDiff": 0.0,
+            "handDiff": 0.0
+          }
+        },
+        "completedDepths": {}
+      }
+    },
+    {
+      "task": "self-search3",
+      "metadata": {
+        "study": "V080-BALANCE-20261003-R2",
+        "rules": "0.8.0",
+        "task": "self-search3",
+        "cfg": {
+          "kind": "self",
+          "policies": [
+            "search3",
+            "search3"
+          ],
+          "n": 800,
+          "offset": 540000
+        },
+        "hashes": {
+          "core.cjs": "b821c0473aea6fb91691f828ac98173f8a5d7133893a4e6c1cc2258622f318f2",
+          "config.cjs": "73b5d5009a2879ce85b145cb3381309293f4ddcd3cba19e62682e344f60c3a35",
+          "run.cjs": "f95e25166d6aea92e25643c1b21d051372d6eab5e5bd41889ce22dabd5ad8ce2",
+          "check.cjs": "80c45c4f86efef29b35ed8484192bdd10086543ebb644c1a80df5620734f2abd",
+          "../../prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+          "../../prototype/steal.js": "41e4dbd52ec697b02dd0c33f2b5f1e7030345cd6b6a31ed985126936dd476fcf"
+        },
+        "node": "v24.19.0",
+        "runId": "37113643263",
+        "commit": "faa782565d5a95f384c0a32a8d279cd8edae2205"
+      },
+      "signature": "d2cf1568c4eabec6e07350dd0df88da3e2e6b59510f28251cdabf03e2885d008",
+      "completed": true,
+      "summary": {
+        "n": 800,
+        "completed": 800,
+        "firstWins": 609,
+        "secondWins": 191,
+        "firstWinPct": 76.125,
+        "wilson95Pct": [
+          73.05038575982759,
+          78.94991795450552
+        ],
+        "avgPlies": 35.47375,
+        "medianPlies": 32,
+        "p95Plies": 58,
+        "maxPlies": 81,
+        "avgNamuaMoves": 28.27,
+        "avgMtajiMoves": 7.20375,
+        "mtajiPlayedPct": 99,
+        "avgNyakua": 8.3475,
+        "nyakuaPct": 100,
+        "passes": 0,
+        "budgetStops": 0,
+        "searchNodes": 2813480,
+        "reasons": {
+          "front-empty": 342,
+          "no-move": 458
+        }
+      },
+      "diagnostics": {
+        "uniqueFinalHashes": 166,
+        "firstNyakua": [
+          {
+            "n": 242,
+            "completed": 242,
+            "firstWins": 158,
+            "secondWins": 84,
+            "unresolved": 0,
+            "firstWinPct": 65.2892561983471,
+            "allGameFirstWinBoundsPct": [
+              65.2892561983471,
+              65.2892561983471
+            ]
+          },
+          {
+            "n": 558,
+            "completed": 558,
+            "firstWins": 451,
+            "secondWins": 107,
+            "unresolved": 0,
+            "firstWinPct": 80.82437275985663,
+            "allGameFirstWinBoundsPct": [
+              80.82437275985663,
+              80.82437275985663
+            ]
+          },
+          {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          }
+        ],
+        "byOpening": {
+          "5-left": {
+            "n": 800,
+            "completed": 800,
+            "firstWins": 609,
+            "secondWins": 191,
+            "unresolved": 0,
+            "firstWinPct": 76.125,
+            "allGameFirstWinBoundsPct": [
+              76.125,
+              76.125
+            ]
+          },
+          "5-right": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          "6-left": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          "6-right": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          }
+        },
+        "avgNyakuaByRole": [
+          3.5125,
+          4.835
+        ],
+        "avgCapturesByRole": [
+          31.1875,
+          29.57
+        ],
+        "mtajiEntryByNextRole": [
+          {
+            "n": 220,
+            "completed": 220,
+            "firstWins": 129,
+            "secondWins": 91,
+            "unresolved": 0,
+            "firstWinPct": 58.63636363636363,
+            "allGameFirstWinBoundsPct": [
+              58.63636363636363,
+              58.63636363636363
+            ]
+          },
+          {
+            "n": 572,
+            "completed": 572,
+            "firstWins": 480,
+            "secondWins": 92,
+            "unresolved": 0,
+            "firstWinPct": 83.91608391608392,
+            "allGameFirstWinBoundsPct": [
+              83.91608391608392,
+              83.91608391608392
+            ]
+          }
+        ],
+        "meanMtajiMaterialDiff": 20.487373737373737,
+        "meanMtajiFrontDiff": 12.262626262626263,
+        "snapshots": {
+          "10": {
+            "n": 800,
+            "materialDiff": -1.645,
+            "frontDiff": -1.17625,
+            "handDiff": -0.47875
+          },
+          "20": {
+            "n": 800,
+            "materialDiff": 2.6225,
+            "frontDiff": -0.65375,
+            "handDiff": 0.6625
+          },
+          "30": {
+            "n": 417,
+            "materialDiff": -8.465227817745804,
+            "frontDiff": -7.407673860911271,
+            "handDiff": -0.03117505995203837
+          },
+          "40": {
+            "n": 219,
+            "materialDiff": 6.4840182648401825,
+            "frontDiff": 3.9954337899543377,
+            "handDiff": 0.0091324200913242
+          }
+        },
+        "completedDepths": {
+          "3": 24677
+        }
+      }
+    },
+    {
+      "task": "self-search4",
+      "metadata": {
+        "study": "V080-BALANCE-20261003-R2",
+        "rules": "0.8.0",
+        "task": "self-search4",
+        "cfg": {
+          "kind": "self",
+          "policies": [
+            "search4",
+            "search4"
+          ],
+          "n": 800,
+          "offset": 550000
+        },
+        "hashes": {
+          "core.cjs": "b821c0473aea6fb91691f828ac98173f8a5d7133893a4e6c1cc2258622f318f2",
+          "config.cjs": "73b5d5009a2879ce85b145cb3381309293f4ddcd3cba19e62682e344f60c3a35",
+          "run.cjs": "f95e25166d6aea92e25643c1b21d051372d6eab5e5bd41889ce22dabd5ad8ce2",
+          "check.cjs": "80c45c4f86efef29b35ed8484192bdd10086543ebb644c1a80df5620734f2abd",
+          "../../prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+          "../../prototype/steal.js": "41e4dbd52ec697b02dd0c33f2b5f1e7030345cd6b6a31ed985126936dd476fcf"
+        },
+        "node": "v24.19.0",
+        "runId": "37113643263",
+        "commit": "faa782565d5a95f384c0a32a8d279cd8edae2205"
+      },
+      "signature": "f396e43ab3cf32c79eab17e491688435912fcf1512d8d273fff2ea233433ed56",
+      "completed": true,
+      "summary": {
+        "n": 800,
+        "completed": 799,
+        "firstWins": 457,
+        "secondWins": 342,
+        "firstWinPct": 57.196495619524406,
+        "wilson95Pct": [
+          53.73927716743708,
+          60.584846073563014
+        ],
+        "avgPlies": 55.555,
+        "medianPlies": 52,
+        "p95Plies": 82,
+        "maxPlies": 102,
+        "avgNamuaMoves": 36.9225,
+        "avgMtajiMoves": 18.6325,
+        "mtajiPlayedPct": 99.75,
+        "avgNyakua": 3.73125,
+        "nyakuaPct": 93.375,
+        "passes": 0,
+        "budgetStops": 0,
+        "searchNodes": 6814570,
+        "reasons": {
+          "no-move": 135,
+          "front-empty": 664,
+          "relay-limit": 1
+        }
+      },
+      "diagnostics": {
+        "uniqueFinalHashes": 493,
+        "firstNyakua": [
+          {
+            "n": 166,
+            "completed": 166,
+            "firstWins": 151,
+            "secondWins": 15,
+            "unresolved": 0,
+            "firstWinPct": 90.96385542168674,
+            "allGameFirstWinBoundsPct": [
+              90.96385542168674,
+              90.96385542168674
+            ]
+          },
+          {
+            "n": 581,
+            "completed": 580,
+            "firstWins": 265,
+            "secondWins": 315,
+            "unresolved": 1,
+            "firstWinPct": 45.689655172413794,
+            "allGameFirstWinBoundsPct": [
+              45.61101549053356,
+              45.78313253012048
+            ]
+          },
+          {
+            "n": 53,
+            "completed": 53,
+            "firstWins": 41,
+            "secondWins": 12,
+            "unresolved": 0,
+            "firstWinPct": 77.35849056603773,
+            "allGameFirstWinBoundsPct": [
+              77.35849056603773,
+              77.35849056603773
+            ]
+          }
+        ],
+        "byOpening": {
+          "5-left": {
+            "n": 394,
+            "completed": 394,
+            "firstWins": 254,
+            "secondWins": 140,
+            "unresolved": 0,
+            "firstWinPct": 64.46700507614213,
+            "allGameFirstWinBoundsPct": [
+              64.46700507614213,
+              64.46700507614213
+            ]
+          },
+          "5-right": {
+            "n": 406,
+            "completed": 405,
+            "firstWins": 203,
+            "secondWins": 202,
+            "unresolved": 1,
+            "firstWinPct": 50.123456790123456,
+            "allGameFirstWinBoundsPct": [
+              50.0,
+              50.24630541871921
+            ]
+          },
+          "6-left": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          "6-right": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          }
+        },
+        "avgNyakuaByRole": [
+          1.79625,
+          1.935
+        ],
+        "avgCapturesByRole": [
+          29.75625,
+          27.1175
+        ],
+        "mtajiEntryByNextRole": [
+          {
+            "n": 612,
+            "completed": 611,
+            "firstWins": 360,
+            "secondWins": 251,
+            "unresolved": 1,
+            "firstWinPct": 58.91980360065467,
+            "allGameFirstWinBoundsPct": [
+              58.8235294117647,
+              58.98692810457516
+            ]
+          },
+          {
+            "n": 186,
+            "completed": 186,
+            "firstWins": 95,
+            "secondWins": 91,
+            "unresolved": 0,
+            "firstWinPct": 51.075268817204304,
+            "allGameFirstWinBoundsPct": [
+              51.075268817204304,
+              51.075268817204304
+            ]
+          }
+        ],
+        "meanMtajiMaterialDiff": 1.9674185463659148,
+        "meanMtajiFrontDiff": 0.19172932330827067,
+        "snapshots": {
+          "10": {
+            "n": 800,
+            "materialDiff": -1.1075,
+            "frontDiff": -0.885,
+            "handDiff": 0.11625
+          },
+          "20": {
+            "n": 800,
+            "materialDiff": -1.5225,
+            "frontDiff": -1.29875,
+            "handDiff": -0.1425
+          },
+          "30": {
+            "n": 800,
+            "materialDiff": -0.7125,
+            "frontDiff": -0.99375,
+            "handDiff": -0.065
+          },
+          "40": {
+            "n": 751,
+            "materialDiff": -0.796271637816245,
+            "frontDiff": -2.1691078561917445,
+            "handDiff": 0.02796271637816245
+          }
+        },
+        "completedDepths": {
+          "4": 37502
+        }
+      }
+    },
+    {
+      "task": "self-search5",
+      "metadata": {
+        "study": "V080-BALANCE-20261003-R2",
+        "rules": "0.8.0",
+        "task": "self-search5",
+        "cfg": {
+          "kind": "self",
+          "policies": [
+            "search5",
+            "search5"
+          ],
+          "n": 400,
+          "offset": 560000
+        },
+        "hashes": {
+          "core.cjs": "b821c0473aea6fb91691f828ac98173f8a5d7133893a4e6c1cc2258622f318f2",
+          "config.cjs": "73b5d5009a2879ce85b145cb3381309293f4ddcd3cba19e62682e344f60c3a35",
+          "run.cjs": "f95e25166d6aea92e25643c1b21d051372d6eab5e5bd41889ce22dabd5ad8ce2",
+          "check.cjs": "80c45c4f86efef29b35ed8484192bdd10086543ebb644c1a80df5620734f2abd",
+          "../../prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+          "../../prototype/steal.js": "41e4dbd52ec697b02dd0c33f2b5f1e7030345cd6b6a31ed985126936dd476fcf"
+        },
+        "node": "v24.19.0",
+        "runId": "37113643263",
+        "commit": "faa782565d5a95f384c0a32a8d279cd8edae2205"
+      },
+      "signature": "da0a9d151a49cf0157e94e80c6c9cbe08236992f2cb53ef895048f39f15bc74c",
+      "completed": true,
+      "summary": {
+        "n": 400,
+        "completed": 400,
+        "firstWins": 227,
+        "secondWins": 173,
+        "firstWinPct": 56.75,
+        "wilson95Pct": [
+          51.853457694786066,
+          61.518126329694354
+        ],
+        "avgPlies": 38.6975,
+        "medianPlies": 39,
+        "p95Plies": 47,
+        "maxPlies": 49,
+        "avgNamuaMoves": 30.3925,
+        "avgMtajiMoves": 8.305,
+        "mtajiPlayedPct": 98.75,
+        "avgNyakua": 7.34,
+        "nyakuaPct": 100,
+        "passes": 0,
+        "budgetStops": 0,
+        "searchNodes": 9603735,
+        "reasons": {
+          "no-move": 84,
+          "front-empty": 316
+        }
+      },
+      "diagnostics": {
+        "uniqueFinalHashes": 214,
+        "firstNyakua": [
+          {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          {
+            "n": 400,
+            "completed": 400,
+            "firstWins": 227,
+            "secondWins": 173,
+            "unresolved": 0,
+            "firstWinPct": 56.75,
+            "allGameFirstWinBoundsPct": [
+              56.75,
+              56.75
+            ]
+          },
+          {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          }
+        ],
+        "byOpening": {
+          "5-left": {
+            "n": 400,
+            "completed": 400,
+            "firstWins": 227,
+            "secondWins": 173,
+            "unresolved": 0,
+            "firstWinPct": 56.75,
+            "allGameFirstWinBoundsPct": [
+              56.75,
+              56.75
+            ]
+          },
+          "5-right": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          "6-left": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          "6-right": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          }
+        },
+        "avgNyakuaByRole": [
+          3.1425,
+          4.1975
+        ],
+        "avgCapturesByRole": [
+          28.9575,
+          28.7875
+        ],
+        "mtajiEntryByNextRole": [
+          {
+            "n": 271,
+            "completed": 271,
+            "firstWins": 101,
+            "secondWins": 170,
+            "unresolved": 0,
+            "firstWinPct": 37.269372693726936,
+            "allGameFirstWinBoundsPct": [
+              37.269372693726936,
+              37.269372693726936
+            ]
+          },
+          {
+            "n": 124,
+            "completed": 124,
+            "firstWins": 121,
+            "secondWins": 3,
+            "unresolved": 0,
+            "firstWinPct": 97.58064516129032,
+            "allGameFirstWinBoundsPct": [
+              97.58064516129032,
+              97.58064516129032
+            ]
+          }
+        ],
+        "meanMtajiMaterialDiff": 5.383458646616542,
+        "meanMtajiFrontDiff": 4.526315789473684,
+        "snapshots": {
+          "10": {
+            "n": 400,
+            "materialDiff": -1.99,
+            "frontDiff": -3.435,
+            "handDiff": -0.2775
+          },
+          "20": {
+            "n": 400,
+            "materialDiff": -3.55,
+            "frontDiff": -3.79,
+            "handDiff": 0.0475
+          },
+          "30": {
+            "n": 353,
+            "materialDiff": -6.759206798866855,
+            "frontDiff": -7.5609065155807365,
+            "handDiff": 0.24929178470254956
+          },
+          "40": {
+            "n": 169,
+            "materialDiff": -7.017751479289941,
+            "frontDiff": -3.3431952662721893,
+            "handDiff": 0.0
+          }
+        },
+        "completedDepths": {
+          "5": 12387
+        }
+      }
+    },
+    {
+      "task": "self-search6",
+      "metadata": {
+        "study": "V080-BALANCE-20261003-R2",
+        "rules": "0.8.0",
+        "task": "self-search6",
+        "cfg": {
+          "kind": "self",
+          "policies": [
+            "search6",
+            "search6"
+          ],
+          "n": 400,
+          "offset": 570000
+        },
+        "hashes": {
+          "core.cjs": "b821c0473aea6fb91691f828ac98173f8a5d7133893a4e6c1cc2258622f318f2",
+          "config.cjs": "73b5d5009a2879ce85b145cb3381309293f4ddcd3cba19e62682e344f60c3a35",
+          "run.cjs": "f95e25166d6aea92e25643c1b21d051372d6eab5e5bd41889ce22dabd5ad8ce2",
+          "check.cjs": "80c45c4f86efef29b35ed8484192bdd10086543ebb644c1a80df5620734f2abd",
+          "../../prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+          "../../prototype/steal.js": "41e4dbd52ec697b02dd0c33f2b5f1e7030345cd6b6a31ed985126936dd476fcf"
+        },
+        "node": "v24.19.0",
+        "runId": "37113643263",
+        "commit": "faa782565d5a95f384c0a32a8d279cd8edae2205"
+      },
+      "signature": "6697ec9aa8e9ca507c42c58800fa85010861c8ef0faae761acedbfd4ef9801d0",
+      "completed": true,
+      "summary": {
+        "n": 400,
+        "completed": 400,
+        "firstWins": 231,
+        "secondWins": 169,
+        "firstWinPct": 57.75,
+        "wilson95Pct": [
+          52.858101773765966,
+          62.494457661748584
+        ],
+        "avgPlies": 73.1875,
+        "medianPlies": 65,
+        "p95Plies": 92,
+        "maxPlies": 100,
+        "avgNamuaMoves": 41.2075,
+        "avgMtajiMoves": 31.98,
+        "mtajiPlayedPct": 100,
+        "avgNyakua": 1.53,
+        "nyakuaPct": 100,
+        "passes": 0,
+        "budgetStops": 0,
+        "searchNodes": 20669950,
+        "reasons": {
+          "front-empty": 318,
+          "no-move": 82
+        }
+      },
+      "diagnostics": {
+        "uniqueFinalHashes": 178,
+        "firstNyakua": [
+          {
+            "n": 400,
+            "completed": 400,
+            "firstWins": 231,
+            "secondWins": 169,
+            "unresolved": 0,
+            "firstWinPct": 57.75,
+            "allGameFirstWinBoundsPct": [
+              57.75,
+              57.75
+            ]
+          },
+          {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          }
+        ],
+        "byOpening": {
+          "5-left": {
+            "n": 400,
+            "completed": 400,
+            "firstWins": 231,
+            "secondWins": 169,
+            "unresolved": 0,
+            "firstWinPct": 57.75,
+            "allGameFirstWinBoundsPct": [
+              57.75,
+              57.75
+            ]
+          },
+          "5-right": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          "6-left": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          "6-right": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          }
+        },
+        "avgNyakuaByRole": [
+          1.0225,
+          0.5075
+        ],
+        "avgCapturesByRole": [
+          38.92,
+          33.6325
+        ],
+        "mtajiEntryByNextRole": [
+          {
+            "n": 293,
+            "completed": 293,
+            "firstWins": 231,
+            "secondWins": 62,
+            "unresolved": 0,
+            "firstWinPct": 78.839590443686,
+            "allGameFirstWinBoundsPct": [
+              78.839590443686,
+              78.839590443686
+            ]
+          },
+          {
+            "n": 107,
+            "completed": 107,
+            "firstWins": 0,
+            "secondWins": 107,
+            "unresolved": 0,
+            "firstWinPct": 0.0,
+            "allGameFirstWinBoundsPct": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "meanMtajiMaterialDiff": 6.925,
+        "meanMtajiFrontDiff": 5.835,
+        "snapshots": {
+          "10": {
+            "n": 400,
+            "materialDiff": 6.0,
+            "frontDiff": 7.0,
+            "handDiff": 0.0
+          },
+          "20": {
+            "n": 400,
+            "materialDiff": 10.0,
+            "frontDiff": 12.0,
+            "handDiff": 0.0
+          },
+          "30": {
+            "n": 400,
+            "materialDiff": 11.435,
+            "frontDiff": 12.9725,
+            "handDiff": 0.0
+          },
+          "40": {
+            "n": 400,
+            "materialDiff": 7.205,
+            "frontDiff": 5.7525,
+            "handDiff": 0.0
+          }
+        },
+        "completedDepths": {
+          "6": 25603
+        }
+      }
+    },
+    {
+      "task": "self-search4-mobility",
+      "metadata": {
+        "study": "V080-BALANCE-20261003-R2",
+        "rules": "0.8.0",
+        "task": "self-search4-mobility",
+        "cfg": {
+          "kind": "self",
+          "policies": [
+            "search4-mobility",
+            "search4-mobility"
+          ],
+          "n": 800,
+          "offset": 580000
+        },
+        "hashes": {
+          "core.cjs": "b821c0473aea6fb91691f828ac98173f8a5d7133893a4e6c1cc2258622f318f2",
+          "config.cjs": "73b5d5009a2879ce85b145cb3381309293f4ddcd3cba19e62682e344f60c3a35",
+          "run.cjs": "f95e25166d6aea92e25643c1b21d051372d6eab5e5bd41889ce22dabd5ad8ce2",
+          "check.cjs": "80c45c4f86efef29b35ed8484192bdd10086543ebb644c1a80df5620734f2abd",
+          "../../prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+          "../../prototype/steal.js": "41e4dbd52ec697b02dd0c33f2b5f1e7030345cd6b6a31ed985126936dd476fcf"
+        },
+        "node": "v24.19.0",
+        "runId": "37113643263",
+        "commit": "faa782565d5a95f384c0a32a8d279cd8edae2205"
+      },
+      "signature": "324ec8f366ab69e911182643dca76f933922d135835126066bc824f60563137c",
+      "completed": true,
+      "summary": {
+        "n": 800,
+        "completed": 800,
+        "firstWins": 419,
+        "secondWins": 381,
+        "firstWinPct": 52.375,
+        "wilson95Pct": [
+          48.9110622016105,
+          55.816238136056164
+        ],
+        "avgPlies": 55.90625,
+        "medianPlies": 57,
+        "p95Plies": 59,
+        "maxPlies": 63,
+        "avgNamuaMoves": 32.52375,
+        "avgMtajiMoves": 23.3825,
+        "mtajiPlayedPct": 100,
+        "avgNyakua": 6,
+        "nyakuaPct": 100,
+        "passes": 0,
+        "budgetStops": 0,
+        "searchNodes": 7785955,
+        "reasons": {
+          "front-empty": 697,
+          "no-move": 103
+        }
+      },
+      "diagnostics": {
+        "uniqueFinalHashes": 100,
+        "firstNyakua": [
+          {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          {
+            "n": 800,
+            "completed": 800,
+            "firstWins": 419,
+            "secondWins": 381,
+            "unresolved": 0,
+            "firstWinPct": 52.375,
+            "allGameFirstWinBoundsPct": [
+              52.375,
+              52.375
+            ]
+          },
+          {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          }
+        ],
+        "byOpening": {
+          "5-left": {
+            "n": 800,
+            "completed": 800,
+            "firstWins": 419,
+            "secondWins": 381,
+            "unresolved": 0,
+            "firstWinPct": 52.375,
+            "allGameFirstWinBoundsPct": [
+              52.375,
+              52.375
+            ]
+          },
+          "5-right": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          "6-left": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          "6-right": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          }
+        },
+        "avgNyakuaByRole": [
+          1.52375,
+          4.47625
+        ],
+        "avgCapturesByRole": [
+          36.7075,
+          37.2125
+        ],
+        "mtajiEntryByNextRole": [
+          {
+            "n": 381,
+            "completed": 381,
+            "firstWins": 0,
+            "secondWins": 381,
+            "unresolved": 0,
+            "firstWinPct": 0.0,
+            "allGameFirstWinBoundsPct": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "n": 419,
+            "completed": 419,
+            "firstWins": 419,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": 100.0,
+            "allGameFirstWinBoundsPct": [
+              100.0,
+              100.0
+            ]
+          }
+        ],
+        "meanMtajiMaterialDiff": 1.4275,
+        "meanMtajiFrontDiff": -0.95375,
+        "snapshots": {
+          "10": {
+            "n": 800,
+            "materialDiff": -4.0,
+            "frontDiff": -6.0,
+            "handDiff": 0.0
+          },
+          "20": {
+            "n": 800,
+            "materialDiff": -9.1425,
+            "frontDiff": -2.9525,
+            "handDiff": -1.0
+          },
+          "30": {
+            "n": 800,
+            "materialDiff": -11.81,
+            "frontDiff": -5.04875,
+            "handDiff": 0.0
+          },
+          "40": {
+            "n": 800,
+            "materialDiff": -3.62,
+            "frontDiff": -5.19125,
+            "handDiff": 0.0
+          }
+        },
+        "completedDepths": {
+          "4": 34681
+        }
+      }
+    },
+    {
+      "task": "self-search6-mobility",
+      "metadata": {
+        "study": "V080-BALANCE-20261003-R2",
+        "rules": "0.8.0",
+        "task": "self-search6-mobility",
+        "cfg": {
+          "kind": "self",
+          "policies": [
+            "search6-mobility",
+            "search6-mobility"
+          ],
+          "n": 400,
+          "offset": 590000
+        },
+        "hashes": {
+          "core.cjs": "b821c0473aea6fb91691f828ac98173f8a5d7133893a4e6c1cc2258622f318f2",
+          "config.cjs": "73b5d5009a2879ce85b145cb3381309293f4ddcd3cba19e62682e344f60c3a35",
+          "run.cjs": "f95e25166d6aea92e25643c1b21d051372d6eab5e5bd41889ce22dabd5ad8ce2",
+          "check.cjs": "80c45c4f86efef29b35ed8484192bdd10086543ebb644c1a80df5620734f2abd",
+          "../../prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+          "../../prototype/steal.js": "41e4dbd52ec697b02dd0c33f2b5f1e7030345cd6b6a31ed985126936dd476fcf"
+        },
+        "node": "v24.19.0",
+        "runId": "37113643263",
+        "commit": "faa782565d5a95f384c0a32a8d279cd8edae2205"
+      },
+      "signature": "c1b76b8e3c9bc133b2ebef66fac552911191d0b9706138dbcd1044ee4299ba5f",
+      "completed": true,
+      "summary": {
+        "n": 400,
+        "completed": 400,
+        "firstWins": 196,
+        "secondWins": 204,
+        "firstWinPct": 49,
+        "wilson95Pct": [
+          44.13392880154644,
+          53.88509578741944
+        ],
+        "avgPlies": 63.285,
+        "medianPlies": 48,
+        "p95Plies": 89,
+        "maxPlies": 99,
+        "avgNamuaMoves": 34.98,
+        "avgMtajiMoves": 28.305,
+        "mtajiPlayedPct": 100,
+        "avgNyakua": 4.51,
+        "nyakuaPct": 100,
+        "passes": 0,
+        "budgetStops": 0,
+        "searchNodes": 22139474,
+        "reasons": {
+          "front-empty": 264,
+          "no-move": 136
+        }
+      },
+      "diagnostics": {
+        "uniqueFinalHashes": 235,
+        "firstNyakua": [
+          {
+            "n": 400,
+            "completed": 400,
+            "firstWins": 196,
+            "secondWins": 204,
+            "unresolved": 0,
+            "firstWinPct": 49.0,
+            "allGameFirstWinBoundsPct": [
+              49.0,
+              49.0
+            ]
+          },
+          {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          }
+        ],
+        "byOpening": {
+          "5-left": {
+            "n": 400,
+            "completed": 400,
+            "firstWins": 196,
+            "secondWins": 204,
+            "unresolved": 0,
+            "firstWinPct": 49.0,
+            "allGameFirstWinBoundsPct": [
+              49.0,
+              49.0
+            ]
+          },
+          "5-right": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          "6-left": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          "6-right": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          }
+        },
+        "avgNyakuaByRole": [
+          2.98,
+          1.53
+        ],
+        "avgCapturesByRole": [
+          43.605,
+          39.975
+        ],
+        "mtajiEntryByNextRole": [
+          {
+            "n": 400,
+            "completed": 400,
+            "firstWins": 196,
+            "secondWins": 204,
+            "unresolved": 0,
+            "firstWinPct": 49.0,
+            "allGameFirstWinBoundsPct": [
+              49.0,
+              49.0
+            ]
+          },
+          {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          }
+        ],
+        "meanMtajiMaterialDiff": -11.54,
+        "meanMtajiFrontDiff": -7.24,
+        "snapshots": {
+          "10": {
+            "n": 400,
+            "materialDiff": 6.0,
+            "frontDiff": 6.0,
+            "handDiff": 0.0
+          },
+          "20": {
+            "n": 400,
+            "materialDiff": 7.96,
+            "frontDiff": 12.51,
+            "handDiff": 0.0
+          },
+          "30": {
+            "n": 400,
+            "materialDiff": -10.4,
+            "frontDiff": 4.76,
+            "handDiff": 0.49
+          },
+          "40": {
+            "n": 376,
+            "materialDiff": -15.175531914893616,
+            "frontDiff": -8.101063829787234,
+            "handDiff": 0.0
+          }
+        },
+        "completedDepths": {
+          "6": 22790
+        }
+      }
+    },
+    {
+      "task": "cross-0",
+      "metadata": {
+        "study": "V080-BALANCE-20261003-R2",
+        "rules": "0.8.0",
+        "task": "cross-0",
+        "cfg": {
+          "kind": "cross",
+          "policies": [
+            "noisy",
+            "reply"
+          ],
+          "n": 250,
+          "offset": 700000
+        },
+        "hashes": {
+          "core.cjs": "b821c0473aea6fb91691f828ac98173f8a5d7133893a4e6c1cc2258622f318f2",
+          "config.cjs": "73b5d5009a2879ce85b145cb3381309293f4ddcd3cba19e62682e344f60c3a35",
+          "run.cjs": "f95e25166d6aea92e25643c1b21d051372d6eab5e5bd41889ce22dabd5ad8ce2",
+          "check.cjs": "80c45c4f86efef29b35ed8484192bdd10086543ebb644c1a80df5620734f2abd",
+          "../../prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+          "../../prototype/steal.js": "41e4dbd52ec697b02dd0c33f2b5f1e7030345cd6b6a31ed985126936dd476fcf"
+        },
+        "node": "v24.19.0",
+        "runId": "37113643263",
+        "commit": "faa782565d5a95f384c0a32a8d279cd8edae2205"
+      },
+      "signature": "8a5cba53fbdcf99de8019f036ef5b2cff89ccea3e99812e8bbe8c1e3a2f5660b",
+      "completed": true,
+      "summary": {
+        "n": 500,
+        "completed": 500,
+        "firstWins": 241,
+        "secondWins": 259,
+        "firstWinPct": 48.2,
+        "avgPlies": 40.806,
+        "medianPlies": 40,
+        "p95Plies": 64,
+        "maxPlies": 115,
+        "avgNamuaMoves": 32.288,
+        "avgMtajiMoves": 8.518,
+        "mtajiPlayedPct": 72,
+        "avgNyakua": 4.94,
+        "nyakuaPct": 97.6,
+        "passes": 0,
+        "budgetStops": 0,
+        "searchNodes": 0,
+        "reasons": {
+          "front-empty": 412,
+          "no-move": 88
+        },
+        "completePairs": 250,
+        "pairedFirstWinPct": 48.199999999999996,
+        "pairCluster95Pct": [
+          45.04121550875712,
+          51.35878449124287
+        ],
+        "pairCounts": [
+          37,
+          185,
+          28
+        ]
+      },
+      "diagnostics": {
+        "uniqueFinalHashes": 496,
+        "firstNyakua": [
+          {
+            "n": 262,
+            "completed": 262,
+            "firstWins": 172,
+            "secondWins": 90,
+            "unresolved": 0,
+            "firstWinPct": 65.64885496183206,
+            "allGameFirstWinBoundsPct": [
+              65.64885496183206,
+              65.64885496183206
+            ]
+          },
+          {
+            "n": 226,
+            "completed": 226,
+            "firstWins": 59,
+            "secondWins": 167,
+            "unresolved": 0,
+            "firstWinPct": 26.106194690265486,
+            "allGameFirstWinBoundsPct": [
+              26.106194690265486,
+              26.106194690265486
+            ]
+          },
+          {
+            "n": 12,
+            "completed": 12,
+            "firstWins": 10,
+            "secondWins": 2,
+            "unresolved": 0,
+            "firstWinPct": 83.33333333333333,
+            "allGameFirstWinBoundsPct": [
+              83.33333333333333,
+              83.33333333333333
+            ]
+          }
+        ],
+        "byOpening": {
+          "5-left": {
+            "n": 74,
+            "completed": 74,
+            "firstWins": 11,
+            "secondWins": 63,
+            "unresolved": 0,
+            "firstWinPct": 14.864864864864865,
+            "allGameFirstWinBoundsPct": [
+              14.864864864864865,
+              14.864864864864865
+            ]
+          },
+          "5-right": {
+            "n": 294,
+            "completed": 294,
+            "firstWins": 215,
+            "secondWins": 79,
+            "unresolved": 0,
+            "firstWinPct": 73.12925170068027,
+            "allGameFirstWinBoundsPct": [
+              73.12925170068027,
+              73.12925170068027
+            ]
+          },
+          "6-left": {
+            "n": 57,
+            "completed": 57,
+            "firstWins": 5,
+            "secondWins": 52,
+            "unresolved": 0,
+            "firstWinPct": 8.771929824561404,
+            "allGameFirstWinBoundsPct": [
+              8.771929824561404,
+              8.771929824561404
+            ]
+          },
+          "6-right": {
+            "n": 75,
+            "completed": 75,
+            "firstWins": 10,
+            "secondWins": 65,
+            "unresolved": 0,
+            "firstWinPct": 13.333333333333334,
+            "allGameFirstWinBoundsPct": [
+              13.333333333333334,
+              13.333333333333334
+            ]
+          }
+        },
+        "avgNyakuaByRole": [
+          2.426,
+          2.514
+        ],
+        "avgCapturesByRole": [
+          20.99,
+          21.142
+        ],
+        "mtajiEntryByNextRole": [
+          {
+            "n": 259,
+            "completed": 259,
+            "firstWins": 120,
+            "secondWins": 139,
+            "unresolved": 0,
+            "firstWinPct": 46.33204633204633,
+            "allGameFirstWinBoundsPct": [
+              46.33204633204633,
+              46.33204633204633
+            ]
+          },
+          {
+            "n": 101,
+            "completed": 101,
+            "firstWins": 52,
+            "secondWins": 49,
+            "unresolved": 0,
+            "firstWinPct": 51.48514851485149,
+            "allGameFirstWinBoundsPct": [
+              51.48514851485149,
+              51.48514851485149
+            ]
+          }
+        ],
+        "meanMtajiMaterialDiff": -4.103260869565218,
+        "meanMtajiFrontDiff": -3.323369565217391,
+        "snapshots": {
+          "10": {
+            "n": 500,
+            "materialDiff": -1.452,
+            "frontDiff": -1.108,
+            "handDiff": -0.042
+          },
+          "20": {
+            "n": 483,
+            "materialDiff": -2.6252587991718426,
+            "frontDiff": -1.9461697722567288,
+            "handDiff": -0.028985507246376812
+          },
+          "30": {
+            "n": 413,
+            "materialDiff": -6.455205811138015,
+            "frontDiff": -4.941888619854722,
+            "handDiff": 0.007263922518159807
+          },
+          "40": {
+            "n": 258,
+            "materialDiff": -4.945736434108527,
+            "frontDiff": -4.608527131782946,
+            "handDiff": 0.011627906976744186
+          }
+        },
+        "completedDepths": {}
+      },
+      "policySeatScores": [
+        {
+          "policy": "noisy",
+          "first": {
+            "n": 250,
+            "completed": 250,
+            "firstWins": 33,
+            "secondWins": 217,
+            "unresolved": 0,
+            "firstWinPct": 13.2,
+            "allGameFirstWinBoundsPct": [
+              13.2,
+              13.2
+            ]
+          },
+          "second": {
+            "n": 250,
+            "completed": 250,
+            "firstWins": 208,
+            "secondWins": 42,
+            "unresolved": 0,
+            "firstWinPct": 83.2,
+            "allGameFirstWinBoundsPct": [
+              83.2,
+              83.2
+            ]
+          }
+        },
+        {
+          "policy": "reply",
+          "first": {
+            "n": 250,
+            "completed": 250,
+            "firstWins": 208,
+            "secondWins": 42,
+            "unresolved": 0,
+            "firstWinPct": 83.2,
+            "allGameFirstWinBoundsPct": [
+              83.2,
+              83.2
+            ]
+          },
+          "second": {
+            "n": 250,
+            "completed": 250,
+            "firstWins": 33,
+            "secondWins": 217,
+            "unresolved": 0,
+            "firstWinPct": 13.2,
+            "allGameFirstWinBoundsPct": [
+              13.2,
+              13.2
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "task": "cross-1",
+      "metadata": {
+        "study": "V080-BALANCE-20261003-R2",
+        "rules": "0.8.0",
+        "task": "cross-1",
+        "cfg": {
+          "kind": "cross",
+          "policies": [
+            "reply",
+            "search4"
+          ],
+          "n": 250,
+          "offset": 710000
+        },
+        "hashes": {
+          "core.cjs": "b821c0473aea6fb91691f828ac98173f8a5d7133893a4e6c1cc2258622f318f2",
+          "config.cjs": "73b5d5009a2879ce85b145cb3381309293f4ddcd3cba19e62682e344f60c3a35",
+          "run.cjs": "f95e25166d6aea92e25643c1b21d051372d6eab5e5bd41889ce22dabd5ad8ce2",
+          "check.cjs": "80c45c4f86efef29b35ed8484192bdd10086543ebb644c1a80df5620734f2abd",
+          "../../prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+          "../../prototype/steal.js": "41e4dbd52ec697b02dd0c33f2b5f1e7030345cd6b6a31ed985126936dd476fcf"
+        },
+        "node": "v24.19.0",
+        "runId": "37113643263",
+        "commit": "faa782565d5a95f384c0a32a8d279cd8edae2205"
+      },
+      "signature": "186283273ef3b656c3bedb90461e673a603bfaa20dc47849a4c240b21d976587",
+      "completed": true,
+      "summary": {
+        "n": 500,
+        "completed": 500,
+        "firstWins": 244,
+        "secondWins": 256,
+        "firstWinPct": 48.8,
+        "avgPlies": 50.608,
+        "medianPlies": 48,
+        "p95Plies": 72,
+        "maxPlies": 118,
+        "avgNamuaMoves": 38.518,
+        "avgMtajiMoves": 12.09,
+        "mtajiPlayedPct": 93.6,
+        "avgNyakua": 2.772,
+        "nyakuaPct": 92.4,
+        "passes": 0,
+        "budgetStops": 0,
+        "searchNodes": 1808293,
+        "reasons": {
+          "front-empty": 397,
+          "no-move": 103
+        },
+        "completePairs": 250,
+        "pairedFirstWinPct": 48.8,
+        "pairCluster95Pct": [
+          46.258867667446815,
+          51.34113233255319
+        ],
+        "pairCounts": [
+          24,
+          208,
+          18
+        ]
+      },
+      "diagnostics": {
+        "uniqueFinalHashes": 412,
+        "firstNyakua": [
+          {
+            "n": 268,
+            "completed": 268,
+            "firstWins": 145,
+            "secondWins": 123,
+            "unresolved": 0,
+            "firstWinPct": 54.1044776119403,
+            "allGameFirstWinBoundsPct": [
+              54.1044776119403,
+              54.1044776119403
+            ]
+          },
+          {
+            "n": 194,
+            "completed": 194,
+            "firstWins": 77,
+            "secondWins": 117,
+            "unresolved": 0,
+            "firstWinPct": 39.69072164948454,
+            "allGameFirstWinBoundsPct": [
+              39.69072164948454,
+              39.69072164948454
+            ]
+          },
+          {
+            "n": 38,
+            "completed": 38,
+            "firstWins": 22,
+            "secondWins": 16,
+            "unresolved": 0,
+            "firstWinPct": 57.89473684210526,
+            "allGameFirstWinBoundsPct": [
+              57.89473684210526,
+              57.89473684210526
+            ]
+          }
+        ],
+        "byOpening": {
+          "5-left": {
+            "n": 108,
+            "completed": 108,
+            "firstWins": 90,
+            "secondWins": 18,
+            "unresolved": 0,
+            "firstWinPct": 83.33333333333333,
+            "allGameFirstWinBoundsPct": [
+              83.33333333333333,
+              83.33333333333333
+            ]
+          },
+          "5-right": {
+            "n": 392,
+            "completed": 392,
+            "firstWins": 154,
+            "secondWins": 238,
+            "unresolved": 0,
+            "firstWinPct": 39.285714285714285,
+            "allGameFirstWinBoundsPct": [
+              39.285714285714285,
+              39.285714285714285
+            ]
+          },
+          "6-left": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          "6-right": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          }
+        },
+        "avgNyakuaByRole": [
+          1.466,
+          1.306
+        ],
+        "avgCapturesByRole": [
+          22.926,
+          22.924
+        ],
+        "mtajiEntryByNextRole": [
+          {
+            "n": 391,
+            "completed": 391,
+            "firstWins": 175,
+            "secondWins": 216,
+            "unresolved": 0,
+            "firstWinPct": 44.75703324808184,
+            "allGameFirstWinBoundsPct": [
+              44.75703324808184,
+              44.75703324808184
+            ]
+          },
+          {
+            "n": 77,
+            "completed": 77,
+            "firstWins": 51,
+            "secondWins": 26,
+            "unresolved": 0,
+            "firstWinPct": 66.23376623376623,
+            "allGameFirstWinBoundsPct": [
+              66.23376623376623,
+              66.23376623376623
+            ]
+          }
+        ],
+        "meanMtajiMaterialDiff": -1.0756302521008403,
+        "meanMtajiFrontDiff": 0.6386554621848739,
+        "snapshots": {
+          "10": {
+            "n": 500,
+            "materialDiff": -0.06,
+            "frontDiff": 0.44,
+            "handDiff": 0.084
+          },
+          "20": {
+            "n": 500,
+            "materialDiff": -0.712,
+            "frontDiff": 0.0,
+            "handDiff": 0.05
+          },
+          "30": {
+            "n": 499,
+            "materialDiff": -2.5771543086172346,
+            "frontDiff": -0.8857715430861723,
+            "handDiff": -0.04208416833667335
+          },
+          "40": {
+            "n": 407,
+            "materialDiff": -0.6683046683046683,
+            "frontDiff": -0.3783783783783784,
+            "handDiff": 0.014742014742014743
+          }
+        },
+        "completedDepths": {
+          "4": 11117
+        }
+      },
+      "policySeatScores": [
+        {
+          "policy": "reply",
+          "first": {
+            "n": 250,
+            "completed": 250,
+            "firstWins": 20,
+            "secondWins": 230,
+            "unresolved": 0,
+            "firstWinPct": 8.0,
+            "allGameFirstWinBoundsPct": [
+              8.0,
+              8.0
+            ]
+          },
+          "second": {
+            "n": 250,
+            "completed": 250,
+            "firstWins": 224,
+            "secondWins": 26,
+            "unresolved": 0,
+            "firstWinPct": 89.6,
+            "allGameFirstWinBoundsPct": [
+              89.6,
+              89.6
+            ]
+          }
+        },
+        {
+          "policy": "search4",
+          "first": {
+            "n": 250,
+            "completed": 250,
+            "firstWins": 224,
+            "secondWins": 26,
+            "unresolved": 0,
+            "firstWinPct": 89.6,
+            "allGameFirstWinBoundsPct": [
+              89.6,
+              89.6
+            ]
+          },
+          "second": {
+            "n": 250,
+            "completed": 250,
+            "firstWins": 20,
+            "secondWins": 230,
+            "unresolved": 0,
+            "firstWinPct": 8.0,
+            "allGameFirstWinBoundsPct": [
+              8.0,
+              8.0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "task": "cross-2",
+      "metadata": {
+        "study": "V080-BALANCE-20261003-R2",
+        "rules": "0.8.0",
+        "task": "cross-2",
+        "cfg": {
+          "kind": "cross",
+          "policies": [
+            "search4",
+            "search6"
+          ],
+          "n": 250,
+          "offset": 720000
+        },
+        "hashes": {
+          "core.cjs": "b821c0473aea6fb91691f828ac98173f8a5d7133893a4e6c1cc2258622f318f2",
+          "config.cjs": "73b5d5009a2879ce85b145cb3381309293f4ddcd3cba19e62682e344f60c3a35",
+          "run.cjs": "f95e25166d6aea92e25643c1b21d051372d6eab5e5bd41889ce22dabd5ad8ce2",
+          "check.cjs": "80c45c4f86efef29b35ed8484192bdd10086543ebb644c1a80df5620734f2abd",
+          "../../prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+          "../../prototype/steal.js": "41e4dbd52ec697b02dd0c33f2b5f1e7030345cd6b6a31ed985126936dd476fcf"
+        },
+        "node": "v24.19.0",
+        "runId": "37113643263",
+        "commit": "faa782565d5a95f384c0a32a8d279cd8edae2205"
+      },
+      "signature": "a14c6397bb538042d114e061d945020a356b995bcd136fbec14142cdc3afc144",
+      "completed": true,
+      "summary": {
+        "n": 500,
+        "completed": 500,
+        "firstWins": 250,
+        "secondWins": 250,
+        "firstWinPct": 50,
+        "avgPlies": 49.352,
+        "medianPlies": 49,
+        "p95Plies": 62,
+        "maxPlies": 88,
+        "avgNamuaMoves": 37.98,
+        "avgMtajiMoves": 11.372,
+        "mtajiPlayedPct": 99.6,
+        "avgNyakua": 3.236,
+        "nyakuaPct": 92.2,
+        "passes": 0,
+        "budgetStops": 0,
+        "searchNodes": 11823053,
+        "reasons": {
+          "no-move": 91,
+          "front-empty": 409
+        },
+        "completePairs": 250,
+        "pairedFirstWinPct": 50,
+        "pairCluster95Pct": [
+          45.453252673752196,
+          54.546747326247804
+        ],
+        "pairCounts": [
+          67,
+          116,
+          67
+        ]
+      },
+      "diagnostics": {
+        "uniqueFinalHashes": 269,
+        "firstNyakua": [
+          {
+            "n": 171,
+            "completed": 171,
+            "firstWins": 123,
+            "secondWins": 48,
+            "unresolved": 0,
+            "firstWinPct": 71.9298245614035,
+            "allGameFirstWinBoundsPct": [
+              71.9298245614035,
+              71.9298245614035
+            ]
+          },
+          {
+            "n": 290,
+            "completed": 290,
+            "firstWins": 119,
+            "secondWins": 171,
+            "unresolved": 0,
+            "firstWinPct": 41.03448275862069,
+            "allGameFirstWinBoundsPct": [
+              41.03448275862069,
+              41.03448275862069
+            ]
+          },
+          {
+            "n": 39,
+            "completed": 39,
+            "firstWins": 8,
+            "secondWins": 31,
+            "unresolved": 0,
+            "firstWinPct": 20.512820512820515,
+            "allGameFirstWinBoundsPct": [
+              20.512820512820515,
+              20.512820512820515
+            ]
+          }
+        ],
+        "byOpening": {
+          "5-left": {
+            "n": 385,
+            "completed": 385,
+            "firstWins": 190,
+            "secondWins": 195,
+            "unresolved": 0,
+            "firstWinPct": 49.35064935064935,
+            "allGameFirstWinBoundsPct": [
+              49.35064935064935,
+              49.35064935064935
+            ]
+          },
+          "5-right": {
+            "n": 115,
+            "completed": 115,
+            "firstWins": 60,
+            "secondWins": 55,
+            "unresolved": 0,
+            "firstWinPct": 52.17391304347826,
+            "allGameFirstWinBoundsPct": [
+              52.17391304347826,
+              52.17391304347826
+            ]
+          },
+          "6-left": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          "6-right": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          }
+        },
+        "avgNyakuaByRole": [
+          1.732,
+          1.504
+        ],
+        "avgCapturesByRole": [
+          24.758,
+          25.746
+        ],
+        "mtajiEntryByNextRole": [
+          {
+            "n": 284,
+            "completed": 284,
+            "firstWins": 164,
+            "secondWins": 120,
+            "unresolved": 0,
+            "firstWinPct": 57.74647887323944,
+            "allGameFirstWinBoundsPct": [
+              57.74647887323944,
+              57.74647887323944
+            ]
+          },
+          {
+            "n": 214,
+            "completed": 214,
+            "firstWins": 86,
+            "secondWins": 128,
+            "unresolved": 0,
+            "firstWinPct": 40.18691588785047,
+            "allGameFirstWinBoundsPct": [
+              40.18691588785047,
+              40.18691588785047
+            ]
+          }
+        ],
+        "meanMtajiMaterialDiff": 5.008032128514056,
+        "meanMtajiFrontDiff": 2.6967871485943773,
+        "snapshots": {
+          "10": {
+            "n": 500,
+            "materialDiff": -0.3,
+            "frontDiff": -1.77,
+            "handDiff": 0.0
+          },
+          "20": {
+            "n": 500,
+            "materialDiff": 3.824,
+            "frontDiff": -0.414,
+            "handDiff": 0.072
+          },
+          "30": {
+            "n": 500,
+            "materialDiff": 4.196,
+            "frontDiff": 0.56,
+            "handDiff": -0.006
+          },
+          "40": {
+            "n": 390,
+            "materialDiff": -3.2153846153846155,
+            "frontDiff": -2.325641025641026,
+            "handDiff": 0.15384615384615385
+          }
+        },
+        "completedDepths": {
+          "4": 10560,
+          "6": 10708
+        }
+      },
+      "policySeatScores": [
+        {
+          "policy": "search4",
+          "first": {
+            "n": 250,
+            "completed": 250,
+            "firstWins": 79,
+            "secondWins": 171,
+            "unresolved": 0,
+            "firstWinPct": 31.6,
+            "allGameFirstWinBoundsPct": [
+              31.6,
+              31.6
+            ]
+          },
+          "second": {
+            "n": 250,
+            "completed": 250,
+            "firstWins": 171,
+            "secondWins": 79,
+            "unresolved": 0,
+            "firstWinPct": 68.4,
+            "allGameFirstWinBoundsPct": [
+              68.4,
+              68.4
+            ]
+          }
+        },
+        {
+          "policy": "search6",
+          "first": {
+            "n": 250,
+            "completed": 250,
+            "firstWins": 171,
+            "secondWins": 79,
+            "unresolved": 0,
+            "firstWinPct": 68.4,
+            "allGameFirstWinBoundsPct": [
+              68.4,
+              68.4
+            ]
+          },
+          "second": {
+            "n": 250,
+            "completed": 250,
+            "firstWins": 79,
+            "secondWins": 171,
+            "unresolved": 0,
+            "firstWinPct": 31.6,
+            "allGameFirstWinBoundsPct": [
+              31.6,
+              31.6
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "task": "cross-3",
+      "metadata": {
+        "study": "V080-BALANCE-20261003-R2",
+        "rules": "0.8.0",
+        "task": "cross-3",
+        "cfg": {
+          "kind": "cross",
+          "policies": [
+            "search4-mobility",
+            "search6-mobility"
+          ],
+          "n": 250,
+          "offset": 730000
+        },
+        "hashes": {
+          "core.cjs": "b821c0473aea6fb91691f828ac98173f8a5d7133893a4e6c1cc2258622f318f2",
+          "config.cjs": "73b5d5009a2879ce85b145cb3381309293f4ddcd3cba19e62682e344f60c3a35",
+          "run.cjs": "f95e25166d6aea92e25643c1b21d051372d6eab5e5bd41889ce22dabd5ad8ce2",
+          "check.cjs": "80c45c4f86efef29b35ed8484192bdd10086543ebb644c1a80df5620734f2abd",
+          "../../prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+          "../../prototype/steal.js": "41e4dbd52ec697b02dd0c33f2b5f1e7030345cd6b6a31ed985126936dd476fcf"
+        },
+        "node": "v24.19.0",
+        "runId": "37113643263",
+        "commit": "faa782565d5a95f384c0a32a8d279cd8edae2205"
+      },
+      "signature": "fc10b7bf3a2daa3edca4c63a74c255948f5fe713e20aa147e4860b71e493694e",
+      "completed": true,
+      "summary": {
+        "n": 500,
+        "completed": 500,
+        "firstWins": 250,
+        "secondWins": 250,
+        "firstWinPct": 50,
+        "avgPlies": 44.192,
+        "medianPlies": 38,
+        "p95Plies": 65,
+        "maxPlies": 71,
+        "avgNamuaMoves": 33.718,
+        "avgMtajiMoves": 10.474,
+        "mtajiPlayedPct": 93.4,
+        "avgNyakua": 5.442,
+        "nyakuaPct": 100,
+        "passes": 0,
+        "budgetStops": 0,
+        "searchNodes": 11264285,
+        "reasons": {
+          "front-empty": 317,
+          "no-move": 183
+        },
+        "completePairs": 250,
+        "pairedFirstWinPct": 50,
+        "pairCluster95Pct": [
+          50,
+          50
+        ],
+        "pairCounts": [
+          0,
+          250,
+          0
+        ]
+      },
+      "diagnostics": {
+        "uniqueFinalHashes": 105,
+        "firstNyakua": [
+          {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          {
+            "n": 500,
+            "completed": 500,
+            "firstWins": 250,
+            "secondWins": 250,
+            "unresolved": 0,
+            "firstWinPct": 50.0,
+            "allGameFirstWinBoundsPct": [
+              50.0,
+              50.0
+            ]
+          },
+          {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          }
+        ],
+        "byOpening": {
+          "5-left": {
+            "n": 500,
+            "completed": 500,
+            "firstWins": 250,
+            "secondWins": 250,
+            "unresolved": 0,
+            "firstWinPct": 50.0,
+            "allGameFirstWinBoundsPct": [
+              50.0,
+              50.0
+            ]
+          },
+          "5-right": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          "6-left": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          },
+          "6-right": {
+            "n": 0,
+            "completed": 0,
+            "firstWins": 0,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": null,
+            "allGameFirstWinBoundsPct": null
+          }
+        },
+        "avgNyakuaByRole": [
+          2.246,
+          3.196
+        ],
+        "avgCapturesByRole": [
+          28.274,
+          22.096
+        ],
+        "mtajiEntryByNextRole": [
+          {
+            "n": 133,
+            "completed": 133,
+            "firstWins": 133,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": 100.0,
+            "allGameFirstWinBoundsPct": [
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "n": 334,
+            "completed": 334,
+            "firstWins": 84,
+            "secondWins": 250,
+            "unresolved": 0,
+            "firstWinPct": 25.149700598802394,
+            "allGameFirstWinBoundsPct": [
+              25.149700598802394,
+              25.149700598802394
+            ]
+          }
+        ],
+        "meanMtajiMaterialDiff": 3.2505353319057817,
+        "meanMtajiFrontDiff": 11.36830835117773,
+        "snapshots": {
+          "10": {
+            "n": 500,
+            "materialDiff": 1.0,
+            "frontDiff": 0.0,
+            "handDiff": 0.0
+          },
+          "20": {
+            "n": 500,
+            "materialDiff": -3.616,
+            "frontDiff": 2.304,
+            "handDiff": -0.156
+          },
+          "30": {
+            "n": 500,
+            "materialDiff": -4.076,
+            "frontDiff": 5.322,
+            "handDiff": 0.0
+          },
+          "40": {
+            "n": 217,
+            "materialDiff": 20.055299539170505,
+            "frontDiff": 9.382488479262673,
+            "handDiff": 0.0
+          }
+        },
+        "completedDepths": {
+          "4": 8768,
+          "6": 9854
+        }
+      },
+      "policySeatScores": [
+        {
+          "policy": "search4-mobility",
+          "first": {
+            "n": 250,
+            "completed": 250,
+            "firstWins": 0,
+            "secondWins": 250,
+            "unresolved": 0,
+            "firstWinPct": 0.0,
+            "allGameFirstWinBoundsPct": [
+              0.0,
+              0.0
+            ]
+          },
+          "second": {
+            "n": 250,
+            "completed": 250,
+            "firstWins": 250,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": 100.0,
+            "allGameFirstWinBoundsPct": [
+              100.0,
+              100.0
+            ]
+          }
+        },
+        {
+          "policy": "search6-mobility",
+          "first": {
+            "n": 250,
+            "completed": 250,
+            "firstWins": 250,
+            "secondWins": 0,
+            "unresolved": 0,
+            "firstWinPct": 100.0,
+            "allGameFirstWinBoundsPct": [
+              100.0,
+              100.0
+            ]
+          },
+          "second": {
+            "n": 250,
+            "completed": 250,
+            "firstWins": 0,
+            "secondWins": 250,
+            "unresolved": 0,
+            "firstWinPct": 0.0,
+            "allGameFirstWinBoundsPct": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "task": "open-search4",
+      "metadata": {
+        "study": "V080-BALANCE-20261003-R2",
+        "rules": "0.8.0",
+        "task": "open-search4",
+        "cfg": {
+          "kind": "opening",
+          "policies": [
+            "search4",
+            "search4"
+          ],
+          "n": 1000,
+          "offset": 800000
+        },
+        "hashes": {
+          "core.cjs": "b821c0473aea6fb91691f828ac98173f8a5d7133893a4e6c1cc2258622f318f2",
+          "config.cjs": "73b5d5009a2879ce85b145cb3381309293f4ddcd3cba19e62682e344f60c3a35",
+          "run.cjs": "f95e25166d6aea92e25643c1b21d051372d6eab5e5bd41889ce22dabd5ad8ce2",
+          "check.cjs": "80c45c4f86efef29b35ed8484192bdd10086543ebb644c1a80df5620734f2abd",
+          "../../prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+          "../../prototype/steal.js": "41e4dbd52ec697b02dd0c33f2b5f1e7030345cd6b6a31ed985126936dd476fcf"
+        },
+        "node": "v24.19.0",
+        "runId": "37113643263",
+        "commit": "faa782565d5a95f384c0a32a8d279cd8edae2205"
+      },
+      "signature": "63b09772f032d770a2b6df959cbe723b01a334a0c5161e65f6e312ab2e6ce366",
+      "completed": true,
+      "summary": {
+        "n": 1000,
+        "completed": 999,
+        "firstWins": 536,
+        "secondWins": 463,
+        "firstWinPct": 53.653653653653656,
+        "wilson95Pct": [
+          50.55331767449783,
+          56.72599844805598
+        ],
+        "avgPlies": 56.153,
+        "medianPlies": 53,
+        "p95Plies": 83,
+        "maxPlies": 98,
+        "avgNamuaMoves": 37.852,
+        "avgMtajiMoves": 18.301,
+        "mtajiPlayedPct": 99.7,
+        "avgNyakua": 3.26,
+        "nyakuaPct": 93.2,
+        "passes": 0,
+        "budgetStops": 0,
+        "searchNodes": 7899830,
+        "reasons": {
+          "front-empty": 772,
+          "no-move": 227,
+          "relay-limit": 1
+        }
+      },
+      "diagnostics": {
+        "uniqueFinalHashes": 678,
+        "firstNyakua": [
+          {
+            "n": 197,
+            "completed": 197,
+            "firstWins": 142,
+            "secondWins": 55,
+            "unresolved": 0,
+            "firstWinPct": 72.08121827411168,
+            "allGameFirstWinBoundsPct": [
+              72.08121827411168,
+              72.08121827411168
+            ]
+          },
+          {
+            "n": 735,
+            "completed": 734,
+            "firstWins": 340,
+            "secondWins": 394,
+            "unresolved": 1,
+            "firstWinPct": 46.321525885558586,
+            "allGameFirstWinBoundsPct": [
+              46.25850340136054,
+              46.394557823129254
+            ]
+          },
+          {
+            "n": 68,
+            "completed": 68,
+            "firstWins": 54,
+            "secondWins": 14,
+            "unresolved": 0,
+            "firstWinPct": 79.41176470588235,
+            "allGameFirstWinBoundsPct": [
+              79.41176470588235,
+              79.41176470588235
+            ]
+          }
+        ],
+        "byOpening": {
+          "5-left": {
+            "n": 250,
+            "completed": 249,
+            "firstWins": 153,
+            "secondWins": 96,
+            "unresolved": 1,
+            "firstWinPct": 61.44578313253012,
+            "allGameFirstWinBoundsPct": [
+              61.2,
+              61.6
+            ]
+          },
+          "5-right": {
+            "n": 250,
+            "completed": 250,
+            "firstWins": 136,
+            "secondWins": 114,
+            "unresolved": 0,
+            "firstWinPct": 54.4,
+            "allGameFirstWinBoundsPct": [
+              54.4,
+              54.4
+            ]
+          },
+          "6-left": {
+            "n": 250,
+            "completed": 250,
+            "firstWins": 121,
+            "secondWins": 129,
+            "unresolved": 0,
+            "firstWinPct": 48.4,
+            "allGameFirstWinBoundsPct": [
+              48.4,
+              48.4
+            ]
+          },
+          "6-right": {
+            "n": 250,
+            "completed": 250,
+            "firstWins": 126,
+            "secondWins": 124,
+            "unresolved": 0,
+            "firstWinPct": 50.4,
+            "allGameFirstWinBoundsPct": [
+              50.4,
+              50.4
+            ]
+          }
+        },
+        "avgNyakuaByRole": [
+          1.444,
+          1.816
+        ],
+        "avgCapturesByRole": [
+          28.046,
+          26.174
+        ],
+        "mtajiEntryByNextRole": [
+          {
+            "n": 754,
+            "completed": 753,
+            "firstWins": 404,
+            "secondWins": 349,
+            "unresolved": 1,
+            "firstWinPct": 53.65205843293493,
+            "allGameFirstWinBoundsPct": [
+              53.58090185676392,
+              53.713527851458885
+            ]
+          },
+          {
+            "n": 243,
+            "completed": 243,
+            "firstWins": 129,
+            "secondWins": 114,
+            "unresolved": 0,
+            "firstWinPct": 53.08641975308642,
+            "allGameFirstWinBoundsPct": [
+              53.08641975308642,
+              53.08641975308642
+            ]
+          }
+        ],
+        "meanMtajiMaterialDiff": -2.6559679037111334,
+        "meanMtajiFrontDiff": -2.6288866599799396,
+        "snapshots": {
+          "10": {
+            "n": 1000,
+            "materialDiff": -1.514,
+            "frontDiff": -1.92,
+            "handDiff": 0.059
+          },
+          "20": {
+            "n": 1000,
+            "materialDiff": -2.874,
+            "frontDiff": -3.318,
+            "handDiff": -0.144
+          },
+          "30": {
+            "n": 1000,
+            "materialDiff": -5.638,
+            "frontDiff": -5.526,
+            "handDiff": -0.116
+          },
+          "40": {
+            "n": 939,
+            "materialDiff": -3.2779552715654954,
+            "frontDiff": -3.8285410010649628,
+            "handDiff": 0.03514376996805112
+          }
+        },
+        "completedDepths": {
+          "4": 47486
+        }
+      },
+      "openingForced": [
+        {
+          "n": 250,
+          "completed": 249,
+          "firstWins": 153,
+          "secondWins": 96,
+          "unresolved": 1,
+          "firstWinPct": 61.44578313253012,
+          "allGameFirstWinBoundsPct": [
+            61.2,
+            61.6
+          ]
+        },
+        {
+          "n": 250,
+          "completed": 250,
+          "firstWins": 136,
+          "secondWins": 114,
+          "unresolved": 0,
+          "firstWinPct": 54.4,
+          "allGameFirstWinBoundsPct": [
+            54.4,
+            54.4
+          ]
+        },
+        {
+          "n": 250,
+          "completed": 250,
+          "firstWins": 121,
+          "secondWins": 129,
+          "unresolved": 0,
+          "firstWinPct": 48.4,
+          "allGameFirstWinBoundsPct": [
+            48.4,
+            48.4
+          ]
+        },
+        {
+          "n": 250,
+          "completed": 250,
+          "firstWins": 126,
+          "secondWins": 124,
+          "unresolved": 0,
+          "firstWinPct": 50.4,
+          "allGameFirstWinBoundsPct": [
+            50.4,
+            50.4
+          ]
+        }
+      ]
+    },
+    {
+      "task": "open-search6",
+      "metadata": {
+        "study": "V080-BALANCE-20261003-R2",
+        "rules": "0.8.0",
+        "task": "open-search6",
+        "cfg": {
+          "kind": "opening",
+          "policies": [
+            "search6",
+            "search6"
+          ],
+          "n": 1000,
+          "offset": 810000
+        },
+        "hashes": {
+          "core.cjs": "b821c0473aea6fb91691f828ac98173f8a5d7133893a4e6c1cc2258622f318f2",
+          "config.cjs": "73b5d5009a2879ce85b145cb3381309293f4ddcd3cba19e62682e344f60c3a35",
+          "run.cjs": "f95e25166d6aea92e25643c1b21d051372d6eab5e5bd41889ce22dabd5ad8ce2",
+          "check.cjs": "80c45c4f86efef29b35ed8484192bdd10086543ebb644c1a80df5620734f2abd",
+          "../../prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+          "../../prototype/steal.js": "41e4dbd52ec697b02dd0c33f2b5f1e7030345cd6b6a31ed985126936dd476fcf"
+        },
+        "node": "v24.19.0",
+        "runId": "37113643263",
+        "commit": "faa782565d5a95f384c0a32a8d279cd8edae2205"
+      },
+      "signature": "e4bd972faaa55ab5bbf6a50d6f168e8814d1366cfa86670a64d6b39e4bc956f1",
+      "completed": true,
+      "summary": {
+        "n": 1000,
+        "completed": 1000,
+        "firstWins": 360,
+        "secondWins": 640,
+        "firstWinPct": 36,
+        "wilson95Pct": [
+          33.083772954688214,
+          39.02337628459121
+        ],
+        "avgPlies": 60.836,
+        "medianPlies": 58,
+        "p95Plies": 90,
+        "maxPlies": 98,
+        "avgNamuaMoves": 40.772,
+        "avgMtajiMoves": 20.064,
+        "mtajiPlayedPct": 99.7,
+        "avgNyakua": 1.768,
+        "nyakuaPct": 90.6,
+        "passes": 0,
+        "budgetStops": 0,
+        "searchNodes": 43053055,
+        "reasons": {
+          "no-move": 126,
+          "front-empty": 874
+        }
+      },
+      "diagnostics": {
+        "uniqueFinalHashes": 528,
+        "firstNyakua": [
+          {
+            "n": 442,
+            "completed": 442,
+            "firstWins": 201,
+            "secondWins": 241,
+            "unresolved": 0,
+            "firstWinPct": 45.47511312217195,
+            "allGameFirstWinBoundsPct": [
+              45.47511312217195,
+              45.47511312217195
+            ]
+          },
+          {
+            "n": 464,
+            "completed": 464,
+            "firstWins": 130,
+            "secondWins": 334,
+            "unresolved": 0,
+            "firstWinPct": 28.017241379310345,
+            "allGameFirstWinBoundsPct": [
+              28.017241379310345,
+              28.017241379310345
+            ]
+          },
+          {
+            "n": 94,
+            "completed": 94,
+            "firstWins": 29,
+            "secondWins": 65,
+            "unresolved": 0,
+            "firstWinPct": 30.851063829787233,
+            "allGameFirstWinBoundsPct": [
+              30.851063829787233,
+              30.851063829787233
+            ]
+          }
+        ],
+        "byOpening": {
+          "5-left": {
+            "n": 250,
+            "completed": 250,
+            "firstWins": 142,
+            "secondWins": 108,
+            "unresolved": 0,
+            "firstWinPct": 56.8,
+            "allGameFirstWinBoundsPct": [
+              56.8,
+              56.8
+            ]
+          },
+          "5-right": {
+            "n": 250,
+            "completed": 250,
+            "firstWins": 53,
+            "secondWins": 197,
+            "unresolved": 0,
+            "firstWinPct": 21.2,
+            "allGameFirstWinBoundsPct": [
+              21.2,
+              21.2
+            ]
+          },
+          "6-left": {
+            "n": 250,
+            "completed": 250,
+            "firstWins": 124,
+            "secondWins": 126,
+            "unresolved": 0,
+            "firstWinPct": 49.6,
+            "allGameFirstWinBoundsPct": [
+              49.6,
+              49.6
+            ]
+          },
+          "6-right": {
+            "n": 250,
+            "completed": 250,
+            "firstWins": 41,
+            "secondWins": 209,
+            "unresolved": 0,
+            "firstWinPct": 16.4,
+            "allGameFirstWinBoundsPct": [
+              16.4,
+              16.4
+            ]
+          }
+        },
+        "avgNyakuaByRole": [
+          0.853,
+          0.915
+        ],
+        "avgCapturesByRole": [
+          27.59,
+          30.763
+        ],
+        "mtajiEntryByNextRole": [
+          {
+            "n": 727,
+            "completed": 727,
+            "firstWins": 300,
+            "secondWins": 427,
+            "unresolved": 0,
+            "firstWinPct": 41.26547455295736,
+            "allGameFirstWinBoundsPct": [
+              41.26547455295736,
+              41.26547455295736
+            ]
+          },
+          {
+            "n": 270,
+            "completed": 270,
+            "firstWins": 60,
+            "secondWins": 210,
+            "unresolved": 0,
+            "firstWinPct": 22.22222222222222,
+            "allGameFirstWinBoundsPct": [
+              22.22222222222222,
+              22.22222222222222
+            ]
+          }
+        ],
+        "meanMtajiMaterialDiff": -1.8174523570712136,
+        "meanMtajiFrontDiff": -1.4332998996990973,
+        "snapshots": {
+          "10": {
+            "n": 1000,
+            "materialDiff": -0.002,
+            "frontDiff": -2.502,
+            "handDiff": 0.0
+          },
+          "20": {
+            "n": 1000,
+            "materialDiff": -0.436,
+            "frontDiff": -2.354,
+            "handDiff": 0.018
+          },
+          "30": {
+            "n": 1000,
+            "materialDiff": -1.926,
+            "frontDiff": -2.462,
+            "handDiff": 0.021
+          },
+          "40": {
+            "n": 1000,
+            "materialDiff": -2.51,
+            "frontDiff": -1.396,
+            "handDiff": 0.095
+          }
+        },
+        "completedDepths": {
+          "6": 51518
+        }
+      },
+      "openingForced": [
+        {
+          "n": 250,
+          "completed": 250,
+          "firstWins": 142,
+          "secondWins": 108,
+          "unresolved": 0,
+          "firstWinPct": 56.8,
+          "allGameFirstWinBoundsPct": [
+            56.8,
+            56.8
+          ]
+        },
+        {
+          "n": 250,
+          "completed": 250,
+          "firstWins": 53,
+          "secondWins": 197,
+          "unresolved": 0,
+          "firstWinPct": 21.2,
+          "allGameFirstWinBoundsPct": [
+            21.2,
+            21.2
+          ]
+        },
+        {
+          "n": 250,
+          "completed": 250,
+          "firstWins": 124,
+          "secondWins": 126,
+          "unresolved": 0,
+          "firstWinPct": 49.6,
+          "allGameFirstWinBoundsPct": [
+            49.6,
+            49.6
+          ]
+        },
+        {
+          "n": 250,
+          "completed": 250,
+          "firstWins": 41,
+          "secondWins": 209,
+          "unresolved": 0,
+          "firstWinPct": 16.4,
+          "allGameFirstWinBoundsPct": [
+            16.4,
+            16.4
+          ]
+        }
+      ]
+    },
+    {
+      "task": "proof",
+      "metadata": {
+        "study": "V080-BALANCE-20261003-R2",
+        "rules": "0.8.0",
+        "task": "proof",
+        "cfg": {
+          "kind": "proof",
+          "budget": 10000000,
+          "maxDepth": 16
+        },
+        "hashes": {
+          "core.cjs": "b821c0473aea6fb91691f828ac98173f8a5d7133893a4e6c1cc2258622f318f2",
+          "config.cjs": "73b5d5009a2879ce85b145cb3381309293f4ddcd3cba19e62682e344f60c3a35",
+          "run.cjs": "f95e25166d6aea92e25643c1b21d051372d6eab5e5bd41889ce22dabd5ad8ce2",
+          "check.cjs": "80c45c4f86efef29b35ed8484192bdd10086543ebb644c1a80df5620734f2abd",
+          "../../prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+          "../../prototype/steal.js": "41e4dbd52ec697b02dd0c33f2b5f1e7030345cd6b6a31ed985126936dd476fcf"
+        },
+        "node": "v24.19.0",
+        "runId": "37113643263",
+        "commit": "faa782565d5a95f384c0a32a8d279cd8edae2205"
+      },
+      "signature": "ad28e3c87d46ed0ce3ae180c2138fca2aa58374973c44828c8f46457a3d4332e",
+      "completed": true,
+      "records": [
+        {
+          "depth": 1,
+          "result": "UNKNOWN",
+          "nodes": 4,
+          "hits": 0,
+          "elapsedMs": 1,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "result": "UNKNOWN",
+          "nodes": 18,
+          "hits": 0,
+          "elapsedMs": 3,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "result": "UNKNOWN",
+          "nodes": 56,
+          "hits": 0,
+          "elapsedMs": 4,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "result": "UNKNOWN",
+          "nodes": 180,
+          "hits": 0,
+          "elapsedMs": 5,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "result": "UNKNOWN",
+          "nodes": 561,
+          "hits": 5,
+          "elapsedMs": 13,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 6,
+          "result": "UNKNOWN",
+          "nodes": 1859,
+          "hits": 9,
+          "elapsedMs": 36,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 7,
+          "result": "UNKNOWN",
+          "nodes": 6506,
+          "hits": 45,
+          "elapsedMs": 109,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 8,
+          "result": "UNKNOWN",
+          "nodes": 24199,
+          "hits": 211,
+          "elapsedMs": 334,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 9,
+          "result": "UNKNOWN",
+          "nodes": 99470,
+          "hits": 577,
+          "elapsedMs": 1381,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 10,
+          "result": "UNKNOWN",
+          "nodes": 436203,
+          "hits": 2429,
+          "elapsedMs": 6414,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 11,
+          "result": "UNKNOWN",
+          "nodes": 2043522,
+          "hits": 8203,
+          "elapsedMs": 30218,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 12,
+          "result": "UNKNOWN",
+          "nodes": 9997577,
+          "hits": 36058,
+          "elapsedMs": 149660,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 13,
+          "result": "NODE_BUDGET",
+          "nodes": 10000001,
+          "hits": 22189,
+          "elapsedMs": 153140
+        }
+      ]
+    }
+  ]
+}
