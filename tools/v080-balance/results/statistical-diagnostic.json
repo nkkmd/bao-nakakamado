@@ -1,0 +1,373 @@
+{
+  "study": "V080-BALANCE-20261003-R2",
+  "cross": [
+    {
+      "task": "cross-0",
+      "nPairs": 250,
+      "pairedFirstWinPct": 48.199999999999996,
+      "rawStandardError95Pct": [
+        45.04121550875712,
+        51.35878449124287
+      ],
+      "standardErrorDegenerate": false,
+      "hoeffding95Pct": [
+        39.61061183306524,
+        56.78938816693475
+      ],
+      "policyScores": [
+        {
+          "policy": "noisy",
+          "firstWins": 33,
+          "firstCompleted": 250,
+          "secondWins": 42,
+          "secondCompleted": 250,
+          "totalWins": 75,
+          "totalCompleted": 500
+        },
+        {
+          "policy": "reply",
+          "firstWins": 208,
+          "firstCompleted": 250,
+          "secondWins": 217,
+          "secondCompleted": 250,
+          "totalWins": 425,
+          "totalCompleted": 500
+        }
+      ]
+    },
+    {
+      "task": "cross-1",
+      "nPairs": 250,
+      "pairedFirstWinPct": 48.8,
+      "rawStandardError95Pct": [
+        46.258867667446815,
+        51.34113233255319
+      ],
+      "standardErrorDegenerate": false,
+      "hoeffding95Pct": [
+        40.210611833065244,
+        57.38938816693475
+      ],
+      "policyScores": [
+        {
+          "policy": "reply",
+          "firstWins": 20,
+          "firstCompleted": 250,
+          "secondWins": 26,
+          "secondCompleted": 250,
+          "totalWins": 46,
+          "totalCompleted": 500
+        },
+        {
+          "policy": "search4",
+          "firstWins": 224,
+          "firstCompleted": 250,
+          "secondWins": 230,
+          "secondCompleted": 250,
+          "totalWins": 454,
+          "totalCompleted": 500
+        }
+      ]
+    },
+    {
+      "task": "cross-2",
+      "nPairs": 250,
+      "pairedFirstWinPct": 50,
+      "rawStandardError95Pct": [
+        45.453252673752196,
+        54.546747326247804
+      ],
+      "standardErrorDegenerate": false,
+      "hoeffding95Pct": [
+        41.410611833065246,
+        58.589388166934754
+      ],
+      "policyScores": [
+        {
+          "policy": "search4",
+          "firstWins": 79,
+          "firstCompleted": 250,
+          "secondWins": 79,
+          "secondCompleted": 250,
+          "totalWins": 158,
+          "totalCompleted": 500
+        },
+        {
+          "policy": "search6",
+          "firstWins": 171,
+          "firstCompleted": 250,
+          "secondWins": 171,
+          "secondCompleted": 250,
+          "totalWins": 342,
+          "totalCompleted": 500
+        }
+      ]
+    },
+    {
+      "task": "cross-3",
+      "nPairs": 250,
+      "pairedFirstWinPct": 50,
+      "rawStandardError95Pct": [
+        50,
+        50
+      ],
+      "standardErrorDegenerate": true,
+      "hoeffding95Pct": [
+        41.410611833065246,
+        58.589388166934754
+      ],
+      "policyScores": [
+        {
+          "policy": "search4-mobility",
+          "firstWins": 0,
+          "firstCompleted": 250,
+          "secondWins": 0,
+          "secondCompleted": 250,
+          "totalWins": 0,
+          "totalCompleted": 500
+        },
+        {
+          "policy": "search6-mobility",
+          "firstWins": 250,
+          "firstCompleted": 250,
+          "secondWins": 250,
+          "secondCompleted": 250,
+          "totalWins": 500,
+          "totalCompleted": 500
+        }
+      ]
+    }
+  ],
+  "summarySHA256": "fe79941f0cf87a024a444f143f5d8c1870eac7f2b91288117bc4b9212157c08b",
+  "method": "Exact two-sided binomial H0 p=0.5, Holm over 10 self-play conditions; exploratory interpretation of seeded policies only",
+  "self": [
+    {
+      "task": "self-random",
+      "n": 3000,
+      "firstWins": 1503,
+      "pTwoSided50": 0.92726647255045,
+      "holmAdjustedP": 1,
+      "holmSignificant05": false
+    },
+    {
+      "task": "self-noisy",
+      "n": 3000,
+      "firstWins": 1503,
+      "pTwoSided50": 0.92726647255045,
+      "holmAdjustedP": 1,
+      "holmSignificant05": false
+    },
+    {
+      "task": "self-greedy",
+      "n": 3000,
+      "firstWins": 1431,
+      "pTwoSided50": 0.012362241414056096,
+      "holmAdjustedP": 0.06181120707028048,
+      "holmSignificant05": false
+    },
+    {
+      "task": "self-reply",
+      "n": 3000,
+      "firstWins": 1819,
+      "pTwoSided50": 1.7295297723958198e-31,
+      "holmAdjustedP": 1.5565767951562378e-30,
+      "holmSignificant05": true
+    },
+    {
+      "task": "self-search3",
+      "n": 800,
+      "firstWins": 609,
+      "pTwoSided50": 1.3232686413373071e-51,
+      "holmAdjustedP": 1.323268641337307e-50,
+      "holmSignificant05": true
+    },
+    {
+      "task": "self-search4",
+      "n": 799,
+      "firstWins": 457,
+      "pTwoSided50": 0.00005356553257468667,
+      "holmAdjustedP": 0.00042852426059749335,
+      "holmSignificant05": true
+    },
+    {
+      "task": "self-search5",
+      "n": 400,
+      "firstWins": 227,
+      "pTwoSided50": 0.007969830575814046,
+      "holmAdjustedP": 0.04781898345488428,
+      "holmSignificant05": true
+    },
+    {
+      "task": "self-search6",
+      "n": 400,
+      "firstWins": 231,
+      "pTwoSided50": 0.002248208104473753,
+      "holmAdjustedP": 0.01573745673131627,
+      "holmSignificant05": true
+    },
+    {
+      "task": "self-search4-mobility",
+      "n": 800,
+      "firstWins": 419,
+      "pTwoSided50": 0.1907904500451878,
+      "holmAdjustedP": 0.7631618001807512,
+      "holmSignificant05": false
+    },
+    {
+      "task": "self-search6-mobility",
+      "n": 400,
+      "firstWins": 196,
+      "pTwoSided50": 0.7263869151844858,
+      "holmAdjustedP": 1,
+      "holmSignificant05": false
+    }
+  ],
+  "openings": [
+    {
+      "task": "open-search4",
+      "rows": [
+        {
+          "n": 250,
+          "completed": 249,
+          "firstWins": 153,
+          "secondWins": 96,
+          "unresolved": 1,
+          "firstWinPct": 61.44578313253012,
+          "allGameFirstWinBoundsPct": [
+            61.2,
+            61.6
+          ],
+          "openingIndex": 0,
+          "wilson95Pct": [
+            55.26999185445389,
+            67.2737793499198
+          ]
+        },
+        {
+          "n": 250,
+          "completed": 250,
+          "firstWins": 136,
+          "secondWins": 114,
+          "unresolved": 0,
+          "firstWinPct": 54.4,
+          "allGameFirstWinBoundsPct": [
+            54.4,
+            54.4
+          ],
+          "openingIndex": 1,
+          "wilson95Pct": [
+            48.206040274979514,
+            60.460786687391455
+          ]
+        },
+        {
+          "n": 250,
+          "completed": 250,
+          "firstWins": 121,
+          "secondWins": 129,
+          "unresolved": 0,
+          "firstWinPct": 48.4,
+          "allGameFirstWinBoundsPct": [
+            48.4,
+            48.4
+          ],
+          "openingIndex": 2,
+          "wilson95Pct": [
+            42.27644178397605,
+            54.57198477516177
+          ]
+        },
+        {
+          "n": 250,
+          "completed": 250,
+          "firstWins": 126,
+          "secondWins": 124,
+          "unresolved": 0,
+          "firstWinPct": 50.4,
+          "allGameFirstWinBoundsPct": [
+            50.4,
+            50.4
+          ],
+          "openingIndex": 3,
+          "wilson95Pct": [
+            44.24326666557672,
+            56.54462669463882
+          ]
+        }
+      ]
+    },
+    {
+      "task": "open-search6",
+      "rows": [
+        {
+          "n": 250,
+          "completed": 250,
+          "firstWins": 142,
+          "secondWins": 108,
+          "unresolved": 0,
+          "firstWinPct": 56.8,
+          "allGameFirstWinBoundsPct": [
+            56.8,
+            56.8
+          ],
+          "openingIndex": 0,
+          "wilson95Pct": [
+            50.60249962278238,
+            62.79168750088184
+          ]
+        },
+        {
+          "n": 250,
+          "completed": 250,
+          "firstWins": 53,
+          "secondWins": 197,
+          "unresolved": 0,
+          "firstWinPct": 21.2,
+          "allGameFirstWinBoundsPct": [
+            21.2,
+            21.2
+          ],
+          "openingIndex": 1,
+          "wilson95Pct": [
+            16.588954759748493,
+            26.68272330473238
+          ]
+        },
+        {
+          "n": 250,
+          "completed": 250,
+          "firstWins": 124,
+          "secondWins": 126,
+          "unresolved": 0,
+          "firstWinPct": 49.6,
+          "allGameFirstWinBoundsPct": [
+            49.6,
+            49.6
+          ],
+          "openingIndex": 2,
+          "wilson95Pct": [
+            43.45537330536118,
+            55.75673333442328
+          ]
+        },
+        {
+          "n": 250,
+          "completed": 250,
+          "firstWins": 41,
+          "secondWins": 209,
+          "unresolved": 0,
+          "firstWinPct": 16.4,
+          "allGameFirstWinBoundsPct": [
+            16.4,
+            16.4
+          ],
+          "openingIndex": 3,
+          "wilson95Pct": [
+            12.325149292485529,
+            21.491808449408826
+          ]
+        }
+      ]
+    }
+  ]
+}
