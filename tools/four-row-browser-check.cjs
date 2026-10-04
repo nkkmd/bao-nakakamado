@@ -34,6 +34,27 @@ async function main() {
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),"mobile layout overflows");
   await page.screenshot({path:path.join(out,"mobile.png"),fullPage:true});
   const trace=Study.game(Study.seedAt(0),"random",0,true).trace;
+  // Exercise the optional future-search adapter in a real browser. The page
+  // itself still uses the current simple computer and normal animation path.
+  await page.addScriptTag({url:`http://127.0.0.1:${server.address().port}/search-transition.js`});
+  const searchCheck=await page.evaluate(moves=>{
+   const E=window.BaoEngine,S=window.NakakamadoSteal;
+   const Q=window.NakakamadoSearchTransition.createForEngine(E);
+   let b=E.initialState(),transitions=0,nyakua=0;
+   const equal=(a,z)=>{if(JSON.stringify(a)!==JSON.stringify(z))throw Error("Browser search mismatch");};
+   for(const played of moves){
+    equal(Q.moveVariants(b),S.moveVariants({board:b,history:[]}));
+    for(const m of Q.moveVariants(b)){
+     const normal=S.applyWithEvents({board:b,history:[]},m),r=Q.applyMove(b,m);
+     equal(r.state,normal.game.board);equal(r.summary,normal.game.history[0]);
+     if(r.events.some(e=>Object.hasOwn(e,"state"))||Object.hasOwn(r,"history"))throw Error("Search retains display state");
+     transitions++;nyakua+=r.summary.stolen;
+    }
+    b=Q.applyMove(b,played).state;
+   }
+   if(!nyakua)throw Error("No NYAKUA browser coverage");
+   return {transitions,nyakua};
+  },trace.map(t=>t.move));
   let reference=Study.S.initialGame(),rearMoves=0,extraMoves=0;
   for(const t of trace) {
    const m=t.move,coord=`${reference.board.player===0?"S":"N"}${m.row===0?"F":"B"}${m.index+1}`;
@@ -89,7 +110,7 @@ async function main() {
   assert.deepEqual(Study.S.replay(stopped.history).board,stopped.final);
   await page.screenshot({path:path.join(out,"mobile-safety-stop.png"),fullPage:true});
   assert.deepEqual(errors,[]);
-  const result={browser:browser.version(),pits:32,plies:trace.length,rearMoves,extraMoves,downloadReplayed:true,computerAndReset:true,safetyStopAndReplay:true,mobileWidths:[320,390,432],pageErrors:errors};
+  const result={browser:browser.version(),pits:32,plies:trace.length,rearMoves,extraMoves,searchCheck,downloadReplayed:true,computerAndReset:true,safetyStopAndReplay:true,mobileWidths:[320,390,432],pageErrors:errors};
   fs.writeFileSync(path.join(out,"result.json"),JSON.stringify(result,null,2)+"\n");console.log(JSON.stringify(result));
  } finally {if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));}
 }

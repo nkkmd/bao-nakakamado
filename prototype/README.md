@@ -52,11 +52,15 @@ ENGINE_LICENSE.txt
 
 ## 確認
 
+AI導入の準備として、`steal.js` の通常処理とNYAKUA会計を共通化した、盤面専用の軽量遷移を `search-transition.js` から提供しています。配信画面はまだこの探索アダプターを読み込みません。[導入計画](../doc/AI_INTEGRATION_PLAN_20261004.md)と[照合ツール](../tools/ai-integration/README.md)を参照してください。
+
 リポジトリ直下で実行します。
 
 ```sh
 node --test prototype/next-turn.test.cjs prototype/four-row.test.cjs prototype/app.test.cjs prototype/bounce.test.cjs prototype/steal.test.js tools/fixed-pit-bulk-study.test.cjs tools/fixed-pit-triggered-study.test.cjs
 node tools/next-turn-live-check.cjs 100 /tmp/next-turn-live-results.json
+node --test prototype/search-transition.test.cjs
+node tools/ai-integration/verify-transitions.cjs 32 /tmp/transition-verification.json
 ```
 
 実画面は `tools/four-row-browser-check.cjs` でデスクトップ・スマホ幅320/390/432px、通常ハンド・確保分、全対局の盤面、棋譜保存、コンピューター、リセットを確認します。GitHub Actionsの `Playable prototype checks` がブラウザー依存を準備して実行します。

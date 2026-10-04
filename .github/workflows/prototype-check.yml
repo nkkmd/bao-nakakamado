@@ -6,6 +6,12 @@ on:
       - 'tools/four-row-*'
       - 'tools/next-turn-*'
       - 'tools/nyakua-three/**'
+      - 'tools/ai-integration/**'
+      - '.github/workflows/prototype-check.yml'
+  pull_request:
+    paths:
+      - 'prototype/**'
+      - 'tools/ai-integration/**'
       - '.github/workflows/prototype-check.yml'
   workflow_dispatch:
 permissions:
@@ -20,7 +26,9 @@ jobs:
         with:
           node-version: '24'
       - name: Rule and DOM tests
-        run: node --test prototype/next-turn.test.cjs prototype/four-row.test.cjs prototype/app.test.cjs prototype/bounce.test.cjs prototype/steal.test.js tools/fixed-pit-bulk-study.test.cjs tools/fixed-pit-triggered-study.test.cjs
+        run: node --test prototype/search-transition.test.cjs prototype/next-turn.test.cjs prototype/four-row.test.cjs prototype/app.test.cjs prototype/bounce.test.cjs prototype/steal.test.js tools/fixed-pit-bulk-study.test.cjs tools/fixed-pit-triggered-study.test.cjs
+      - name: NYAKUA search transition equivalence
+        run: node tools/ai-integration/verify-transitions.cjs 32 "$RUNNER_TEMP/transition-verification.json"
       - name: Reachable games and replay consistency
         run: node tools/next-turn-live-check.cjs 100 "$RUNNER_TEMP/next-turn-live-results.json"
       - name: Install pinned browser test dependencies
@@ -38,5 +46,6 @@ jobs:
           name: next-turn-prototype-verification
           path: |
             ${{ runner.temp }}/next-turn-live-results.json
+            ${{ runner.temp }}/transition-verification.json
             ${{ runner.temp }}/bao-next-turn-ui/
           retention-days: 30

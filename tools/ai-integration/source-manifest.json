@@ -1,0 +1,52 @@
+{
+  "dateJst": "2026-10-04",
+  "target": {
+    "repository": "nkkmd/bao-nakakamado",
+    "commit": "c99f13537c3dbb0275a1c3e9888e882b0a3e134d",
+    "rulesVersion": "0.8.0"
+  },
+  "source": {
+    "repository": "nkkmd/bao-la-kiswahili-game",
+    "commit": "8c87ed44c9b08f75456766f0a9bd9f76d06209d4",
+    "generation": "AI-GEN4",
+    "releaseId": "AI-GEN4-RELEASE-001",
+    "files": [
+      {
+        "path": "public/ai.js",
+        "gitBlobSha": "ac2b4fd66a2555c50a362c39a828515323bba18a"
+      },
+      {
+        "path": "public/ai-candidate.js",
+        "gitBlobSha": "e7449927955d3d6a7597b7ebe97d307a57d01b9f"
+      },
+      {
+        "path": "public/logic-evaluator.js",
+        "gitBlobSha": "eda656db8bb3fcbede3acee28711914811cab63a"
+      },
+      {
+        "path": "public/ai-config.js",
+        "gitBlobSha": "dc56e1a9c4af8999045cbf91c530a39ed1d4b8a2"
+      },
+      {
+        "path": "public/ai-release.js",
+        "gitBlobSha": "724bb412528f6b0b635e81c2992f1834063dffc6"
+      },
+      {
+        "path": "public/ai-release-worker.js",
+        "gitBlobSha": "6a65aa14e5e322e49dd5f5791bedd47fc2ad5273"
+      },
+      {
+        "path": "public/ai-weights.js",
+        "gitBlobSha": "98969eb4c8e1403beedcf5c139a07166aa78175c"
+      },
+      {
+        "path": "LICENSE",
+        "gitBlobSha": "754dc13582b2eccf4b5791abd0ddd9ca5b49cfc0"
+      }
+    ]
+  },
+  "scope": "plan-and-transition-equivalence",
+  "searchImplementationImported": false,
+  "trainedEvaluatorImported": false,
+  "publicAiChanged": false
+}

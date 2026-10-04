@@ -34,6 +34,8 @@ Bao la Kiswahili の実装を出発点に、NYAKUA（ニャクア、ハンド奪
 
 ## 設計・実装の基準
 
+[コンピューター導入計画](doc/AI_INTEGRATION_PLAN_20261004.md)に、AI-GEN4の探索機構と論理ゲート型評価器を本ゲームへ適応する手順を記録しています。[ニャクア込みの探索用遷移の検証](doc/AI_SEARCH_TRANSITION_VERIFICATION_20261004.md)では、128局・24,887候補遷移の一致を確認しました。探索・学習・棋力比較は後続工程で、画面のコンピューターは簡易方式のままです。
+
 [元ゲーム](https://github.com/nkkmd/bao-la-kiswahili-game)と[採用ルール基準](https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/doc/RULES_BASELINE.md)を出発点に、変更点を明記します。takasia未実装、連続種まきの安全上限など、保存済みエンジンの実装範囲を引き継ぎます。
 
 元ゲームの公開AIの強さや研究結果を、今回の試作へそのまま適用しません。片側だけ先にMTAJIへ入る案は採用していません。勝負宣言・抽選・追加手番は削除済みで、運要素の検討は凍結しています。
