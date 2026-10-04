@@ -1,0 +1,130 @@
+{
+  "id": "NAKAKAMADO-FORMAL-LAUNCH-v2-20261005",
+  "recordDateJST": "2026-10-05",
+  "status": "PREPARED-NOT-STARTED",
+  "repository": "nkkmd/bao-nakakamado",
+  "defaultBranch": "main",
+  "defaultBranchObservedSha": "c99f13537c3dbb0275a1c3e9888e882b0a3e134d",
+  "pullRequest": 17,
+  "verifiedHeadSha": "e22e94a806c93dedccc60623aef1da2bb7fa6663",
+  "verification": {
+    "runId": 37241607076,
+    "attempt": 1,
+    "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/37241607076",
+    "conclusion": "success",
+    "completedAt": "2026-10-04T22:55:18Z",
+    "jobs": [
+      {
+        "id": 111551270469,
+        "name": "formal-selection-v2-preflight",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 111551270620,
+        "name": "teacher-feasibility (1)",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 111551270623,
+        "name": "teacher-feasibility (0)",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 111551270645,
+        "name": "teacher-feasibility (3)",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 111551270679,
+        "name": "teacher-feasibility (2)",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 111551270741,
+        "name": "prototype",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 111551358273,
+        "name": "teacher-feasibility-aggregate",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 111551592922,
+        "name": "formal-artifact-resume",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "tests": {
+      "total": 89,
+      "passed": 89,
+      "failed": 0
+    }
+  },
+  "collection": {
+    "configId": "NAKAKAMADO-FORMAL-COLLECTION-20261005-v2",
+    "planDigest": "891329b4e865c97591211072acb18db53022a9704fb0dc7fd0dd479c70600a03",
+    "sourceDigest": "4e4d3acfbcfb5de5c9bf7e77accd8b3dbd26649389c0ab06471a025275d0cdac",
+    "registryDigest": "eda140703e63bc813c2284427e2b471312f103c0ffb0cdfcbdfa36f0d4827a3c",
+    "maximumTeacherRequests": 8192,
+    "shards": 16,
+    "teacher": {
+      "maxDepth": 4,
+      "quiescenceDepth": 1,
+      "timeLimitMs": 5000
+    },
+    "minimumAcceptedFraction": 0.95,
+    "minimumAcceptedRows": {
+      "train": 2048,
+      "validation": 512,
+      "final": 512
+    },
+    "maximumTerminalLineFractionPerSplit": 0.2
+  },
+  "dispatch": {
+    "workflowPath": ".github/workflows/formal-collection.yml",
+    "workflowName": "NYAKUA formal teacher collection",
+    "ref": "feat/nyakua-ai-search-foundation-20261004",
+    "inputs": {
+      "collection_version": "v2",
+      "resume_receipts": "[]"
+    },
+    "repositorySecretName": "BAO_COLLECTION_KEY_BASE64",
+    "keyFormat": "base64-of-independent-32-random-bytes-existing-key-must-not-be-blindly-replaced",
+    "prHeadAndRunHeadMustBeRecorded": true,
+    "sourceDigestMustMatch": true,
+    "planDigestMustMatch": true
+  },
+  "blockingPrerequisites": {
+    "workflowOnDefaultBranch": false,
+    "browserFallbackApproved": false,
+    "secretPresence": "unverified",
+    "manualDispatchCapabilityInConnector": false,
+    "secretManagementCapabilityInConnector": false
+  },
+  "operations": [
+    "Review and merge PR 17 to register the manual workflow on main; record accepted PR head and merge SHA.",
+    "With approved browser fallback, verify the intended GitHub account and repository secret; provision an independent key if absent.",
+    "Dispatch the v2 workflow once with empty receipts; record run/attempt/head and verify the prepared plan digest before interpreting collection results.",
+    "If interrupted, preserve all completed measurements, pin artifact receipts, keep source/config/key/plan unchanged, and run missing requests only.",
+    "Audit all 16 shards and apply acceptance/coverage/group/terminal-line gates; leave final encrypted and hold if requirements fail."
+  ],
+  "formalTeacherRequestsExecuted": 0,
+  "formalCollectionStarted": false,
+  "finalOpened": false,
+  "trainingStarted": false,
+  "mainMergePerformed": false,
+  "publicAIReplaced": false,
+  "officialReferences": [
+    "https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/trigger-a-workflow",
+    "https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets"
+  ]
+}

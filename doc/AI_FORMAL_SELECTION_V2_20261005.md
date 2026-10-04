@@ -69,6 +69,8 @@ node tools/ai-integration/verify-formal-selection-v2.cjs /tmp/bao-selection-v2-p
 
 ## 次の工程
 
+[正式収集の起動・再開手順](AI_FORMAL_COLLECTION_LAUNCH_20261005.md)に、記録追加後のrun 37241607076の全8ジョブ成功、既定ブランチへのworkflow配置、鍵設定、固定入力、途中復元、採用後の監査を具体化した。現在は起動前の操作承認待ちで、正式教師要求は0件。
+
 候補ゲートは通過した。次はv2の設定・実装SHA・除外一覧を固定した正式手動収集を行う。収集用の独立した32byte鍵をsecret `BAO_COLLECTION_KEY_BASE64` に設定し、workflowの起動可能性を確認する。現在の作業ブランチのworkflowはmainへ未統合で、正式手動収集は未起動。起動時は `collection_version: v2`、新規収集は `resume_receipts: []` とする。
 
 今回利用するGitHub接続にはsecret設定とworkflowの新規手動起動の機能がない。鍵の設定済み／未設定も確認できていない。PR更新で自動起動するCIによって全候補監査を再現し、本収集の起動経路と鍵管理は次の運用工程として整える。主ブランチへ統合したと記録せず、正式収集を始めたとも扱わない。
