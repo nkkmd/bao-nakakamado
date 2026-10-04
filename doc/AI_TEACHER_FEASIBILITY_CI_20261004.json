@@ -1,0 +1,157 @@
+{
+  "dateJST": "2026-10-04",
+  "scope": "development-teacher-feasibility-not-training-not-independent-holdout",
+  "repository": "nkkmd/bao-nakakamado",
+  "rulesVersion": "0.8.0",
+  "implementationCommit": "72e20f96aeded4d804fbbeeceb95e56208600b46",
+  "testedMergeCommit": "f5d9bfe266fc3a6c2a5565cc104ea4e4dbe4d4f3",
+  "baseCommit": "c99f13537c3dbb0275a1c3e9888e882b0a3e134d",
+  "workflow": ".github/workflows/prototype-check.yml",
+  "runId": 37207204644,
+  "attempt": 1,
+  "event": "pull_request",
+  "status": "completed",
+  "conclusion": "success",
+  "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/37207204644",
+  "startedAtJST": "2026-10-04T22:52:56+09:00",
+  "runUpdatedAtJST": "2026-10-04T22:54:28+09:00",
+  "jobs": [
+    {
+      "id": 111450769547,
+      "name": "prototype",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 111450769769,
+      "name": "teacher-feasibility (0)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 111450769807,
+      "name": "teacher-feasibility (3)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 111450769816,
+      "name": "teacher-feasibility (2)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 111450769825,
+      "name": "teacher-feasibility (1)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 111450846064,
+      "name": "teacher-feasibility-aggregate",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 11305755567,
+      "name": "shard-2",
+      "sizeInBytes": 31891,
+      "digest": "sha256:989aaa3026c1a2619b47ad35d901caa59df654808105ca5ebc6716f1199b08d3",
+      "createdAt": "2026-10-04T13:53:17Z",
+      "expiresAt": "2026-11-03T13:53:16Z"
+    },
+    {
+      "id": 11305730628,
+      "name": "shard-1",
+      "sizeInBytes": 31916,
+      "digest": "sha256:eef2aa269c0f42b2e61a0e8ea27eb243f742571a1f543553ce2b43fbaa9ca8f5",
+      "createdAt": "2026-10-04T13:53:14Z",
+      "expiresAt": "2026-11-03T13:53:13Z"
+    },
+    {
+      "id": 11305641108,
+      "name": "shard-0",
+      "sizeInBytes": 31901,
+      "digest": "sha256:25048b3b8950333512f302112d533a42f06803d61b343d4df365846c6889665f",
+      "createdAt": "2026-10-04T13:53:14Z",
+      "expiresAt": "2026-11-03T13:53:13Z"
+    },
+    {
+      "id": 11305465643,
+      "name": "shard-3",
+      "sizeInBytes": 31908,
+      "digest": "sha256:1d3d41c6b1a45fb56d9ebad72782d02c8dc1bb2496bd92c0697055c8785566c8",
+      "createdAt": "2026-10-04T13:53:13Z",
+      "expiresAt": "2026-11-03T13:53:13Z"
+    },
+    {
+      "id": 11305251018,
+      "name": "teacher-feasibility-results",
+      "sizeInBytes": 13169,
+      "digest": "sha256:e91d09fb25ad7649407e500e3103cb3ce4de05ee5a79b890ca551b3b3ef2c847",
+      "createdAt": "2026-10-04T13:53:29Z",
+      "expiresAt": "2026-11-03T13:53:28Z"
+    },
+    {
+      "id": 11305112459,
+      "name": "next-turn-prototype-verification",
+      "sizeInBytes": 847246,
+      "digest": "sha256:7a0fd5b1aec6cf7957976ded1ebb393de0e44442e7d7fd29959681f3ec85fd2a",
+      "createdAt": "2026-10-04T13:54:25Z",
+      "expiresAt": "2026-11-03T13:54:25Z"
+    }
+  ],
+  "verification": {
+    "testsPassed": 67,
+    "teacherTests": 6,
+    "learningInputViews": 482,
+    "searchOracleComparisons": 1926,
+    "searchTransitionComparisons": 24887,
+    "normalReachableGames": 400,
+    "chromium": "151.0.7922.34",
+    "browserSearchPositions": 2,
+    "browserSearchDepth": 3,
+    "browserWidths": [
+      320,
+      390,
+      432
+    ],
+    "browserPageErrors": [],
+    "browserReplayComputerResetSafetyStop": true
+  },
+  "teacher": {
+    "requests": 64,
+    "accepted": 64,
+    "completedDepth4": 64,
+    "timeouts": 0,
+    "safetyStops": 0,
+    "illegalMoves": 0,
+    "inputMutations": 0,
+    "replayMismatches": 0,
+    "meanElapsedMs": 56.059523546875056,
+    "medianElapsedMs": 31.967039000000113,
+    "p95ElapsedMs": 192.94616700000006,
+    "maxElapsedMs": 284.7303750000001,
+    "nonterminalHeuristicLabels": 54,
+    "finiteDepthTerminalLineLabels": 10,
+    "saturatedTargets": 10,
+    "shards": 4,
+    "reusedPerShard": 16,
+    "newOnSecondPassPerShard": 0,
+    "corpusTraceSha256": "ef58e1b68d8ae16de9528cdfc47090e03c42be528088f2a056220695a43e7686",
+    "measurementTraceSha256": "63a44fb99214648935d0471facb94a9f206c3f424cba13ade5fee2eb6fc03f6b",
+    "fingerprint": "e16751809f4dd9a8142bc7007e9b8c5770ed54858e13bc2d73029531475f74de",
+    "rawResults": "../tools/ai-integration/teacher-feasibility-results.json",
+    "corpus": "../tools/ai-integration/teacher-feasibility-corpus.json",
+    "timingsReproducible": false
+  },
+  "limitations": [
+    "stratified-development-corpus-not-general-runtime-forecast",
+    "teacher-strength-and-AI-GEN4-equivalence-unmeasured",
+    "cross-run-artifact-resume-not-automated",
+    "formal-generator-exclusion-registry-and-sealing-not-yet-implemented",
+    "formal-collection-training-and-main-merge-not-performed"
+  ]
+}

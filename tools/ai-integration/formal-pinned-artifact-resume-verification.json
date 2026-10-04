@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "scope": "development-only-all-partitions-readable-not-formal-holdout",
+  "restoredRequests": 96,
+  "newTeacherRequests": 0,
+  "planDigest": "02e0b29d84b9e22ffcb7d5d242a2c8a6013a9477bae25bc424c53280e54661b6",
+  "finalDigest": "6eccb917c684fa07fb95e14b238f27bb24e847da947d82096b16efd152cc1717",
+  "verifiedAt": "2026-10-04T21:57:26.137Z",
+  "recordDateJST": "2026-10-05",
+  "proofScope": "pinned-actions-run-to-local-environment",
+  "execution": "local-separate-environment-not-a-second-Actions-run",
+  "originalRunFinalDigestMatches": true,
+  "receipts": [
+    {
+      "repository": "nkkmd/bao-nakakamado",
+      "runId": 37211470473,
+      "attempt": 1,
+      "headSha": "a048c8ebfe1ea82beccbe13d68a89066b292da8f",
+      "artifactId": 11307120949,
+      "name": "formal-dev-plan",
+      "digest": "sha256:e03d1c7ace9c4a034b03838feb5dd4d95c9f4dee9dce7d9e5abdb441c6c2fe26"
+    },
+    {
+      "repository": "nkkmd/bao-nakakamado",
+      "runId": 37211470473,
+      "attempt": 1,
+      "headSha": "a048c8ebfe1ea82beccbe13d68a89066b292da8f",
+      "artifactId": 11306921490,
+      "name": "formal-dev-shard-0",
+      "digest": "sha256:68fb57eecec784aceed36591b49f56f14dd87163aa9c75fdd5248d7a376e6933"
+    },
+    {
+      "repository": "nkkmd/bao-nakakamado",
+      "runId": 37211470473,
+      "attempt": 1,
+      "headSha": "a048c8ebfe1ea82beccbe13d68a89066b292da8f",
+      "artifactId": 11306886548,
+      "name": "formal-dev-shard-1",
+      "digest": "sha256:ae43e9f2121afe30160b6a25a23e85dd7d71740c312dfbb86a707822f2dea69b"
+    },
+    {
+      "repository": "nkkmd/bao-nakakamado",
+      "runId": 37211470473,
+      "attempt": 1,
+      "headSha": "a048c8ebfe1ea82beccbe13d68a89066b292da8f",
+      "artifactId": 11306671801,
+      "name": "formal-dev-shard-2",
+      "digest": "sha256:02ffd5cba6509a929f741757fb8dbe7ce60c224612d1615ddb44a814ebd7a8ec"
+    },
+    {
+      "repository": "nkkmd/bao-nakakamado",
+      "runId": 37211470473,
+      "attempt": 1,
+      "headSha": "a048c8ebfe1ea82beccbe13d68a89066b292da8f",
+      "artifactId": 11306067783,
+      "name": "formal-dev-shard-3",
+      "digest": "sha256:acf91f349bccb6228b7b28232e05b10689b4480479e1d53b0b0ead979b58e026"
+    }
+  ],
+  "allPartitionsDevelopmentAndReadable": true,
+  "formalDataGenerated": false,
+  "trainingStarted": false
+}

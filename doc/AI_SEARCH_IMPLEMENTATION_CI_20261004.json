@@ -1,0 +1,106 @@
+{
+  "recordedDateJST": "2026-10-04",
+  "scope": "engineering-correctness-not-strength",
+  "run": {
+    "id": 37200337060,
+    "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/37200337060",
+    "attempt": 1,
+    "event": "pull_request",
+    "headSha": "f63b737ac0ce8e63310421f743060eb5a5b83d65",
+    "testedMergeSha": "b962216ff2c73a8371b4f1da2946e1c7ce13a859",
+    "baseSha": "c99f13537c3dbb0275a1c3e9888e882b0a3e134d",
+    "jobId": 111430546225,
+    "conclusion": "success",
+    "completedAtJST": "2026-10-04T20:56:33+09:00"
+  },
+  "environment": {
+    "node": "24.21.0",
+    "npm": "11.19.0",
+    "runner": "ubuntu-latest",
+    "playwright": "1.62.1"
+  },
+  "tests": {
+    "total": 54,
+    "passed": 54,
+    "failed": 0
+  },
+  "searchVerification": {
+    "status": "PASS",
+    "verificationId": "NAKAKAMADO-SEARCH-VALIDATION-20261004-v2",
+    "scope": "engineering-correctness-not-strength",
+    "rulesVersion": "0.8.0",
+    "searchId": "NAKAKAMADO-SEARCH-v1",
+    "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+    "positions": 107,
+    "comparisons": 1926,
+    "coverage": {
+      "namua": 76,
+      "mtaji": 31,
+      "southToMove": 50,
+      "northToMove": 57,
+      "ownReserved": 17,
+      "opponentReserved": 17
+    },
+    "scoreMismatches": 0,
+    "nonOptimalMoves": 0,
+    "illegalMoves": 0,
+    "inputMutations": 0,
+    "oracleNodes": 73672,
+    "candidateNodes": 107926,
+    "cacheHits": 1559,
+    "pvsResearches": 1319,
+    "aspirationResearches": 438,
+    "traceSha256": "bf4270faa12c81ad0e1f20530cc343f14aed4bdd1d63bfcbe27f92635879b402",
+    "timingRuns": 24
+  },
+  "transitionVerification": {
+    "games": 128,
+    "positions": 6776,
+    "transitions": 24887,
+    "mirroredTransitions": 24887,
+    "replayedGames": 128,
+    "traceSha256": "7fc8c90978be16b090b62438420880029a6266bde4d3dc31b84b8f44b4c3d6de"
+  },
+  "existingRuleCheck": {
+    "mainGames": 400,
+    "transitions": 7129,
+    "mirrorPairs": 40,
+    "replays": 40
+  },
+  "browser": {
+    "browser": "151.0.7922.34",
+    "pits": 32,
+    "plies": 64,
+    "rearMoves": 12,
+    "extraMoves": 6,
+    "searchCheck": {
+      "transitions": 272,
+      "nyakua": 26
+    },
+    "searchAICheck": {
+      "positions": 2,
+      "completedDepth": 3,
+      "nodeBrowserMatch": true
+    },
+    "downloadReplayed": true,
+    "computerAndReset": true,
+    "safetyStopAndReplay": true,
+    "mobileWidths": [
+      320,
+      390,
+      432
+    ],
+    "pageErrors": []
+  },
+  "artifact": {
+    "id": 11302727137,
+    "name": "next-turn-prototype-verification",
+    "digest": "sha256:af43d0007d1115faeeffb7ba1840dbec373f46ff906af1527b3f6d0043e588ce",
+    "expiresAtUTC": "2026-11-03T11:56:30Z"
+  },
+  "limitations": [
+    "Finite-depth search equivalence, not playing strength or evaluator accuracy.",
+    "Browser widths are not physical moto g52j 5G testing.",
+    "Source proof is scoped to the tested commit; later CI path-filter/document edits do not alter search sources."
+  ]
+}

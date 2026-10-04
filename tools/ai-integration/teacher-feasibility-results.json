@@ -1,0 +1,6054 @@
+{
+  "id": "NAKAKAMADO-TEACHER-FEASIBILITY-20261004-v1",
+  "status": "FEASIBLE-FOR-NEXT-COLLECTION-STAGE",
+  "scope": "development-calibration-not-training-not-formal-holdout",
+  "teacher": {
+    "maxDepth": 4,
+    "quiescenceDepth": 1,
+    "timeLimitMs": 5000
+  },
+  "clock": "real-monotonic",
+  "positions": 64,
+  "accepted": 64,
+  "acceptedFraction": 1,
+  "rejectionReasons": {},
+  "acceptedCoverage": {
+    "reservedOnly": 4,
+    "twoPlacement": 4,
+    "threePlacement": 12,
+    "lastOrdinary": 4,
+    "nearTransition": 9,
+    "ownReserved": 20,
+    "opponentReserved": 9,
+    "namua": 42,
+    "mtaji": 22,
+    "north": 32,
+    "south": 32
+  },
+  "missingAcceptedCoverage": [],
+  "collection": {
+    "paths": 512,
+    "positions": 20831,
+    "uniquePositions": 10320,
+    "scannedCoverage": {
+      "reservedOnly": 35,
+      "twoPlacement": 170,
+      "threePlacement": 1637,
+      "lastOrdinary": 427,
+      "nearTransition": 619,
+      "ownReserved": 1842,
+      "opponentReserved": 1766,
+      "namua": 5263,
+      "mtaji": 5057,
+      "north": 5161,
+      "south": 5159
+    },
+    "selectedCoverage": {
+      "reservedOnly": 4,
+      "twoPlacement": 4,
+      "threePlacement": 12,
+      "lastOrdinary": 4,
+      "nearTransition": 9,
+      "ownReserved": 20,
+      "opponentReserved": 9,
+      "namua": 42,
+      "mtaji": 22,
+      "north": 32,
+      "south": 32
+    },
+    "missingCoverage": [],
+    "cutoffs": {
+      "normal-terminal": 512
+    },
+    "replayMismatches": 0
+  },
+  "timeMs": {
+    "n": 64,
+    "mean": 56.059523546875056,
+    "median": 31.967039000000113,
+    "p95": 192.94616700000006,
+    "max": 284.7303750000001
+  },
+  "acceptedTimeMs": {
+    "n": 64,
+    "mean": 56.059523546875056,
+    "median": 31.967039000000113,
+    "p95": 192.94616700000006,
+    "max": 284.7303750000001
+  },
+  "completedDepths": {
+    "4": 64
+  },
+  "timedOut": 0,
+  "safetyAffected": 0,
+  "saturatedLabels": 10,
+  "labelKinds": {
+    "finite-depth-heuristic": 54,
+    "finite-depth-terminal-line": 10
+  },
+  "illegalMoves": 0,
+  "inputMutations": 0,
+  "replayMismatches": 0,
+  "serializedAcceptedBytes": 104704,
+  "sources": {
+    "prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+    "prototype/steal.js": "a1886cdc5b3b9f8a69eb1955e8990deca809d6dc786491afd23f669a77be7ad2",
+    "prototype/search-transition.js": "d65551b35ea22cf05cbc6981e06268c57755c8a870938117c3efca9c7478fcb3",
+    "prototype/search-ai.js": "d74569196382b0aea1bbf251454788b009d9962d249232a32c2e4c13f190dc65",
+    "prototype/search-evaluator.js": "e5240b37da230a9f2927fec6c70334affb491f68001f4001df14d5af60fc0196",
+    "tools/nyakua-three/core.cjs": "6b5d7658f80fe2b5611d82b23f91863e58964991f40477ab91f07c6f82581f93",
+    "tools/nyakua-three/engine.cjs": "20fa3bb06b28b990e83cb6128f7734d6692aa18da1a3fc823584e559b76eee6e",
+    "prototype/bulk-engine.js": "23df9b5c45fe3f7ab117c676e06d9d5a32605ae810ac0d3cd909b025c07fe657",
+    "tools/ai-integration/learning-input.cjs": "bb9b570e323b71565ac1768f9995958a2ab85bc364dc853db74670894065970d",
+    "tools/ai-integration/learning_input.py": "4f2fcdc5a2421ddd4af84afc2f0e3a17fd94a6e06b4f6d85cca010403d845c82",
+    "tools/ai-integration/learning-pipeline.cjs": "0503385068892f9d05e71a36ab793db5e6414dbb2eaf54cb58deb4fae0c1f06e",
+    "tools/ai-integration/learning-pipeline.test.cjs": "f28e08cec22f415b353ae2ce8eb224c1ef3664d35366fda3bb1fc9de69c038d9",
+    "tools/ai-integration/verify-learning-pilot.cjs": "81c9f760ea9790e110440b315d992e1d0eb5cfb8f94bb49c3103564745f3e0c6",
+    "tools/ai-integration/learning-spec.json": "925950ff3ab73f062c2a88782524908b738b6200461b116df7135bf6637ddcf1",
+    "tools/ai-integration/teacher-feasibility-spec.json": "e691a4a079d57fb12a3b98dcb85427ae04a03f82498acc22710f474c4debc324",
+    "tools/ai-integration/teacher-feasibility.cjs": "a72c3f7a18f9d51c8aaf52f931a7bc8f9990292afd435e2ac62bc792c14c072e",
+    "tools/ai-integration/teacher-feasibility.test.cjs": "dacd646b3de6465499cc019b538f17fc550ff06687f4ecd15a918ef841586f46",
+    "tools/ai-integration/reserved-only-reachable-fixtures.json": "1d8e45c6832181b6a2defc6334aa44fd2299aee97be166a1d94af48052e24cd5"
+  },
+  "fingerprint": "e16751809f4dd9a8142bc7007e9b8c5770ed54858e13bc2d73029531475f74de",
+  "corpusTraceSha256": "ef58e1b68d8ae16de9528cdfc47090e03c42be528088f2a056220695a43e7686",
+  "measurementTraceSha256": "63a44fb99214648935d0471facb94a9f206c3f424cba13ade5fee2eb6fc03f6b",
+  "manifests": [
+    {
+      "id": "NAKAKAMADO-TEACHER-FEASIBILITY-20261004-v1",
+      "shard": 0,
+      "shards": 4,
+      "fingerprint": "e16751809f4dd9a8142bc7007e9b8c5770ed54858e13bc2d73029531475f74de",
+      "sources": {
+        "prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+        "prototype/steal.js": "a1886cdc5b3b9f8a69eb1955e8990deca809d6dc786491afd23f669a77be7ad2",
+        "prototype/search-transition.js": "d65551b35ea22cf05cbc6981e06268c57755c8a870938117c3efca9c7478fcb3",
+        "prototype/search-ai.js": "d74569196382b0aea1bbf251454788b009d9962d249232a32c2e4c13f190dc65",
+        "prototype/search-evaluator.js": "e5240b37da230a9f2927fec6c70334affb491f68001f4001df14d5af60fc0196",
+        "tools/nyakua-three/core.cjs": "6b5d7658f80fe2b5611d82b23f91863e58964991f40477ab91f07c6f82581f93",
+        "tools/nyakua-three/engine.cjs": "20fa3bb06b28b990e83cb6128f7734d6692aa18da1a3fc823584e559b76eee6e",
+        "prototype/bulk-engine.js": "23df9b5c45fe3f7ab117c676e06d9d5a32605ae810ac0d3cd909b025c07fe657",
+        "tools/ai-integration/learning-input.cjs": "bb9b570e323b71565ac1768f9995958a2ab85bc364dc853db74670894065970d",
+        "tools/ai-integration/learning_input.py": "4f2fcdc5a2421ddd4af84afc2f0e3a17fd94a6e06b4f6d85cca010403d845c82",
+        "tools/ai-integration/learning-pipeline.cjs": "0503385068892f9d05e71a36ab793db5e6414dbb2eaf54cb58deb4fae0c1f06e",
+        "tools/ai-integration/learning-pipeline.test.cjs": "f28e08cec22f415b353ae2ce8eb224c1ef3664d35366fda3bb1fc9de69c038d9",
+        "tools/ai-integration/verify-learning-pilot.cjs": "81c9f760ea9790e110440b315d992e1d0eb5cfb8f94bb49c3103564745f3e0c6",
+        "tools/ai-integration/learning-spec.json": "925950ff3ab73f062c2a88782524908b738b6200461b116df7135bf6637ddcf1",
+        "tools/ai-integration/teacher-feasibility-spec.json": "e691a4a079d57fb12a3b98dcb85427ae04a03f82498acc22710f474c4debc324",
+        "tools/ai-integration/teacher-feasibility.cjs": "a72c3f7a18f9d51c8aaf52f931a7bc8f9990292afd435e2ac62bc792c14c072e",
+        "tools/ai-integration/teacher-feasibility.test.cjs": "dacd646b3de6465499cc019b538f17fc550ff06687f4ecd15a918ef841586f46",
+        "tools/ai-integration/reserved-only-reachable-fixtures.json": "1d8e45c6832181b6a2defc6334aa44fd2299aee97be166a1d94af48052e24cd5"
+      },
+      "traceSha256": "ef58e1b68d8ae16de9528cdfc47090e03c42be528088f2a056220695a43e7686",
+      "rowIds": [
+        "620defab14ed4b3e2fcabdec3f9ad71a1f3fe9903397f0888d2a9fbce088cd8a",
+        "6a1cc5e9f25122c5cdbd5e1729e1f787f84fd526cbb8fba64fdfcb1d0edb5d3c",
+        "cac3669e865c4a4370d7ae8256eec3d76c93f1228cc4a0dff3d8b746c71d0cf3",
+        "a95462fbf6ccf39b70f34831f69c89c48ad6d952afd50c14d1b1f3cb8c7e4f86",
+        "5d446fef84d68c9149e4f756d4f30b5f440318a65ec3dfbcbced12d2a1807881",
+        "b472c265bbf923b8180a28537ca11cef1b687419b87dba9adbab7c67f5b7cbb7",
+        "a595daf038c146e8fafc6fabbdeb8389a3dd2b49ca06e7a848c3a13504dcf140",
+        "17be91b3b5b0addd56c400272c1a1af1dd7ffd65f8d04234707224cd8d2fe87f",
+        "32b6cea1daec16779d2dd37aed72c2edc06a2de0a4e7784e33b68f0ae668b0cf",
+        "017d4c133abc48f01172c5005a0751ab7cf67222e935dc7fa1cbf0f45ee83d95",
+        "c5dbd89221578cbacfe330668747e2eae1296dfd72c7ce74d2dc6d633fe71154",
+        "ea493c31c17f283aa01efa9c482e17ce7665fdfc6605ac8768610296b55c43ba",
+        "2ded7e8c37932e8ef1639057ab6b34fc4e3b23295139121eed0289191305e4ec",
+        "de0be7758cc92b627884d444de9c09ac0f55d0cfd06708ee45c77d2de2a39a8a",
+        "9d4c2de3b42e4f19b1e90f3e0a26caef309f8cf5c58cb984953e67779f77e52a",
+        "e442b7d0cad348bc02ecdfc7659fa71d400902c92bfbf61b62246b419bb5c0d1"
+      ],
+      "reused": 16,
+      "generated": 0,
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      }
+    },
+    {
+      "id": "NAKAKAMADO-TEACHER-FEASIBILITY-20261004-v1",
+      "shard": 1,
+      "shards": 4,
+      "fingerprint": "e16751809f4dd9a8142bc7007e9b8c5770ed54858e13bc2d73029531475f74de",
+      "sources": {
+        "prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+        "prototype/steal.js": "a1886cdc5b3b9f8a69eb1955e8990deca809d6dc786491afd23f669a77be7ad2",
+        "prototype/search-transition.js": "d65551b35ea22cf05cbc6981e06268c57755c8a870938117c3efca9c7478fcb3",
+        "prototype/search-ai.js": "d74569196382b0aea1bbf251454788b009d9962d249232a32c2e4c13f190dc65",
+        "prototype/search-evaluator.js": "e5240b37da230a9f2927fec6c70334affb491f68001f4001df14d5af60fc0196",
+        "tools/nyakua-three/core.cjs": "6b5d7658f80fe2b5611d82b23f91863e58964991f40477ab91f07c6f82581f93",
+        "tools/nyakua-three/engine.cjs": "20fa3bb06b28b990e83cb6128f7734d6692aa18da1a3fc823584e559b76eee6e",
+        "prototype/bulk-engine.js": "23df9b5c45fe3f7ab117c676e06d9d5a32605ae810ac0d3cd909b025c07fe657",
+        "tools/ai-integration/learning-input.cjs": "bb9b570e323b71565ac1768f9995958a2ab85bc364dc853db74670894065970d",
+        "tools/ai-integration/learning_input.py": "4f2fcdc5a2421ddd4af84afc2f0e3a17fd94a6e06b4f6d85cca010403d845c82",
+        "tools/ai-integration/learning-pipeline.cjs": "0503385068892f9d05e71a36ab793db5e6414dbb2eaf54cb58deb4fae0c1f06e",
+        "tools/ai-integration/learning-pipeline.test.cjs": "f28e08cec22f415b353ae2ce8eb224c1ef3664d35366fda3bb1fc9de69c038d9",
+        "tools/ai-integration/verify-learning-pilot.cjs": "81c9f760ea9790e110440b315d992e1d0eb5cfb8f94bb49c3103564745f3e0c6",
+        "tools/ai-integration/learning-spec.json": "925950ff3ab73f062c2a88782524908b738b6200461b116df7135bf6637ddcf1",
+        "tools/ai-integration/teacher-feasibility-spec.json": "e691a4a079d57fb12a3b98dcb85427ae04a03f82498acc22710f474c4debc324",
+        "tools/ai-integration/teacher-feasibility.cjs": "a72c3f7a18f9d51c8aaf52f931a7bc8f9990292afd435e2ac62bc792c14c072e",
+        "tools/ai-integration/teacher-feasibility.test.cjs": "dacd646b3de6465499cc019b538f17fc550ff06687f4ecd15a918ef841586f46",
+        "tools/ai-integration/reserved-only-reachable-fixtures.json": "1d8e45c6832181b6a2defc6334aa44fd2299aee97be166a1d94af48052e24cd5"
+      },
+      "traceSha256": "ef58e1b68d8ae16de9528cdfc47090e03c42be528088f2a056220695a43e7686",
+      "rowIds": [
+        "e1c1309b54cc5ff34507e9ba432fee52edb1edc81c401890b9616e1261435055",
+        "94da3bb65804d1e3518bb188cc054a60b230b7cbca09e867c850d4de07a584c3",
+        "4c61dd0a65d0462aef072c33e18be6e200d54aab9c9b3bafafad507934e741ee",
+        "e90ae62d80407e3782182a0cb64068dec3387ba53535f05ec2c68836a1eccca6",
+        "1988a1515fa6f97821998e95a9c40cf56c56e3e2ba7054f4668058c0858ae173",
+        "953f4d1364ae5c8b8b2445ada450bea72f61957cefb0cc7feddae46f3b0e451f",
+        "4b59611e16c09b93e5e0ec6f68f6644dbb423c00d14bcda776fb25c4107fdcb8",
+        "f6464890094dc72a9c27ddf550e2060ac0335168c33fbea22a80ce3dfa3dcb8a",
+        "6f2789e2632d0052c088e06dc2a1c65b4aec0fce855bd53bd9267a556c54a05b",
+        "ecff84486ee30134290863e4173e433ee1f3d3517573b01852d44fcaa1a0feca",
+        "12d526c73884672de32df68f38e8de578bd315e81071443695f50105ed247683",
+        "07a1865265614efced21b3d7b42146877cf5cae46e2e957fd2c322dee2228beb",
+        "e1f336d9d2aadafe8b71126d23c2dbf42a8370bf678933c131cfa1a80268509b",
+        "077e83e5f39fbeb769e5f04117a20d11166e85b17562d0f9b07cf4008da0597f",
+        "1ac9fa4660a64e171562837d88463b7815bcaced3bfe7bbfccfb0cf7554cd0e4",
+        "41fc3e637e569f0c32fd605419cec18c6c8e75490dc689395c99f031d1b45473"
+      ],
+      "reused": 16,
+      "generated": 0,
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      }
+    },
+    {
+      "id": "NAKAKAMADO-TEACHER-FEASIBILITY-20261004-v1",
+      "shard": 2,
+      "shards": 4,
+      "fingerprint": "e16751809f4dd9a8142bc7007e9b8c5770ed54858e13bc2d73029531475f74de",
+      "sources": {
+        "prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+        "prototype/steal.js": "a1886cdc5b3b9f8a69eb1955e8990deca809d6dc786491afd23f669a77be7ad2",
+        "prototype/search-transition.js": "d65551b35ea22cf05cbc6981e06268c57755c8a870938117c3efca9c7478fcb3",
+        "prototype/search-ai.js": "d74569196382b0aea1bbf251454788b009d9962d249232a32c2e4c13f190dc65",
+        "prototype/search-evaluator.js": "e5240b37da230a9f2927fec6c70334affb491f68001f4001df14d5af60fc0196",
+        "tools/nyakua-three/core.cjs": "6b5d7658f80fe2b5611d82b23f91863e58964991f40477ab91f07c6f82581f93",
+        "tools/nyakua-three/engine.cjs": "20fa3bb06b28b990e83cb6128f7734d6692aa18da1a3fc823584e559b76eee6e",
+        "prototype/bulk-engine.js": "23df9b5c45fe3f7ab117c676e06d9d5a32605ae810ac0d3cd909b025c07fe657",
+        "tools/ai-integration/learning-input.cjs": "bb9b570e323b71565ac1768f9995958a2ab85bc364dc853db74670894065970d",
+        "tools/ai-integration/learning_input.py": "4f2fcdc5a2421ddd4af84afc2f0e3a17fd94a6e06b4f6d85cca010403d845c82",
+        "tools/ai-integration/learning-pipeline.cjs": "0503385068892f9d05e71a36ab793db5e6414dbb2eaf54cb58deb4fae0c1f06e",
+        "tools/ai-integration/learning-pipeline.test.cjs": "f28e08cec22f415b353ae2ce8eb224c1ef3664d35366fda3bb1fc9de69c038d9",
+        "tools/ai-integration/verify-learning-pilot.cjs": "81c9f760ea9790e110440b315d992e1d0eb5cfb8f94bb49c3103564745f3e0c6",
+        "tools/ai-integration/learning-spec.json": "925950ff3ab73f062c2a88782524908b738b6200461b116df7135bf6637ddcf1",
+        "tools/ai-integration/teacher-feasibility-spec.json": "e691a4a079d57fb12a3b98dcb85427ae04a03f82498acc22710f474c4debc324",
+        "tools/ai-integration/teacher-feasibility.cjs": "a72c3f7a18f9d51c8aaf52f931a7bc8f9990292afd435e2ac62bc792c14c072e",
+        "tools/ai-integration/teacher-feasibility.test.cjs": "dacd646b3de6465499cc019b538f17fc550ff06687f4ecd15a918ef841586f46",
+        "tools/ai-integration/reserved-only-reachable-fixtures.json": "1d8e45c6832181b6a2defc6334aa44fd2299aee97be166a1d94af48052e24cd5"
+      },
+      "traceSha256": "ef58e1b68d8ae16de9528cdfc47090e03c42be528088f2a056220695a43e7686",
+      "rowIds": [
+        "839f95422ec8928132fe7dbebed99d8c041bd8819540fa1b44a14bd9fbb9f4df",
+        "a75a4d309ef7c7c11db5d4efa4bd349f71ab9d42a39cc4e0a074400fdb0c4d7f",
+        "cd7dcc431d95550c38e6e025cf12fb64cbdae8caa2a9b7384a6ab6ac1d6062e3",
+        "fbdfceebff18ef95b81ae84f61f6c1365735d0dabdd3ed92e88bbb3eb8e5decd",
+        "d2a0566d92a003177456b733e976d3006b170acdded829b20b530e887de104fa",
+        "bbb6f4f8e41373e6e4af6b4627ee25aa6c18d5896c00e88ca282fbb6661a3ec2",
+        "cd4a7a80141b064cc177341503bc2f381c635c4373290c91895718050dffc466",
+        "e8a2285f31dba5e1c3037d091d3127a5d736797726a23741add430b99bdb414f",
+        "22b8a4827e214ffbaea4ef0ec9079c95eebc4d2997d312017b9d0eb5413dd501",
+        "6efd39d73deff2a45760d01ee887bb67b96e2498ca16ba309a26335ab659c9b4",
+        "489191fbc7221ccd14c0d3d5c3c4d41a7974a45810a3a825925467f28f7fa972",
+        "70aeee30eb2edfb9f4db32164b0e131c4d7b9ae1f80fb7d2cd1a1068087e65a1",
+        "669424481e12ec35257812642bec1f14582f827b737ec9073c30267f6db77b3b",
+        "2219dd7f330e1f7eeed58de74d97cd8e2b17eceaa7b76cb4c484f2ddf74a00d1",
+        "26c1e0e5e2d5f4701dd248c8e6a3a16d728e59ce27f38e7d6665b2866427be14",
+        "d6535ce96a793efdb8c5e7fa91d186ed91eeeee65f85bd7e51cac2daf5ec4e15"
+      ],
+      "reused": 16,
+      "generated": 0,
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      }
+    },
+    {
+      "id": "NAKAKAMADO-TEACHER-FEASIBILITY-20261004-v1",
+      "shard": 3,
+      "shards": 4,
+      "fingerprint": "e16751809f4dd9a8142bc7007e9b8c5770ed54858e13bc2d73029531475f74de",
+      "sources": {
+        "prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+        "prototype/steal.js": "a1886cdc5b3b9f8a69eb1955e8990deca809d6dc786491afd23f669a77be7ad2",
+        "prototype/search-transition.js": "d65551b35ea22cf05cbc6981e06268c57755c8a870938117c3efca9c7478fcb3",
+        "prototype/search-ai.js": "d74569196382b0aea1bbf251454788b009d9962d249232a32c2e4c13f190dc65",
+        "prototype/search-evaluator.js": "e5240b37da230a9f2927fec6c70334affb491f68001f4001df14d5af60fc0196",
+        "tools/nyakua-three/core.cjs": "6b5d7658f80fe2b5611d82b23f91863e58964991f40477ab91f07c6f82581f93",
+        "tools/nyakua-three/engine.cjs": "20fa3bb06b28b990e83cb6128f7734d6692aa18da1a3fc823584e559b76eee6e",
+        "prototype/bulk-engine.js": "23df9b5c45fe3f7ab117c676e06d9d5a32605ae810ac0d3cd909b025c07fe657",
+        "tools/ai-integration/learning-input.cjs": "bb9b570e323b71565ac1768f9995958a2ab85bc364dc853db74670894065970d",
+        "tools/ai-integration/learning_input.py": "4f2fcdc5a2421ddd4af84afc2f0e3a17fd94a6e06b4f6d85cca010403d845c82",
+        "tools/ai-integration/learning-pipeline.cjs": "0503385068892f9d05e71a36ab793db5e6414dbb2eaf54cb58deb4fae0c1f06e",
+        "tools/ai-integration/learning-pipeline.test.cjs": "f28e08cec22f415b353ae2ce8eb224c1ef3664d35366fda3bb1fc9de69c038d9",
+        "tools/ai-integration/verify-learning-pilot.cjs": "81c9f760ea9790e110440b315d992e1d0eb5cfb8f94bb49c3103564745f3e0c6",
+        "tools/ai-integration/learning-spec.json": "925950ff3ab73f062c2a88782524908b738b6200461b116df7135bf6637ddcf1",
+        "tools/ai-integration/teacher-feasibility-spec.json": "e691a4a079d57fb12a3b98dcb85427ae04a03f82498acc22710f474c4debc324",
+        "tools/ai-integration/teacher-feasibility.cjs": "a72c3f7a18f9d51c8aaf52f931a7bc8f9990292afd435e2ac62bc792c14c072e",
+        "tools/ai-integration/teacher-feasibility.test.cjs": "dacd646b3de6465499cc019b538f17fc550ff06687f4ecd15a918ef841586f46",
+        "tools/ai-integration/reserved-only-reachable-fixtures.json": "1d8e45c6832181b6a2defc6334aa44fd2299aee97be166a1d94af48052e24cd5"
+      },
+      "traceSha256": "ef58e1b68d8ae16de9528cdfc47090e03c42be528088f2a056220695a43e7686",
+      "rowIds": [
+        "c25f85e6102bac1795fb8a680cf5320ef3fd5476a90e765f091965011b815506",
+        "1f6cc85115eefff171dd478f2e4af42baf8644a738e095af28bd8e93c2c81e20",
+        "4694398ef49b18b06fb9a5c6d9f18d3e9f398c635d77e4856e4997b7cf796f01",
+        "095b3f138a8df631353890ae0c8177180113780fed098738449524509e41d0cb",
+        "fabe4302ea3571589de712b21b769187903fdd7aaec664ebc96203647b3466c8",
+        "9b0cad2c0981ede82144253aae1440c106bf11c0caac684b66ca6e7b300b970a",
+        "4e3d37b6e95dcc6169f4cf21f9fa5e735ae6fbc5d59fd9dda3b3a5b28b21ab0b",
+        "1e0420b4a6775883fabeb1ec34f7b0485f5dff93c2da5398af7929b541448f1e",
+        "dd4c948e2f4a215f67dbafe38d3703d876c636c85b0dc387b7101168b44d5202",
+        "3943d3db041a1a2869476d2394b8b032e2d848d0a426c8a4567979ed18362eaf",
+        "4e71e90349e61778f9c4d079862bd8dabad8a674d44723e1ca9835303673b999",
+        "430e49e9a495ad3cf2f28555d722a234991e7c052b85b32cc2b3143305066a76",
+        "9c49496e6f535b657c23dd11a680ea0359cccf07af7fc76bc31c82c74e10293a",
+        "41690068618230877031d8524aadcb090837c5d776dfc941a13a8cd73940ec89",
+        "1a27458dff08a7b0de8d9d372b55ffddf0cad769560d3f10994842c21611ce99",
+        "0ba9d817e8a1fb5e2b67bb37c7958b0a6ef583ded09152df2ae2e179d0c39716"
+      ],
+      "reused": 16,
+      "generated": 0,
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      }
+    }
+  ],
+  "measurements": [
+    {
+      "id": "620defab14ed4b3e2fcabdec3f9ad71a1f3fe9903397f0888d2a9fbce088cd8a",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800008,
+        "seed": 3028856105,
+        "first": 0,
+        "ply": 28
+      },
+      "tags": {
+        "reservedOnly": true,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": true,
+        "ownReserved": true,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 805,
+        "target": 0.7861328125,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 149,
+          "quiescenceNodes": 89,
+          "cutoffs": 27,
+          "cacheHits": 0,
+          "cacheStores": 30,
+          "evaluationRequests": 79,
+          "evaluations": 69,
+          "evaluationCacheHits": 10,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 18,
+          "evaluationCachePeak": 69,
+          "pvsResearches": 1,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 805,
+          "timedOut": false,
+          "elapsedMs": 16.51498399999946,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "6a1cc5e9f25122c5cdbd5e1729e1f787f84fd526cbb8fba64fdfcb1d0edb5d3c",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800005,
+        "seed": 3655483414,
+        "first": 1,
+        "ply": 36
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": true,
+        "threePlacement": false,
+        "lastOrdinary": true,
+        "nearTransition": true,
+        "ownReserved": true,
+        "opponentReserved": true,
+        "namua": true,
+        "mtaji": false,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": -470,
+        "target": -0.458984375,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 162,
+          "quiescenceNodes": 94,
+          "cutoffs": 30,
+          "cacheHits": 1,
+          "cacheStores": 28,
+          "evaluationRequests": 102,
+          "evaluations": 73,
+          "evaluationCacheHits": 29,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 16,
+          "evaluationCachePeak": 73,
+          "pvsResearches": 2,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": -470,
+          "timedOut": false,
+          "elapsedMs": 13.021162000000004,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "cac3669e865c4a4370d7ae8256eec3d76c93f1228cc4a0dff3d8b746c71d0cf3",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800000,
+        "seed": 3268206497,
+        "first": 0,
+        "ply": 19
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": true,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": true,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 220,
+        "target": 0.21484375,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "use"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "use"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 842,
+          "quiescenceNodes": 531,
+          "cutoffs": 175,
+          "cacheHits": 30,
+          "cacheStores": 114,
+          "evaluationRequests": 453,
+          "evaluations": 329,
+          "evaluationCacheHits": 124,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 72,
+          "evaluationCachePeak": 329,
+          "pvsResearches": 14,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 220,
+          "timedOut": false,
+          "elapsedMs": 122.28184899999997,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "a95462fbf6ccf39b70f34831f69c89c48ad6d952afd50c14d1b1f3cb8c7e4f86",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800000,
+        "seed": 3268206497,
+        "first": 0,
+        "ply": 18
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": true,
+        "namua": true,
+        "mtaji": false,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": -80,
+        "target": -0.078125,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 1,
+          "direction": "right",
+          "side": "left"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 1,
+          "direction": "right",
+          "side": "left"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 288,
+          "quiescenceNodes": 190,
+          "cutoffs": 56,
+          "cacheHits": 1,
+          "cacheStores": 29,
+          "evaluationRequests": 157,
+          "evaluations": 115,
+          "evaluationCacheHits": 42,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 17,
+          "evaluationCachePeak": 115,
+          "pvsResearches": 6,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": -80,
+          "timedOut": false,
+          "elapsedMs": 35.52902399999948,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "5d446fef84d68c9149e4f756d4f30b5f440318a65ec3dfbcbced12d2a1807881",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800000,
+        "seed": 3268206497,
+        "first": 0,
+        "ply": 32
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": false,
+        "mtaji": true,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 999,
+        "target": 0.9755859375,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "row": 1,
+          "index": 0,
+          "direction": "right",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "row": 1,
+          "index": 0,
+          "direction": "right",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 362,
+          "quiescenceNodes": 225,
+          "cutoffs": 66,
+          "cacheHits": 13,
+          "cacheStores": 55,
+          "evaluationRequests": 175,
+          "evaluations": 144,
+          "evaluationCacheHits": 31,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 33,
+          "evaluationCachePeak": 144,
+          "pvsResearches": 7,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 999,
+          "timedOut": false,
+          "elapsedMs": 29.92847299999994,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "b472c265bbf923b8180a28537ca11cef1b687419b87dba9adbab7c67f5b7cbb7",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800001,
+        "seed": 1627674962,
+        "first": 1,
+        "ply": 27
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": false,
+        "mtaji": true,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 140,
+        "target": 0.13671875,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "row": 1,
+          "index": 0,
+          "direction": "right",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "row": 1,
+          "index": 0,
+          "direction": "right",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 241,
+          "quiescenceNodes": 144,
+          "cutoffs": 48,
+          "cacheHits": 8,
+          "cacheStores": 37,
+          "evaluationRequests": 94,
+          "evaluations": 68,
+          "evaluationCacheHits": 26,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 22,
+          "evaluationCachePeak": 68,
+          "pvsResearches": 6,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 140,
+          "timedOut": false,
+          "elapsedMs": 13.598034000000553,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "a595daf038c146e8fafc6fabbdeb8389a3dd2b49ca06e7a848c3a13504dcf140",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800001,
+        "seed": 1627674962,
+        "first": 1,
+        "ply": 31
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": false,
+        "mtaji": true,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-terminal-line",
+        "rawScore": 999995,
+        "target": 1,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "row": 1,
+          "index": 0,
+          "direction": "right",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "row": 1,
+          "index": 0,
+          "direction": "right",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 24,
+          "quiescenceNodes": 10,
+          "cutoffs": 0,
+          "cacheHits": 0,
+          "cacheStores": 10,
+          "evaluationRequests": 5,
+          "evaluations": 5,
+          "evaluationCacheHits": 0,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 4,
+          "evaluationCachePeak": 5,
+          "pvsResearches": 0,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 999995,
+          "timedOut": false,
+          "elapsedMs": 1.0253730000003998,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "17be91b3b5b0addd56c400272c1a1af1dd7ffd65f8d04234707224cd8d2fe87f",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800001,
+        "seed": 1627674962,
+        "first": 1,
+        "ply": 35
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": false,
+        "mtaji": true,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-terminal-line",
+        "rawScore": 999999,
+        "target": 1,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 73,
+          "quiescenceNodes": 36,
+          "cutoffs": 17,
+          "cacheHits": 0,
+          "cacheStores": 19,
+          "evaluationRequests": 28,
+          "evaluations": 27,
+          "evaluationCacheHits": 1,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 10,
+          "evaluationCachePeak": 27,
+          "pvsResearches": 0,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 999999,
+          "timedOut": false,
+          "elapsedMs": 5.508512999999766,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "32b6cea1daec16779d2dd37aed72c2edc06a2de0a4e7784e33b68f0ae668b0cf",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800000,
+        "seed": 3268206497,
+        "first": 0,
+        "ply": 25
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 414,
+        "target": 0.404296875,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 1,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "use"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 1,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "use"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 784,
+          "quiescenceNodes": 542,
+          "cutoffs": 155,
+          "cacheHits": 2,
+          "cacheStores": 93,
+          "evaluationRequests": 393,
+          "evaluations": 355,
+          "evaluationCacheHits": 38,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 62,
+          "evaluationCachePeak": 355,
+          "pvsResearches": 4,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 414,
+          "timedOut": false,
+          "elapsedMs": 135.69061200000033,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "017d4c133abc48f01172c5005a0751ab7cf67222e935dc7fa1cbf0f45ee83d95",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800003,
+        "seed": 2641579188,
+        "first": 1,
+        "ply": 12
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": -114,
+        "target": -0.111328125,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 338,
+          "quiescenceNodes": 201,
+          "cutoffs": 67,
+          "cacheHits": 9,
+          "cacheStores": 59,
+          "evaluationRequests": 142,
+          "evaluations": 109,
+          "evaluationCacheHits": 33,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 32,
+          "evaluationCachePeak": 109,
+          "pvsResearches": 11,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": -114,
+          "timedOut": false,
+          "elapsedMs": 19.948566000000028,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "c5dbd89221578cbacfe330668747e2eae1296dfd72c7ce74d2dc6d633fe71154",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800004,
+        "seed": 1001047653,
+        "first": 0,
+        "ply": 40
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": false,
+        "mtaji": true,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": -789,
+        "target": -0.7705078125,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "row": 1,
+          "index": 4,
+          "direction": "left",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "row": 1,
+          "index": 4,
+          "direction": "left",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 107,
+          "quiescenceNodes": 55,
+          "cutoffs": 17,
+          "cacheHits": 1,
+          "cacheStores": 24,
+          "evaluationRequests": 51,
+          "evaluations": 26,
+          "evaluationCacheHits": 25,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 12,
+          "evaluationCachePeak": 26,
+          "pvsResearches": 5,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": -789,
+          "timedOut": false,
+          "elapsedMs": 4.862306999999419,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "ea493c31c17f283aa01efa9c482e17ce7665fdfc6605ac8768610296b55c43ba",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800006,
+        "seed": 2014951879,
+        "first": 0,
+        "ply": 12
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 6,
+        "target": 0.005859375,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "right"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "right"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 153,
+          "quiescenceNodes": 81,
+          "cutoffs": 29,
+          "cacheHits": 4,
+          "cacheStores": 29,
+          "evaluationRequests": 97,
+          "evaluations": 50,
+          "evaluationCacheHits": 47,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 15,
+          "evaluationCachePeak": 50,
+          "pvsResearches": 6,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 6,
+          "timedOut": false,
+          "elapsedMs": 6.341018000000076,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "2ded7e8c37932e8ef1639057ab6b34fc4e3b23295139121eed0289191305e4ec",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800007,
+        "seed": 374420344,
+        "first": 1,
+        "ply": 40
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": false,
+        "mtaji": true,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": -92,
+        "target": -0.08984375,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "row": 0,
+          "index": 3,
+          "direction": "left",
+          "type": "takata",
+          "phase": "mtaji"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "row": 0,
+          "index": 3,
+          "direction": "left",
+          "type": "takata",
+          "phase": "mtaji"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 242,
+          "quiescenceNodes": 159,
+          "cutoffs": 43,
+          "cacheHits": 4,
+          "cacheStores": 34,
+          "evaluationRequests": 124,
+          "evaluations": 98,
+          "evaluationCacheHits": 26,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 18,
+          "evaluationCachePeak": 98,
+          "pvsResearches": 6,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": -92,
+          "timedOut": false,
+          "elapsedMs": 20.17733799999951,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "de0be7758cc92b627884d444de9c09ac0f55d0cfd06708ee45c77d2de2a39a8a",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800009,
+        "seed": 1388324570,
+        "first": 1,
+        "ply": 12
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 365,
+        "target": 0.3564453125,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left",
+          "side": "right"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left",
+          "side": "right"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 1547,
+          "quiescenceNodes": 1116,
+          "cutoffs": 265,
+          "cacheHits": 58,
+          "cacheStores": 130,
+          "evaluationRequests": 838,
+          "evaluations": 577,
+          "evaluationCacheHits": 261,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 70,
+          "evaluationCachePeak": 577,
+          "pvsResearches": 26,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 365,
+          "timedOut": false,
+          "elapsedMs": 197.8376100000005,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "9d4c2de3b42e4f19b1e90f3e0a26caef309f8cf5c58cb984953e67779f77e52a",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800010,
+        "seed": 4042760331,
+        "first": 0,
+        "ply": 25
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": true,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": true,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 858,
+        "target": 0.837890625,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 3,
+          "direction": "right",
+          "side": "left"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 3,
+          "direction": "right",
+          "side": "left"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 1193,
+          "quiescenceNodes": 822,
+          "cutoffs": 192,
+          "cacheHits": 37,
+          "cacheStores": 131,
+          "evaluationRequests": 808,
+          "evaluations": 632,
+          "evaluationCacheHits": 176,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 78,
+          "evaluationCachePeak": 632,
+          "pvsResearches": 19,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 858,
+          "timedOut": false,
+          "elapsedMs": 152.1585500000001,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "e442b7d0cad348bc02ecdfc7659fa71d400902c92bfbf61b62246b419bb5c0d1",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800012,
+        "seed": 761697261,
+        "first": 0,
+        "ply": 12
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 265,
+        "target": 0.2587890625,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "left"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "left"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 459,
+          "quiescenceNodes": 334,
+          "cutoffs": 62,
+          "cacheHits": 6,
+          "cacheStores": 46,
+          "evaluationRequests": 271,
+          "evaluations": 190,
+          "evaluationCacheHits": 81,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 25,
+          "evaluationCachePeak": 190,
+          "pvsResearches": 13,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 265,
+          "timedOut": false,
+          "elapsedMs": 55.68237600000066,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:09+09:00"
+    },
+    {
+      "id": "e1c1309b54cc5ff34507e9ba432fee52edb1edc81c401890b9616e1261435055",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800029,
+        "seed": 2937432238,
+        "first": 1,
+        "ply": 30
+      },
+      "tags": {
+        "reservedOnly": true,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": true,
+        "ownReserved": true,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 936,
+        "target": 0.9140625,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 0,
+          "direction": "right",
+          "side": "left"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 0,
+          "direction": "right",
+          "side": "left"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 604,
+          "quiescenceNodes": 358,
+          "cutoffs": 120,
+          "cacheHits": 31,
+          "cacheStores": 108,
+          "evaluationRequests": 339,
+          "evaluations": 229,
+          "evaluationCacheHits": 110,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 55,
+          "evaluationCachePeak": 229,
+          "pvsResearches": 14,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 936,
+          "timedOut": false,
+          "elapsedMs": 51.161519999999655,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:07+09:00"
+    },
+    {
+      "id": "94da3bb65804d1e3518bb188cc054a60b230b7cbca09e867c850d4de07a584c3",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800005,
+        "seed": 3655483414,
+        "first": 1,
+        "ply": 37
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": true,
+        "threePlacement": false,
+        "lastOrdinary": true,
+        "nearTransition": true,
+        "ownReserved": true,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 752,
+        "target": 0.734375,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 0,
+          "direction": "right",
+          "side": "left"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 0,
+          "direction": "right",
+          "side": "left"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 382,
+          "quiescenceNodes": 251,
+          "cutoffs": 60,
+          "cacheHits": 15,
+          "cacheStores": 53,
+          "evaluationRequests": 291,
+          "evaluations": 224,
+          "evaluationCacheHits": 67,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 30,
+          "evaluationCachePeak": 224,
+          "pvsResearches": 9,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 752,
+          "timedOut": false,
+          "elapsedMs": 33.30175899999995,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:07+09:00"
+    },
+    {
+      "id": "4c61dd0a65d0462aef072c33e18be6e200d54aab9c9b3bafafad507934e741ee",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800000,
+        "seed": 3268206497,
+        "first": 0,
+        "ply": 22
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": true,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": true,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 321,
+        "target": 0.3134765625,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 569,
+          "quiescenceNodes": 393,
+          "cutoffs": 109,
+          "cacheHits": 6,
+          "cacheStores": 64,
+          "evaluationRequests": 279,
+          "evaluations": 234,
+          "evaluationCacheHits": 45,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 41,
+          "evaluationCachePeak": 234,
+          "pvsResearches": 9,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 321,
+          "timedOut": false,
+          "elapsedMs": 91.99618199999986,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:07+09:00"
+    },
+    {
+      "id": "e90ae62d80407e3782182a0cb64068dec3387ba53535f05ec2c68836a1eccca6",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800000,
+        "seed": 3268206497,
+        "first": 0,
+        "ply": 12
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 205,
+        "target": 0.2001953125,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "side": "right"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "side": "right"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 360,
+          "quiescenceNodes": 229,
+          "cutoffs": 71,
+          "cacheHits": 8,
+          "cacheStores": 47,
+          "evaluationRequests": 213,
+          "evaluations": 146,
+          "evaluationCacheHits": 67,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 27,
+          "evaluationCachePeak": 146,
+          "pvsResearches": 8,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 205,
+          "timedOut": false,
+          "elapsedMs": 36.81904399999985,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:07+09:00"
+    },
+    {
+      "id": "1988a1515fa6f97821998e95a9c40cf56c56e3e2ba7054f4668058c0858ae173",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800000,
+        "seed": 3268206497,
+        "first": 0,
+        "ply": 33
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": false,
+        "mtaji": true,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": -999,
+        "target": -0.9755859375,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "row": 0,
+          "index": 2,
+          "direction": "right",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "row": 0,
+          "index": 2,
+          "direction": "right",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 371,
+          "quiescenceNodes": 211,
+          "cutoffs": 84,
+          "cacheHits": 7,
+          "cacheStores": 64,
+          "evaluationRequests": 180,
+          "evaluations": 120,
+          "evaluationCacheHits": 60,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 32,
+          "evaluationCachePeak": 120,
+          "pvsResearches": 7,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": -999,
+          "timedOut": false,
+          "elapsedMs": 35.22075600000062,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "953f4d1364ae5c8b8b2445ada450bea72f61957cefb0cc7feddae46f3b0e451f",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800001,
+        "seed": 1627674962,
+        "first": 1,
+        "ply": 28
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": false,
+        "mtaji": true,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 505,
+        "target": 0.4931640625,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 385,
+          "quiescenceNodes": 217,
+          "cutoffs": 84,
+          "cacheHits": 18,
+          "cacheStores": 74,
+          "evaluationRequests": 158,
+          "evaluations": 121,
+          "evaluationCacheHits": 37,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 39,
+          "evaluationCachePeak": 121,
+          "pvsResearches": 9,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 505,
+          "timedOut": false,
+          "elapsedMs": 23.985791999999492,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "4b59611e16c09b93e5e0ec6f68f6644dbb423c00d14bcda776fb25c4107fdcb8",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800001,
+        "seed": 1627674962,
+        "first": 1,
+        "ply": 32
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": false,
+        "mtaji": true,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-terminal-line",
+        "rawScore": -999996,
+        "target": -1,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 28,
+          "quiescenceNodes": 12,
+          "cutoffs": 2,
+          "cacheHits": 0,
+          "cacheStores": 10,
+          "evaluationRequests": 6,
+          "evaluations": 6,
+          "evaluationCacheHits": 0,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 4,
+          "evaluationCachePeak": 6,
+          "pvsResearches": 0,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": -999996,
+          "timedOut": false,
+          "elapsedMs": 2.067769000000226,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "f6464890094dc72a9c27ddf550e2060ac0335168c33fbea22a80ce3dfa3dcb8a",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800003,
+        "seed": 2641579188,
+        "first": 1,
+        "ply": 40
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": false,
+        "mtaji": true,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 407,
+        "target": 0.3974609375,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "row": 1,
+          "index": 1,
+          "direction": "right",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "row": 1,
+          "index": 1,
+          "direction": "right",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 25,
+          "quiescenceNodes": 11,
+          "cutoffs": 0,
+          "cacheHits": 0,
+          "cacheStores": 10,
+          "evaluationRequests": 7,
+          "evaluations": 7,
+          "evaluationCacheHits": 0,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 4,
+          "evaluationCachePeak": 7,
+          "pvsResearches": 0,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 407,
+          "timedOut": false,
+          "elapsedMs": 1.2120509999995193,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "6f2789e2632d0052c088e06dc2a1c65b4aec0fce855bd53bd9267a556c54a05b",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800001,
+        "seed": 1627674962,
+        "first": 1,
+        "ply": 12
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": true,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": true,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 372,
+        "target": 0.36328125,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left",
+          "side": "right"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left",
+          "side": "right"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 775,
+          "quiescenceNodes": 560,
+          "cutoffs": 130,
+          "cacheHits": 20,
+          "cacheStores": 73,
+          "evaluationRequests": 414,
+          "evaluations": 289,
+          "evaluationCacheHits": 125,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 38,
+          "evaluationCachePeak": 289,
+          "pvsResearches": 15,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 372,
+          "timedOut": false,
+          "elapsedMs": 91.00716399999965,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "ecff84486ee30134290863e4173e433ee1f3d3517573b01852d44fcaa1a0feca",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800003,
+        "seed": 2641579188,
+        "first": 1,
+        "ply": 25
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 278,
+        "target": 0.271484375,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 46,
+          "quiescenceNodes": 21,
+          "cutoffs": 6,
+          "cacheHits": 1,
+          "cacheStores": 14,
+          "evaluationRequests": 15,
+          "evaluations": 11,
+          "evaluationCacheHits": 4,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 6,
+          "evaluationCachePeak": 11,
+          "pvsResearches": 2,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 278,
+          "timedOut": false,
+          "elapsedMs": 1.724847000000409,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "12d526c73884672de32df68f38e8de578bd315e81071443695f50105ed247683",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800005,
+        "seed": 3655483414,
+        "first": 1,
+        "ply": 12
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": -111,
+        "target": -0.1083984375,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 343,
+          "quiescenceNodes": 191,
+          "cutoffs": 76,
+          "cacheHits": 14,
+          "cacheStores": 56,
+          "evaluationRequests": 212,
+          "evaluations": 127,
+          "evaluationCacheHits": 85,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 31,
+          "evaluationCachePeak": 127,
+          "pvsResearches": 9,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": -111,
+          "timedOut": false,
+          "elapsedMs": 18.205966999999873,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "07a1865265614efced21b3d7b42146877cf5cae46e2e957fd2c322dee2228beb",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800006,
+        "seed": 2014951879,
+        "first": 0,
+        "ply": 25
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": true,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": true,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 119,
+        "target": 0.1162109375,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "left",
+          "side": "right"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "left",
+          "side": "right"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 246,
+          "quiescenceNodes": 148,
+          "cutoffs": 50,
+          "cacheHits": 3,
+          "cacheStores": 40,
+          "evaluationRequests": 96,
+          "evaluations": 72,
+          "evaluationCacheHits": 24,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 24,
+          "evaluationCachePeak": 72,
+          "pvsResearches": 6,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 119,
+          "timedOut": false,
+          "elapsedMs": 19.3124600000001,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "e1f336d9d2aadafe8b71126d23c2dbf42a8370bf678933c131cfa1a80268509b",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800008,
+        "seed": 3028856105,
+        "first": 0,
+        "ply": 12
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": true,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": true,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 438,
+        "target": 0.427734375,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 1558,
+          "quiescenceNodes": 1150,
+          "cutoffs": 261,
+          "cacheHits": 18,
+          "cacheStores": 145,
+          "evaluationRequests": 887,
+          "evaluations": 777,
+          "evaluationCacheHits": 110,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 96,
+          "evaluationCachePeak": 777,
+          "pvsResearches": 15,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 438,
+          "timedOut": false,
+          "elapsedMs": 284.7303750000001,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "077e83e5f39fbeb769e5f04117a20d11166e85b17562d0f9b07cf4008da0597f",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800009,
+        "seed": 1388324570,
+        "first": 1,
+        "ply": 25
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": true,
+        "namua": true,
+        "mtaji": false,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": -736,
+        "target": -0.71875,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "side": "right"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "side": "right"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 572,
+          "quiescenceNodes": 341,
+          "cutoffs": 114,
+          "cacheHits": 25,
+          "cacheStores": 88,
+          "evaluationRequests": 248,
+          "evaluations": 178,
+          "evaluationCacheHits": 70,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 52,
+          "evaluationCachePeak": 178,
+          "pvsResearches": 10,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": -736,
+          "timedOut": false,
+          "elapsedMs": 43.791729999999916,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "1ac9fa4660a64e171562837d88463b7815bcaced3bfe7bbfccfb0cf7554cd0e4",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800010,
+        "seed": 4042760331,
+        "first": 0,
+        "ply": 40
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": false,
+        "mtaji": true,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": -257,
+        "target": -0.2509765625,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 734,
+          "quiescenceNodes": 439,
+          "cutoffs": 172,
+          "cacheHits": 31,
+          "cacheStores": 100,
+          "evaluationRequests": 369,
+          "evaluations": 244,
+          "evaluationCacheHits": 125,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 48,
+          "evaluationCachePeak": 244,
+          "pvsResearches": 14,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": -257,
+          "timedOut": false,
+          "elapsedMs": 81.82905399999981,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "41fc3e637e569f0c32fd605419cec18c6c8e75490dc689395c99f031d1b45473",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800012,
+        "seed": 761697261,
+        "first": 0,
+        "ply": 25
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": true,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": true,
+        "opponentReserved": true,
+        "namua": true,
+        "mtaji": false,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 360,
+        "target": 0.3515625,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 1,
+          "direction": "right",
+          "side": "left"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 1,
+          "direction": "right",
+          "side": "left"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 586,
+          "quiescenceNodes": 405,
+          "cutoffs": 110,
+          "cacheHits": 4,
+          "cacheStores": 69,
+          "evaluationRequests": 293,
+          "evaluations": 256,
+          "evaluationCacheHits": 37,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 46,
+          "evaluationCachePeak": 256,
+          "pvsResearches": 7,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 360,
+          "timedOut": false,
+          "elapsedMs": 64.80496100000073,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "839f95422ec8928132fe7dbebed99d8c041bd8819540fa1b44a14bd9fbb9f4df",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800061,
+        "seed": 1980030670,
+        "first": 1,
+        "ply": 34
+      },
+      "tags": {
+        "reservedOnly": true,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": true,
+        "ownReserved": true,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 836,
+        "target": 0.81640625,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "side": "right"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "side": "right"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 562,
+          "quiescenceNodes": 321,
+          "cutoffs": 127,
+          "cacheHits": 22,
+          "cacheStores": 114,
+          "evaluationRequests": 290,
+          "evaluations": 185,
+          "evaluationCacheHits": 105,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 60,
+          "evaluationCachePeak": 185,
+          "pvsResearches": 14,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 836,
+          "timedOut": false,
+          "elapsedMs": 50.17142899999999,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:10+09:00"
+    },
+    {
+      "id": "a75a4d309ef7c7c11db5d4efa4bd349f71ab9d42a39cc4e0a074400fdb0c4d7f",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800008,
+        "seed": 3028856105,
+        "first": 0,
+        "ply": 27
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": true,
+        "threePlacement": false,
+        "lastOrdinary": true,
+        "nearTransition": true,
+        "ownReserved": true,
+        "opponentReserved": true,
+        "namua": true,
+        "mtaji": false,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": -417,
+        "target": -0.4072265625,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 0,
+          "direction": "right",
+          "side": "left"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 0,
+          "direction": "right",
+          "side": "left"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 468,
+          "quiescenceNodes": 261,
+          "cutoffs": 114,
+          "cacheHits": 20,
+          "cacheStores": 92,
+          "evaluationRequests": 166,
+          "evaluations": 129,
+          "evaluationCacheHits": 37,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 45,
+          "evaluationCachePeak": 129,
+          "pvsResearches": 9,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": -417,
+          "timedOut": false,
+          "elapsedMs": 42.46014699999978,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:10+09:00"
+    },
+    {
+      "id": "cd7dcc431d95550c38e6e025cf12fb64cbdae8caa2a9b7384a6ab6ac1d6062e3",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800000,
+        "seed": 3268206497,
+        "first": 0,
+        "ply": 24
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": true,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": true,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 332,
+        "target": 0.32421875,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "right",
+          "side": "left"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "right",
+          "side": "left"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 390,
+          "quiescenceNodes": 253,
+          "cutoffs": 84,
+          "cacheHits": 0,
+          "cacheStores": 54,
+          "evaluationRequests": 169,
+          "evaluations": 161,
+          "evaluationCacheHits": 8,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 37,
+          "evaluationCachePeak": 161,
+          "pvsResearches": 2,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 332,
+          "timedOut": false,
+          "elapsedMs": 60.71416700000009,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:10+09:00"
+    },
+    {
+      "id": "fbdfceebff18ef95b81ae84f61f6c1365735d0dabdd3ed92e88bbb3eb8e5decd",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800000,
+        "seed": 3268206497,
+        "first": 0,
+        "ply": 13
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 136,
+        "target": 0.1328125,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 543,
+          "quiescenceNodes": 353,
+          "cutoffs": 105,
+          "cacheHits": 11,
+          "cacheStores": 75,
+          "evaluationRequests": 339,
+          "evaluations": 240,
+          "evaluationCacheHits": 99,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 44,
+          "evaluationCachePeak": 240,
+          "pvsResearches": 9,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 136,
+          "timedOut": false,
+          "elapsedMs": 67.66859399999976,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:10+09:00"
+    },
+    {
+      "id": "d2a0566d92a003177456b733e976d3006b170acdded829b20b530e887de104fa",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800000,
+        "seed": 3268206497,
+        "first": 0,
+        "ply": 34
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": false,
+        "mtaji": true,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-terminal-line",
+        "rawScore": 999999,
+        "target": 1,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "row": 1,
+          "index": 2,
+          "direction": "right",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "row": 1,
+          "index": 2,
+          "direction": "right",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 270,
+          "quiescenceNodes": 171,
+          "cutoffs": 50,
+          "cacheHits": 0,
+          "cacheStores": 45,
+          "evaluationRequests": 151,
+          "evaluations": 142,
+          "evaluationCacheHits": 9,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 30,
+          "evaluationCachePeak": 142,
+          "pvsResearches": 0,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 999999,
+          "timedOut": false,
+          "elapsedMs": 24.138906000000134,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:10+09:00"
+    },
+    {
+      "id": "bbb6f4f8e41373e6e4af6b4627ee25aa6c18d5896c00e88ca282fbb6661a3ec2",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800001,
+        "seed": 1627674962,
+        "first": 1,
+        "ply": 29
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": false,
+        "mtaji": true,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 190,
+        "target": 0.185546875,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "row": 0,
+          "index": 3,
+          "direction": "left",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "row": 0,
+          "index": 3,
+          "direction": "left",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 282,
+          "quiescenceNodes": 152,
+          "cutoffs": 64,
+          "cacheHits": 11,
+          "cacheStores": 58,
+          "evaluationRequests": 128,
+          "evaluations": 90,
+          "evaluationCacheHits": 38,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 30,
+          "evaluationCachePeak": 90,
+          "pvsResearches": 8,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 190,
+          "timedOut": false,
+          "elapsedMs": 20.44575799999984,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:10+09:00"
+    },
+    {
+      "id": "cd4a7a80141b064cc177341503bc2f381c635c4373290c91895718050dffc466",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800001,
+        "seed": 1627674962,
+        "first": 1,
+        "ply": 33
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": false,
+        "mtaji": true,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-terminal-line",
+        "rawScore": 999997,
+        "target": 1,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "row": 0,
+          "index": 2,
+          "direction": "right",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "row": 0,
+          "index": 2,
+          "direction": "right",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 36,
+          "quiescenceNodes": 17,
+          "cutoffs": 4,
+          "cacheHits": 0,
+          "cacheStores": 11,
+          "evaluationRequests": 10,
+          "evaluations": 10,
+          "evaluationCacheHits": 0,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 5,
+          "evaluationCachePeak": 10,
+          "pvsResearches": 0,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 999997,
+          "timedOut": false,
+          "elapsedMs": 4.069212000000334,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:10+09:00"
+    },
+    {
+      "id": "e8a2285f31dba5e1c3037d091d3127a5d736797726a23741add430b99bdb414f",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800003,
+        "seed": 2641579188,
+        "first": 1,
+        "ply": 41
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": false,
+        "mtaji": true,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 145,
+        "target": 0.1416015625,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "row": 0,
+          "index": 0,
+          "direction": "right",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "row": 0,
+          "index": 0,
+          "direction": "right",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 36,
+          "quiescenceNodes": 19,
+          "cutoffs": 3,
+          "cacheHits": 0,
+          "cacheStores": 10,
+          "evaluationRequests": 12,
+          "evaluations": 12,
+          "evaluationCacheHits": 0,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 4,
+          "evaluationCachePeak": 12,
+          "pvsResearches": 0,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 145,
+          "timedOut": false,
+          "elapsedMs": 2.3726239999996324,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:10+09:00"
+    },
+    {
+      "id": "22b8a4827e214ffbaea4ef0ec9079c95eebc4d2997d312017b9d0eb5413dd501",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800001,
+        "seed": 1627674962,
+        "first": 1,
+        "ply": 25
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": true,
+        "lastOrdinary": false,
+        "nearTransition": true,
+        "ownReserved": true,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 135,
+        "target": 0.1318359375,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "side": "right"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "side": "right"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 359,
+          "quiescenceNodes": 176,
+          "cutoffs": 102,
+          "cacheHits": 10,
+          "cacheStores": 94,
+          "evaluationRequests": 129,
+          "evaluations": 106,
+          "evaluationCacheHits": 23,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 49,
+          "evaluationCachePeak": 106,
+          "pvsResearches": 6,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 135,
+          "timedOut": false,
+          "elapsedMs": 29.63269599999967,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:10+09:00"
+    },
+    {
+      "id": "6efd39d73deff2a45760d01ee887bb67b96e2498ca16ba309a26335ab659c9b4",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800004,
+        "seed": 1001047653,
+        "first": 0,
+        "ply": 12
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 263,
+        "target": 0.2568359375,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 1000,
+          "quiescenceNodes": 685,
+          "cutoffs": 215,
+          "cacheHits": 30,
+          "cacheStores": 95,
+          "evaluationRequests": 466,
+          "evaluations": 360,
+          "evaluationCacheHits": 106,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 49,
+          "evaluationCachePeak": 360,
+          "pvsResearches": 12,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 263,
+          "timedOut": false,
+          "elapsedMs": 122.14728999999988,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:10+09:00"
+    },
+    {
+      "id": "489191fbc7221ccd14c0d3d5c3c4d41a7974a45810a3a825925467f28f7fa972",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800005,
+        "seed": 3655483414,
+        "first": 1,
+        "ply": 25
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 384,
+        "target": 0.375,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 148,
+          "quiescenceNodes": 87,
+          "cutoffs": 21,
+          "cacheHits": 4,
+          "cacheStores": 25,
+          "evaluationRequests": 81,
+          "evaluations": 56,
+          "evaluationCacheHits": 25,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 12,
+          "evaluationCachePeak": 56,
+          "pvsResearches": 7,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 384,
+          "timedOut": false,
+          "elapsedMs": 10.59240200000022,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:10+09:00"
+    },
+    {
+      "id": "70aeee30eb2edfb9f4db32164b0e131c4d7b9ae1f80fb7d2cd1a1068087e65a1",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800007,
+        "seed": 374420344,
+        "first": 1,
+        "ply": 12
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 390,
+        "target": 0.380859375,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right",
+          "side": "left"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right",
+          "side": "left"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 1407,
+          "quiescenceNodes": 1001,
+          "cutoffs": 254,
+          "cacheHits": 33,
+          "cacheStores": 146,
+          "evaluationRequests": 739,
+          "evaluations": 622,
+          "evaluationCacheHits": 117,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 85,
+          "evaluationCachePeak": 622,
+          "pvsResearches": 22,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 390,
+          "timedOut": false,
+          "elapsedMs": 192.94616700000006,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:10+09:00"
+    },
+    {
+      "id": "669424481e12ec35257812642bec1f14582f827b737ec9073c30267f6db77b3b",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800008,
+        "seed": 3028856105,
+        "first": 0,
+        "ply": 25
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 155,
+        "target": 0.1513671875,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "side": "right"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "side": "right"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 372,
+          "quiescenceNodes": 205,
+          "cutoffs": 90,
+          "cacheHits": 10,
+          "cacheStores": 74,
+          "evaluationRequests": 149,
+          "evaluations": 122,
+          "evaluationCacheHits": 27,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 44,
+          "evaluationCachePeak": 122,
+          "pvsResearches": 5,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 155,
+          "timedOut": false,
+          "elapsedMs": 31.967039000000113,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:10+09:00"
+    },
+    {
+      "id": "2219dd7f330e1f7eeed58de74d97cd8e2b17eceaa7b76cb4c484f2ddf74a00d1",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800009,
+        "seed": 1388324570,
+        "first": 1,
+        "ply": 40
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": false,
+        "mtaji": true,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 975,
+        "target": 0.9521484375,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "row": 0,
+          "index": 2,
+          "direction": "left",
+          "type": "takata",
+          "phase": "mtaji"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "row": 0,
+          "index": 2,
+          "direction": "left",
+          "type": "takata",
+          "phase": "mtaji"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 495,
+          "quiescenceNodes": 313,
+          "cutoffs": 104,
+          "cacheHits": 7,
+          "cacheStores": 70,
+          "evaluationRequests": 371,
+          "evaluations": 268,
+          "evaluationCacheHits": 103,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 45,
+          "evaluationCachePeak": 268,
+          "pvsResearches": 4,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 975,
+          "timedOut": false,
+          "elapsedMs": 37.77764300000035,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:10+09:00"
+    },
+    {
+      "id": "26c1e0e5e2d5f4701dd248c8e6a3a16d728e59ce27f38e7d6665b2866427be14",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800011,
+        "seed": 2402228796,
+        "first": 1,
+        "ply": 12
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": true,
+        "namua": true,
+        "mtaji": false,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 328,
+        "target": 0.3203125,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 1,
+          "direction": "right",
+          "side": "left"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 1,
+          "direction": "right",
+          "side": "left"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 799,
+          "quiescenceNodes": 566,
+          "cutoffs": 145,
+          "cacheHits": 9,
+          "cacheStores": 81,
+          "evaluationRequests": 414,
+          "evaluations": 348,
+          "evaluationCacheHits": 66,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 50,
+          "evaluationCachePeak": 348,
+          "pvsResearches": 12,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 328,
+          "timedOut": false,
+          "elapsedMs": 124.61794800000007,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:11+09:00"
+    },
+    {
+      "id": "d6535ce96a793efdb8c5e7fa91d186ed91eeeee65f85bd7e51cac2daf5ec4e15",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800013,
+        "seed": 3416133022,
+        "first": 1,
+        "ply": 12
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": -67,
+        "target": -0.0654296875,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 0,
+          "direction": "left"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 0,
+          "direction": "left"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 223,
+          "quiescenceNodes": 118,
+          "cutoffs": 46,
+          "cacheHits": 13,
+          "cacheStores": 46,
+          "evaluationRequests": 166,
+          "evaluations": 85,
+          "evaluationCacheHits": 81,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 22,
+          "evaluationCachePeak": 85,
+          "pvsResearches": 7,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": -67,
+          "timedOut": false,
+          "elapsedMs": 10.003187000000253,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:11+09:00"
+    },
+    {
+      "id": "c25f85e6102bac1795fb8a680cf5320ef3fd5476a90e765f091965011b815506",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800065,
+        "seed": 4007839122,
+        "first": 1,
+        "ply": 24
+      },
+      "tags": {
+        "reservedOnly": true,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": true,
+        "ownReserved": true,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-terminal-line",
+        "rawScore": 999999,
+        "target": 1,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left",
+          "side": "right"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left",
+          "side": "right"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 469,
+          "quiescenceNodes": 313,
+          "cutoffs": 87,
+          "cacheHits": 0,
+          "cacheStores": 72,
+          "evaluationRequests": 282,
+          "evaluations": 261,
+          "evaluationCacheHits": 21,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 48,
+          "evaluationCachePeak": 261,
+          "pvsResearches": 0,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 999999,
+          "timedOut": false,
+          "elapsedMs": 61.52505100000053,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:07+09:00"
+    },
+    {
+      "id": "1f6cc85115eefff171dd478f2e4af42baf8644a738e095af28bd8e93c2c81e20",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800013,
+        "seed": 3416133022,
+        "first": 1,
+        "ply": 36
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": true,
+        "threePlacement": false,
+        "lastOrdinary": true,
+        "nearTransition": true,
+        "ownReserved": true,
+        "opponentReserved": true,
+        "namua": true,
+        "mtaji": false,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-terminal-line",
+        "rawScore": 999995,
+        "target": 1,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "left",
+          "side": "right"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "left",
+          "side": "right"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 101,
+          "quiescenceNodes": 54,
+          "cutoffs": 19,
+          "cacheHits": 1,
+          "cacheStores": 26,
+          "evaluationRequests": 32,
+          "evaluations": 28,
+          "evaluationCacheHits": 4,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 13,
+          "evaluationCachePeak": 28,
+          "pvsResearches": 2,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 999995,
+          "timedOut": false,
+          "elapsedMs": 7.357371000000057,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:07+09:00"
+    },
+    {
+      "id": "4694398ef49b18b06fb9a5c6d9f18d3e9f398c635d77e4856e4997b7cf796f01",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800000,
+        "seed": 3268206497,
+        "first": 0,
+        "ply": 28
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": true,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": true,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-terminal-line",
+        "rawScore": 999999,
+        "target": 1,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 3,
+          "direction": "right",
+          "side": "left"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 3,
+          "direction": "right",
+          "side": "left"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 130,
+          "quiescenceNodes": 75,
+          "cutoffs": 30,
+          "cacheHits": 0,
+          "cacheStores": 25,
+          "evaluationRequests": 52,
+          "evaluations": 51,
+          "evaluationCacheHits": 1,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 16,
+          "evaluationCachePeak": 51,
+          "pvsResearches": 0,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 999999,
+          "timedOut": false,
+          "elapsedMs": 18.687802000000374,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:07+09:00"
+    },
+    {
+      "id": "095b3f138a8df631353890ae0c8177180113780fed098738449524509e41d0cb",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800000,
+        "seed": 3268206497,
+        "first": 0,
+        "ply": 14
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 325,
+        "target": 0.3173828125,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 409,
+          "quiescenceNodes": 263,
+          "cutoffs": 85,
+          "cacheHits": 4,
+          "cacheStores": 59,
+          "evaluationRequests": 220,
+          "evaluations": 185,
+          "evaluationCacheHits": 35,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 37,
+          "evaluationCachePeak": 185,
+          "pvsResearches": 4,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 325,
+          "timedOut": false,
+          "elapsedMs": 68.85424899999998,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:07+09:00"
+    },
+    {
+      "id": "fabe4302ea3571589de712b21b769187903fdd7aaec664ebc96203647b3466c8",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800001,
+        "seed": 1627674962,
+        "first": 1,
+        "ply": 26
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": false,
+        "mtaji": true,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 971,
+        "target": 0.9482421875,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "row": 0,
+          "index": 1,
+          "direction": "right",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "row": 0,
+          "index": 1,
+          "direction": "right",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 332,
+          "quiescenceNodes": 190,
+          "cutoffs": 74,
+          "cacheHits": 7,
+          "cacheStores": 67,
+          "evaluationRequests": 145,
+          "evaluations": 123,
+          "evaluationCacheHits": 22,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 38,
+          "evaluationCachePeak": 123,
+          "pvsResearches": 5,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 971,
+          "timedOut": false,
+          "elapsedMs": 30.868273000000045,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:07+09:00"
+    },
+    {
+      "id": "9b0cad2c0981ede82144253aae1440c106bf11c0caac684b66ca6e7b300b970a",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800001,
+        "seed": 1627674962,
+        "first": 1,
+        "ply": 30
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": false,
+        "mtaji": true,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 652,
+        "target": 0.63671875,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "row": 0,
+          "index": 2,
+          "direction": "right",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "row": 0,
+          "index": 2,
+          "direction": "right",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 104,
+          "quiescenceNodes": 52,
+          "cutoffs": 21,
+          "cacheHits": 0,
+          "cacheStores": 28,
+          "evaluationRequests": 38,
+          "evaluations": 30,
+          "evaluationCacheHits": 8,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 15,
+          "evaluationCachePeak": 30,
+          "pvsResearches": 2,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 652,
+          "timedOut": false,
+          "elapsedMs": 6.6677609999997,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:07+09:00"
+    },
+    {
+      "id": "4e3d37b6e95dcc6169f4cf21f9fa5e735ae6fbc5d59fd9dda3b3a5b28b21ab0b",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800001,
+        "seed": 1627674962,
+        "first": 1,
+        "ply": 34
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": false,
+        "mtaji": true,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-terminal-line",
+        "rawScore": -999998,
+        "target": -1,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "row": 1,
+          "index": 3,
+          "direction": "left",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "row": 1,
+          "index": 3,
+          "direction": "left",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 50,
+          "quiescenceNodes": 24,
+          "cutoffs": 10,
+          "cacheHits": 0,
+          "cacheStores": 13,
+          "evaluationRequests": 14,
+          "evaluations": 13,
+          "evaluationCacheHits": 1,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 6,
+          "evaluationCachePeak": 13,
+          "pvsResearches": 0,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": -999998,
+          "timedOut": false,
+          "elapsedMs": 3.145564000000377,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:07+09:00"
+    },
+    {
+      "id": "1e0420b4a6775883fabeb1ec34f7b0485f5dff93c2da5398af7929b541448f1e",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800003,
+        "seed": 2641579188,
+        "first": 1,
+        "ply": 42
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": false,
+        "mtaji": true,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 375,
+        "target": 0.3662109375,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "row": 1,
+          "index": 5,
+          "direction": "left",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "row": 1,
+          "index": 5,
+          "direction": "left",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 65,
+          "quiescenceNodes": 39,
+          "cutoffs": 9,
+          "cacheHits": 0,
+          "cacheStores": 13,
+          "evaluationRequests": 26,
+          "evaluations": 26,
+          "evaluationCacheHits": 0,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 7,
+          "evaluationCachePeak": 26,
+          "pvsResearches": 0,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 375,
+          "timedOut": false,
+          "elapsedMs": 5.329757999999856,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:07+09:00"
+    },
+    {
+      "id": "dd4c948e2f4a215f67dbafe38d3703d876c636c85b0dc387b7101168b44d5202",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800002,
+        "seed": 4282110723,
+        "first": 0,
+        "ply": 12
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 414,
+        "target": 0.404296875,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 1,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "use"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 1,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "use"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 678,
+          "quiescenceNodes": 454,
+          "cutoffs": 119,
+          "cacheHits": 24,
+          "cacheStores": 88,
+          "evaluationRequests": 334,
+          "evaluations": 256,
+          "evaluationCacheHits": 78,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 47,
+          "evaluationCachePeak": 256,
+          "pvsResearches": 15,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 414,
+          "timedOut": false,
+          "elapsedMs": 91.12270800000078,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:07+09:00"
+    },
+    {
+      "id": "3943d3db041a1a2869476d2394b8b032e2d848d0a426c8a4567979ed18362eaf",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800004,
+        "seed": 1001047653,
+        "first": 0,
+        "ply": 25
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 370,
+        "target": 0.361328125,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right",
+          "side": "left"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right",
+          "side": "left"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 906,
+          "quiescenceNodes": 621,
+          "cutoffs": 180,
+          "cacheHits": 13,
+          "cacheStores": 106,
+          "evaluationRequests": 446,
+          "evaluations": 411,
+          "evaluationCacheHits": 35,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 72,
+          "evaluationCachePeak": 411,
+          "pvsResearches": 7,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 370,
+          "timedOut": false,
+          "elapsedMs": 141.93437300000005,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:07+09:00"
+    },
+    {
+      "id": "4e71e90349e61778f9c4d079862bd8dabad8a674d44723e1ca9835303673b999",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800005,
+        "seed": 3655483414,
+        "first": 1,
+        "ply": 40
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": false,
+        "mtaji": true,
+        "north": true,
+        "south": false
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 686,
+        "target": 0.669921875,
+        "perspective": 1,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "row": 1,
+          "index": 2,
+          "direction": "right",
+          "type": "takata",
+          "phase": "mtaji"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "row": 1,
+          "index": 2,
+          "direction": "right",
+          "type": "takata",
+          "phase": "mtaji"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 284,
+          "quiescenceNodes": 138,
+          "cutoffs": 82,
+          "cacheHits": 0,
+          "cacheStores": 67,
+          "evaluationRequests": 171,
+          "evaluations": 120,
+          "evaluationCacheHits": 51,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 46,
+          "evaluationCachePeak": 120,
+          "pvsResearches": 1,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 686,
+          "timedOut": false,
+          "elapsedMs": 20.25069600000006,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:07+09:00"
+    },
+    {
+      "id": "430e49e9a495ad3cf2f28555d722a234991e7c052b85b32cc2b3143305066a76",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800007,
+        "seed": 374420344,
+        "first": 1,
+        "ply": 25
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": true,
+        "namua": true,
+        "mtaji": false,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 90,
+        "target": 0.087890625,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "left",
+          "side": "right"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "left",
+          "side": "right"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 1758,
+          "quiescenceNodes": 1201,
+          "cutoffs": 386,
+          "cacheHits": 33,
+          "cacheStores": 170,
+          "evaluationRequests": 835,
+          "evaluations": 669,
+          "evaluationCacheHits": 166,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 108,
+          "evaluationCachePeak": 669,
+          "pvsResearches": 19,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 90,
+          "timedOut": false,
+          "elapsedMs": 240.03715499999998,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:07+09:00"
+    },
+    {
+      "id": "9c49496e6f535b657c23dd11a680ea0359cccf07af7fc76bc31c82c74e10293a",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800008,
+        "seed": 3028856105,
+        "first": 0,
+        "ply": 40
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": false,
+        "mtaji": true,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-terminal-line",
+        "rawScore": 999997,
+        "target": 1,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "row": 1,
+          "index": 6,
+          "direction": "left",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "row": 1,
+          "index": 6,
+          "direction": "left",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 177,
+          "quiescenceNodes": 107,
+          "cutoffs": 34,
+          "cacheHits": 2,
+          "cacheStores": 34,
+          "evaluationRequests": 77,
+          "evaluations": 73,
+          "evaluationCacheHits": 4,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 20,
+          "evaluationCachePeak": 73,
+          "pvsResearches": 2,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 999997,
+          "timedOut": false,
+          "elapsedMs": 13.854412000000593,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:07+09:00"
+    },
+    {
+      "id": "41690068618230877031d8524aadcb090837c5d776dfc941a13a8cd73940ec89",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800010,
+        "seed": 4042760331,
+        "first": 0,
+        "ply": 12
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": true,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": true,
+        "opponentReserved": true,
+        "namua": true,
+        "mtaji": false,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 186,
+        "target": 0.181640625,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 0,
+          "direction": "right",
+          "side": "left"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 0,
+          "direction": "right",
+          "side": "left"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 461,
+          "quiescenceNodes": 331,
+          "cutoffs": 73,
+          "cacheHits": 8,
+          "cacheStores": 44,
+          "evaluationRequests": 247,
+          "evaluations": 187,
+          "evaluationCacheHits": 60,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 24,
+          "evaluationCachePeak": 187,
+          "pvsResearches": 9,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 186,
+          "timedOut": false,
+          "elapsedMs": 83.67954700000064,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:07+09:00"
+    },
+    {
+      "id": "1a27458dff08a7b0de8d9d372b55ffddf0cad769560d3f10994842c21611ce99",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800011,
+        "seed": 2402228796,
+        "first": 1,
+        "ply": 25
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": true,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": true,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 889,
+        "target": 0.8681640625,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 3,
+          "direction": "right",
+          "side": "left"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 3,
+          "direction": "right",
+          "side": "left"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 512,
+          "quiescenceNodes": 329,
+          "cutoffs": 112,
+          "cacheHits": 1,
+          "cacheStores": 78,
+          "evaluationRequests": 232,
+          "evaluations": 229,
+          "evaluationCacheHits": 3,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 53,
+          "evaluationCachePeak": 229,
+          "pvsResearches": 1,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 889,
+          "timedOut": false,
+          "elapsedMs": 81.48589300000003,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    },
+    {
+      "id": "0ba9d817e8a1fb5e2b67bb37c7958b0a6ef583ded09152df2ae2e179d0c39716",
+      "origin": {
+        "policy": "random",
+        "seedIndex": 800013,
+        "seed": 3416133022,
+        "first": 1,
+        "ply": 25
+      },
+      "tags": {
+        "reservedOnly": false,
+        "twoPlacement": false,
+        "threePlacement": false,
+        "lastOrdinary": false,
+        "nearTransition": false,
+        "ownReserved": false,
+        "opponentReserved": false,
+        "namua": true,
+        "mtaji": false,
+        "north": false,
+        "south": true
+      },
+      "label": {
+        "accepted": true,
+        "kind": "finite-depth-heuristic",
+        "rawScore": 396,
+        "target": 0.38671875,
+        "perspective": 0,
+        "completedDepth": 4,
+        "quiescenceDepth": 1,
+        "safetyStops": 0,
+        "timedOut": false,
+        "scoreMeaning": "completed-depth-heuristic",
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "right",
+          "side": "left"
+        },
+        "searchId": "NAKAKAMADO-SEARCH-v1",
+        "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1"
+      },
+      "result": {
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "right",
+          "side": "left"
+        },
+        "stats": {
+          "searchId": "NAKAKAMADO-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+          "nodes": 1324,
+          "quiescenceNodes": 912,
+          "cutoffs": 262,
+          "cacheHits": 40,
+          "cacheStores": 138,
+          "evaluationRequests": 653,
+          "evaluations": 511,
+          "evaluationCacheHits": 142,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 82,
+          "evaluationCachePeak": 511,
+          "pvsResearches": 14,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 396,
+          "timedOut": false,
+          "elapsedMs": 170.0064650000004,
+          "allocatedTimeMs": 5000
+        },
+        "outcome": "ongoing",
+        "scoreMeaning": "completed-depth-heuristic"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "logicalCPUs": 4,
+        "pythonEncodingVersion": "not-used-in-real-clock-measurement"
+      },
+      "observedAtJST": "2026-10-04 22:53:08+09:00"
+    }
+  ]
+}

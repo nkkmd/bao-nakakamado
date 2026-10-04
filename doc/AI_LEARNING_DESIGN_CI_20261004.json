@@ -1,0 +1,145 @@
+{
+  "dateJST": "2026-10-04",
+  "scope": "pipeline-pilot-not-training-not-strength-not-formal-holdout",
+  "run": {
+    "id": 37203564825,
+    "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/37203564825",
+    "attempt": 1,
+    "event": "pull_request",
+    "headSha": "0aee862f69090fd73634624fa2ebaae8dd48f940",
+    "testedMergeSha": "12f131a58cfcb4defa959b4ec4fed78faac67045",
+    "baseSha": "c99f13537c3dbb0275a1c3e9888e882b0a3e134d",
+    "jobId": 111439990737,
+    "conclusion": "success",
+    "completedAtJST": "2026-10-04T21:53:02+09:00"
+  },
+  "environment": {
+    "node": "24.21.0",
+    "python": "not-recorded-in-CI-log",
+    "browser": "151.0.7922.34",
+    "playwright": "1.62.1",
+    "runner": "ubuntu-latest"
+  },
+  "tests": {
+    "total": 61,
+    "passed": 61,
+    "failed": 0
+  },
+  "pilot": {
+    "status": "PASS",
+    "designId": "NAKAKAMADO-LEARNING-DESIGN-20261004-v1",
+    "scope": "pipeline-pilot-not-training-not-strength-not-formal-holdout",
+    "encodingId": "NAKAKAMADO-BINARY-v1",
+    "inputSize": 368,
+    "fingerprint": "636d2faf5ad014cd6465450910210f9fc2a97ee016ce8e6668ca0792d246d4d0",
+    "sourceHashes": {
+      "prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+      "prototype/steal.js": "a1886cdc5b3b9f8a69eb1955e8990deca809d6dc786491afd23f669a77be7ad2",
+      "prototype/search-transition.js": "d65551b35ea22cf05cbc6981e06268c57755c8a870938117c3efca9c7478fcb3",
+      "prototype/search-ai.js": "d74569196382b0aea1bbf251454788b009d9962d249232a32c2e4c13f190dc65",
+      "prototype/search-evaluator.js": "e5240b37da230a9f2927fec6c70334affb491f68001f4001df14d5af60fc0196",
+      "tools/nyakua-three/core.cjs": "6b5d7658f80fe2b5611d82b23f91863e58964991f40477ab91f07c6f82581f93",
+      "tools/nyakua-three/engine.cjs": "20fa3bb06b28b990e83cb6128f7734d6692aa18da1a3fc823584e559b76eee6e",
+      "prototype/bulk-engine.js": "23df9b5c45fe3f7ab117c676e06d9d5a32605ae810ac0d3cd909b025c07fe657",
+      "tools/ai-integration/learning-input.cjs": "bb9b570e323b71565ac1768f9995958a2ab85bc364dc853db74670894065970d",
+      "tools/ai-integration/learning_input.py": "4f2fcdc5a2421ddd4af84afc2f0e3a17fd94a6e06b4f6d85cca010403d845c82",
+      "tools/ai-integration/learning-pipeline.cjs": "0503385068892f9d05e71a36ab793db5e6414dbb2eaf54cb58deb4fae0c1f06e",
+      "tools/ai-integration/learning-pipeline.test.cjs": "f28e08cec22f415b353ae2ce8eb224c1ef3664d35366fda3bb1fc9de69c038d9",
+      "tools/ai-integration/verify-learning-pilot.cjs": "81c9f760ea9790e110440b315d992e1d0eb5cfb8f94bb49c3103564745f3e0c6",
+      "tools/ai-integration/learning-spec.json": "925950ff3ab73f062c2a88782524908b738b6200461b116df7135bf6637ddcf1"
+    },
+    "units": 96,
+    "groups": 63,
+    "candidateRows": 329,
+    "retainedRows": 241,
+    "splitCounts": {
+      "train": 141,
+      "validation": 46,
+      "final": 54
+    },
+    "quarantinedCopies": 0,
+    "crossSplitCollisionKeys": 0,
+    "withinSplitDuplicates": 88,
+    "postAuditCrossSplitLeaks": 0,
+    "coverage": {
+      "namua": 135,
+      "mtaji": 106,
+      "north": 124,
+      "south": 117,
+      "ownReserved": 43,
+      "opponentReserved": 40,
+      "threePlacement": 39,
+      "twoPlacement": 4,
+      "reservedOnly": 0,
+      "lastOrdinary": 11,
+      "nearTransition": 17
+    },
+    "labelKinds": {
+      "finite-depth-heuristic": 144,
+      "finite-depth-terminal-line": 97
+    },
+    "saturatedLabels": 100,
+    "rejected": {
+      "non-ongoing": 3
+    },
+    "cutoffs": {
+      "normal-terminal": 96
+    },
+    "traceSha256": "827e8826536f571ac8cb899c470c9874c1fb819609b560451a76ebddfea8584a",
+    "checkpointReuse": {
+      "generated": 96,
+      "reused": 0
+    },
+    "pythonNodeEncodingComparisons": 482,
+    "resumeVerification": {
+      "partial": {
+        "generated": 1,
+        "reused": 95
+      },
+      "complete": {
+        "generated": 0,
+        "reused": 96
+      },
+      "traceMatches": true
+    },
+    "missingReachableCoverage": [
+      "reservedOnly"
+    ]
+  },
+  "existingChecks": {
+    "searchComparisons": 1926,
+    "searchTraceSha256": "bf4270faa12c81ad0e1f20530cc343f14aed4bdd1d63bfcbe27f92635879b402",
+    "transitions": 24887,
+    "transitionTraceSha256": "7fc8c90978be16b090b62438420880029a6266bde4d3dc31b84b8f44b4c3d6de",
+    "mainGames": 400,
+    "browser": {
+      "plies": 64,
+      "transitionChecks": 272,
+      "nyakuaChecks": 26,
+      "searchPositions": 2,
+      "searchDepth": 3,
+      "nodeBrowserMatch": true,
+      "replay": true,
+      "computerAndReset": true,
+      "safetyStopAndReplay": true,
+      "widths": [
+        320,
+        390,
+        432
+      ],
+      "pageErrors": []
+    }
+  },
+  "artifact": {
+    "id": 11304125822,
+    "name": "next-turn-prototype-verification",
+    "digest": "sha256:6fc86ca76ba3ca5b14ff995d4523eda11b230d765bad601910a0202a4a4a7c9e",
+    "expiresAtUTC": "2026-11-03T12:52:59Z"
+  },
+  "limitations": [
+    "Pilot final was inspected and cannot be reused as a formal holdout.",
+    "No reachable reserved-only row in this pilot; artificial input tests are separate.",
+    "No formal dataset generation, training, strength validation or AI adoption.",
+    "Source proof applies to the tested implementation commit; follow-up CI evidence and design notes do not alter the pipeline."
+  ]
+}

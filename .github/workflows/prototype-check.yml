@@ -6,11 +6,48 @@ on:
       - 'tools/four-row-*'
       - 'tools/next-turn-*'
       - 'tools/nyakua-three/**'
+      - 'tools/fixed-pit-*'
+      - 'tools/ai-integration/**'
+      - '.github/workflows/prototype-check.yml'
+  pull_request:
+    paths:
+      - 'prototype/**'
+      - 'tools/four-row-*'
+      - 'tools/next-turn-*'
+      - 'tools/nyakua-three/**'
+      - 'tools/fixed-pit-*'
+      - 'tools/ai-integration/**'
       - '.github/workflows/prototype-check.yml'
   workflow_dispatch:
 permissions:
   contents: read
+  actions: read
 jobs:
+  formal-selection-v2-preflight:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Audit the frozen v2 candidate universe without teacher requests
+        run: node tools/ai-integration/verify-formal-selection-v2.cjs "$RUNNER_TEMP/formal-selection-v2-preflight.json"
+      - name: Require all candidate minima before allowing the next collection stage
+        run: |
+          node - <<'JS'
+          const fs=require('node:fs'),assert=require('node:assert/strict');
+          const report=JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP+'/formal-selection-v2-preflight.json','utf8'));
+          assert.equal(report.status,'CANDIDATES-SUFFICIENT-FOR-TEACHER');
+          assert.equal(report.teacherRequestsExecuted,0);
+          JS
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: formal-selection-v2-preflight
+          path: ${{ runner.temp }}/formal-selection-v2-preflight.json
+          retention-days: 30
   prototype:
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -20,7 +57,47 @@ jobs:
         with:
           node-version: '24'
       - name: Rule and DOM tests
-        run: node --test prototype/next-turn.test.cjs prototype/four-row.test.cjs prototype/app.test.cjs prototype/bounce.test.cjs prototype/steal.test.js tools/fixed-pit-bulk-study.test.cjs tools/fixed-pit-triggered-study.test.cjs
+        run: node --test tools/ai-integration/formal-selection-v2.test.cjs tools/ai-integration/formal-collection.test.cjs tools/ai-integration/teacher-feasibility.test.cjs tools/ai-integration/learning-pipeline.test.cjs prototype/search-ai.test.cjs prototype/search-transition.test.cjs prototype/next-turn.test.cjs prototype/four-row.test.cjs prototype/app.test.cjs prototype/bounce.test.cjs prototype/steal.test.js tools/fixed-pit-bulk-study.test.cjs tools/fixed-pit-triggered-study.test.cjs
+      - name: Learning input, split and checkpoint pilot
+        run: node tools/ai-integration/verify-learning-pilot.cjs "$RUNNER_TEMP/learning-pilot"
+      - name: Formal infrastructure development pilot
+        env:
+          BAO_COLLECTION_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: node tools/ai-integration/verify-formal-infrastructure.cjs "$RUNNER_TEMP/formal-infrastructure"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: formal-dev-plan
+          path: ${{ runner.temp }}/formal-infrastructure/plan.sealed.json
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: formal-dev-shard-0
+          path: ${{ runner.temp }}/formal-infrastructure/shard-0/*.json
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: formal-dev-shard-1
+          path: ${{ runner.temp }}/formal-infrastructure/shard-1/*.json
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: formal-dev-shard-2
+          path: ${{ runner.temp }}/formal-infrastructure/shard-2/*.json
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: formal-dev-shard-3
+          path: ${{ runner.temp }}/formal-infrastructure/shard-3/*.json
+          retention-days: 30
+      - name: Search and exhaustive minimax equivalence
+        run: node tools/ai-integration/verify-search.cjs "$RUNNER_TEMP/search-verification.json"
+      - name: NYAKUA search transition equivalence
+        run: node tools/ai-integration/verify-transitions.cjs 32 "$RUNNER_TEMP/transition-verification.json"
       - name: Reachable games and replay consistency
         run: node tools/next-turn-live-check.cjs 100 "$RUNNER_TEMP/next-turn-live-results.json"
       - name: Install pinned browser test dependencies
@@ -38,5 +115,76 @@ jobs:
           name: next-turn-prototype-verification
           path: |
             ${{ runner.temp }}/next-turn-live-results.json
+            ${{ runner.temp }}/transition-verification.json
+            ${{ runner.temp }}/search-verification.json
+            ${{ runner.temp }}/formal-infrastructure/formal-infrastructure-verification.json
+            ${{ runner.temp }}/learning-pilot/
             ${{ runner.temp }}/bao-next-turn-ui/
+          retention-days: 30
+  teacher-feasibility:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Measure real-clock teacher and reuse completed measurements
+        run: |
+          node tools/ai-integration/teacher-feasibility.cjs shard "$RUNNER_TEMP/teacher-feasibility" "${{ matrix.shard }}"
+          node tools/ai-integration/teacher-feasibility.cjs shard "$RUNNER_TEMP/teacher-feasibility" "${{ matrix.shard }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: shard-${{ matrix.shard }}
+          path: ${{ runner.temp }}/teacher-feasibility/shard-${{ matrix.shard }}/
+          retention-days: 30
+  teacher-feasibility-aggregate:
+    needs: teacher-feasibility
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: shard-*
+          merge-multiple: false
+          path: ${{ runner.temp }}/teacher-feasibility/
+      - name: Aggregate verified measurements
+        run: node tools/ai-integration/teacher-feasibility.cjs aggregate "$RUNNER_TEMP/teacher-feasibility" "$RUNNER_TEMP/teacher-feasibility-results.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: teacher-feasibility-results
+          path: ${{ runner.temp }}/teacher-feasibility-results.json
+          retention-days: 30
+
+  formal-artifact-resume:
+    if: github.event_name != 'push'
+    needs: prototype
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+      BAO_COLLECTION_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Restore pinned development artifacts via API and validate ZIP digests
+        run: node tools/ai-integration/verify-formal-artifact-resume.cjs "$RUNNER_TEMP/formal-artifact-resume"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: formal-artifact-resume-verification
+          path: ${{ runner.temp }}/formal-artifact-resume/formal-artifact-resume-verification.json
           retention-days: 30

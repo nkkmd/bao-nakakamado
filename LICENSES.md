@@ -1,6 +1,6 @@
 # ライセンスと出典
 
-更新日：2026年10月2日。コードは **MIT**、説明文・図版は **CC BY-SA 4.0** で提供します。同じファイルを利用者が自由に選べる二重ライセンスではなく、以下の対象ごとに適用します。
+更新日：2026年10月5日。コードは **MIT**、説明文・図版は **CC BY-SA 4.0** で提供します。同じファイルを利用者が自由に選べる二重ライセンスではなく、以下の対象ごとに適用します。
 
 ## 適用範囲
 
@@ -22,6 +22,14 @@ CC BY-SA対象の文書は © 2026 nkkmd and Bao Nakakamado contributors。元�
 - 出発点：[bao-la-kiswahili-game](https://github.com/nkkmd/bao-la-kiswahili-game)。元のプログラム・画面のMIT表示は **Copyright (c) 2026 cultivationdata.net**。
 - 取り込んだエンジンと画面の表示を [prototype/ENGINE_LICENSE.txt](prototype/ENGINE_LICENSE.txt) に原文のまま保存しています。`prototype/style.css` の既存クレジットも保持します。
 - このプロジェクトではNYAKUA、投入方法、試作画面、棋譜、調査ツールなどを追加・変更しています。規則変更は[考案・公開・変更履歴](doc/ORIGIN_AND_HISTORY.md)、現行実装は[試作README](prototype/README.md)を参照してください。
+- 2026年10月4日、開発用の `prototype/search-ai.js` と `prototype/search-evaluator.js` に、元ゲームの固定コミット `8c87ed44c9b08f75456766f0a9bd9f76d06209d4` の `public/ai.js`・`public/ai-weights.js` を適応しました。MIT、Copyright (c) 2026 cultivationdata.net。探索接続、局面識別、時間制限、安全停止、ニャクアの評価特徴・重みを変更しています。[移植記録](doc/AI_SEARCH_IMPLEMENTATION_20261004.md)を参照してください。学習済み論理ゲート型評価器は取り込んでいません。
+- 同日、`tools/ai-integration/learning-input.cjs`・`learning_input.py` の二値・しきい値入力方式を、同じ固定版の `public/logic-evaluator.js`・`tools/engineering/train-pbai-p6.py` を参考に適応しました。MIT、Copyright (c) 2026 cultivationdata.net。通常ハンドと確保分の区別、投入数、範囲検査、南北正規化、入力幅を本ゲーム用に変更しました。[学習設計](doc/AI_LEARNING_DESIGN_20261004.md)に出典と変更を記録しています。元モデル・学習器のコピーは含みません。
+
+### CIの依存
+
+2026年10月4日、`.github/workflows/prototype-check.yml` の教師試走集約へ公式の [actions/download-artifact@v4](https://github.com/actions/download-artifact/tree/v4) を追加しました。MIT、Copyright (c) 2018 GitHub, Inc. and contributors。README blob `aa71e839b25e781fee4222931e5751b65c9f0449` と LICENSE blob `a67dca8b4f65d6bd351f6b1e333ce2cd84d843a5` を確認しています。action本体の改変・コピーはなく、artifactを名前ごとの別ディレクトリへ配置する設定を追加しました。依存本体は配信用prototypeへ同梱しません。[測定記録](doc/AI_TEACHER_FEASIBILITY_20261004.md)を参照してください。
+
+2026年10月5日までの[正式収集基盤](doc/AI_FORMAL_COLLECTION_INFRASTRUCTURE_20261004.md)では、同じ公式actionを `.github/workflows/formal-collection.yml` の計画・shard取得にも設定しました。標準ライブラリによるNodeのAES-256-GCMとPythonのZIP検査・Actions API復元を新規実装し、追加の外部パッケージは導入していません。著作権・ライセンス表示と配信用prototypeへの非同梱を維持します。
 
 ### ルールの説明文
 

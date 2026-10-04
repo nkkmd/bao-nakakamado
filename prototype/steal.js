@@ -9,37 +9,55 @@
       return { board: engine.initialState(), history: [] };
     }
 
-    function resultFor(game, move, transition) {
-      const mover = game.board.player;
-      const { state: board, events } = engine.applyMove(game.board, move,
+    // Both public play and search finish the same hand-transfer accounting.
+    // Search accepts a board only; it never copies the accumulated game history.
+    function boardResult(source, move, transition) {
+      const mover = source.player;
+      const { state: board, events } = engine.applyMove(source, move,
         transition ? undefined : { snapshots: false });
       const captures = events.filter((event) => event.kind === "capture").length;
       const opponent = 1 - mover;
       const placementEvent = events.find((event) => event.kind === "reserve");
-      const placed = placementEvent?.count ?? (game.board.phase !== "namua" || move.type === "pass" ? 0
-        : game.board.reserve[opponent] === 0 ? game.board.reserve[mover] : 1);
-      const stolen = game.board.phase === "namua" && captures >= 2
+      const placed = placementEvent?.count ?? (source.phase !== "namua" || move.type === "pass" ? 0
+        : source.reserve[opponent] === 0 ? source.reserve[mover] : 1);
+      const stolen = source.phase === "namua" && captures >= 2
         && board.reserve[opponent] > (protectLast ? 1 : 0) ? 1 : 0;
       if (stolen) {
         board.reserve[opponent] -= 1;
         if (nextTurnThree) board.nyakuaReserve[mover] += 1;
         else board.reserve[mover] += 1;
       }
-      const next = {
-        board,
-        history: [...game.history, { player: mover, move: { ...move }, placed, captures, stolen,
-          ...(nextTurnThree ? { ordinaryPlaced: placementEvent?.ordinaryCount || 0,
-            reservedPlaced: placementEvent?.nyakuaCount || 0 } : {}) }],
-      };
-      if (transition && stolen) events.push({
+      const summary = { player: mover, move: { ...move }, placed, captures, stolen,
+        ...(nextTurnThree ? { ordinaryPlaced: placementEvent?.ordinaryCount || 0,
+          reservedPlaced: placementEvent?.nyakuaCount || 0 } : {}) };
+      if (stolen && transition) events.push({
         kind: "steal", from: opponent, to: mover, count: 1, state: engine.clone(board),
         ...(nextTurnThree ? { reservedForNextTurn: true } : {}),
       });
+      return { state: board, events, summary };
+    }
+
+    function resultFor(game, move, transition) {
+      const result = boardResult(game.board, move, transition);
+      const next = { board: result.state, history: [...game.history, result.summary] };
+      const events = result.events;
       return transition ? { game: next, events } : next;
     }
 
     function apply(game, move) { return resultFor(game, move, false); }
     function applyWithEvents(game, move) { return resultFor(game, move, true); }
+    function applyMoveForSearch(source, move) { return boardResult(source, move, false); }
+
+    function moveVariantsForSearch(source, moves = engine.legalMoves(source)) {
+      return moves.flatMap((move) => {
+        if (move.phase !== "namua" || move.type !== "capture") return [move];
+        const stop = { ...move, houseChoice: "stop" };
+        const use = { ...move, houseChoice: "use" };
+        const a = applyMoveForSearch(source, stop).state;
+        const b = applyMoveForSearch(source, use).state;
+        return JSON.stringify(a) === JSON.stringify(b) ? [move] : [stop, use];
+      });
+    }
 
     // Keep nyumba choices distinct when the new hand transfer changes the result.
     function moveVariants(game) {
@@ -69,7 +87,8 @@
       }, initialGame());
     }
 
-    const api = { initialGame, apply, applyWithEvents, moveVariants, replay };
+    const api = { initialGame, apply, applyWithEvents, moveVariants, replay,
+      applyMoveForSearch, moveVariantsForSearch };
     return api;
   }
 

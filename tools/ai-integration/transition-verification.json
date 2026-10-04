@@ -1,0 +1,833 @@
+{
+  "status": "PASS",
+  "scope": "transition-equivalence-only",
+  "rulesVersion": "0.8.0",
+  "ruleId": "namua-steal-one-protect-last-reserved-next-own-turn-three-two-row-ring-hand22",
+  "gamesPerPolicy": 32,
+  "seedBlock": {
+    "startIndex": 500000,
+    "count": 32
+  },
+  "games": 128,
+  "positions": 6776,
+  "transitions": 24887,
+  "mirroredTransitions": 24887,
+  "replayedGames": 128,
+  "coverage": {
+    "namua": 15808,
+    "mtaji": 9079,
+    "nyakua": 2384,
+    "threePlacement": 2711,
+    "twoPlacement": 204,
+    "reservedOnlyPlacement": 25,
+    "protectedLastWithMultipleCaptures": 147,
+    "reservedOpponentProtected": 2658,
+    "houseStop": 269,
+    "houseUse": 269,
+    "normalTerminal": 287,
+    "phaseTransition": 437
+  },
+  "negativeControls": [
+    {
+      "name": "omit-nyakua-transfer",
+      "detected": true
+    },
+    {
+      "name": "lose-protected-reserve",
+      "detected": true
+    },
+    {
+      "name": "miscount-captures",
+      "detected": true
+    },
+    {
+      "name": "copy-display-snapshot",
+      "detected": true
+    },
+    {
+      "name": "retain-history",
+      "detected": true
+    }
+  ],
+  "traceSha256": "7fc8c90978be16b090b62438420880029a6266bde4d3dc31b84b8f44b4c3d6de",
+  "sources": {
+    "prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+    "prototype/steal.js": "a1886cdc5b3b9f8a69eb1955e8990deca809d6dc786491afd23f669a77be7ad2",
+    "prototype/search-transition.js": "d65551b35ea22cf05cbc6981e06268c57755c8a870938117c3efca9c7478fcb3",
+    "prototype/search-transition.test.cjs": "76af9917743641ede4a79f5c0c8c6712faf3e5c98a59597675386ca62b67b9e7",
+    "prototype/bulk-engine.js": "23df9b5c45fe3f7ab117c676e06d9d5a32605ae810ac0d3cd909b025c07fe657",
+    "tools/nyakua-three/engine.cjs": "20fa3bb06b28b990e83cb6128f7734d6692aa18da1a3fc823584e559b76eee6e",
+    "tools/nyakua-three/core.cjs": "6b5d7658f80fe2b5611d82b23f91863e58964991f40477ab91f07c6f82581f93",
+    "tools/ai-integration/verify-transitions.cjs": "886e0700ec375d2d56bab5e318a2665bd282668c91c75ba9c4a6ad580714a447"
+  },
+  "trajectories": [
+    {
+      "policy": "random",
+      "seed": 2426257857,
+      "plies": 59,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 785726322,
+      "plies": 69,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 3440162083,
+      "plies": 17,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 1799630548,
+      "plies": 34,
+      "reason": "no-move"
+    },
+    {
+      "policy": "random",
+      "seed": 159099013,
+      "plies": 53,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 2813534774,
+      "plies": 27,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 1173003239,
+      "plies": 77,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 3827439000,
+      "plies": 23,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 2186907465,
+      "plies": 30,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 546375930,
+      "plies": 53,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 3200811691,
+      "plies": 49,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 1560280156,
+      "plies": 35,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 4214715917,
+      "plies": 39,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 2574184382,
+      "plies": 35,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 933652847,
+      "plies": 26,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 3588088608,
+      "plies": 58,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 1947557073,
+      "plies": 42,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 307025538,
+      "plies": 65,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 2961461299,
+      "plies": 35,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 1320929764,
+      "plies": 21,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 3975365525,
+      "plies": 21,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 2334833990,
+      "plies": 52,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 694302455,
+      "plies": 87,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 3348738216,
+      "plies": 87,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 1708206681,
+      "plies": 30,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 67675146,
+      "plies": 25,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 2722110907,
+      "plies": 76,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 1081579372,
+      "plies": 36,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 3736015133,
+      "plies": 53,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 2095483598,
+      "plies": 47,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 454952063,
+      "plies": 74,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "random",
+      "seed": 3109387824,
+      "plies": 43,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 2426257857,
+      "plies": 51,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 785726322,
+      "plies": 44,
+      "reason": "no-move"
+    },
+    {
+      "policy": "noisy",
+      "seed": 3440162083,
+      "plies": 39,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 1799630548,
+      "plies": 33,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 159099013,
+      "plies": 34,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 2813534774,
+      "plies": 19,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 1173003239,
+      "plies": 47,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 3827439000,
+      "plies": 28,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 2186907465,
+      "plies": 45,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 546375930,
+      "plies": 45,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 3200811691,
+      "plies": 27,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 1560280156,
+      "plies": 30,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 4214715917,
+      "plies": 44,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 2574184382,
+      "plies": 42,
+      "reason": "no-move"
+    },
+    {
+      "policy": "noisy",
+      "seed": 933652847,
+      "plies": 39,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 3588088608,
+      "plies": 33,
+      "reason": "no-move"
+    },
+    {
+      "policy": "noisy",
+      "seed": 1947557073,
+      "plies": 11,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 307025538,
+      "plies": 32,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 2961461299,
+      "plies": 49,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 1320929764,
+      "plies": 12,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 3975365525,
+      "plies": 46,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 2334833990,
+      "plies": 38,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 694302455,
+      "plies": 62,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 3348738216,
+      "plies": 49,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 1708206681,
+      "plies": 33,
+      "reason": "no-move"
+    },
+    {
+      "policy": "noisy",
+      "seed": 67675146,
+      "plies": 28,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 2722110907,
+      "plies": 16,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 1081579372,
+      "plies": 47,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 3736015133,
+      "plies": 11,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 2095483598,
+      "plies": 55,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 454952063,
+      "plies": 14,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "noisy",
+      "seed": 3109387824,
+      "plies": 34,
+      "reason": "no-move"
+    },
+    {
+      "policy": "greedy",
+      "seed": 2426257857,
+      "plies": 26,
+      "reason": "no-move"
+    },
+    {
+      "policy": "greedy",
+      "seed": 785726322,
+      "plies": 50,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "greedy",
+      "seed": 3440162083,
+      "plies": 31,
+      "reason": "no-move"
+    },
+    {
+      "policy": "greedy",
+      "seed": 1799630548,
+      "plies": 34,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "greedy",
+      "seed": 159099013,
+      "plies": 30,
+      "reason": "no-move"
+    },
+    {
+      "policy": "greedy",
+      "seed": 2813534774,
+      "plies": 54,
+      "reason": "no-move"
+    },
+    {
+      "policy": "greedy",
+      "seed": 1173003239,
+      "plies": 40,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "greedy",
+      "seed": 3827439000,
+      "plies": 26,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "greedy",
+      "seed": 2186907465,
+      "plies": 28,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "greedy",
+      "seed": 546375930,
+      "plies": 24,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "greedy",
+      "seed": 3200811691,
+      "plies": 46,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "greedy",
+      "seed": 1560280156,
+      "plies": 32,
+      "reason": "no-move"
+    },
+    {
+      "policy": "greedy",
+      "seed": 4214715917,
+      "plies": 47,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "greedy",
+      "seed": 2574184382,
+      "plies": 21,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "greedy",
+      "seed": 933652847,
+      "plies": 32,
+      "reason": "no-move"
+    },
+    {
+      "policy": "greedy",
+      "seed": 3588088608,
+      "plies": 32,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "greedy",
+      "seed": 1947557073,
+      "plies": 50,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "greedy",
+      "seed": 307025538,
+      "plies": 17,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "greedy",
+      "seed": 2961461299,
+      "plies": 41,
+      "reason": "no-move"
+    },
+    {
+      "policy": "greedy",
+      "seed": 1320929764,
+      "plies": 36,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "greedy",
+      "seed": 3975365525,
+      "plies": 28,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "greedy",
+      "seed": 2334833990,
+      "plies": 30,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "greedy",
+      "seed": 694302455,
+      "plies": 41,
+      "reason": "no-move"
+    },
+    {
+      "policy": "greedy",
+      "seed": 3348738216,
+      "plies": 43,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "greedy",
+      "seed": 1708206681,
+      "plies": 23,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "greedy",
+      "seed": 67675146,
+      "plies": 22,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "greedy",
+      "seed": 2722110907,
+      "plies": 40,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "greedy",
+      "seed": 1081579372,
+      "plies": 28,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "greedy",
+      "seed": 3736015133,
+      "plies": 42,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "greedy",
+      "seed": 2095483598,
+      "plies": 36,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "greedy",
+      "seed": 454952063,
+      "plies": 26,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "greedy",
+      "seed": 3109387824,
+      "plies": 36,
+      "reason": "no-move"
+    },
+    {
+      "policy": "reply",
+      "seed": 2426257857,
+      "plies": 99,
+      "reason": "no-move"
+    },
+    {
+      "policy": "reply",
+      "seed": 785726322,
+      "plies": 95,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 3440162083,
+      "plies": 99,
+      "reason": "no-move"
+    },
+    {
+      "policy": "reply",
+      "seed": 1799630548,
+      "plies": 97,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 159099013,
+      "plies": 89,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 2813534774,
+      "plies": 82,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 1173003239,
+      "plies": 95,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 3827439000,
+      "plies": 95,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 2186907465,
+      "plies": 91,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 546375930,
+      "plies": 91,
+      "reason": "no-move"
+    },
+    {
+      "policy": "reply",
+      "seed": 3200811691,
+      "plies": 95,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 1560280156,
+      "plies": 89,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 4214715917,
+      "plies": 99,
+      "reason": "no-move"
+    },
+    {
+      "policy": "reply",
+      "seed": 2574184382,
+      "plies": 89,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 933652847,
+      "plies": 115,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 3588088608,
+      "plies": 113,
+      "reason": "no-move"
+    },
+    {
+      "policy": "reply",
+      "seed": 1947557073,
+      "plies": 80,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 307025538,
+      "plies": 99,
+      "reason": "no-move"
+    },
+    {
+      "policy": "reply",
+      "seed": 2961461299,
+      "plies": 115,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 1320929764,
+      "plies": 82,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 3975365525,
+      "plies": 114,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 2334833990,
+      "plies": 96,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 694302455,
+      "plies": 100,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 3348738216,
+      "plies": 80,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 1708206681,
+      "plies": 96,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 67675146,
+      "plies": 89,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 2722110907,
+      "plies": 80,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 1081579372,
+      "plies": 111,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 3736015133,
+      "plies": 109,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 2095483598,
+      "plies": 101,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 454952063,
+      "plies": 89,
+      "reason": "front-empty"
+    },
+    {
+      "policy": "reply",
+      "seed": 3109387824,
+      "plies": 95,
+      "reason": "front-empty"
+    }
+  ]
+}

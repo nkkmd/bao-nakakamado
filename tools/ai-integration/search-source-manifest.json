@@ -1,0 +1,20 @@
+{
+  "dateJst": "2026-10-04",
+  "stage": 2,
+  "targetBaseCommit": "17191667170d069de6c707eba4939615b1fa5f40",
+  "sourceRepository": "nkkmd/bao-la-kiswahili-game",
+  "sourceCommit": "8c87ed44c9b08f75456766f0a9bd9f76d06209d4",
+  "sourceGeneration": "AI-GEN4",
+  "adaptedSources": [
+    {"path": "public/ai.js", "gitBlobSha": "ac2b4fd66a2555c50a362c39a828515323bba18a", "target": "prototype/search-ai.js / prototype/search-evaluator.js"},
+    {"path": "public/ai-weights.js", "gitBlobSha": "98969eb4c8e1403beedcf5c139a07166aa78175c", "target": "prototype/search-evaluator.js"}
+  ],
+  "license": "MIT",
+  "copyright": "Copyright (c) 2026 cultivationdata.net",
+  "licensePath": "prototype/ENGINE_LICENSE.txt",
+  "sourceLicenseGitBlobSha": "754dc13582b2eccf4b5791abd0ddd9ca5b49cfc0",
+  "searchId": "NAKAKAMADO-SEARCH-v1",
+  "evaluatorId": "NAKAKAMADO-HANDCRAFT-v1",
+  "trainedEvaluatorImported": false,
+  "publicAiChanged": false
+}

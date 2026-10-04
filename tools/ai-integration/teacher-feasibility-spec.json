@@ -1,0 +1,22 @@
+{
+  "id": "NAKAKAMADO-TEACHER-FEASIBILITY-20261004-v1",
+  "scope": "development-calibration-not-training-not-formal-holdout",
+  "baseCommit": "37454768e3d9f03bb00b53f31391bd614dd56bac",
+  "rulesVersion": "0.8.0",
+  "namespace": "teacher-feasibility-v1-never-formal-holdout",
+  "seedStartIndex": 800000,
+  "seedCount": 128,
+  "policies": ["random", "noisy", "greedy", "reply"],
+  "openingPlies": 12,
+  "maxPositions": 64,
+  "regularSamplePlies": [12, 25, 40],
+  "selectionOrder": ["reservedOnly", "twoPlacement", "threePlacement", "lastOrdinary", "nearTransition", "ownReserved", "opponentReserved", "namua", "mtaji", "north", "south"],
+  "minimumCoverage": {"reservedOnly": 4, "twoPlacement": 4, "threePlacement": 4, "lastOrdinary": 4, "nearTransition": 4, "ownReserved": 4, "opponentReserved": 4, "namua": 16, "mtaji": 16, "north": 16, "south": 16},
+  "teacher": {"maxDepth": 4, "quiescenceDepth": 1, "timeLimitMs": 5000},
+  "clock": "real-monotonic",
+  "shards": 4,
+  "decision": {"minimumAcceptedFraction": 0.95, "requireAcceptedCoverage": true, "illegalMoves": 0, "inputMutations": 0, "replayMismatches": 0},
+  "timeoutRetry": "retain-as-rejected-measurement-do-not-automatically-retry",
+  "formalDataGenerated": false,
+  "trainingStarted": false
+}

@@ -1,0 +1,21 @@
+{
+  "verificationId": "NAKAKAMADO-SEARCH-VALIDATION-20261004-v2",
+  "scope": "engineering-correctness-not-strength",
+  "baseCommit": "17191667170d069de6c707eba4939615b1fa5f40",
+  "rulesVersion": "0.8.0",
+  "seedStartIndex": 600000,
+  "seedsPerPolicy": 8,
+  "policies": ["random", "noisy", "greedy", "reply"],
+  "samplePlies": [0, 3, 7, 12, 25, 40],
+  "sampleLastNonTerminal": true,
+  "depths": [1, 2, 3],
+  "quiescenceDepths": [0, 1],
+  "presets": [
+    {},
+    {"transpositionTable": false, "evaluationCache": false, "pvs": false},
+    {"maxTableEntries": 3, "maxEvaluationCacheEntries": 3, "ttMoveFirst": true, "orderQuiescenceCaptures": true, "historyHeuristic": true, "aspirationWindow": 1}
+  ],
+  "requirements": {"scoreMismatches": 0, "nonOptimalMoves": 0, "illegalMoves": 0, "inputMutations": 0, "missingNamuaMtajiOrReservedCoverage": 0},
+  "timingSmoke": {"positions": 8, "timeLimitMs": [0, 5, 20], "maxDepth": 8, "hardElapsedTimeGate": null},
+  "note": "全探索照合は時計を固定し、同じ静止探索と評価関数で比較する。実時間の短い試走は協調的時間制限の診断であり、棋力・実機性能の合格条件ではない。"
+}
