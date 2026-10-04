@@ -26,13 +26,15 @@ jobs:
     env:
       BAO_COLLECTION_VERSION: ${{ inputs.collection_version }}
       BAO_COLLECTION_KEY_BASE64: ${{ secrets.BAO_COLLECTION_KEY_BASE64 }}
-      BAO_COLLECTION_KEY_FILE: ${{ runner.temp }}/collection.key
       BAO_RESUME_RECEIPTS: ${{ inputs.resume_receipts }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - name: Define paths on the assigned runner
+        run: |
+          printf 'BAO_COLLECTION_KEY_FILE=%s/collection.key\n' "$RUNNER_TEMP" >> "$GITHUB_ENV"
       - name: Load private collection key
         run: node tools/ai-integration/formal-workflow.cjs key
       - name: Freeze exclusion-checked candidate plan before teacher requests
@@ -54,8 +56,6 @@ jobs:
     env:
       BAO_COLLECTION_VERSION: ${{ inputs.collection_version }}
       BAO_COLLECTION_KEY_BASE64: ${{ secrets.BAO_COLLECTION_KEY_BASE64 }}
-      BAO_COLLECTION_KEY_FILE: ${{ runner.temp }}/collection.key
-      BAO_COLLECTION_PLAN_FILE: ${{ runner.temp }}/formal-plan/plan.sealed.json
       BAO_RESUME_RECEIPTS: ${{ inputs.resume_receipts }}
       GITHUB_TOKEN: ${{ github.token }}
     steps:
@@ -67,6 +67,10 @@ jobs:
         with:
           name: formal-plan
           path: ${{ runner.temp }}/formal-plan/
+      - name: Define paths on the assigned runner
+        run: |
+          printf 'BAO_COLLECTION_KEY_FILE=%s/collection.key\n' "$RUNNER_TEMP" >> "$GITHUB_ENV"
+          printf 'BAO_COLLECTION_PLAN_FILE=%s/formal-plan/plan.sealed.json\n' "$RUNNER_TEMP" >> "$GITHUB_ENV"
       - name: Load private collection key
         run: node tools/ai-integration/formal-workflow.cjs key
       - name: Verify and restore pinned completed measurements
@@ -86,8 +90,6 @@ jobs:
     env:
       BAO_COLLECTION_VERSION: ${{ inputs.collection_version }}
       BAO_COLLECTION_KEY_BASE64: ${{ secrets.BAO_COLLECTION_KEY_BASE64 }}
-      BAO_COLLECTION_KEY_FILE: ${{ runner.temp }}/collection.key
-      BAO_COLLECTION_PLAN_FILE: ${{ runner.temp }}/formal-plan/plan.sealed.json
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -109,6 +111,10 @@ jobs:
           const from=path.join(process.env.RUNNER_TEMP,'formal-artifacts'),to=path.join(process.env.RUNNER_TEMP,'formal-collection');
           fs.mkdirSync(to);for(let i=0;i<16;i++)fs.renameSync(path.join(from,'formal-shard-'+i),path.join(to,'shard-'+i));
           JS
+      - name: Define paths on the assigned runner
+        run: |
+          printf 'BAO_COLLECTION_KEY_FILE=%s/collection.key\n' "$RUNNER_TEMP" >> "$GITHUB_ENV"
+          printf 'BAO_COLLECTION_PLAN_FILE=%s/formal-plan/plan.sealed.json\n' "$RUNNER_TEMP" >> "$GITHUB_ENV"
       - name: Load private collection key
         run: node tools/ai-integration/formal-workflow.cjs key
       - name: Audit every partition and seal final data
