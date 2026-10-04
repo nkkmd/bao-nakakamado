@@ -37,7 +37,7 @@ train→validation→finalの固定順で、確保分のみ、2個投入、最�
 
 ## 全経路の候補監査
 
-[保存した結果](../tools/ai-integration/formal-selection-v2-preflight-results.json)と [検証コード](../tools/ai-integration/verify-formal-selection-v2.cjs)にソースhash・設定・除外一覧・計画digest・確認項目を残す。
+[初回ローカル記録](../tools/ai-integration/formal-selection-v2-preflight-results.json)、[修正後のCI記録](../tools/ai-integration/formal-selection-v2-ci-preflight-results.json)と [検証コード](../tools/ai-integration/verify-formal-selection-v2.cjs)にソースhash・設定・除外一覧・計画digest・確認項目を残す。
 
 16,384経路はすべて通常終局。79,974候補からsplit間同一局面73コピー、既知局面133件、既知開幕26,536件、同一split重複13,539件を除き、39,693候補を得た。これらの数値はv1と一致する。変更は8192件への選択であり、経路追加・最低件数変更・split変更を行っていない。
 
@@ -50,13 +50,15 @@ train→validation→finalの固定順で、確保分のみ、2個投入、最�
 
 trainは5019行・2296group、validationは1517行・707group。両splitですべての最低層を満たす。finalは必要条件の通過だけを出力し、盤面・入力・ラベル・層別件数を表示しない。全体の正規化局面・入力の重複0件、split割当の維持、v1のtrain/validation選択の再現、選択順の不変性、8192件の通常再生を確認した。
 
-除外一覧digestは `eda140703e63bc813c2284427e2b471312f103c0ffb0cdfcbdfa36f0d4827a3c`、v2計画digestは `4b44b5173175e8ba9902cd4566036b04e3d34bc821a2d66164892606e077faf9`。保存済み結果はそのソースhashに限定する。旧v1計画や途中計測は新しいソースへ復元できず、旧記録を再現するときは指定した過去コミットを使う。
+除外一覧digestは `eda140703e63bc813c2284427e2b471312f103c0ffb0cdfcbdfa36f0d4827a3c`。初回実装 `61a81f3` のローカル・CI候補計画digestは `4b44b5173175e8ba9902cd4566036b04e3d34bc821a2d66164892606e077faf9`。テストfixture修正後の `1e4d008` のCIでは `891329b4e865c97591211072acb18db53022a9704fb0dc7fd0dd479c70600a03`。テストのソースhashも計画へ結び付けるためdigestは変わるが、選択条件・母集団・選択数は同じである。保存済み結果はそのソースhashに限定する。旧v1計画や途中計測は新しいソースへ復元できず、旧記録を再現するときは指定した過去コミットを使う。
 
 ## テスト・CI・再現
 
 新規8テストでは、v1から維持する条件、1000groupのsplit一致、後半の希少層の優先、入力順の不変性、ラベルへの非依存、層の重なり、優先枠にも適用される全候補重複隔離と既知入力・開幕除外、候補不足・小さな上限、v2の時計・provenance・候補ゲート、artifact名・正式表示、手動workflowの版登録を確認した。既存14件と合わせた22件はローカルで成功した。
 
-全経路の候補監査は専用Actions job `formal-selection-v2-preflight` に追加した。PR/手動CIで教師要求を行わずに再現し、候補条件の通過を要求する。通常CIの開発パイロット・実artifact復元・既存探索・入力・ゲーム・ブラウザー回帰も継続する。CIの実行結果は確認後に追記する。
+全経路の候補監査は専用Actions job `formal-selection-v2-preflight` に追加した。PR/手動CIで教師要求を行わずに再現し、候補条件の通過を要求する。通常CIの開発パイロット・実artifact復元・既存探索・入力・ゲーム・ブラウザー回帰も継続する。修正後の [Actions run 37241135284](https://github.com/nkkmd/bao-nakakamado/actions/runs/37241135284)、attempt 1、head `1e4d0081d7cdbca9108cd0c8065cb1225bb68d81` で全8ジョブ成功。89テスト、全候補の必要条件、8192件の通常再生・選択の不変性・重複0件、482入力観点・1926全探索比較・24887遷移・400局・実ブラウザー回帰が通過した。開発用96件の実artifact別worker復元も新規教師要求0件で成功した。[CI実行記録](AI_FORMAL_SELECTION_V2_CI_20261005.json)にrun/attempt、対象SHA、job、artifact IDとdigest、候補結果、開発復元、適用範囲を保存する。
+
+最初のrun 37240970166は候補監査を通過したが、新規テスト1件が失敗した。拒否対象のoriginを省略したテストがローカル環境を仮定し、Actionsの正常なrun情報によって別の候補ゲートで拒否されたためである。`1e4d008` でローカルoriginをテスト内に明示し、同じ候補条件のまま全テストを再検証した。旧ローカル記録を上書きせず、修正後のソースに対応したCI候補結果を別ファイルに保存する。
 
 ```sh
 node --test tools/ai-integration/formal-selection-v2.test.cjs tools/ai-integration/formal-collection.test.cjs

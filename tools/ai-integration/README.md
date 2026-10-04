@@ -119,7 +119,7 @@ node tools/ai-integration/verify-formal-infrastructure.cjs /tmp/bao-formal-devel
 
 ## 選択計画v2の全候補監査
 
-[固定仕様](formal-collection-v2-spec.json)、[選択コード](formal-selection-v2.cjs)、[監査結果](formal-selection-v2-preflight-results.json)を参照。v1と同じ候補母集団・既知除外・開幕のsplit割当を使い、必要層を先に確保する。各最低値の5/4を切り上げた選択目標を持つが、採用基準は変更しない。ラベルやfinalの成績を見て選択しない。
+[固定仕様](formal-collection-v2-spec.json)、[選択コード](formal-selection-v2.cjs)、[初回ローカル監査](formal-selection-v2-preflight-results.json)、[修正後のCI監査](formal-selection-v2-ci-preflight-results.json)、[CI実行記録](../../doc/AI_FORMAL_SELECTION_V2_CI_20261005.json)を参照。v1と同じ候補母集団・既知除外・開幕のsplit割当を使い、必要層を先に確保する。各最低値の5/4を切り上げた選択目標を持つが、採用基準は変更しない。ラベルやfinalの成績を見て選択しない。
 
 ```sh
 node --test tools/ai-integration/formal-selection-v2.test.cjs tools/ai-integration/formal-collection.test.cjs
@@ -128,7 +128,7 @@ node tools/ai-integration/verify-formal-selection-v2.cjs /tmp/bao-selection-v2-p
 
 verifierは未使用の出力ファイルを要求する。16,384経路を再生成し、v1のtrain/validation選択の再現、全候補の除外・重複件数の一致、逆順入力でのv2選択不変性、8192件の通常再生を検査する。教師要求は0件で、finalの必要条件通過だけを表示する。
 
-PR/手動CIの専用job `formal-selection-v2-preflight` でも再現し、全候補条件の通過を要求する。候補条件通過後も、正式計測の受理率・最低件数・必要層・終局線20%上限・漏洩を再監査する。旧ソースのv1計画やcheckpointは、現在のv2ソースへ再利用できない。旧結果の再現には記録した過去コミットを使う。
+PR/手動CIの専用job `formal-selection-v2-preflight` でも再現し、全候補条件の通過を要求する。run 37241135284では89テスト・全8ジョブ成功。初回のローカル記録は実装 `61a81f3`、CIの最新候補結果はテストfixture修正後の `1e4d008` に結び付く。過去の結果を現在のソースの証拠として混在させない。候補条件通過後も、正式計測の受理率・最低件数・必要層・終局線20%上限・漏洩を再監査する。旧ソースのv1計画やcheckpointは、現在のv2ソースへ再利用できない。旧結果の再現には記録した過去コミットを使う。
 
 ## 検証結果の適用範囲
 

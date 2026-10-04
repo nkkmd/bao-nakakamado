@@ -87,7 +87,7 @@ README、設計、診断・棋譜メタデータ、画面、出典・MIT表示�
 
 ## 次の作業
 
-[実時計の教師試走](AI_TEACHER_FEASIBILITY_20261004.md)と不足していた確保分のみの到達局面の収集を完了した。64件すべてが深度4まで完了し、正式収集の条件を [formal-collection-spec.json](../tools/ai-integration/formal-collection-spec.json) へ固定した。[正式収集基盤](AI_FORMAL_COLLECTION_INFRASTRUCTURE_20261004.md)の除外一覧・generator・全体重複監査・固定artifact復元・封印は実装済み。正式条件の候補監査ではtrainのMTAJIが10/512、確保分のみ0/16、validationのMTAJIが3/128、確保分のみ2/4で不足し、教師要求前に停止した。v1の原記録を保持し、同じseed範囲・候補・split割当・8192要求・最低件数で、必要層を先に確保する[選択計画v2](AI_FORMAL_SELECTION_V2_20261005.md)を別IDに固定した。v2の事前監査は全条件を通過し、trainのMTAJI 640・確保分のみ20、validationは160・5。次は独立した収集鍵と起動経路を整え、v2の実時計教師を収集し、採用後の件数・層・漏洩を再監査してfinalを封印する。その後に学習器・モデル比較の条件を固定する。本学習・棋力判断・公開コンピューターの差し替え・main統合は未実施。
+[実時計の教師試走](AI_TEACHER_FEASIBILITY_20261004.md)と不足していた確保分のみの到達局面の収集を完了した。64件すべてが深度4まで完了し、正式収集の条件を [formal-collection-spec.json](../tools/ai-integration/formal-collection-spec.json) へ固定した。[正式収集基盤](AI_FORMAL_COLLECTION_INFRASTRUCTURE_20261004.md)の除外一覧・generator・全体重複監査・固定artifact復元・封印は実装済み。正式条件の候補監査ではtrainのMTAJIが10/512、確保分のみ0/16、validationのMTAJIが3/128、確保分のみ2/4で不足し、教師要求前に停止した。v1の原記録を保持し、同じseed範囲・候補・split割当・8192要求・最低件数で、必要層を先に確保する[選択計画v2](AI_FORMAL_SELECTION_V2_20261005.md)を別IDに固定した。v2の事前監査は全条件を通過し、89テストと全8 CIジョブも成功した。trainのMTAJI 640・確保分のみ20、validationは160・5。次は独立した収集鍵と起動経路を整え、v2の実時計教師を収集し、採用後の件数・層・漏洩を再監査してfinalを封印する。その後に学習器・モデル比較の条件を固定する。本学習・棋力判断・公開コンピューターの差し替え・main統合は未実施。
 
 ## 出典と適用範囲
 

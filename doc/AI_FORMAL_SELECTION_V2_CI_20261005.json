@@ -1,0 +1,946 @@
+{
+  "recordDateJST": "2026-10-05",
+  "scope": "v2-candidate-and-development-infrastructure-verification-not-formal-collection-not-training",
+  "repository": "nkkmd/bao-nakakamado",
+  "runId": 37241135284,
+  "attempt": 1,
+  "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/37241135284",
+  "headSha": "1e4d0081d7cdbca9108cd0c8065cb1225bb68d81",
+  "baseSha": "c99f13537c3dbb0275a1c3e9888e882b0a3e134d",
+  "conclusion": "success",
+  "completedAt": "2026-10-04T22:47:18Z",
+  "specFreezeCommit": "8a66cdf41a26ab91cb60c294ac8afb3cc76c7c96",
+  "implementationCommit": "61a81f320b8661fa71cea77183f61959c7fa136e",
+  "provenanceFixtureFixCommit": "1e4d0081d7cdbca9108cd0c8065cb1225bb68d81",
+  "jobs": [
+    {
+      "id": 111549923822,
+      "name": "prototype",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 37241135284,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Rule and DOM tests",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Learning input, split and checkpoint pilot",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Formal infrastructure development pilot",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        },
+        {
+          "name": "Search and exhaustive minimax equivalence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12
+        },
+        {
+          "name": "NYAKUA search transition equivalence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13
+        },
+        {
+          "name": "Reachable games and replay consistency",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14
+        },
+        {
+          "name": "Install pinned browser test dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15
+        },
+        {
+          "name": "Real browser desktop, mobile and full-game replay",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 33
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 34
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 35
+        }
+      ]
+    },
+    {
+      "id": 111549923841,
+      "name": "teacher-feasibility (3)",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 37241135284,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Measure real-clock teacher and reuse completed measurements",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        }
+      ]
+    },
+    {
+      "id": 111549923889,
+      "name": "formal-selection-v2-preflight",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 37241135284,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Audit the frozen v2 candidate universe without teacher requests",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Require all candidate minima before allowing the next collection stage",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13
+        }
+      ]
+    },
+    {
+      "id": 111549923913,
+      "name": "teacher-feasibility (0)",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 37241135284,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Measure real-clock teacher and reuse completed measurements",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        }
+      ]
+    },
+    {
+      "id": 111549923920,
+      "name": "teacher-feasibility (1)",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 37241135284,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Measure real-clock teacher and reuse completed measurements",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        }
+      ]
+    },
+    {
+      "id": 111549923940,
+      "name": "teacher-feasibility (2)",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 37241135284,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Measure real-clock teacher and reuse completed measurements",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        }
+      ]
+    },
+    {
+      "id": 111549984982,
+      "name": "teacher-feasibility-aggregate",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 37241135284,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run actions/download-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Aggregate verified measurements",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13
+        }
+      ]
+    },
+    {
+      "id": 111550184482,
+      "name": "formal-artifact-resume",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 37241135284,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Restore pinned development artifacts via API and validate ZIP digests",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        }
+      ]
+    }
+  ],
+  "tests": {
+    "total": 89,
+    "passed": 89,
+    "failed": 0,
+    "newV2Tests": 8
+  },
+  "candidatePreflight": {
+    "status": "CANDIDATES-SUFFICIENT-FOR-TEACHER",
+    "configId": "NAKAKAMADO-FORMAL-COLLECTION-20261005-v2",
+    "planDigest": "891329b4e865c97591211072acb18db53022a9704fb0dc7fd0dd479c70600a03",
+    "sourceDigest": "4e4d3acfbcfb5de5c9bf7e77accd8b3dbd26649389c0ab06471a025275d0cdac",
+    "registryDigest": "eda140703e63bc813c2284427e2b471312f103c0ffb0cdfcbdfa36f0d4827a3c",
+    "requested": 8192,
+    "teacherRequestsExecuted": 0,
+    "checks": {
+      "selectionPermutationInvariant": true,
+      "positionAndInputDuplicates": 0,
+      "v1TrainValidationSelectionReproduced": true,
+      "splitAssignmentUnchanged": true,
+      "normalReplayChecked": 8192,
+      "currentSourcesAndRegistryVerified": true
+    },
+    "resultsPath": "tools/ai-integration/formal-selection-v2-ci-preflight-results.json"
+  },
+  "developmentPilot": {
+    "status": "PASS",
+    "scope": "development-only-all-partitions-readable-not-formal-holdout",
+    "encodingId": "NAKAKAMADO-BINARY-v1",
+    "registryDigest": "eda140703e63bc813c2284427e2b471312f103c0ffb0cdfcbdfa36f0d4827a3c",
+    "registryPositions": 31549,
+    "registryInputs": 31549,
+    "registryOpeningGroups": 200,
+    "configId": "NAKAKAMADO-FORMAL-INFRASTRUCTURE-PILOT-v1",
+    "planDigest": "e92d31c6c72cab0fb435eb7baeb8ea9d11d2567dc5460207a1f49f25a5ac1293",
+    "sourceDigest": "4e4d3acfbcfb5de5c9bf7e77accd8b3dbd26649389c0ab06471a025275d0cdac",
+    "sourceHashes": {
+      "prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+      "prototype/steal.js": "a1886cdc5b3b9f8a69eb1955e8990deca809d6dc786491afd23f669a77be7ad2",
+      "prototype/search-transition.js": "d65551b35ea22cf05cbc6981e06268c57755c8a870938117c3efca9c7478fcb3",
+      "prototype/search-ai.js": "d74569196382b0aea1bbf251454788b009d9962d249232a32c2e4c13f190dc65",
+      "prototype/search-evaluator.js": "e5240b37da230a9f2927fec6c70334affb491f68001f4001df14d5af60fc0196",
+      "tools/nyakua-three/core.cjs": "6b5d7658f80fe2b5611d82b23f91863e58964991f40477ab91f07c6f82581f93",
+      "tools/nyakua-three/engine.cjs": "20fa3bb06b28b990e83cb6128f7734d6692aa18da1a3fc823584e559b76eee6e",
+      "prototype/bulk-engine.js": "23df9b5c45fe3f7ab117c676e06d9d5a32605ae810ac0d3cd909b025c07fe657",
+      "tools/ai-integration/learning-input.cjs": "bb9b570e323b71565ac1768f9995958a2ab85bc364dc853db74670894065970d",
+      "tools/ai-integration/learning_input.py": "4f2fcdc5a2421ddd4af84afc2f0e3a17fd94a6e06b4f6d85cca010403d845c82",
+      "tools/ai-integration/learning-pipeline.cjs": "0503385068892f9d05e71a36ab793db5e6414dbb2eaf54cb58deb4fae0c1f06e",
+      "tools/ai-integration/learning-pipeline.test.cjs": "f28e08cec22f415b353ae2ce8eb224c1ef3664d35366fda3bb1fc9de69c038d9",
+      "tools/ai-integration/verify-learning-pilot.cjs": "81c9f760ea9790e110440b315d992e1d0eb5cfb8f94bb49c3103564745f3e0c6",
+      "tools/ai-integration/learning-spec.json": "925950ff3ab73f062c2a88782524908b738b6200461b116df7135bf6637ddcf1",
+      "tools/ai-integration/teacher-feasibility-spec.json": "e691a4a079d57fb12a3b98dcb85427ae04a03f82498acc22710f474c4debc324",
+      "tools/ai-integration/teacher-feasibility.cjs": "a72c3f7a18f9d51c8aaf52f931a7bc8f9990292afd435e2ac62bc792c14c072e",
+      "tools/ai-integration/teacher-feasibility.test.cjs": "dacd646b3de6465499cc019b538f17fc550ff06687f4ecd15a918ef841586f46",
+      "tools/ai-integration/reserved-only-reachable-fixtures.json": "1d8e45c6832181b6a2defc6334aa44fd2299aee97be166a1d94af48052e24cd5",
+      "tools/ai-integration/transition-verification.json": "bf2ca1250d2920bdc22797c4aecd0bf30b7d60aee0e931fc4cf4502a28cb39e1",
+      "tools/ai-integration/search-verification-spec.json": "5fa9c4eb014b5e481630748461bce8e4fe424951901f9a6bb348b0155e1c2903",
+      "tools/ai-integration/search-verification.json": "ea6dd023b28677535894674c16f7486ca032dd42bbe0c46843cbf000dc880515",
+      "tools/ai-integration/teacher-feasibility-corpus.json": "f7ef195f967ad916ca6c06026019ad3848f79b1bc9a1341d3d731318ab47feb3",
+      "prototype/search-ai.test.cjs": "b631d4288ec69d904fac2f0e6cc2cf8540dfa92df3da4b5459ad0cc1217e15ea",
+      "prototype/search-transition.test.cjs": "76af9917743641ede4a79f5c0c8c6712faf3e5c98a59597675386ca62b67b9e7",
+      "tools/nyakua-three/results/anomalies/self-random-three-3435580265-game.json": "172b630f0cefff0862fdd9bde41ea4728fe5787a49ab0fec4d0c1ab36bc96d4f",
+      "tools/ai-integration/formal-registry.cjs": "55a86f837d865b30bbc65b245cd614787775457cf21a017f639d0438401df882",
+      "tools/ai-integration/formal-development-spec.json": "5836e3f9afe36ae8daade471246e232cb4d8279e4f5c2cf0780da5b4c1f8326d",
+      "tools/ai-integration/formal-collection.test.cjs": "308e9acdc0c3b0d15590f9774d2d505ac815bde4248e2b88f6ffece02146894e",
+      "tools/ai-integration/verify-formal-infrastructure.cjs": "8088d5e9e28d04805683ab237585f8a2e5a5d4a6b10bba63e2005c8aeda38b31",
+      "tools/ai-integration/formal-collection.cjs": "3e4f7c9f4657a68fbdb29458f3ef618d2481d24d33895333e5d70baa851fe7af",
+      "tools/ai-integration/formal-artifact.cjs": "fb7d7e4661c27dc95922f661b893b1186e4b27a08aff0da9e0aec224c0979711",
+      "tools/ai-integration/formal-workflow.cjs": "17dc658809fbbaf1ef1e104f09a2af3dbf1b94f66d5cc2f48c155d023fd12284",
+      "tools/ai-integration/formal-collection-spec.json": "b776ff7dac1a7c61ff2bcb986b7e473dc3a6adbfb54b58c001148a07728cbc4f",
+      "tools/ai-integration/safe-artifact-unzip.py": "b526d2116634f7e5e1c40eaa6417be164eb966acf3d65143f5cd5dde691f3cfb",
+      "tools/ai-integration/formal-collection-v2-spec.json": "0f810104b3f85c294bd301c185e287acdf1833517701d20f18b780a4c519057d",
+      "tools/ai-integration/formal-selection-v2.cjs": "7eedcb6363f45bfa8255ca4565cfc302f043fabe7bbda88530f2936adae7879f",
+      "tools/ai-integration/formal-selection-v2.test.cjs": "175fb5cec904a7dc49b061c3ec4fb7987d23a7933b6a96cc737382bd486b6181",
+      "tools/ai-integration/verify-formal-selection-v2.cjs": "48a51033275a5a4f2f1ef21d32a786ca5f86f85f131775326f5512076e938439"
+    },
+    "selection": {
+      "crossSplitCopies": 0,
+      "knownPositions": 0,
+      "knownOpenings": 0,
+      "withinSplitCopies": 117,
+      "candidates": 443,
+      "eligible": 326,
+      "capOmitted": 230,
+      "shortOpenings": 4,
+      "cutoffs": {
+        "normal-terminal": 96
+      }
+    },
+    "teacherRequests": 96,
+    "accepted": 96,
+    "splitCounts": {
+      "train": 48,
+      "validation": 30,
+      "final": 18
+    },
+    "groups": {
+      "train": 28,
+      "validation": 18,
+      "final": 11
+    },
+    "capRemoved": {
+      "train": 0,
+      "validation": 0,
+      "final": 0
+    },
+    "postAuditLeaks": 0,
+    "partial": {
+      "shard": 0,
+      "requested": 24,
+      "completed": 2,
+      "reused": 0,
+      "generated": 2,
+      "planDigest": "e92d31c6c72cab0fb435eb7baeb8ea9d11d2567dc5460207a1f49f25a5ac1293"
+    },
+    "partialResume": {
+      "shard": 0,
+      "requested": 24,
+      "completed": 24,
+      "reused": 2,
+      "generated": 22,
+      "planDigest": "e92d31c6c72cab0fb435eb7baeb8ea9d11d2567dc5460207a1f49f25a5ac1293"
+    },
+    "completedResume": [
+      {
+        "shard": 0,
+        "requested": 24,
+        "completed": 24,
+        "reused": 24,
+        "generated": 0,
+        "planDigest": "e92d31c6c72cab0fb435eb7baeb8ea9d11d2567dc5460207a1f49f25a5ac1293"
+      },
+      {
+        "shard": 1,
+        "requested": 24,
+        "completed": 24,
+        "reused": 24,
+        "generated": 0,
+        "planDigest": "e92d31c6c72cab0fb435eb7baeb8ea9d11d2567dc5460207a1f49f25a5ac1293"
+      },
+      {
+        "shard": 2,
+        "requested": 24,
+        "completed": 24,
+        "reused": 24,
+        "generated": 0,
+        "planDigest": "e92d31c6c72cab0fb435eb7baeb8ea9d11d2567dc5460207a1f49f25a5ac1293"
+      },
+      {
+        "shard": 3,
+        "requested": 24,
+        "completed": 24,
+        "reused": 24,
+        "generated": 0,
+        "planDigest": "e92d31c6c72cab0fb435eb7baeb8ea9d11d2567dc5460207a1f49f25a5ac1293"
+      }
+    ],
+    "sealedFinalDigest": "aee11bdafedf99333ca17365db2223d4316679bc223f050e535cc57bad93c8f9",
+    "allPartitionsDevelopmentAndReadable": true,
+    "formalDataGenerated": false,
+    "trainingStarted": false
+  },
+  "developmentArtifactResume": {
+    "status": "PASS",
+    "scope": "development-only-all-partitions-readable-not-formal-holdout",
+    "restoredRequests": 96,
+    "newTeacherRequests": 0,
+    "planDigest": "e92d31c6c72cab0fb435eb7baeb8ea9d11d2567dc5460207a1f49f25a5ac1293",
+    "finalDigest": "aee11bdafedf99333ca17365db2223d4316679bc223f050e535cc57bad93c8f9",
+    "proofScope": "same-run-separate-worker",
+    "currentRunId": 37241135284,
+    "currentAttempt": 1,
+    "restoredRunIds": [
+      37241135284
+    ],
+    "receipts": [
+      {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": 37241135284,
+        "attempt": 1,
+        "headSha": "1e4d0081d7cdbca9108cd0c8065cb1225bb68d81",
+        "artifactId": 11316733374,
+        "name": "formal-dev-plan",
+        "digest": "sha256:2b1334fa66bdb745fbf2ac671dd3da54f6fa646ed2d70acc8ce20890328e2c19"
+      },
+      {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": 37241135284,
+        "attempt": 1,
+        "headSha": "1e4d0081d7cdbca9108cd0c8065cb1225bb68d81",
+        "artifactId": 11316728373,
+        "name": "formal-dev-shard-0",
+        "digest": "sha256:b090f20fa067a6f784e75a8ce54d77753c42385899c8e0b8c046cdac895e1c3a"
+      },
+      {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": 37241135284,
+        "attempt": 1,
+        "headSha": "1e4d0081d7cdbca9108cd0c8065cb1225bb68d81",
+        "artifactId": 11317426709,
+        "name": "formal-dev-shard-1",
+        "digest": "sha256:45d6e9c1807038690e737ebf610e1030721d04c0070b366ea6363104c0600f57"
+      },
+      {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": 37241135284,
+        "attempt": 1,
+        "headSha": "1e4d0081d7cdbca9108cd0c8065cb1225bb68d81",
+        "artifactId": 11316514795,
+        "name": "formal-dev-shard-2",
+        "digest": "sha256:a9b13ef6130978ed4d5ea8bb9036fa4687142f0d3343144ccbad58fa4fbb2e2d"
+      },
+      {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": 37241135284,
+        "attempt": 1,
+        "headSha": "1e4d0081d7cdbca9108cd0c8065cb1225bb68d81",
+        "artifactId": 11316787896,
+        "name": "formal-dev-shard-3",
+        "digest": "sha256:4ad9d7efaf39dde7230beb551bbe0ec4cfc24bccea45aa8653ea35991cef6b8e"
+      }
+    ]
+  },
+  "browserRegression": {
+    "browser": "151.0.7922.34",
+    "pits": 32,
+    "plies": 64,
+    "rearMoves": 12,
+    "extraMoves": 6,
+    "searchCheck": {
+      "transitions": 272,
+      "nyakua": 26
+    },
+    "searchAICheck": {
+      "positions": 2,
+      "completedDepth": 3,
+      "nodeBrowserMatch": true
+    },
+    "downloadReplayed": true,
+    "computerAndReset": true,
+    "safetyStopAndReplay": true,
+    "mobileWidths": [
+      320,
+      390,
+      432
+    ],
+    "pageErrors": []
+  },
+  "previousProofs": {
+    "learningInputViews": 482,
+    "searchOracleComparisons": 1926,
+    "transitionComparisons": 24887,
+    "normalGames": 400
+  },
+  "artifacts": [
+    {
+      "id": 11317637493,
+      "name": "formal-artifact-resume-verification",
+      "digest": "sha256:8d66e59135b88d5e6120253f98fe134240aaeb6b10823afdf7763869c07818b0",
+      "size_in_bytes": 842,
+      "created_at": "2026-10-04T22:45:47Z",
+      "expires_at": "2026-11-03T22:45:46Z"
+    },
+    {
+      "id": 11317637472,
+      "name": "next-turn-prototype-verification",
+      "digest": "sha256:f3de6f0b768b8c372bd4b3444e6b2fbe20e110a79cff8d49ec7e07f8c0a3728d",
+      "size_in_bytes": 850079,
+      "created_at": "2026-10-04T22:45:31Z",
+      "expires_at": "2026-11-03T22:45:30Z"
+    },
+    {
+      "id": 11317426709,
+      "name": "formal-dev-shard-1",
+      "digest": "sha256:45d6e9c1807038690e737ebf610e1030721d04c0070b366ea6363104c0600f57",
+      "size_in_bytes": 41578,
+      "created_at": "2026-10-04T22:44:31Z",
+      "expires_at": "2026-11-03T22:44:30Z"
+    },
+    {
+      "id": 11317322956,
+      "name": "teacher-feasibility-results",
+      "digest": "sha256:f2d683844726301d5be9b8da06d934b61d54b60e51e32b3b64d628d71af67346",
+      "size_in_bytes": 13234,
+      "created_at": "2026-10-04T22:44:35Z",
+      "expires_at": "2026-11-03T22:44:34Z"
+    },
+    {
+      "id": 11317268079,
+      "name": "shard-1",
+      "digest": "sha256:b64837483818324f36f23989c527d26b2400b103f1de6a51694be9b69b50fb6e",
+      "size_in_bytes": 31906,
+      "created_at": "2026-10-04T22:44:25Z",
+      "expires_at": "2026-11-03T22:44:24Z"
+    },
+    {
+      "id": 11317092122,
+      "name": "shard-3",
+      "digest": "sha256:b66bbf4a8eb8cbc9abbda2e2361be8525eab04d50fbc018d99f744026aecab00",
+      "size_in_bytes": 31908,
+      "created_at": "2026-10-04T22:44:20Z",
+      "expires_at": "2026-11-03T22:44:20Z"
+    },
+    {
+      "id": 11316849422,
+      "name": "formal-selection-v2-preflight",
+      "digest": "sha256:1ab749e44a0711f0b6cd008284c32685b345cf937e5a3ee6f0a2766289b98adc",
+      "size_in_bytes": 3018,
+      "created_at": "2026-10-04T22:47:14Z",
+      "expires_at": "2026-11-03T22:47:13Z"
+    },
+    {
+      "id": 11316787896,
+      "name": "formal-dev-shard-3",
+      "digest": "sha256:4ad9d7efaf39dde7230beb551bbe0ec4cfc24bccea45aa8653ea35991cef6b8e",
+      "size_in_bytes": 41774,
+      "created_at": "2026-10-04T22:44:33Z",
+      "expires_at": "2026-11-03T22:44:32Z"
+    },
+    {
+      "id": 11316739984,
+      "name": "shard-2",
+      "digest": "sha256:63d8386f19840dc13cd1347974217653574f591974739e1c0b3b855b1e0c3f00",
+      "size_in_bytes": 31894,
+      "created_at": "2026-10-04T22:44:23Z",
+      "expires_at": "2026-11-03T22:44:23Z"
+    },
+    {
+      "id": 11316733374,
+      "name": "formal-dev-plan",
+      "digest": "sha256:2b1334fa66bdb745fbf2ac671dd3da54f6fa646ed2d70acc8ce20890328e2c19",
+      "size_in_bytes": 250405,
+      "created_at": "2026-10-04T22:44:29Z",
+      "expires_at": "2026-11-03T22:44:28Z"
+    },
+    {
+      "id": 11316733367,
+      "name": "shard-0",
+      "digest": "sha256:c526afef081baf6c244e00d04bd2f9e99b865444c116cb26c4b43188af0947a9",
+      "size_in_bytes": 31820,
+      "created_at": "2026-10-04T22:44:23Z",
+      "expires_at": "2026-11-03T22:44:23Z"
+    },
+    {
+      "id": 11316728373,
+      "name": "formal-dev-shard-0",
+      "digest": "sha256:b090f20fa067a6f784e75a8ce54d77753c42385899c8e0b8c046cdac895e1c3a",
+      "size_in_bytes": 41660,
+      "created_at": "2026-10-04T22:44:30Z",
+      "expires_at": "2026-11-03T22:44:29Z"
+    },
+    {
+      "id": 11316514795,
+      "name": "formal-dev-shard-2",
+      "digest": "sha256:a9b13ef6130978ed4d5ea8bb9036fa4687142f0d3343144ccbad58fa4fbb2e2d",
+      "size_in_bytes": 41743,
+      "created_at": "2026-10-04T22:44:32Z",
+      "expires_at": "2026-11-03T22:44:31Z"
+    }
+  ],
+  "supersededRun": {
+    "runId": 37240970166,
+    "headSha": "61a81f320b8661fa71cea77183f61959c7fa136e",
+    "conclusion": "failure",
+    "candidatePreflight": "success-same-plan-digest-as-local",
+    "prototypeTests": {
+      "total": 89,
+      "passed": 88,
+      "failed": 1
+    },
+    "failedTest": "v2 formal shards reject development clocks, local provenance and insufficient candidates before writing or evaluating",
+    "cause": "The negative test implicitly used local origin; Actions default supplied valid workflow provenance, so rejection occurred at the candidate gate instead.",
+    "resolution": "Pass explicit local origin in the fixture; no selection conditions changed."
+  },
+  "limits": [
+    "Formal teacher requests remain zero; full collection not started.",
+    "Candidate sufficiency does not establish acceptance after terminal-line capping, strength or training readiness.",
+    "Formal final content and layer counts are not exposed.",
+    "All development pilot partitions are readable and are not formal holdout data.",
+    "Manual workflow dispatch and repository secret configuration are unavailable through the current connector; key existence is unverified.",
+    "No main merge or public AI replacement."
+  ]
+}
