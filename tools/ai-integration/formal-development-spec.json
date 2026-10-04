@@ -1,0 +1,64 @@
+{
+  "id": "NAKAKAMADO-FORMAL-INFRASTRUCTURE-PILOT-v1",
+  "scope": "development-only-all-partitions-readable-not-formal-holdout",
+  "namespace": "formal-infrastructure-pilot-v1-never-formal-holdout",
+  "rulesVersion": "0.8.0",
+  "encodingId": "NAKAKAMADO-BINARY-v1",
+  "inputSize": 368,
+  "seedStartIndex": 850000,
+  "seedCount": 24,
+  "policies": [
+    "random",
+    "noisy",
+    "greedy",
+    "reply"
+  ],
+  "openingPlies": 12,
+  "maxTrajectoryPlies": 400,
+  "candidatePlies": [
+    12,
+    25,
+    40
+  ],
+  "additionalCandidates": [
+    "last-nonterminal",
+    "first-reserved-only",
+    "first-two-placement",
+    "first-three-placement",
+    "first-last-ordinary",
+    "first-near-transition"
+  ],
+  "ordering": "sorted-opening-group-round-robin-then-unit-id-and-ply",
+  "teacher": {
+    "maxDepth": 2,
+    "quiescenceDepth": 1,
+    "timeLimitMs": 1000
+  },
+  "clock": "fixed-development-correctness-only",
+  "shards": 4,
+  "maximumTeacherRequests": 96,
+  "maximumRequestsPerShard": 24,
+  "minimumAcceptedFraction": 0.95,
+  "minimumAcceptedRows": {
+    "train": 1,
+    "validation": 1,
+    "final": 1
+  },
+  "minimumOpeningGroups": {
+    "train": 1,
+    "validation": 1,
+    "final": 1
+  },
+  "split": {
+    "salt": "NAKAKAMADO-LEARNING-v1",
+    "trainBelow": 60,
+    "validationBelow": 80
+  },
+  "minimumCoverage": {
+    "train": {},
+    "validation": {},
+    "final": {}
+  },
+  "maximumTerminalLineFractionPerSplit": 0.2,
+  "knownExclusionPolicy": "development-self-corpus-is-readable-formal-collection-excludes-this-pilot"
+}

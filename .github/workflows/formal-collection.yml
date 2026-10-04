@@ -1,0 +1,112 @@
+name: NYAKUA formal teacher collection
+on:
+  workflow_dispatch:
+    inputs:
+      resume_receipts:
+        description: 'Pinned prior shard receipts as a JSON array; [] starts a fresh collection'
+        required: true
+        default: '[]'
+        type: string
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: nyakua-formal-collection-v1
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      BAO_COLLECTION_KEY_BASE64: ${{ secrets.BAO_COLLECTION_KEY_BASE64 }}
+      BAO_COLLECTION_KEY_FILE: ${{ runner.temp }}/collection.key
+      BAO_RESUME_RECEIPTS: ${{ inputs.resume_receipts }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Load private collection key
+        run: node tools/ai-integration/formal-workflow.cjs key
+      - name: Freeze exclusion-checked candidate plan before teacher requests
+        run: node tools/ai-integration/formal-workflow.cjs prepare "$RUNNER_TEMP/formal-plan"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: formal-plan
+          path: ${{ runner.temp }}/formal-plan/*.json
+          retention-days: 30
+  collect:
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    env:
+      BAO_COLLECTION_KEY_BASE64: ${{ secrets.BAO_COLLECTION_KEY_BASE64 }}
+      BAO_COLLECTION_KEY_FILE: ${{ runner.temp }}/collection.key
+      BAO_COLLECTION_PLAN_FILE: ${{ runner.temp }}/formal-plan/plan.sealed.json
+      BAO_RESUME_RECEIPTS: ${{ inputs.resume_receipts }}
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          name: formal-plan
+          path: ${{ runner.temp }}/formal-plan/
+      - name: Load private collection key
+        run: node tools/ai-integration/formal-workflow.cjs key
+      - name: Verify and restore pinned completed measurements
+        run: node tools/ai-integration/formal-workflow.cjs restore "$RUNNER_TEMP/formal-collection" "${{ matrix.shard }}"
+      - name: Collect missing requests with the real-clock teacher
+        run: node tools/ai-integration/formal-workflow.cjs shard "$RUNNER_TEMP/formal-collection" "${{ matrix.shard }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: formal-shard-${{ matrix.shard }}
+          path: ${{ runner.temp }}/formal-collection/shard-${{ matrix.shard }}/*.json
+          retention-days: 30
+  audit-and-seal:
+    needs: [prepare, collect]
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      BAO_COLLECTION_KEY_BASE64: ${{ secrets.BAO_COLLECTION_KEY_BASE64 }}
+      BAO_COLLECTION_KEY_FILE: ${{ runner.temp }}/collection.key
+      BAO_COLLECTION_PLAN_FILE: ${{ runner.temp }}/formal-plan/plan.sealed.json
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          name: formal-plan
+          path: ${{ runner.temp }}/formal-plan/
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: formal-shard-*
+          merge-multiple: false
+          path: ${{ runner.temp }}/formal-artifacts/
+      - name: Arrange separately verified shard directories
+        run: |
+          node - <<'JS'
+          const fs=require('node:fs'),path=require('node:path');
+          const from=path.join(process.env.RUNNER_TEMP,'formal-artifacts'),to=path.join(process.env.RUNNER_TEMP,'formal-collection');
+          fs.mkdirSync(to);for(let i=0;i<16;i++)fs.renameSync(path.join(from,'formal-shard-'+i),path.join(to,'shard-'+i));
+          JS
+      - name: Load private collection key
+        run: node tools/ai-integration/formal-workflow.cjs key
+      - name: Audit every partition and seal final data
+        run: node tools/ai-integration/formal-workflow.cjs aggregate "$RUNNER_TEMP/formal-collection" "$RUNNER_TEMP/formal-dataset"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: formal-dataset
+          path: ${{ runner.temp }}/formal-dataset/*.json
+          retention-days: 30

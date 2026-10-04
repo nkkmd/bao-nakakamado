@@ -21,6 +21,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+  actions: read
 jobs:
   prototype:
     runs-on: ubuntu-latest
@@ -31,9 +32,43 @@ jobs:
         with:
           node-version: '24'
       - name: Rule and DOM tests
-        run: node --test tools/ai-integration/teacher-feasibility.test.cjs tools/ai-integration/learning-pipeline.test.cjs prototype/search-ai.test.cjs prototype/search-transition.test.cjs prototype/next-turn.test.cjs prototype/four-row.test.cjs prototype/app.test.cjs prototype/bounce.test.cjs prototype/steal.test.js tools/fixed-pit-bulk-study.test.cjs tools/fixed-pit-triggered-study.test.cjs
+        run: node --test tools/ai-integration/formal-collection.test.cjs tools/ai-integration/teacher-feasibility.test.cjs tools/ai-integration/learning-pipeline.test.cjs prototype/search-ai.test.cjs prototype/search-transition.test.cjs prototype/next-turn.test.cjs prototype/four-row.test.cjs prototype/app.test.cjs prototype/bounce.test.cjs prototype/steal.test.js tools/fixed-pit-bulk-study.test.cjs tools/fixed-pit-triggered-study.test.cjs
       - name: Learning input, split and checkpoint pilot
         run: node tools/ai-integration/verify-learning-pilot.cjs "$RUNNER_TEMP/learning-pilot"
+      - name: Formal infrastructure development pilot
+        env:
+          BAO_COLLECTION_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: node tools/ai-integration/verify-formal-infrastructure.cjs "$RUNNER_TEMP/formal-infrastructure"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: formal-dev-plan
+          path: ${{ runner.temp }}/formal-infrastructure/plan.sealed.json
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: formal-dev-shard-0
+          path: ${{ runner.temp }}/formal-infrastructure/shard-0/*.json
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: formal-dev-shard-1
+          path: ${{ runner.temp }}/formal-infrastructure/shard-1/*.json
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: formal-dev-shard-2
+          path: ${{ runner.temp }}/formal-infrastructure/shard-2/*.json
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: formal-dev-shard-3
+          path: ${{ runner.temp }}/formal-infrastructure/shard-3/*.json
+          retention-days: 30
       - name: Search and exhaustive minimax equivalence
         run: node tools/ai-integration/verify-search.cjs "$RUNNER_TEMP/search-verification.json"
       - name: NYAKUA search transition equivalence
@@ -57,6 +92,7 @@ jobs:
             ${{ runner.temp }}/next-turn-live-results.json
             ${{ runner.temp }}/transition-verification.json
             ${{ runner.temp }}/search-verification.json
+            ${{ runner.temp }}/formal-infrastructure/formal-infrastructure-verification.json
             ${{ runner.temp }}/learning-pilot/
             ${{ runner.temp }}/bao-next-turn-ui/
           retention-days: 30
@@ -104,4 +140,26 @@ jobs:
         with:
           name: teacher-feasibility-results
           path: ${{ runner.temp }}/teacher-feasibility-results.json
+          retention-days: 30
+
+  formal-artifact-resume:
+    if: github.event_name != 'push'
+    needs: prototype
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+      BAO_COLLECTION_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Restore pinned development artifacts via API and validate ZIP digests
+        run: node tools/ai-integration/verify-formal-artifact-resume.cjs "$RUNNER_TEMP/formal-artifact-resume"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: formal-artifact-resume-verification
+          path: ${{ runner.temp }}/formal-artifact-resume/formal-artifact-resume-verification.json
           retention-days: 30
