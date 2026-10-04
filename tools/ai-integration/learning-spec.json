@@ -1,0 +1,46 @@
+{
+  "id": "NAKAKAMADO-LEARNING-DESIGN-20261004-v1",
+  "status": "design-and-pipeline-pilot-only",
+  "rulesVersion": "0.8.0",
+  "baseCommit": "622621c8caba5f08b5076e6a93d806d61ca33874",
+  "encodingId": "NAKAKAMADO-BINARY-v1",
+  "inputSize": 368,
+  "targetScale": 1024,
+  "pilot": {
+    "namespace": "pipeline-pilot-v1-never-formal-holdout",
+    "seedStartIndex": 700000,
+    "seedCount": 24,
+    "policies": ["random", "noisy", "greedy", "reply"],
+    "openingPlies": 12,
+    "samplePlies": [12, 25, 40],
+    "sampleLastNonTerminal": true,
+    "maxPlies": 400,
+    "teacher": {"maxDepth": 2, "quiescenceDepth": 1, "timeLimitMs": 1000},
+    "clock": "fixed-for-shallow-pipeline-verification"
+  },
+  "split": {"salt": "NAKAKAMADO-LEARNING-v1", "trainBelow": 60, "validationBelow": 80,
+    "crossSplitCollision": "quarantine-all-copies", "withinSplitDuplicate": "keep-first-unit-and-ply"},
+  "formalProposal": {
+    "status": "not-started-requires-feasibility-freeze",
+    "freshSeedStartIndex": 900000,
+    "teacher": {"maxDepth": 4, "quiescenceDepth": 1, "timeLimitMs": 5000},
+    "clock": "real-monotonic",
+    "minimumAcceptedRows": {"train": 2048, "validation": 512, "final": 512},
+    "models": ["handcrafted-baseline", "binary-linear", "mlp-32", "logic-3x512"],
+    "training": {"epochs": 150, "batchSize": 64, "learningRate": 0.01, "ridgeLambda": 0.01,
+      "quantizationScale": 4096, "initializationSeeds": [2026100401, 2026100402, 2026100403]},
+    "finalHoldout": "seal-after-global-dedup-and-freeze-model-before-opening",
+    "adoption": "requires-separate-strength-and-device-validation"
+  },
+  "sourceReference": {
+    "repository": "nkkmd/bao-la-kiswahili-game",
+    "commit": "8c87ed44c9b08f75456766f0a9bd9f76d06209d4",
+    "license": "MIT",
+    "copyright": "Copyright (c) 2026 cultivationdata.net",
+    "files": [
+      {"path": "public/logic-evaluator.js", "gitBlobSha": "eda656db8bb3fcbede3acee28711914811cab63a"},
+      {"path": "tools/engineering/train-pbai-p6.py", "gitBlobSha": "5456c75f2fd4458e978f91d275f23a7e800c2670"}
+    ],
+    "trainedModelImported": false
+  }
+}

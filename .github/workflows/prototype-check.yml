@@ -31,7 +31,9 @@ jobs:
         with:
           node-version: '24'
       - name: Rule and DOM tests
-        run: node --test prototype/search-ai.test.cjs prototype/search-transition.test.cjs prototype/next-turn.test.cjs prototype/four-row.test.cjs prototype/app.test.cjs prototype/bounce.test.cjs prototype/steal.test.js tools/fixed-pit-bulk-study.test.cjs tools/fixed-pit-triggered-study.test.cjs
+        run: node --test tools/ai-integration/learning-pipeline.test.cjs prototype/search-ai.test.cjs prototype/search-transition.test.cjs prototype/next-turn.test.cjs prototype/four-row.test.cjs prototype/app.test.cjs prototype/bounce.test.cjs prototype/steal.test.js tools/fixed-pit-bulk-study.test.cjs tools/fixed-pit-triggered-study.test.cjs
+      - name: Learning input, split and checkpoint pilot
+        run: node tools/ai-integration/verify-learning-pilot.cjs "$RUNNER_TEMP/learning-pilot"
       - name: Search and exhaustive minimax equivalence
         run: node tools/ai-integration/verify-search.cjs "$RUNNER_TEMP/search-verification.json"
       - name: NYAKUA search transition equivalence
@@ -55,5 +57,6 @@ jobs:
             ${{ runner.temp }}/next-turn-live-results.json
             ${{ runner.temp }}/transition-verification.json
             ${{ runner.temp }}/search-verification.json
+            ${{ runner.temp }}/learning-pilot/
             ${{ runner.temp }}/bao-next-turn-ui/
           retention-days: 30

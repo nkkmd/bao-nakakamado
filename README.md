@@ -38,6 +38,8 @@ Bao la Kiswahili の実装を出発点に、NYAKUA（ニャクア、ハンド奪
 
 [元ゲーム](https://github.com/nkkmd/bao-la-kiswahili-game)と[採用ルール基準](https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/doc/RULES_BASELINE.md)を出発点に、変更点を明記します。takasia未実装、連続種まきの安全上限など、保存済みエンジンの実装範囲を引き継ぎます。
 
+[教師データ・モデル入力・学習の設計](doc/AI_LEARNING_DESIGN_20261004.md)では、368bitの専用入力と、データ分割・除外・再開のパイロット96単位を整備しました。本学習・独立の最終評価は未実施です。
+
 元ゲームの公開AIの強さや研究結果を、今回の試作へそのまま適用しません。片側だけ先にMTAJIへ入る案は採用していません。勝負宣言・抽選・追加手番は削除済みで、運要素の検討は凍結しています。
 
 [v0.8.0のファイル整合監査](doc/V080_CONSISTENCY_AUDIT_20261002.md)に、文書・試験案内・CIの更新内容と検証結果を記録しています。

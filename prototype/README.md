@@ -52,6 +52,8 @@ ENGINE_LICENSE.txt
 
 ## 確認
 
+[第3段階の設計とパイロット](../doc/AI_LEARNING_DESIGN_20261004.md)では、学習用の専用入力と教師データの分割・再開を `tools/ai-integration/` に整備しました。本学習・新AIの画面組込みは未実施です。
+
 AI導入の準備として、`steal.js` の通常処理とNYAKUA会計を共通化した、盤面専用の軽量遷移を `search-transition.js` から提供しています。配信画面はまだこの探索アダプターを読み込みません。[導入計画](../doc/AI_INTEGRATION_PLAN_20261004.md)と[照合ツール](../tools/ai-integration/README.md)を参照してください。第2段階では `search-evaluator.js` と `search-ai.js` に手作り評価関数付きの探索版を追加しました。[実装と検証](../doc/AI_SEARCH_IMPLEMENTATION_20261004.md)を参照してください。画面への新AI組込みは後続工程です。
 
 リポジトリ直下で実行します。

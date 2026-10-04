@@ -32,8 +32,6 @@ const result = Q.applyMove(state, move);
 
 ブラウザーでは `next-turn-engine.js` → `steal.js` → `search-transition.js` の順で読み込む。今回、配信画面のindex.htmlには探索アダプターを追加していない。`BaoEngine.applyMoveForSearch` を直接使うとNYAKUAの奪取が含まれないため、将来の探索は必ずこのアダプターを通す。
 
-## 結果の境界
-
 第2段階の[探索版の実装・検証記録](../../doc/AI_SEARCH_IMPLEMENTATION_20261004.md)と[全探索照合結果](search-verification.json)も保存した。第1段階の結果JSONと参照元一覧は当時の記録として保持する。
 
 ## 探索版の検証と利用
@@ -56,6 +54,27 @@ const result = A.analyzeMove(Q.initialState(), {
 ```
 
 ブラウザーでの追加順は `search-transition.js` → `search-evaluator.js` → `search-ai.js`。配信画面はまだこの探索版を読み込まない。未完了の評価値はnull、安全停止は未確定と識別する。探索版は学習済みAIでも正式公開AIでもない。
+
+## 学習入力・教師データの処理パイロット
+
+[第3段階の設計](../../doc/AI_LEARNING_DESIGN_20261004.md)と [learning-spec.json](learning-spec.json) に条件を記録する。Node 24とPython 3の標準ライブラリだけを使い、学習・NumPy・モデルの作成は行わない。
+
+```sh
+node --test tools/ai-integration/learning-pipeline.test.cjs
+node tools/ai-integration/verify-learning-pilot.cjs /tmp/bao-learning-verification
+```
+
+検証は新しいcheckpointディレクトリを作り、96生成単位・両観点のPython/Node入力照合・1単位欠落と途中書込みからの再開・全完了からの再開を確認する。結果は指定先の `learning-pilot-verification.json`、原データと完了単位はその下の `checkpoints-*` へ保存する。[保存済み結果](learning-pilot-verification.json)は同じソースhashに限定する。
+
+途中処理を再開する場合は、表示された同じcheckpointディレクトリを指定する。
+
+```sh
+node tools/ai-integration/learning-pipeline.cjs /tmp/bao-learning-verification/checkpoints-XXXXXX
+```
+
+設定・ソースhash・checksumが違う完了単位は拒否する。ソース変更後は別の出力先を使い、保存済み原記録を上書きしない。集約したpilotデータとsummaryは再計算する。CIは失敗時もcheckpointをartifactへ保存する。artifact期限後も保存結果と固定ソースから再現できる。
+
+入力は368bitで、元ゲームの399bitモデルとは互換ではない。パイロットのtrain/validation/finalは処理確認用で、閲覧済みのfinalを正式な最終確認へ使わない。正式データ収集・学習・matrix再開workflow・棋力試験は未実施。
 
 ## 検証結果の適用範囲
 
