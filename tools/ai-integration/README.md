@@ -111,7 +111,7 @@ node tools/ai-integration/verify-formal-infrastructure.cjs /tmp/bao-formal-devel
 
 正式条件の [事前候補監査](formal-candidate-preflight-results.json) は `HOLD-BEFORE-TEACHER`。trainのMTAJI 10/512・確保分のみ0/16、validationのMTAJI 3/128・確保分のみ2/4で不足し、教師要求0件で停止した。同じseed範囲・候補・split割当・8192要求・最低件数を維持する[選択計画v2](../../doc/AI_FORMAL_SELECTION_V2_20261005.md)を別IDに固定し、全候補条件を通過した。v1を上書きせず、収集時に版を明示する。
 
-手動 [formal-collection.yml](../../.github/workflows/formal-collection.yml) はprepare→16shard→全体監査・封印を行う。正式起動には独立した32byte鍵のbase64をrepository secret `BAO_COLLECTION_KEY_BASE64` に設定する。鍵をコード・artifactへ含めない。手動入力 `collection_version` は `v2`（既定）または `v1`。v2は事前候補ゲートを通過し、v1は保留になる。正式手動workflowは未実行である。mainにworkflowをまだ統合しておらず、手動起動可能性も確認していない。
+手動 [formal-collection.yml](../../.github/workflows/formal-collection.yml) はprepare→16shard→全体監査・封印を行う。正式起動には独立した32byte鍵のbase64をrepository secret `BAO_COLLECTION_KEY_BASE64` に設定する。鍵をコード・artifactへ含めない。手動入力 `collection_version` は `v2`（既定）または `v1`。v2は事前候補ゲートを通過し、v1は保留になる。正式手動workflowは未実行である。PR #17でmainへworkflowを統合した。runnerのパス定義を修正した後のCIも全8ジョブ成功。現在はブラウザー認証待ちで、secret確認・鍵設定・正式起動は未実行。[workflow登録・起動状況](../../doc/AI_FORMAL_COLLECTION_ACTIVATION_20261005.md)を参照。
 
 再開時の `resume_receipts` はrepository・runId・attempt・headSha・artifactId・name・API digestを固定したJSON配列。未再開は `[]`。同じソース・計画・除外一覧・鍵だけで復元し、元の計測originを保持する。APIメタデータ、ZIP実byteのdigest、entryの安全性、計測の認証を検査する。不採用の完了計測も再利用し、時間切れを自動再計測しない。artifactは30日で期限を迎えるため、記録したdigestだけで期限後の原ZIPを取得できるわけではない。
 

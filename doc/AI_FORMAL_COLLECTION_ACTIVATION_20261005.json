@@ -1,0 +1,126 @@
+{
+  "id": "NAKAKAMADO-FORMAL-ACTIVATION-v2-20261005",
+  "recordDateJST": "2026-10-05",
+  "status": "WORKFLOW-MERGED-WAITING-FOR-BROWSER-AUTHENTICATION",
+  "repository": "nkkmd/bao-nakakamado",
+  "approval": {
+    "mainMerge": true,
+    "browserFallback": true,
+    "keyVerificationAndProvisioning": true,
+    "formalV2Dispatch": true
+  },
+  "merge": {
+    "pullRequest": 17,
+    "acceptedHeadSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718",
+    "mergeCommitSha": "210b1001af6151ce67b53072d7463b623eff7395",
+    "mergedAt": "2026-10-04T23:47:44Z"
+  },
+  "workflowFix": {
+    "commitSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718",
+    "invalidWorkflowRun": 37243077125,
+    "reason": "runner.temp is unavailable in jobs.<job_id>.env; paths now initialized on the assigned runner through GITHUB_ENV",
+    "collectionSourcesUnchanged": true,
+    "localRelatedTests": {
+      "total": 22,
+      "passed": 22,
+      "failed": 0
+    }
+  },
+  "verification": {
+    "runId": 37244722999,
+    "attempt": 1,
+    "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "id": 111560225422,
+        "name": "prototype",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 111560225558,
+        "name": "formal-selection-v2-preflight",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 111560225562,
+        "name": "teacher-feasibility (2)",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 111560225595,
+        "name": "teacher-feasibility (0)",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 111560225596,
+        "name": "teacher-feasibility (3)",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 111560225603,
+        "name": "teacher-feasibility (1)",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 111560288871,
+        "name": "teacher-feasibility-aggregate",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 111560506903,
+        "name": "formal-artifact-resume",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "tests": {
+      "total": 89,
+      "passed": 89,
+      "failed": 0
+    },
+    "planDigest": "891329b4e865c97591211072acb18db53022a9704fb0dc7fd0dd479c70600a03",
+    "sourceDigest": "4e4d3acfbcfb5de5c9bf7e77accd8b3dbd26649389c0ab06471a025275d0cdac",
+    "registryDigest": "eda140703e63bc813c2284427e2b471312f103c0ffb0cdfcbdfa36f0d4827a3c",
+    "preflightArtifact": {
+      "id": 11318223898,
+      "name": "formal-selection-v2-preflight",
+      "digest": "sha256:d02b74a274e351c52c1217360f36471d0452c6143e4c99cbddcef7c907b6f774",
+      "source": "workflow upload log; ZIP not downloaded in this activation stage"
+    }
+  },
+  "nextDispatch": {
+    "ref": "feat/nyakua-ai-search-foundation-20261004",
+    "inputs": {
+      "collection_version": "v2",
+      "resume_receipts": "[]"
+    },
+    "maximumRequests": 8192,
+    "shards": 16
+  },
+  "browser": {
+    "signInMethodSelected": "passkey",
+    "state": "waiting-for-input-from-browser-interaction",
+    "pageMessage": "This browser or device is reporting partial passkey support.",
+    "signedInIdentityVerified": false
+  },
+  "secret": {
+    "name": "BAO_COLLECTION_KEY_BASE64",
+    "presence": "unverified",
+    "generated": false,
+    "changed": false
+  },
+  "formalRunId": null,
+  "formalTeacherRequestsExecuted": 0,
+  "formalCollectionStarted": false,
+  "finalOpened": false,
+  "trainingStarted": false,
+  "publicAIReplaced": false
+}

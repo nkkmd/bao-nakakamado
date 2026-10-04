@@ -43,7 +43,7 @@ Bao la KiswahiliのAI-GEN4と同様の探索機構と論理ゲート型評価器
 
 通常の着手と軽量遷移の最終盤面、投入数、捕獲回数、奪取数、合法variantを一致させる。入力非変更、南北交換、全棋譜再構築、総KETE保存、境界条件、既知の安全停止を検証する。
 
-完了条件は、不一致0件、必要な規則の検証欠落0件、既存回帰の失敗0件。検証対象のseed・候補遷移数・ソースハッシュを保存し、実画面の回帰もCIで確認する。ローカルとGitHub Actionsの実画面確認が通過し、第1段階の検証は完了した。[検証記録](AI_SEARCH_TRANSITION_VERIFICATION_20261004.md)で根拠と実行対象を管理する。mainへの統合は未実施。
+完了条件は、不一致0件、必要な規則の検証欠落0件、既存回帰の失敗0件。検証対象のseed・候補遷移数・ソースハッシュを保存し、実画面の回帰もCIで確認する。ローカルとGitHub Actionsの実画面確認が通過し、第1段階の検証は完了した。[検証記録](AI_SEARCH_TRANSITION_VERIFICATION_20261004.md)で根拠と実行対象を管理する。2026年10月5日にPR #17でmainへ統合した。
 
 ### 第2段階：探索機構の移植
 
@@ -87,9 +87,9 @@ README、設計、診断・棋譜メタデータ、画面、出典・MIT表示�
 
 ## 次の作業
 
-[正式収集の起動手順](AI_FORMAL_COLLECTION_LAUNCH_20261005.md)を具体化した。記録追加後のCIも全8ジョブ成功。手動workflowを既定ブランチmainへ置く必要があり、続く鍵設定・手動起動には現在の接続が提供しない画面操作が必要である。ブラウザーへの切替の承認を得るまで、main統合・鍵設定・正式起動は実施済みと扱わない。
+[正式収集の起動手順](AI_FORMAL_COLLECTION_LAUNCH_20261005.md)を具体化し、ユーザー承認を得てPR #17をmainへ統合した。正式workflowのパス定義を修正した後のCIも89テスト・全8ジョブ成功。[workflow登録・起動状況](AI_FORMAL_COLLECTION_ACTIVATION_20261005.md)にmerge SHAと検証を記録した。鍵確認・必要な設定・正式起動も承認済みで、現在はブラウザーのパスキー認証待ち。正式収集はまだ起動していない。
 
-[実時計の教師試走](AI_TEACHER_FEASIBILITY_20261004.md)と不足していた確保分のみの到達局面の収集を完了した。64件すべてが深度4まで完了し、正式収集の条件を [formal-collection-spec.json](../tools/ai-integration/formal-collection-spec.json) へ固定した。[正式収集基盤](AI_FORMAL_COLLECTION_INFRASTRUCTURE_20261004.md)の除外一覧・generator・全体重複監査・固定artifact復元・封印は実装済み。正式条件の候補監査ではtrainのMTAJIが10/512、確保分のみ0/16、validationのMTAJIが3/128、確保分のみ2/4で不足し、教師要求前に停止した。v1の原記録を保持し、同じseed範囲・候補・split割当・8192要求・最低件数で、必要層を先に確保する[選択計画v2](AI_FORMAL_SELECTION_V2_20261005.md)を別IDに固定した。v2の事前監査は全条件を通過し、89テストと全8 CIジョブも成功した。trainのMTAJI 640・確保分のみ20、validationは160・5。次は独立した収集鍵と起動経路を整え、v2の実時計教師を収集し、採用後の件数・層・漏洩を再監査してfinalを封印する。その後に学習器・モデル比較の条件を固定する。本学習・棋力判断・公開コンピューターの差し替え・main統合は未実施。
+[実時計の教師試走](AI_TEACHER_FEASIBILITY_20261004.md)と不足していた確保分のみの到達局面の収集を完了した。64件すべてが深度4まで完了し、正式収集の条件を [formal-collection-spec.json](../tools/ai-integration/formal-collection-spec.json) へ固定した。[正式収集基盤](AI_FORMAL_COLLECTION_INFRASTRUCTURE_20261004.md)の除外一覧・generator・全体重複監査・固定artifact復元・封印は実装済み。正式条件の候補監査ではtrainのMTAJIが10/512、確保分のみ0/16、validationのMTAJIが3/128、確保分のみ2/4で不足し、教師要求前に停止した。v1の原記録を保持し、同じseed範囲・候補・split割当・8192要求・最低件数で、必要層を先に確保する[選択計画v2](AI_FORMAL_SELECTION_V2_20261005.md)を別IDに固定した。v2の事前監査は全条件を通過し、89テストと全8 CIジョブも成功した。trainのMTAJI 640・確保分のみ20、validationは160・5。次は独立した収集鍵と起動経路を整え、v2の実時計教師を収集し、採用後の件数・層・漏洩を再監査してfinalを封印する。その後に学習器・モデル比較の条件を固定する。本学習・棋力判断・公開コンピューターの差し替えは未実施。mainへの準備基盤の統合は完了した。
 
 ## 出典と適用範囲
 

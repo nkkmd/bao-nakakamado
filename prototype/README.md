@@ -56,6 +56,8 @@ ENGINE_LICENSE.txt
 
 [教師探索の実時計試走](../doc/AI_TEACHER_FEASIBILITY_20261004.md)で、確保分のみの到達棋譜と64局面の深度4完了を確認しました。[正式収集基盤](../doc/AI_FORMAL_COLLECTION_INFRASTRUCTURE_20261004.md)の生成・全体監査・暗号化保存・固定artifact復元・最終検証の封印を整備しました。81テストと全7 CIジョブが成功しました。v1の正式候補不足を受けた[選択計画v2](../doc/AI_FORMAL_SELECTION_V2_20261005.md)は、同じ候補・split割当・最低件数で事前条件を通過し、89テストと全8 CIジョブも成功しました。正式教師要求はまだ0件で、次は正式収集・採用後の監査と封印です。本学習と公開AIの差し替えは未実施です。
 
+PR #17をmainへ統合し、正式収集workflowを登録しました。修正後のCIは89テスト・全8ジョブ成功。現在はブラウザー認証待ちで、正式収集は未起動です。[workflow登録・起動状況](../doc/AI_FORMAL_COLLECTION_ACTIVATION_20261005.md)を参照してください。
+
 AI導入の準備として、`steal.js` の通常処理とNYAKUA会計を共通化した、盤面専用の軽量遷移を `search-transition.js` から提供しています。配信画面はまだこの探索アダプターを読み込みません。[導入計画](../doc/AI_INTEGRATION_PLAN_20261004.md)と[照合ツール](../tools/ai-integration/README.md)を参照してください。第2段階では `search-evaluator.js` と `search-ai.js` に手作り評価関数付きの探索版を追加しました。[実装と検証](../doc/AI_SEARCH_IMPLEMENTATION_20261004.md)を参照してください。画面への新AI組込みは後続工程です。
 
 リポジトリ直下で実行します。
