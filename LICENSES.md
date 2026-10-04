@@ -1,6 +1,6 @@
 # ライセンスと出典
 
-更新日：2026年10月2日。コードは **MIT**、説明文・図版は **CC BY-SA 4.0** で提供します。同じファイルを利用者が自由に選べる二重ライセンスではなく、以下の対象ごとに適用します。
+更新日：2026年10月4日。コードは **MIT**、説明文・図版は **CC BY-SA 4.0** で提供します。同じファイルを利用者が自由に選べる二重ライセンスではなく、以下の対象ごとに適用します。
 
 ## 適用範囲
 
@@ -22,6 +22,7 @@ CC BY-SA対象の文書は © 2026 nkkmd and Bao Nakakamado contributors。元�
 - 出発点：[bao-la-kiswahili-game](https://github.com/nkkmd/bao-la-kiswahili-game)。元のプログラム・画面のMIT表示は **Copyright (c) 2026 cultivationdata.net**。
 - 取り込んだエンジンと画面の表示を [prototype/ENGINE_LICENSE.txt](prototype/ENGINE_LICENSE.txt) に原文のまま保存しています。`prototype/style.css` の既存クレジットも保持します。
 - このプロジェクトではNYAKUA、投入方法、試作画面、棋譜、調査ツールなどを追加・変更しています。規則変更は[考案・公開・変更履歴](doc/ORIGIN_AND_HISTORY.md)、現行実装は[試作README](prototype/README.md)を参照してください。
+- 2026年10月4日、開発用の `prototype/search-ai.js` と `prototype/search-evaluator.js` に、元ゲームの固定コミット `8c87ed44c9b08f75456766f0a9bd9f76d06209d4` の `public/ai.js`・`public/ai-weights.js` を適応しました。MIT、Copyright (c) 2026 cultivationdata.net。探索接続、局面識別、時間制限、安全停止、ニャクアの評価特徴・重みを変更しています。[移植記録](doc/AI_SEARCH_IMPLEMENTATION_20261004.md)を参照してください。学習済み論理ゲート型評価器は取り込んでいません。
 
 ### ルールの説明文
 

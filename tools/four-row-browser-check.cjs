@@ -55,6 +55,19 @@ async function main() {
    if(!nyakua)throw Error("No NYAKUA browser coverage");
    return {transitions,nyakua};
   },trace.map(t=>t.move));
+  for(const file of ["search-evaluator.js","search-ai.js"]){
+   await page.addScriptTag({url:`http://127.0.0.1:${server.address().port}/${file}`});
+  }
+  const searchStates=[Study.E.initialState(),trace.find(t=>t.before.nyakuaReserve[t.before.player]>0).before];
+  const nodeAI=require("../prototype/search-ai.js").createAI(
+   require("../prototype/search-transition.js").createForEngine(Study.E),{now:()=>0});
+  const searchAIResults=await page.evaluate(states=>{
+   const Q=window.NakakamadoSearchTransition.createForEngine(window.BaoEngine);
+   const A=window.NakakamadoSearchAI.createAI(Q,{now:()=>0});
+   return states.map(b=>A.analyzeMove(b,{maxDepth:3}));
+  },searchStates);
+  assert.deepEqual(searchAIResults,searchStates.map(b=>nodeAI.analyzeMove(b,{maxDepth:3})));
+  const searchAICheck={positions:searchStates.length,completedDepth:3,nodeBrowserMatch:true};
   let reference=Study.S.initialGame(),rearMoves=0,extraMoves=0;
   for(const t of trace) {
    const m=t.move,coord=`${reference.board.player===0?"S":"N"}${m.row===0?"F":"B"}${m.index+1}`;
@@ -110,7 +123,7 @@ async function main() {
   assert.deepEqual(Study.S.replay(stopped.history).board,stopped.final);
   await page.screenshot({path:path.join(out,"mobile-safety-stop.png"),fullPage:true});
   assert.deepEqual(errors,[]);
-  const result={browser:browser.version(),pits:32,plies:trace.length,rearMoves,extraMoves,searchCheck,downloadReplayed:true,computerAndReset:true,safetyStopAndReplay:true,mobileWidths:[320,390,432],pageErrors:errors};
+  const result={browser:browser.version(),pits:32,plies:trace.length,rearMoves,extraMoves,searchCheck,searchAICheck,downloadReplayed:true,computerAndReset:true,safetyStopAndReplay:true,mobileWidths:[320,390,432],pageErrors:errors};
   fs.writeFileSync(path.join(out,"result.json"),JSON.stringify(result,null,2)+"\n");console.log(JSON.stringify(result));
  } finally {if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));}
 }

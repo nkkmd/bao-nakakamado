@@ -34,4 +34,29 @@ const result = Q.applyMove(state, move);
 
 ## 結果の境界
 
+第2段階の[探索版の実装・検証記録](../../doc/AI_SEARCH_IMPLEMENTATION_20261004.md)と[全探索照合結果](search-verification.json)も保存した。第1段階の結果JSONと参照元一覧は当時の記録として保持する。
+
+## 探索版の検証と利用
+
+```sh
+node --test prototype/search-ai.test.cjs
+node tools/ai-integration/verify-search.cjs /tmp/search-verification.json
+```
+
+全探索照合は [search-verification-spec.json](search-verification-spec.json) の局面・深度・構成を使う。時計を固定した照合の軌跡ハッシュは再現可能だが、同じファイル内の24件の実時間試走のelapsedMsは実行ごとに変わる。
+
+```js
+const E = require('../../prototype/next-turn-engine.js');
+const Q = require('../../prototype/search-transition.js').createForEngine(E);
+const A = require('../../prototype/search-ai.js').createAI(Q);
+const result = A.analyzeMove(Q.initialState(), {
+  maxDepth: 4, timeLimitMs: 500, quiescenceDepth: 1,
+});
+// result.move / result.stats.completedDepth / result.stats.rootScore
+```
+
+ブラウザーでの追加順は `search-transition.js` → `search-evaluator.js` → `search-ai.js`。配信画面はまだこの探索版を読み込まない。未完了の評価値はnull、安全停止は未確定と識別する。探索版は学習済みAIでも正式公開AIでもない。
+
+## 検証結果の適用範囲
+
 一致検証は、対象局面での実装整合を確認するもの。棋力、先後均衡、全局面での停止、AI-GEN4と同じ強さ、性能改善の証明ではない。ソース変更後は保存済み結果を新しいコードの証拠として使わず、新しい結果と識別を保存する。
