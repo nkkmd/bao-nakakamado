@@ -4,17 +4,19 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const P=require('./learning-pipeline.cjs'),I=require('./learning-input.cjs'),R=require('./formal-registry.cjs'),T=require('./teacher-feasibility.cjs');
 const E=require('../../prototype/next-turn-engine.js'),Q=require('../../prototype/search-transition.js').createForEngine(E);
 const S=require('../../prototype/steal.js').createForEngine(E),F=require('../../prototype/search-ai.js'),C=require('../nyakua-three/core.cjs');
-const formal=require('./formal-collection-spec.json'),development=require('./formal-development-spec.json'),hash=P.hash,clone=x=>JSON.parse(JSON.stringify(x));
+const formal=require('./formal-collection-spec.json'),formalV2=require('./formal-collection-v2-spec.json'),development=require('./formal-development-spec.json'),hash=P.hash,clone=x=>JSON.parse(JSON.stringify(x));
+const V2=require('./formal-selection-v2.cjs'),isFormal=c=>c.namespace!==development.namespace;
 const shaBytes=b=>crypto.createHash('sha256').update(b).digest('hex');
 function configCheck(c){
- assert.ok(JSON.stringify(c)===JSON.stringify(formal)||JSON.stringify(c)===JSON.stringify(development),'Unregistered collection configuration');
+ assert.ok([formal,formalV2,development].some(registered=>JSON.stringify(c)===JSON.stringify(registered)),'Unregistered collection configuration');
  assert.equal(c.shards*c.maximumRequestsPerShard,c.maximumTeacherRequests);assert.equal(c.openingPlies,P.spec.pilot.openingPlies);
  assert.equal(c.maxTrajectoryPlies,P.spec.pilot.maxPlies);assert.equal(c.inputSize,I.INPUT_SIZE);assert.deepEqual(c.policies,P.spec.pilot.policies);return c;
 }
 function sources(){const extra=['formal-registry.cjs','formal-collection.cjs','formal-collection.test.cjs','formal-artifact.cjs',
- 'formal-development-spec.json','formal-workflow.cjs','formal-collection-spec.json','verify-formal-infrastructure.cjs','safe-artifact-unzip.py'];
+ 'formal-development-spec.json','formal-workflow.cjs','formal-collection-spec.json','verify-formal-infrastructure.cjs','safe-artifact-unzip.py',
+ 'formal-collection-v2-spec.json','formal-selection-v2.cjs','formal-selection-v2.test.cjs','verify-formal-selection-v2.cjs'];
  return {...T.sourceHashes(),...R.sourceHashes(),...Object.fromEntries(extra.map(p=>['tools/ai-integration/'+p,hash(fs.readFileSync(path.join(__dirname,p),'utf8'))]))};}
-function splitFor(group,c){const n=parseInt(hash([c.split.salt,c.namespace,group]).slice(0,8),16)%100;return n<c.split.trainBelow?'train':n<c.split.validationBelow?'validation':'final';}
+function splitFor(group,c){const n=parseInt(hash([c.split.salt,c.split.partitionNamespace||c.namespace,group]).slice(0,8),16)%100;return n<c.split.trainBelow?'train':n<c.split.validationBelow?'validation':'final';}
 function replay(row,c){
  assert.ok(c.policies.includes(row.policy));assert.ok(Number.isSafeInteger(row.seedIndex)&&row.seedIndex>=c.seedStartIndex&&row.seedIndex<c.seedStartIndex+c.seedCount);
  assert.equal(row.seed,C.seedAt(row.seedIndex));assert.equal(row.unitId,row.policy+'-'+row.seedIndex);assert.equal(row.first,row.seedIndex%2);
@@ -28,7 +30,7 @@ function replay(row,c){
 function roundRobin(rows){const groups=new Map();for(const r of rows){if(!groups.has(r.group))groups.set(r.group,[]);groups.get(r.group).push(r);}
  const buckets=[...groups].sort(([a],[b])=>a<b?-1:a>b?1:0).map(([,v])=>v.sort((a,b)=>a.unitId<b.unitId?-1:a.unitId>b.unitId?1:a.ply-b.ply));
  const ordered=[];for(let i=0;buckets.some(v=>i<v.length);i++)for(const bucket of buckets)if(bucket[i])ordered.push(bucket[i]);return ordered;}
-function candidateAudit(rows,registry,c){
+function candidateAudit(rows,registry,c,{onEligible}={}){
  const groups=new Set(registry.openingGroups),known=new Set(registry.positionHashes),knownInputs=new Set(registry.inputHashes);
  // Quarantine across the entire candidate universe before exclusion and request cap.
  const partitions=new Map();for(const r of rows)for(const k of [r.id,r.inputHash]){if(!partitions.has(k))partitions.set(k,new Set());partitions.get(k).add(r.split);}
@@ -39,9 +41,11 @@ function candidateAudit(rows,registry,c){
   if(c.namespace!==development.namespace&&r.split!=='train'&&(known.has(r.id)||knownInputs.has(r.inputHash))){counts.knownPositions++;continue;}
   if(seen.has(r.id)||seen.has(r.inputHash)){counts.withinSplitCopies++;continue;}seen.add(r.id);seen.add(r.inputHash);kept.push(r);
  }
- return {rows:kept.slice(0,c.maximumTeacherRequests),counts:{...counts,candidates:rows.length,eligible:kept.length,capOmitted:Math.max(0,kept.length-c.maximumTeacherRequests)}};
+ if(onEligible)onEligible(kept);
+ const selected=c.selection?.version===2?V2.select(kept,c,roundRobin):kept.slice(0,c.maximumTeacherRequests);
+ return {rows:selected,counts:{...counts,candidates:rows.length,eligible:kept.length,capOmitted:kept.length-selected.length}};
 }
-function prepare(registry,c=formal){
+function prepare(registry,c=formal,{onProgress,onEligible}={}){
  configCheck(c);R.validateRegistry(registry);const candidates=[];let shortOpenings=0;const cutoffs={};
  for(const policy of c.policies)for(let i=0;i<c.seedCount;i++){
   const seedIndex=c.seedStartIndex+i,t=P.trajectory(policy,seedIndex),prefix=t.states.slice(0,c.openingPlies+1);
@@ -61,8 +65,9 @@ function prepare(registry,c=formal){
    candidates.push({id:hash(I.positionKey(state)),inputHash:hash(input),unitId:policy+'-'+seedIndex,policy,seedIndex,seed:t.seed,first:seedIndex%2,ply,
     group,split:splitFor(group,c),state:clone(state),input,moves:moves.slice(0,ply)});
   }
+  if(onProgress&&(i%256===255||i===c.seedCount-1))onProgress({policy,pathsCompleted:i+1,pathsPerPolicy:c.seedCount});
  }
- const a=candidateAudit(candidates,registry,c);for(const r of a.rows)replay(r,c);
+ const a=candidateAudit(candidates,registry,c,{onEligible});for(const r of a.rows)replay(r,c);
  const payload={schema:1,config:c,sources:sources(),registryDigest:registry.digest,selection:{...a.counts,shortOpenings,cutoffs},rows:a.rows};
  return {...payload,digest:hash(payload)};
 }
@@ -97,14 +102,14 @@ function loadPlan(file,key,registry){return validatePlan(decrypt(read(file),key,
 function runOrigin(){return process.env.GITHUB_RUN_ID?{repository:process.env.GITHUB_REPOSITORY,runId:Number(process.env.GITHUB_RUN_ID),attempt:Number(process.env.GITHUB_RUN_ATTEMPT),headSha:process.env.BAO_COLLECTION_HEAD_SHA||process.env.GITHUB_SHA}
  :{repository:'local-development',runId:0,attempt:1,headSha:'local-development'};}
 function originCheck(o,c){assert.ok(o&&Number.isSafeInteger(o.runId)&&o.runId>=0&&Number.isSafeInteger(o.attempt)&&o.attempt>=1);
- if(c.namespace===formal.namespace){assert.equal(o.repository,'nkkmd/bao-nakakamado');assert.ok(o.runId>0&&/^[a-f0-9]{40}$/.test(o.headSha),'Formal collection needs recorded Actions provenance');}}
+ if(isFormal(c)){assert.equal(o.repository,'nkkmd/bao-nakakamado');assert.ok(o.runId>0&&/^[a-f0-9]{40}$/.test(o.headSha),'Formal collection needs recorded Actions provenance');}}
 function measurementBinding(plan,index){return {purpose:'teacher-checkpoint',planDigest:plan.digest,index};}
 function checkMeasurement(m,row,c){assert.equal(m.id,row.id);assert.deepEqual(m.label,P.labelFor(row.state,m.result,c.teacher));
  assert.ok(Q.moveVariants(row.state).some(move=>F.moveKey(move)===F.moveKey(m.result.move)),'Illegal teacher move');
  assert.ok(Number.isFinite(m.result.stats.elapsedMs)&&m.result.stats.elapsedMs>=0);originCheck(m.origin,c);}
 function runShard(root,plan,registry,key,shard,{analyze,origin=runOrigin(),maximumNew=Infinity}={}){
  validatePlan(plan,registry);keyCheck(key);const c=plan.config;originCheck(origin,c);assert.ok(Number.isInteger(shard)&&shard>=0&&shard<c.shards);
- if(c.namespace===formal.namespace)assert.equal(analyze,undefined,'Formal teacher must use the real clock');
+ if(isFormal(c)){assert.equal(analyze,undefined,'Formal teacher must use the real clock');assert.equal(candidateGates(plan).status,'CANDIDATES-SUFFICIENT-FOR-TEACHER','Candidate plan is on HOLD');}
  const directory=path.join(root,'shard-'+shard),manifestFile=path.join(directory,'manifest.json');
  const binding={schema:1,planDigest:plan.digest,sourceDigest:hash(plan.sources),registryDigest:registry.digest,shard,shards:c.shards};
  const indexes=plan.rows.map((_,i)=>i).filter(i=>i%c.shards===shard);assert.ok(indexes.length<=c.maximumRequestsPerShard);
@@ -148,7 +153,7 @@ function aggregate(root,plan,registry,key,output){validatePlan(plan,registry);ke
  }
  const a=labelAudit(plan,measurements),auditDigest=hash({planDigest:plan.digest,summary:a.summary,accepted:a.accepted,rejected:a.rejected});
  const publicSummary={schema:1,configId:plan.config.id,namespace:plan.config.namespace,planDigest:plan.digest,registryDigest:registry.digest,sourceDigest:hash(plan.sources),
-  status:a.status,requested:a.requested,accepted:a.accepted,rejected:a.rejected,postAuditLeaks:0,development:plan.config.namespace!==formal.namespace,
+  status:a.status,requested:a.requested,accepted:a.accepted,rejected:a.rejected,postAuditLeaks:0,development:!isFormal(plan.config),
   train:a.summary.train,validation:a.summary.validation,final:{sealed:true,digest:a.summary.final.digest,requirementsPassed:a.summary.final.passed},auditDigest,provenance};
  if(output){fs.mkdirSync(output,{recursive:true});const sealFile=path.join(output,'final.sealed.json'),summaryFile=path.join(output,'collection-summary.json');
   if(fs.existsSync(summaryFile)){const old=read(summaryFile);assert.equal(old.auditDigest,auditDigest,'Existing sealed audit differs');assert.equal(old.planDigest,plan.digest);
@@ -184,4 +189,4 @@ if(require.main===module){try{
  else if(command==='open'){console.log(JSON.stringify(openFinal(root,key,read(arg),process.env.BAO_FROZEN_MODEL_FILE,process.env.BAO_VALIDATION_GATE_FILE,process.env.BAO_FINAL_OUTPUT_FILE)));}
  else throw Error('Command');
 }catch{console.error('Collection operation failed; no payload logged');process.exitCode=1;}}
-module.exports={formal,development,hash,shaBytes,sources,configCheck,splitFor,replay,roundRobin,candidateAudit,prepare,candidateGates,validatePlan,encrypt,decrypt,atomic,read,savePlan,loadPlan,planBinding,runOrigin,measurementBinding,checkMeasurement,runShard,capTerminal,labelAudit,aggregate,openFinal};
+module.exports={formal,formalV2,development,isFormal,hash,shaBytes,sources,configCheck,splitFor,replay,roundRobin,candidateAudit,prepare,candidateGates,validatePlan,encrypt,decrypt,atomic,read,savePlan,loadPlan,planBinding,runOrigin,measurementBinding,checkMeasurement,runShard,capTerminal,labelAudit,aggregate,openFinal};

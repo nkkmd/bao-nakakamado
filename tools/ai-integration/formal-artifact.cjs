@@ -14,7 +14,7 @@ function checkReceipt(receipt,run,artifact){
 }
 function inspectShard(directory,plan,registry,key,receipt){
  A.validatePlan(plan,registry);const m=A.read(path.join(directory,'manifest.json')),c=plan.config,shard=m.binding.shard;
- assert.equal(receipt.name,(c.namespace===A.formal.namespace?'formal-shard-':'formal-dev-shard-')+shard);
+ assert.equal(receipt.name,(A.isFormal(c)?'formal-shard-':'formal-dev-shard-')+shard);
  assert.deepEqual(m.binding,{schema:1,planDigest:plan.digest,sourceDigest:A.hash(plan.sources),registryDigest:registry.digest,shard,shards:c.shards});
  assert.deepEqual(m.origin,{repository:receipt.repository,runId:receipt.runId,attempt:receipt.attempt,headSha:receipt.headSha});
  const indexes=plan.rows.map((_,i)=>i).filter(i=>i%c.shards===shard);assert.deepEqual(m.indexes,indexes);

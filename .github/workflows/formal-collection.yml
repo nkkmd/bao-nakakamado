@@ -2,6 +2,12 @@ name: NYAKUA formal teacher collection
 on:
   workflow_dispatch:
     inputs:
+      collection_version:
+        description: 'Frozen selection plan version; v1 retains its historical HOLD result'
+        required: true
+        default: 'v2'
+        type: choice
+        options: [v2, v1]
       resume_receipts:
         description: 'Pinned prior shard receipts as a JSON array; [] starts a fresh collection'
         required: true
@@ -11,13 +17,14 @@ permissions:
   contents: read
   actions: read
 concurrency:
-  group: nyakua-formal-collection-v1
+  group: nyakua-formal-collection-${{ inputs.collection_version }}
   cancel-in-progress: false
 jobs:
   prepare:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
+      BAO_COLLECTION_VERSION: ${{ inputs.collection_version }}
       BAO_COLLECTION_KEY_BASE64: ${{ secrets.BAO_COLLECTION_KEY_BASE64 }}
       BAO_COLLECTION_KEY_FILE: ${{ runner.temp }}/collection.key
       BAO_RESUME_RECEIPTS: ${{ inputs.resume_receipts }}
@@ -45,6 +52,7 @@ jobs:
       matrix:
         shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
     env:
+      BAO_COLLECTION_VERSION: ${{ inputs.collection_version }}
       BAO_COLLECTION_KEY_BASE64: ${{ secrets.BAO_COLLECTION_KEY_BASE64 }}
       BAO_COLLECTION_KEY_FILE: ${{ runner.temp }}/collection.key
       BAO_COLLECTION_PLAN_FILE: ${{ runner.temp }}/formal-plan/plan.sealed.json
@@ -76,6 +84,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
+      BAO_COLLECTION_VERSION: ${{ inputs.collection_version }}
       BAO_COLLECTION_KEY_BASE64: ${{ secrets.BAO_COLLECTION_KEY_BASE64 }}
       BAO_COLLECTION_KEY_FILE: ${{ runner.temp }}/collection.key
       BAO_COLLECTION_PLAN_FILE: ${{ runner.temp }}/formal-plan/plan.sealed.json

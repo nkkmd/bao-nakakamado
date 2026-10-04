@@ -96,7 +96,7 @@ PRまたは手動Actionsの4workerは、それぞれ16件を測定後、同じ�
 
 通常ハンド0・確保分1の標準初期配置からの到達4件は [reserved-only-reachable-fixtures.json](reserved-only-reachable-fixtures.json)。通常処理の全棋譜再生と全合法variantの1個投入を検査する。終局・不正手・総KETE違いを教師へ混ぜない。
 
-正式収集の現在の固定条件は [formal-collection-spec.json](formal-collection-spec.json)。この試走CLIは正式データの生成器ではない。正式の除外一覧・generator・全体監査・artifact復元・最終検証封印は以下の基盤として実装した。正式候補の必要層不足により教師要求前に保留し、正式収集・学習は未開始である。前工程の `learning-spec.json` と結果は原記録として保持する。
+正式収集の現在の固定条件は [formal-collection-spec.json](formal-collection-spec.json)。この試走CLIは正式データの生成器ではない。正式の除外一覧・generator・全体監査・artifact復元・最終検証封印は以下の基盤として実装した。v1は候補の必要層不足で教師要求前に保留した。後続のv2は事前条件を通過し、正式収集・学習は未開始である。前工程の `learning-spec.json` と結果は原記録として保持する。
 
 ## 正式収集基盤の処理確認と保留
 
@@ -109,13 +109,26 @@ node tools/ai-integration/verify-formal-infrastructure.cjs /tmp/bao-formal-devel
 
 出力先は未使用のディレクトリを指定する。公開テスト鍵・時計固定の深度2・全partition閲覧は [開発専用仕様](formal-development-spec.json) に限定し、正式holdoutへ転用しない。除外一覧は [formal-registry.cjs](formal-registry.cjs) から固定ソースで再生成してdigestを照合する。保存済みの除外一覧や旧結果は上書きしない。
 
-正式条件の [事前候補監査](formal-candidate-preflight-results.json) は `HOLD-BEFORE-TEACHER`。trainのMTAJI 10/512・確保分のみ0/16、validationのMTAJI 3/128・確保分のみ2/4で不足し、教師要求0件で停止した。次は同じseed範囲・8192要求・最低件数を維持して、必要層を先に選ぶ計画v2を別IDに固定する。現行v1を起動して不足を回避する運用には進まない。
+正式条件の [事前候補監査](formal-candidate-preflight-results.json) は `HOLD-BEFORE-TEACHER`。trainのMTAJI 10/512・確保分のみ0/16、validationのMTAJI 3/128・確保分のみ2/4で不足し、教師要求0件で停止した。同じseed範囲・候補・split割当・8192要求・最低件数を維持する[選択計画v2](../../doc/AI_FORMAL_SELECTION_V2_20261005.md)を別IDに固定し、全候補条件を通過した。v1を上書きせず、収集時に版を明示する。
 
-手動 [formal-collection.yml](../../.github/workflows/formal-collection.yml) はprepare→16shard→全体監査・封印を行う。正式起動には独立した32byte鍵のbase64をrepository secret `BAO_COLLECTION_KEY_BASE64` に設定する。鍵をコード・artifactへ含めない。現行v1は候補ゲートで保留になり、正式手動workflowは未実行である。mainにworkflowをまだ統合しておらず、手動起動可能性も確認していない。
+手動 [formal-collection.yml](../../.github/workflows/formal-collection.yml) はprepare→16shard→全体監査・封印を行う。正式起動には独立した32byte鍵のbase64をrepository secret `BAO_COLLECTION_KEY_BASE64` に設定する。鍵をコード・artifactへ含めない。手動入力 `collection_version` は `v2`（既定）または `v1`。v2は事前候補ゲートを通過し、v1は保留になる。正式手動workflowは未実行である。mainにworkflowをまだ統合しておらず、手動起動可能性も確認していない。
 
 再開時の `resume_receipts` はrepository・runId・attempt・headSha・artifactId・name・API digestを固定したJSON配列。未再開は `[]`。同じソース・計画・除外一覧・鍵だけで復元し、元の計測originを保持する。APIメタデータ、ZIP実byteのdigest、entryの安全性、計測の認証を検査する。不採用の完了計測も再利用し、時間切れを自動再計測しない。artifactは30日で期限を迎えるため、記録したdigestだけで期限後の原ZIPを取得できるわけではない。
 
 集約後はtrain・validationと暗号化final・暗号化詳細監査を分ける。formalの開封は必要件数通過後、モデルファイルとvalidation基準・観測値を固定し、承認意思を含むgateで一度だけ行う。学習前のformal開封gateは作成していない。
+
+## 選択計画v2の全候補監査
+
+[固定仕様](formal-collection-v2-spec.json)、[選択コード](formal-selection-v2.cjs)、[監査結果](formal-selection-v2-preflight-results.json)を参照。v1と同じ候補母集団・既知除外・開幕のsplit割当を使い、必要層を先に確保する。各最低値の5/4を切り上げた選択目標を持つが、採用基準は変更しない。ラベルやfinalの成績を見て選択しない。
+
+```sh
+node --test tools/ai-integration/formal-selection-v2.test.cjs tools/ai-integration/formal-collection.test.cjs
+node tools/ai-integration/verify-formal-selection-v2.cjs /tmp/bao-selection-v2-preflight-new.json
+```
+
+verifierは未使用の出力ファイルを要求する。16,384経路を再生成し、v1のtrain/validation選択の再現、全候補の除外・重複件数の一致、逆順入力でのv2選択不変性、8192件の通常再生を検査する。教師要求は0件で、finalの必要条件通過だけを表示する。
+
+PR/手動CIの専用job `formal-selection-v2-preflight` でも再現し、全候補条件の通過を要求する。候補条件通過後も、正式計測の受理率・最低件数・必要層・終局線20%上限・漏洩を再監査する。旧ソースのv1計画やcheckpointは、現在のv2ソースへ再利用できない。旧結果の再現には記録した過去コミットを使う。
 
 ## 検証結果の適用範囲
 

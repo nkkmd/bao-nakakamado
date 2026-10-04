@@ -85,4 +85,4 @@ ply 12以降の進行中局面20,831件を走査し、手番側への正規化�
 
 [再現用README](../tools/ai-integration/README.md)を参照。集約に追加した依存は公式の [`actions/download-artifact@v4`](https://github.com/actions/download-artifact/tree/v4)。MIT、Copyright (c) 2018 GitHub, Inc. and contributors。README blob `aa71e839b25e781fee4222931e5751b65c9f0449`、LICENSE blob `a67dca8b4f65d6bd351f6b1e333ce2cd84d843a5` を確認した。artifact名ごとに別ディレクトリへ配置し、内容を混ぜず検証する。依存本体を配信用prototypeへコピーしていない。
 
-上記の教師試走時点では、次は正式収集用の除外一覧・generator・全体監査・artifact復元・封印処理の実装だった。2026年10月5日までの[後続記録](AI_FORMAL_COLLECTION_INFRASTRUCTURE_20261004.md)でこれらを整備し、正式候補の必要層不足を教師要求前に検出した。現在は選択計画v2の事前固定と候補監査が次工程である。今回の64局面と4境界棋譜は開発用既知コーパスとして扱う。
+上記の教師試走時点では、次は正式収集用の除外一覧・generator・全体監査・artifact復元・封印処理の実装だった。2026年10月5日までの[後続記録](AI_FORMAL_COLLECTION_INFRASTRUCTURE_20261004.md)でこれらを整備し、正式候補の必要層不足を教師要求前に検出した。その後の[選択計画v2](AI_FORMAL_SELECTION_V2_20261005.md)で、同じ候補・split割当・最低件数の事前条件を通過した。現在の次工程は正式収集・採用後の再監査と封印である。今回の64局面と4境界棋譜は開発用既知コーパスとして扱う。
