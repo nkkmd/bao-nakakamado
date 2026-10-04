@@ -6,11 +6,16 @@ on:
       - 'tools/four-row-*'
       - 'tools/next-turn-*'
       - 'tools/nyakua-three/**'
+      - 'tools/fixed-pit-*'
       - 'tools/ai-integration/**'
       - '.github/workflows/prototype-check.yml'
   pull_request:
     paths:
       - 'prototype/**'
+      - 'tools/four-row-*'
+      - 'tools/next-turn-*'
+      - 'tools/nyakua-three/**'
+      - 'tools/fixed-pit-*'
       - 'tools/ai-integration/**'
       - '.github/workflows/prototype-check.yml'
   workflow_dispatch:
