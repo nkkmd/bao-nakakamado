@@ -1,0 +1,54 @@
+{
+  "dateJst": "2026-10-04",
+  "status": "PASS",
+  "scope": "transition-equivalence-and-browser-regression",
+  "workflow": {
+    "runId": 37197120672,
+    "jobId": 111421194231,
+    "headSha": "2a3092e8559f2a6d4305acb133b5bcb5cab8ccd0",
+    "runAttempt": 1,
+    "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/37197120672",
+    "status": "completed",
+    "conclusion": "success"
+  },
+  "nodeVersion": "24.21.0",
+  "ruleAndDomTests": {
+    "tests": 44,
+    "pass": 44,
+    "fail": 0
+  },
+  "transitionVerification": {
+    "games": 128,
+    "positions": 6776,
+    "transitions": 24887,
+    "mirroredTransitions": 24887,
+    "traceSha256": "7fc8c90978be16b090b62438420880029a6266bde4d3dc31b84b8f44b4c3d6de"
+  },
+  "existingLiveRegression": {
+    "games": 400,
+    "transitions": 7129,
+    "mirrorPairs": 40,
+    "replays": 40,
+    "passes": 0
+  },
+  "browser": {
+    "browser": "151.0.7922.34",
+    "pits": 32,
+    "plies": 64,
+    "rearMoves": 12,
+    "extraMoves": 6,
+    "searchCheck": {
+      "transitions": 272,
+      "nyakua": 26
+    },
+    "downloadReplayed": true,
+    "computerAndReset": true,
+    "safetyStopAndReplay": true,
+    "mobileWidths": [
+      320,
+      390,
+      432
+    ],
+    "pageErrors": []
+  }
+}
