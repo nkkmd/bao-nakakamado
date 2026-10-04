@@ -42,7 +42,8 @@ test('unavailable strata stay unavailable; tiny caps never duplicate or invent r
 test('v2 formal shards reject development clocks, local provenance and insufficient candidates before writing or evaluating',t=>{
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'bao-v2-guard-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));const {plan,reg}=sealPlan();let calls=0;
  assert.throws(()=>A.runShard(root,plan,reg,Buffer.alloc(32,37),0,{analyze:()=>{calls++;},origin}),/real clock/);
- assert.throws(()=>A.runShard(root,plan,reg,Buffer.alloc(32,37),0),/recorded Actions provenance|strictly equal/);
+ const localOrigin={repository:'local-development',runId:0,attempt:1,headSha:'local-development'};
+ assert.throws(()=>A.runShard(root,plan,reg,Buffer.alloc(32,37),0,{origin:localOrigin}),/recorded Actions provenance|strictly equal/);
  assert.throws(()=>A.runShard(root,plan,reg,Buffer.alloc(32,37),0,{origin}),/HOLD/);assert.equal(calls,0);assert.deepEqual(fs.readdirSync(root),[]);
 });
 test('v2 uses formal artifact names and keeps aggregate metadata classified as formal',t=>{
