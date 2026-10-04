@@ -31,7 +31,7 @@ jobs:
         with:
           node-version: '24'
       - name: Rule and DOM tests
-        run: node --test tools/ai-integration/learning-pipeline.test.cjs prototype/search-ai.test.cjs prototype/search-transition.test.cjs prototype/next-turn.test.cjs prototype/four-row.test.cjs prototype/app.test.cjs prototype/bounce.test.cjs prototype/steal.test.js tools/fixed-pit-bulk-study.test.cjs tools/fixed-pit-triggered-study.test.cjs
+        run: node --test tools/ai-integration/teacher-feasibility.test.cjs tools/ai-integration/learning-pipeline.test.cjs prototype/search-ai.test.cjs prototype/search-transition.test.cjs prototype/next-turn.test.cjs prototype/four-row.test.cjs prototype/app.test.cjs prototype/bounce.test.cjs prototype/steal.test.js tools/fixed-pit-bulk-study.test.cjs tools/fixed-pit-triggered-study.test.cjs
       - name: Learning input, split and checkpoint pilot
         run: node tools/ai-integration/verify-learning-pilot.cjs "$RUNNER_TEMP/learning-pilot"
       - name: Search and exhaustive minimax equivalence
@@ -59,4 +59,49 @@ jobs:
             ${{ runner.temp }}/search-verification.json
             ${{ runner.temp }}/learning-pilot/
             ${{ runner.temp }}/bao-next-turn-ui/
+          retention-days: 30
+  teacher-feasibility:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Measure real-clock teacher and reuse completed measurements
+        run: |
+          node tools/ai-integration/teacher-feasibility.cjs shard "$RUNNER_TEMP/teacher-feasibility" "${{ matrix.shard }}"
+          node tools/ai-integration/teacher-feasibility.cjs shard "$RUNNER_TEMP/teacher-feasibility" "${{ matrix.shard }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: shard-${{ matrix.shard }}
+          path: ${{ runner.temp }}/teacher-feasibility/shard-${{ matrix.shard }}/
+          retention-days: 30
+  teacher-feasibility-aggregate:
+    needs: teacher-feasibility
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: shard-*
+          merge-multiple: false
+          path: ${{ runner.temp }}/teacher-feasibility/
+      - name: Aggregate verified measurements
+        run: node tools/ai-integration/teacher-feasibility.cjs aggregate "$RUNNER_TEMP/teacher-feasibility" "$RUNNER_TEMP/teacher-feasibility-results.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: teacher-feasibility-results
+          path: ${{ runner.temp }}/teacher-feasibility-results.json
           retention-days: 30
