@@ -1,6 +1,6 @@
 # 正式収集の生成・監査・暗号化保存の整備
 
-着手日：2026年10月4日（日本時間）。規則v0.8.0、入力368bit。出発点：`5c57f1f3062f363e24282bb6352c647563cdba06`。
+着手日：2026年10月4日、CI・記録確認日：2026年10月5日（日本時間）。規則v0.8.0、入力368bit。出発点：`5c57f1f3062f363e24282bb6352c647563cdba06`。
 
 ## 今回の対象
 
@@ -54,7 +54,11 @@ ZIPは全entryを先に検査し、ディレクトリ越え・重複名・symlin
 
 ローカルの専用14テストが成功した。開発パイロットは443候補から重複117件を除き、上限96教師要求をすべて完了した。採用後はtrain 48・validation 30・開発final 18行、groupは28/18/11、split間の漏洩0件。部分再開は2件再利用・22件生成、全完了からは4shardすべて24件再利用・新規0件だった。終局線capによる除外はこの標本では0件で、上限そのものは故意の偏ったテストで確認した。
 
-[パイロット記録](../tools/ai-integration/formal-infrastructure-verification.json)にソースhash・計画・除外一覧・再開・sealのdigestを保存する。Actionsと別runからの実artifact復元は追加CIで確認する。
+[パイロット記録](../tools/ai-integration/formal-infrastructure-verification.json)にソースhash・計画・除外一覧・再開・sealのdigestを保存する。実装コミット `a048c8ebfe1ea82beccbe13d68a89066b292da8f` の [Actions run 37211470473](https://github.com/nkkmd/bao-nakakamado/actions/runs/37211470473)、attempt 1で全7ジョブが成功した。81テスト、従来の482入力観点・1,926全探索比較・24,887遷移・400局と実ブラウザー回帰も通過した。[CI記録](AI_FORMAL_COLLECTION_INFRASTRUCTURE_CI_20261005.json)に対象SHA・job・artifactのdigestを保存する。
+
+同じActions runの別workerでは、APIから計画と4shardの実ZIPを取得して96件を復元し、新規教師要求0件で通過した。さらにrun 37211470473・attempt 1・head SHA・5 artifactのID/digestを固定して別のローカル環境へ取得し、ZIPのbyte hash・APIメタデータ・暗号化計測・計画を照合した。[固定artifact復元記録](../tools/ai-integration/formal-pinned-artifact-resume-verification.json)では96件再利用・新規0件、final digestは元CIと一致した。別のActions runの実行という意味ではなく、固定した旧runから別環境への復元確認である。正式16shardの手動収集workflowはまだ起動していない。
+
+CIの開発復元は毎回のrunのartifactを使い、期限付きの旧artifactへの恒久依存を作らない。公開のテスト鍵・全partition閲覧は開発仕様だけの扱いであり、正式finalを開封したものではない。final digestには計測環境・元run情報も含むため、ローカル新規計測とCI新規計測のdigestが一致するとは主張しない。
 
 ## 正式条件の候補監査で判明した不足
 

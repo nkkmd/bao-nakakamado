@@ -74,7 +74,7 @@ node tools/ai-integration/learning-pipeline.cjs /tmp/bao-learning-verification/c
 
 設定・ソースhash・checksumが違う完了単位は拒否する。ソース変更後は別の出力先を使い、保存済み原記録を上書きしない。集約したpilotデータとsummaryは再計算する。CIは失敗時もcheckpointをartifactへ保存する。artifact期限後も保存結果と固定ソースから再現できる。
 
-入力は368bitで、元ゲームの399bitモデルとは互換ではない。パイロットのtrain/validation/finalは処理確認用で、閲覧済みのfinalを正式な最終確認へ使わない。正式データ収集・学習・matrix再開workflow・棋力試験は未実施。
+入力は368bitで、元ゲームの399bitモデルとは互換ではない。パイロットのtrain/validation/finalは処理確認用で、閲覧済みのfinalを正式な最終確認へ使わない。この旧パイロットは本収集・学習・棋力試験を行わない。後続の正式収集基盤のworkflowと復元は以下を参照。
 
 ## 実時計の教師試走と到達棋譜
 
@@ -92,11 +92,30 @@ node tools/ai-integration/teacher-feasibility.cjs aggregate /tmp/bao-teacher-tri
 
 同じshardコマンドを再実行すると完了計測をchecksum・設定・ソース・コーパスで照合して再利用する。時間切れの計測も完了扱いで保持し、ラベルは除外する。実時間は新規実行ごとに変わるので、元の結果を上書きしない。集約は4shardをすべて要求し、混在・欠落・破損を拒否する。
 
-PRまたは手動Actionsの4workerは、それぞれ16件を測定後、同じディレクトリで再開を確認する。pushだけのCIでは重複測定を省く。各 `shard-0`〜`shard-3` artifactと集約結果を30日保存し、失敗時も完了単位を保存する。別runから再開する場合は、対象run/attemptとAPIのartifact digestを固定・確認してZIPを展開し、上記rootの直下に `shard-0`〜`shard-3` を復元する。同じソースと設定で各shardを実行し、集約する。別runの自動復元workflowは未実装。
+PRまたは手動Actionsの4workerは、それぞれ16件を測定後、同じディレクトリで再開を確認する。pushだけのCIでは重複測定を省く。各 `shard-0`〜`shard-3` artifactと集約結果を30日保存し、失敗時も完了単位を保存する。別runから再開する場合は、対象run/attemptとAPIのartifact digestを固定・確認してZIPを展開し、上記rootの直下に `shard-0`〜`shard-3` を復元する。同じソースと設定で各shardを実行し、集約する。この旧教師試走CLIの別run自動復元workflowは実装していない。後続の正式収集用には、固定receiptを検証する復元処理を別に整備した。
 
 通常ハンド0・確保分1の標準初期配置からの到達4件は [reserved-only-reachable-fixtures.json](reserved-only-reachable-fixtures.json)。通常処理の全棋譜再生と全合法variantの1個投入を検査する。終局・不正手・総KETE違いを教師へ混ぜない。
 
-正式収集の現在の固定条件は [formal-collection-spec.json](formal-collection-spec.json)。この試走CLIは正式データの生成器ではない。正式の除外一覧・generator・全体監査・artifact復元・最終検証封印は次工程で、収集・学習は未開始である。前工程の `learning-spec.json` と結果は原記録として保持する。
+正式収集の現在の固定条件は [formal-collection-spec.json](formal-collection-spec.json)。この試走CLIは正式データの生成器ではない。正式の除外一覧・generator・全体監査・artifact復元・最終検証封印は以下の基盤として実装した。正式候補の必要層不足により教師要求前に保留し、正式収集・学習は未開始である。前工程の `learning-spec.json` と結果は原記録として保持する。
+
+## 正式収集基盤の処理確認と保留
+
+[実装・監査記録](../../doc/AI_FORMAL_COLLECTION_INFRASTRUCTURE_20261004.md)、[CI記録](../../doc/AI_FORMAL_COLLECTION_INFRASTRUCTURE_CI_20261005.json)、[固定artifact復元記録](formal-pinned-artifact-resume-verification.json)を参照。追加依存なしで専用14テストと開発専用96件の処理確認を再現する。
+
+```sh
+node --test tools/ai-integration/formal-collection.test.cjs
+node tools/ai-integration/verify-formal-infrastructure.cjs /tmp/bao-formal-development-new
+```
+
+出力先は未使用のディレクトリを指定する。公開テスト鍵・時計固定の深度2・全partition閲覧は [開発専用仕様](formal-development-spec.json) に限定し、正式holdoutへ転用しない。除外一覧は [formal-registry.cjs](formal-registry.cjs) から固定ソースで再生成してdigestを照合する。保存済みの除外一覧や旧結果は上書きしない。
+
+正式条件の [事前候補監査](formal-candidate-preflight-results.json) は `HOLD-BEFORE-TEACHER`。trainのMTAJI 10/512・確保分のみ0/16、validationのMTAJI 3/128・確保分のみ2/4で不足し、教師要求0件で停止した。次は同じseed範囲・8192要求・最低件数を維持して、必要層を先に選ぶ計画v2を別IDに固定する。現行v1を起動して不足を回避する運用には進まない。
+
+手動 [formal-collection.yml](../../.github/workflows/formal-collection.yml) はprepare→16shard→全体監査・封印を行う。正式起動には独立した32byte鍵のbase64をrepository secret `BAO_COLLECTION_KEY_BASE64` に設定する。鍵をコード・artifactへ含めない。現行v1は候補ゲートで保留になり、正式手動workflowは未実行である。mainにworkflowをまだ統合しておらず、手動起動可能性も確認していない。
+
+再開時の `resume_receipts` はrepository・runId・attempt・headSha・artifactId・name・API digestを固定したJSON配列。未再開は `[]`。同じソース・計画・除外一覧・鍵だけで復元し、元の計測originを保持する。APIメタデータ、ZIP実byteのdigest、entryの安全性、計測の認証を検査する。不採用の完了計測も再利用し、時間切れを自動再計測しない。artifactは30日で期限を迎えるため、記録したdigestだけで期限後の原ZIPを取得できるわけではない。
+
+集約後はtrain・validationと暗号化final・暗号化詳細監査を分ける。formalの開封は必要件数通過後、モデルファイルとvalidation基準・観測値を固定し、承認意思を含むgateで一度だけ行う。学習前のformal開封gateは作成していない。
 
 ## 検証結果の適用範囲
 

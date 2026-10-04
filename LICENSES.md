@@ -1,6 +1,6 @@
 # ライセンスと出典
 
-更新日：2026年10月4日。コードは **MIT**、説明文・図版は **CC BY-SA 4.0** で提供します。同じファイルを利用者が自由に選べる二重ライセンスではなく、以下の対象ごとに適用します。
+更新日：2026年10月5日。コードは **MIT**、説明文・図版は **CC BY-SA 4.0** で提供します。同じファイルを利用者が自由に選べる二重ライセンスではなく、以下の対象ごとに適用します。
 
 ## 適用範囲
 
@@ -28,6 +28,8 @@ CC BY-SA対象の文書は © 2026 nkkmd and Bao Nakakamado contributors。元�
 ### CIの依存
 
 2026年10月4日、`.github/workflows/prototype-check.yml` の教師試走集約へ公式の [actions/download-artifact@v4](https://github.com/actions/download-artifact/tree/v4) を追加しました。MIT、Copyright (c) 2018 GitHub, Inc. and contributors。README blob `aa71e839b25e781fee4222931e5751b65c9f0449` と LICENSE blob `a67dca8b4f65d6bd351f6b1e333ce2cd84d843a5` を確認しています。action本体の改変・コピーはなく、artifactを名前ごとの別ディレクトリへ配置する設定を追加しました。依存本体は配信用prototypeへ同梱しません。[測定記録](doc/AI_TEACHER_FEASIBILITY_20261004.md)を参照してください。
+
+2026年10月5日までの[正式収集基盤](doc/AI_FORMAL_COLLECTION_INFRASTRUCTURE_20261004.md)では、同じ公式actionを `.github/workflows/formal-collection.yml` の計画・shard取得にも設定しました。標準ライブラリによるNodeのAES-256-GCMとPythonのZIP検査・Actions API復元を新規実装し、追加の外部パッケージは導入していません。著作権・ライセンス表示と配信用prototypeへの非同梱を維持します。
 
 ### ルールの説明文
 
