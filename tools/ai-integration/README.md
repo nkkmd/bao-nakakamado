@@ -76,6 +76,28 @@ node tools/ai-integration/learning-pipeline.cjs /tmp/bao-learning-verification/c
 
 入力は368bitで、元ゲームの399bitモデルとは互換ではない。パイロットのtrain/validation/finalは処理確認用で、閲覧済みのfinalを正式な最終確認へ使わない。正式データ収集・学習・matrix再開workflow・棋力試験は未実施。
 
+## 実時計の教師試走と到達棋譜
+
+[試走記録](../../doc/AI_TEACHER_FEASIBILITY_20261004.md)と [teacher-feasibility-spec.json](teacher-feasibility-spec.json) が条件と適用範囲を示す。保存済み [corpus](teacher-feasibility-corpus.json) は標準初期配置からの64棋譜、[results](teacher-feasibility-results.json) はActions run 37207204644の原計測。時計固定の処理パイロットとは別の開発用データで、正式holdoutには使わない。
+
+```sh
+node --test tools/ai-integration/teacher-feasibility.test.cjs
+node tools/ai-integration/teacher-feasibility.cjs collect /tmp/bao-teacher-corpus.json
+node tools/ai-integration/teacher-feasibility.cjs shard /tmp/bao-teacher-trial 0
+node tools/ai-integration/teacher-feasibility.cjs shard /tmp/bao-teacher-trial 1
+node tools/ai-integration/teacher-feasibility.cjs shard /tmp/bao-teacher-trial 2
+node tools/ai-integration/teacher-feasibility.cjs shard /tmp/bao-teacher-trial 3
+node tools/ai-integration/teacher-feasibility.cjs aggregate /tmp/bao-teacher-trial /tmp/bao-teacher-results.json
+```
+
+同じshardコマンドを再実行すると完了計測をchecksum・設定・ソース・コーパスで照合して再利用する。時間切れの計測も完了扱いで保持し、ラベルは除外する。実時間は新規実行ごとに変わるので、元の結果を上書きしない。集約は4shardをすべて要求し、混在・欠落・破損を拒否する。
+
+PRまたは手動Actionsの4workerは、それぞれ16件を測定後、同じディレクトリで再開を確認する。pushだけのCIでは重複測定を省く。各 `shard-0`〜`shard-3` artifactと集約結果を30日保存し、失敗時も完了単位を保存する。別runから再開する場合は、対象run/attemptとAPIのartifact digestを固定・確認してZIPを展開し、上記rootの直下に `shard-0`〜`shard-3` を復元する。同じソースと設定で各shardを実行し、集約する。別runの自動復元workflowは未実装。
+
+通常ハンド0・確保分1の標準初期配置からの到達4件は [reserved-only-reachable-fixtures.json](reserved-only-reachable-fixtures.json)。通常処理の全棋譜再生と全合法variantの1個投入を検査する。終局・不正手・総KETE違いを教師へ混ぜない。
+
+正式収集の現在の固定条件は [formal-collection-spec.json](formal-collection-spec.json)。この試走CLIは正式データの生成器ではない。正式の除外一覧・generator・全体監査・artifact復元・最終検証封印は次工程で、収集・学習は未開始である。前工程の `learning-spec.json` と結果は原記録として保持する。
+
 ## 検証結果の適用範囲
 
 一致検証は、対象局面での実装整合を確認するもの。棋力、先後均衡、全局面での停止、AI-GEN4と同じ強さ、性能改善の証明ではない。ソース変更後は保存済み結果を新しいコードの証拠として使わず、新しい結果と識別を保存する。
