@@ -69,3 +69,5 @@ Bao Nakakamadoでは説明の構成・表現を変更し、NYAKUA、ハンド枯
 - `ENGINE_LICENSE.txt`：元プログラムのMIT表示の原文
 
 公開・改訂時の維持手順は [AGENTS.md](AGENTS.md) に定めます。
+
+2026年10月5日の[正式学習結果](doc/AI_FORMAL_LEARNING_RUN_20261005.md)に基づく `tools/ai-integration/frozen-models/formal-v1-linear-2026100401/` は、本ゲームの固定trainから新規に学習した開発候補です。元ゲームの学習済み重みは流用していません。モデル・学習記録・receipt・validation報告の保護対象部分はMIT、説明文はCC BY-SA 4.0。公開AI採用・最終評価の合格とは区別します。

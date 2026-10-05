@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "status": "CANDIDATE-SELECTED-FINAL-STILL-SEALED",
+  "specId": "NAKAKAMADO-FORMAL-LEARNING-20261005-v1",
+  "learningFingerprint": "872a4690be9cd686ace800052e01b4afda5488c2cae60fb41cbc458a2958045c",
+  "source": {
+    "repository": "nkkmd/bao-nakakamado",
+    "runId": 37257277028,
+    "attempt": 1,
+    "headSha": "4c7f3e3132dc191a2eaabe3f41ee43bc22c9ddb8"
+  },
+  "modelFile": "model.json",
+  "modelSha256": "f74175fbaa6f2d6a82148cf5e106da7291f396b2b38cb79866dc641b2147254d",
+  "modelBytes": 1612,
+  "trainingFile": "training.json",
+  "trainingSha256": "606220b221804246225e56999e4dd4d550698b55c01a8ceb1cd5c4e69aabbd32",
+  "artifactId": 11323108219,
+  "artifactZipDigest": "sha256:f485e13761c1918de7083bb734a70acb67a3a4a02f73ca1e48783886b8f9c638",
+  "trainDigest": "1591876c038681e42299fadebf11a653b52a9872117d86323d476827d58b0b16",
+  "validationDigest": "43ac37d9b6f04e3d6bcb158b97b7fcf93202c035d4da6e823e2e2f4a761c87eb",
+  "validationReportArtifactId": 11323052570,
+  "validationReportSha256": "e0f145214955dadd0da67a55ecbeaefd1a53480e4e465696ddfde2d4ce1f5090",
+  "selection": {
+    "primaryMetric": "opening-group-mean-mse",
+    "allSeedsMustPass": true,
+    "maximumGroupMseRatioToBaseline": 0.9,
+    "maximumPhaseMseRatioToBaseline": 1.1,
+    "maximumStratumMaeIncrease": 0.05,
+    "maximumIntegerPredictionMismatch": 0,
+    "maximumBytes": 1048576,
+    "maximumMedianMicroseconds": 2000,
+    "timing": {
+      "warmup": 200,
+      "rounds": 5,
+      "evaluationsPerRound": 1000
+    },
+    "strata": [
+      "namua",
+      "mtaji",
+      "north",
+      "south",
+      "ownReserved",
+      "opponentReserved",
+      "threePlacement",
+      "twoPlacement",
+      "reservedOnly",
+      "lastOrdinary",
+      "nearTransition",
+      "terminalLine"
+    ],
+    "ranking": "family-median-group-mse-then-fixed-model-order",
+    "modelTieOrder": [
+      "linear",
+      "mlp",
+      "logic"
+    ],
+    "deploymentSeed": 2026100401,
+    "noCandidate": "HOLD-no-final-opening-no-retuning",
+    "purpose": "engineering-distillation-gate-not-strength-or-device-adoption"
+  },
+  "allNineCandidatesPassed": true,
+  "finalOpened": false,
+  "authorizedToOpenOnce": false,
+  "publicAdopted": false,
+  "strengthTested": false,
+  "deviceTested": false
+}

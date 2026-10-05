@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "recordedAtJst": "2026-10-05T11:55:04+09:00",
-  "scope": "Formal training v1 first run failed before validation report; zero-sign assertion corrected in PR #19",
+  "recordedAtJst": "2026-10-05 12:16:25 JST",
+  "scope": "Formal learning v1 first failed run and corrected completed training/validation; final stays sealed",
   "specId": "NAKAKAMADO-FORMAL-LEARNING-20261005-v1",
   "rulesVersion": "0.8.0",
   "replayVersion": 7,
@@ -1413,13 +1413,1313 @@
     "headSha": "4c7f3e3132dc191a2eaabe3f41ee43bc22c9ddb8",
     "createdAtJst": "2026-10-05T11:55:04+09:00",
     "resumeReceipts": [],
-    "status": "in_progress",
-    "conclusion": null,
+    "status": "completed",
+    "conclusion": "success",
     "learningFingerprint": "872a4690be9cd686ace800052e01b4afda5488c2cae60fb41cbc458a2958045c",
     "validation": {
-      "status": "PENDING",
+      "status": "CANDIDATE-SELECTED-FINAL-STILL-SEALED",
+      "passed": true,
+      "selected": {
+        "kind": "linear",
+        "seed": 2026100401,
+        "modelSha256": "f74175fbaa6f2d6a82148cf5e106da7291f396b2b38cb79866dc641b2147254d"
+      },
       "finalOpened": false,
-      "authorizedToOpenOnce": false
-    }
+      "authorizedToOpenOnce": false,
+      "reportArtifactId": 11323052570,
+      "reportZipDigest": "sha256:e2f9b749c59660c3c3973828299cabda392513fd946a9542d5be90dc40a1d328",
+      "reportFile": "AI_FORMAL_LEARNING_VALIDATION_20261005.json",
+      "reportSha256": "e0f145214955dadd0da67a55ecbeaefd1a53480e4e465696ddfde2d4ce1f5090",
+      "zipDigestAndCrcLocallyVerified": true,
+      "allNineCandidatesPassed": true,
+      "pythonNodeIntegerComparisons": 13653,
+      "integerMismatches": 0
+    },
+    "updatedAt": "2026-10-05T03:00:18Z",
+    "updatedAtJst": "2026-10-05T12:00:18+09:00",
+    "jobs": [
+      {
+        "id": 111596953978,
+        "name": "prepare",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 37257277028,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Restore digest-pinned v2 dataset without collection keys",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14
+          },
+          {
+            "name": "Post Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          }
+        ]
+      },
+      {
+        "id": 111597013728,
+        "name": "train (linear, 2026100403)",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 37257277028,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Run python -m pip install -r tools/ai-integration/formal-learning-requirements.txt",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Run actions/download-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Train fixed epochs using train only",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14
+          },
+          {
+            "name": "Post Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          }
+        ]
+      },
+      {
+        "id": 111597013750,
+        "name": "train (linear, 2026100402)",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 37257277028,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Run python -m pip install -r tools/ai-integration/formal-learning-requirements.txt",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Run actions/download-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Train fixed epochs using train only",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14
+          },
+          {
+            "name": "Post Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          }
+        ]
+      },
+      {
+        "id": 111597013774,
+        "name": "train (logic, 2026100401)",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 37257277028,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Run python -m pip install -r tools/ai-integration/formal-learning-requirements.txt",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Run actions/download-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Train fixed epochs using train only",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14
+          },
+          {
+            "name": "Post Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          }
+        ]
+      },
+      {
+        "id": 111597013789,
+        "name": "train (logic, 2026100403)",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 37257277028,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Run python -m pip install -r tools/ai-integration/formal-learning-requirements.txt",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Run actions/download-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Train fixed epochs using train only",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14
+          },
+          {
+            "name": "Post Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          }
+        ]
+      },
+      {
+        "id": 111597013790,
+        "name": "train (mlp, 2026100403)",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 37257277028,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Run python -m pip install -r tools/ai-integration/formal-learning-requirements.txt",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Run actions/download-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Train fixed epochs using train only",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14
+          },
+          {
+            "name": "Post Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          }
+        ]
+      },
+      {
+        "id": 111597013808,
+        "name": "train (logic, 2026100402)",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 37257277028,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Run python -m pip install -r tools/ai-integration/formal-learning-requirements.txt",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Run actions/download-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Train fixed epochs using train only",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14
+          },
+          {
+            "name": "Post Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          }
+        ]
+      },
+      {
+        "id": 111597013810,
+        "name": "train (mlp, 2026100402)",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 37257277028,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Run python -m pip install -r tools/ai-integration/formal-learning-requirements.txt",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Run actions/download-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Train fixed epochs using train only",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14
+          },
+          {
+            "name": "Post Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          }
+        ]
+      },
+      {
+        "id": 111597013819,
+        "name": "train (linear, 2026100401)",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 37257277028,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Run python -m pip install -r tools/ai-integration/formal-learning-requirements.txt",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Run actions/download-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Train fixed epochs using train only",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14
+          },
+          {
+            "name": "Post Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          }
+        ]
+      },
+      {
+        "id": 111597013842,
+        "name": "train (mlp, 2026100401)",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 37257277028,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Run python -m pip install -r tools/ai-integration/formal-learning-requirements.txt",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Run actions/download-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Train fixed epochs using train only",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14
+          },
+          {
+            "name": "Post Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          }
+        ]
+      },
+      {
+        "id": 111597899590,
+        "name": "validation",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 37257277028,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Run python -m pip install -r tools/ai-integration/formal-learning-requirements.txt",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Run actions/download-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Run actions/download-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Compare all nine candidates against frozen criteria; keep final sealed",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "Post Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 18
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 19
+          }
+        ]
+      }
+    ],
+    "trainingSummaries": [
+      {
+        "jobId": 111597013728,
+        "name": "train (linear, 2026100403)",
+        "completedAt": "2026-10-05T02:55:40.0416578Z",
+        "summary": {
+          "status": "TRAINED-NOT-VALIDATED",
+          "kind": "linear",
+          "seed": 2026100403,
+          "steps": 0
+        }
+      },
+      {
+        "jobId": 111597013750,
+        "name": "train (linear, 2026100402)",
+        "completedAt": "2026-10-05T02:55:40.2382908Z",
+        "summary": {
+          "status": "TRAINED-NOT-VALIDATED",
+          "kind": "linear",
+          "seed": 2026100402,
+          "steps": 0
+        }
+      },
+      {
+        "jobId": 111597013789,
+        "name": "train (logic, 2026100403)",
+        "completedAt": "2026-10-05T02:57:28.4615588Z",
+        "summary": {
+          "status": "TRAINED-NOT-VALIDATED",
+          "kind": "logic",
+          "seed": 2026100403,
+          "steps": 23550
+        }
+      },
+      {
+        "jobId": 111597013790,
+        "name": "train (mlp, 2026100403)",
+        "completedAt": "2026-10-05T02:56:03.6784760Z",
+        "summary": {
+          "status": "TRAINED-NOT-VALIDATED",
+          "kind": "mlp",
+          "seed": 2026100403,
+          "steps": 23550
+        }
+      },
+      {
+        "jobId": 111597013810,
+        "name": "train (mlp, 2026100402)",
+        "completedAt": "2026-10-05T02:56:05.8471945Z",
+        "summary": {
+          "status": "TRAINED-NOT-VALIDATED",
+          "kind": "mlp",
+          "seed": 2026100402,
+          "steps": 23550
+        }
+      },
+      {
+        "jobId": 111597013819,
+        "name": "train (linear, 2026100401)",
+        "completedAt": "2026-10-05T02:55:43.2695268Z",
+        "summary": {
+          "status": "TRAINED-NOT-VALIDATED",
+          "kind": "linear",
+          "seed": 2026100401,
+          "steps": 0
+        }
+      },
+      {
+        "jobId": 111597013842,
+        "name": "train (mlp, 2026100401)",
+        "completedAt": "2026-10-05T02:55:50.3288437Z",
+        "summary": {
+          "status": "TRAINED-NOT-VALIDATED",
+          "kind": "mlp",
+          "seed": 2026100401,
+          "steps": 23550
+        }
+      },
+      {
+        "jobId": 111597013774,
+        "name": "train (logic, 2026100401)",
+        "completedAt": "2026-10-05T02:59:52.7690474Z",
+        "summary": {
+          "status": "TRAINED-NOT-VALIDATED",
+          "kind": "logic",
+          "seed": 2026100401,
+          "steps": 23550
+        }
+      },
+      {
+        "jobId": 111597013808,
+        "name": "train (logic, 2026100402)",
+        "completedAt": "2026-10-05T02:59:14.2134646Z",
+        "summary": {
+          "status": "TRAINED-NOT-VALIDATED",
+          "kind": "logic",
+          "seed": 2026100402,
+          "steps": 23550
+        }
+      }
+    ],
+    "artifacts": [
+      {
+        "id": 11323346520,
+        "name": "learning-logic-2026100401",
+        "size_in_bytes": 621736,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11323346520",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11323346520/zip",
+        "expired": false,
+        "created_at": "2026-10-05T02:59:54Z",
+        "expires_at": "2026-11-04T02:59:52Z",
+        "updated_at": "2026-10-05T02:59:54Z",
+        "digest": "sha256:1accd1489fbfb09c7e7f0e9a5fbe74d5c9d2bca48e94416053280b15207a7ad0",
+        "workflow_run": {
+          "id": 37257277028,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "main",
+          "head_sha": "4c7f3e3132dc191a2eaabe3f41ee43bc22c9ddb8"
+        }
+      },
+      {
+        "id": 11323336169,
+        "name": "learning-linear-2026100402",
+        "size_in_bytes": 2131,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11323336169",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11323336169/zip",
+        "expired": false,
+        "created_at": "2026-10-05T02:55:40Z",
+        "expires_at": "2026-11-04T02:55:40Z",
+        "updated_at": "2026-10-05T02:55:40Z",
+        "digest": "sha256:8baccc908d7b2c7e71a9d702b4608d5070ba53ff56547edb0efc497bcabe0a7f",
+        "workflow_run": {
+          "id": 37257277028,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "main",
+          "head_sha": "4c7f3e3132dc191a2eaabe3f41ee43bc22c9ddb8"
+        }
+      },
+      {
+        "id": 11323281432,
+        "name": "learning-logic-2026100403",
+        "size_in_bytes": 606293,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11323281432",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11323281432/zip",
+        "expired": false,
+        "created_at": "2026-10-05T02:57:29Z",
+        "expires_at": "2026-11-04T02:57:28Z",
+        "updated_at": "2026-10-05T02:57:29Z",
+        "digest": "sha256:c1d559f93cb00f37f1d6fedc3480de2661824c55d4ca8c2429f29f35b14669b9",
+        "workflow_run": {
+          "id": 37257277028,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "main",
+          "head_sha": "4c7f3e3132dc191a2eaabe3f41ee43bc22c9ddb8"
+        }
+      },
+      {
+        "id": 11323236518,
+        "name": "learning-mlp-2026100403",
+        "size_in_bytes": 313120,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11323236518",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11323236518/zip",
+        "expired": false,
+        "created_at": "2026-10-05T02:56:04Z",
+        "expires_at": "2026-11-04T02:56:03Z",
+        "updated_at": "2026-10-05T02:56:04Z",
+        "digest": "sha256:e0e9bde2e443be34417c9622bb7d60c2e9be9353455e6854f91a6210215a5de1",
+        "workflow_run": {
+          "id": 37257277028,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "main",
+          "head_sha": "4c7f3e3132dc191a2eaabe3f41ee43bc22c9ddb8"
+        }
+      },
+      {
+        "id": 11323161744,
+        "name": "learning-linear-2026100403",
+        "size_in_bytes": 2131,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11323161744",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11323161744/zip",
+        "expired": false,
+        "created_at": "2026-10-05T02:55:40Z",
+        "expires_at": "2026-11-04T02:55:40Z",
+        "updated_at": "2026-10-05T02:55:40Z",
+        "digest": "sha256:82bfc24e1b545b9b9cb5b6b0c3e877b8a3c83b7c0359d83d0d534953515690f2",
+        "workflow_run": {
+          "id": 37257277028,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "main",
+          "head_sha": "4c7f3e3132dc191a2eaabe3f41ee43bc22c9ddb8"
+        }
+      },
+      {
+        "id": 11323108219,
+        "name": "learning-linear-2026100401",
+        "size_in_bytes": 2131,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11323108219",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11323108219/zip",
+        "expired": false,
+        "created_at": "2026-10-05T02:55:44Z",
+        "expires_at": "2026-11-04T02:55:43Z",
+        "updated_at": "2026-10-05T02:55:44Z",
+        "digest": "sha256:f485e13761c1918de7083bb734a70acb67a3a4a02f73ca1e48783886b8f9c638",
+        "workflow_run": {
+          "id": 37257277028,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "main",
+          "head_sha": "4c7f3e3132dc191a2eaabe3f41ee43bc22c9ddb8"
+        }
+      },
+      {
+        "id": 11323052570,
+        "name": "learning-validation-report",
+        "size_in_bytes": 4800,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11323052570",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11323052570/zip",
+        "expired": false,
+        "created_at": "2026-10-05T03:00:15Z",
+        "expires_at": "2026-11-04T03:00:15Z",
+        "updated_at": "2026-10-05T03:00:15Z",
+        "digest": "sha256:e2f9b749c59660c3c3973828299cabda392513fd946a9542d5be90dc40a1d328",
+        "workflow_run": {
+          "id": 37257277028,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "main",
+          "head_sha": "4c7f3e3132dc191a2eaabe3f41ee43bc22c9ddb8"
+        }
+      },
+      {
+        "id": 11322889201,
+        "name": "learning-logic-2026100402",
+        "size_in_bytes": 629937,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11322889201",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11322889201/zip",
+        "expired": false,
+        "created_at": "2026-10-05T02:59:14Z",
+        "expires_at": "2026-11-04T02:59:14Z",
+        "updated_at": "2026-10-05T02:59:14Z",
+        "digest": "sha256:5179395a68e8c1211b61ec66bcebe36618a4320a0e603f13640cc259113fce59",
+        "workflow_run": {
+          "id": 37257277028,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "main",
+          "head_sha": "4c7f3e3132dc191a2eaabe3f41ee43bc22c9ddb8"
+        }
+      },
+      {
+        "id": 11322729389,
+        "name": "learning-mlp-2026100401",
+        "size_in_bytes": 312734,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11322729389",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11322729389/zip",
+        "expired": false,
+        "created_at": "2026-10-05T02:55:51Z",
+        "expires_at": "2026-11-04T02:55:50Z",
+        "updated_at": "2026-10-05T02:55:51Z",
+        "digest": "sha256:14bc97132fb608943af3883f6d9282ab2ca9bce628fb6ca04e65fc1096a817b2",
+        "workflow_run": {
+          "id": 37257277028,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "main",
+          "head_sha": "4c7f3e3132dc191a2eaabe3f41ee43bc22c9ddb8"
+        }
+      },
+      {
+        "id": 11322659420,
+        "name": "learning-train",
+        "size_in_bytes": 2640716,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11322659420",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11322659420/zip",
+        "expired": false,
+        "created_at": "2026-10-05T02:55:20Z",
+        "expires_at": "2026-11-04T02:55:19Z",
+        "updated_at": "2026-10-05T02:55:20Z",
+        "digest": "sha256:3a68d0031cba023a73dffcf98a5c1bef7a913063d936ac411d403ba4ca956394",
+        "workflow_run": {
+          "id": 37257277028,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "main",
+          "head_sha": "4c7f3e3132dc191a2eaabe3f41ee43bc22c9ddb8"
+        }
+      },
+      {
+        "id": 11322644596,
+        "name": "learning-validation",
+        "size_in_bytes": 796764,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11322644596",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11322644596/zip",
+        "expired": false,
+        "created_at": "2026-10-05T02:55:21Z",
+        "expires_at": "2026-11-04T02:55:21Z",
+        "updated_at": "2026-10-05T02:55:21Z",
+        "digest": "sha256:ec1ed93230355d95d6fa851342eaf68f9a55090ea1e630c65577d9239be4b180",
+        "workflow_run": {
+          "id": 37257277028,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "main",
+          "head_sha": "4c7f3e3132dc191a2eaabe3f41ee43bc22c9ddb8"
+        }
+      },
+      {
+        "id": 11322629659,
+        "name": "learning-mlp-2026100402",
+        "size_in_bytes": 313380,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11322629659",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11322629659/zip",
+        "expired": false,
+        "created_at": "2026-10-05T02:56:07Z",
+        "expires_at": "2026-11-04T02:56:06Z",
+        "updated_at": "2026-10-05T02:56:07Z",
+        "digest": "sha256:d13a00481a92c8921d20d1c843676cd7ba2a9d0cbd6ce6fdb64a6429a8899459",
+        "workflow_run": {
+          "id": 37257277028,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "main",
+          "head_sha": "4c7f3e3132dc191a2eaabe3f41ee43bc22c9ddb8"
+        }
+      },
+      {
+        "id": 11322554797,
+        "name": "learning-dataset-receipt",
+        "size_in_bytes": 765,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11322554797",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11322554797/zip",
+        "expired": false,
+        "created_at": "2026-10-05T02:55:22Z",
+        "expires_at": "2026-11-04T02:55:22Z",
+        "updated_at": "2026-10-05T02:55:22Z",
+        "digest": "sha256:70442012ce7ba424895d3a2822b308230bfb2e2005d15d90408a293461298bca",
+        "workflow_run": {
+          "id": 37257277028,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "main",
+          "head_sha": "4c7f3e3132dc191a2eaabe3f41ee43bc22c9ddb8"
+        }
+      }
+    ],
+    "selectedModel": {
+      "path": "../tools/ai-integration/frozen-models/formal-v1-linear-2026100401/model.json",
+      "artifactId": 11323108219,
+      "sha256": "f74175fbaa6f2d6a82148cf5e106da7291f396b2b38cb79866dc641b2147254d",
+      "zipDigestAndCrcLocallyVerified": true
+    },
+    "datasetReceiptFile": "AI_FORMAL_LEARNING_DATASET_RECEIPT_20261005.json",
+    "proofImage": "verification-images/formal-learning-run-37257277028-complete-20261005.jpg",
+    "mergeChecks": [
+      {
+        "id": 37257193840,
+        "name": "NYAKUA formal learning development checks",
+        "status": "completed",
+        "conclusion": "success",
+        "headSha": "4c7f3e3132dc191a2eaabe3f41ee43bc22c9ddb8"
+      },
+      {
+        "id": 37257193859,
+        "name": "Playable prototype checks",
+        "status": "completed",
+        "conclusion": "success",
+        "headSha": "4c7f3e3132dc191a2eaabe3f41ee43bc22c9ddb8"
+      }
+    ]
   }
 }

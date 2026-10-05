@@ -1,5 +1,7 @@
 # 正式教師収集v2の実行・監査・封印記録
 
+> 本文は当該工程時点の条件と結果の原記録。後続の[正式学習の実行記録](AI_FORMAL_LEARNING_RUN_20261005.md)で学習・validationを完了し線形候補を凍結した。最終評価の開封・公開AI採用は未実施。
+
 記録日：2026年10月5日（日本時間）。[workflow登録の記録](AI_FORMAL_COLLECTION_ACTIVATION_20261005.md)の後続。
 
 2026年10月5日09:00:36 JSTに [正式収集run 37245789837](https://github.com/nkkmd/bao-nakakamado/actions/runs/37245789837)、attempt 1を一度だけ手動起動した。対象は `feat/nyakua-ai-search-foundation-20261004`、head `e0fd2d0b9f09d8b47d7770e95817bb01a62b7718`。入力は `collection_version: v2`、新規収集の `resume_receipts: []`。起動前にアカウントnkkmdと収集用secretが未登録であることを確認し、独立した32byteの暗号学的乱数鍵をbase64で `BAO_COLLECTION_KEY_BASE64` に新規登録した。既存鍵の上書きは行っていない。値は会話・git・記録・画像に含めない。

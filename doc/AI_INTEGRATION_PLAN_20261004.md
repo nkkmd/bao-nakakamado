@@ -6,7 +6,7 @@
 
 Bao la KiswahiliのAI-GEN4と同様の探索機構と論理ゲート型評価器を、NYAKUAを採用したBao Nakakamadoへ段階的に適応する。まず正しい先読みの土台を整え、探索だけによる改善と、学習済み評価器による改善を分けて検証する。
 
-2026年10月4日のユーザー指示に基づき、導入計画とニャクア込みの探索用遷移の整備・一致検証を実施した。[検証記録](AI_SEARCH_TRANSITION_VERIFICATION_20261004.md)を参照。続いて[第2段階の探索実装](AI_SEARCH_IMPLEMENTATION_20261004.md)を行い、手作り評価関数付きの探索版を整備した。[第3段階の設計と処理パイロット](AI_LEARNING_DESIGN_20261004.md)では専用の入力・教師ラベル・分割・再開を確認した。続く[実時計の教師試走](AI_TEACHER_FEASIBILITY_20261004.md)では64局面すべてが深度4まで完了し、正式収集の条件を固定した。2026年10月5日までに[正式収集基盤](AI_FORMAL_COLLECTION_INFRASTRUCTURE_20261004.md)の生成・監査・暗号化保存・固定artifact復元・封印も整備し、81テストと全7 CIジョブが通過した。v1の正式候補は必要層不足で保留した。[選択計画v2](AI_FORMAL_SELECTION_V2_20261005.md)は、同じseed・候補・split割当・最低件数で候補条件を通過した。収集鍵を設定し、正式収集v2のrun 37245789837で8192件を新規計測・受理した。全体監査・封印は通過し、次は学習器とvalidation基準の固定。本学習、強度比較、画面への新AI組込みは後続工程である。画面のコンピューターは引き続き簡易方式で、AI-GEN4相当の棋力は未確認。
+2026年10月4日のユーザー指示に基づき、導入計画とニャクア込みの探索用遷移の整備・一致検証を実施した。[検証記録](AI_SEARCH_TRANSITION_VERIFICATION_20261004.md)を参照。続いて[第2段階の探索実装](AI_SEARCH_IMPLEMENTATION_20261004.md)を行い、手作り評価関数付きの探索版を整備した。[第3段階の設計と処理パイロット](AI_LEARNING_DESIGN_20261004.md)では専用の入力・教師ラベル・分割・再開を確認した。続く[実時計の教師試走](AI_TEACHER_FEASIBILITY_20261004.md)では64局面すべてが深度4まで完了し、正式収集の条件を固定した。2026年10月5日までに[正式収集基盤](AI_FORMAL_COLLECTION_INFRASTRUCTURE_20261004.md)の生成・監査・暗号化保存・固定artifact復元・封印も整備し、81テストと全7 CIジョブが通過した。v1の正式候補は必要層不足で保留した。[選択計画v2](AI_FORMAL_SELECTION_V2_20261005.md)は、同じseed・候補・split割当・最低件数で候補条件を通過した。収集鍵を設定し、正式収集v2のrun 37245789837で8192件を新規計測・受理した。全体監査・封印の後、[正式学習run 37257277028](AI_FORMAL_LEARNING_RUN_20261005.md)で全11ジョブ・全9候補の固定基準を通過し、線形seed 2026100401を凍結した。最終評価の一度だけの運用・強度比較・画面への新AI組込みは後続工程である。画面のコンピューターは引き続き簡易方式で、AI-GEN4相当の棋力は未確認。
 
 これはAI開発の計画であり、先後差の科学研究や、元ゲームのPBAI採用判断を変更するものではない。Bao Nakakamado・NYAKUAの考案者nkkmd、初公開日2026年9月30日、[現行ルール](RULEBOOK.md)は維持する。
 
@@ -55,7 +55,7 @@ Bao la KiswahiliのAI-GEN4と同様の探索機構と論理ゲート型評価器
 
 ### 第3段階：評価器の適応・学習
 
-[専用設計](AI_LEARNING_DESIGN_20261004.md)と機械可読仕様に入力・教師・分割・再開を固定し、96生成単位・241局面の処理パイロットを実施した。JavaScript/Pythonの368bit入力482観点、部分・全完了の再開が一致。続く[実時計の教師試走](AI_TEACHER_FEASIBILITY_20261004.md)では、確保分のみの到達棋譜4件を含む64局面が深度4まで完了した。学習は未実施。パイロットと教師試走は閲覧済みの開発用データで、正式な最終検証には使わない。
+[専用設計](AI_LEARNING_DESIGN_20261004.md)と機械可読仕様に入力・教師・分割・再開を固定し、96生成単位・241局面の処理パイロットを実施した。JavaScript/Pythonの368bit入力482観点、部分・全完了の再開が一致。続く[実時計の教師試走](AI_TEACHER_FEASIBILITY_20261004.md)では、確保分のみの到達棋譜4件を含む64局面が深度4まで完了した。このパイロットと教師試走では学習は未実施。パイロットと教師試走は閲覧済みの開発用データで、正式な最終検証には使わない。
 
 既存モデルは `nyakuaReserve` を入力として扱わず、通常ハンドへ単純加算しても「保護される・次の手番で必ず使う」という意味を表せない。既存モデル流用は検証候補とし、正式採用の根拠を元ゲームから引き継がない。
 
@@ -87,12 +87,12 @@ README、設計、診断・棋譜メタデータ、画面、出典・MIT表示�
 
 ## 次の作業
 
-[正式収集の起動手順](AI_FORMAL_COLLECTION_LAUNCH_20261005.md)を具体化し、ユーザー承認を得てPR #17をmainへ統合した。正式workflowのパス定義を修正した後のCIも89テスト・全8ジョブ成功。[workflow登録・起動状況](AI_FORMAL_COLLECTION_ACTIVATION_20261005.md)にmerge SHAと検証を記録した。承認済みのアカウント確認と収集鍵の新規設定を完了し、正式収集v2のrun 37245789837は全18ジョブ成功した。[実行記録](AI_FORMAL_COLLECTION_RUN_V2_20261005.md)に8192件の実測・受理と全体監査・封印を保存した。学習・最終開封・公開AIの差し替えは未実施。
+[正式収集の起動手順](AI_FORMAL_COLLECTION_LAUNCH_20261005.md)を具体化し、ユーザー承認を得てPR #17をmainへ統合した。正式workflowのパス定義を修正した後のCIも89テスト・全8ジョブ成功。[workflow登録・起動状況](AI_FORMAL_COLLECTION_ACTIVATION_20261005.md)にmerge SHAと検証を記録した。承認済みのアカウント確認と収集鍵の新規設定を完了し、正式収集v2のrun 37245789837は全18ジョブ成功した。[実行記録](AI_FORMAL_COLLECTION_RUN_V2_20261005.md)に8192件の実測・受理と全体監査・封印を保存した。収集完了時点では学習・最終開封・公開AIの差し替えは未実施だった。
 
-[実時計の教師試走](AI_TEACHER_FEASIBILITY_20261004.md)と不足していた確保分のみの到達局面の収集を完了した。64件すべてが深度4まで完了し、正式収集の条件を [formal-collection-spec.json](../tools/ai-integration/formal-collection-spec.json) へ固定した。[正式収集基盤](AI_FORMAL_COLLECTION_INFRASTRUCTURE_20261004.md)の除外一覧・generator・全体重複監査・固定artifact復元・封印は実装済み。正式条件の候補監査ではtrainのMTAJIが10/512、確保分のみ0/16、validationのMTAJIが3/128、確保分のみ2/4で不足し、教師要求前に停止した。v1の原記録を保持し、同じseed範囲・候補・split割当・8192要求・最低件数で、必要層を先に確保する[選択計画v2](AI_FORMAL_SELECTION_V2_20261005.md)を別IDに固定した。v2の事前監査は全条件を通過し、89テストと全8 CIジョブも成功した。trainのMTAJI 640・確保分のみ20、validationは160・5。独立した収集鍵と起動経路を整え、v2の実時計教師8192件の収集を完了した。採用後の件数・層・漏洩を全shardで再監査し、通過したfinalを封印した。次は学習器・モデル比較・validationの条件を固定する。本学習・棋力判断・公開コンピューターの差し替えは未実施。mainへの準備基盤の統合は完了した。
+[実時計の教師試走](AI_TEACHER_FEASIBILITY_20261004.md)と不足していた確保分のみの到達局面の収集を完了した。64件すべてが深度4まで完了し、正式収集の条件を [formal-collection-spec.json](../tools/ai-integration/formal-collection-spec.json) へ固定した。[正式収集基盤](AI_FORMAL_COLLECTION_INFRASTRUCTURE_20261004.md)の除外一覧・generator・全体重複監査・固定artifact復元・封印は実装済み。正式条件の候補監査ではtrainのMTAJIが10/512、確保分のみ0/16、validationのMTAJIが3/128、確保分のみ2/4で不足し、教師要求前に停止した。v1の原記録を保持し、同じseed範囲・候補・split割当・8192要求・最低件数で、必要層を先に確保する[選択計画v2](AI_FORMAL_SELECTION_V2_20261005.md)を別IDに固定した。v2の事前監査は全条件を通過し、89テストと全8 CIジョブも成功した。trainのMTAJI 640・確保分のみ20、validationは160・5。独立した収集鍵と起動経路を整え、v2の実時計教師8192件の収集を完了した。採用後の件数・層・漏洩を全shardで再監査し、通過したfinalを封印した。続く本学習・validationは[実行記録](AI_FORMAL_LEARNING_RUN_20261005.md)を参照。棋力判断・公開コンピューターの差し替えは未実施。mainへの準備基盤の統合は完了した。
 
 ## 出典と適用範囲
 
 移植元の[システム設計](https://github.com/nkkmd/bao-la-kiswahili-game/blob/8c87ed44c9b08f75456766f0a9bd9f76d06209d4/doc/SYSTEM_DESIGN.md)、[AI開発索引](https://github.com/nkkmd/bao-la-kiswahili-game/blob/8c87ed44c9b08f75456766f0a9bd9f76d06209d4/doc/AI_ENGINEERING_INDEX.md)、固定コードを参照し、この派生ゲーム用の手順として新たに記述した。元プログラムのMIT表示は `Copyright (c) 2026 cultivationdata.net`。[ENGINE_LICENSE.txt](../prototype/ENGINE_LICENSE.txt)を保持する。本計画の説明は[本リポジトリのライセンス範囲](../LICENSES.md)に従う。
 
-後続の[正式学習仕様と実装検証](AI_FORMAL_LEARNING_DESIGN_20261005.md)で、3学習器・固定比較基準・再開・手動workflowを整備した。既知の開発経路で整数推論と再開を検証した。本学習は未起動であり、次はCI通過・統合後のcommit固定と正式学習の起動である。
+後続の[正式学習仕様と実装検証](AI_FORMAL_LEARNING_DESIGN_20261005.md)で、3学習器・固定比較基準・再開・手動workflowを整備した。既知の開発経路で整数推論と再開を検証した。PR #18・ゼロ符号検証を修正したPR #19をCI通過後に統合し、固定commitの[正式学習](AI_FORMAL_LEARNING_RUN_20261005.md)を完了した。全9候補が合格し、3seedの中央値順位で線形候補を凍結した。次は最終評価の合否基準・一度だけの運用を整備し、その後に探索接続・同時間対局・実機を確認する。
