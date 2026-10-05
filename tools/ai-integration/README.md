@@ -171,3 +171,15 @@ Actions APIの認証は環境変数 `GITHUB_TOKEN` を使用する。値を引�
 ## 検証結果の適用範囲
 
 一致検証は、対象局面での実装整合を確認するもの。棋力、先後均衡、全局面での停止、AI-GEN4と同じ強さ、性能改善の証明ではない。ソース変更後は保存済み結果を新しいコードの証拠として使わず、新しい結果と識別を保存する。
+
+## 最終評価の開封前準備
+
+[条件と一度だけの運用](../../doc/AI_FORMAL_FINAL_PREPARATION_20261005.md)、[固定契約](formal-final-spec.json)、[実装](formal-final.cjs)を参照。凍結した線形seed 2026100401だけを対象に、既存の18判定と最終splitの最低件数を引き継ぐ。正式finalは未開封で、開封worker・正式復号callback・承認記録は未導入。
+
+```sh
+node tools/ai-integration/formal-final.cjs preflight
+node --test tools/ai-integration/formal-final.test.cjs
+node tools/ai-integration/verify-formal-final.cjs NEW_DEVELOPMENT_OUTPUT_DIRECTORY
+```
+
+CLIはpreflightのみ。テストは偽API、推論smokeは既知の除外経路32局面だけを使う。GitHubに受付タグを作らず、収集鍵や正式ZIPを使用しない。受付ライブラリは固定refの新規作成後だけ復号へ進む順序を検証した。応答消失や受付後の中断はHOLDとし、新しいrunで再開封しない。旧の `formal-collection.cjs open` を正式な新工程へ直接使わない。
