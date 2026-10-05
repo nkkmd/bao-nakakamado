@@ -22,7 +22,7 @@ function verify(root){
   const file=path.join(root,'learning-'+kind+'-'+seed,'model.json'),model=M.validateModel(A.read(file)),evaluator=M.createEvaluator(model);
   rows.forEach((r,i)=>{
    const actual=evaluator.evaluate(r.state);assert.equal(actual,expected[kind+'-'+seed][i]);predictions++;
-   assert.equal(evaluator.evaluate(r.state,1-r.state.player),-actual);assert.equal(evaluator.evaluate(swapped(r.state)),actual);symmetries+=2;
+   assert.equal(evaluator.evaluate(r.state,1-r.state.player),actual===0?0:-actual);assert.equal(evaluator.evaluate(swapped(r.state)),actual);symmetries+=2;
   });
  }
  const result={schema:1,status:'PASS',specId:D.spec.id,learningFingerprint:D.fingerprint(),...summary,

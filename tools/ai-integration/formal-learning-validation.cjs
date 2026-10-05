@@ -42,6 +42,15 @@ function timing(model,rows){
   rounds.push((performance.now()-before)*1000/cfg.evaluationsPerRound);}
  return rounds.sort((a,b)=>a-b)[Math.floor(rounds.length/2)];
 }
+function checkStatePredictions(evaluator,rows,predictions){
+ assert.equal(rows.length,predictions.length);
+ rows.forEach((r,i)=>{
+  const score=predictions[i];assert.ok(Number.isSafeInteger(score));
+  assert.equal(evaluator.evaluate(r.state),score);
+  // Integer inference canonicalizes zero. Strict equality distinguishes 0/-0.
+  assert.equal(evaluator.evaluate(r.state,1-r.state.player),score===0?0:-score);
+ });
+}
 function validate(validationFile,modelRoot,output){
  assert.ok(!fs.existsSync(output),'Validation output exists');const data=D.checkDataset(A.read(validationFile),'validation'),rows=data.rows;
  const baseline=metrics(rows,rows.map(r=>Math.trunc(r.baseline*spec.targetScale))),reports=[];
@@ -67,7 +76,7 @@ function validate(validationFile,modelRoot,output){
    assert.equal(python.status,0,'Python prediction failed');const expected=JSON.parse(python.stdout);assert.equal(expected.length,predictions.length);
    const mismatches=expected.filter((p,i)=>p!==predictions[i]).length;
    const evaluator=M.createEvaluator(model);
-   rows.forEach((r,i)=>{assert.equal(evaluator.evaluate(r.state),predictions[i]);assert.equal(evaluator.evaluate(r.state,1-r.state.player),-predictions[i]);});
+   checkStatePredictions(evaluator,rows,predictions);
    const measured=metrics(rows,predictions),microseconds=timing(model,rows);
    reports.push({kind,seed,modelSha256:A.shaBytes(bytes),metrics:measured,microseconds,bytes:bytes.length,
     gate:gate(measured,baseline,{bytes:bytes.length,microseconds,mismatches})});
@@ -79,4 +88,4 @@ function validate(validationFile,modelRoot,output){
 }
 if(require.main===module){try{console.log(JSON.stringify(validate(...process.argv.slice(2))));}
  catch{console.error('Frozen validation failed; no row payload logged');process.exitCode=1;}}
-module.exports={metrics,gate,select,timing,validate};
+module.exports={metrics,gate,select,timing,checkStatePredictions,validate};
