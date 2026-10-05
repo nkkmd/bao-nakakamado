@@ -211,3 +211,14 @@ node tools/ai-integration/verify-model-search.cjs NEW_DEVELOPMENT_OUTPUT_DIRECTO
 ```
 
 正式データの行・暗号文・鍵を取得しない。公開画面はこの評価器を読み込まない。次は開発経路で同時間対局の実行可能性を確認し、独立した正式比較の条件を固定する。棋力とmoto g52j 5G実機の検証、Workerと画面の採用は後続工程。
+
+## 同時間対局の運用試走と条件固定
+
+[設計・実測記録](../../doc/AI_EQUAL_TIME_PILOT_20261005.md)、[試走仕様](equal-time-spec.json)、[対局・監査](equal-time-match.cjs)、[独立開幕生成](equal-time-openings.cjs)を参照。同じ探索coreで両評価器の担当を交換したペアを使い、25/75/150msで運用だけを確認する。通常終局・反復・手数上限・安全停止・技術的失敗を区別し、各手を通常遷移で再生する。勝敗を予算選択に使用しない。
+
+```sh
+node --test tools/ai-integration/equal-time-match.test.cjs
+node tools/ai-integration/equal-time-match.cjs pilot 150 /absolute/pilot-150
+```
+
+同じ試走ディレクトリの完成局は条件・ソース・実行環境・checksum照合後に再利用する。`freeze` は3予算の完成局をsearchなしで再監査し、運用条件を満たす最大の予算と256ペア・512局の独立開幕manifestを固定する。不完全な試走や既存出力先は拒否する。過去の開幕はgenerator-onlyで照合し、教師ラベル・収集鍵・正式finalの行を読み込まない。正式比較の受付・shard実行・artifact復元worker、実機、公開AI採用は後続工程。

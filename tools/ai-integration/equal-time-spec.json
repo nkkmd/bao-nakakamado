@@ -1,0 +1,45 @@
+{
+  "id": "NAKAKAMADO-EQUAL-TIME-PILOT-20261005-v1",
+  "rulesVersion": "0.8.0",
+  "scope": "operational-pilot-not-strength-not-public-adoption",
+  "openingPlies": 12,
+  "pilotOpenings": [
+    {"policy": "random", "seedIndex": 700000},
+    {"policy": "noisy", "seedIndex": 700001},
+    {"policy": "greedy", "seedIndex": 700002},
+    {"policy": "reply", "seedIndex": 700003}
+  ],
+  "budgetsMs": [25, 75, 150],
+  "maximumPlies": 400,
+  "search": {
+    "maxDepth": 32, "quiescenceDepth": 1,
+    "maxTableEntries": 50000, "maxEvaluationCacheEntries": 2048,
+    "transpositionTable": true, "evaluationCache": true, "pvs": true,
+    "ttMoveFirst": false, "orderQuiescenceCaptures": false,
+    "historyHeuristic": false, "aspirationWindow": 0
+  },
+  "selection": {
+    "rule": "largest-budget-passing-operational-gates-without-reading-winners",
+    "maximumGameSeconds": 65,
+    "maximumFallbackFraction": 0.02,
+    "p99OverrunAllowanceMs": 40,
+    "maximumSingleOverrunMs": 500,
+    "maximumTechnicalFailures": 0
+  },
+  "formalDesign": {
+    "id": "NAKAKAMADO-EQUAL-TIME-FORMAL-20261005-v1",
+    "candidateSeedStart": 1000000, "candidateSeedCount": 4096,
+    "policies": ["random", "noisy", "greedy", "reply"],
+    "pairsPerPolicyAndStartingSide": 32,
+    "pairs": 256, "games": 512, "shards": 32,
+    "orderingSalt": "NAKAKAMADO-INDEPENDENT-STRENGTH-20261005-v1",
+    "minimumNormalCompletionFraction": 0.95,
+    "minimumConservativePairMean": 0.55,
+    "alpha": 0.05,
+    "lowerBoundMustExceed": 0.5,
+    "unresolvedUtilityInterval": [0, 1],
+    "inferenceUnit": "opening-pair-not-individual-game",
+    "stopPolicy": "fixed-all-pairs-no-optional-stopping-no-retry-for-strength",
+    "decisionScope": "generated-opening-distribution-and-fixed-host-only-not-public-adoption"
+  }
+}

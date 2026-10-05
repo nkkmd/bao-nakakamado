@@ -1,0 +1,41 @@
+name: NYAKUA equal time operational pilot
+on:
+  pull_request:
+    paths:
+      - 'prototype/**'
+      - 'tools/ai-integration/**'
+      - '.github/workflows/equal-time-pilot.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  protocol-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --test tools/ai-integration/equal-time-match.test.cjs
+  operational-pilot:
+    needs: protocol-tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        budget: [25, 75, 150]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Four excluded roots, swapped assignments, operational statistics only
+        run: node tools/ai-integration/equal-time-match.cjs pilot "${{ matrix.budget }}" "$RUNNER_TEMP/equal-time-${{ matrix.budget }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: equal-time-pilot-${{ matrix.budget }}
+          path: ${{ runner.temp }}/equal-time-${{ matrix.budget }}/
+          retention-days: 30
