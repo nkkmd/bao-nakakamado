@@ -1,0 +1,39 @@
+{
+  "id": "NAKAKAMADO-EQUAL-TIME-FORMAL-20261005-v2",
+  "status": "FROZEN-CONTRACT-AND-OPENINGS-PASS",
+  "contractSha256": "b34680435b7f0a27da165d638de0b957afcd0b202e0cd2ce1835e28efd083119",
+  "openingManifestSha256": "5edf510a6f75f9029905d4b8bb775fdc30d5a98ae908f3b1739fe223caf83f8f",
+  "fingerprint": "f3e25220de4c40025e5943d618638a01be98d042c7c90f1aac1cab83fe8f7c0f",
+  "pilotFingerprint": "3ff632e8cae71f4d7077b3b3e341977299d3e036656c29424e8205c1d1da53d6",
+  "timeLimitMs": 150,
+  "strata": {
+    "random-0": 64,
+    "random-1": 64,
+    "noisy-0": 64,
+    "noisy-1": 64
+  },
+  "groups": 256,
+  "roots": 256,
+  "originalGeneratorPrefixes": 16384,
+  "regenerated": true,
+  "formalRowsRead": 0,
+  "formalGamesPlayed": 0,
+  "publicAdopted": false,
+  "pilotGamesAudited": 24,
+  "pilotStrengthScoresRead": false,
+  "pilotRecordsSha256": [
+    {
+      "budgetMs": 25,
+      "recordsSha256": "b15aa819709eba93f1aaca85a67c57ab7ae10e1b6468c131a6356c951f116424"
+    },
+    {
+      "budgetMs": 75,
+      "recordsSha256": "3d8045fe3f033ee4dde1befde607d9ec6c5cab2fb03fe0f448f7430c72437095"
+    },
+    {
+      "budgetMs": 150,
+      "recordsSha256": "7d54e7627ea3dd65667d48b4647a4461a736c845d65e50993f410d056cd571d2"
+    }
+  ],
+  "allContractFieldsVerified": true
+}

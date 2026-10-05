@@ -4,6 +4,8 @@
 
 [探索接続](AI_MODEL_SEARCH_CONNECTION_20261005.md)を完了した凍結線形seed 2026100401と、元の手作り評価器を同じ探索coreで対局させる基盤を追加した。この工程は運用試走と独立した正式比較条件の固定までを対象とする。正式な棋力比較、スマートフォン実機試験、公開AI採用は後続工程。正式finalを再開封しない。
 
+現在の正式条件は後段の **v2：150ms・random/noisyの256ペア（512局）** である。最初の4policy案v1は独立開幕不足でHOLDとして保存し、仕様の原記録と現行contractを区別する。
+
 ## 同じ探索条件で担当を交換する
 
 両評価器を `prototype/model-search-ai.js` に注入し、反復深化・PVS・表・cache・手順序・静止探索を共通化する。元の `search-ai.js`、手作り評価器、モデルbytes、入力・学習条件、最終評価記録は変更しない。凍結モデルSHA-256は `f74175fbaa6f2d6a82148cf5e106da7291f396b2b38cb79866dc641b2147254d`。
@@ -18,7 +20,7 @@
 
 試走前に固定した運用条件は、各予算8局、技術的失敗0、1局最大65秒、各評価器の深度未完了fallback率2%以下、時間予算超過のp99が40ms以下、単一の超過が500ms以下。この条件を通る最大の予算を選ぶ。条件を満たす予算がなければHOLDとし、正式条件を作らない。3予算のうち棋力が高かったものを選ぶ手順ではない。タイミングはhost負荷に左右されるため、各artifactにNode・CPU・runner imageとrun/attempt/headを保存する。
 
-[Actions](../.github/workflows/equal-time-pilot.yml)はcontents readだけを使い、12件のprotocolテスト後に3予算を別jobで試走し、完成局ごとにcheckpointをartifactへ保存する。鍵・正式ZIPの取得・Gitへの受付作成は行わない。artifactの保存期間は30日であり、観測したZIPのdigestと公開棋譜を別途保存して証拠を維持する。
+[Actions](../.github/workflows/equal-time-pilot.yml)はcontents readだけを使う。初回は12件のprotocolテスト後に3予算を別jobで試走し、完成局ごとにcheckpointをartifactへ保存した。v2では計16テストと固定開幕の再生成監査を追加した。mainへのpushは検証だけを行い、試走はPR／手動実行で行う。鍵・正式ZIPの取得・Gitへの受付作成は行わない。artifactの保存期間は30日であり、観測したZIPのdigestと公開棋譜を別途保存して証拠を維持する。
 
 ## 記録・監査・再開
 
@@ -38,7 +40,7 @@ node tools/ai-integration/equal-time-match.cjs pilot 150 /absolute/pilot-150
 node tools/ai-integration/equal-time-match.cjs freeze /absolute/pilot-25 /absolute/pilot-75 /absolute/pilot-150 /absolute/new-formal-contract
 ```
 
-## 独立した正式比較の条件
+## 最初の正式開幕案v1と継承する判定条件
 
 [開幕生成](../tools/ai-integration/equal-time-openings.cjs)は旧generatorと同じ12手のprefixだけを生成する。元の900000〜904095・4policyの全16384単位を生成してopening-groupを再構成し、旧開発registryの開幕と合わせて除外する。暗号文・教師ラベル・正式splitの行を読む作業ではない。新しい候補範囲は1000000〜1004095。policy別・初手担当別に固定saltによるhash順で採用し、各層32ペア、8層で256ペア・512局を固定する。開始rootの既知position/inputも除外し、選んだ開幕groupと正規化rootの重複を排除する。不足時はHOLDとし、seedを追加しない。
 
@@ -93,3 +95,17 @@ node tools/ai-integration/verify-equal-time-formal-v2.cjs doc/equal-time-formal-
 ```
 
 v1の `equal-time-match.cjs freeze` は原契約のHOLDを維持する。後続の正式実行は上記v2 contractを使用する。CIでも原ZIP・契約全field・開幕manifestを検査し、正式行読取り0・正式対局0を報告する。正式受付、32shard実行、artifactの再開と集約workerを実装することが次の工程である。
+
+### 最終CIとmain統合
+
+PR #23の最終head `938935a11773dd75ddeac9f1dc5a890b4bff4302`（全run attempt 1）で、[同時間対局CI 37285969819](https://github.com/nkkmd/bao-nakakamado/actions/runs/37285969819) の16テスト・固定開幕監査・3予算試走の全5ジョブ、[既存回帰CI 37285969802](https://github.com/nkkmd/bao-nakakamado/actions/runs/37285969802) の全8ジョブ、[探索接続CI 37285969864](https://github.com/nkkmd/bao-nakakamado/actions/runs/37285969864)、[旧準備CI 37285969817](https://github.com/nkkmd/bao-nakakamado/actions/runs/37285969817) が成功した。
+
+既存prototypeの89テストが成功し、Chromium 151.0.7922.34で64手の盤面・棋譜再生、コンピューターとリセット、安全停止、320/390/432px幅、ライセンス案内が通過し、page errorは0。moto g52j 5G実機の結果ではない。変更文書の相対リンク138件・ライセンス条文コピーの一致、原教師・モデルbytes・最終評価記録に差分がないことも確認した。
+
+固定条件のCI artifactは11334810171、874 bytes、ZIP digest `sha256:b5357012b562a2230f8c6b7bc7baf17f02843e6e51ef59f69825fc7aead6e549`。単一JSONとCRCを検査し、[原報告](AI_EQUAL_TIME_FORMAL_V2_CI_REPORT_20261005.json)を取得したbytesで保存した（SHA-256 `3d88082423235b32948b097dd7312964d395ca88a889e9959cf900ceeba5ae17`）。contract／manifest／fingerprintと全256開幕の再生成、原試走24局のauditがローカルとCIで一致した。
+
+2026年10月5日17:53:02 JSTにPR #23をmainへ統合した。merge `5a69bde97d6ed7e8619c66afbff9968e5932ebb0`。実run・job・artifact・統合後のCIは[CI記録](AI_EQUAL_TIME_PILOT_CI_20261005.json)に保存する。正式比較はまだ0局。次はこの固定contractから正式受付・分割実行・中断の記録・検査済みartifactの再利用・固定集約を行うworkerを整備する。
+
+統合後のmain pushでも [既存回帰37286422794](https://github.com/nkkmd/bao-nakakamado/actions/runs/37286422794)、[探索接続37286422738](https://github.com/nkkmd/bao-nakakamado/actions/runs/37286422738)、[旧準備37286422755](https://github.com/nkkmd/bao-nakakamado/actions/runs/37286422755)、[固定条件監査37286422747](https://github.com/nkkmd/bao-nakakamado/actions/runs/37286422747) がすべて成功した。pushでの教師再試走・artifact復元・対局試走のskipはworkflow条件どおりであり、PR時の全8ジョブ通過と区別して記録する。
+
+証拠追記後の相対リンクは140件で欠落0。後続の文書保存commitは記録とREADMEだけを更新し、モデル・探索・試走仕様・v1-HOLD・v2 contract／manifestのbytesを変更しない。

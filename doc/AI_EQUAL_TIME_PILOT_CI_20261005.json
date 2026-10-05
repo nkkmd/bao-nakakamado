@@ -1,0 +1,472 @@
+{
+  "schema": 1,
+  "dateJST": "2026-10-05",
+  "scope": "equal-time-operational-pilot-and-preregistered-strength-contract-not-formal-match-results",
+  "repository": "nkkmd/bao-nakakamado",
+  "rulesVersion": "0.8.0",
+  "replayVersion": 7,
+  "pr": {
+    "number": 23,
+    "url": "https://github.com/nkkmd/bao-nakakamado/pull/23",
+    "baseSha": "985c3844fcee5f5aa01da4ee78231d1faf52c863",
+    "initialHeadSha": "d3dc43d711a2466d9c48b0b6f38eeed1e2fd366b",
+    "finalHeadSha": "938935a11773dd75ddeac9f1dc5a890b4bff4302",
+    "merged": true,
+    "mergedAtUTC": "2026-10-05T08:53:02Z",
+    "mergedAtJST": "2026-10-05T17:53:02+09:00",
+    "mergeCommitSha": "5a69bde97d6ed7e8619c66afbff9968e5932ebb0"
+  },
+  "initialPilot": {
+    "runId": 37284277883,
+    "attempt": 1,
+    "branchHeadSha": "d3dc43d711a2466d9c48b0b6f38eeed1e2fd366b",
+    "checkoutSha": "2ae1007671c36112f30432ac7649c3faffad9393",
+    "checkoutParents": [
+      "985c3844fcee5f5aa01da4ee78231d1faf52c863",
+      "d3dc43d711a2466d9c48b0b6f38eeed1e2fd366b"
+    ],
+    "checkoutTree": "7b3bd8eb848d298ea3174b0cbdf5c98ae8868741",
+    "artifacts": [
+      {
+        "id": 11333582512,
+        "name": "equal-time-pilot-25",
+        "bytes": 36716,
+        "digest": "sha256:94759342649837b75dffd24cd032bd869325aa2a88c482e12027d3c4691fc054",
+        "created": "2026-10-05T08:33:00Z",
+        "expires": "2026-11-04T08:33:00Z",
+        "headSha": "d3dc43d711a2466d9c48b0b6f38eeed1e2fd366b"
+      },
+      {
+        "id": 11333193551,
+        "name": "equal-time-pilot-75",
+        "bytes": 47934,
+        "digest": "sha256:1b843e7e3762fa52e6325e50931b3fd14e11af256765040669a966519789aa82",
+        "created": "2026-10-05T08:33:17Z",
+        "expires": "2026-11-04T08:33:16Z",
+        "headSha": "d3dc43d711a2466d9c48b0b6f38eeed1e2fd366b"
+      },
+      {
+        "id": 11333162507,
+        "name": "equal-time-pilot-150",
+        "bytes": 44464,
+        "digest": "sha256:4a115a2fa1114524a2b4d472d441042903ba3f4a9feebc5bcd526d17cbd7c896",
+        "created": "2026-10-05T08:33:34Z",
+        "expires": "2026-11-04T08:33:33Z",
+        "headSha": "d3dc43d711a2466d9c48b0b6f38eeed1e2fd366b"
+      }
+    ],
+    "games": 24,
+    "plies": 756,
+    "normalTerminal": 24,
+    "technicalFailures": 0,
+    "illegalMoves": 0,
+    "fallbackMoves": 0,
+    "selectedBudgetMs": 150,
+    "budgetSelection": "first-run-only-largest-operational-pass-no-strength-scores",
+    "pilotFingerprint": "3ff632e8cae71f4d7077b3b3e341977299d3e036656c29424e8205c1d1da53d6"
+  },
+  "initialHeadCI": [
+    {
+      "id": 37284277763,
+      "name": "Playable prototype checks",
+      "headSha": "d3dc43d711a2466d9c48b0b6f38eeed1e2fd366b",
+      "attempt": 1,
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/37284277763",
+      "created": "2026-10-05T08:32:34Z",
+      "updated": "2026-10-05T08:35:05Z"
+    },
+    {
+      "id": 37284277883,
+      "name": "NYAKUA equal time operational pilot",
+      "headSha": "d3dc43d711a2466d9c48b0b6f38eeed1e2fd366b",
+      "attempt": 1,
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/37284277883",
+      "created": "2026-10-05T08:32:34Z",
+      "updated": "2026-10-05T08:33:38Z"
+    },
+    {
+      "id": 37284278058,
+      "name": "NYAKUA final evaluation preparation checks",
+      "headSha": "d3dc43d711a2466d9c48b0b6f38eeed1e2fd366b",
+      "attempt": 1,
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/37284278058",
+      "created": "2026-10-05T08:32:34Z",
+      "updated": "2026-10-05T08:32:56Z"
+    },
+    {
+      "id": 37284277751,
+      "name": "NYAKUA frozen model search connection checks",
+      "headSha": "d3dc43d711a2466d9c48b0b6f38eeed1e2fd366b",
+      "attempt": 1,
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/37284277751",
+      "created": "2026-10-05T08:32:34Z",
+      "updated": "2026-10-05T08:32:57Z"
+    }
+  ],
+  "finalHeadCI": [
+    {
+      "id": 37285969864,
+      "name": "NYAKUA frozen model search connection checks",
+      "headSha": "938935a11773dd75ddeac9f1dc5a890b4bff4302",
+      "attempt": 1,
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/37285969864",
+      "created": "2026-10-05T08:48:46Z",
+      "updated": "2026-10-05T08:49:19Z",
+      "jobs": [
+        {
+          "id": 111684830462,
+          "name": "development-model-search",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 37285969817,
+      "name": "NYAKUA final evaluation preparation checks",
+      "headSha": "938935a11773dd75ddeac9f1dc5a890b4bff4302",
+      "attempt": 1,
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/37285969817",
+      "created": "2026-10-05T08:48:46Z",
+      "updated": "2026-10-05T08:49:06Z",
+      "jobs": [
+        {
+          "id": 111684830309,
+          "name": "unopened-final",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 37285969802,
+      "name": "Playable prototype checks",
+      "headSha": "938935a11773dd75ddeac9f1dc5a890b4bff4302",
+      "attempt": 1,
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/37285969802",
+      "created": "2026-10-05T08:48:46Z",
+      "updated": "2026-10-05T08:52:00Z",
+      "jobs": [
+        {
+          "id": 111684829307,
+          "name": "teacher-feasibility (2)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111684829499,
+          "name": "prototype",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111684829517,
+          "name": "teacher-feasibility (3)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111684829526,
+          "name": "formal-selection-v2-preflight",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111684829641,
+          "name": "teacher-feasibility (0)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111684829697,
+          "name": "teacher-feasibility (1)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111684941741,
+          "name": "teacher-feasibility-aggregate",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111685504728,
+          "name": "formal-artifact-resume",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 37285969819,
+      "name": "NYAKUA equal time operational pilot",
+      "headSha": "938935a11773dd75ddeac9f1dc5a890b4bff4302",
+      "attempt": 1,
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/37285969819",
+      "created": "2026-10-05T08:48:46Z",
+      "updated": "2026-10-05T08:49:48Z",
+      "jobs": [
+        {
+          "id": 111684829405,
+          "name": "protocol-tests",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111684907247,
+          "name": "formal-opening-audit",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111684907430,
+          "name": "operational-pilot (75)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111684907436,
+          "name": "operational-pilot (25)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111684907501,
+          "name": "operational-pilot (150)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "newProtocolTests": 16,
+  "existingPrototypeTests": 89,
+  "browser": {
+    "browser": "151.0.7922.34",
+    "pits": 32,
+    "plies": 64,
+    "rearMoves": 12,
+    "extraMoves": 6,
+    "searchCheck": {
+      "transitions": 272,
+      "nyakua": 26
+    },
+    "searchAICheck": {
+      "positions": 2,
+      "completedDepth": 3,
+      "nodeBrowserMatch": true
+    },
+    "downloadReplayed": true,
+    "computerAndReset": true,
+    "safetyStopAndReplay": true,
+    "licensePageChecked": true,
+    "mobileWidths": [
+      320,
+      390,
+      432
+    ],
+    "pageErrors": []
+  },
+  "formalV2": {
+    "contractPath": "doc/equal-time-formal-v2/contract.json",
+    "openingPath": "doc/equal-time-formal-v2/openings.json",
+    "v1HoldPath": "doc/equal-time-formal-v2/v1-hold.json",
+    "contractSha256": "b34680435b7f0a27da165d638de0b957afcd0b202e0cd2ce1835e28efd083119",
+    "contractRawFileSha256": "6e11a2eac2348fb185dc7cf0fca70b928c8582debc030fd260ef94b184705600",
+    "openingManifestSha256": "5edf510a6f75f9029905d4b8bb775fdc30d5a98ae908f3b1739fe223caf83f8f",
+    "openingRawFileSha256": "772bca8ffc5715f60f7a348468305ffc380286460f48096c15fad61b2425b086",
+    "fingerprint": "f3e25220de4c40025e5943d618638a01be98d042c7c90f1aac1cab83fe8f7c0f",
+    "pairs": 256,
+    "games": 512,
+    "shards": 32,
+    "timeLimitMs": 150,
+    "policies": [
+      "random",
+      "noisy"
+    ],
+    "v1Status": "HOLD-INSUFFICIENT-INDEPENDENT-OPENINGS",
+    "formalGamesPlayed": 0,
+    "formalRowsRead": 0,
+    "publicAdopted": false
+  },
+  "ciPreflightArtifact": {
+    "runId": 37285969819,
+    "attempt": 1,
+    "headSha": "938935a11773dd75ddeac9f1dc5a890b4bff4302",
+    "jobId": 111684907247,
+    "id": 11334810171,
+    "name": "equal-time-formal-v2-preflight",
+    "bytes": 874,
+    "digest": "sha256:b5357012b562a2230f8c6b7bc7baf17f02843e6e51ef59f69825fc7aead6e549",
+    "crcPassed": true,
+    "reportPath": "doc/AI_EQUAL_TIME_FORMAL_V2_CI_REPORT_20261005.json",
+    "reportSha256": "3d88082423235b32948b097dd7312964d395ca88a889e9959cf900ceeba5ae17",
+    "reportBytes": 1255,
+    "allContractFieldsVerified": true,
+    "localCiBindingsIdentical": true
+  },
+  "checks": {
+    "preMergeRelativeLinks": 138,
+    "relativeLinks": 140,
+    "missingLinks": 0,
+    "licenseCopiesIdentical": true,
+    "originalTeacherUnchanged": true,
+    "frozenModelBytesUnchanged": true,
+    "formalFinalRecordsUnchanged": true,
+    "publicUIChanged": false,
+    "postMergeFourWorkflowsPassed": true,
+    "skippedJobsAreExpectedPushOnlyGuards": true
+  },
+  "oldReviewFinding": {
+    "url": "https://github.com/nkkmd/bao-nakakamado/pull/23#discussion_r4182128453",
+    "reviewedHeadSha": "d3dc43d711a2466d9c48b0b6f38eeed1e2fd366b",
+    "finding": "v1 cannot fill greedy/reply independent opening strata",
+    "implementedResponse": "preserve original v1 HOLD and provide separately identified v2 before any formal match",
+    "validatedByFinalHeadCI": true
+  },
+  "nextStage": "formal receipt, 32-shard match worker, artifact resume and fixed aggregation",
+  "formalMatchesStarted": false,
+  "postMergeCI": [
+    {
+      "id": 37286422794,
+      "name": "Playable prototype checks",
+      "headSha": "5a69bde97d6ed7e8619c66afbff9968e5932ebb0",
+      "attempt": 1,
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/37286422794",
+      "created": "2026-10-05T08:53:04Z",
+      "updated": "2026-10-05T08:54:55Z",
+      "jobs": [
+        {
+          "id": 111686291149,
+          "name": "prototype",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111686292713,
+          "name": "teacher-feasibility",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "id": 111686292752,
+          "name": "formal-selection-v2-preflight",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "id": 111686293670,
+          "name": "teacher-feasibility-aggregate",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "id": 111686914893,
+          "name": "formal-artifact-resume",
+          "status": "completed",
+          "conclusion": "skipped"
+        }
+      ]
+    },
+    {
+      "id": 37286422738,
+      "name": "NYAKUA frozen model search connection checks",
+      "headSha": "5a69bde97d6ed7e8619c66afbff9968e5932ebb0",
+      "attempt": 1,
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/37286422738",
+      "created": "2026-10-05T08:53:04Z",
+      "updated": "2026-10-05T08:53:26Z",
+      "jobs": [
+        {
+          "id": 111686291330,
+          "name": "development-model-search",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 37286422755,
+      "name": "NYAKUA final evaluation preparation checks",
+      "headSha": "5a69bde97d6ed7e8619c66afbff9968e5932ebb0",
+      "attempt": 1,
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/37286422755",
+      "created": "2026-10-05T08:53:04Z",
+      "updated": "2026-10-05T08:53:22Z",
+      "jobs": [
+        {
+          "id": 111686290992,
+          "name": "unopened-final",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 37286422747,
+      "name": "NYAKUA equal time operational pilot",
+      "headSha": "5a69bde97d6ed7e8619c66afbff9968e5932ebb0",
+      "attempt": 1,
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/37286422747",
+      "created": "2026-10-05T08:53:04Z",
+      "updated": "2026-10-05T08:53:39Z",
+      "jobs": [
+        {
+          "id": 111686290918,
+          "name": "protocol-tests",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111686345991,
+          "name": "formal-opening-audit",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111686347278,
+          "name": "operational-pilot",
+          "status": "completed",
+          "conclusion": "skipped"
+        }
+      ]
+    }
+  ],
+  "finalStatus": "PILOT-COMPLETE-INDEPENDENT-FORMAL-CONDITIONS-FROZEN-MERGED"
+}
