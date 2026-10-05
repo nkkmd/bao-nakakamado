@@ -183,3 +183,16 @@ node tools/ai-integration/verify-formal-final.cjs NEW_DEVELOPMENT_OUTPUT_DIRECTO
 ```
 
 CLIはpreflightのみ。テストは偽API、推論smokeは既知の除外経路32局面だけを使う。GitHubに受付タグを作らず、収集鍵や正式ZIPを使用しない。受付ライブラリは固定refの新規作成後だけ復号へ進む順序を検証した。応答消失や受付後の中断はHOLDとし、新しいrunで再開封しない。旧の `formal-collection.cjs open` を正式な新工程へ直接使わない。
+
+## 正式finalの手動workerと結果保存
+
+[実装・開発検証](../../doc/AI_FORMAL_FINAL_WORKER_20261005.md)を参照。手動 [formal-final.yml](../../.github/workflows/formal-final.yml) はmain・attempt 1・固定commitとrunner fingerprintだけを受け付ける。元の凍結条件と1候補を維持し、永続受付の確認後だけ復号する。公開JSON3ファイルを専用結果ブランチへ保存し、平文final・一時入力・鍵はartifactへ出さない。
+
+```sh
+node tools/ai-integration/formal-final-runner.cjs preflight
+node --test tools/ai-integration/formal-final.test.cjs tools/ai-integration/formal-final-runner.test.cjs
+python3 tools/ai-integration/formal-final-unzip.test.py
+node tools/ai-integration/verify-formal-final-worker.cjs NEW_DEVELOPMENT_OUTPUT_DIRECTORY
+```
+
+開発検証は除外済みの32局面・使い捨て鍵・偽APIだけを使う。正式評価はCI通過・main統合後に固定commitから手動で一度起動する。数値HOLDでも結果を保存し、受付後の中断では再開封しない。保存障害からは、originとdigestを確認した公開JSONの `publish` だけで回復する。

@@ -1,0 +1,54 @@
+name: NYAKUA frozen final evaluation once
+on:
+  workflow_dispatch:
+    inputs:
+      expected_head_sha:
+        description: 'Exact main commit containing the reviewed final worker'
+        required: true
+      expected_runner_fingerprint:
+        description: 'Frozen final runner fingerprint from successful development checks'
+        required: true
+      authorization:
+        description: 'Explicit action: OPEN-FROZEN-FINAL-ONCE'
+        required: true
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: nyakua-final-once-1750a34d21bcc824133b23647033317fbcb7894cdac70625c0c45b6622ec2a03
+  cancel-in-progress: false
+jobs:
+  final-once:
+    if: github.repository == 'nkkmd/bao-nakakamado' && github.ref == 'refs/heads/main' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.14'
+      - run: python -m pip install -r tools/ai-integration/formal-learning-requirements.txt
+      - name: Restore pinned ciphertext, reserve durable claim, evaluate one candidate and preserve public report
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          BAO_COLLECTION_KEY_BASE64: ${{ secrets.BAO_COLLECTION_KEY_BASE64 }}
+          BAO_FINAL_EXPECTED_HEAD: ${{ inputs.expected_head_sha }}
+          BAO_FINAL_EXPECTED_FINGERPRINT: ${{ inputs.expected_runner_fingerprint }}
+          BAO_FINAL_AUTHORIZATION: ${{ inputs.authorization }}
+        run: node tools/ai-integration/formal-final-runner.cjs run "$RUNNER_TEMP/formal-final"
+      - name: Preserve only public records even on failure; never ciphertext or final rows
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: formal-final-public-records
+          path: ${{ runner.temp }}/formal-final/public/*.json
+          if-no-files-found: warn
+          retention-days: 30
