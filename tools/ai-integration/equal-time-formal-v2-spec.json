@@ -1,0 +1,27 @@
+{
+  "id": "NAKAKAMADO-EQUAL-TIME-FORMAL-20261005-v2",
+  "supersedes": "NAKAKAMADO-EQUAL-TIME-FORMAL-20261005-v1",
+  "revisionReason": "v1-greedy-first-south-stratum-has-no-independent-prefixes-HOLD-before-any-formal-match",
+  "candidateSeedStart": 1000000,
+  "candidateSeedCount": 4096,
+  "policies": ["random", "noisy"],
+  "pairsPerPolicyAndStartingSide": 64,
+  "pairs": 256,
+  "games": 512,
+  "shards": 32,
+  "orderingSalt": "NAKAKAMADO-INDEPENDENT-STRENGTH-20261005-v2",
+  "inheritedDecisionFields": ["minimumNormalCompletionFraction", "minimumConservativePairMean", "alpha", "lowerBoundMustExceed", "unresolvedUtilityInterval", "inferenceUnit", "stopPolicy", "decisionScope"],
+  "pilotRunId": "37284277883",
+  "pilotAttempt": "1",
+  "pilotBranchHeadSha": "d3dc43d711a2466d9c48b0b6f38eeed1e2fd366b",
+  "pilotCheckoutSha": "2ae1007671c36112f30432ac7649c3faffad9393",
+  "pilotArtifacts": [
+    {"budgetMs":25,"id":11333582512,"name":"equal-time-pilot-25","bytes":36716,"digest":"sha256:94759342649837b75dffd24cd032bd869325aa2a88c482e12027d3c4691fc054"},
+    {"budgetMs":75,"id":11333193551,"name":"equal-time-pilot-75","bytes":47934,"digest":"sha256:1b843e7e3762fa52e6325e50931b3fd14e11af256765040669a966519789aa82"},
+    {"budgetMs":150,"id":11333162507,"name":"equal-time-pilot-150","bytes":44464,"digest":"sha256:4a115a2fa1114524a2b4d472d441042903ba3f4a9feebc5bcd526d17cbd7c896"}
+  ],
+  "formalGamesPlayedBeforeRevision": 0,
+  "pilotStrengthScoresRead": false,
+  "seedRangeExpanded": false,
+  "exclusionsRelaxed": false
+}
