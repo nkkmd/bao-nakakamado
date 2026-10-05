@@ -6,12 +6,14 @@ on:
       - 'doc/AI_FORMAL_LEARNING_VALIDATION_20261005.json'
       - 'doc/AI_FORMAL_COLLECTION_RUN_V2_20261005.json'
       - '.github/workflows/formal-final-check.yml'
+      - '.github/workflows/formal-final.yml'
   pull_request:
     paths:
       - 'tools/ai-integration/**'
       - 'doc/AI_FORMAL_LEARNING_VALIDATION_20261005.json'
       - 'doc/AI_FORMAL_COLLECTION_RUN_V2_20261005.json'
       - '.github/workflows/formal-final-check.yml'
+      - '.github/workflows/formal-final.yml'
 permissions:
   contents: read
 jobs:
@@ -30,12 +32,20 @@ jobs:
       - name: Verify frozen selection and inherited thresholds without final data
         run: node tools/ai-integration/formal-final.cjs preflight
       - name: Check races, stale bindings, response loss and interruption with fake registry
-        run: node --test tools/ai-integration/formal-final.test.cjs
+        run: node --test tools/ai-integration/formal-final.test.cjs tools/ai-integration/formal-final-runner.test.cjs
+      - name: Check synthetic ciphertext ZIP boundaries; never use formal archive
+        run: python tools/ai-integration/formal-final-unzip.test.py
+      - name: Record frozen manual-worker fingerprint without execution
+        run: node tools/ai-integration/formal-final-runner.cjs preflight
+      - name: Test full worker decryption and aggregation with excluded development payload only
+        run: node tools/ai-integration/verify-formal-final-worker.cjs "$RUNNER_TEMP/formal-final-worker-development"
       - name: Check frozen candidate integer parity on excluded development paths only
         run: node tools/ai-integration/verify-formal-final.cjs "$RUNNER_TEMP/formal-final-development"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: final-preparation-development-verification
-          path: ${{ runner.temp }}/formal-final-development/verification.json
+          path: |
+            ${{ runner.temp }}/formal-final-development/verification.json
+            ${{ runner.temp }}/formal-final-worker-development/verification.json
           retention-days: 30

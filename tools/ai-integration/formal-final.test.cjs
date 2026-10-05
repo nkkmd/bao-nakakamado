@@ -93,7 +93,7 @@ test('Final verdict inherits 18 gates; absent rare strata, bad parity and degrad
 test('Final normalization rejects development and modified rows before replaying them',()=>{
  assert.throws(()=>F.normalizeFinal([]));assert.throws(()=>F.normalizeFinal([{split:'final',id:'development'}]));
 });
-test('Only preflight CLI and read-only CI are installed; no formal open workflow',()=>{
+test('Preparation CLI stays read-only and development CI never opens formal data',()=>{
  const workflow=fs.readFileSync(path.join(__dirname,'../../.github/workflows/formal-final-check.yml'),'utf8');
  assert.ok(!/secrets\.|contents: write|workflow_dispatch:/.test(workflow));
  assert.ok(workflow.includes('formal-final.cjs preflight'));

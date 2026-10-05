@@ -4,6 +4,8 @@
 
 [正式学習・validation](AI_FORMAL_LEARNING_RUN_20261005.md)で選定した線形seed 2026100401について、最終評価の条件と中断時の運用を固定した。**この工程は準備であり、正式finalは未開封、開封受付タグも未作成**。`authorizedToOpenOnce: false` を維持する。正式データの取得・復号や、実際に開封するworkflowの導入・起動は行っていない。
 
+> 後続の[手動workerと結果保存](AI_FORMAL_FINAL_WORKER_20261005.md)を整備した。以下の未導入・未開封状態はPR #20の準備工程時点の原記録であり、実際の起動と結果は後続記録で区別する。
+
 ## 対象と変更しない条件
 
 機械可読の契約は [formal-final-spec.json](../tools/ai-integration/formal-final-spec.json)、ID `NAKAKAMADO-FORMAL-FINAL-20261005-v1`。最終評価の成績を見ずに固定した。モデル比較をやり直さず、線形・seed 2026100401だけを評価する。MLP・論理ゲートの追加評価、最良seedへの交換、同じfinalを使う再学習・閾値調整は行わない。
