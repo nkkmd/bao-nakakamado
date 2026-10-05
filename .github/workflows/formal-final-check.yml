@@ -1,0 +1,41 @@
+name: NYAKUA final evaluation preparation checks
+on:
+  push:
+    paths:
+      - 'tools/ai-integration/**'
+      - 'doc/AI_FORMAL_LEARNING_VALIDATION_20261005.json'
+      - 'doc/AI_FORMAL_COLLECTION_RUN_V2_20261005.json'
+      - '.github/workflows/formal-final-check.yml'
+  pull_request:
+    paths:
+      - 'tools/ai-integration/**'
+      - 'doc/AI_FORMAL_LEARNING_VALIDATION_20261005.json'
+      - 'doc/AI_FORMAL_COLLECTION_RUN_V2_20261005.json'
+      - '.github/workflows/formal-final-check.yml'
+permissions:
+  contents: read
+jobs:
+  unopened-final:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.14'
+      - run: python -m pip install -r tools/ai-integration/formal-learning-requirements.txt
+      - name: Verify frozen selection and inherited thresholds without final data
+        run: node tools/ai-integration/formal-final.cjs preflight
+      - name: Check races, stale bindings, response loss and interruption with fake registry
+        run: node --test tools/ai-integration/formal-final.test.cjs
+      - name: Check frozen candidate integer parity on excluded development paths only
+        run: node tools/ai-integration/verify-formal-final.cjs "$RUNNER_TEMP/formal-final-development"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: final-preparation-development-verification
+          path: ${{ runner.temp }}/formal-final-development/verification.json
+          retention-days: 30
