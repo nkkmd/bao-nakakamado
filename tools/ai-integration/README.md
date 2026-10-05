@@ -96,7 +96,7 @@ PRまたは手動Actionsの4workerは、それぞれ16件を測定後、同じ�
 
 通常ハンド0・確保分1の標準初期配置からの到達4件は [reserved-only-reachable-fixtures.json](reserved-only-reachable-fixtures.json)。通常処理の全棋譜再生と全合法variantの1個投入を検査する。終局・不正手・総KETE違いを教師へ混ぜない。
 
-正式収集の現在の固定条件は [formal-collection-spec.json](formal-collection-spec.json)。この試走CLIは正式データの生成器ではない。正式の除外一覧・generator・全体監査・artifact復元・最終検証封印は以下の基盤として実装した。v1は候補の必要層不足で教師要求前に保留した。後続のv2の正式収集は後続のrun 37245789837で完了した。本学習は未開始である。前工程の `learning-spec.json` と結果は原記録として保持する。
+正式収集の現在の固定条件は [formal-collection-spec.json](formal-collection-spec.json)。この試走CLIは正式データの生成器ではない。正式の除外一覧・generator・全体監査・artifact復元・最終検証封印は以下の基盤として実装した。v1は候補の必要層不足で教師要求前に保留した。後続のv2の正式収集は後続のrun 37245789837で完了した。この基盤の整備時点では本学習は未開始だった。後続の本学習と最終評価の記録は以下を参照。前工程の `learning-spec.json` と結果は原記録として保持する。
 
 ## 正式収集基盤の処理確認と保留
 
@@ -111,7 +111,7 @@ node tools/ai-integration/verify-formal-infrastructure.cjs /tmp/bao-formal-devel
 
 正式条件の [事前候補監査](formal-candidate-preflight-results.json) は `HOLD-BEFORE-TEACHER`。trainのMTAJI 10/512・確保分のみ0/16、validationのMTAJI 3/128・確保分のみ2/4で不足し、教師要求0件で停止した。同じseed範囲・候補・split割当・8192要求・最低件数を維持する[選択計画v2](../../doc/AI_FORMAL_SELECTION_V2_20261005.md)を別IDに固定し、全候補条件を通過した。v1を上書きせず、収集時に版を明示する。
 
-手動 [formal-collection.yml](../../.github/workflows/formal-collection.yml) はprepare→16shard→全体監査・封印を行う。正式起動には独立した32byte鍵のbase64をrepository secret `BAO_COLLECTION_KEY_BASE64` に設定する。鍵をコード・artifactへ含めない。手動入力 `collection_version` は `v2`（既定）または `v1`。v2は事前候補ゲートを通過し、v1は保留になる。正式手動workflow v2のrun 37245789837は全18ジョブ成功した。PR #17でmainへworkflowを統合した。runnerのパス定義を修正した後のCIも全8ジョブ成功。アカウント確認と独立した鍵の新規設定を完了した。8192件を新規計測・受理し、train 5019行・validation 1517行の必要条件と漏洩0件を確認。finalは条件通過・digest・暗号文hashだけを公開し、開封していない。次は学習器とvalidationの数値基準を固定する。[正式収集の実行記録](../../doc/AI_FORMAL_COLLECTION_RUN_V2_20261005.md)を参照。
+手動 [formal-collection.yml](../../.github/workflows/formal-collection.yml) はprepare→16shard→全体監査・封印を行う。正式起動には独立した32byte鍵のbase64をrepository secret `BAO_COLLECTION_KEY_BASE64` に設定する。鍵をコード・artifactへ含めない。手動入力 `collection_version` は `v2`（既定）または `v1`。v2は事前候補ゲートを通過し、v1は保留になる。正式手動workflow v2のrun 37245789837は全18ジョブ成功した。PR #17でmainへworkflowを統合した。runnerのパス定義を修正した後のCIも全8ジョブ成功。アカウント確認と独立した鍵の新規設定を完了した。8192件を新規計測・受理し、train 5019行・validation 1517行の必要条件と漏洩0件を確認。収集完了時点ではfinalの条件通過・digest・暗号文hashだけを公開し、開封していなかった。後続の学習・最終評価は以下の実行記録を参照。[正式収集の実行記録](../../doc/AI_FORMAL_COLLECTION_RUN_V2_20261005.md)を参照。
 
 再開時の `resume_receipts` はrepository・runId・attempt・headSha・artifactId・name・API digestを固定したJSON配列。未再開は `[]`。同じソース・計画・除外一覧・鍵だけで復元し、元の計測originを保持する。APIメタデータ、ZIP実byteのdigest、entryの安全性、計測の認証を検査する。不採用の完了計測も再利用し、時間切れを自動再計測しない。artifactは30日で期限を迎えるため、記録したdigestだけで期限後の原ZIPを取得できるわけではない。
 
@@ -132,7 +132,7 @@ PR/手動CIの専用job `formal-selection-v2-preflight` でも再現し、全候
 
 ## 正式学習仕様・実装検証
 
-[本学習の実行記録](../../doc/AI_FORMAL_LEARNING_RUN_20261005.md)では修正後run 37257277028の全11ジョブ成功・全9候補合格を確認した。選定した線形seed 2026100401の[モデルとreceipt](frozen-models/formal-v1-linear-2026100401/receipt.json)を凍結した。finalは未開封で、公開AIはこの評価器を読み込まない。以下の手順は固定仕様の説明であり、同じvalidationの結果に合わせて条件を調整するものではない。
+[本学習の実行記録](../../doc/AI_FORMAL_LEARNING_RUN_20261005.md)では修正後run 37257277028の全11ジョブ成功・全9候補合格を確認した。選定した線形seed 2026100401の[モデルとreceipt](frozen-models/formal-v1-linear-2026100401/receipt.json)を凍結した。本学習完了時点のfinalは未開封だった。後続の正式評価は末尾の実行記録を参照し、公開AIはこの評価器を読み込まない。以下の手順は固定仕様の説明であり、同じvalidationの結果に合わせて条件を調整するものではない。
 
 [仕様・検証記録](../../doc/AI_FORMAL_LEARNING_DESIGN_20261005.md)と [formal-learning-spec.json](formal-learning-spec.json) に、収集資産の固定receipt、3学習器×3seed、150epoch、比較基準とHOLD条件を固定する。Python 3.12.14・NumPy 2.3.5・Node 24を使用する。学習用の第三者コードと依存は [出典](../../LICENSES.md)を参照。既存の学習パイロット・収集仕様・原結果は変更しない。
 
@@ -174,7 +174,7 @@ Actions APIの認証は環境変数 `GITHUB_TOKEN` を使用する。値を引�
 
 ## 最終評価の開封前準備
 
-[条件と一度だけの運用](../../doc/AI_FORMAL_FINAL_PREPARATION_20261005.md)、[固定契約](formal-final-spec.json)、[実装](formal-final.cjs)を参照。凍結した線形seed 2026100401だけを対象に、既存の18判定と最終splitの最低件数を引き継ぐ。正式finalは未開封で、開封worker・正式復号callback・承認記録は未導入。
+[条件と一度だけの運用](../../doc/AI_FORMAL_FINAL_PREPARATION_20261005.md)、[固定契約](formal-final-spec.json)、[実装](formal-final.cjs)を参照。凍結した線形seed 2026100401だけを対象に、既存の18判定と最終splitの最低件数を引き継ぐ。この開封前準備時点では正式finalは未開封で、開封worker・正式復号callback・承認記録は未導入だった。後続の手動workerと正式実行記録を以下に区別する。
 
 ```sh
 node tools/ai-integration/formal-final.cjs preflight
@@ -197,4 +197,4 @@ node tools/ai-integration/verify-formal-final-worker.cjs NEW_DEVELOPMENT_OUTPUT_
 
 開発検証は除外済みの32局面・使い捨て鍵・偽APIだけを使う。正式評価はCI通過・main統合後に固定commitから手動で一度起動する。数値HOLDでも結果を保存し、受付後の中断では再開封しない。保存障害からは、originとdigestを確認した公開JSONの `publish` だけで回復する。
 
-PR #21は新規CIと既存全8ジョブを通過しmainへ統合した。[CI記録](../../doc/AI_FORMAL_FINAL_WORKER_CI_20261005.json)に保存する。正式開封の起動は自動承認審査で停止し、正式run・受付タグは未作成、finalは未開封。具体的な開封・起動への明示承認後に、当時のmain headと固定runner fingerprintで一度だけ起動する。
+PR #21は新規CIと既存全8ジョブを通過しmainへ統合した。[CI記録](../../doc/AI_FORMAL_FINAL_WORKER_CI_20261005.json)には初回の自動承認審査による停止も原記録として保存する。具体的な明示承認後、main `d61c13e92fc751bf60282949c1290dcb469edcec` と固定runner fingerprintからrun 37266659230（attempt 1）を一度だけ起動した。[正式実行記録](../../doc/AI_FORMAL_FINAL_RUN_20261005.md)のとおり、1,656行・782グループで固定18条件をすべて通過し、整数不一致0件・反対称性も全件通過した。受付タグと元公開JSON・artifactの一致を確認し、結果を永続保存した。正式finalは開封済みで、再起動・再選定・このfinalでの条件調整は行わない。探索接続・同時間対局・実機検証・公開AI採用は後続工程。

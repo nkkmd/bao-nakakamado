@@ -1,0 +1,451 @@
+{
+  "schema": 1,
+  "recordedAtJST": "2026-10-05",
+  "scope": "Public aggregate and Git/API provenance only; no final rows or keys",
+  "approval": {
+    "userText": "承認します。進めてください",
+    "action": "Open frozen final once and dispatch formal-final.yml",
+    "headSha": "d61c13e92fc751bf60282949c1290dcb469edcec",
+    "runnerFingerprint": "8f22d999872964b2e4ed692202ca78f2b0aaa2b447f26f5b15831c38a15bf746",
+    "previousRejectionPreservedIn": "AI_FORMAL_FINAL_WORKER_CI_20261005.json"
+  },
+  "run": {
+    "id": 37266659230,
+    "name": "NYAKUA frozen final evaluation once",
+    "node_id": "WFR_kwLOUyC1oM8AAAAIrUQXng",
+    "head_branch": "main",
+    "head_sha": "d61c13e92fc751bf60282949c1290dcb469edcec",
+    "path": ".github/workflows/formal-final.yml",
+    "display_title": "NYAKUA frozen final evaluation once",
+    "run_number": 1,
+    "event": "workflow_dispatch",
+    "status": "completed",
+    "conclusion": "success",
+    "workflow_id": 375079154,
+    "check_suite_id": 100937336656,
+    "check_suite_node_id": "CS_kwDOUyC1oM8AAAAXgFWHUA",
+    "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37266659230",
+    "html_url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/37266659230",
+    "pull_requests": [],
+    "created_at": "2026-10-05T05:11:20Z",
+    "updated_at": "2026-10-05T05:11:48Z",
+    "actor": {
+      "login": "nkkmd",
+      "id": 72678394,
+      "node_id": "MDQ6VXNlcjcyNjc4Mzk0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72678394?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nkkmd",
+      "html_url": "https://github.com/nkkmd",
+      "followers_url": "https://api.github.com/users/nkkmd/followers",
+      "following_url": "https://api.github.com/users/nkkmd/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nkkmd/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nkkmd/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nkkmd/subscriptions",
+      "organizations_url": "https://api.github.com/users/nkkmd/orgs",
+      "repos_url": "https://api.github.com/users/nkkmd/repos",
+      "events_url": "https://api.github.com/users/nkkmd/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nkkmd/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "run_attempt": 1,
+    "referenced_workflows": [],
+    "run_started_at": "2026-10-05T05:11:20Z",
+    "triggering_actor": {
+      "login": "nkkmd",
+      "id": 72678394,
+      "node_id": "MDQ6VXNlcjcyNjc4Mzk0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72678394?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nkkmd",
+      "html_url": "https://github.com/nkkmd",
+      "followers_url": "https://api.github.com/users/nkkmd/followers",
+      "following_url": "https://api.github.com/users/nkkmd/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nkkmd/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nkkmd/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nkkmd/subscriptions",
+      "organizations_url": "https://api.github.com/users/nkkmd/orgs",
+      "repos_url": "https://api.github.com/users/nkkmd/repos",
+      "events_url": "https://api.github.com/users/nkkmd/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nkkmd/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "jobs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37266659230/jobs",
+    "logs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37266659230/logs",
+    "check_suite_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/check-suites/100937336656",
+    "artifacts_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37266659230/artifacts",
+    "cancel_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37266659230/cancel",
+    "rerun_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37266659230/rerun",
+    "previous_attempt_url": null,
+    "workflow_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/workflows/375079154",
+    "head_commit": {
+      "id": "d61c13e92fc751bf60282949c1290dcb469edcec",
+      "tree_id": "95bbdcccff97db9f2dad573b759d17f3cdad22c5",
+      "message": "docs: preserve final worker CI and explicit opening approval blocker",
+      "timestamp": "2026-10-05T04:55:20Z",
+      "author": {
+        "name": "Sawa",
+        "email": "72678394+nkkmd@users.noreply.github.com"
+      },
+      "committer": {
+        "name": "Sawa",
+        "email": "72678394+nkkmd@users.noreply.github.com"
+      }
+    },
+    "repository": {
+      "id": 1394652576,
+      "node_id": "R_kgDOUyC1oA",
+      "name": "bao-nakakamado",
+      "full_name": "nkkmd/bao-nakakamado",
+      "private": false,
+      "owner": {
+        "login": "nkkmd",
+        "id": 72678394,
+        "node_id": "MDQ6VXNlcjcyNjc4Mzk0",
+        "avatar_url": "https://avatars.githubusercontent.com/u/72678394?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/nkkmd",
+        "html_url": "https://github.com/nkkmd",
+        "followers_url": "https://api.github.com/users/nkkmd/followers",
+        "following_url": "https://api.github.com/users/nkkmd/following{/other_user}",
+        "gists_url": "https://api.github.com/users/nkkmd/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/nkkmd/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/nkkmd/subscriptions",
+        "organizations_url": "https://api.github.com/users/nkkmd/orgs",
+        "repos_url": "https://api.github.com/users/nkkmd/repos",
+        "events_url": "https://api.github.com/users/nkkmd/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/nkkmd/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "html_url": "https://github.com/nkkmd/bao-nakakamado",
+      "description": null,
+      "fork": false,
+      "url": "https://api.github.com/repos/nkkmd/bao-nakakamado",
+      "forks_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/forks",
+      "keys_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/keys{/key_id}",
+      "collaborators_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/collaborators{/collaborator}",
+      "teams_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/teams",
+      "hooks_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/hooks",
+      "issue_events_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/issues/events{/number}",
+      "events_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/events",
+      "assignees_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/assignees{/user}",
+      "branches_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/branches{/branch}",
+      "tags_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/tags",
+      "blobs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/blobs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/tags{/sha}",
+      "git_refs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/refs{/sha}",
+      "trees_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/trees{/sha}",
+      "statuses_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/statuses/{sha}",
+      "languages_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/languages",
+      "stargazers_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/stargazers",
+      "contributors_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/contributors",
+      "subscribers_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/subscribers",
+      "subscription_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/subscription",
+      "commits_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/commits{/sha}",
+      "git_commits_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/commits{/sha}",
+      "comments_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/comments{/number}",
+      "issue_comment_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/issues/comments{/number}",
+      "contents_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/contents/{+path}",
+      "compare_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/compare/{base}...{head}",
+      "merges_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/merges",
+      "archive_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/{archive_format}{/ref}",
+      "downloads_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/downloads",
+      "issues_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/issues{/number}",
+      "pulls_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/pulls{/number}",
+      "milestones_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/milestones{/number}",
+      "notifications_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/notifications{?since,all,participating}",
+      "labels_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/labels{/name}",
+      "releases_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/releases{/id}",
+      "deployments_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/deployments"
+    },
+    "head_repository": {
+      "id": 1394652576,
+      "node_id": "R_kgDOUyC1oA",
+      "name": "bao-nakakamado",
+      "full_name": "nkkmd/bao-nakakamado",
+      "private": false,
+      "owner": {
+        "login": "nkkmd",
+        "id": 72678394,
+        "node_id": "MDQ6VXNlcjcyNjc4Mzk0",
+        "avatar_url": "https://avatars.githubusercontent.com/u/72678394?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/nkkmd",
+        "html_url": "https://github.com/nkkmd",
+        "followers_url": "https://api.github.com/users/nkkmd/followers",
+        "following_url": "https://api.github.com/users/nkkmd/following{/other_user}",
+        "gists_url": "https://api.github.com/users/nkkmd/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/nkkmd/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/nkkmd/subscriptions",
+        "organizations_url": "https://api.github.com/users/nkkmd/orgs",
+        "repos_url": "https://api.github.com/users/nkkmd/repos",
+        "events_url": "https://api.github.com/users/nkkmd/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/nkkmd/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "html_url": "https://github.com/nkkmd/bao-nakakamado",
+      "description": null,
+      "fork": false,
+      "url": "https://api.github.com/repos/nkkmd/bao-nakakamado",
+      "forks_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/forks",
+      "keys_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/keys{/key_id}",
+      "collaborators_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/collaborators{/collaborator}",
+      "teams_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/teams",
+      "hooks_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/hooks",
+      "issue_events_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/issues/events{/number}",
+      "events_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/events",
+      "assignees_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/assignees{/user}",
+      "branches_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/branches{/branch}",
+      "tags_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/tags",
+      "blobs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/blobs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/tags{/sha}",
+      "git_refs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/refs{/sha}",
+      "trees_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/trees{/sha}",
+      "statuses_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/statuses/{sha}",
+      "languages_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/languages",
+      "stargazers_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/stargazers",
+      "contributors_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/contributors",
+      "subscribers_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/subscribers",
+      "subscription_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/subscription",
+      "commits_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/commits{/sha}",
+      "git_commits_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/commits{/sha}",
+      "comments_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/comments{/number}",
+      "issue_comment_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/issues/comments{/number}",
+      "contents_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/contents/{+path}",
+      "compare_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/compare/{base}...{head}",
+      "merges_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/merges",
+      "archive_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/{archive_format}{/ref}",
+      "downloads_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/downloads",
+      "issues_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/issues{/number}",
+      "pulls_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/pulls{/number}",
+      "milestones_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/milestones{/number}",
+      "notifications_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/notifications{?since,all,participating}",
+      "labels_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/labels{/name}",
+      "releases_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/releases{/id}",
+      "deployments_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/deployments"
+    }
+  },
+  "jobs": {
+    "jobs": [
+      {
+        "id": 111624825207,
+        "name": "final-once",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 37266659230,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Run python -m pip install -r tools/ai-integration/formal-learning-requirements.txt",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Restore pinned ciphertext, reserve durable claim, evaluate one candidate and preserve public report",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Preserve only public records even on failure; never ciphertext or final rows",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 12
+          },
+          {
+            "name": "Post Run actions/setup-node@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          }
+        ]
+      }
+    ]
+  },
+  "artifacts": {
+    "artifacts": [
+      {
+        "id": 11326153296,
+        "name": "formal-final-public-records",
+        "size_in_bytes": 3642,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11326153296",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11326153296/zip",
+        "expired": false,
+        "created_at": "2026-10-05T05:11:44Z",
+        "expires_at": "2026-11-04T05:11:43Z",
+        "updated_at": "2026-10-05T05:11:44Z",
+        "digest": "sha256:aeb3a5354df3c05227fd567f54851430cd5e73a4546445fe14a87e32eccacfd8",
+        "workflow_run": {
+          "id": 37266659230,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "main",
+          "head_sha": "d61c13e92fc751bf60282949c1290dcb469edcec"
+        }
+      }
+    ]
+  },
+  "claimRef": {
+    "ref": "refs/tags/nyakua-final-open-1750a34d21bcc824133b23647033317fbcb7894cdac70625c0c45b6622ec2a03",
+    "node_id": "REF_kwDOUyC1oNoAXHJlZnMvdGFncy9ueWFrdWEtZmluYWwtb3Blbi0xNzUwYTM0ZDIxYmNjODI0MTMzYjIzNjQ3MDMzMzE3ZmJjYjc4OTRjZGFjNzA2MjVjMGM0NWI2NjIyZWMyYTAz",
+    "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/refs/tags/nyakua-final-open-1750a34d21bcc824133b23647033317fbcb7894cdac70625c0c45b6622ec2a03",
+    "object": {
+      "sha": "c43d967db5797a13dab403c6992196fbd46b791d",
+      "type": "tag",
+      "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/tags/c43d967db5797a13dab403c6992196fbd46b791d"
+    }
+  },
+  "claimTag": {
+    "node_id": "TA_kwDOUyC1oNoAKGM0M2Q5NjdkYjU3OTdhMTNkYWI0MDNjNjk5MjE5NmZiZDQ2Yjc5MWQ",
+    "sha": "c43d967db5797a13dab403c6992196fbd46b791d",
+    "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/tags/c43d967db5797a13dab403c6992196fbd46b791d",
+    "tagger": {
+      "name": "github-actions[bot]",
+      "email": "41898282+github-actions[bot]@users.noreply.github.com",
+      "date": "2026-10-05T05:11:38Z"
+    },
+    "object": {
+      "sha": "d61c13e92fc751bf60282949c1290dcb469edcec",
+      "type": "commit",
+      "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/commits/d61c13e92fc751bf60282949c1290dcb469edcec"
+    },
+    "tag": "nyakua-final-open-1750a34d21bcc824133b23647033317fbcb7894cdac70625c0c45b6622ec2a03",
+    "message": "{\"schema\":1,\"status\":\"CLAIMED-MAY-HAVE-OPENED\",\"specId\":\"NAKAKAMADO-FORMAL-FINAL-20261005-v1\",\"fingerprint\":\"9049d1e84028a67932003b8daaf5d40df9f901f7528471dcf323ed74686a12bf\",\"modelSha256\":\"f74175fbaa6f2d6a82148cf5e106da7291f396b2b38cb79866dc641b2147254d\",\"finalRowsDigest\":\"1750a34d21bcc824133b23647033317fbcb7894cdac70625c0c45b6622ec2a03\",\"authorizationDigest\":\"6af4237ba1c78e20ef80ffd42bba1d148d8a49d45ca8cb36ec579ee37f8a4d20\",\"origin\":{\"repository\":\"nkkmd/bao-nakakamado\",\"runId\":37266659230,\"attempt\":1,\"headSha\":\"d61c13e92fc751bf60282949c1290dcb469edcec\"}}",
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "resultRef": {
+    "ref": "refs/heads/nyakua-final-result-1750a34d21bcc824133b23647033317fbcb7894cdac70625c0c45b6622ec2a03",
+    "node_id": "REF_kwDOUyC1oNoAX3JlZnMvaGVhZHMvbnlha3VhLWZpbmFsLXJlc3VsdC0xNzUwYTM0ZDIxYmNjODI0MTMzYjIzNjQ3MDMzMzE3ZmJjYjc4OTRjZGFjNzA2MjVjMGM0NWI2NjIyZWMyYTAz",
+    "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/refs/heads/nyakua-final-result-1750a34d21bcc824133b23647033317fbcb7894cdac70625c0c45b6622ec2a03",
+    "object": {
+      "sha": "3e20726037eefbbe150cd2fef13d03b06032c433",
+      "type": "commit",
+      "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/commits/3e20726037eefbbe150cd2fef13d03b06032c433"
+    }
+  },
+  "resultCommit": {
+    "sha": "3e20726037eefbbe150cd2fef13d03b06032c433",
+    "node_id": "C_kwDOUyC1oNoAKDNlMjA3MjYwMzdlZWZiYmUxNTBjZDJmZWYxM2QwM2IwNjAzMmM0MzM",
+    "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/commits/3e20726037eefbbe150cd2fef13d03b06032c433",
+    "html_url": "https://github.com/nkkmd/bao-nakakamado/commit/3e20726037eefbbe150cd2fef13d03b06032c433",
+    "author": {
+      "name": "github-actions[bot]",
+      "email": "41898282+github-actions[bot]@users.noreply.github.com",
+      "date": "2026-10-05T05:11:42Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-10-05T05:11:42Z"
+    },
+    "tree": {
+      "sha": "f20b3aace6e34b52624e6cfedf7eb2cdd40c147f",
+      "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/trees/f20b3aace6e34b52624e6cfedf7eb2cdd40c147f"
+    },
+    "message": "Record one-time final evaluation; no model or rule changes",
+    "parents": [
+      {
+        "sha": "d61c13e92fc751bf60282949c1290dcb469edcec",
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/commits/d61c13e92fc751bf60282949c1290dcb469edcec",
+        "html_url": "https://github.com/nkkmd/bao-nakakamado/commit/d61c13e92fc751bf60282949c1290dcb469edcec"
+      }
+    ],
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqwzGOCRC1aQ7uu5UhlAAAVOAQAE8t5/idrDeThR4PN/h/lM/M\n0PDzEEWRsC7A77O99pQnd79/nOsYFgGk1rX48JqjMtM32fwbGqZfoJeoRA/l39uC\ndv/QWXB1EUMP9uEXKJuV98y1W38bkERlyFEryYPxm2AMDRoQ4uLCd+Pw3gbuD0iF\n03DREMMLSg4239SX1Q0pg9QNWgtCwuH06/Og5GswvxaEDgEljAW7QJ5WPJicY3xO\nI+aFGGuPgY/teeuuXBAuyQSf+uJiEnxEgvXdC6qMTHiEauVR9exmQVhSeor3ZK9O\nk7nwFM9HMqc7S0TcJ12tYDz1AADha6TJuhBLTW0FQb77XEolEbAYHx/6NFhHQDj0\nZo+EA+9kR8DnEeX9gu6pOqlNE8BuzOvw0tvNz/LJPUw4t3YUPC8zAbjlvqDrsvqT\ndJ/FzP9J9+scM2HjC/yTmozmLw04xiwMXNS6uw0yHgWVC/gO8HK1H1oZakwQw0EH\nWbPpwCEO8kfCSfwBX1rta+OKqX7/qeePCr2yQaixK19e9j03mNjhVujRAAOe08Vm\nZETI+6zPMEr/uu1VcQIlt5nSScILlXjgtvyNwWRAoqp2zdkEDDql6qPB9EYVaR6P\nQwWqpMWOrTpoR5HDedT6UNqqSYRfJtjsyZNqm8JVVEL4HBBUkPHz3kSYQYkf/UGY\nBKRZWcjQoxRdq5LGZred\n=n0B+\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree f20b3aace6e34b52624e6cfedf7eb2cdd40c147f\nparent d61c13e92fc751bf60282949c1290dcb469edcec\nauthor github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com> 1791177102 +0000\ncommitter GitHub <noreply@github.com> 1791177102 +0000\n\nRecord one-time final evaluation; no model or rule changes",
+      "verified_at": "2026-10-05T05:11:43Z"
+    }
+  },
+  "verification": {
+    "archiveBytes": 3642,
+    "archiveSha256": "aeb3a5354df3c05227fd567f54851430cd5e73a4546445fe14a87e32eccacfd8",
+    "zipCrcPassed": true,
+    "exactZipMembers": [
+      "authorization.json",
+      "claim.json",
+      "publication.json",
+      "report.json"
+    ],
+    "gitArtifactIdenticalFiles": [
+      "authorization.json",
+      "claim.json",
+      "report.json"
+    ],
+    "publicSchemaAndFrozenGate": "PASS",
+    "criteriaPassed": 18,
+    "criteriaTotal": 18,
+    "reopenedForVerification": false,
+    "modelChanged": false,
+    "publicAdopted": false,
+    "fileSha256": {
+      "authorization": "68ff17b6fe56af0459353048664bacab9e5be8884910947fc83901ff75ad67c5",
+      "claim": "815ad61162216eb4405fe126136b653c908d35b6a1d8a4fd5d1463f076e94dab",
+      "report": "d575e1d31d1fa4b6a947b2358f71a2a79333c16b116e7d5f76a426a1047f21b6",
+      "publication": "326a32b7bf2557c1d88c9988cdb23628bc9d49db04c5592d2cbce2e075b32e0a"
+    },
+    "screenshot": {
+      "path": "verification-images/formal-final-run-37266659230-complete-20261005.jpg",
+      "sha256": "d3e38ae05f8e0cc1f44fbd20e5dc40243550b76734ebce34e72a1bff61e34c1d"
+    },
+    "verifiedBrowserUrl": "https://github.com/nkkmd/bao-nakakamado/actions/runs/37266659230"
+  }
+}
