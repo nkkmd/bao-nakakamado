@@ -72,7 +72,11 @@ checkpointにはparams、Adamのm/v/step、PCG64状態、epoch、次のbatch位�
 | MLP/logicの3seed×2種の途中再開 | 6候補すべてparams・Adam・出力完全一致 |
 | 小幅論理ゲートの有限差分 | 多重接続・入力幅境界を含め通過 |
 
-smokeは2epoch・batch 8、モデル幅は本番と同じ368→32、3×512。正式の150epochの完了を確認したものではない。[ローカル検証記録](AI_FORMAL_LEARNING_LOCAL_20261005.json)に実行環境とfingerprintを保存する。Actionsの確認結果は別の記録へ結び付け、未確認を完了として記載しない。
+smokeは2epoch・batch 8、モデル幅は本番と同じ368→32、3×512。正式の150epochの完了を確認したものではない。[ローカル検証記録](AI_FORMAL_LEARNING_LOCAL_20261005.json)に実行環境とfingerprintを保存する。
+
+実装head `73f0fe8bf2e3aa638fe7edfee679fa1bf1a85aff` の[学習用CI run 37251558704](https://github.com/nkkmd/bao-nakakamado/actions/runs/37251558704)（attempt 1）は17テストと同じ32局面のsmokeを通過した。学習fingerprint `c678948ee4ee46d99cc2ad19fce1012377b422453940ea1781e574b40feb5290` はローカルと一致した。Python 3.12.14・NumPy 2.3.5で整数評価288件・対称性576件・再開6候補が一致し、正式行の読込み0件・final未開封を確認した。
+
+同じheadの[既存CI run 37251558645](https://github.com/nkkmd/bao-nakakamado/actions/runs/37251558645)（attempt 1）も全8ジョブ成功。89テスト、実ブラウザー、探索・遷移照合、開発用教師試走・固定artifact再開・元の候補計画の再構築を通過した。計画digest・収集ソースdigestは元の正式収集v2と一致する。[CI記録](AI_FORMAL_LEARNING_CI_20261005.json)に対象head・job・artifact ID/digest・実行環境を固定する。この後の記録追加で実装fingerprintが変わらないことも照合する。
 
 ## 次の順序
 

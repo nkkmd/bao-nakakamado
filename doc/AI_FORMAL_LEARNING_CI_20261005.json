@@ -1,0 +1,489 @@
+{
+  "schema": 1,
+  "recordDateJST": "2026-10-05",
+  "scope": "development-and-regression-CI-not-formal-training",
+  "sourceHeadSha": "73f0fe8bf2e3aa638fe7edfee679fa1bf1a85aff",
+  "learningFingerprint": "c678948ee4ee46d99cc2ad19fce1012377b422453940ea1781e574b40feb5290",
+  "development": {
+    "runId": 37251558704,
+    "attempt": 1,
+    "conclusion": "success",
+    "jobs": [
+      {
+        "id": 111580069112,
+        "name": "development",
+        "conclusion": "success"
+      }
+    ],
+    "newTestsPassed": 17,
+    "summary": {
+      "schema": 1,
+      "status": "PASS",
+      "specId": "NAKAKAMADO-FORMAL-LEARNING-20261005-v1",
+      "learningFingerprint": "c678948ee4ee46d99cc2ad19fce1012377b422453940ea1781e574b40feb5290",
+      "scope": "development-only-two-epoch-not-formal-training",
+      "environment": {
+        "python": "3.12.14",
+        "numpy": "2.3.5",
+        "platform": "Linux",
+        "machine": "x86_64",
+        "cpu": "AMD EPYC 9V45 96-Core Processor",
+        "blas": {
+          "Compilers": {
+            "c": {
+              "name": "gcc",
+              "linker": "ld.bfd",
+              "version": "14.2.1",
+              "commands": "cc"
+            },
+            "cython": {
+              "name": "cython",
+              "linker": "cython",
+              "version": "3.2.1",
+              "commands": "cython"
+            },
+            "c++": {
+              "name": "gcc",
+              "linker": "ld.bfd",
+              "version": "14.2.1",
+              "commands": "c++"
+            }
+          },
+          "Machine Information": {
+            "host": {
+              "cpu": "x86_64",
+              "family": "x86_64",
+              "endian": "little",
+              "system": "linux"
+            },
+            "build": {
+              "cpu": "x86_64",
+              "family": "x86_64",
+              "endian": "little",
+              "system": "linux"
+            }
+          },
+          "Build Dependencies": {
+            "blas": {
+              "name": "scipy-openblas",
+              "found": true,
+              "version": "0.3.30",
+              "detection method": "pkgconfig",
+              "include directory": "/opt/_internal/cpython-3.12.12/lib/python3.12/site-packages/scipy_openblas64/include",
+              "lib directory": "/opt/_internal/cpython-3.12.12/lib/python3.12/site-packages/scipy_openblas64/lib",
+              "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+              "pc file directory": "/project/.openblas"
+            },
+            "lapack": {
+              "name": "scipy-openblas",
+              "found": true,
+              "version": "0.3.30",
+              "detection method": "pkgconfig",
+              "include directory": "/opt/_internal/cpython-3.12.12/lib/python3.12/site-packages/scipy_openblas64/include",
+              "lib directory": "/opt/_internal/cpython-3.12.12/lib/python3.12/site-packages/scipy_openblas64/lib",
+              "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+              "pc file directory": "/project/.openblas"
+            }
+          },
+          "Python Information": {
+            "path": "/tmp/build-env-aw1mwcap/bin/python",
+            "version": "3.12"
+          },
+          "SIMD Extensions": {
+            "baseline": [
+              "SSE",
+              "SSE2",
+              "SSE3"
+            ],
+            "found": [
+              "SSSE3",
+              "SSE41",
+              "POPCNT",
+              "SSE42",
+              "AVX",
+              "F16C",
+              "FMA3",
+              "AVX2",
+              "AVX512F",
+              "AVX512CD",
+              "AVX512_SKX",
+              "AVX512_CLX",
+              "AVX512_CNL",
+              "AVX512_ICL"
+            ],
+            "not found": [
+              "AVX512_KNL",
+              "AVX512_KNM",
+              "AVX512_SPR"
+            ]
+          }
+        },
+        "threads": 1
+      },
+      "rows": 32,
+      "independentViews": 64,
+      "resume": [
+        {
+          "kind": "mlp",
+          "seed": 2026100401,
+          "exact": true
+        },
+        {
+          "kind": "mlp",
+          "seed": 2026100402,
+          "exact": true
+        },
+        {
+          "kind": "mlp",
+          "seed": 2026100403,
+          "exact": true
+        },
+        {
+          "kind": "logic",
+          "seed": 2026100401,
+          "exact": true
+        },
+        {
+          "kind": "logic",
+          "seed": 2026100402,
+          "exact": true
+        },
+        {
+          "kind": "logic",
+          "seed": 2026100403,
+          "exact": true
+        }
+      ],
+      "formalRowsRead": 0,
+      "finalOpened": false,
+      "pythonNodeIntegerComparisons": 288,
+      "integerMismatches": 0,
+      "symmetryComparisons": 576,
+      "models": 9
+    },
+    "artifacts": [
+      {
+        "id": 11320809245,
+        "name": "formal-learning-development-verification",
+        "size_in_bytes": 1129,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11320809245",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11320809245/zip",
+        "expired": false,
+        "created_at": "2026-10-05T01:28:37Z",
+        "expires_at": "2026-11-04T01:28:36Z",
+        "updated_at": "2026-10-05T01:28:37Z",
+        "digest": "sha256:d17e80facded6dc86cc4999b74f311412a8d263d84005696b0649cc2dfd40f47",
+        "workflow_run": {
+          "id": 37251558704,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "feat/nyakua-formal-learning-v1-20261005",
+          "head_sha": "73f0fe8bf2e3aa638fe7edfee679fa1bf1a85aff"
+        }
+      }
+    ]
+  },
+  "regression": {
+    "runId": 37251558645,
+    "attempt": 1,
+    "conclusion": "success",
+    "jobs": [
+      {
+        "id": 111580068956,
+        "name": "prototype",
+        "conclusion": "success"
+      },
+      {
+        "id": 111580068969,
+        "name": "formal-selection-v2-preflight",
+        "conclusion": "success"
+      },
+      {
+        "id": 111580069000,
+        "name": "teacher-feasibility (0)",
+        "conclusion": "success"
+      },
+      {
+        "id": 111580069011,
+        "name": "teacher-feasibility (1)",
+        "conclusion": "success"
+      },
+      {
+        "id": 111580069072,
+        "name": "teacher-feasibility (2)",
+        "conclusion": "success"
+      },
+      {
+        "id": 111580069083,
+        "name": "teacher-feasibility (3)",
+        "conclusion": "success"
+      },
+      {
+        "id": 111580147348,
+        "name": "teacher-feasibility-aggregate",
+        "conclusion": "success"
+      },
+      {
+        "id": 111580450343,
+        "name": "formal-artifact-resume",
+        "conclusion": "success"
+      }
+    ],
+    "testsPassed": 89,
+    "candidatePlanDigest": "891329b4e865c97591211072acb18db53022a9704fb0dc7fd0dd479c70600a03",
+    "collectionSourceDigest": "4e4d3acfbcfb5de5c9bf7e77accd8b3dbd26649389c0ab06471a025275d0cdac",
+    "artifacts": [
+      {
+        "id": 11321205769,
+        "name": "shard-0",
+        "size_in_bytes": 31901,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11321205769",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11321205769/zip",
+        "expired": false,
+        "created_at": "2026-10-05T01:28:41Z",
+        "expires_at": "2026-11-04T01:28:41Z",
+        "updated_at": "2026-10-05T01:28:41Z",
+        "digest": "sha256:43fdc0b6b0191c23e80e9b8354d4929c8cd69b3883709e65cc11545c7c68ab16",
+        "workflow_run": {
+          "id": 37251558645,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "feat/nyakua-formal-learning-v1-20261005",
+          "head_sha": "73f0fe8bf2e3aa638fe7edfee679fa1bf1a85aff"
+        }
+      },
+      {
+        "id": 11321170556,
+        "name": "formal-artifact-resume-verification",
+        "size_in_bytes": 839,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11321170556",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11321170556/zip",
+        "expired": false,
+        "created_at": "2026-10-05T01:30:34Z",
+        "expires_at": "2026-11-04T01:30:34Z",
+        "updated_at": "2026-10-05T01:30:34Z",
+        "digest": "sha256:35ac6b54da1c14c43189ce3d4a83bf401c8660c30e00eae9f95f34325801d6bd",
+        "workflow_run": {
+          "id": 37251558645,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "feat/nyakua-formal-learning-v1-20261005",
+          "head_sha": "73f0fe8bf2e3aa638fe7edfee679fa1bf1a85aff"
+        }
+      },
+      {
+        "id": 11321150545,
+        "name": "shard-3",
+        "size_in_bytes": 31913,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11321150545",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11321150545/zip",
+        "expired": false,
+        "created_at": "2026-10-05T01:28:40Z",
+        "expires_at": "2026-11-04T01:28:39Z",
+        "updated_at": "2026-10-05T01:28:40Z",
+        "digest": "sha256:4571a23de492934f52f01dca0294eba60acc3081a600ea645169be470ca96e77",
+        "workflow_run": {
+          "id": 37251558645,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "feat/nyakua-formal-learning-v1-20261005",
+          "head_sha": "73f0fe8bf2e3aa638fe7edfee679fa1bf1a85aff"
+        }
+      },
+      {
+        "id": 11321141255,
+        "name": "formal-dev-shard-3",
+        "size_in_bytes": 41772,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11321141255",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11321141255/zip",
+        "expired": false,
+        "created_at": "2026-10-05T01:29:01Z",
+        "expires_at": "2026-11-04T01:29:00Z",
+        "updated_at": "2026-10-05T01:29:01Z",
+        "digest": "sha256:1a65ed36401a30ffd7376302641be587ab087c083ac5e81388f2dee4d7003118",
+        "workflow_run": {
+          "id": 37251558645,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "feat/nyakua-formal-learning-v1-20261005",
+          "head_sha": "73f0fe8bf2e3aa638fe7edfee679fa1bf1a85aff"
+        }
+      },
+      {
+        "id": 11320894099,
+        "name": "shard-2",
+        "size_in_bytes": 32151,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11320894099",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11320894099/zip",
+        "expired": false,
+        "created_at": "2026-10-05T01:28:47Z",
+        "expires_at": "2026-11-04T01:28:46Z",
+        "updated_at": "2026-10-05T01:28:47Z",
+        "digest": "sha256:26386282bd72cbf3918f795815fa20f39af8bf11fb58481e8f686768920b5553",
+        "workflow_run": {
+          "id": 37251558645,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "feat/nyakua-formal-learning-v1-20261005",
+          "head_sha": "73f0fe8bf2e3aa638fe7edfee679fa1bf1a85aff"
+        }
+      },
+      {
+        "id": 11320869276,
+        "name": "teacher-feasibility-results",
+        "size_in_bytes": 13282,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11320869276",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11320869276/zip",
+        "expired": false,
+        "created_at": "2026-10-05T01:28:57Z",
+        "expires_at": "2026-11-04T01:28:57Z",
+        "updated_at": "2026-10-05T01:28:57Z",
+        "digest": "sha256:2dcfaa226991ce90c0ca7f938f56d4b0daaad43b919bc0d09bcb40d5b3b9dbb7",
+        "workflow_run": {
+          "id": 37251558645,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "feat/nyakua-formal-learning-v1-20261005",
+          "head_sha": "73f0fe8bf2e3aa638fe7edfee679fa1bf1a85aff"
+        }
+      },
+      {
+        "id": 11320829384,
+        "name": "formal-dev-shard-0",
+        "size_in_bytes": 41669,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11320829384",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11320829384/zip",
+        "expired": false,
+        "created_at": "2026-10-05T01:28:57Z",
+        "expires_at": "2026-11-04T01:28:56Z",
+        "updated_at": "2026-10-05T01:28:57Z",
+        "digest": "sha256:445ced0759eb6516d07b18b528af1366a313c3d2bd7764d8e4af3eb2ce18d9f7",
+        "workflow_run": {
+          "id": 37251558645,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "feat/nyakua-formal-learning-v1-20261005",
+          "head_sha": "73f0fe8bf2e3aa638fe7edfee679fa1bf1a85aff"
+        }
+      },
+      {
+        "id": 11320794463,
+        "name": "formal-dev-shard-2",
+        "size_in_bytes": 41741,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11320794463",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11320794463/zip",
+        "expired": false,
+        "created_at": "2026-10-05T01:29:00Z",
+        "expires_at": "2026-11-04T01:28:59Z",
+        "updated_at": "2026-10-05T01:29:00Z",
+        "digest": "sha256:cfbc09d04a070095adff613c0245ea6a95c49a5ff0d8d6464f77a74913ec0c3b",
+        "workflow_run": {
+          "id": 37251558645,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "feat/nyakua-formal-learning-v1-20261005",
+          "head_sha": "73f0fe8bf2e3aa638fe7edfee679fa1bf1a85aff"
+        }
+      },
+      {
+        "id": 11320769491,
+        "name": "formal-dev-plan",
+        "size_in_bytes": 250403,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11320769491",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11320769491/zip",
+        "expired": false,
+        "created_at": "2026-10-05T01:28:56Z",
+        "expires_at": "2026-11-04T01:28:55Z",
+        "updated_at": "2026-10-05T01:28:56Z",
+        "digest": "sha256:76c7a8eef339a412ec52ed3dd34918008b8857060f20098bc51a44e11960bdbb",
+        "workflow_run": {
+          "id": 37251558645,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "feat/nyakua-formal-learning-v1-20261005",
+          "head_sha": "73f0fe8bf2e3aa638fe7edfee679fa1bf1a85aff"
+        }
+      },
+      {
+        "id": 11320744616,
+        "name": "formal-dev-shard-1",
+        "size_in_bytes": 41563,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11320744616",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11320744616/zip",
+        "expired": false,
+        "created_at": "2026-10-05T01:28:59Z",
+        "expires_at": "2026-11-04T01:28:58Z",
+        "updated_at": "2026-10-05T01:28:59Z",
+        "digest": "sha256:c9bd400d65de882915422516dc86cb3eda8fcf5b1ec575ad6adaf83ab1154ed3",
+        "workflow_run": {
+          "id": 37251558645,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "feat/nyakua-formal-learning-v1-20261005",
+          "head_sha": "73f0fe8bf2e3aa638fe7edfee679fa1bf1a85aff"
+        }
+      },
+      {
+        "id": 11320704715,
+        "name": "shard-1",
+        "size_in_bytes": 31909,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11320704715",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11320704715/zip",
+        "expired": false,
+        "created_at": "2026-10-05T01:28:41Z",
+        "expires_at": "2026-11-04T01:28:41Z",
+        "updated_at": "2026-10-05T01:28:41Z",
+        "digest": "sha256:72c2b22694d007ff953f23547501f5c2de931c8cd6a77b7c8d17d7e37e3be54c",
+        "workflow_run": {
+          "id": 37251558645,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "feat/nyakua-formal-learning-v1-20261005",
+          "head_sha": "73f0fe8bf2e3aa638fe7edfee679fa1bf1a85aff"
+        }
+      },
+      {
+        "id": 11320284260,
+        "name": "next-turn-prototype-verification",
+        "size_in_bytes": 850082,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11320284260",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11320284260/zip",
+        "expired": false,
+        "created_at": "2026-10-05T01:30:21Z",
+        "expires_at": "2026-11-04T01:30:20Z",
+        "updated_at": "2026-10-05T01:30:21Z",
+        "digest": "sha256:c5bfcb064b9b2ea41011311586d540b3f63eb0485d712239e5e43307f530955b",
+        "workflow_run": {
+          "id": 37251558645,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "feat/nyakua-formal-learning-v1-20261005",
+          "head_sha": "73f0fe8bf2e3aa638fe7edfee679fa1bf1a85aff"
+        }
+      },
+      {
+        "id": 11320079779,
+        "name": "formal-selection-v2-preflight",
+        "size_in_bytes": 3017,
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11320079779",
+        "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11320079779/zip",
+        "expired": false,
+        "created_at": "2026-10-05T01:31:28Z",
+        "expires_at": "2026-11-04T01:31:28Z",
+        "updated_at": "2026-10-05T01:31:28Z",
+        "digest": "sha256:8dc82518f0beb9e19f46466ccd49d93329d1b055fbc2fcf167c71fc9b1f2afba",
+        "workflow_run": {
+          "id": 37251558645,
+          "repository_id": 1394652576,
+          "head_repository_id": 1394652576,
+          "head_branch": "feat/nyakua-formal-learning-v1-20261005",
+          "head_sha": "73f0fe8bf2e3aa638fe7edfee679fa1bf1a85aff"
+        }
+      }
+    ]
+  },
+  "formalDatasetRestored": false,
+  "formalTrainingStarted": false,
+  "finalOpened": false,
+  "publicAIReplaced": false
+}
