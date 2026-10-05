@@ -62,3 +62,14 @@ test('Integer interpreter rejects obsolete input width, malformed indices and no
  assert.throws(()=>M.validateModel({...good,bias:NaN}));assert.throws(()=>M.validateModel({...good,weights:[.1,...good.weights.slice(1)]}));
  assert.throws(()=>M.evaluateInputs(good,Array(368).fill(2),Array(368).fill(0)));
 });
+test('Validation accepts canonical zero in both perspectives and rejects real antisymmetry errors',()=>{
+ const state=require('../../prototype/next-turn-engine.js').initialState(),rows=[{state}];
+ const model={schema:1,specId:spec.id,inputSize:368,encodingId:spec.encodingId,kind:'linear',seed:spec.training.seeds[0],
+  learningFingerprint:'1'.repeat(64),trainDigest:'2'.repeat(64),quantizationScale:4096,weights:Array(368).fill(0),bias:0};
+ const evaluator=M.createEvaluator(model);
+ assert.equal(evaluator.evaluate(state),0);assert.equal(evaluator.evaluate(state,1-state.player),0);
+ assert.doesNotThrow(()=>V.checkStatePredictions(evaluator,rows,[0]));
+ assert.doesNotThrow(()=>V.checkStatePredictions({evaluate:(_,p=state.player)=>p===state.player?7:-7},rows,[7]));
+ assert.throws(()=>V.checkStatePredictions({evaluate:()=>7},rows,[7]));
+ assert.throws(()=>V.checkStatePredictions({evaluate:(_,p=state.player)=>p===state.player?0:1},rows,[0]));
+});
