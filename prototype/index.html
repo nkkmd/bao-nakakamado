@@ -12,7 +12,9 @@
   <link rel="stylesheet" href="./style.css?v=0.8.0-four-row-20261002">
   <script defer src="./next-turn-engine.js?v=0.8.0"></script>
   <script defer src="./steal.js?v=0.8.0"></script>
-  <script defer src="./app.js?v=0.8.0"></script>
+  <script defer src="./search-transition.js?v=0.8.0"></script>
+  <script defer src="./computer-client.js?v=browser-v1"></script>
+  <script defer src="./app.js?v=0.8.0-browser-v1"></script>
 </head>
 <body>
   <main class="game-shell">
@@ -40,6 +42,15 @@
             <select id="mode">
               <option value="local">2人で対戦</option>
               <option value="computer">簡易コンピューター</option>
+              <option value="search-computer">探索コンピューター（試験）</option>
+            </select>
+          </label>
+          <label id="difficulty-field" class="setup-field" for="difficulty" hidden>
+            <span>強さ</span>
+            <select id="difficulty">
+              <option value="easy">やさしい</option>
+              <option value="normal">ふつう</option>
+              <option value="hard" selected>強い</option>
             </select>
           </label>
           <label id="side-field" class="setup-field" for="side" hidden>
@@ -51,7 +62,7 @@
           </label>
           <button id="start" class="start-button" type="button">対局開始</button>
           <p class="hint">各人の前列・後列16穴、ハンド22個で開始。種まきは自分の前列と後列を循環します。NAMUAの連続捕獲でNYAKUA。奪った1個を確保し、次の自分の手番で通常ハンド2個と一緒に一穴へ投入します。相手の最後の1個と確保分は保護します。</p>
-          <p class="hint">コンピューターは試作用の簡易相手です。</p>
+          <p class="hint">探索コンピューターは実機確認前の試験版です。簡易コンピューターも選べます。</p>
         </div>
       </section>
       <div class="game-info" aria-label="対局状況">
@@ -106,7 +117,7 @@
       </div>
     </details>
     <footer>
-      2人対戦・簡易コンピューター対戦<br>
+      2人対戦・簡易／探索コンピューター対戦<br>
       <a href="https://github.com/nkkmd/bao-nakakamado" target="_blank" rel="noopener noreferrer">GitHub</a> · 試作 v0.8.0<br>
       Based on <a href="https://github.com/nkkmd/bao-la-kiswahili-game" target="_blank" rel="noopener noreferrer">Bao la Kiswahili</a><br>
       <a href="./licenses.html">ライセンス・考案と公開の記録</a>

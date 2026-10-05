@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "scope": "browser-worker-trial-not-device-or-public-adoption",
+  "browser": "151.0.7922.34",
+  "modelSha256": "f74175fbaa6f2d6a82148cf5e106da7291f396b2b38cb79866dc641b2147254d",
+  "integerPositions": 89,
+  "workerRequests": 12,
+  "budgetsMs": [
+    25,
+    75,
+    150
+  ],
+  "cancelledWorker": true,
+  "games": [
+    {
+      "human": 0,
+      "plies": 8,
+      "adjudication": "normal",
+      "diagnostics": 4,
+      "searchFallbacks": 0
+    },
+    {
+      "human": 1,
+      "plies": 27,
+      "adjudication": "normal",
+      "diagnostics": 14,
+      "searchFallbacks": 0
+    }
+  ],
+  "fallbackPlayable": true,
+  "mobileWidths": [
+    320,
+    390,
+    432
+  ],
+  "pageErrors": [],
+  "formalRowsRead": 0,
+  "publicAdopted": false
+}
