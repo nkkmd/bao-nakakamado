@@ -1,0 +1,873 @@
+{
+  "scope": "READ-ONLY-PINNED-PUBLIC-RECORD-AUDIT",
+  "binding": {
+    "schema": 1,
+    "id": "NAKAKAMADO-EQUAL-TIME-FORMAL-20261005-v2",
+    "contractSha256": "b34680435b7f0a27da165d638de0b957afcd0b202e0cd2ce1835e28efd083119",
+    "manifestSha256": "5edf510a6f75f9029905d4b8bb775fdc30d5a98ae908f3b1739fe223caf83f8f",
+    "runnerFingerprint": "ce0cb9f7e7defc9c4b776a95188ca2e55d53eed8d69c755b5eb3e582117894d7",
+    "shards": 32,
+    "pairs": 256,
+    "budgetMs": 150,
+    "maximumPlies": 400
+  },
+  "sessionSha": "4b464569a1e53a8e656611661df1e08c8bde14e0",
+  "auditedShards": 32,
+  "completedPairs": 256,
+  "shards": [
+    {
+      "shard": 0,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37317410478",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 1,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37309702988",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 2,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37309702988",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 3,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37309702988",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 4,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37307084139",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 5,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37307084139",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 6,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37307084139",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 7,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37307084139",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 8,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37307084139",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 9,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37307084139",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 10,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37307084139",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 11,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37309702988",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 12,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37307084139",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 13,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37307084139",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 14,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37307084139",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 15,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37307084139",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 16,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37307084139",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 17,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37307084139",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 18,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37309702988",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 19,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37307084139",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 20,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37309702988",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 21,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37307084139",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 22,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37307084139",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 23,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37309702988",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 24,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37317410478",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 25,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37307084139",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 26,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37317410478",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 27,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37307084139",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 28,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37307084139",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 29,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37307084139",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 30,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37309702988",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    },
+    {
+      "shard": 31,
+      "status": "COMPLETE",
+      "pairs": 8,
+      "active": null,
+      "origin": {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": "37309702988",
+        "attempt": "1",
+        "headSha": "6d3d779d630132ff977d1c301ade56da960b4b63"
+      },
+      "environment": {
+        "node": "v24.21.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 7763 64-Core Processor",
+        "runnerImage": "20260927.320.1"
+      }
+    }
+  ],
+  "formalRowsRead": 0,
+  "newSearches": 0,
+  "strengthScoresComputed": true,
+  "publicAdopted": false,
+  "aggregate": {
+    "schema": 1,
+    "binding": {
+      "schema": 1,
+      "id": "NAKAKAMADO-EQUAL-TIME-FORMAL-20261005-v2",
+      "contractSha256": "b34680435b7f0a27da165d638de0b957afcd0b202e0cd2ce1835e28efd083119",
+      "manifestSha256": "5edf510a6f75f9029905d4b8bb775fdc30d5a98ae908f3b1739fe223caf83f8f",
+      "runnerFingerprint": "ce0cb9f7e7defc9c4b776a95188ca2e55d53eed8d69c755b5eb3e582117894d7",
+      "shards": 32,
+      "pairs": 256,
+      "budgetMs": 150,
+      "maximumPlies": 400
+    },
+    "sessionSha": "4b464569a1e53a8e656611661df1e08c8bde14e0",
+    "completedPairs": 256,
+    "shardStatuses": [
+      {
+        "shard": 0,
+        "status": "COMPLETE",
+        "sealSha": "a47162cb14477d92236ea3e1221fa2261ba0af34"
+      },
+      {
+        "shard": 1,
+        "status": "COMPLETE",
+        "sealSha": "e2636e600b98b2d98ad131cb755d3725467cf4bc"
+      },
+      {
+        "shard": 2,
+        "status": "COMPLETE",
+        "sealSha": "14646981dd087750691c664eccfec07da20864b2"
+      },
+      {
+        "shard": 3,
+        "status": "COMPLETE",
+        "sealSha": "5a0e41a77a7046d6af2fb069d74e3e82f513b738"
+      },
+      {
+        "shard": 4,
+        "status": "COMPLETE",
+        "sealSha": "c6ba747457afb9483e8d338e2124f70041993bf4"
+      },
+      {
+        "shard": 5,
+        "status": "COMPLETE",
+        "sealSha": "e121a8dc3eb76622f17b30cc5319c80160d7850c"
+      },
+      {
+        "shard": 6,
+        "status": "COMPLETE",
+        "sealSha": "8913245e5347561cdf3205630fef0dfad7e03c37"
+      },
+      {
+        "shard": 7,
+        "status": "COMPLETE",
+        "sealSha": "5a778bbe26b406ed715ae66bc723c266566ce278"
+      },
+      {
+        "shard": 8,
+        "status": "COMPLETE",
+        "sealSha": "dba14e09b9ab7a90400c8520b1982df5f52954bb"
+      },
+      {
+        "shard": 9,
+        "status": "COMPLETE",
+        "sealSha": "23a31abf1fac39d9acec1295c9c6952de262c3fe"
+      },
+      {
+        "shard": 10,
+        "status": "COMPLETE",
+        "sealSha": "c97b3af1fac4276c2f2f51fc004a6242238e7379"
+      },
+      {
+        "shard": 11,
+        "status": "COMPLETE",
+        "sealSha": "b8a6caa2fde6a30c49808c781f57bbd3647c7d1c"
+      },
+      {
+        "shard": 12,
+        "status": "COMPLETE",
+        "sealSha": "6d25436a95389751c7b275ba64c336acc6e5d090"
+      },
+      {
+        "shard": 13,
+        "status": "COMPLETE",
+        "sealSha": "4dfd339acdc264afef8c77c5ef460c66feae0a9e"
+      },
+      {
+        "shard": 14,
+        "status": "COMPLETE",
+        "sealSha": "d57b477943e4ac6bc0edfce6654f1da8025d9798"
+      },
+      {
+        "shard": 15,
+        "status": "COMPLETE",
+        "sealSha": "ebc6fa6de618b393b7b568e2ccc28eafdbe75b76"
+      },
+      {
+        "shard": 16,
+        "status": "COMPLETE",
+        "sealSha": "989e9339a5a6ced79d96fdd39aa005dac7a0e2cb"
+      },
+      {
+        "shard": 17,
+        "status": "COMPLETE",
+        "sealSha": "f5ff31fc54ea9c2fd55cc9cc2696c30bdc736b1f"
+      },
+      {
+        "shard": 18,
+        "status": "COMPLETE",
+        "sealSha": "8d70e5f0127f4ca5921e73d71990358233d38234"
+      },
+      {
+        "shard": 19,
+        "status": "COMPLETE",
+        "sealSha": "bd93f7a0b06e057e115fab5dd1cd5a69fa4529f9"
+      },
+      {
+        "shard": 20,
+        "status": "COMPLETE",
+        "sealSha": "b50dc8c82d5cf46f2caa92d42839579e617af513"
+      },
+      {
+        "shard": 21,
+        "status": "COMPLETE",
+        "sealSha": "dc7046c1154e1fa4ab412b6c03c674d55dba0378"
+      },
+      {
+        "shard": 22,
+        "status": "COMPLETE",
+        "sealSha": "45cae4305723a2e46c3535049d2c5ece2d3c26b4"
+      },
+      {
+        "shard": 23,
+        "status": "COMPLETE",
+        "sealSha": "8665563af9b6ecb735616ca369af6deafaf164c7"
+      },
+      {
+        "shard": 24,
+        "status": "COMPLETE",
+        "sealSha": "7e94409b4c18590a284cfb989012422bc8ca1e70"
+      },
+      {
+        "shard": 25,
+        "status": "COMPLETE",
+        "sealSha": "194babb0be780db1197bfa5b24beaa98dfc449b4"
+      },
+      {
+        "shard": 26,
+        "status": "COMPLETE",
+        "sealSha": "e061cda80ef7e1813668003daa20a1e5b9cd6f0b"
+      },
+      {
+        "shard": 27,
+        "status": "COMPLETE",
+        "sealSha": "e3aaddcd82e1bd57320d8e98120a05cf72affdbc"
+      },
+      {
+        "shard": 28,
+        "status": "COMPLETE",
+        "sealSha": "421f933478217cb90e8045f5601a3972a53c67fe"
+      },
+      {
+        "shard": 29,
+        "status": "COMPLETE",
+        "sealSha": "d4819d772879170e279880bc9d1a415fd5f02812"
+      },
+      {
+        "shard": 30,
+        "status": "COMPLETE",
+        "sealSha": "582ce71355cc0cd2541de4986d884e4f9815c456"
+      },
+      {
+        "shard": 31,
+        "status": "COMPLETE",
+        "sealSha": "189111c0d8bdeb2824e2d495874bf21240fa33e7"
+      }
+    ],
+    "recordsSha256": "22724ba63b1e08f07951cfcc3b676332812fcea79261bdc24bb7ae2e00aaa9cc",
+    "formalRowsRead": 0,
+    "publicAdopted": false,
+    "status": "COMPLETE-FIXED-SCHEDULE",
+    "strengthScoresComputed": true,
+    "strength": {
+      "pairs": 256,
+      "games": 512,
+      "normalGames": 512,
+      "technicalFailures": 0,
+      "normalCompletionFraction": 1,
+      "unresolvedUtilityMeanInterval": [
+        0.607421875,
+        0.607421875
+      ],
+      "conditionalHoeffdingLowerBound": 0.5309297865412245,
+      "alpha": 0.05,
+      "inferenceUnit": "opening-pair-not-individual-game",
+      "gates": {
+        "completeFixedSchedule": true,
+        "technicalFailures": true,
+        "normalCompletion": true,
+        "conservativeMean": true,
+        "conditionalLowerBound": true
+      },
+      "status": "STRENGTH-GATE-PASS-NOT-PUBLIC-ADOPTION",
+      "publicAdopted": false
+    },
+    "operational": {
+      "statuses": {
+        "normal-terminal": 512
+      },
+      "actors": {
+        "model": {
+          "moves": 8205,
+          "fallbackMoves": 0,
+          "fallbackFraction": 0,
+          "wallP50Ms": 150.05646699999488,
+          "wallP95Ms": 150.28478199999972,
+          "wallP99Ms": 150.46513800000002,
+          "maximumWallMs": 152.16651300000012,
+          "overrunP99Ms": 0.4651380000000245,
+          "maximumOverrunMs": 2.1665130000001227,
+          "completedDepthP50": 7,
+          "searchSafetyStops": 236
+        },
+        "baseline": {
+          "moves": 8150,
+          "fallbackMoves": 0,
+          "fallbackFraction": 0,
+          "wallP50Ms": 150.0587059999998,
+          "wallP95Ms": 150.18217499999446,
+          "wallP99Ms": 150.3958989999992,
+          "maximumWallMs": 151.87172499999997,
+          "overrunP99Ms": 0.39589899999919,
+          "maximumOverrunMs": 1.8717249999999694,
+          "completedDepthP50": 6,
+          "searchSafetyStops": 85
+        }
+      },
+      "gameP95Seconds": 7.664764717999999,
+      "maximumGameSeconds": 11.543719384999998
+    },
+    "inferenceScope": "conditional-independent-opening-pairs; fixed-generated-distribution-only; no-public-adoption"
+  }
+}
