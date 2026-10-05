@@ -1,0 +1,31 @@
+name: NYAKUA equal time worker development checks
+on:
+  pull_request:
+    paths: ['tools/ai-integration/**', 'prototype/**', '.github/workflows/equal-time-formal.yml', '.github/workflows/equal-time-worker-check.yml']
+  push:
+    branches: [main]
+    paths: ['tools/ai-integration/**', 'prototype/**', '.github/workflows/equal-time-formal.yml', '.github/workflows/equal-time-worker-check.yml']
+permissions:
+  contents: read
+jobs:
+  worker-protocol:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.21.0'
+      - run: node --test tools/ai-integration/equal-time-worker.test.cjs
+      - run: python3 tools/ai-integration/equal-time-worker-unzip.test.py
+      - name: Real thread smoke on four previously excluded pilot roots; no formal scores or live GitHub writes
+        run: node tools/ai-integration/verify-equal-time-worker.cjs "$RUNNER_TEMP/strength-worker-development"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: equal-time-worker-development
+          path: ${{ runner.temp }}/strength-worker-development/report.json
+          if-no-files-found: warn
+          retention-days: 30

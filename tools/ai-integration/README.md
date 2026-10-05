@@ -231,3 +231,16 @@ node tools/ai-integration/verify-equal-time-formal-v2.cjs doc/equal-time-formal-
 ```
 
 検証器は原ZIPのdigest・全24棋譜・contractの全fieldを照合し、旧16384単位の開幕と新しい256開幕を再生成する。正式対局とモデル選択を行わない。
+
+## 正式同時間比較v2のworker
+
+[実装・検証記録](../../doc/AI_EQUAL_TIME_WORKER_20261005.md)と [手動workflow](../../.github/workflows/equal-time-formal.yml)を参照。固定main/head/fingerprintとattempt 1だけを受け付ける。session・shard世代・ledger sealを永続タグに保存し、先後交換2局を同一thread／hostで実行する。完成組は再測定せず、封印した未着手境界だけを正確なActions receiptから再開する。中断組・未封印記録・古いresumeはHOLD。512局の監査後だけ固定棋力指標を集計し、公開JSONと原ZIPを専用結果branchに保存する。
+
+```sh
+node tools/ai-integration/equal-time-worker.cjs preflight
+node --test tools/ai-integration/equal-time-worker.test.cjs
+python3 tools/ai-integration/equal-time-worker-unzip.test.py
+node tools/ai-integration/verify-equal-time-worker.cjs NEW_DEVELOPMENT_DIRECTORY
+```
+
+開発CIは除外済み4組8局、偽Git/Actions、公開ZIP境界だけを使用し、正式対局を起動しない。正式runtimeはNode v24.21.0・登録CPU・ImageVersion 20260927.320.1を要求する。90日後もGitの原ZIPは残るが、現行自動resumeは期限内のActions receiptを要求する。途中局やartifact消失の回復方針を自動で追加しない。正式finalは再取得・再開封しない。

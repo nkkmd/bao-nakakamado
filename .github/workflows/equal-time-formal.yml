@@ -1,0 +1,130 @@
+name: NYAKUA fixed equal time formal matches v2
+on:
+  workflow_dispatch:
+    inputs:
+      expected_head_sha:
+        description: 'Exact reviewed main commit'
+        required: true
+      expected_runner_fingerprint:
+        description: 'Fingerprint from successful worker development checks'
+        required: true
+      authorization:
+        description: 'RUN-FROZEN-EQUAL-TIME-v2'
+        required: true
+      mode:
+        type: choice
+        options: [start, resume]
+        default: start
+        required: true
+      resume_receipts:
+        description: 'Pinned receipt JSON array; [] for start; no latest lookup'
+        default: '[]'
+        required: true
+      maximum_new_pairs:
+        description: '1..8 per shard; stop only between pairs; all 256 still required'
+        default: '8'
+        required: true
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: nyakua-strength-v2-b34680435b7f0a27da165d638de0b957afcd0b202e0cd2ce1835e28efd083119
+  cancel-in-progress: false
+env:
+  BAO_STRENGTH_EXPECTED_HEAD: ${{ inputs.expected_head_sha }}
+  BAO_STRENGTH_EXPECTED_FINGERPRINT: ${{ inputs.expected_runner_fingerprint }}
+  BAO_STRENGTH_AUTHORIZATION: ${{ inputs.authorization }}
+  BAO_STRENGTH_MODE: ${{ inputs.mode }}
+  BAO_STRENGTH_RECEIPTS: ${{ inputs.resume_receipts }}
+  BAO_STRENGTH_MAXIMUM_NEW_PAIRS: ${{ inputs.maximum_new_pairs }}
+jobs:
+  prepare:
+    if: github.repository == 'nkkmd/bao-nakakamado' && github.ref == 'refs/heads/main' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.21.0'
+      - name: Audit frozen sources and prefixes, reserve or verify the single durable session
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node tools/ai-integration/equal-time-worker.cjs prepare "$RUNNER_TEMP/strength-session"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: strength-v2-session
+          path: ${{ runner.temp }}/strength-session/session.json
+          if-no-files-found: error
+          retention-days: 90
+  matches:
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: write
+      actions: read
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.21.0'
+      - uses: actions/download-artifact@v4
+        with:
+          name: strength-v2-session
+          path: ${{ runner.temp }}/strength-session
+      - name: Verify lease and resume only sealed pair boundaries, preserve completed games
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          BAO_STRENGTH_SESSION_FILE: ${{ runner.temp }}/strength-session/session.json
+        run: node tools/ai-integration/equal-time-worker.cjs shard "$RUNNER_TEMP/strength-shard-${{ matrix.shard }}" "${{ matrix.shard }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: strength-v2-shard-${{ matrix.shard }}
+          path: ${{ runner.temp }}/strength-shard-${{ matrix.shard }}/*.json
+          if-no-files-found: warn
+          retention-days: 90
+  aggregate:
+    if: always() && needs.prepare.result == 'success'
+    needs: [prepare, matches]
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.21.0'
+      - uses: actions/download-artifact@v4
+        with:
+          name: strength-v2-session
+          path: ${{ runner.temp }}/strength-session
+      - name: Restore exact current-run artifacts, audit all pairs and preserve an immutable evidence branch
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          BAO_STRENGTH_SESSION_FILE: ${{ runner.temp }}/strength-session/session.json
+        run: node tools/ai-integration/equal-time-worker.cjs aggregate "$RUNNER_TEMP/strength-aggregate"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: strength-v2-public-summary
+          path: ${{ runner.temp }}/strength-aggregate/*.json
+          if-no-files-found: warn
+          retention-days: 90
