@@ -55,3 +55,41 @@ Hoeffding式は[Hoeffding (1963), DOI](https://doi.org/10.1080/01621459.1963.105
 ## 実測・条件固定・main統合の記録
 
 この節へ、取得した試走artifactの監査、選んだ予算、独立開幕の除外数、固定contract、CIと統合の実記録を追記する。実装時点では正式対局0局である。
+
+### 最初の試走と原artifact
+
+PR [#23](https://github.com/nkkmd/bao-nakakamado/pull/23) の初期head `d3dc43d711a2466d9c48b0b6f38eeed1e2fd366b` から [run 37284277883](https://github.com/nkkmd/bao-nakakamado/actions/runs/37284277883)（attempt 1）を実行した。checkoutはPRの検査用merge `2ae1007671c36112f30432ac7649c3faffad9393`。Gitの親2つが基準mainと当該headで、tree `7b3bd8eb848d298ea3174b0cbdf5c98ae8868741` がローカル・API treeと一致することを確認した。prototype回帰・旧final準備・モデル探索接続も当該headで成功した。
+
+| 予算 | 通常終局 | モデル／手作りの手数 | モデル／手作りのp99超過ms | 最大1局秒 | 運用判定 |
+|---|---:|---:|---:|---:|---|
+| 25ms | 8/8 | 103 / 104 | 0.324 / 0.294 | 0.756 | PASS |
+| 75ms | 8/8 | 146 / 145 | 0.474 / 0.688 | 4.964 | PASS |
+| 150ms | 8/8 | 130 / 128 | 0.604 / 0.778 | 5.860 | PASS |
+
+全24局・756手の再生と64 KETE保存を監査した。技術的失敗、違法手、入力変更、深度未完了fallback、対局中の安全停止は0件。勝率を集計せず、事前の「合格した最大予算」で150msを採用した。初回の試走だけで予算を決め、後続CIの試走値で選び直さない。
+
+原ZIPを取得したbytesのまま [25ms](equal-time-pilot/pilot-25.zip)、[75ms](equal-time-pilot/pilot-75.zip)、[150ms](equal-time-pilot/pilot-150.zip) に保存する。各10ファイルの名前・サイズ・CRC、artifact/run/head、ZIP SHA-256、各局のchecksum・元runと全棋譜を照合した。id・digest・bytesは[v2仕様](../tools/ai-integration/equal-time-formal-v2-spec.json)と[正式contract](equal-time-formal-v2/contract.json)に固定してある。期限後にも同じ公開棋譜を監査できる。試走fingerprintは `3ff632e8cae71f4d7077b3b3e341977299d3e036656c29424e8205c1d1da53d6`。
+
+環境はNode v24.21.0、Linux x64、runner image 20260927.320.1。25/150msのhostはAMD EPYC 7763、75msはAMD EPYC 9V74。各ペア内は同じhostで両担当を交換するが、host間の時間差があるため到達深度や予算間の数値を棋力差と解釈しない。
+
+### v1のHOLDと正式開幕v2
+
+上記の4policy・各32ペアの最初の案v1は、独立開幕の監査でHOLDとなった。旧16384単位のprefixは16160単位が12手を完了し、224単位は短い／停止した。完了prefixのunique groupは3842。旧開発と合計3909 groupを除外した。v1のgreedy・初手SOUTHの候補2048件は、22件が短く、2026件が既知groupで、独立開幕0件だった。要求32件を満たさないため、元の仕様を変更せず [v1-HOLD原記録](equal-time-formal-v2/v1-hold.json) を残した。
+
+正式対局0局・試走の棋力成績未使用の段階で、別識別名のv2へ改訂した。v2はrandom/noisy×初手SOUTH/NORTHの4層に各64ペアを割り当てる。新seed範囲1000000〜1004095、開幕12手、既知group/root除外、256ペア・512局・32shard、探索・時間選択・未決着の効用・主要判定条件を維持した。greedy/replyは対象集団から外したが、過去の4policyすべての開幕を引き続き除外する。比較結果の適用先もrandom/noisy生成の独立開幕集団に限定し、全policyの代表性を主張しない。
+
+固定順の候補から、短い37件、旧group 1219件、既知root 3件、既選groupの重複24件を除外し、重複のない256 group・256正規化rootを確保した。[開始局面manifest](equal-time-formal-v2/openings.json) は全開幕が通常遷移で再生でき、4層各64件・交互のscheduleを検査した。別hostで元の公開試走24局・すべてのcontract fieldを監査し、旧全開幕の除外と新manifestを再生成して完全一致を確認した。
+
+- 正式ID：`NAKAKAMADO-EQUAL-TIME-FORMAL-20261005-v2`。
+- contract SHA-256（読込み後の `JSON.stringify`、末尾改行なし）：`b34680435b7f0a27da165d638de0b957afcd0b202e0cd2ce1835e28efd083119`。
+- opening manifest SHA-256（同じJSON直列化）：`5edf510a6f75f9029905d4b8bb775fdc30d5a98ae908f3b1739fe223caf83f8f`。
+- 正式生成fingerprint：`f3e25220de4c40025e5943d618638a01be98d042c7c90f1aac1cab83fe8f7c0f`。
+
+正式実行環境はcontractにNode・image・登録CPUの2種類を固定した。各ペアは同一hostで測定し、未登録の環境はHOLDとする。実機の性能保証ではない。v2専用4テストは初回試走の原ZIP、全24棋譜、契約全field、256開幕、v1のHOLDと閾値継承を検査する。新規計16テストは通過した。
+
+```sh
+node --test tools/ai-integration/equal-time-match.test.cjs tools/ai-integration/equal-time-formal-v2.test.cjs
+node tools/ai-integration/verify-equal-time-formal-v2.cjs doc/equal-time-formal-v2
+```
+
+v1の `equal-time-match.cjs freeze` は原契約のHOLDを維持する。後続の正式実行は上記v2 contractを使用する。CIでも原ZIP・契約全field・開幕manifestを検査し、正式行読取り0・正式対局0を報告する。正式受付、32shard実行、artifactの再開と集約workerを実装することが次の工程である。

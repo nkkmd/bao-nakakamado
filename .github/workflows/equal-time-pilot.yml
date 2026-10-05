@@ -17,7 +17,24 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
-      - run: node --test tools/ai-integration/equal-time-match.test.cjs
+      - run: node --test tools/ai-integration/equal-time-match.test.cjs tools/ai-integration/equal-time-formal-v2.test.cjs
+  formal-opening-audit:
+    needs: protocol-tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Verify original pilot ZIPs, all contract fields and regenerate excluded fresh openings without formal matches
+        run: node tools/ai-integration/verify-equal-time-formal-v2.cjs doc/equal-time-formal-v2 "$RUNNER_TEMP/equal-time-frozen-verification.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: equal-time-formal-v2-preflight
+          path: ${{ runner.temp }}/equal-time-frozen-verification.json
+          retention-days: 30
   operational-pilot:
     needs: protocol-tests
     runs-on: ubuntu-latest

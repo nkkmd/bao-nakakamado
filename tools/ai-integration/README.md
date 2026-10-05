@@ -222,3 +222,12 @@ node tools/ai-integration/equal-time-match.cjs pilot 150 /absolute/pilot-150
 ```
 
 同じ試走ディレクトリの完成局は条件・ソース・実行環境・checksum照合後に再利用する。`freeze` は3予算の完成局をsearchなしで再監査し、運用条件を満たす最大の予算と256ペア・512局の独立開幕manifestを固定する。不完全な試走や既存出力先は拒否する。過去の開幕はgenerator-onlyで照合し、教師ラベル・収集鍵・正式finalの行を読み込まない。正式比較の受付・shard実行・artifact復元worker、実機、公開AI採用は後続工程。
+
+初回のActions試走24局は通常終局し、事前の運用条件で150msを採用した。4policyの正式開幕v1は独立開幕不足でHOLDとなり、元の `freeze` はそのHOLDを維持する。別の [v2仕様](equal-time-formal-v2-spec.json)・[生成](equal-time-formal-v2.cjs)で、同じseed範囲・旧開幕の除外・判定閾値を保ったrandom/noisyの256ペア・512局を固定した。[正式contractと開幕](../../doc/equal-time-formal-v2/contract.json)と [原ZIP](../../doc/equal-time-pilot/)を保存する。v2の正式実行workerは次工程である。
+
+```sh
+node --test tools/ai-integration/equal-time-match.test.cjs tools/ai-integration/equal-time-formal-v2.test.cjs
+node tools/ai-integration/verify-equal-time-formal-v2.cjs doc/equal-time-formal-v2
+```
+
+検証器は原ZIPのdigest・全24棋譜・contractの全fieldを照合し、旧16384単位の開幕と新しい256開幕を再生成する。正式対局とモデル選択を行わない。
