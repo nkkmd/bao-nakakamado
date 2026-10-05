@@ -1,0 +1,110 @@
+name: NYAKUA formal model training and validation
+on:
+  workflow_dispatch:
+    inputs:
+      resume_receipts:
+        description: 'Pinned prior model checkpoint receipts JSON; [] for fresh training'
+        required: true
+        default: '[]'
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: nyakua-formal-learning-v1
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.14'
+      - name: Restore digest-pinned v2 dataset without collection keys
+        run: node tools/ai-integration/formal-learning-artifact.cjs "$RUNNER_TEMP/learning"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: learning-train
+          path: ${{ runner.temp }}/learning/prepared/train/train.json
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        with:
+          name: learning-validation
+          path: ${{ runner.temp }}/learning/prepared/validation/validation.json
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        with:
+          name: learning-dataset-receipt
+          path: ${{ runner.temp }}/learning/receipt.json
+          retention-days: 30
+  train:
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+      BAO_LEARNING_RESUME_RECEIPTS: ${{ inputs.resume_receipts }}
+    strategy:
+      fail-fast: false
+      matrix:
+        kind: [linear, mlp, logic]
+        seed: [2026100401, 2026100402, 2026100403]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.14'
+      - run: python -m pip install -r tools/ai-integration/formal-learning-requirements.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: learning-train
+          path: ${{ runner.temp }}/learning-input
+      - name: Train fixed epochs using train only
+        run: |
+          node tools/ai-integration/formal-learning-artifact.cjs resume "$RUNNER_TEMP/model" "${{ matrix.kind }}" "${{ matrix.seed }}"
+          python tools/ai-integration/formal-learning-trainer.py "$RUNNER_TEMP/learning-input/train.json" "${{ matrix.kind }}" "${{ matrix.seed }}" "$RUNNER_TEMP/model"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: learning-${{ matrix.kind }}-${{ matrix.seed }}
+          path: ${{ runner.temp }}/model/*.json
+          retention-days: 30
+  validation:
+    needs: train
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.14'
+      - run: python -m pip install -r tools/ai-integration/formal-learning-requirements.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: learning-validation
+          path: ${{ runner.temp }}/learning-input
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: learning-*-20*
+          merge-multiple: false
+          path: ${{ runner.temp }}/models
+      - name: Compare all nine candidates against frozen criteria; keep final sealed
+        run: node tools/ai-integration/formal-learning-validation.cjs "$RUNNER_TEMP/learning-input/validation.json" "$RUNNER_TEMP/models" "$RUNNER_TEMP/validation-report.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: learning-validation-report
+          path: ${{ runner.temp }}/validation-report.json
+          retention-days: 30

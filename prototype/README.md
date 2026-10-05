@@ -58,6 +58,8 @@ ENGINE_LICENSE.txt
 
 PR #17をmainへ統合し、正式収集workflowを登録しました。修正後のCIは89テスト・全8ジョブ成功。収集鍵を新規設定し、正式収集v2のrun 37245789837は全18ジョブ成功しました。8192件を受理し、train 5019行・validation 1517行の全条件を通過。最終検証データは暗号化したまま封印し、次は学習器とvalidationの採用基準を固定します。[正式収集の実行記録](../doc/AI_FORMAL_COLLECTION_RUN_V2_20261005.md)を参照してください。
 
+[正式学習の仕様・実装検証](../doc/AI_FORMAL_LEARNING_DESIGN_20261005.md)を追加しました。学習用ツールと整数評価器は開発用で、この画面は読み込みません。本学習・最終開封・公開AIの差し替えは未実施です。
+
 AI導入の準備として、`steal.js` の通常処理とNYAKUA会計を共通化した、盤面専用の軽量遷移を `search-transition.js` から提供しています。配信画面はまだこの探索アダプターを読み込みません。[導入計画](../doc/AI_INTEGRATION_PLAN_20261004.md)と[照合ツール](../tools/ai-integration/README.md)を参照してください。第2段階では `search-evaluator.js` と `search-ai.js` に手作り評価関数付きの探索版を追加しました。[実装と検証](../doc/AI_SEARCH_IMPLEMENTATION_20261004.md)を参照してください。画面への新AI組込みは後続工程です。
 
 リポジトリ直下で実行します。
