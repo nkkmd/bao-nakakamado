@@ -4,7 +4,7 @@
 
 ## 結果と対象
 
-[v1の基盤整備・保留記録](AI_FORMAL_COLLECTION_INFRASTRUCTURE_20261004.md)で判明したNAMUAへの選択の偏りを修正した。必要な層を先に確保するv2は、同じseed範囲・候補母集団・split割当・除外一覧・8192要求上限で、すべての候補最低条件を満たした。判定は `CANDIDATES-SUFFICIENT-FOR-TEACHER`。正式教師要求は0件、正式教師データ・学習モデルはまだ作成していない。
+[v1の基盤整備・保留記録](AI_FORMAL_COLLECTION_INFRASTRUCTURE_20261004.md)で判明したNAMUAへの選択の偏りを修正した。必要な層を先に確保するv2は、同じseed範囲・候補母集団・split割当・除外一覧・8192要求上限で、すべての候補最低条件を満たした。判定は `CANDIDATES-SUFFICIENT-FOR-TEACHER`。この候補監査では正式教師要求0件。後続の正式収集run 37245789837で8192件を完了・受理し、全体監査・封印も通過した。[正式収集の実行記録](AI_FORMAL_COLLECTION_RUN_V2_20261005.md)を参照。正式データは採用条件を通過した。学習モデルの作成は未実施。
 
 候補の充足は、本収集後の採用件数や層の充足、棋力の合格を意味しない。計測後の不採用と終局線20%上限を適用して再監査し、不足ならHOLDとする。公開の簡易コンピューターとゲーム規則を維持する。準備基盤はPR #17でmainへ統合した。
 
@@ -69,12 +69,12 @@ node tools/ai-integration/verify-formal-selection-v2.cjs /tmp/bao-selection-v2-p
 
 ## 次の工程
 
-[正式収集の起動・再開手順](AI_FORMAL_COLLECTION_LAUNCH_20261005.md)に、記録追加後のrun 37241607076の全8ジョブ成功、既定ブランチへのworkflow配置、鍵設定、固定入力、途中復元、採用後の監査を具体化した。起動前の操作は承認済みで、PR #17をmainへ統合した。[workflow登録・起動状況](AI_FORMAL_COLLECTION_ACTIVATION_20261005.md)のとおり、現在はブラウザー認証待ちで正式教師要求は0件。
+[正式収集の起動・再開手順](AI_FORMAL_COLLECTION_LAUNCH_20261005.md)に、記録追加後のrun 37241607076の全8ジョブ成功、既定ブランチへのworkflow配置、鍵設定、固定入力、途中復元、採用後の監査を具体化した。起動前の操作は承認済みで、PR #17をmainへ統合した。ブラウザー認証と収集鍵の新規設定を完了し、[正式収集の実行記録](AI_FORMAL_COLLECTION_RUN_V2_20261005.md)のとおりv2の8192件を完了・受理した。全18ジョブ成功し、全体監査・封印も通過した。
 
-候補ゲートは通過した。次はv2の設定・実装SHA・除外一覧を固定した正式手動収集を行う。収集用の独立した32byte鍵をsecret `BAO_COLLECTION_KEY_BASE64` に設定し、workflowの起動可能性を確認する。workflowはmainへ統合済みで、正式手動収集は未起動。起動時は `collection_version: v2`、新規収集は `resume_receipts: []` とする。
+候補ゲートは通過した。v2の設定・実装SHA・除外一覧を固定し、独立した32byte鍵をsecret `BAO_COLLECTION_KEY_BASE64` に新規登録した。mainに登録したworkflowを検証済み作業ブランチで起動した。入力は `collection_version: v2`、新規収集は `resume_receipts: []`。
 
-今回利用するGitHub接続にはsecret設定とworkflowの新規手動起動の機能がない。鍵の設定済み／未設定も確認できていない。PR更新で自動起動するCIによって全候補監査を再現し、本収集の起動経路と鍵管理は、承認済みのブラウザー操作で整える。main統合と正式収集の開始を区別し、未起動の収集を始めたとは扱わない。
+今回利用するGitHub接続にはsecret設定とworkflowの新規手動起動の機能がない。承認済みのブラウザー操作で未登録を確認し、新規設定と手動起動を完了した。候補監査CI、workflow起動、実計測完了、データ採用を区別する。
 
-計測後に受理率・件数・必要層・開幕group・終局線上限・漏洩を全shardで再監査し、通過したデータのfinalを封印する。その後、学習器とモデル比較・validationの数値基準を正式評価前に固定する。本学習・最終開封・棋力評価・Worker接続・公開AI差し替えは未実施である。
+計測後の受理率・件数・必要層・開幕group・終局線上限・漏洩を全shardで再監査し、全条件を通過したデータのfinalを封印した。次は学習器とモデル比較・validationの数値基準を正式評価前に固定する。本学習・最終開封・棋力評価・Worker接続・公開AI差し替えは未実施である。
 
 追加処理はNodeの標準ライブラリと既存の本リポジトリのコードを使い、新しい外部依存や元ゲームの学習済みモデルを取り込まない。説明文はCC BY-SA 4.0、コード・設定・機械可読記録の保護対象部分はMIT。[出典・適用範囲](../LICENSES.md)と元プログラムの表示、Bao Nakakamado・NYAKUAの考案者nkkmd、初公開日2026年9月30日を維持する。

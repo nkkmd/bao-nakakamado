@@ -1,0 +1,725 @@
+{
+  "id": "NAKAKAMADO-FORMAL-RUN-v2-20261005",
+  "recordDateJST": "2026-10-05",
+  "status": "READY-FOR-TRAINING-DESIGN",
+  "repository": "nkkmd/bao-nakakamado",
+  "run": {
+    "id": 37245789837,
+    "attempt": 1,
+    "event": "workflow_dispatch",
+    "createdAt": "2026-10-05T00:00:36Z",
+    "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718",
+    "headBranch": "feat/nyakua-ai-search-foundation-20261004",
+    "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/37245789837",
+    "workflowPath": ".github/workflows/formal-collection.yml",
+    "inputs": {
+      "collection_version": "v2",
+      "resume_receipts": "[]"
+    },
+    "status": "completed",
+    "conclusion": "success",
+    "updatedAt": "2026-10-05T00:05:25Z",
+    "observedDurationSeconds": 289
+  },
+  "secret": {
+    "name": "BAO_COLLECTION_KEY_BASE64",
+    "accountVerified": "nkkmd",
+    "presenceBefore": "absent",
+    "newIndependent32ByteRandomKeyRegistered": true,
+    "existingKeyOverwritten": false,
+    "valueSavedInGitOrChat": false
+  },
+  "collection": {
+    "configId": "NAKAKAMADO-FORMAL-COLLECTION-20261005-v2",
+    "expectedPlanDigest": "891329b4e865c97591211072acb18db53022a9704fb0dc7fd0dd479c70600a03",
+    "sourceDigest": "4e4d3acfbcfb5de5c9bf7e77accd8b3dbd26649389c0ab06471a025275d0cdac",
+    "registryDigest": "eda140703e63bc813c2284427e2b471312f103c0ffb0cdfcbdfa36f0d4827a3c",
+    "maximumRequests": 8192,
+    "shards": 16,
+    "teacher": {
+      "maxDepth": 4,
+      "quiescenceDepth": 1,
+      "timeLimitMs": 5000
+    }
+  },
+  "prepare": {
+    "jobId": 111563314965,
+    "status": "completed",
+    "conclusion": "success",
+    "keyLoaded": true,
+    "planDigestVerified": true,
+    "requests": 8192,
+    "planDigest": "891329b4e865c97591211072acb18db53022a9704fb0dc7fd0dd479c70600a03",
+    "sourceAndRegistryBoundByPlanDigest": true
+  },
+  "measuredTeacherRequests": 8192,
+  "aggregateCompleted": true,
+  "finalOpened": false,
+  "trainingStarted": false,
+  "publicAIReplaced": false,
+  "limits": [
+    "The collection and acceptance gates passed; playing strength and model quality have not been evaluated.",
+    "Final data and detailed audit remain encrypted; no final opening or training was performed.",
+    "Artifact ZIP IDs and digests are API metadata; no separate ZIP download or local restore was performed in this stage."
+  ],
+  "jobsObserved": [
+    {
+      "id": 111563314965,
+      "name": "prepare",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 111563950543,
+      "name": "collect (5)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 111563950559,
+      "name": "collect (3)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 111563950571,
+      "name": "collect (6)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 111563950574,
+      "name": "collect (9)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 111563950587,
+      "name": "collect (4)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 111563950589,
+      "name": "collect (0)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 111563950590,
+      "name": "collect (2)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 111563950594,
+      "name": "collect (11)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 111563950605,
+      "name": "collect (8)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 111563950606,
+      "name": "collect (7)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 111563950621,
+      "name": "collect (10)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 111563950625,
+      "name": "collect (1)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 111563950667,
+      "name": "collect (12)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 111563950688,
+      "name": "collect (13)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 111563950692,
+      "name": "collect (15)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 111563950722,
+      "name": "collect (14)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 111564143366,
+      "name": "audit-and-seal",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "generatedTeacherRequests": 8192,
+  "reusedTeacherRequests": 0,
+  "acceptedTeacherLabels": 8192,
+  "acceptedFraction": 1,
+  "aggregateJobId": 111564143366,
+  "shards": [
+    {
+      "jobId": 111563950589,
+      "shard": 0,
+      "requested": 512,
+      "completed": 512,
+      "reused": 0,
+      "generated": 512,
+      "planDigest": "891329b4e865c97591211072acb18db53022a9704fb0dc7fd0dd479c70600a03"
+    },
+    {
+      "jobId": 111563950625,
+      "shard": 1,
+      "requested": 512,
+      "completed": 512,
+      "reused": 0,
+      "generated": 512,
+      "planDigest": "891329b4e865c97591211072acb18db53022a9704fb0dc7fd0dd479c70600a03"
+    },
+    {
+      "jobId": 111563950590,
+      "shard": 2,
+      "requested": 512,
+      "completed": 512,
+      "reused": 0,
+      "generated": 512,
+      "planDigest": "891329b4e865c97591211072acb18db53022a9704fb0dc7fd0dd479c70600a03"
+    },
+    {
+      "jobId": 111563950559,
+      "shard": 3,
+      "requested": 512,
+      "completed": 512,
+      "reused": 0,
+      "generated": 512,
+      "planDigest": "891329b4e865c97591211072acb18db53022a9704fb0dc7fd0dd479c70600a03"
+    },
+    {
+      "jobId": 111563950587,
+      "shard": 4,
+      "requested": 512,
+      "completed": 512,
+      "reused": 0,
+      "generated": 512,
+      "planDigest": "891329b4e865c97591211072acb18db53022a9704fb0dc7fd0dd479c70600a03"
+    },
+    {
+      "jobId": 111563950543,
+      "shard": 5,
+      "requested": 512,
+      "completed": 512,
+      "reused": 0,
+      "generated": 512,
+      "planDigest": "891329b4e865c97591211072acb18db53022a9704fb0dc7fd0dd479c70600a03"
+    },
+    {
+      "jobId": 111563950571,
+      "shard": 6,
+      "requested": 512,
+      "completed": 512,
+      "reused": 0,
+      "generated": 512,
+      "planDigest": "891329b4e865c97591211072acb18db53022a9704fb0dc7fd0dd479c70600a03"
+    },
+    {
+      "jobId": 111563950606,
+      "shard": 7,
+      "requested": 512,
+      "completed": 512,
+      "reused": 0,
+      "generated": 512,
+      "planDigest": "891329b4e865c97591211072acb18db53022a9704fb0dc7fd0dd479c70600a03"
+    },
+    {
+      "jobId": 111563950605,
+      "shard": 8,
+      "requested": 512,
+      "completed": 512,
+      "reused": 0,
+      "generated": 512,
+      "planDigest": "891329b4e865c97591211072acb18db53022a9704fb0dc7fd0dd479c70600a03"
+    },
+    {
+      "jobId": 111563950574,
+      "shard": 9,
+      "requested": 512,
+      "completed": 512,
+      "reused": 0,
+      "generated": 512,
+      "planDigest": "891329b4e865c97591211072acb18db53022a9704fb0dc7fd0dd479c70600a03"
+    },
+    {
+      "jobId": 111563950621,
+      "shard": 10,
+      "requested": 512,
+      "completed": 512,
+      "reused": 0,
+      "generated": 512,
+      "planDigest": "891329b4e865c97591211072acb18db53022a9704fb0dc7fd0dd479c70600a03"
+    },
+    {
+      "jobId": 111563950594,
+      "shard": 11,
+      "requested": 512,
+      "completed": 512,
+      "reused": 0,
+      "generated": 512,
+      "planDigest": "891329b4e865c97591211072acb18db53022a9704fb0dc7fd0dd479c70600a03"
+    },
+    {
+      "jobId": 111563950667,
+      "shard": 12,
+      "requested": 512,
+      "completed": 512,
+      "reused": 0,
+      "generated": 512,
+      "planDigest": "891329b4e865c97591211072acb18db53022a9704fb0dc7fd0dd479c70600a03"
+    },
+    {
+      "jobId": 111563950688,
+      "shard": 13,
+      "requested": 512,
+      "completed": 512,
+      "reused": 0,
+      "generated": 512,
+      "planDigest": "891329b4e865c97591211072acb18db53022a9704fb0dc7fd0dd479c70600a03"
+    },
+    {
+      "jobId": 111563950722,
+      "shard": 14,
+      "requested": 512,
+      "completed": 512,
+      "reused": 0,
+      "generated": 512,
+      "planDigest": "891329b4e865c97591211072acb18db53022a9704fb0dc7fd0dd479c70600a03"
+    },
+    {
+      "jobId": 111563950692,
+      "shard": 15,
+      "requested": 512,
+      "completed": 512,
+      "reused": 0,
+      "generated": 512,
+      "planDigest": "891329b4e865c97591211072acb18db53022a9704fb0dc7fd0dd479c70600a03"
+    }
+  ],
+  "summary": {
+    "schema": 1,
+    "configId": "NAKAKAMADO-FORMAL-COLLECTION-20261005-v2",
+    "namespace": "formal-collection-v2-unopened-holdout",
+    "planDigest": "891329b4e865c97591211072acb18db53022a9704fb0dc7fd0dd479c70600a03",
+    "registryDigest": "eda140703e63bc813c2284427e2b471312f103c0ffb0cdfcbdfa36f0d4827a3c",
+    "sourceDigest": "4e4d3acfbcfb5de5c9bf7e77accd8b3dbd26649389c0ab06471a025275d0cdac",
+    "status": "READY-FOR-TRAINING-DESIGN",
+    "requested": 8192,
+    "accepted": 8192,
+    "rejected": {},
+    "postAuditLeaks": 0,
+    "development": false,
+    "train": {
+      "rows": 5019,
+      "groups": 2296,
+      "coverage": {
+        "reservedOnly": 20,
+        "twoPlacement": 33,
+        "threePlacement": 2112,
+        "lastOrdinary": 79,
+        "nearTransition": 148,
+        "ownReserved": 2165,
+        "opponentReserved": 1185,
+        "namua": 4379,
+        "mtaji": 640,
+        "north": 2438,
+        "south": 2581
+      },
+      "terminalLines": 645,
+      "capRemoved": 0,
+      "missingCoverage": [],
+      "passed": true,
+      "digest": "7f04a388628734cf3b092d2e70b4f60167cc55b3671b252695780bb2a3a84945"
+    },
+    "validation": {
+      "rows": 1517,
+      "groups": 707,
+      "coverage": {
+        "reservedOnly": 5,
+        "twoPlacement": 13,
+        "threePlacement": 649,
+        "lastOrdinary": 24,
+        "nearTransition": 40,
+        "ownReserved": 667,
+        "opponentReserved": 338,
+        "namua": 1357,
+        "mtaji": 160,
+        "north": 746,
+        "south": 771
+      },
+      "terminalLines": 190,
+      "capRemoved": 0,
+      "missingCoverage": [],
+      "passed": true,
+      "digest": "725b72a1ef0d43a0882c4a884e751c399ff040dca63580d36af1b704686e0b5d"
+    },
+    "final": {
+      "sealed": true,
+      "digest": "1750a34d21bcc824133b23647033317fbcb7894cdac70625c0c45b6622ec2a03",
+      "requirementsPassed": true,
+      "ciphertextSha256": "ad4fd4dfda9699841159953607047c40d9c59831e8b26ed619f02ff76fa210a8"
+    },
+    "auditDigest": "a2f34f7fcffbbac7e6b794c9dbb3cd82f312b90695bf248e24fa6206782a1098",
+    "provenance": [
+      {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": 37245789837,
+        "attempt": 1,
+        "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718"
+      },
+      {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": 37245789837,
+        "attempt": 1,
+        "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718"
+      },
+      {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": 37245789837,
+        "attempt": 1,
+        "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718"
+      },
+      {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": 37245789837,
+        "attempt": 1,
+        "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718"
+      },
+      {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": 37245789837,
+        "attempt": 1,
+        "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718"
+      },
+      {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": 37245789837,
+        "attempt": 1,
+        "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718"
+      },
+      {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": 37245789837,
+        "attempt": 1,
+        "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718"
+      },
+      {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": 37245789837,
+        "attempt": 1,
+        "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718"
+      },
+      {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": 37245789837,
+        "attempt": 1,
+        "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718"
+      },
+      {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": 37245789837,
+        "attempt": 1,
+        "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718"
+      },
+      {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": 37245789837,
+        "attempt": 1,
+        "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718"
+      },
+      {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": 37245789837,
+        "attempt": 1,
+        "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718"
+      },
+      {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": 37245789837,
+        "attempt": 1,
+        "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718"
+      },
+      {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": 37245789837,
+        "attempt": 1,
+        "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718"
+      },
+      {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": 37245789837,
+        "attempt": 1,
+        "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718"
+      },
+      {
+        "repository": "nkkmd/bao-nakakamado",
+        "runId": 37245789837,
+        "attempt": 1,
+        "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718"
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "repository": "nkkmd/bao-nakakamado",
+      "runId": 37245789837,
+      "attempt": 1,
+      "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718",
+      "artifactId": 11319575425,
+      "name": "formal-shard-4",
+      "digest": "sha256:326c4b6279393c9ea57d2dfbd1d4d33cb588f897c5f91e966d682b701c532a0e",
+      "sizeInBytes": 894417,
+      "createdAt": "2026-10-05T00:04:54Z",
+      "expiresAt": "2026-11-04T00:04:53Z",
+      "expired": false
+    },
+    {
+      "repository": "nkkmd/bao-nakakamado",
+      "runId": 37245789837,
+      "attempt": 1,
+      "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718",
+      "artifactId": 11319390448,
+      "name": "formal-shard-2",
+      "digest": "sha256:0d3615b8717239b09b620684df5ef2c61a6faffda4dfc6779bc821dbe126df3b",
+      "sizeInBytes": 893601,
+      "createdAt": "2026-10-05T00:04:37Z",
+      "expiresAt": "2026-11-04T00:04:36Z",
+      "expired": false
+    },
+    {
+      "repository": "nkkmd/bao-nakakamado",
+      "runId": 37245789837,
+      "attempt": 1,
+      "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718",
+      "artifactId": 11319316022,
+      "name": "formal-plan",
+      "digest": "sha256:0b0d6e49b3bac154ea3118bc6217a4633968b632cb420b87b4f1c0efdc747450",
+      "sizeInBytes": 23028048,
+      "createdAt": "2026-10-05T00:04:00Z",
+      "expiresAt": "2026-11-04T00:03:58Z",
+      "expired": false
+    },
+    {
+      "repository": "nkkmd/bao-nakakamado",
+      "runId": 37245789837,
+      "attempt": 1,
+      "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718",
+      "artifactId": 11319306238,
+      "name": "formal-shard-8",
+      "digest": "sha256:1ebecf4cc38fcc6b0e54acb4b8d533728f4e7ec58ead8e174d833b058bec362b",
+      "sizeInBytes": 893877,
+      "createdAt": "2026-10-05T00:04:54Z",
+      "expiresAt": "2026-11-04T00:04:53Z",
+      "expired": false
+    },
+    {
+      "repository": "nkkmd/bao-nakakamado",
+      "runId": 37245789837,
+      "attempt": 1,
+      "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718",
+      "artifactId": 11319281357,
+      "name": "formal-shard-11",
+      "digest": "sha256:1e5c8ff768018e9950d252eed6b9d3275017e8eb4985cd176c711eac0c2fad1e",
+      "sizeInBytes": 893930,
+      "createdAt": "2026-10-05T00:04:54Z",
+      "expiresAt": "2026-11-04T00:04:53Z",
+      "expired": false
+    },
+    {
+      "repository": "nkkmd/bao-nakakamado",
+      "runId": 37245789837,
+      "attempt": 1,
+      "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718",
+      "artifactId": 11319276237,
+      "name": "formal-shard-15",
+      "digest": "sha256:13f8d21dff43e4ed5af06254ffe819bbd4bdfc027ccb0d7550a946b9123f9b3a",
+      "sizeInBytes": 894117,
+      "createdAt": "2026-10-05T00:04:56Z",
+      "expiresAt": "2026-11-04T00:04:55Z",
+      "expired": false
+    },
+    {
+      "repository": "nkkmd/bao-nakakamado",
+      "runId": 37245789837,
+      "attempt": 1,
+      "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718",
+      "artifactId": 11319241597,
+      "name": "formal-shard-1",
+      "digest": "sha256:1f8e1428b25385a788609b0c297a1247aab96018eaf54105dc601712c96bf583",
+      "sizeInBytes": 894301,
+      "createdAt": "2026-10-05T00:04:56Z",
+      "expiresAt": "2026-11-04T00:04:55Z",
+      "expired": false
+    },
+    {
+      "repository": "nkkmd/bao-nakakamado",
+      "runId": 37245789837,
+      "attempt": 1,
+      "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718",
+      "artifactId": 11319216609,
+      "name": "formal-shard-10",
+      "digest": "sha256:4cdd7ce5616af9e5d16560ff4affc37ad81d1b8b4a8ad96521464b429760a1b0",
+      "sizeInBytes": 894159,
+      "createdAt": "2026-10-05T00:04:53Z",
+      "expiresAt": "2026-11-04T00:04:52Z",
+      "expired": false
+    },
+    {
+      "repository": "nkkmd/bao-nakakamado",
+      "runId": 37245789837,
+      "attempt": 1,
+      "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718",
+      "artifactId": 11319211802,
+      "name": "formal-dataset",
+      "digest": "sha256:63faac0ac801104167409b25a09f37d73bfa84d51ccae8e0d2f0bf09857555fc",
+      "sizeInBytes": 9127430,
+      "createdAt": "2026-10-05T00:05:22Z",
+      "expiresAt": "2026-11-04T00:05:21Z",
+      "expired": false
+    },
+    {
+      "repository": "nkkmd/bao-nakakamado",
+      "runId": 37245789837,
+      "attempt": 1,
+      "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718",
+      "artifactId": 11319062413,
+      "name": "formal-shard-9",
+      "digest": "sha256:f08952a9bae3b6dd3ee3dbaebc1fd7cee7825470cbce25784197d617b032a5af",
+      "sizeInBytes": 894501,
+      "createdAt": "2026-10-05T00:05:01Z",
+      "expiresAt": "2026-11-04T00:05:00Z",
+      "expired": false
+    },
+    {
+      "repository": "nkkmd/bao-nakakamado",
+      "runId": 37245789837,
+      "attempt": 1,
+      "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718",
+      "artifactId": 11318967646,
+      "name": "formal-shard-7",
+      "digest": "sha256:cdf6d9c5482100378acd516d1f29f6598dec939b62e4e1b9613d1c70f67d7c6d",
+      "sizeInBytes": 894062,
+      "createdAt": "2026-10-05T00:04:56Z",
+      "expiresAt": "2026-11-04T00:04:54Z",
+      "expired": false
+    },
+    {
+      "repository": "nkkmd/bao-nakakamado",
+      "runId": 37245789837,
+      "attempt": 1,
+      "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718",
+      "artifactId": 11318877788,
+      "name": "formal-shard-0",
+      "digest": "sha256:fc5a31530bff67916c84b9d6d464ad13040c80ade82cc8101ae4be23c50ff371",
+      "sizeInBytes": 889921,
+      "createdAt": "2026-10-05T00:04:41Z",
+      "expiresAt": "2026-11-04T00:04:40Z",
+      "expired": false
+    },
+    {
+      "repository": "nkkmd/bao-nakakamado",
+      "runId": 37245789837,
+      "attempt": 1,
+      "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718",
+      "artifactId": 11318848031,
+      "name": "formal-shard-13",
+      "digest": "sha256:3dd1663773ba970121bfecddd538cfb59c3161d00ecc95613f0d86be4d953deb",
+      "sizeInBytes": 893864,
+      "createdAt": "2026-10-05T00:04:52Z",
+      "expiresAt": "2026-11-04T00:04:51Z",
+      "expired": false
+    },
+    {
+      "repository": "nkkmd/bao-nakakamado",
+      "runId": 37245789837,
+      "attempt": 1,
+      "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718",
+      "artifactId": 11318784447,
+      "name": "formal-shard-5",
+      "digest": "sha256:ce8db036e70a69b7ff7642d2bf365584be0aa9d1becf0ab1b879345b7e0b2f3f",
+      "sizeInBytes": 894127,
+      "createdAt": "2026-10-05T00:04:38Z",
+      "expiresAt": "2026-11-04T00:04:37Z",
+      "expired": false
+    },
+    {
+      "repository": "nkkmd/bao-nakakamado",
+      "runId": 37245789837,
+      "attempt": 1,
+      "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718",
+      "artifactId": 11318729449,
+      "name": "formal-shard-3",
+      "digest": "sha256:7821589d36d2a05bd6aa2e57515436070f08906544f7e507ddc1a70a3fc0bef2",
+      "sizeInBytes": 894889,
+      "createdAt": "2026-10-05T00:04:56Z",
+      "expiresAt": "2026-11-04T00:04:55Z",
+      "expired": false
+    },
+    {
+      "repository": "nkkmd/bao-nakakamado",
+      "runId": 37245789837,
+      "attempt": 1,
+      "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718",
+      "artifactId": 11318654807,
+      "name": "formal-shard-6",
+      "digest": "sha256:b51e65cef72b6a113c00dd1bcab304b94eb7cbec97033db3a28c8fed9ce52d72",
+      "sizeInBytes": 894233,
+      "createdAt": "2026-10-05T00:04:51Z",
+      "expiresAt": "2026-11-04T00:04:51Z",
+      "expired": false
+    },
+    {
+      "repository": "nkkmd/bao-nakakamado",
+      "runId": 37245789837,
+      "attempt": 1,
+      "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718",
+      "artifactId": 11318629802,
+      "name": "formal-shard-14",
+      "digest": "sha256:da16c5bc2e27b3f419f6f96ffc204aa378a1fb29d52a3178970f8748f5c186c2",
+      "sizeInBytes": 894354,
+      "createdAt": "2026-10-05T00:05:00Z",
+      "expiresAt": "2026-11-04T00:04:59Z",
+      "expired": false
+    },
+    {
+      "repository": "nkkmd/bao-nakakamado",
+      "runId": 37245789837,
+      "attempt": 1,
+      "headSha": "e0fd2d0b9f09d8b47d7770e95817bb01a62b7718",
+      "artifactId": 11318308954,
+      "name": "formal-shard-12",
+      "digest": "sha256:5bd52f9738a6e6d22f41bde77e68be5c1436f76b42a7711f764d93b05d1217ab",
+      "sizeInBytes": 893449,
+      "createdAt": "2026-10-05T00:04:53Z",
+      "expiresAt": "2026-11-04T00:04:52Z",
+      "expired": false
+    }
+  ]
+}
