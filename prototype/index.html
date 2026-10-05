@@ -13,8 +13,8 @@
   <script defer src="./next-turn-engine.js?v=0.8.0"></script>
   <script defer src="./steal.js?v=0.8.0"></script>
   <script defer src="./search-transition.js?v=0.8.0"></script>
-  <script defer src="./computer-client.js?v=browser-v1"></script>
-  <script defer src="./app.js?v=0.8.0-browser-v1"></script>
+  <script defer src="./computer-client.js?v=ai-release001"></script>
+  <script defer src="./app.js?v=0.8.0-ai-release001"></script>
 </head>
 <body>
   <main class="game-shell">
@@ -22,7 +22,7 @@
       <div>
         <span class="kicker">A NEW BAO EXPERIMENT</span>
         <h1>BAO NAKAKAMADO</h1>
-        <span class="prototype-badge">試作 v0.8.0・ニャクア次手3個投入</span>
+        <span class="prototype-badge">試作 v0.8.0</span>
         <span id="opponent-badge" class="opponent-badge">2人対戦</span>
       </div>
       <div class="toolbar">
@@ -42,7 +42,7 @@
             <select id="mode">
               <option value="local">2人で対戦</option>
               <option value="computer">簡易コンピューター</option>
-              <option value="search-computer">探索コンピューター（試験）</option>
+              <option value="search-computer">探索コンピューター</option>
             </select>
           </label>
           <label id="difficulty-field" class="setup-field" for="difficulty" hidden>
@@ -62,7 +62,7 @@
           </label>
           <button id="start" class="start-button" type="button">対局開始</button>
           <p class="hint">各人の前列・後列16穴、ハンド22個で開始。種まきは自分の前列と後列を循環します。NAMUAの連続捕獲でNYAKUA。奪った1個を確保し、次の自分の手番で通常ハンド2個と一緒に一穴へ投入します。相手の最後の1個と確保分は保護します。</p>
-          <p class="hint">探索コンピューターは実機確認前の試験版です。簡易コンピューターも選べます。</p>
+          <p class="hint">探索コンピューターは本ゲーム専用の学習済みモデルを使います。簡易コンピューターも選べます。</p>
         </div>
       </section>
       <div class="game-info" aria-label="対局状況">

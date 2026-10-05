@@ -1,6 +1,6 @@
 # ライセンスと出典
 
-更新日：2026年10月5日。コードは **MIT**、説明文・図版は **CC BY-SA 4.0** で提供します。同じファイルを利用者が自由に選べる二重ライセンスではなく、以下の対象ごとに適用します。
+更新日：2026年10月6日。コードは **MIT**、説明文・図版は **CC BY-SA 4.0** で提供します。同じファイルを利用者が自由に選べる二重ライセンスではなく、以下の対象ごとに適用します。
 
 ## 適用範囲
 
@@ -73,4 +73,4 @@ Bao Nakakamadoでは説明の構成・表現を変更し、NYAKUA、ハンド枯
 
 2026年10月5日の[正式学習結果](doc/AI_FORMAL_LEARNING_RUN_20261005.md)に基づく `tools/ai-integration/frozen-models/formal-v1-linear-2026100401/` は、本ゲームの固定trainから新規に学習した開発候補です。元ゲームの学習済み重みは流用していません。モデル・学習記録・receipt・validation報告の保護対象部分はMIT、説明文はCC BY-SA 4.0。公開AI採用・最終評価の合格とは区別します。
 
-2026年10月5日の[試験用画面接続](doc/AI_BROWSER_WORKER_20261005.md)では、本ゲームの凍結線形モデルと専用エンコーダーを `prototype/browser-model.js` に決定的に生成しました。元ゲームの学習済み重みは流用していません。エンコーダーのMIT表示（Copyright (c) 2026 cultivationdata.net）を保持し、モデル・推論・Worker・clientはMITです。実機確認と公開採用判断は後続工程です。
+2026年10月5日の[試験用画面接続](doc/AI_BROWSER_WORKER_20261005.md)では、本ゲームの凍結線形モデルと専用エンコーダーを `prototype/browser-model.js` に決定的に生成しました。元ゲームの学習済み重みは流用していません。エンコーダーのMIT表示（Copyright (c) 2026 cultivationdata.net）を保持し、モデル・推論・Worker・clientはMITです。この試験接続時点では実機確認と公開採用判断は後続工程でした。2026年10月6日、実機試験の報告を受けて[公開AIとして採用](doc/AI_PUBLIC_ADOPTION_20261006.md)しました。ライセンスと元の著作権表示は維持します。

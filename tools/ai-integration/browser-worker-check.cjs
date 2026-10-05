@@ -1,5 +1,5 @@
 "use strict";
-// MIT. Real Chromium workers, trial UI, cancellation and version-7 replay.
+// MIT. Real Chromium workers, public AI UI, cancellation and version-7 replay.
 const fs=require("node:fs"),path=require("node:path"),http=require("node:http"),assert=require("node:assert/strict");
 const {chromium}=require("playwright");
 const E=require("../../prototype/next-turn-engine.js"), S=require("../../prototype/steal.js").createForEngine(E);
@@ -30,6 +30,8 @@ async function main(){
     });
     const url=`http://127.0.0.1:${server.address().port}/`;
     await page.goto(url);
+    assert.equal(await page.locator(".prototype-badge").innerText(),"試作 v0.8.0");
+    assert.equal(await page.locator("#mode option[value=search-computer]").innerText(),"探索コンピューター");
     const rows=require("./model-search-corpus.cjs").corpus(), reference=F.createEvaluator();
     await page.addScriptTag({url:url+"browser-model.js"});
     const browserScores=await page.evaluate(async states=>{
@@ -58,9 +60,9 @@ async function main(){
     await page.locator("#mode").selectOption("search-computer");await page.locator("#side").selectOption("1");
     for(const width of [320,390,432,1000]){
       await page.setViewportSize({width,height:1000});
-      assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),"trial setup overflow at "+width);
+      assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),"search setup overflow at "+width);
     }
-    await page.screenshot({path:path.join(out,"trial-setup.png"),fullPage:true});
+    await page.screenshot({path:path.join(out,"public-ai-setup.png"),fullPage:true});
     await page.evaluate(()=>{
       const original=Worker.prototype.postMessage;
       window.restoreWorkerPost=()=>Worker.prototype.postMessage=original;
@@ -95,7 +97,8 @@ async function main(){
       const [download]=await Promise.all([page.waitForEvent("download"),page.locator("#download").click()]);
       const file=path.join(out,`worker-game-human-${human}.json`);await download.saveAs(file);
       const record=JSON.parse(fs.readFileSync(file));
-      assert.equal(record.version,7);assert.equal(record.mode,"computer");assert.equal(record.computer.publicAdopted,false);
+      assert.equal(record.version,7);assert.equal(record.mode,"computer");assert.equal(record.computer.publicAdopted,true);
+      assert.equal(record.computer.id,"NAKAKAMADO-AI-v1");assert.equal(record.computer.releaseId,"NAKAKAMADO-AI-RELEASE-001");
       assert.deepEqual(S.replay(record.history).board,record.final);
       assert.ok(record.computer.diagnostics.length>0);
       assert.ok(record.computer.diagnostics.every(d=>d.fallback===null));
@@ -111,10 +114,10 @@ async function main(){
     assert.match(await page.locator("#opponent-badge").innerText(),/代替手/);
     assert.ok(await page.locator(".pit:not(:disabled)").count());
     assert.deepEqual(errors,[]);
-    const report={status:"PASS",scope:"browser-worker-trial-not-device-or-public-adoption",browser:browser.version(),
+    const report={status:"PASS",scope:"public-ai-browser-regression-not-device-test",browser:browser.version(),
       modelSha256:require("../../prototype/computer-client.js").MODEL_SHA256,integerPositions:rows.length,
       workerRequests:workerResults.length,budgetsMs:[25,75,150],cancelledWorker:true,games,
-      fallbackPlayable:true,mobileWidths:[320,390,432],pageErrors:errors,formalRowsRead:0,publicAdopted:false};
+      fallbackPlayable:true,mobileWidths:[320,390,432],pageErrors:errors,formalRowsRead:0,publicAdopted:true};
     fs.writeFileSync(path.join(out,"result.json"),JSON.stringify(report,null,2)+"\n");console.log(JSON.stringify(report));
   }catch(error){console.error(JSON.stringify({pageErrors:errors}));throw error;
   }finally{if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));}

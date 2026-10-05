@@ -1,11 +1,14 @@
 "use strict";
-// MIT. Current-position validation and cancellation for trial browser search.
+// MIT. Current-position validation and cancellation for browser search.
 (function(root) {
   const PROTOCOL = "NAKAKAMADO-BROWSER-WORKER-v1";
+  const AI_ID = "NAKAKAMADO-AI-v1";
+  const RELEASE_ID = "NAKAKAMADO-AI-RELEASE-001";
+  const PUBLIC_ADOPTED = true;
   const MODEL_SHA256 = "f74175fbaa6f2d6a82148cf5e106da7291f396b2b38cb79866dc641b2147254d";
   const BUDGETS = Object.freeze({easy:25, normal:75, hard:150});
   const moveKey = m => JSON.stringify([m?.type,m?.phase,m?.row,m?.index,m?.direction,m?.side,m?.houseChoice,Boolean(m?.houseTwo)]);
-  function createClient(Q, {createWorker=()=>new root.Worker("./computer-worker.js?v=browser-v1"),
+  function createClient(Q, {createWorker=()=>new root.Worker("./computer-worker.js?v=ai-release001"),
     setTimer=(f,ms)=>root.setTimeout(f,ms), clearTimer=id=>root.clearTimeout(id)}={}) {
     let active=null, nextId=0;
     function cancel() {
@@ -14,7 +17,7 @@
     }
     function request(state, difficulty="hard") {
       cancel();
-      if (!Object.hasOwn(BUDGETS,difficulty)) throw Error("Invalid trial difficulty");
+      if (!Object.hasOwn(BUDGETS,difficulty)) throw Error("Invalid difficulty");
       const stateKey=Q.stateKey(state), legal=Q.moveVariants(state);
       if (Q.outcome(state)!=="ongoing" || !legal.length) return Promise.resolve(null);
       const id=++nextId, budgetMs=BUDGETS[difficulty];
@@ -51,6 +54,6 @@
     }
     return Object.freeze({request,cancel});
   }
-  root.NakakamadoComputerClient=Object.freeze({createClient,PROTOCOL,MODEL_SHA256,BUDGETS,moveKey});
+  root.NakakamadoComputerClient=Object.freeze({createClient,PROTOCOL,AI_ID,RELEASE_ID,PUBLIC_ADOPTED,MODEL_SHA256,BUDGETS,moveKey});
   if(typeof module!=="undefined" && module.exports) module.exports=root.NakakamadoComputerClient;
 }(typeof window!=="undefined" ? window : globalThis));
