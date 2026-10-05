@@ -122,8 +122,15 @@ async function main() {
   const stopped=JSON.parse(fs.readFileSync(stoppedFile));assert.equal(stopped.adjudication,"safety-stop");
   assert.deepEqual(Study.S.replay(stopped.history).board,stopped.final);
   await page.screenshot({path:path.join(out,"mobile-safety-stop.png"),fullPage:true});
+  await page.goto(`http://127.0.0.1:${server.address().port}/licenses.html`);
+  assert.match(await page.locator("#code-license").innerText(),/Copyright \(c\) 2026 cultivationdata.net/);
+  assert.match(await page.locator("#code-license").innerText(),/この画面は開発用モデルを読み込みません/);
+  assert.match(await page.locator("#text-license").innerText(),/CC BY-SA 4.0/);
+  for(const width of [320,390,432,1000]){await page.setViewportSize({width,height:844});
+   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),"license page overflow at "+width);}
+  await page.screenshot({path:path.join(out,"licenses.png"),fullPage:true});
   assert.deepEqual(errors,[]);
-  const result={browser:browser.version(),pits:32,plies:trace.length,rearMoves,extraMoves,searchCheck,searchAICheck,downloadReplayed:true,computerAndReset:true,safetyStopAndReplay:true,mobileWidths:[320,390,432],pageErrors:errors};
+  const result={browser:browser.version(),pits:32,plies:trace.length,rearMoves,extraMoves,searchCheck,searchAICheck,downloadReplayed:true,computerAndReset:true,safetyStopAndReplay:true,licensePageChecked:true,mobileWidths:[320,390,432],pageErrors:errors};
   fs.writeFileSync(path.join(out,"result.json"),JSON.stringify(result,null,2)+"\n");console.log(JSON.stringify(result));
  } finally {if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));}
 }

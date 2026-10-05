@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "id": "NAKAKAMADO-MODEL-SEARCH-CONNECTION-20261005-v1",
+  "scope": "development-correctness-not-strength-or-public-adoption",
+  "baseCommit": "fd1ee21896bf0ac4ed8d0b01b00a5ea5f501e32c",
+  "rulesVersion": "0.8.0",
+  "replayVersion": 7,
+  "teacherSearchSha256": "d74569196382b0aea1bbf251454788b009d9962d249232a32c2e4c13f190dc65",
+  "runnerFingerprint": "8f22d999872964b2e4ed692202ca78f2b0aaa2b447f26f5b15831c38a15bf746",
+  "finalReportSha256": "d575e1d31d1fa4b6a947b2358f71a2a79333c16b116e7d5f76a426a1047f21b6",
+  "evaluatorId": "NAKAKAMADO-FROZEN-LINEAR-2026100401-v1",
+  "heuristicScale": 1024,
+  "terminalWin": 1000000,
+  "developmentPaths": [["random", 700000], ["greedy", 700001]],
+  "reservedOnlyFixtures": "tools/ai-integration/teacher-feasibility-corpus.json",
+  "depths": [1, 2, 3],
+  "quiescenceDepths": [0, 1],
+  "presets": [
+    {},
+    {"transpositionTable": false, "evaluationCache": false, "pvs": false},
+    {"maxTableEntries": 3, "maxEvaluationCacheEntries": 3, "ttMoveFirst": true, "orderQuiescenceCaptures": true, "historyHeuristic": true, "aspirationWindow": 1}
+  ],
+  "requiredCoverage": ["namua", "mtaji", "north", "south", "ownReserved", "opponentReserved", "threePlacement", "twoPlacement", "reservedOnly", "lastOrdinary", "nearTransition"],
+  "timingSmoke": {"positions": 8, "timeLimitMs": [0, 5, 20], "maxDepth": 8, "hardElapsedTimeGate": null},
+  "formalRowsRead": 0,
+  "publicAdopted": false
+}
