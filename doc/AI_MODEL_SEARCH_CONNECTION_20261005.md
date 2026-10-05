@@ -63,6 +63,14 @@ node --test tools/ai-integration/model-search.test.cjs
 node tools/ai-integration/verify-model-search.cjs NEW_DEVELOPMENT_OUTPUT_DIRECTORY
 ```
 
+## CIとmain統合
+
+PR [#22](https://github.com/nkkmd/bao-nakakamado/pull/22) のhead `f0c4834ea67ae4a5d9b045dccf9c38b22c747efe`（attempt 1）で、[探索接続CI 37269418083](https://github.com/nkkmd/bao-nakakamado/actions/runs/37269418083)、[旧準備CI 37269418020](https://github.com/nkkmd/bao-nakakamado/actions/runs/37269418020)、[既存回帰CI 37269418027](https://github.com/nkkmd/bao-nakakamado/actions/runs/37269418027)が成功した。新規12テスト、prototypeの89テスト、既存回帰の全8ジョブが通過した。ブラウザーはChromium 151.0.7922.34で、64手の盤面と棋譜、コンピューターとリセット、安全停止、320/390/432px幅、ライセンス案内を確認し、page errorは0だった。moto g52j 5Gの実機確認ではない。
+
+探索接続artifactは11327478360、6312 bytes、ZIP digest `sha256:5e7265895ef744ce8ee0f9d3f5faf8f730dd1590053f235d15507acf67a7d7a9`。全CRCと単一の `verification.json` を照合し、[CI原報告](AI_MODEL_SEARCH_CONNECTION_CI_REPORT_20261005.json)を取得したbytesで保存した。SHA-256は `644eddf58b7b718fe7649b257709b9e905c6ee164dce70ff9cab53bcbc4f8f52`。Nodeの版（CI v24.21.0／ローカルv24.19.0）と実時計試走の値を除く全項目が一致した。接続fingerprint・corpus digest・探索trace digestは同一。実run/attempt/head・job・artifact・照合・統合は[CI記録](AI_MODEL_SEARCH_CONNECTION_CI_20261005.json)に保存する。
+
+2026年10月5日14:54:01 JSTに、全チェック成功と固定head・mainの一致を確認してmainへ統合した。merge commitは `6af56d0c82c919b8505ffe9732455777610fbf8c`。統合後のpush CIも探索接続37269818639・旧準備37269818837・prototype37269818623の3workflowが成功した。正式finalの再開封、モデル変更、公開AIへの採用は行っていない。
+
 ## 次の工程
 
 同時間対局の基準を固定するため、手作り評価探索と固定線形評価探索の実時計の短い比較を開発用経路で行い、時間予算・到達深度・停止理由・記録量を把握する。正式比較の対象集団、先後交換ペア、局数、主要指標、採用・保留条件、独立seedは、その実行可能性の確認後に結果を見る前に固定する。長時間対局はGitHub Actionsを第一候補にし、完了ペア・run/attempt/head・実装とモデルSHA・固定条件を保存して再開できるようにする。
