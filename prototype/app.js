@@ -348,6 +348,7 @@
     human = Number($("side").value);
     difficulty = $("difficulty")?.value || "hard";
     aiDiagnostics = [];
+    updateSetup();
     started = true;
     selected = null;
     busy = false;
