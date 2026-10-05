@@ -15,6 +15,12 @@
   let fast = false;
   let sound = false;
   let audio = null;
+  let difficulty = "hard";
+  let computerTimer = null;
+  let computerToken = 0;
+  let aiDiagnostics = [];
+  const Q = window.NakakamadoSearchTransition?.createForEngine(E);
+  const client = Q && window.NakakamadoComputerClient?.createClient(Q);
   let lastResult = "NYAKUAはまだ発動していません。";
 
   function tone(frequency = 300) {
@@ -37,10 +43,12 @@
     } catch { /* Audio is optional; a blocked device must not interrupt play. */ }
   }
   function updateSetup() {
-    const computer = $("mode").value === "computer";
+    const computer = $("mode").value !== "local";
     $("side").disabled = !computer;
     $("side-field").hidden = !computer;
-    $("opponent-badge").textContent = computer ? "簡易コンピューター" : "2人対戦";
+    if ($("difficulty-field")) $("difficulty-field").hidden = $("mode").value !== "search-computer";
+    if ($("difficulty")) $("difficulty").disabled = $("mode").value !== "search-computer";
+    $("opponent-badge").textContent = $("mode").value === "search-computer" ? "探索コンピューター（試験）" : computer ? "簡易コンピューター" : "2人対戦";
   }
   function focusBoard() {
     const first = Array.from($("board").children).find((pit) => !pit.disabled);
@@ -79,7 +87,7 @@
   function renderBoard(moves) {
     const board = $("board");
     board.replaceChildren();
-    board.setAttribute("aria-busy", String(Boolean(animation)));
+    board.setAttribute("aria-busy", String(busy));
     const active = activePit();
     const rows = [
       [1, E.BACK, [7, 6, 5, 4, 3, 2, 1, 0]],
@@ -300,25 +308,46 @@
   }
 
   function scheduleComputer() {
-    if (!started || mode !== "computer" || game.board.winner !== null || game.board.player === human) return;
+    if (!started || mode === "local" || game.board.winner !== null || game.board.player === human) return;
     busy = true;
     render();
     const scheduledFor = generation;
-    window.setTimeout(() => {
+    computerTimer = window.setTimeout(async () => {
+      computerTimer = null;
       if (scheduledFor !== generation) return;
-      if (!started || mode !== "computer" || game.board.winner !== null || game.board.player === human) { busy = false; return; }
-      play(chooseComputerMove());
+      if (!started || mode === "local" || game.board.winner !== null || game.board.player === human) { busy = false; return; }
+      if (mode === "computer") { play(chooseComputerMove()); return; }
+      const token = ++computerToken;
+      const stateKey = Q.stateKey(game.board);
+      const answer = await client.request(game.board, difficulty);
+      if (!answer || token !== computerToken || scheduledFor !== generation || !started
+        || mode !== "search-computer" || humanTurn() || stateKey !== Q.stateKey(game.board)) return;
+      const legal = variants().find(move => window.NakakamadoComputerClient.moveKey(move) === window.NakakamadoComputerClient.moveKey(answer.move));
+      if (!legal) { busy = false; render(); $("status").textContent = "コンピューターの着手を確認できません。新しい対局からやり直してください。"; return; }
+      aiDiagnostics.push({turn:game.board.turn, player:game.board.player, ...answer.diagnostic});
+      $("opponent-badge").textContent = answer.diagnostic.fallback ? "探索コンピューター（代替手）" : "探索コンピューター（試験）";
+      play(legal);
     }, 260);
+  }
+
+  function cancelComputer() {
+    computerToken += 1;
+    if (computerTimer !== null) window.clearTimeout(computerTimer);
+    computerTimer = null;
+    client?.cancel();
   }
 
   function start() {
     generation += 1;
+    cancelComputer();
     clearAnimationTimer();
     animation = null;
     game = S.initialGame();
     view = game.board;
     mode = $("mode").value;
     human = Number($("side").value);
+    difficulty = $("difficulty")?.value || "hard";
+    aiDiagnostics = [];
     started = true;
     selected = null;
     busy = false;
@@ -333,6 +362,7 @@
   $("start").addEventListener("click", start);
   $("new-game").addEventListener("click", () => {
     generation += 1;
+    cancelComputer();
     clearAnimationTimer();
     animation = null;
     view = game.board;
@@ -343,7 +373,9 @@
   });
   $("download").addEventListener("click", () => {
     if (!started || !game.history.length) return;
-    const record = { format: "bao-nakakamado-prototype", version: 7, baseRules: "R-002", variantRule: E.RULE_ID, rulesVersion: E.RULES_VERSION, boardRowsPerPlayer: E.BOARD_ROWS_PER_PLAYER, sowingPath: E.SOWING_PATH, nyakuaProtectLast: E.NYAKUA_PROTECT_LAST, nyakuaFixedPitBulk: E.NYAKUA_FIXED_PIT_BULK, nyakuaNextTurnThree: E.NYAKUA_NEXT_TURN_THREE, nyakuaReservedProtected: E.NYAKUA_RESERVED_PROTECTED, initialHand: E.INITIAL_HAND, totalKete: E.TOTAL_KETE, mode, history: game.history, final: game.board, adjudication: game.board.reason === "relay-limit" ? "safety-stop" : game.board.winner === null ? "ongoing" : "normal" };
+    const record = { format: "bao-nakakamado-prototype", version: 7, baseRules: "R-002", variantRule: E.RULE_ID, rulesVersion: E.RULES_VERSION, boardRowsPerPlayer: E.BOARD_ROWS_PER_PLAYER, sowingPath: E.SOWING_PATH, nyakuaProtectLast: E.NYAKUA_PROTECT_LAST, nyakuaFixedPitBulk: E.NYAKUA_FIXED_PIT_BULK, nyakuaNextTurnThree: E.NYAKUA_NEXT_TURN_THREE, nyakuaReservedProtected: E.NYAKUA_RESERVED_PROTECTED, initialHand: E.INITIAL_HAND, totalKete: E.TOTAL_KETE, mode:mode === "search-computer" ? "computer" : mode, history: game.history, final: game.board, adjudication: game.board.reason === "relay-limit" ? "safety-stop" : game.board.winner === null ? "ongoing" : "normal" };
+    if (mode === "search-computer") record.computer = {id:"NAKAKAMADO-BROWSER-TRIAL-v1", publicAdopted:false,
+      modelSha256:window.NakakamadoComputerClient.MODEL_SHA256, difficulty, diagnostics:aiDiagnostics};
     const blob = new Blob([JSON.stringify(record, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");

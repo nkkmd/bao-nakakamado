@@ -60,6 +60,10 @@ jobs:
         run: node --test tools/ai-integration/formal-selection-v2.test.cjs tools/ai-integration/formal-collection.test.cjs tools/ai-integration/teacher-feasibility.test.cjs tools/ai-integration/learning-pipeline.test.cjs prototype/search-ai.test.cjs prototype/search-transition.test.cjs prototype/next-turn.test.cjs prototype/four-row.test.cjs prototype/app.test.cjs prototype/bounce.test.cjs prototype/steal.test.js tools/fixed-pit-bulk-study.test.cjs tools/fixed-pit-triggered-study.test.cjs
       - name: Learning input, split and checkpoint pilot
         run: node tools/ai-integration/verify-learning-pilot.cjs "$RUNNER_TEMP/learning-pilot"
+      - name: Frozen browser model and cancellation protocol
+        run: |
+          node tools/ai-integration/build-browser-model.cjs --check
+          node --test prototype/computer-client.test.cjs
       - name: Formal infrastructure development pilot
         env:
           BAO_COLLECTION_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
@@ -109,6 +113,11 @@ jobs:
           NODE_PATH: ${{ runner.temp }}/bao-browser/node_modules
           BAO_UI_OUTPUT: ${{ runner.temp }}/bao-next-turn-ui
         run: node tools/four-row-browser-check.cjs
+      - name: Real browser trial worker, full games, cancellation and replay
+        env:
+          NODE_PATH: ${{ runner.temp }}/bao-browser/node_modules
+          BAO_WORKER_UI_OUTPUT: ${{ runner.temp }}/bao-worker-ui
+        run: node tools/ai-integration/browser-worker-check.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -120,6 +129,7 @@ jobs:
             ${{ runner.temp }}/formal-infrastructure/formal-infrastructure-verification.json
             ${{ runner.temp }}/learning-pilot/
             ${{ runner.temp }}/bao-next-turn-ui/
+            ${{ runner.temp }}/bao-worker-ui/
           retention-days: 30
   teacher-feasibility:
     if: github.event_name != 'push'

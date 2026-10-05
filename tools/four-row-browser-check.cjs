@@ -124,7 +124,7 @@ async function main() {
   await page.screenshot({path:path.join(out,"mobile-safety-stop.png"),fullPage:true});
   await page.goto(`http://127.0.0.1:${server.address().port}/licenses.html`);
   assert.match(await page.locator("#code-license").innerText(),/Copyright \(c\) 2026 cultivationdata.net/);
-  assert.match(await page.locator("#code-license").innerText(),/この画面は開発用モデルを読み込みません/);
+  assert.match(await page.locator("#code-license").innerText(),/探索コンピューター（試験）のWorkerだけで読み込みます/);
   assert.match(await page.locator("#text-license").innerText(),/CC BY-SA 4.0/);
   for(const width of [320,390,432,1000]){await page.setViewportSize({width,height:844});
    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),"license page overflow at "+width);}
