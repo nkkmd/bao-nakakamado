@@ -1,0 +1,38 @@
+name: NYAKUA formal learning development checks
+on:
+  push:
+    paths:
+      - 'tools/ai-integration/formal-learning*'
+      - 'tools/ai-integration/verify-formal-learning*'
+      - '.github/workflows/formal-learning*.yml'
+  pull_request:
+    paths:
+      - 'tools/ai-integration/formal-learning*'
+      - 'tools/ai-integration/verify-formal-learning*'
+      - '.github/workflows/formal-learning*.yml'
+permissions:
+  contents: read
+jobs:
+  development:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.14'
+      - run: python -m pip install -r tools/ai-integration/formal-learning-requirements.txt
+      - run: node --test tools/ai-integration/formal-learning.test.cjs
+      - run: python tools/ai-integration/formal-learning-trainer.test.py
+      - run: python tools/ai-integration/formal-learning-unzip.test.py
+      - name: Check production widths, exact resume and integer parity on development paths only
+        run: node tools/ai-integration/verify-formal-learning.cjs "$RUNNER_TEMP/formal-learning-smoke"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: formal-learning-development-verification
+          path: ${{ runner.temp }}/formal-learning-smoke/verification.json
+          retention-days: 30

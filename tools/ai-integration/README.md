@@ -1,6 +1,6 @@
 # AI導入の基盤検証
 
-[導入計画](../../doc/AI_INTEGRATION_PLAN_20261004.md)と[検証記録](../../doc/AI_SEARCH_TRANSITION_VERIFICATION_20261004.md)の再現用ツール。現行v0.8.0の通常遷移と、ニャクア込みの盤面専用の探索遷移を照合する。棋力試験・学習は行わない。
+[導入計画](../../doc/AI_INTEGRATION_PLAN_20261004.md)と[検証記録](../../doc/AI_SEARCH_TRANSITION_VERIFICATION_20261004.md)の再現用ツール。現行v0.8.0の通常遷移と、ニャクア込みの盤面専用の探索遷移を照合する。以下の初期検証は棋力試験・本学習を行わない。後続の正式学習ツールは末尾を参照。
 
 ## 実行
 
@@ -96,7 +96,7 @@ PRまたは手動Actionsの4workerは、それぞれ16件を測定後、同じ�
 
 通常ハンド0・確保分1の標準初期配置からの到達4件は [reserved-only-reachable-fixtures.json](reserved-only-reachable-fixtures.json)。通常処理の全棋譜再生と全合法variantの1個投入を検査する。終局・不正手・総KETE違いを教師へ混ぜない。
 
-正式収集の現在の固定条件は [formal-collection-spec.json](formal-collection-spec.json)。この試走CLIは正式データの生成器ではない。正式の除外一覧・generator・全体監査・artifact復元・最終検証封印は以下の基盤として実装した。v1は候補の必要層不足で教師要求前に保留した。後続のv2は事前条件を通過し、正式収集・学習は未開始である。前工程の `learning-spec.json` と結果は原記録として保持する。
+正式収集の現在の固定条件は [formal-collection-spec.json](formal-collection-spec.json)。この試走CLIは正式データの生成器ではない。正式の除外一覧・generator・全体監査・artifact復元・最終検証封印は以下の基盤として実装した。v1は候補の必要層不足で教師要求前に保留した。後続のv2の正式収集は後続のrun 37245789837で完了した。本学習は未開始である。前工程の `learning-spec.json` と結果は原記録として保持する。
 
 ## 正式収集基盤の処理確認と保留
 
@@ -129,6 +129,42 @@ node tools/ai-integration/verify-formal-selection-v2.cjs /tmp/bao-selection-v2-p
 verifierは未使用の出力ファイルを要求する。16,384経路を再生成し、v1のtrain/validation選択の再現、全候補の除外・重複件数の一致、逆順入力でのv2選択不変性、8192件の通常再生を検査する。教師要求は0件で、finalの必要条件通過だけを表示する。
 
 PR/手動CIの専用job `formal-selection-v2-preflight` でも再現し、全候補条件の通過を要求する。run 37241135284では89テスト・全8ジョブ成功。初回のローカル記録は実装 `61a81f3`、CIの最新候補結果はテストfixture修正後の `1e4d008` に結び付く。過去の結果を現在のソースの証拠として混在させない。候補条件通過後も、正式計測の受理率・最低件数・必要層・終局線20%上限・漏洩を再監査する。旧ソースのv1計画やcheckpointは、現在のv2ソースへ再利用できない。旧結果の再現には記録した過去コミットを使う。
+
+## 正式学習仕様・実装検証（本学習は未起動）
+
+[仕様・検証記録](../../doc/AI_FORMAL_LEARNING_DESIGN_20261005.md)と [formal-learning-spec.json](formal-learning-spec.json) に、収集資産の固定receipt、3学習器×3seed、150epoch、比較基準とHOLD条件を固定する。Python 3.12.14・NumPy 2.3.5・Node 24を使用する。学習用の第三者コードと依存は [出典](../../LICENSES.md)を参照。既存の学習パイロット・収集仕様・原結果は変更しない。
+
+新規17テストと開発用32局面の実装照合は、未使用の子ディレクトリを指定して実行する。
+
+```sh
+python3 -m pip install -r tools/ai-integration/formal-learning-requirements.txt
+node --test tools/ai-integration/formal-learning.test.cjs
+python3 tools/ai-integration/formal-learning-trainer.test.py
+python3 tools/ai-integration/formal-learning-unzip.test.py
+BAO_LEARNING_VERIFY_ROOT=$(mktemp -d)
+node tools/ai-integration/verify-formal-learning.cjs "$BAO_LEARNING_VERIFY_ROOT/smoke"
+```
+
+smokeは既知の開発経路だけを使用し、正式artifact・収集鍵を取得しない。2epoch・batch 8、幅は本番同等。9候補の整数出力288件、反対称性・南北交換576件と、6学習候補の完全再開を照合する。正式な学習成績や150epoch完了と扱わない。
+
+本学習は、CI通過とmain統合後のcommitを固定してから手動 [formal-learning.yml](../../.github/workflows/formal-learning.yml) で起動する。新規実行は `resume_receipts: []`。固定ZIPを取得・検査し、trainだけの9workerとvalidation jobを分ける。収集鍵・finalの復号は不要。個別のCLIは以下の順序である。
+
+```sh
+node tools/ai-integration/formal-learning-artifact.cjs /absolute/fresh-learning-root
+python3 tools/ai-integration/formal-learning-trainer.py /absolute/fresh-learning-root/prepared/train/train.json logic 2026100401 /absolute/model-directory
+```
+
+Actions APIの認証は環境変数 `GITHUB_TOKEN` を使用する。値を引数・文書・git・artifactへ保存しない。個別学習器の引数は正規化済みtrainファイル1つだけで、validationのglob・早期停止を行わない。`--maximum-batches 64` は学習更新を途中で保存するための制限で、epochや採用条件は変更しない。同じ出力先へ再実行すると、Adam/RNG/並び順/位置/入力・ソース・環境を照合して再開する。完了前のモデルはexportしない。
+
+別runの再開は新しい手動runで `resume_receipts` に以下の形の配列を渡す。実際に観測した値を記入し、`latest`・同名artifactの自動探索・古いrunの上書きは使わない。
+
+```json
+[{"repository":"nkkmd/bao-nakakamado","runId":123,"attempt":1,"headSha":"40桁の観測済みSHA","artifactId":456,"name":"learning-logic-2026100401","digest":"sha256:64桁の観測済みZIP-hash"}]
+```
+
+例の123/456と文字列は説明用で、利用できるreceiptではない。固定seedのMLP/logicだけを復元する。異なる入力・ソース・CPU/BLAS/依存版での再開は拒否する。各model artifactにcheckpoint・完成モデル・実行記録を保存し、別runでZIP digestとcheckpoint bindingを確認する。線形は決定的に再計算する。
+
+9候補を揃えたvalidation CLIは `node tools/ai-integration/formal-learning-validation.cjs VALIDATION_JSON MODEL_ARTIFACT_ROOT NEW_REPORT_JSON`。root直下へ `learning-linear-2026100401` など9個のartifactディレクトリを置く。全seedの基準通過、group MSE中央値、固定deployment seedで選ぶ。HOLDでも報告を保存し、finalは開封しない。収集データの期限は2026年11月4日09:05:21 JST。本学習後も探索接続・同時間対局・実機確認は別工程である。
 
 ## 検証結果の適用範囲
 

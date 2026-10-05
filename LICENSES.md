@@ -27,6 +27,10 @@ CC BY-SA対象の文書は © 2026 nkkmd and Bao Nakakamado contributors。元�
 
 ### CIの依存
 
+2026年10月5日、`tools/ai-integration/formal-learning-trainer.py` のridge・MLP・論理ゲートの連続緩和・Adam・離散化後の出力調整を、同じ固定版の `tools/engineering/train-pbai-p6.py`（git blob `5456c75f2fd4458e978f91d275f23a7e800c2670`）から適応しました。MIT、Copyright (c) 2026 cultivationdata.net。元の著作権表示をファイル内に保持しています。入力幅368、train専用のデータ契約、Adam/RNG/途中位置の再開、固定整数MLP推論、版・ソース・実行環境の照合を追加しました。元の学習済み重みは取り込んでいません。前日の入力パイロット時点では学習器のコピーを含まなかったという上記記録と区別します。[正式学習の仕様と検証](doc/AI_FORMAL_LEARNING_DESIGN_20261005.md)を参照してください。
+
+本学習・開発検証の依存として [NumPy v2.3.5](https://github.com/numpy/numpy/tree/v2.3.5) を固定しました。BSD-3-Clause、Copyright (c) 2005-2025, NumPy Developers。[当該版のLICENSE.txt](https://github.com/numpy/numpy/blob/v2.3.5/LICENSE.txt)を確認しています。NumPy本体の改変・コピーは行わず、実行環境のBLAS情報を記録します。`.github/workflows/formal-learning*.yml` には公式の [actions/setup-python@v5](https://github.com/actions/setup-python/tree/v5) を設定し、Python 3.12.14を使用します。MIT、Copyright (c) 2018 GitHub, Inc. and contributors。[LICENSE](https://github.com/actions/setup-python/blob/v5/LICENSE)を確認しています。これらの依存・学習用ツールは配信用prototypeへ同梱しません。
+
 2026年10月4日、`.github/workflows/prototype-check.yml` の教師試走集約へ公式の [actions/download-artifact@v4](https://github.com/actions/download-artifact/tree/v4) を追加しました。MIT、Copyright (c) 2018 GitHub, Inc. and contributors。README blob `aa71e839b25e781fee4222931e5751b65c9f0449` と LICENSE blob `a67dca8b4f65d6bd351f6b1e333ce2cd84d843a5` を確認しています。action本体の改変・コピーはなく、artifactを名前ごとの別ディレクトリへ配置する設定を追加しました。依存本体は配信用prototypeへ同梱しません。[測定記録](doc/AI_TEACHER_FEASIBILITY_20261004.md)を参照してください。
 
 2026年10月5日までの[正式収集基盤](doc/AI_FORMAL_COLLECTION_INFRASTRUCTURE_20261004.md)では、同じ公式actionを `.github/workflows/formal-collection.yml` の計画・shard取得にも設定しました。標準ライブラリによるNodeのAES-256-GCMとPythonのZIP検査・Actions API復元を新規実装し、追加の外部パッケージは導入していません。著作権・ライセンス表示と配信用prototypeへの非同梱を維持します。

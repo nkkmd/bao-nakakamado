@@ -94,3 +94,5 @@ README、設計、診断・棋譜メタデータ、画面、出典・MIT表示�
 ## 出典と適用範囲
 
 移植元の[システム設計](https://github.com/nkkmd/bao-la-kiswahili-game/blob/8c87ed44c9b08f75456766f0a9bd9f76d06209d4/doc/SYSTEM_DESIGN.md)、[AI開発索引](https://github.com/nkkmd/bao-la-kiswahili-game/blob/8c87ed44c9b08f75456766f0a9bd9f76d06209d4/doc/AI_ENGINEERING_INDEX.md)、固定コードを参照し、この派生ゲーム用の手順として新たに記述した。元プログラムのMIT表示は `Copyright (c) 2026 cultivationdata.net`。[ENGINE_LICENSE.txt](../prototype/ENGINE_LICENSE.txt)を保持する。本計画の説明は[本リポジトリのライセンス範囲](../LICENSES.md)に従う。
+
+後続の[正式学習仕様と実装検証](AI_FORMAL_LEARNING_DESIGN_20261005.md)で、3学習器・固定比較基準・再開・手動workflowを整備した。既知の開発経路で整数推論と再開を検証した。本学習は未起動であり、次はCI通過・統合後のcommit固定と正式学習の起動である。
