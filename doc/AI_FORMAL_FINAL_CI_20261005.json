@@ -1,0 +1,971 @@
+{
+  "schema": 1,
+  "dateJST": "2026-10-05",
+  "status": "PREPARATION-VERIFIED-FINAL-STILL-SEALED",
+  "repository": "nkkmd/bao-nakakamado",
+  "pr": 20,
+  "headSha": "6f6a8c5afa637f7d5de753387b118015c4eed5a4",
+  "mergeSha": "fa6767886589a03742514d917143cfca034d2794",
+  "mergedAtJST": "2026-10-05 12:54:14+09:00",
+  "preparationFingerprint": "9049d1e84028a67932003b8daaf5d40df9f901f7528471dcf323ed74686a12bf",
+  "learningFingerprintUnchanged": "872a4690be9cd686ace800052e01b4afda5488c2cae60fb41cbc458a2958045c",
+  "collectionSourceDigestUnchanged": "4e4d3acfbcfb5de5c9bf7e77accd8b3dbd26649389c0ab06471a025275d0cdac",
+  "runs": [
+    {
+      "id": 37261069975,
+      "name": "NYAKUA final evaluation preparation checks",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 2,
+      "jobs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37261069975/jobs",
+      "logs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37261069975/logs",
+      "workflow_id": 375052010,
+      "attempt": 1,
+      "jobs": [
+        {
+          "id": 111608219815,
+          "name": "unopened-final",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 37261069975,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run python -m pip install -r tools/ai-integration/formal-learning-requirements.txt",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Verify frozen selection and inherited thresholds without final data",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Check races, stale bindings, response loss and interruption with fake registry",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Check frozen candidate integer parity on excluded development paths only",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            },
+            {
+              "name": "Post Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 16
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 17
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 18
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 19
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 37261069985,
+      "name": "Playable prototype checks",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 49,
+      "jobs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37261069985/jobs",
+      "logs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37261069985/logs",
+      "workflow_id": 372314547,
+      "attempt": 1,
+      "jobs": [
+        {
+          "id": 111608219908,
+          "name": "prototype",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 37261069985,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Rule and DOM tests",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Learning input, split and checkpoint pilot",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Formal infrastructure development pilot",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            },
+            {
+              "name": "Search and exhaustive minimax equivalence",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 12
+            },
+            {
+              "name": "NYAKUA search transition equivalence",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 13
+            },
+            {
+              "name": "Reachable games and replay consistency",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 14
+            },
+            {
+              "name": "Install pinned browser test dependencies",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 15
+            },
+            {
+              "name": "Real browser desktop, mobile and full-game replay",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 16
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 17
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 33
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 34
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 35
+            }
+          ]
+        },
+        {
+          "id": 111608220032,
+          "name": "formal-selection-v2-preflight",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 37261069985,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Audit the frozen v2 candidate universe without teacher requests",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Require all candidate minima before allowing the next collection stage",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 12
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 13
+            }
+          ]
+        },
+        {
+          "id": 111608220051,
+          "name": "teacher-feasibility (1)",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 37261069985,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Measure real-clock teacher and reuse completed measurements",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            }
+          ]
+        },
+        {
+          "id": 111608220063,
+          "name": "teacher-feasibility (0)",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 37261069985,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Measure real-clock teacher and reuse completed measurements",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            }
+          ]
+        },
+        {
+          "id": 111608220070,
+          "name": "teacher-feasibility (2)",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 37261069985,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Measure real-clock teacher and reuse completed measurements",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            }
+          ]
+        },
+        {
+          "id": 111608220074,
+          "name": "teacher-feasibility (3)",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 37261069985,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Measure real-clock teacher and reuse completed measurements",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            }
+          ]
+        },
+        {
+          "id": 111608296626,
+          "name": "teacher-feasibility-aggregate",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 37261069985,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Run actions/download-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Aggregate verified measurements",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 12
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 13
+            }
+          ]
+        },
+        {
+          "id": 111608599456,
+          "name": "formal-artifact-resume",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 37261069985,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Restore pinned development artifacts via API and validate ZIP digests",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "schema": 1,
+    "status": "PASS-DEVELOPMENT-ONLY-FINAL-UNOPENED",
+    "specId": "NAKAKAMADO-FORMAL-FINAL-20261005-v1",
+    "fingerprint": "9049d1e84028a67932003b8daaf5d40df9f901f7528471dcf323ed74686a12bf",
+    "developmentPaths": [
+      "random/700000",
+      "greedy/700001"
+    ],
+    "pythonNodeIntegerComparisons": 32,
+    "integerMismatches": 0,
+    "antisymmetryComparisons": 32,
+    "formalRowsRead": 0,
+    "finalOpened": false,
+    "authorizedToOpenOnce": false
+  },
+  "preparationArtifacts": [
+    {
+      "id": 11324447448,
+      "name": "final-preparation-development-verification",
+      "size_in_bytes": 444,
+      "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11324447448",
+      "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11324447448/zip",
+      "expired": false,
+      "created_at": "2026-10-05T03:51:22Z",
+      "expires_at": "2026-11-04T03:51:21Z",
+      "updated_at": "2026-10-05T03:51:22Z",
+      "digest": "sha256:2c3f99e47ce56e7b366f2f813c7e487f531f586e3719bf3601a6f1fb6481766f",
+      "workflow_run": {
+        "id": 37261069975,
+        "repository_id": 1394652576,
+        "head_repository_id": 1394652576,
+        "head_branch": "feat/nyakua-final-evaluation-plan-20261005",
+        "head_sha": "6f6a8c5afa637f7d5de753387b118015c4eed5a4"
+      }
+    }
+  ],
+  "existingArtifacts": [
+    {
+      "id": 11325340162,
+      "name": "teacher-feasibility-results",
+      "size_in_bytes": 13175,
+      "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11325340162",
+      "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11325340162/zip",
+      "expired": false,
+      "created_at": "2026-10-05T03:51:44Z",
+      "expires_at": "2026-11-04T03:51:43Z",
+      "updated_at": "2026-10-05T03:51:44Z",
+      "digest": "sha256:032977e52e96c9ce2237f3bd928429916c53d99a3ad40ff04d3839e246867475",
+      "workflow_run": {
+        "id": 37261069985,
+        "repository_id": 1394652576,
+        "head_repository_id": 1394652576,
+        "head_branch": "feat/nyakua-final-evaluation-plan-20261005",
+        "head_sha": "6f6a8c5afa637f7d5de753387b118015c4eed5a4"
+      }
+    },
+    {
+      "id": 11325290709,
+      "name": "formal-artifact-resume-verification",
+      "size_in_bytes": 841,
+      "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11325290709",
+      "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11325290709/zip",
+      "expired": false,
+      "created_at": "2026-10-05T03:53:22Z",
+      "expires_at": "2026-11-04T03:53:21Z",
+      "updated_at": "2026-10-05T03:53:22Z",
+      "digest": "sha256:d87f8ea8d8bf02b049b377a4c3c3cc09f0bc00d19a9266a95864506ce974492e",
+      "workflow_run": {
+        "id": 37261069985,
+        "repository_id": 1394652576,
+        "head_repository_id": 1394652576,
+        "head_branch": "feat/nyakua-final-evaluation-plan-20261005",
+        "head_sha": "6f6a8c5afa637f7d5de753387b118015c4eed5a4"
+      }
+    },
+    {
+      "id": 11325100876,
+      "name": "shard-0",
+      "size_in_bytes": 31899,
+      "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11325100876",
+      "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11325100876/zip",
+      "expired": false,
+      "created_at": "2026-10-05T03:51:28Z",
+      "expires_at": "2026-11-04T03:51:27Z",
+      "updated_at": "2026-10-05T03:51:28Z",
+      "digest": "sha256:c54e529bf3dabc39625310a7ea50d62009cca77afe817690b08ad739c48d81ad",
+      "workflow_run": {
+        "id": 37261069985,
+        "repository_id": 1394652576,
+        "head_repository_id": 1394652576,
+        "head_branch": "feat/nyakua-final-evaluation-plan-20261005",
+        "head_sha": "6f6a8c5afa637f7d5de753387b118015c4eed5a4"
+      }
+    },
+    {
+      "id": 11325050405,
+      "name": "formal-dev-shard-1",
+      "size_in_bytes": 41571,
+      "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11325050405",
+      "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11325050405/zip",
+      "expired": false,
+      "created_at": "2026-10-05T03:51:47Z",
+      "expires_at": "2026-11-04T03:51:46Z",
+      "updated_at": "2026-10-05T03:51:47Z",
+      "digest": "sha256:7b76e6df46394ac14d69887790352451730cddf55b651d0f7a4979803e3d41a7",
+      "workflow_run": {
+        "id": 37261069985,
+        "repository_id": 1394652576,
+        "head_repository_id": 1394652576,
+        "head_branch": "feat/nyakua-final-evaluation-plan-20261005",
+        "head_sha": "6f6a8c5afa637f7d5de753387b118015c4eed5a4"
+      }
+    },
+    {
+      "id": 11324935662,
+      "name": "formal-dev-shard-3",
+      "size_in_bytes": 41773,
+      "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11324935662",
+      "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11324935662/zip",
+      "expired": false,
+      "created_at": "2026-10-05T03:51:49Z",
+      "expires_at": "2026-11-04T03:51:48Z",
+      "updated_at": "2026-10-05T03:51:49Z",
+      "digest": "sha256:e003728f8a42f6947fb1d4e8b713f5903cdf0fbec8e4373f3c90b863ed5b38f9",
+      "workflow_run": {
+        "id": 37261069985,
+        "repository_id": 1394652576,
+        "head_repository_id": 1394652576,
+        "head_branch": "feat/nyakua-final-evaluation-plan-20261005",
+        "head_sha": "6f6a8c5afa637f7d5de753387b118015c4eed5a4"
+      }
+    },
+    {
+      "id": 11324766657,
+      "name": "shard-1",
+      "size_in_bytes": 31913,
+      "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11324766657",
+      "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11324766657/zip",
+      "expired": false,
+      "created_at": "2026-10-05T03:51:28Z",
+      "expires_at": "2026-11-04T03:51:27Z",
+      "updated_at": "2026-10-05T03:51:28Z",
+      "digest": "sha256:0239ff563cd92e0d9effe39966d3a03b2c65a6ea5ac189d663d88f41b0e58a91",
+      "workflow_run": {
+        "id": 37261069985,
+        "repository_id": 1394652576,
+        "head_repository_id": 1394652576,
+        "head_branch": "feat/nyakua-final-evaluation-plan-20261005",
+        "head_sha": "6f6a8c5afa637f7d5de753387b118015c4eed5a4"
+      }
+    },
+    {
+      "id": 11324581252,
+      "name": "shard-3",
+      "size_in_bytes": 31905,
+      "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11324581252",
+      "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11324581252/zip",
+      "expired": false,
+      "created_at": "2026-10-05T03:51:31Z",
+      "expires_at": "2026-11-04T03:51:30Z",
+      "updated_at": "2026-10-05T03:51:31Z",
+      "digest": "sha256:91b2add49662f85305f0094cba0fb23ae8ed3f620f23721a5ae53bde7f38d5d1",
+      "workflow_run": {
+        "id": 37261069985,
+        "repository_id": 1394652576,
+        "head_repository_id": 1394652576,
+        "head_branch": "feat/nyakua-final-evaluation-plan-20261005",
+        "head_sha": "6f6a8c5afa637f7d5de753387b118015c4eed5a4"
+      }
+    },
+    {
+      "id": 11324577129,
+      "name": "next-turn-prototype-verification",
+      "size_in_bytes": 850090,
+      "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11324577129",
+      "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11324577129/zip",
+      "expired": false,
+      "created_at": "2026-10-05T03:53:06Z",
+      "expires_at": "2026-11-04T03:53:05Z",
+      "updated_at": "2026-10-05T03:53:06Z",
+      "digest": "sha256:c7f6d04f71338ec3e8941fceb99e0089759b210ce47b22788225070740378823",
+      "workflow_run": {
+        "id": 37261069985,
+        "repository_id": 1394652576,
+        "head_repository_id": 1394652576,
+        "head_branch": "feat/nyakua-final-evaluation-plan-20261005",
+        "head_sha": "6f6a8c5afa637f7d5de753387b118015c4eed5a4"
+      }
+    },
+    {
+      "id": 11324507488,
+      "name": "formal-selection-v2-preflight",
+      "size_in_bytes": 3017,
+      "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11324507488",
+      "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11324507488/zip",
+      "expired": false,
+      "created_at": "2026-10-05T03:53:45Z",
+      "expires_at": "2026-11-04T03:53:45Z",
+      "updated_at": "2026-10-05T03:53:45Z",
+      "digest": "sha256:37517caf71731583faf2cc7372e79e56afd2e738c29f9283947ade1208562f4d",
+      "workflow_run": {
+        "id": 37261069985,
+        "repository_id": 1394652576,
+        "head_repository_id": 1394652576,
+        "head_branch": "feat/nyakua-final-evaluation-plan-20261005",
+        "head_sha": "6f6a8c5afa637f7d5de753387b118015c4eed5a4"
+      }
+    },
+    {
+      "id": 11324491363,
+      "name": "formal-dev-plan",
+      "size_in_bytes": 250405,
+      "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11324491363",
+      "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11324491363/zip",
+      "expired": false,
+      "created_at": "2026-10-05T03:51:45Z",
+      "expires_at": "2026-11-04T03:51:45Z",
+      "updated_at": "2026-10-05T03:51:45Z",
+      "digest": "sha256:4c6caa43dd37a96e8bcab9bb1e30f3821c0fcd2b34d683c3f9052d4d4dfe532c",
+      "workflow_run": {
+        "id": 37261069985,
+        "repository_id": 1394652576,
+        "head_repository_id": 1394652576,
+        "head_branch": "feat/nyakua-final-evaluation-plan-20261005",
+        "head_sha": "6f6a8c5afa637f7d5de753387b118015c4eed5a4"
+      }
+    },
+    {
+      "id": 11324451567,
+      "name": "formal-dev-shard-0",
+      "size_in_bytes": 41665,
+      "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11324451567",
+      "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11324451567/zip",
+      "expired": false,
+      "created_at": "2026-10-05T03:51:46Z",
+      "expires_at": "2026-11-04T03:51:46Z",
+      "updated_at": "2026-10-05T03:51:46Z",
+      "digest": "sha256:5f170ad7ceb40c5011ba082ea7f4f9f1d7faf32dfac8d10217188b1c77ef9d7d",
+      "workflow_run": {
+        "id": 37261069985,
+        "repository_id": 1394652576,
+        "head_repository_id": 1394652576,
+        "head_branch": "feat/nyakua-final-evaluation-plan-20261005",
+        "head_sha": "6f6a8c5afa637f7d5de753387b118015c4eed5a4"
+      }
+    },
+    {
+      "id": 11324267295,
+      "name": "formal-dev-shard-2",
+      "size_in_bytes": 41744,
+      "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11324267295",
+      "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11324267295/zip",
+      "expired": false,
+      "created_at": "2026-10-05T03:51:48Z",
+      "expires_at": "2026-11-04T03:51:47Z",
+      "updated_at": "2026-10-05T03:51:48Z",
+      "digest": "sha256:b3a99fa1b685906c7ffa73e0e77a06c91bf00ab6c4441fafd5ba594db62086b7",
+      "workflow_run": {
+        "id": 37261069985,
+        "repository_id": 1394652576,
+        "head_repository_id": 1394652576,
+        "head_branch": "feat/nyakua-final-evaluation-plan-20261005",
+        "head_sha": "6f6a8c5afa637f7d5de753387b118015c4eed5a4"
+      }
+    },
+    {
+      "id": 11324214676,
+      "name": "shard-2",
+      "size_in_bytes": 31905,
+      "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11324214676",
+      "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11324214676/zip",
+      "expired": false,
+      "created_at": "2026-10-05T03:51:23Z",
+      "expires_at": "2026-11-04T03:51:22Z",
+      "updated_at": "2026-10-05T03:51:23Z",
+      "digest": "sha256:536b013a6db1f8c717eecce57ae730074eeba49799c18ab424bb6e437de28143",
+      "workflow_run": {
+        "id": 37261069985,
+        "repository_id": 1394652576,
+        "head_repository_id": 1394652576,
+        "head_branch": "feat/nyakua-final-evaluation-plan-20261005",
+        "head_sha": "6f6a8c5afa637f7d5de753387b118015c4eed5a4"
+      }
+    }
+  ],
+  "localTests": 21,
+  "newProtocolTests": 12,
+  "relativeLinksChecked": 118,
+  "finalOpened": false,
+  "authorizedToOpenOnce": false,
+  "liveOpeningWorkflowInstalled": false,
+  "formalClaimCreated": false,
+  "publicAdopted": false
+}

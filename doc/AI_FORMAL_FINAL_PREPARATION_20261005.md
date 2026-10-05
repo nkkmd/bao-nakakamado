@@ -69,7 +69,11 @@
 
 凍結線形モデルの推論smokeには、既知の除外対象 `random/700000` と `greedy/700001` から32進行中局面を使用した。Python／JavaScript出力32件・反対称性32件が一致し、正式行読込み0・最終開封なしを確認した。[ローカル検証JSON](AI_FORMAL_FINAL_LOCAL_20261005.json)に保存する。
 
-新しい [formal-final-check.yml](../.github/workflows/formal-final-check.yml) は読取り権限だけで、preflight・偽APIテスト・開発用推論smokeを実行する。収集鍵・受付タグの作成・開封の手動起動を含まない。GitHub CIの結果は後続の完了記録に対象head・run・attemptとともに保存する。
+新しい [formal-final-check.yml](../.github/workflows/formal-final-check.yml) は読取り権限だけで、preflight・偽APIテスト・開発用推論smokeを実行する。収集鍵・受付タグの作成・開封の手動起動を含まない。GitHub CIの結果は [CI記録](AI_FORMAL_FINAL_CI_20261005.json) に対象head・run・attempt・job・artifactの識別情報とともに保存した。
+
+PR [#20](https://github.com/nkkmd/bao-nakakamado/pull/20) のhead `6f6a8c5afa637f7d5de753387b118015c4eed5a4` で、[準備用CI run 37261069975](https://github.com/nkkmd/bao-nakakamado/actions/runs/37261069975)（attempt 1）と [既存CI run 37261069985](https://github.com/nkkmd/bao-nakakamado/actions/runs/37261069985)（attempt 1）が成功した。準備用CIは12テスト・整数出力32件・反対称性32件の一致、正式行読込み0件・未開封を確認した。既存CIは全8ジョブが成功し、規則・探索・通常遷移・実ブラウザー・候補計画の再構築・固定artifact復元を通過した。ローカルとCIの準備fingerprint `9049d1e84028a67932003b8daaf5d40df9f901f7528471dcf323ed74686a12bf` は一致した。
+
+CI通過後、2026年10月5日12:54:14 JSTにmainへ統合した。merge commitは `fa6767886589a03742514d917143cfca034d2794`。統合後のpreflightも通過し、元収集・学習fingerprint、モデルと原記録のbytes、未開封状態を維持した。
 
 次は、この契約と検証済みライブラリへ、固定artifactの復元・封印照合・正式復号・1候補の整数照合・判定報告の保存を行う手動workerを接続する。実装のCIとmain統合を確認し、そのcommitとrunを固定した承認記録を作ってから正式finalを開く。受付記録・結果・出典はActionsの30日期限だけに依存せず保存する。元datasetの期限は2026年11月4日09:05:21 JSTで、別保管が完了したとは記録しない。
 
