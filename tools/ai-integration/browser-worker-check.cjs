@@ -91,7 +91,7 @@ async function main(){
         await page.locator("#move-choices button").first().click();
       }
       assert.ok(moves<400,"Full game finished");
-      await page.locator("summary").filter({hasText:"棋譜の保存"}).click();
+      await page.locator("summary").filter({hasText:"棋譜の保存"}).evaluate(summary=>{summary.parentElement.open=true;});
       const [download]=await Promise.all([page.waitForEvent("download"),page.locator("#download").click()]);
       const file=path.join(out,`worker-game-human-${human}.json`);await download.saveAs(file);
       const record=JSON.parse(fs.readFileSync(file));
@@ -101,6 +101,7 @@ async function main(){
       assert.ok(record.computer.diagnostics.every(d=>d.fallback===null));
       games.push({human,plies:record.history.length,adjudication:record.adjudication,diagnostics:record.computer.diagnostics.length,
         searchFallbacks:record.computer.diagnostics.filter(d=>d.searchFallback).length});
+      console.log(JSON.stringify({completedGame:games.at(-1)}));
     }
     // A missing worker remains playable and is explicitly recorded as a fallback.
     await page.locator("#new-game").click();
@@ -115,6 +116,7 @@ async function main(){
       workerRequests:workerResults.length,budgetsMs:[25,75,150],cancelledWorker:true,games,
       fallbackPlayable:true,mobileWidths:[320,390,432],pageErrors:errors,formalRowsRead:0,publicAdopted:false};
     fs.writeFileSync(path.join(out,"result.json"),JSON.stringify(report,null,2)+"\n");console.log(JSON.stringify(report));
+  }catch(error){console.error(JSON.stringify({pageErrors:errors}));throw error;
   }finally{if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));}
 }
 main().catch(e=>{console.error(e);process.exitCode=1;});
