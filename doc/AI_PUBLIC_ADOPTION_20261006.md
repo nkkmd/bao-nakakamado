@@ -31,7 +31,9 @@
 
 実機報告には対局数・端末OS／ブラウザーの実際の版・実測時間・診断JSONの提示はない。それらを推定して記録しない。ブラウザー幅検査を実機検査とは扱わず、端末ごとの性能保証や難易度間の勝率、AI-GEN4相当の棋力は未確認のままとする。正式finalの再開封、モデルの再選定、正式512局の条件変更・再計測は行わない。
 
-公開表示と識別情報を変更した実装では、既存DOM・client回帰、生成モデル一致、実ブラウザーの表示・Worker・先後対局・棋譜再生を確認する。採用変更のPRとCI結果は後続の確認記録へ追記する。
+[採用変更PR #27](https://github.com/nkkmd/bao-nakakamado/pull/27)の実装head `47987773611973e287f6c3b5c54f2deb39750dae` は、[CI原記録](AI_PUBLIC_ADOPTION_CI_20261006.json)の全5ワークフロー・全16ジョブが成功した。テストcheckout `9279a7098bd840b190645b700ff182038f3e614c` のtreeは実装headと完全一致。既存ルール・DOM 90テストとclient 4テスト、生成モデル一致、通常画面回帰を通過した。
+
+実Chromium 151.0.7922.34でバージョン表示「試作 v0.8.0」と相手名を確認。89開発局面の整数評価、3予算12件のWorker応答、取消し、先後2対局（8手・27手、計18回のモデル着手、代替0、通常終局）、棋譜保存・再生、Worker不可時の代替、幅320/390/432の表示を確認した。ページエラー0。これはブラウザー回帰で、正式棋力評価の再計測ではない。[原結果](public-ai-browser-ci/result.json)、[先手棋譜](public-ai-browser-ci/worker-game-human-0.json)、[後手棋譜](public-ai-browser-ci/worker-game-human-1.json)、[画面](public-ai-browser-ci/public-ai-setup.png)を原bytesで保存した。後続の証拠保存commitでは実行コードを変更しない。
 
 ## 配信用ファイル
 
