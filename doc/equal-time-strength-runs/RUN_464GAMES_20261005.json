@@ -1,0 +1,316 @@
+{
+  "schema": 1,
+  "dateJST": "2026-10-05",
+  "status": "HOLD-THREE-UNSTARTED-SHARDS-BROWSER-REVIEW-CAPACITY",
+  "mainHead": "6d3d779d630132ff977d1c301ade56da960b4b63",
+  "runnerFingerprint": "ce0cb9f7e7defc9c4b776a95188ca2e55d53eed8d69c755b5eb3e582117894d7",
+  "sessionSha": "4b464569a1e53a8e656611661df1e08c8bde14e0",
+  "completedShards": 29,
+  "completedPairs": 232,
+  "completedGames": 464,
+  "unstartedShards": [
+    0,
+    24,
+    26
+  ],
+  "unstartedGames": 48,
+  "unsealedLeases": 0,
+  "interruptedPairs": 0,
+  "strengthScoresComputed": false,
+  "formalRowsRead": 0,
+  "publicAdopted": false,
+  "firstRun": {
+    "id": 37307084139,
+    "attempt": 1,
+    "conclusion": "failure",
+    "createdAt": "2026-10-05T12:04:55Z",
+    "updatedAt": "2026-10-05T12:16:49Z",
+    "publicationCommit": "e82fe4604228416686cf75bb3f94ad6611af7e67"
+  },
+  "resumeRun": {
+    "id": 37309702988,
+    "attempt": 1,
+    "conclusion": "failure",
+    "createdAt": "2026-10-05T12:27:52Z",
+    "updatedAt": "2026-10-05T12:37:32Z",
+    "publicationCommit": "4631c1e839b566bd52039deb85edf6353b99640b",
+    "generatedPairs": 72,
+    "reusedPairs": 120,
+    "reusedCheckpointFilesByteIdentical": true,
+    "jobs": [
+      {
+        "id": 111762057243,
+        "shard": 2,
+        "conclusion": "success",
+        "workerLines": [
+          "2026-10-05T12:30:08.3496014Z {\"status\":\"COMPLETE\",\"generated\":8,\"reused\":0}"
+        ]
+      },
+      {
+        "id": 111762057299,
+        "shard": 6,
+        "conclusion": "success",
+        "workerLines": [
+          "2026-10-05T12:29:37.7365607Z {\"status\":\"COMPLETE\",\"generated\":0,\"reused\":8}"
+        ]
+      },
+      {
+        "id": 111762057327,
+        "shard": 4,
+        "conclusion": "success",
+        "workerLines": [
+          "2026-10-05T12:28:59.3937797Z {\"status\":\"COMPLETE\",\"generated\":0,\"reused\":8}"
+        ]
+      },
+      {
+        "id": 111762057333,
+        "shard": 8,
+        "conclusion": "success",
+        "workerLines": [
+          "2026-10-05T12:30:06.1476368Z {\"status\":\"COMPLETE\",\"generated\":0,\"reused\":8}"
+        ]
+      },
+      {
+        "id": 111762057345,
+        "shard": 9,
+        "conclusion": "success",
+        "workerLines": [
+          "2026-10-05T12:30:19.7505210Z {\"status\":\"COMPLETE\",\"generated\":0,\"reused\":8}"
+        ]
+      },
+      {
+        "id": 111762057372,
+        "shard": 0,
+        "conclusion": "failure",
+        "workerLines": [
+          "2026-10-05T12:28:42.1037449Z Strength worker HOLD: Unregistered CPU: HOLD"
+        ]
+      },
+      {
+        "id": 111762057396,
+        "shard": 10,
+        "conclusion": "success",
+        "workerLines": [
+          "2026-10-05T12:30:19.5571690Z {\"status\":\"COMPLETE\",\"generated\":0,\"reused\":8}"
+        ]
+      },
+      {
+        "id": 111762057413,
+        "shard": 11,
+        "conclusion": "success",
+        "workerLines": [
+          "2026-10-05T12:31:49.0479200Z {\"status\":\"COMPLETE\",\"generated\":8,\"reused\":0}"
+        ]
+      },
+      {
+        "id": 111762057420,
+        "shard": 1,
+        "conclusion": "success",
+        "workerLines": [
+          "2026-10-05T12:30:00.8249997Z {\"status\":\"COMPLETE\",\"generated\":8,\"reused\":0}"
+        ]
+      },
+      {
+        "id": 111762057422,
+        "shard": 3,
+        "conclusion": "success",
+        "workerLines": [
+          "2026-10-05T12:30:01.6643020Z {\"status\":\"COMPLETE\",\"generated\":8,\"reused\":0}"
+        ]
+      },
+      {
+        "id": 111762057432,
+        "shard": 5,
+        "conclusion": "success",
+        "workerLines": [
+          "2026-10-05T12:29:18.2497009Z {\"status\":\"COMPLETE\",\"generated\":0,\"reused\":8}"
+        ]
+      },
+      {
+        "id": 111762057490,
+        "shard": 13,
+        "conclusion": "success",
+        "workerLines": [
+          "2026-10-05T12:30:38.7230176Z {\"status\":\"COMPLETE\",\"generated\":0,\"reused\":8}"
+        ]
+      },
+      {
+        "id": 111762057532,
+        "shard": 7,
+        "conclusion": "failure",
+        "workerLines": [
+          "2026-10-05T12:29:50.8462188Z Strength worker HOLD: Unregistered CPU: HOLD"
+        ]
+      },
+      {
+        "id": 111762057591,
+        "shard": 12,
+        "conclusion": "failure",
+        "workerLines": [
+          "2026-10-05T12:30:20.0689727Z Strength worker HOLD: Unregistered CPU: HOLD"
+        ]
+      },
+      {
+        "id": 111762059199,
+        "shard": 15,
+        "conclusion": "failure",
+        "workerLines": [
+          "2026-10-05T12:30:33.0675767Z Strength worker HOLD: Unregistered CPU: HOLD"
+        ]
+      },
+      {
+        "id": 111762059256,
+        "shard": 14,
+        "conclusion": "success",
+        "workerLines": [
+          "2026-10-05T12:30:37.9976551Z {\"status\":\"COMPLETE\",\"generated\":0,\"reused\":8}"
+        ]
+      },
+      {
+        "id": 111762059322,
+        "shard": 16,
+        "conclusion": "success",
+        "workerLines": [
+          "2026-10-05T12:30:51.1274832Z {\"status\":\"COMPLETE\",\"generated\":0,\"reused\":8}"
+        ]
+      },
+      {
+        "id": 111762059402,
+        "shard": 20,
+        "conclusion": "success",
+        "workerLines": [
+          "2026-10-05T12:32:28.4387544Z {\"status\":\"COMPLETE\",\"generated\":8,\"reused\":0}"
+        ]
+      },
+      {
+        "id": 111762059458,
+        "shard": 19,
+        "conclusion": "success",
+        "workerLines": [
+          "2026-10-05T12:31:07.1680589Z {\"status\":\"COMPLETE\",\"generated\":0,\"reused\":8}"
+        ]
+      },
+      {
+        "id": 111762059512,
+        "shard": 17,
+        "conclusion": "success",
+        "workerLines": [
+          "2026-10-05T12:30:58.1901358Z {\"status\":\"COMPLETE\",\"generated\":0,\"reused\":8}"
+        ]
+      },
+      {
+        "id": 111762059525,
+        "shard": 18,
+        "conclusion": "success",
+        "workerLines": [
+          "2026-10-05T12:32:19.8989786Z {\"status\":\"COMPLETE\",\"generated\":8,\"reused\":0}"
+        ]
+      },
+      {
+        "id": 111762059550,
+        "shard": 21,
+        "conclusion": "failure",
+        "workerLines": [
+          "2026-10-05T12:31:20.8738920Z Strength worker HOLD: Unregistered CPU: HOLD"
+        ]
+      },
+      {
+        "id": 111762059701,
+        "shard": 22,
+        "conclusion": "success",
+        "workerLines": [
+          "2026-10-05T12:31:35.3284356Z {\"status\":\"COMPLETE\",\"generated\":0,\"reused\":8}"
+        ]
+      },
+      {
+        "id": 111762059723,
+        "shard": 23,
+        "conclusion": "success",
+        "workerLines": [
+          "2026-10-05T12:33:10.0057605Z {\"status\":\"COMPLETE\",\"generated\":8,\"reused\":0}"
+        ]
+      },
+      {
+        "id": 111762060677,
+        "shard": 26,
+        "conclusion": "failure",
+        "workerLines": [
+          "2026-10-05T12:32:34.8951869Z Strength worker HOLD: Unregistered CPU: HOLD"
+        ]
+      },
+      {
+        "id": 111762060726,
+        "shard": 24,
+        "conclusion": "failure",
+        "workerLines": [
+          "2026-10-05T12:32:03.2735286Z Strength worker HOLD: Unregistered CPU: HOLD"
+        ]
+      },
+      {
+        "id": 111762060762,
+        "shard": 27,
+        "conclusion": "failure",
+        "workerLines": [
+          "2026-10-05T12:32:37.8888428Z Strength worker HOLD: Unregistered CPU: HOLD"
+        ]
+      },
+      {
+        "id": 111762060764,
+        "shard": 25,
+        "conclusion": "success",
+        "workerLines": [
+          "2026-10-05T12:32:21.7202569Z {\"status\":\"COMPLETE\",\"generated\":0,\"reused\":8}"
+        ]
+      },
+      {
+        "id": 111762060924,
+        "shard": 28,
+        "conclusion": "success",
+        "workerLines": [
+          "2026-10-05T12:32:44.8768898Z {\"status\":\"COMPLETE\",\"generated\":0,\"reused\":8}"
+        ]
+      },
+      {
+        "id": 111762061048,
+        "shard": 29,
+        "conclusion": "success",
+        "workerLines": [
+          "2026-10-05T12:32:49.7359883Z {\"status\":\"COMPLETE\",\"generated\":0,\"reused\":8}"
+        ]
+      },
+      {
+        "id": 111762061218,
+        "shard": 30,
+        "conclusion": "success",
+        "workerLines": [
+          "2026-10-05T12:34:50.2695534Z {\"status\":\"COMPLETE\",\"generated\":8,\"reused\":0}"
+        ]
+      },
+      {
+        "id": 111762061313,
+        "shard": 31,
+        "conclusion": "success",
+        "workerLines": [
+          "2026-10-05T12:34:32.9951155Z {\"status\":\"COMPLETE\",\"generated\":8,\"reused\":0}"
+        ]
+      }
+    ]
+  },
+  "readOnlyRecoveryPolicyCommit": "816d006d9b6eac444663f0b2666e46965b75ee8e",
+  "browserBlock": {
+    "action": "read-only navigation to formal workflow resume entry",
+    "kind": "automatic-approval-review-unavailable",
+    "message": "Selected model is at capacity. Please try a different model.",
+    "unsafeDetermination": false,
+    "nextResumeNotDispatched": true
+  },
+  "nextInputs": {
+    "branch": "main",
+    "expected_head_sha": "6d3d779d630132ff977d1c301ade56da960b4b63",
+    "expected_runner_fingerprint": "ce0cb9f7e7defc9c4b776a95188ca2e55d53eed8d69c755b5eb3e582117894d7",
+    "authorization": "RUN-FROZEN-EQUAL-TIME-v2",
+    "mode": "resume",
+    "receiptFile": "records/receipts.json",
+    "maximum_new_pairs": "8"
+  }
+}
