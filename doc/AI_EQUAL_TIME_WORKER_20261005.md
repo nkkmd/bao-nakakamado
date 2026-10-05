@@ -62,3 +62,23 @@ node tools/ai-integration/verify-equal-time-worker.cjs NEW_DEVELOPMENT_DIRECTORY
 [初回原report](AI_EQUAL_TIME_WORKER_LOCAL_FIRST_20261005.json)と、[ZIP復元を含む2回目の原report](AI_EQUAL_TIME_WORKER_LOCAL_20261005.json)を保存した。2回目も8局が通常終局し（31/30/36/22/34/32/41/47手）、新規thread実行4組・完成組再利用時の探索0件・ZIP復元監査を通過した。runner fingerprintは`ce0cb9f7e7defc9c4b776a95188ca2e55d53eed8d69c755b5eb3e582117894d7`。実時計による開発試走は棋譜が同一になることを要求せず、完成した組の再開時だけ原bytesの一致を要求する。
 
 正式512局は未起動。次工程は成功したCIとmainの一致を確認し、登録環境の受付・手動起動を行い、全結果を保存する。その後に棋力条件を判断し、画面用Worker接続・moto g52j 5G実機・公開AI採用を進める。現在の画面は簡易AIのまま。条件通過も自動で公開採用へ変換しない。
+
+## CI確認・main統合
+
+[PR #24](https://github.com/nkkmd/bao-nakakamado/pull/24)を2026-10-05 19:39:51 JSTにmainへ統合した。headは`6eb503deae806e7ac27349966217354ca85288ac`、mergeは`a28d23056e5bdf30a5de96f6d1ca5507c506c0f5`。PR CIのcheckoutは`d21ff8df02c42fa9147da41b38a25cab7117a3d2`で、head・main統合後と同じtree `3309baa6ea2645069ed6d599c051c20c559ba43e`。原reportと[CI証跡](AI_EQUAL_TIME_WORKER_CI_20261005.json)を保存した。
+
+| CI | PR run（attempt 1） | 結果 |
+| --- | --- | --- |
+| 新規worker | [37297546299](https://github.com/nkkmd/bao-nakakamado/actions/runs/37297546299) | 15プロトコル・13 ZIP境界・実thread／artifact復元成功 |
+| 既存prototype | [37297546335](https://github.com/nkkmd/bao-nakakamado/actions/runs/37297546335) | 89テスト・全8ジョブ成功 |
+| 既存同時間試走 | [37297546098](https://github.com/nkkmd/bao-nakakamado/actions/runs/37297546098) | 16テスト・全fieldと独立開幕監査・3予算成功 |
+| 凍結モデル探索接続 | [37297546115](https://github.com/nkkmd/bao-nakakamado/actions/runs/37297546115) | 12テスト・1602構成・178整数評価一致 |
+| 既存final準備 | [37297546094](https://github.com/nkkmd/bao-nakakamado/actions/runs/37297546094) | 22テスト・開発用の準備／worker照合成功 |
+
+新規CIの[原report](AI_EQUAL_TIME_WORKER_CI_REPORT_20261005.json)は1582bytes、SHA-256 `4825748f544700106781dfa564f97df8021b7a3a57de133b19b6e9b8a82886d8`。[原ZIP](equal-time-worker-ci/pr-development.zip)は863bytes、artifact 11340716555、digest `sha256:e2f02fd955e878a06b5d1d3cdb2953d1b1309b5c47995e52148b9a8cc45e5a72`。Node v24.21.0・EPYC 9V74・ImageVersion 20260927.320.1で除外済み8局268手が通常終局し、登録runtimeとの一致も確認した。
+
+mainへのpush後も5 workflow（37298010722／37298010735／37298010737／37298010752／37298010733）がすべてsuccess。pushでは元の条件どおり教師再生成・正式候補監査・3予算試走などをskipした。画面回帰はChromium 151.0.7922.34・64手・棋譜再生・コンピューター／reset・安全停止・ライセンス・320/390/432幅で成功しpage error 0件。Android実機の確認ではない。
+
+統合後の[原report](AI_EQUAL_TIME_WORKER_PUSH_REPORT_20261005.json)も1582bytes、SHA-256 `3510b6d76c84b89c46c5625f61273d206bf1db4ca955eb218b2beec37c6aeb3b`。[原ZIP](equal-time-worker-ci/push-development.zip)は860bytes、artifact 11340382559、digest `sha256:bef17b6e008d1146720f4b40a69a93bb0ae7ec610a17183649977cd133b48444`。8局246手の開発試験は成功したが、CPUは未登録のEPYC 9V45だった。開発試験は現在hostに結び付いたDEVELOPMENT-ONLY profileを使うため成功する一方、同じ環境を正式profileへ渡すと探索前に拒否されることを確認した。これを正式環境の合格へ読み替えず、許可CPUも追加しない。Actionsのhost割当が一定ではないため、正式起動時は各shardの登録環境を確認し、未登録hostは未着手HOLDとして保持する。
+
+正式比較の受付タグは0件を読取り確認した。正式対局0局、棋力集計0件、公開AI採用なし。次工程はこの固定runner fingerprintとmainを用いた正式512局の手動起動・全shard監査・結果保存であり、未登録環境や未封印／中断を自動で回避しない。

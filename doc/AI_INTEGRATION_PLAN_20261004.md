@@ -106,3 +106,5 @@ README、設計、診断・棋譜メタデータ、画面、出典・MIT表示�
 その運用試走24局は通常終局まで完了し、違法手・技術的失敗・fallback 0件。最大合格予算の150msを固定した。4policyの正式開幕案v1は独立開幕不足でHOLDと記録し、正式対局0局・棋力未参照の段階でrandom/noisy各初手担当64ペアのv2へ改訂した。seed範囲・旧4policyの開幕除外・256ペア・512局・判定閾値を維持し、256unique開幕・rootを確保してcontractとmanifestを固定した。次はこのv2契約に基づく正式受付・32shard・artifact再開・固定集約のworkerを整備する。正式対局はまだ実行していない。
 
 後続の[正式比較v2 worker](AI_EQUAL_TIME_WORKER_20261005.md)で、永続session・世代lease・ledger seal、組単位の同一ホスト実行、封印した境界からの固定artifact再開、全256組の監査後のみの集約、原ZIPと公開JSONの結果branch保存を追加した。中断組は再計測せずHOLD。開発用の偽API・除外済み4組8局とActions回帰を確認し、main統合後に正式起動へ進む。正式対局・実機・公開AI採用はまだ実施していない。
+
+PR #24を2026-10-05 19:39:51 JSTにmainへ統合した。新規15プロトコル・13 ZIP境界、実thread／原ZIP復元と、既存89テスト・全8ジョブ・3予算試走・独立開幕全監査・探索接続・画面回帰を確認した。統合後の5 CIも成功。[原report・artifact digest・checkout／merge SHA](AI_EQUAL_TIME_WORKER_CI_20261005.json)を保存した。登録CPUの実thread試験は8局268手すべて通常終局。統合後の開発試験では未登録の9V45も割り当てられ、正式profileでは探索前HOLDとなることを確認した。許可環境を自動で拡張せず、次は固定main／fingerprintによる正式512局の起動・全監査・原結果保存を進める。
