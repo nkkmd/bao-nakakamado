@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "repository": "nkkmd/bao-nakakamado",
+  "contractFileSha256": "6e11a2eac2348fb185dc7cf0fca70b928c8582debc030fd260ef94b184705600",
+  "manifestFileSha256": "772bca8ffc5715f60f7a348468305ffc380286460f48096c15fad61b2425b086",
+  "contractSha256": "b34680435b7f0a27da165d638de0b957afcd0b202e0cd2ce1835e28efd083119",
+  "manifestSha256": "5edf510a6f75f9029905d4b8bb775fdc30d5a98ae908f3b1739fe223caf83f8f",
+  "generatorFingerprint": "f3e25220de4c40025e5943d618638a01be98d042c7c90f1aac1cab83fe8f7c0f",
+  "pairWatchdogMs": 300000,
+  "workerSoftLimitMs": 1200000,
+  "maximumArchiveBytes": 33554432,
+  "maximumExpandedBytes": 67108864,
+  "maximumFileBytes": 8388608,
+  "maximumParallelShards": 4,
+  "recovery": "sealed-pair-boundary-only; active-or-unsealed-attempt-HOLD; no-automatic-remeasurement"
+}
