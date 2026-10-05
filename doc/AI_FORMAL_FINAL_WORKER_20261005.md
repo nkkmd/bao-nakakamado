@@ -52,4 +52,14 @@ node tools/ai-integration/formal-final-runner.cjs publish PUBLIC_RECORD_DIRECTOR
 
 CIと関連文書の整合を確認してmainへ統合し、そのcommit・fingerprintから手動workflowを一度起動する。完了後は公開結果と受付を照合し、永続ブランチの原JSONと実行記録をmainへ保存する。最終評価の結果を根拠に同じfinalで条件を調整しない。棋力・同時間探索・実機・公開画面への採用は後続工程である。
 
+## この工程の完了状態
+
+PR [#21](https://github.com/nkkmd/bao-nakakamado/pull/21) のhead `7fd24da50647e9f4e6eaad1d950b85c8da9469ff` で、[準備用CI 37265060257](https://github.com/nkkmd/bao-nakakamado/actions/runs/37265060257)（attempt 1）と [既存CI 37265060279](https://github.com/nkkmd/bao-nakakamado/actions/runs/37265060279)（attempt 1）が成功した。準備用CIはNode 22テスト・人工ZIP 4テスト・開発workerの32件整数一致と反対称性、復号1回・2回目拒否を通過した。既存CIも全8ジョブが成功した。ローカルとCIのrunner fingerprintは `8f22d999872964b2e4ed692202ca78f2b0aaa2b447f26f5b15831c38a15bf746` で一致した。詳細は [CI記録](AI_FORMAL_FINAL_WORKER_CI_20261005.json) を参照する。
+
+2026年10月5日13:50:41 JSTにmainへ統合した。merge commitは `24759ec1874a4c92412e68ac372d5ccb6ce2761a`。元の収集artifactは未失効でID・ZIP digestが一致した。mainへ統合後のpreflightも通過した。
+
+ブラウザーでmain・固定commit・fingerprint・`OPEN-FROZEN-FINAL-ONCE` を入力したが、起動のクリックは自動承認審査に拒否された。理由は、暗号化された正式データを一度だけ開封する不可逆な外部操作について、具体的な明示承認を確認できないこと。別経路から起動しない。拒否後、固定headの手動runが0件、受付タグが未作成であることをGitHub APIで照合した。**正式workflowは未起動、正式finalは未開封**。
+
+実装・検証・main統合・証拠保存は完了し、残るのは具体的な一度限りの開封・起動への承認である。承認後は当時のmain commitと同じrunner fingerprintを入力し、正式評価を一度だけ起動する。保存済みの拒否時headを、結果保存用の文書commit追加後のmain headへ誤って流用しない。
+
 説明文はCC BY-SA 4.0。コード・設定・保護対象の機械可読記録はMIT。[出典と利用条件](../LICENSES.md)を維持する。

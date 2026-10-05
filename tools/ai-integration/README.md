@@ -196,3 +196,5 @@ node tools/ai-integration/verify-formal-final-worker.cjs NEW_DEVELOPMENT_OUTPUT_
 ```
 
 開発検証は除外済みの32局面・使い捨て鍵・偽APIだけを使う。正式評価はCI通過・main統合後に固定commitから手動で一度起動する。数値HOLDでも結果を保存し、受付後の中断では再開封しない。保存障害からは、originとdigestを確認した公開JSONの `publish` だけで回復する。
+
+PR #21は新規CIと既存全8ジョブを通過しmainへ統合した。[CI記録](../../doc/AI_FORMAL_FINAL_WORKER_CI_20261005.json)に保存する。正式開封の起動は自動承認審査で停止し、正式run・受付タグは未作成、finalは未開封。具体的な開封・起動への明示承認後に、当時のmain headと固定runner fingerprintで一度だけ起動する。

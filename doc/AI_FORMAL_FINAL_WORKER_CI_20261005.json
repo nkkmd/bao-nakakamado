@@ -1,0 +1,1187 @@
+{
+  "schema": 1,
+  "dateJST": "2026-10-05",
+  "status": "WORKER-VERIFIED-MERGED-FINAL-OPENING-BLOCKED-BY-APPROVAL-REVIEW",
+  "repository": "nkkmd/bao-nakakamado",
+  "pr": 21,
+  "headSha": "7fd24da50647e9f4e6eaad1d950b85c8da9469ff",
+  "mergeSha": "24759ec1874a4c92412e68ac372d5ccb6ce2761a",
+  "runnerFingerprint": "8f22d999872964b2e4ed692202ca78f2b0aaa2b447f26f5b15831c38a15bf746",
+  "preparationFingerprint": "9049d1e84028a67932003b8daaf5d40df9f901f7528471dcf323ed74686a12bf",
+  "learningFingerprint": "872a4690be9cd686ace800052e01b4afda5488c2cae60fb41cbc458a2958045c",
+  "collectionSourceDigest": "4e4d3acfbcfb5de5c9bf7e77accd8b3dbd26649389c0ab06471a025275d0cdac",
+  "verification": {
+    "schema": 1,
+    "status": "PASS-DEVELOPMENT-WORKER-FORMAL-FINAL-UNOPENED",
+    "runnerFingerprint": "8f22d999872964b2e4ed692202ca78f2b0aaa2b447f26f5b15831c38a15bf746",
+    "preparationFingerprint": "9049d1e84028a67932003b8daaf5d40df9f901f7528471dcf323ed74686a12bf",
+    "developmentPaths": [
+      "random/700000",
+      "greedy/700001"
+    ],
+    "developmentDecryptions": 1,
+    "publicAggregateSaves": 1,
+    "blockedSecondOpening": true,
+    "pythonNodeIntegerComparisons": 32,
+    "integerMismatches": 0,
+    "antisymmetryComparisons": 32,
+    "criteriaChecked": 18,
+    "formalRowsRead": 0,
+    "finalOpened": false,
+    "environment": {
+      "node": "v24.21.0",
+      "python": "3.12.14",
+      "numpy": "2.3.5"
+    }
+  },
+  "runs": [
+    {
+      "run": {
+        "id": 37265060257,
+        "name": "NYAKUA final evaluation preparation checks",
+        "node_id": "WFR_kwLOUyC1oM8AAAAIrSuxoQ",
+        "head_branch": "feat/nyakua-final-worker-20261005",
+        "head_sha": "7fd24da50647e9f4e6eaad1d950b85c8da9469ff",
+        "path": ".github/workflows/formal-final-check.yml",
+        "display_title": "凍結候補の一度限りの最終評価と公開報告の永続保存を接続",
+        "run_number": 5,
+        "event": "pull_request",
+        "status": "completed",
+        "conclusion": "success",
+        "workflow_id": 375052010,
+        "check_suite_id": 100933083898,
+        "check_suite_node_id": "CS_kwDOUyC1oM8AAAAXgBSi-g",
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37265060257",
+        "html_url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/37265060257",
+        "pull_requests": [],
+        "created_at": "2026-10-05T04:47:53Z",
+        "updated_at": "2026-10-05T04:48:11Z",
+        "actor": {
+          "login": "nkkmd",
+          "id": 72678394,
+          "node_id": "MDQ6VXNlcjcyNjc4Mzk0",
+          "avatar_url": "https://avatars.githubusercontent.com/u/72678394?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/nkkmd",
+          "html_url": "https://github.com/nkkmd",
+          "followers_url": "https://api.github.com/users/nkkmd/followers",
+          "following_url": "https://api.github.com/users/nkkmd/following{/other_user}",
+          "gists_url": "https://api.github.com/users/nkkmd/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/nkkmd/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/nkkmd/subscriptions",
+          "organizations_url": "https://api.github.com/users/nkkmd/orgs",
+          "repos_url": "https://api.github.com/users/nkkmd/repos",
+          "events_url": "https://api.github.com/users/nkkmd/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/nkkmd/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "run_attempt": 1,
+        "referenced_workflows": [],
+        "run_started_at": "2026-10-05T04:47:53Z",
+        "triggering_actor": {
+          "login": "nkkmd",
+          "id": 72678394,
+          "node_id": "MDQ6VXNlcjcyNjc4Mzk0",
+          "avatar_url": "https://avatars.githubusercontent.com/u/72678394?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/nkkmd",
+          "html_url": "https://github.com/nkkmd",
+          "followers_url": "https://api.github.com/users/nkkmd/followers",
+          "following_url": "https://api.github.com/users/nkkmd/following{/other_user}",
+          "gists_url": "https://api.github.com/users/nkkmd/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/nkkmd/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/nkkmd/subscriptions",
+          "organizations_url": "https://api.github.com/users/nkkmd/orgs",
+          "repos_url": "https://api.github.com/users/nkkmd/repos",
+          "events_url": "https://api.github.com/users/nkkmd/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/nkkmd/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "jobs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37265060257/jobs",
+        "logs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37265060257/logs",
+        "check_suite_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/check-suites/100933083898",
+        "artifacts_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37265060257/artifacts",
+        "cancel_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37265060257/cancel",
+        "rerun_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37265060257/rerun",
+        "previous_attempt_url": null,
+        "workflow_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/workflows/375052010",
+        "head_commit": {
+          "id": "7fd24da50647e9f4e6eaad1d950b85c8da9469ff",
+          "tree_id": "4d1632992b43c8cf9e69bee4f07f45972aa4430e",
+          "message": "feat: connect one-time final worker and durable public report publication",
+          "timestamp": "2026-10-05T04:47:48Z",
+          "author": {
+            "name": "Sawa",
+            "email": "72678394+nkkmd@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "Sawa",
+            "email": "72678394+nkkmd@users.noreply.github.com"
+          }
+        },
+        "repository": {
+          "id": 1394652576,
+          "node_id": "R_kgDOUyC1oA",
+          "name": "bao-nakakamado",
+          "full_name": "nkkmd/bao-nakakamado",
+          "private": false,
+          "owner": {
+            "login": "nkkmd",
+            "id": 72678394,
+            "node_id": "MDQ6VXNlcjcyNjc4Mzk0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/72678394?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/nkkmd",
+            "html_url": "https://github.com/nkkmd",
+            "followers_url": "https://api.github.com/users/nkkmd/followers",
+            "following_url": "https://api.github.com/users/nkkmd/following{/other_user}",
+            "gists_url": "https://api.github.com/users/nkkmd/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/nkkmd/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/nkkmd/subscriptions",
+            "organizations_url": "https://api.github.com/users/nkkmd/orgs",
+            "repos_url": "https://api.github.com/users/nkkmd/repos",
+            "events_url": "https://api.github.com/users/nkkmd/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/nkkmd/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "html_url": "https://github.com/nkkmd/bao-nakakamado",
+          "description": null,
+          "fork": false,
+          "url": "https://api.github.com/repos/nkkmd/bao-nakakamado",
+          "forks_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/forks",
+          "keys_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/keys{/key_id}",
+          "collaborators_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/collaborators{/collaborator}",
+          "teams_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/teams",
+          "hooks_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/hooks",
+          "issue_events_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/issues/events{/number}",
+          "events_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/events",
+          "assignees_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/assignees{/user}",
+          "branches_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/branches{/branch}",
+          "tags_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/tags",
+          "blobs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/blobs{/sha}",
+          "git_tags_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/tags{/sha}",
+          "git_refs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/refs{/sha}",
+          "trees_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/trees{/sha}",
+          "statuses_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/statuses/{sha}",
+          "languages_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/languages",
+          "stargazers_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/stargazers",
+          "contributors_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/contributors",
+          "subscribers_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/subscribers",
+          "subscription_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/subscription",
+          "commits_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/commits{/sha}",
+          "git_commits_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/commits{/sha}",
+          "comments_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/comments{/number}",
+          "issue_comment_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/issues/comments{/number}",
+          "contents_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/contents/{+path}",
+          "compare_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/compare/{base}...{head}",
+          "merges_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/merges",
+          "archive_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/{archive_format}{/ref}",
+          "downloads_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/downloads",
+          "issues_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/issues{/number}",
+          "pulls_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/pulls{/number}",
+          "milestones_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/milestones{/number}",
+          "notifications_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/notifications{?since,all,participating}",
+          "labels_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/labels{/name}",
+          "releases_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/releases{/id}",
+          "deployments_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/deployments"
+        },
+        "head_repository": {
+          "id": 1394652576,
+          "node_id": "R_kgDOUyC1oA",
+          "name": "bao-nakakamado",
+          "full_name": "nkkmd/bao-nakakamado",
+          "private": false,
+          "owner": {
+            "login": "nkkmd",
+            "id": 72678394,
+            "node_id": "MDQ6VXNlcjcyNjc4Mzk0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/72678394?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/nkkmd",
+            "html_url": "https://github.com/nkkmd",
+            "followers_url": "https://api.github.com/users/nkkmd/followers",
+            "following_url": "https://api.github.com/users/nkkmd/following{/other_user}",
+            "gists_url": "https://api.github.com/users/nkkmd/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/nkkmd/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/nkkmd/subscriptions",
+            "organizations_url": "https://api.github.com/users/nkkmd/orgs",
+            "repos_url": "https://api.github.com/users/nkkmd/repos",
+            "events_url": "https://api.github.com/users/nkkmd/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/nkkmd/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "html_url": "https://github.com/nkkmd/bao-nakakamado",
+          "description": null,
+          "fork": false,
+          "url": "https://api.github.com/repos/nkkmd/bao-nakakamado",
+          "forks_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/forks",
+          "keys_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/keys{/key_id}",
+          "collaborators_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/collaborators{/collaborator}",
+          "teams_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/teams",
+          "hooks_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/hooks",
+          "issue_events_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/issues/events{/number}",
+          "events_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/events",
+          "assignees_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/assignees{/user}",
+          "branches_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/branches{/branch}",
+          "tags_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/tags",
+          "blobs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/blobs{/sha}",
+          "git_tags_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/tags{/sha}",
+          "git_refs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/refs{/sha}",
+          "trees_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/trees{/sha}",
+          "statuses_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/statuses/{sha}",
+          "languages_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/languages",
+          "stargazers_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/stargazers",
+          "contributors_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/contributors",
+          "subscribers_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/subscribers",
+          "subscription_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/subscription",
+          "commits_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/commits{/sha}",
+          "git_commits_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/commits{/sha}",
+          "comments_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/comments{/number}",
+          "issue_comment_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/issues/comments{/number}",
+          "contents_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/contents/{+path}",
+          "compare_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/compare/{base}...{head}",
+          "merges_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/merges",
+          "archive_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/{archive_format}{/ref}",
+          "downloads_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/downloads",
+          "issues_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/issues{/number}",
+          "pulls_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/pulls{/number}",
+          "milestones_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/milestones{/number}",
+          "notifications_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/notifications{?since,all,participating}",
+          "labels_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/labels{/name}",
+          "releases_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/releases{/id}",
+          "deployments_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/deployments"
+        }
+      },
+      "jobs": [
+        {
+          "id": 111620004288,
+          "name": "unopened-final",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 37265060257,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run python -m pip install -r tools/ai-integration/formal-learning-requirements.txt",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Verify frozen selection and inherited thresholds without final data",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Check races, stale bindings, response loss and interruption with fake registry",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Check synthetic ciphertext ZIP boundaries; never use formal archive",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Record frozen manual-worker fingerprint without execution",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            },
+            {
+              "name": "Test full worker decryption and aggregation with excluded development payload only",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Check frozen candidate integer parity on excluded development paths only",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 12
+            },
+            {
+              "name": "Post Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 22
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 23
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 24
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run": {
+        "id": 37265060279,
+        "name": "Playable prototype checks",
+        "node_id": "WFR_kwLOUyC1oM8AAAAIrSuxtw",
+        "head_branch": "feat/nyakua-final-worker-20261005",
+        "head_sha": "7fd24da50647e9f4e6eaad1d950b85c8da9469ff",
+        "path": ".github/workflows/prototype-check.yml",
+        "display_title": "凍結候補の一度限りの最終評価と公開報告の永続保存を接続",
+        "run_number": 52,
+        "event": "pull_request",
+        "status": "completed",
+        "conclusion": "success",
+        "workflow_id": 372314547,
+        "check_suite_id": 100933083966,
+        "check_suite_node_id": "CS_kwDOUyC1oM8AAAAXgBSjPg",
+        "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37265060279",
+        "html_url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/37265060279",
+        "pull_requests": [],
+        "created_at": "2026-10-05T04:47:53Z",
+        "updated_at": "2026-10-05T04:50:08Z",
+        "actor": {
+          "login": "nkkmd",
+          "id": 72678394,
+          "node_id": "MDQ6VXNlcjcyNjc4Mzk0",
+          "avatar_url": "https://avatars.githubusercontent.com/u/72678394?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/nkkmd",
+          "html_url": "https://github.com/nkkmd",
+          "followers_url": "https://api.github.com/users/nkkmd/followers",
+          "following_url": "https://api.github.com/users/nkkmd/following{/other_user}",
+          "gists_url": "https://api.github.com/users/nkkmd/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/nkkmd/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/nkkmd/subscriptions",
+          "organizations_url": "https://api.github.com/users/nkkmd/orgs",
+          "repos_url": "https://api.github.com/users/nkkmd/repos",
+          "events_url": "https://api.github.com/users/nkkmd/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/nkkmd/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "run_attempt": 1,
+        "referenced_workflows": [],
+        "run_started_at": "2026-10-05T04:47:53Z",
+        "triggering_actor": {
+          "login": "nkkmd",
+          "id": 72678394,
+          "node_id": "MDQ6VXNlcjcyNjc4Mzk0",
+          "avatar_url": "https://avatars.githubusercontent.com/u/72678394?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/nkkmd",
+          "html_url": "https://github.com/nkkmd",
+          "followers_url": "https://api.github.com/users/nkkmd/followers",
+          "following_url": "https://api.github.com/users/nkkmd/following{/other_user}",
+          "gists_url": "https://api.github.com/users/nkkmd/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/nkkmd/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/nkkmd/subscriptions",
+          "organizations_url": "https://api.github.com/users/nkkmd/orgs",
+          "repos_url": "https://api.github.com/users/nkkmd/repos",
+          "events_url": "https://api.github.com/users/nkkmd/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/nkkmd/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "jobs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37265060279/jobs",
+        "logs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37265060279/logs",
+        "check_suite_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/check-suites/100933083966",
+        "artifacts_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37265060279/artifacts",
+        "cancel_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37265060279/cancel",
+        "rerun_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37265060279/rerun",
+        "previous_attempt_url": null,
+        "workflow_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/workflows/372314547",
+        "head_commit": {
+          "id": "7fd24da50647e9f4e6eaad1d950b85c8da9469ff",
+          "tree_id": "4d1632992b43c8cf9e69bee4f07f45972aa4430e",
+          "message": "feat: connect one-time final worker and durable public report publication",
+          "timestamp": "2026-10-05T04:47:48Z",
+          "author": {
+            "name": "Sawa",
+            "email": "72678394+nkkmd@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "Sawa",
+            "email": "72678394+nkkmd@users.noreply.github.com"
+          }
+        },
+        "repository": {
+          "id": 1394652576,
+          "node_id": "R_kgDOUyC1oA",
+          "name": "bao-nakakamado",
+          "full_name": "nkkmd/bao-nakakamado",
+          "private": false,
+          "owner": {
+            "login": "nkkmd",
+            "id": 72678394,
+            "node_id": "MDQ6VXNlcjcyNjc4Mzk0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/72678394?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/nkkmd",
+            "html_url": "https://github.com/nkkmd",
+            "followers_url": "https://api.github.com/users/nkkmd/followers",
+            "following_url": "https://api.github.com/users/nkkmd/following{/other_user}",
+            "gists_url": "https://api.github.com/users/nkkmd/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/nkkmd/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/nkkmd/subscriptions",
+            "organizations_url": "https://api.github.com/users/nkkmd/orgs",
+            "repos_url": "https://api.github.com/users/nkkmd/repos",
+            "events_url": "https://api.github.com/users/nkkmd/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/nkkmd/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "html_url": "https://github.com/nkkmd/bao-nakakamado",
+          "description": null,
+          "fork": false,
+          "url": "https://api.github.com/repos/nkkmd/bao-nakakamado",
+          "forks_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/forks",
+          "keys_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/keys{/key_id}",
+          "collaborators_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/collaborators{/collaborator}",
+          "teams_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/teams",
+          "hooks_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/hooks",
+          "issue_events_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/issues/events{/number}",
+          "events_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/events",
+          "assignees_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/assignees{/user}",
+          "branches_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/branches{/branch}",
+          "tags_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/tags",
+          "blobs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/blobs{/sha}",
+          "git_tags_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/tags{/sha}",
+          "git_refs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/refs{/sha}",
+          "trees_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/trees{/sha}",
+          "statuses_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/statuses/{sha}",
+          "languages_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/languages",
+          "stargazers_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/stargazers",
+          "contributors_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/contributors",
+          "subscribers_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/subscribers",
+          "subscription_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/subscription",
+          "commits_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/commits{/sha}",
+          "git_commits_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/commits{/sha}",
+          "comments_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/comments{/number}",
+          "issue_comment_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/issues/comments{/number}",
+          "contents_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/contents/{+path}",
+          "compare_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/compare/{base}...{head}",
+          "merges_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/merges",
+          "archive_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/{archive_format}{/ref}",
+          "downloads_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/downloads",
+          "issues_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/issues{/number}",
+          "pulls_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/pulls{/number}",
+          "milestones_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/milestones{/number}",
+          "notifications_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/notifications{?since,all,participating}",
+          "labels_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/labels{/name}",
+          "releases_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/releases{/id}",
+          "deployments_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/deployments"
+        },
+        "head_repository": {
+          "id": 1394652576,
+          "node_id": "R_kgDOUyC1oA",
+          "name": "bao-nakakamado",
+          "full_name": "nkkmd/bao-nakakamado",
+          "private": false,
+          "owner": {
+            "login": "nkkmd",
+            "id": 72678394,
+            "node_id": "MDQ6VXNlcjcyNjc4Mzk0",
+            "avatar_url": "https://avatars.githubusercontent.com/u/72678394?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/nkkmd",
+            "html_url": "https://github.com/nkkmd",
+            "followers_url": "https://api.github.com/users/nkkmd/followers",
+            "following_url": "https://api.github.com/users/nkkmd/following{/other_user}",
+            "gists_url": "https://api.github.com/users/nkkmd/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/nkkmd/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/nkkmd/subscriptions",
+            "organizations_url": "https://api.github.com/users/nkkmd/orgs",
+            "repos_url": "https://api.github.com/users/nkkmd/repos",
+            "events_url": "https://api.github.com/users/nkkmd/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/nkkmd/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "html_url": "https://github.com/nkkmd/bao-nakakamado",
+          "description": null,
+          "fork": false,
+          "url": "https://api.github.com/repos/nkkmd/bao-nakakamado",
+          "forks_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/forks",
+          "keys_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/keys{/key_id}",
+          "collaborators_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/collaborators{/collaborator}",
+          "teams_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/teams",
+          "hooks_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/hooks",
+          "issue_events_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/issues/events{/number}",
+          "events_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/events",
+          "assignees_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/assignees{/user}",
+          "branches_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/branches{/branch}",
+          "tags_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/tags",
+          "blobs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/blobs{/sha}",
+          "git_tags_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/tags{/sha}",
+          "git_refs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/refs{/sha}",
+          "trees_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/trees{/sha}",
+          "statuses_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/statuses/{sha}",
+          "languages_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/languages",
+          "stargazers_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/stargazers",
+          "contributors_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/contributors",
+          "subscribers_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/subscribers",
+          "subscription_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/subscription",
+          "commits_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/commits{/sha}",
+          "git_commits_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/git/commits{/sha}",
+          "comments_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/comments{/number}",
+          "issue_comment_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/issues/comments{/number}",
+          "contents_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/contents/{+path}",
+          "compare_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/compare/{base}...{head}",
+          "merges_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/merges",
+          "archive_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/{archive_format}{/ref}",
+          "downloads_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/downloads",
+          "issues_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/issues{/number}",
+          "pulls_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/pulls{/number}",
+          "milestones_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/milestones{/number}",
+          "notifications_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/notifications{?since,all,participating}",
+          "labels_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/labels{/name}",
+          "releases_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/releases{/id}",
+          "deployments_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/deployments"
+        }
+      },
+      "jobs": [
+        {
+          "id": 111620004554,
+          "name": "prototype",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 37265060279,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Rule and DOM tests",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Learning input, split and checkpoint pilot",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Formal infrastructure development pilot",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            },
+            {
+              "name": "Search and exhaustive minimax equivalence",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 12
+            },
+            {
+              "name": "NYAKUA search transition equivalence",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 13
+            },
+            {
+              "name": "Reachable games and replay consistency",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 14
+            },
+            {
+              "name": "Install pinned browser test dependencies",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 15
+            },
+            {
+              "name": "Real browser desktop, mobile and full-game replay",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 16
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 17
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 33
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 34
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 35
+            }
+          ]
+        },
+        {
+          "id": 111620004721,
+          "name": "teacher-feasibility (0)",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 37265060279,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Measure real-clock teacher and reuse completed measurements",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            }
+          ]
+        },
+        {
+          "id": 111620004741,
+          "name": "teacher-feasibility (3)",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 37265060279,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Measure real-clock teacher and reuse completed measurements",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            }
+          ]
+        },
+        {
+          "id": 111620004792,
+          "name": "teacher-feasibility (1)",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 37265060279,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Measure real-clock teacher and reuse completed measurements",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            }
+          ]
+        },
+        {
+          "id": 111620004928,
+          "name": "formal-selection-v2-preflight",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 37265060279,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Audit the frozen v2 candidate universe without teacher requests",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Require all candidate minima before allowing the next collection stage",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 12
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 13
+            }
+          ]
+        },
+        {
+          "id": 111620005002,
+          "name": "teacher-feasibility (2)",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 37265060279,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Measure real-clock teacher and reuse completed measurements",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            }
+          ]
+        },
+        {
+          "id": 111620068359,
+          "name": "teacher-feasibility-aggregate",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 37265060279,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Run actions/download-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Aggregate verified measurements",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 12
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 13
+            }
+          ]
+        },
+        {
+          "id": 111620413767,
+          "name": "formal-artifact-resume",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 37265060279,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Restore pinned development artifacts via API and validate ZIP digests",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 11325733140,
+      "name": "final-preparation-development-verification",
+      "size_in_bytes": 1101,
+      "url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11325733140",
+      "archive_download_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/artifacts/11325733140/zip",
+      "expired": false,
+      "created_at": "2026-10-05T04:48:07Z",
+      "expires_at": "2026-11-04T04:48:06Z",
+      "updated_at": "2026-10-05T04:48:07Z",
+      "digest": "sha256:155585231aecf6b0e3fc432b0159b7a132aba0bd451d99d201beee8c1c0e4a1b",
+      "workflow_run": {
+        "id": 37265060257,
+        "repository_id": 1394652576,
+        "head_repository_id": 1394652576,
+        "head_branch": "feat/nyakua-final-worker-20261005",
+        "head_sha": "7fd24da50647e9f4e6eaad1d950b85c8da9469ff"
+      }
+    }
+  ],
+  "localNodeTests": 31,
+  "localPythonZipTests": 4,
+  "ciNodeTests": 22,
+  "ciPythonZipTests": 4,
+  "relativeLinksChecked": 122,
+  "blockedAction": {
+    "operation": "Run workflow: NYAKUA frozen final evaluation once",
+    "expectedHeadSha": "24759ec1874a4c92412e68ac372d5ccb6ce2761a",
+    "expectedRunnerFingerprint": "8f22d999872964b2e4ed692202ca78f2b0aaa2b447f26f5b15831c38a15bf746",
+    "authorizationInput": "OPEN-FROZEN-FINAL-ONCE",
+    "reviewReason": "Encrypted formal data opening and evaluation are irreversible; specific explicit user authorization not confirmed",
+    "executed": false
+  },
+  "formalWorkflowDispatched": false,
+  "formalClaimCreated": false,
+  "finalOpened": false,
+  "publicAdopted": false
+}
