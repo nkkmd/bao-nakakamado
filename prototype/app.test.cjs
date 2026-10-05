@@ -177,7 +177,7 @@ test("four-row replay handles rear moves, NYAKUA, next-turn three-KETE placement
   }
 });
 
-test("trial computer reset discards an in-flight response and records only the current legal move", async () => {
+test("search computer reset discards an in-flight response and records only the current legal move", async () => {
   const ids=["board","turn-number","turn-name","phase-name","north-hand","south-hand","north-nyakua","south-nyakua",
     "steal-count","steal-result","download","move-choices","setup","status","start","new-game","mode","side","side-field",
     "opponent-badge","sound","speed","difficulty","difficulty-field"];
@@ -211,7 +211,8 @@ test("trial computer reset discards an in-flight response and records only the c
     assert.equal(elements["turn-name"].textContent,"▲ NORTH");
     assert.equal(elements.board.attrs.get("aria-busy"),"false");
     elements.download.click();assert.equal(saved.mode,"computer");assert.equal(saved.version,7);
-    assert.equal(saved.computer.publicAdopted,false);assert.equal(saved.computer.diagnostics.length,1);
+    assert.equal(saved.computer.id,"NAKAKAMADO-AI-v1");assert.equal(saved.computer.releaseId,"NAKAKAMADO-AI-RELEASE-001");
+    assert.equal(saved.computer.publicAdopted,true);assert.equal(saved.computer.diagnostics.length,1);
     assert.equal(saved.computer.diagnostics[0].requestId,2);
     assert.equal(saved.computer.diagnostics[0].fallback,null);
     assert.deepEqual(window.NakakamadoSteal.replay(saved.history).board,saved.final);

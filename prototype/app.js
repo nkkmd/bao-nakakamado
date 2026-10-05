@@ -48,7 +48,7 @@
     $("side-field").hidden = !computer;
     if ($("difficulty-field")) $("difficulty-field").hidden = $("mode").value !== "search-computer";
     if ($("difficulty")) $("difficulty").disabled = $("mode").value !== "search-computer";
-    $("opponent-badge").textContent = $("mode").value === "search-computer" ? "探索コンピューター（試験）" : computer ? "簡易コンピューター" : "2人対戦";
+    $("opponent-badge").textContent = $("mode").value === "search-computer" ? "探索コンピューター" : computer ? "簡易コンピューター" : "2人対戦";
   }
   function focusBoard() {
     const first = Array.from($("board").children).find((pit) => !pit.disabled);
@@ -325,7 +325,7 @@
       const legal = variants().find(move => window.NakakamadoComputerClient.moveKey(move) === window.NakakamadoComputerClient.moveKey(answer.move));
       if (!legal) { busy = false; render(); $("status").textContent = "コンピューターの着手を確認できません。新しい対局からやり直してください。"; return; }
       aiDiagnostics.push({turn:game.board.turn, player:game.board.player, ...answer.diagnostic});
-      $("opponent-badge").textContent = answer.diagnostic.fallback ? "探索コンピューター（代替手）" : "探索コンピューター（試験）";
+      $("opponent-badge").textContent = answer.diagnostic.fallback ? "探索コンピューター（代替手）" : "探索コンピューター";
       play(legal);
     }, 260);
   }
@@ -375,7 +375,8 @@
   $("download").addEventListener("click", () => {
     if (!started || !game.history.length) return;
     const record = { format: "bao-nakakamado-prototype", version: 7, baseRules: "R-002", variantRule: E.RULE_ID, rulesVersion: E.RULES_VERSION, boardRowsPerPlayer: E.BOARD_ROWS_PER_PLAYER, sowingPath: E.SOWING_PATH, nyakuaProtectLast: E.NYAKUA_PROTECT_LAST, nyakuaFixedPitBulk: E.NYAKUA_FIXED_PIT_BULK, nyakuaNextTurnThree: E.NYAKUA_NEXT_TURN_THREE, nyakuaReservedProtected: E.NYAKUA_RESERVED_PROTECTED, initialHand: E.INITIAL_HAND, totalKete: E.TOTAL_KETE, mode:mode === "search-computer" ? "computer" : mode, history: game.history, final: game.board, adjudication: game.board.reason === "relay-limit" ? "safety-stop" : game.board.winner === null ? "ongoing" : "normal" };
-    if (mode === "search-computer") record.computer = {id:"NAKAKAMADO-BROWSER-TRIAL-v1", publicAdopted:false,
+    if (mode === "search-computer") record.computer = {id:window.NakakamadoComputerClient.AI_ID, releaseId:window.NakakamadoComputerClient.RELEASE_ID,
+      publicAdopted:window.NakakamadoComputerClient.PUBLIC_ADOPTED,
       modelSha256:window.NakakamadoComputerClient.MODEL_SHA256, difficulty, diagnostics:aiDiagnostics};
     const blob = new Blob([JSON.stringify(record, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);

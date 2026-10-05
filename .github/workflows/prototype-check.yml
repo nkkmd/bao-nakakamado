@@ -113,7 +113,7 @@ jobs:
           NODE_PATH: ${{ runner.temp }}/bao-browser/node_modules
           BAO_UI_OUTPUT: ${{ runner.temp }}/bao-next-turn-ui
         run: node tools/four-row-browser-check.cjs
-      - name: Real browser trial worker, full games, cancellation and replay
+      - name: Real browser public AI worker, full games, cancellation and replay
         env:
           NODE_PATH: ${{ runner.temp }}/bao-browser/node_modules
           BAO_WORKER_UI_OUTPUT: ${{ runner.temp }}/bao-worker-ui

@@ -13,13 +13,13 @@ cd prototype
 python3 -m http.server 8000
 ```
 
-2人対戦、簡易コンピューター、探索コンピューター（試験）、着手の再生、サウンド、高速表示、棋譜JSON保存に対応します。探索試験は本ゲーム専用の凍結線形モデルをWorkerで使い、25/75/150msの暫定3設定を選べます。実機確認と公開採用判断は後続工程です。[画面接続の記録](../doc/AI_BROWSER_WORKER_20261005.md)を参照してください。
+2人対戦、簡易コンピューター、探索コンピューター、着手の再生、サウンド、高速表示、棋譜JSON保存に対応します。探索コンピューターは本ゲーム専用の凍結線形モデルをWorkerで使い、easy/normal/hardの25/75/150msを選べます。2026年10月6日に実機試験の報告を受け、[公開AIとして採用](../doc/AI_PUBLIC_ADOPTION_20261006.md)しました。端末ごとの実測速度や難易度間の勝率は未確定です。
 
 ## ライセンス・配信
 
 コード・画面の構造・CSSは[MIT](LICENSE)、このREADMEや画面の指定した説明文は[CC BY-SA 4.0](LICENSE-CC-BY-SA-4.0.txt)です。元資料のクレジットと具体的な適用範囲は[ライセンスと出典](../LICENSES.md)、配信先で読める案内は[licenses.html](licenses.html)を参照してください。
 
-`prototype/` だけを配信する場合も、`licenses.html`・`LICENSE`・`LICENSE-CC-BY-SA-4.0.txt`・`ENGINE_LICENSE.txt` を残します。探索試験を含むフラットなZIPには次の14ファイルを直下へ入れ、HTTP localhostまたはHTTPSで開きます。配信用ZIPの作成・公開採用は別工程です。
+`prototype/` だけを配信する場合も、`licenses.html`・`LICENSE`・`LICENSE-CC-BY-SA-4.0.txt`・`ENGINE_LICENSE.txt` を残します。探索コンピューターを含むフラットなZIPには次の14ファイルを直下へ入れ、HTTP localhostまたはHTTPSで開きます。サイトの実際の配信日・URLは未確認です。
 
 ```text
 index.html
@@ -53,25 +53,25 @@ ENGINE_LICENSE.txt
 
 読み込み順は `next-turn-engine.js` → `steal.js` → `search-transition.js` → `computer-client.js` → `app.js`。`engine.js`・`bulk-engine.js`・`bounce-engine.js`・`four-row-engine.js` は過去条件の再現用です。`steal.js` はエンジンの定数で奪取先を切り替え、過去条件では従来のハンド移動を維持します。
 
-画面では通常ハンドと「確保」を別表示。棋譜JSONはversion 7、`rulesVersion: "0.8.0"`、`nyakuaFixedPitBulk: false`、`nyakuaNextTurnThree: true`、`nyakuaReservedProtected: true`。盤の `reserve` は通常ハンド、`nyakuaReserve` は確保分、`pending` は終局時の捕獲保留です。各手に `placed`・`ordinaryPlaced`・`reservedPlaced`・`captures`・`stolen` を記録し、再構築時は両種の投入数も検査します。画面での棋譜読み込みは未実装です。
+画面では通常ハンドと「確保」を別表示。棋譜JSONはversion 7、`rulesVersion: "0.8.0"`、`nyakuaFixedPitBulk: false`、`nyakuaNextTurnThree: true`、`nyakuaReservedProtected: true`。盤の `reserve` は通常ハンド、`nyakuaReserve` は確保分、`pending` は終局時の捕獲保留です。各手に `placed`・`ordinaryPlaced`・`reservedPlaced`・`captures`・`stolen` を記録し、再構築時は両種の投入数も検査します。探索コンピューターの棋譜には `computer.id: "NAKAKAMADO-AI-v1"`、`releaseId: "NAKAKAMADO-AI-RELEASE-001"`、`publicAdopted: true`、モデルSHAと各手の診断を追加します。旧試験棋譜の識別情報は原記録として保持します。画面での棋譜読み込みは未実装です。
 
 ## 確認
 
 [第3段階の設計とパイロット](../doc/AI_LEARNING_DESIGN_20261004.md)では、学習用の専用入力と教師データの分割・再開を `tools/ai-integration/` に整備しました。このパイロットでは本学習・新AIの画面組込みは行っていません。
 
-[教師探索の実時計試走](../doc/AI_TEACHER_FEASIBILITY_20261004.md)で、確保分のみの到達棋譜と64局面の深度4完了を確認しました。[正式収集基盤](../doc/AI_FORMAL_COLLECTION_INFRASTRUCTURE_20261004.md)の生成・全体監査・暗号化保存・固定artifact復元・最終検証の封印を整備しました。81テストと全7 CIジョブが成功しました。v1の正式候補不足を受けた[選択計画v2](../doc/AI_FORMAL_SELECTION_V2_20261005.md)は、同じ候補・split割当・最低件数で事前条件を通過し、89テストと全8 CIジョブも成功しました。正式収集v2の8192件を完了し、採用後の監査と封印も通過しました。公開AIの差し替えは未実施です。
+[教師探索の実時計試走](../doc/AI_TEACHER_FEASIBILITY_20261004.md)で、確保分のみの到達棋譜と64局面の深度4完了を確認しました。[正式収集基盤](../doc/AI_FORMAL_COLLECTION_INFRASTRUCTURE_20261004.md)の生成・全体監査・暗号化保存・固定artifact復元・最終検証の封印を整備しました。81テストと全7 CIジョブが成功しました。v1の正式候補不足を受けた[選択計画v2](../doc/AI_FORMAL_SELECTION_V2_20261005.md)は、同じ候補・split割当・最低件数で事前条件を通過し、89テストと全8 CIジョブも成功しました。正式収集v2の8192件を完了し、採用後の監査と封印も通過しました。正式収集完了時点では公開AIの差し替えは未実施でした。
 
 PR #17をmainへ統合し、正式収集workflowを登録しました。修正後のCIは89テスト・全8ジョブ成功。収集鍵を新規設定し、正式収集v2のrun 37245789837は全18ジョブ成功しました。8192件を受理し、train 5019行・validation 1517行の全条件を通過。最終検証データを暗号化したまま封印し、学習準備へ進みました。[正式収集の実行記録](../doc/AI_FORMAL_COLLECTION_RUN_V2_20261005.md)を参照してください。
 
 [正式学習の仕様・実装検証](../doc/AI_FORMAL_LEARNING_DESIGN_20261005.md)を追加しました。学習用ツールと整数評価器は開発用で、この画面は読み込みません。仕様・実装検証時点では最終開封・公開AIの差し替えは未実施でした。後続の正式実行は以下を参照してください。
 
-[正式学習の実行記録](../doc/AI_FORMAL_LEARNING_RUN_20261005.md)で、初回のゼロ符号検証の停止・修正と、修正後の全11ジョブ成功を保存しました。全9候補が固定validation基準を通過し、事前の中央値順位で線形seed 2026100401を凍結しました。本学習完了時点の最終評価は未開封でした。その後、明示承認を得て[正式最終評価](../doc/AI_FORMAL_FINAL_RUN_20261005.md)を一度だけ実行し、固定18条件をすべて通過しました。棋力・実機試験と公開AIへの採用は別工程です。
+[正式学習の実行記録](../doc/AI_FORMAL_LEARNING_RUN_20261005.md)で、初回のゼロ符号検証の停止・修正と、修正後の全11ジョブ成功を保存しました。全9候補が固定validation基準を通過し、事前の中央値順位で線形seed 2026100401を凍結しました。本学習完了時点の最終評価は未開封でした。その後、明示承認を得て[正式最終評価](../doc/AI_FORMAL_FINAL_RUN_20261005.md)を一度だけ実行し、固定18条件をすべて通過しました。後続の棋力・実機確認と公開採用は[採用記録](../doc/AI_PUBLIC_ADOPTION_20261006.md)を参照してください。
 
-AI導入の準備として、`steal.js` の通常処理とNYAKUA会計を共通化した、盤面専用の軽量遷移を `search-transition.js` から提供しています。探索試験の画面接続ではこのアダプターを読み込み、応答を現在局面の合法手へ照合します。[導入計画](../doc/AI_INTEGRATION_PLAN_20261004.md)と[照合ツール](../tools/ai-integration/README.md)を参照してください。第2段階では `search-evaluator.js` と `search-ai.js` に手作り評価関数付きの探索版を追加しました。[実装と検証](../doc/AI_SEARCH_IMPLEMENTATION_20261004.md)を参照してください。後続の試験用画面接続は下記を参照してください。
+AI導入の準備として、`steal.js` の通常処理とNYAKUA会計を共通化した、盤面専用の軽量遷移を `search-transition.js` から提供しています。探索コンピューターの画面接続ではこのアダプターを読み込み、応答を現在局面の合法手へ照合します。[導入計画](../doc/AI_INTEGRATION_PLAN_20261004.md)と[照合ツール](../tools/ai-integration/README.md)を参照してください。第2段階では `search-evaluator.js` と `search-ai.js` に手作り評価関数付きの探索版を追加しました。[実装と検証](../doc/AI_SEARCH_IMPLEMENTATION_20261004.md)を参照してください。後続の試験用画面接続は下記を参照してください。
 
 [凍結モデルの探索接続](../doc/AI_MODEL_SEARCH_CONNECTION_20261005.md)では、元の教師探索・学習条件を保存したまま、開発用の別入口 `model-search-ai.js` と固定線形評価器を接続しました。除外済み89局面・1,602構成が通常遷移を使う全探索と一致しました。この探索接続時点ではゲーム画面はモデルを読み込んでいませんでした。後続の試験用画面接続は下記を参照してください。
 
-[正式同時間比較v2](../doc/AI_EQUAL_TIME_FORMAL_RUN_20261005.md)は全512局を完了し、凍結線形モデルが311勝・201敗、固定棋力基準を通過しました。全局通常終局・技術的失敗0件。Actionsの部分集約HOLDと、複数runの原成果による全件監査の成功を区別して保存しています。その後、[試験用Web Worker接続](../doc/AI_BROWSER_WORKER_20261005.md)を追加しました。実ブラウザーのWorker・取消し・先後2対局と棋譜再生を確認し、全5ワークフロー・全16ジョブが成功しました。次は実機確認です。
+[正式同時間比較v2](../doc/AI_EQUAL_TIME_FORMAL_RUN_20261005.md)は全512局を完了し、凍結線形モデルが311勝・201敗、固定棋力基準を通過しました。全局通常終局・技術的失敗0件。Actionsの部分集約HOLDと、複数runの原成果による全件監査の成功を区別して保存しています。その後、[試験用Web Worker接続](../doc/AI_BROWSER_WORKER_20261005.md)を追加しました。実ブラウザーのWorker・取消し・先後2対局と棋譜再生を確認し、全5ワークフロー・全16ジョブが成功しました。その後、実機試験の報告を受けて[公開採用](../doc/AI_PUBLIC_ADOPTION_20261006.md)を行いました。
 
 リポジトリ直下で実行します。
 
