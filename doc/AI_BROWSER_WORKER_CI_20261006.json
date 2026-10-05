@@ -1,0 +1,224 @@
+{
+  "schema": 1,
+  "recordedAtJst": "2026-10-06",
+  "repository": "nkkmd/bao-nakakamado",
+  "pr": 26,
+  "verifiedCodeHead": "7689c2a6d7ea59f1f8d1228cb46e4134ff4d3c54",
+  "scope": "browser-worker-trial-not-device-or-public-adoption",
+  "workflowRuns": [
+    {
+      "id": 37329356399,
+      "name": "NYAKUA final evaluation preparation checks",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 25,
+      "jobs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37329356399/jobs",
+      "logs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37329356399/logs",
+      "workflow_id": 375052010,
+      "jobs": [
+        {
+          "id": 111828182903,
+          "name": "unopened-final",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 37329356341,
+      "name": "NYAKUA equal time worker development checks",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 7,
+      "jobs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37329356341/jobs",
+      "logs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37329356341/logs",
+      "workflow_id": 375306325,
+      "jobs": [
+        {
+          "id": 111828189275,
+          "name": "worker-protocol",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 37329356416,
+      "name": "NYAKUA equal time operational pilot",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 11,
+      "jobs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37329356416/jobs",
+      "logs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37329356416/logs",
+      "workflow_id": 375210531,
+      "jobs": [
+        {
+          "id": 111828183478,
+          "name": "protocol-tests",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111828257179,
+          "name": "formal-opening-audit",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111828257181,
+          "name": "operational-pilot (150)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111828257230,
+          "name": "operational-pilot (25)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111828257418,
+          "name": "operational-pilot (75)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 37329356404,
+      "name": "NYAKUA frozen model search connection checks",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 21,
+      "jobs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37329356404/jobs",
+      "logs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37329356404/logs",
+      "workflow_id": 375108075,
+      "jobs": [
+        {
+          "id": 111828184225,
+          "name": "development-model-search",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 37329356358,
+      "name": "Playable prototype checks",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 76,
+      "jobs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37329356358/jobs",
+      "logs_url": "https://api.github.com/repos/nkkmd/bao-nakakamado/actions/runs/37329356358/logs",
+      "workflow_id": 372314547,
+      "jobs": [
+        {
+          "id": 111828184411,
+          "name": "formal-selection-v2-preflight",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111828184430,
+          "name": "teacher-feasibility (3)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111828184482,
+          "name": "teacher-feasibility (0)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111828184557,
+          "name": "teacher-feasibility (2)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111828184645,
+          "name": "teacher-feasibility (1)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111828184833,
+          "name": "prototype",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111828381066,
+          "name": "teacher-feasibility-aggregate",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 111829207369,
+          "name": "formal-artifact-resume",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "totalSuccessfulJobs": 16,
+  "artifact": {
+    "runId": 37329356358,
+    "id": 11353018807,
+    "name": "next-turn-prototype-verification",
+    "sizeBytes": 2156436,
+    "digest": "sha256:f7109a2645c2d4fdafe64888d1eddbfdcc89637c56164444749a7fc25aa2275d",
+    "headSha": "7689c2a6d7ea59f1f8d1228cb46e4134ff4d3c54",
+    "retainedFiles": [
+      "result.json",
+      "worker-game-human-0.json",
+      "worker-game-human-1.json",
+      "trial-setup.png"
+    ]
+  },
+  "initialFailure": {
+    "runId": 37328743537,
+    "jobId": 111826073784,
+    "reason": "Test toggled download details closed for second consecutive game; no second download event",
+    "fixCommit": "7689c2a6d7ea59f1f8d1228cb46e4134ff4d3c54"
+  },
+  "formalRowsRead": 0,
+  "publicAdopted": false,
+  "deviceTested": false,
+  "retainedFileDigests": {
+    "result.json": {
+      "bytes": 757,
+      "sha256": "9ce97ed2dc930b2051824df4fdfac6582f3d96c0954d014232acf4094a78a598"
+    },
+    "trial-setup.png": {
+      "bytes": 243497,
+      "sha256": "2b89b94af93612a47a651f46f3d54f6c34a064b42249371e4baf9508fd2c30e3"
+    },
+    "worker-game-human-0.json": {
+      "bytes": 9542,
+      "sha256": "d5c6247be65efed1c9d6ce6cf54578cb3fe25ec825eee7c4472dec94f3abc61a"
+    },
+    "worker-game-human-1.json": {
+      "bytes": 29272,
+      "sha256": "6bf3d500350dea0e532786ddc4b6b5b4b3f39d734c1c7f3b53251be2a97a9ef3"
+    }
+  },
+  "verifiedRuntimeSha256": {
+    "index.html": "3542fa776ec99351df32cb48778f6e6af3e5b995e2e4196692da6ca168fc5eb3",
+    "style.css": "f27d1611569e11d003aa05a7b955a177d79aad73f804897bd55789df76a9d3fd",
+    "next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+    "steal.js": "a1886cdc5b3b9f8a69eb1955e8990deca809d6dc786491afd23f669a77be7ad2",
+    "search-transition.js": "d65551b35ea22cf05cbc6981e06268c57755c8a870938117c3efca9c7478fcb3",
+    "model-search-ai.js": "99092c88c5d0ab5274e1f3d52e013f13701cb19f42e11393a042e324a4a9e320",
+    "browser-model.js": "da6ba7d3bba0386743cd72f45663047cfd445732ec0ccc7fc4393c79433ae28f",
+    "computer-client.js": "54e42514a82084094ec292e3645e2961997e2331ff58e825db18e7d92eb3e9ad",
+    "computer-worker.js": "a4108b6b5cbb68ff883cfebfa5b5ef9400bd61c1cac56f9542863dc9cb53eb8d",
+    "app.js": "ed2851cddd4b936170fb434e89fba9d4a77044f79e04329a15b33899c59efc68",
+    "licenses.html": "f0f1fba2c126ffb98115bfb3c1167286da98d4c7bef6c91fe866fd8239429be6",
+    "LICENSE": "79b3b1252f9a878bbe5b1851072306bc60288e4349271f3659d13af64695cfad",
+    "LICENSE-CC-BY-SA-4.0.txt": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
+    "ENGINE_LICENSE.txt": "0b4d5379ac8452504f19da73db23042a9ede316869552bb8cb4c68c18dabb786"
+  }
+}

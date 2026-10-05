@@ -1,0 +1,368 @@
+{
+  "format": "bao-nakakamado-prototype",
+  "version": 7,
+  "baseRules": "R-002",
+  "variantRule": "namua-steal-one-protect-last-reserved-next-own-turn-three-two-row-ring-hand22",
+  "rulesVersion": "0.8.0",
+  "boardRowsPerPlayer": 2,
+  "sowingPath": "ring",
+  "nyakuaProtectLast": true,
+  "nyakuaFixedPitBulk": false,
+  "nyakuaNextTurnThree": true,
+  "nyakuaReservedProtected": true,
+  "initialHand": 22,
+  "totalKete": 64,
+  "mode": "computer",
+  "history": [
+    {
+      "player": 0,
+      "move": {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "left"
+      },
+      "placed": 1,
+      "captures": 0,
+      "stolen": 0,
+      "ordinaryPlaced": 1,
+      "reservedPlaced": 0
+    },
+    {
+      "player": 1,
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 4,
+        "direction": "left",
+        "side": "right"
+      },
+      "placed": 1,
+      "captures": 1,
+      "stolen": 0,
+      "ordinaryPlaced": 1,
+      "reservedPlaced": 0
+    },
+    {
+      "player": 0,
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 2,
+        "direction": "right",
+        "side": "left"
+      },
+      "placed": 1,
+      "captures": 1,
+      "stolen": 0,
+      "ordinaryPlaced": 1,
+      "reservedPlaced": 0
+    },
+    {
+      "player": 1,
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 6,
+        "direction": "left",
+        "side": "right",
+        "houseChoice": "use"
+      },
+      "placed": 1,
+      "captures": 2,
+      "stolen": 1,
+      "ordinaryPlaced": 1,
+      "reservedPlaced": 0
+    },
+    {
+      "player": 0,
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 2,
+        "direction": "right",
+        "side": "left"
+      },
+      "placed": 1,
+      "captures": 1,
+      "stolen": 0,
+      "ordinaryPlaced": 1,
+      "reservedPlaced": 0
+    },
+    {
+      "player": 1,
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 3,
+        "direction": "right",
+        "side": "left"
+      },
+      "placed": 3,
+      "captures": 1,
+      "stolen": 0,
+      "ordinaryPlaced": 2,
+      "reservedPlaced": 1
+    },
+    {
+      "player": 0,
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 0,
+        "direction": "right",
+        "side": "left"
+      },
+      "placed": 1,
+      "captures": 1,
+      "stolen": 0,
+      "ordinaryPlaced": 1,
+      "reservedPlaced": 0
+    },
+    {
+      "player": 1,
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 4,
+        "direction": "right",
+        "side": "left"
+      },
+      "placed": 1,
+      "captures": 4,
+      "stolen": 1,
+      "ordinaryPlaced": 1,
+      "reservedPlaced": 0
+    }
+  ],
+  "final": {
+    "pits": [
+      [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          2,
+          0,
+          4,
+          1,
+          4,
+          4,
+          3,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          2,
+          0,
+          2,
+          0,
+          2
+        ]
+      ]
+    ],
+    "reserve": [
+      16,
+      17
+    ],
+    "nyakuaReserve": [
+      0,
+      1
+    ],
+    "houseOwned": [
+      false,
+      false
+    ],
+    "player": 1,
+    "phase": "namua",
+    "winner": 1,
+    "reason": "front-empty",
+    "turn": 8,
+    "pending": [
+      0,
+      4
+    ]
+  },
+  "adjudication": "normal",
+  "computer": {
+    "id": "NAKAKAMADO-BROWSER-TRIAL-v1",
+    "publicAdopted": false,
+    "modelSha256": "f74175fbaa6f2d6a82148cf5e106da7291f396b2b38cb79866dc641b2147254d",
+    "difficulty": "normal",
+    "diagnostics": [
+      {
+        "turn": 2,
+        "player": 1,
+        "protocol": "NAKAKAMADO-BROWSER-WORKER-v1",
+        "requestId": 2,
+        "stateKey": "[\"namua-steal-one-protect-last-reserved-next-own-turn-three-two-row-ring-hand22\",\"0.8.0\",[[[0,0,1,1,7,0,2,0],[0,0,0,0,0,0,0,0]],[[0,0,0,0,6,2,2,0],[0,0,0,0,0,0,0,0]]],[21,22],[0,0],[true,true],1,\"namua\",null,\"\",[0,0],2]",
+        "modelSha256": "f74175fbaa6f2d6a82148cf5e106da7291f396b2b38cb79866dc641b2147254d",
+        "difficulty": "normal",
+        "budgetMs": 75,
+        "fallback": null,
+        "searchFallback": false,
+        "stats": {
+          "searchId": "NAKAKAMADO-MODEL-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-FROZEN-LINEAR-2026100401-v1",
+          "nodes": 1629,
+          "quiescenceNodes": 979,
+          "cutoffs": 354,
+          "cacheHits": 43,
+          "cacheStores": 318,
+          "evaluationRequests": 813,
+          "evaluations": 684,
+          "evaluationCacheHits": 129,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 179,
+          "evaluationCachePeak": 684,
+          "pvsResearches": 13,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 6,
+          "rootScore": -185,
+          "timedOut": true,
+          "elapsedMs": 75,
+          "allocatedTimeMs": 75
+        }
+      },
+      {
+        "turn": 4,
+        "player": 1,
+        "protocol": "NAKAKAMADO-BROWSER-WORKER-v1",
+        "requestId": 3,
+        "stateKey": "[\"namua-steal-one-protect-last-reserved-next-own-turn-three-two-row-ring-hand22\",\"0.8.0\",[[[1,1,2,0,7,0,2,0],[0,0,0,0,0,0,0,0]],[[0,0,0,0,7,0,2,1],[0,0,0,0,0,0,0,0]]],[20,21],[0,0],[true,true],1,\"namua\",null,\"\",[0,0],4]",
+        "modelSha256": "f74175fbaa6f2d6a82148cf5e106da7291f396b2b38cb79866dc641b2147254d",
+        "difficulty": "normal",
+        "budgetMs": 75,
+        "fallback": null,
+        "searchFallback": false,
+        "stats": {
+          "searchId": "NAKAKAMADO-MODEL-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-FROZEN-LINEAR-2026100401-v1",
+          "nodes": 1376,
+          "quiescenceNodes": 872,
+          "cutoffs": 282,
+          "cacheHits": 59,
+          "cacheStores": 203,
+          "evaluationRequests": 637,
+          "evaluations": 485,
+          "evaluationCacheHits": 152,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 102,
+          "evaluationCachePeak": 485,
+          "pvsResearches": 24,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 5,
+          "rootScore": 397,
+          "timedOut": true,
+          "elapsedMs": 75,
+          "allocatedTimeMs": 75
+        }
+      },
+      {
+        "turn": 6,
+        "player": 1,
+        "protocol": "NAKAKAMADO-BROWSER-WORKER-v1",
+        "requestId": 4,
+        "stateKey": "[\"namua-steal-one-protect-last-reserved-next-own-turn-three-two-row-ring-hand22\",\"0.8.0\",[[[1,0,3,0,7,0,2,0],[0,0,0,0,0,0,0,0]],[[1,1,1,1,0,0,4,0],[1,1,1,1,0,0,0,0]]],[18,20],[0,1],[true,false],1,\"namua\",null,\"\",[0,0],6]",
+        "modelSha256": "f74175fbaa6f2d6a82148cf5e106da7291f396b2b38cb79866dc641b2147254d",
+        "difficulty": "normal",
+        "budgetMs": 75,
+        "fallback": null,
+        "searchFallback": false,
+        "stats": {
+          "searchId": "NAKAKAMADO-MODEL-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-FROZEN-LINEAR-2026100401-v1",
+          "nodes": 1496,
+          "quiescenceNodes": 999,
+          "cutoffs": 284,
+          "cacheHits": 56,
+          "cacheStores": 186,
+          "evaluationRequests": 720,
+          "evaluations": 578,
+          "evaluationCacheHits": 142,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 100,
+          "evaluationCachePeak": 578,
+          "pvsResearches": 21,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 4,
+          "rootScore": 15,
+          "timedOut": true,
+          "elapsedMs": 75,
+          "allocatedTimeMs": 75
+        }
+      },
+      {
+        "turn": 8,
+        "player": 1,
+        "protocol": "NAKAKAMADO-BROWSER-WORKER-v1",
+        "requestId": 5,
+        "stateKey": "[\"namua-steal-one-protect-last-reserved-next-own-turn-three-two-row-ring-hand22\",\"0.8.0\",[[[0,1,4,1,0,0,2,0],[0,0,0,0,0,0,0,0]],[[2,2,2,5,1,1,0,0],[1,1,1,1,1,1,1,1]]],[17,18],[0,0],[false,false],1,\"namua\",null,\"\",[0,0],8]",
+        "modelSha256": "f74175fbaa6f2d6a82148cf5e106da7291f396b2b38cb79866dc641b2147254d",
+        "difficulty": "normal",
+        "budgetMs": 75,
+        "fallback": null,
+        "searchFallback": false,
+        "stats": {
+          "searchId": "NAKAKAMADO-MODEL-SEARCH-v1",
+          "evaluatorId": "NAKAKAMADO-FROZEN-LINEAR-2026100401-v1",
+          "nodes": 1107,
+          "quiescenceNodes": 692,
+          "cutoffs": 263,
+          "cacheHits": 0,
+          "cacheStores": 188,
+          "evaluationRequests": 476,
+          "evaluations": 469,
+          "evaluationCacheHits": 6,
+          "evaluationCacheEvictions": 0,
+          "cachePeak": 114,
+          "evaluationCachePeak": 469,
+          "pvsResearches": 0,
+          "aspirationResearches": 0,
+          "historyUpdates": 0,
+          "safetyStops": 0,
+          "completedDepth": 5,
+          "rootScore": 999999,
+          "timedOut": true,
+          "elapsedMs": 75,
+          "allocatedTimeMs": 75
+        }
+      }
+    ]
+  }
+}
