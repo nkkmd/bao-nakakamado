@@ -198,3 +198,16 @@ node tools/ai-integration/verify-formal-final-worker.cjs NEW_DEVELOPMENT_OUTPUT_
 開発検証は除外済みの32局面・使い捨て鍵・偽APIだけを使う。正式評価はCI通過・main統合後に固定commitから手動で一度起動する。数値HOLDでも結果を保存し、受付後の中断では再開封しない。保存障害からは、originとdigestを確認した公開JSONの `publish` だけで回復する。
 
 PR #21は新規CIと既存全8ジョブを通過しmainへ統合した。[CI記録](../../doc/AI_FORMAL_FINAL_WORKER_CI_20261005.json)には初回の自動承認審査による停止も原記録として保存する。具体的な明示承認後、main `d61c13e92fc751bf60282949c1290dcb469edcec` と固定runner fingerprintからrun 37266659230（attempt 1）を一度だけ起動した。[正式実行記録](../../doc/AI_FORMAL_FINAL_RUN_20261005.md)のとおり、1,656行・782グループで固定18条件をすべて通過し、整数不一致0件・反対称性も全件通過した。受付タグと元公開JSON・artifactの一致を確認し、結果を永続保存した。正式finalは開封済みで、再起動・再選定・このfinalでの条件調整は行わない。探索接続・同時間対局・実機検証・公開AI採用は後続工程。
+
+## 凍結線形モデルの探索接続
+
+[接続・検証記録](../../doc/AI_MODEL_SEARCH_CONNECTION_20261005.md)、[固定仕様](model-search-spec.json)、[接続口](frozen-model-search.cjs)を参照。正式最終評価を通過した線形seed 2026100401だけを接続し、元の教師探索・モデルbytes・収集／学習のfingerprintを変更しない。新しい `prototype/model-search-ai.js` は原探索と同じ本体に評価器接続口と整数検査を持つ別入口である。終局±1000000と距離、安全停止の中立値をモデルの通常局面出力±1024より優先する。
+
+除外済み89root・深度1/2/3・静止探索0/1・3設定の1602構成で通常遷移全探索と値・最善手集合が一致し、両視点のPython／Node整数評価178件も不一致0。12テストは深度4、pendingを持つ通常終局、既知安全停止、南北交換、時計中断・例外伝播・cache上限も検査する。[読取り専用CI](../../.github/workflows/model-search-check.yml)が同じ確認を実行する。
+
+```sh
+node --test tools/ai-integration/model-search.test.cjs
+node tools/ai-integration/verify-model-search.cjs NEW_DEVELOPMENT_OUTPUT_DIRECTORY
+```
+
+正式データの行・暗号文・鍵を取得しない。公開画面はこの評価器を読み込まない。次は開発経路で同時間対局の実行可能性を確認し、独立した正式比較の条件を固定する。棋力とmoto g52j 5G実機の検証、Workerと画面の採用は後続工程。

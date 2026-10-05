@@ -1,0 +1,39 @@
+name: NYAKUA frozen model search connection checks
+on:
+  push:
+    paths:
+      - 'prototype/**'
+      - 'tools/ai-integration/**'
+      - 'doc/formal-final/**'
+      - '.github/workflows/model-search-check.yml'
+  pull_request:
+    paths:
+      - 'prototype/**'
+      - 'tools/ai-integration/**'
+      - 'doc/formal-final/**'
+      - '.github/workflows/model-search-check.yml'
+permissions:
+  contents: read
+jobs:
+  development-model-search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.14'
+      - run: python -m pip install -r tools/ai-integration/formal-learning-requirements.txt
+      - name: Fixed model, copied teacher algorithm, terminal, budget and error handling
+        run: node --test tools/ai-integration/model-search.test.cjs
+      - name: Compare excluded development roots with Python inference and exhaustive normal transitions
+        run: node tools/ai-integration/verify-model-search.cjs "$RUNNER_TEMP/model-search-development"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: model-search-development-verification
+          path: ${{ runner.temp }}/model-search-development/verification.json
+          retention-days: 30
