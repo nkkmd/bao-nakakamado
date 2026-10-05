@@ -1,9 +1,19 @@
 name: NYAKUA equal time operational pilot
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'prototype/**'
+      - 'tools/ai-integration/**'
+      - 'doc/equal-time-formal-v2/**'
+      - 'doc/equal-time-pilot/**'
+      - '.github/workflows/equal-time-pilot.yml'
   pull_request:
     paths:
       - 'prototype/**'
       - 'tools/ai-integration/**'
+      - 'doc/equal-time-formal-v2/**'
+      - 'doc/equal-time-pilot/**'
       - '.github/workflows/equal-time-pilot.yml'
   workflow_dispatch:
 permissions:
@@ -36,6 +46,7 @@ jobs:
           path: ${{ runner.temp }}/equal-time-frozen-verification.json
           retention-days: 30
   operational-pilot:
+    if: github.event_name != 'push'
     needs: protocol-tests
     runs-on: ubuntu-latest
     timeout-minutes: 20
