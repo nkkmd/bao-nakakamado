@@ -1,0 +1,6110 @@
+{
+  "completed": true,
+  "budgetPerDepth": 300000,
+  "initial": [
+    {
+      "model": "A",
+      "records": [
+        {
+          "depth": 1,
+          "result": "UNKNOWN",
+          "nodes": 4,
+          "hits": 0,
+          "elapsedMs": 1,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "result": "UNKNOWN",
+          "nodes": 18,
+          "hits": 0,
+          "elapsedMs": 1,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "result": "UNKNOWN",
+          "nodes": 56,
+          "hits": 0,
+          "elapsedMs": 3,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "result": "UNKNOWN",
+          "nodes": 180,
+          "hits": 0,
+          "elapsedMs": 5,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "result": "UNKNOWN",
+          "nodes": 558,
+          "hits": 5,
+          "elapsedMs": 15,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 6,
+          "result": "UNKNOWN",
+          "nodes": 1842,
+          "hits": 6,
+          "elapsedMs": 42,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 7,
+          "result": "UNKNOWN",
+          "nodes": 6557,
+          "hits": 23,
+          "elapsedMs": 128,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 8,
+          "result": "UNKNOWN",
+          "nodes": 24521,
+          "hits": 187,
+          "elapsedMs": 456,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 9,
+          "result": "UNKNOWN",
+          "nodes": 101320,
+          "hits": 565,
+          "elapsedMs": 1867,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 10,
+          "result": "NODE_BUDGET",
+          "nodes": 300001,
+          "hits": 1775,
+          "elapsedMs": 5755
+        }
+      ]
+    },
+    {
+      "model": "current",
+      "records": [
+        {
+          "depth": 1,
+          "result": "UNKNOWN",
+          "nodes": 4,
+          "hits": 0,
+          "elapsedMs": 1,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "result": "UNKNOWN",
+          "nodes": 18,
+          "hits": 0,
+          "elapsedMs": 1,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "result": "UNKNOWN",
+          "nodes": 56,
+          "hits": 0,
+          "elapsedMs": 4,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "result": "UNKNOWN",
+          "nodes": 180,
+          "hits": 0,
+          "elapsedMs": 4,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "result": "UNKNOWN",
+          "nodes": 558,
+          "hits": 5,
+          "elapsedMs": 11,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 6,
+          "result": "UNKNOWN",
+          "nodes": 1837,
+          "hits": 6,
+          "elapsedMs": 42,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 7,
+          "result": "UNKNOWN",
+          "nodes": 6479,
+          "hits": 23,
+          "elapsedMs": 96,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 8,
+          "result": "UNKNOWN",
+          "nodes": 24119,
+          "hits": 184,
+          "elapsedMs": 340,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 9,
+          "result": "UNKNOWN",
+          "nodes": 99155,
+          "hits": 497,
+          "elapsedMs": 1399,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 10,
+          "result": "NODE_BUDGET",
+          "nodes": 300001,
+          "hits": 1414,
+          "elapsedMs": 4475
+        }
+      ]
+    },
+    {
+      "model": "none",
+      "records": [
+        {
+          "depth": 1,
+          "result": "UNKNOWN",
+          "nodes": 4,
+          "hits": 0,
+          "elapsedMs": 2,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "result": "UNKNOWN",
+          "nodes": 18,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "result": "UNKNOWN",
+          "nodes": 56,
+          "hits": 0,
+          "elapsedMs": 3,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "result": "UNKNOWN",
+          "nodes": 180,
+          "hits": 0,
+          "elapsedMs": 4,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "result": "UNKNOWN",
+          "nodes": 558,
+          "hits": 5,
+          "elapsedMs": 12,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 6,
+          "result": "UNKNOWN",
+          "nodes": 1836,
+          "hits": 6,
+          "elapsedMs": 36,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 7,
+          "result": "UNKNOWN",
+          "nodes": 6484,
+          "hits": 25,
+          "elapsedMs": 116,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 8,
+          "result": "UNKNOWN",
+          "nodes": 23944,
+          "hits": 201,
+          "elapsedMs": 411,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 9,
+          "result": "UNKNOWN",
+          "nodes": 96518,
+          "hits": 659,
+          "elapsedMs": 1712,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 10,
+          "result": "NODE_BUDGET",
+          "nodes": 300001,
+          "hits": 2169,
+          "elapsedMs": 5570
+        }
+      ]
+    }
+  ],
+  "tactical": [
+    {
+      "name": "tactical-0",
+      "seed": 3660818855,
+      "history": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "right"
+        }
+      ],
+      "root": {
+        "pits": [
+          [
+            [
+              1,
+              0,
+              0,
+              0,
+              8,
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              2
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              7,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              2
+            ]
+          ]
+        ],
+        "reserve": [
+          18,
+          18
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          true
+        ],
+        "player": 0,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 9,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "records": [
+        {
+          "depth": 1,
+          "result": "UNKNOWN",
+          "nodes": 1,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "result": "UNKNOWN",
+          "nodes": 3,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "result": "UNKNOWN",
+          "nodes": 19,
+          "hits": 0,
+          "elapsedMs": 1,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "result": "UNKNOWN",
+          "nodes": 49,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "result": "UNKNOWN",
+          "nodes": 165,
+          "hits": 3,
+          "elapsedMs": 2,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 6,
+          "result": "UNKNOWN",
+          "nodes": 422,
+          "hits": 7,
+          "elapsedMs": 7,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 7,
+          "result": "UNKNOWN",
+          "nodes": 1283,
+          "hits": 11,
+          "elapsedMs": 20,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 8,
+          "result": "UNKNOWN",
+          "nodes": 3952,
+          "hits": 41,
+          "elapsedMs": 67,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        }
+      ],
+      "certificate": null
+    },
+    {
+      "name": "tactical-1",
+      "seed": 2020287320,
+      "history": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "right"
+        }
+      ],
+      "root": {
+        "pits": [
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              8,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              2
+            ]
+          ],
+          [
+            [
+              1,
+              0,
+              0,
+              0,
+              8,
+              0,
+              0,
+              3
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              2
+            ]
+          ]
+        ],
+        "reserve": [
+          17,
+          18
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          true
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 10,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "records": [
+        {
+          "depth": 1,
+          "result": "UNKNOWN",
+          "nodes": 1,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "result": "UNKNOWN",
+          "nodes": 3,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "result": "UNKNOWN",
+          "nodes": 10,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "result": "UNKNOWN",
+          "nodes": 24,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "result": "UNKNOWN",
+          "nodes": 62,
+          "hits": 0,
+          "elapsedMs": 2,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 6,
+          "result": "UNKNOWN",
+          "nodes": 133,
+          "hits": 0,
+          "elapsedMs": 2,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 7,
+          "result": "UNKNOWN",
+          "nodes": 362,
+          "hits": 0,
+          "elapsedMs": 5,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 8,
+          "result": "UNKNOWN",
+          "nodes": 934,
+          "hits": 4,
+          "elapsedMs": 14,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        }
+      ],
+      "certificate": null
+    },
+    {
+      "name": "tactical-2",
+      "seed": 379755785,
+      "history": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "use"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        }
+      ],
+      "root": {
+        "pits": [
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              3,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              1,
+              1
+            ]
+          ],
+          [
+            [
+              0,
+              1,
+              4,
+              1,
+              10,
+              0,
+              3,
+              0
+            ],
+            [
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          15,
+          15
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          true
+        ],
+        "player": 0,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 11,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "records": [
+        {
+          "depth": 1,
+          "result": "UNKNOWN",
+          "nodes": 1,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "result": "UNKNOWN",
+          "nodes": 3,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "result": "UNKNOWN",
+          "nodes": 7,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "result": "UNKNOWN",
+          "nodes": 26,
+          "hits": 0,
+          "elapsedMs": 1,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "result": "UNKNOWN",
+          "nodes": 102,
+          "hits": 3,
+          "elapsedMs": 2,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 6,
+          "result": "UNKNOWN",
+          "nodes": 517,
+          "hits": 3,
+          "elapsedMs": 9,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 7,
+          "result": "UNKNOWN",
+          "nodes": 2408,
+          "hits": 32,
+          "elapsedMs": 55,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 8,
+          "result": "UNKNOWN",
+          "nodes": 11674,
+          "hits": 82,
+          "elapsedMs": 244,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        }
+      ],
+      "certificate": null
+    },
+    {
+      "name": "tactical-3",
+      "seed": 3034191546,
+      "history": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 3,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 1,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "use"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 0,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 1,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        }
+      ],
+      "root": {
+        "pits": [
+          [
+            [
+              0,
+              0,
+              0,
+              4,
+              4,
+              5,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          [
+            [
+              0,
+              3,
+              0,
+              0,
+              0,
+              5,
+              3,
+              3
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "reserve": [
+          14,
+          15
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          false
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 12,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "records": [
+        {
+          "depth": 1,
+          "result": "UNKNOWN",
+          "nodes": 1,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "result": "UNKNOWN",
+          "nodes": 2,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "result": "UNKNOWN",
+          "nodes": 7,
+          "hits": 0,
+          "elapsedMs": 1,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "result": "UNKNOWN",
+          "nodes": 30,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "result": "UNKNOWN",
+          "nodes": 128,
+          "hits": 0,
+          "elapsedMs": 3,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 6,
+          "result": "UNKNOWN",
+          "nodes": 658,
+          "hits": 2,
+          "elapsedMs": 14,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 7,
+          "result": "UNKNOWN",
+          "nodes": 3335,
+          "hits": 33,
+          "elapsedMs": 70,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 8,
+          "result": "UNKNOWN",
+          "nodes": 17441,
+          "hits": 96,
+          "elapsedMs": 390,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        }
+      ],
+      "certificate": null
+    },
+    {
+      "name": "tactical-4",
+      "seed": 1393660011,
+      "history": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        }
+      ],
+      "root": {
+        "pits": [
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              10,
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              3,
+              3,
+              5,
+              0,
+              8,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          14,
+          14
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          true
+        ],
+        "player": 0,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 13,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "records": [
+        {
+          "depth": 1,
+          "result": "UNKNOWN",
+          "nodes": 1,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "result": "UNKNOWN",
+          "nodes": 4,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "result": "UNKNOWN",
+          "nodes": 13,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "result": "UNKNOWN",
+          "nodes": 48,
+          "hits": 0,
+          "elapsedMs": 1,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "result": "UNKNOWN",
+          "nodes": 215,
+          "hits": 0,
+          "elapsedMs": 4,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 6,
+          "result": "UNKNOWN",
+          "nodes": 1168,
+          "hits": 11,
+          "elapsedMs": 23,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 7,
+          "result": "UNKNOWN",
+          "nodes": 6301,
+          "hits": 47,
+          "elapsedMs": 128,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 8,
+          "result": "NODE_BUDGET",
+          "nodes": 20001,
+          "hits": 25,
+          "elapsedMs": 439
+        }
+      ],
+      "certificate": null
+    },
+    {
+      "name": "tactical-5",
+      "seed": 4048095772,
+      "history": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 1,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        }
+      ],
+      "root": {
+        "pits": [
+          [
+            [
+              1,
+              0,
+              1,
+              0,
+              9,
+              4,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ]
+          ],
+          [
+            [
+              0,
+              2,
+              0,
+              0,
+              9,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "reserve": [
+          17,
+          17
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          true
+        ],
+        "player": 0,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 9,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "records": [
+        {
+          "depth": 1,
+          "result": "UNKNOWN",
+          "nodes": 2,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "result": "UNKNOWN",
+          "nodes": 9,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "result": "UNKNOWN",
+          "nodes": 28,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "result": "UNKNOWN",
+          "nodes": 86,
+          "hits": 1,
+          "elapsedMs": 2,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "result": "UNKNOWN",
+          "nodes": 293,
+          "hits": 2,
+          "elapsedMs": 5,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 6,
+          "result": "UNKNOWN",
+          "nodes": 1001,
+          "hits": 10,
+          "elapsedMs": 20,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 7,
+          "result": "UNKNOWN",
+          "nodes": 4157,
+          "hits": 20,
+          "elapsedMs": 80,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 8,
+          "result": "UNKNOWN",
+          "nodes": 18553,
+          "hits": 108,
+          "elapsedMs": 396,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        }
+      ],
+      "certificate": null
+    },
+    {
+      "name": "tactical-6",
+      "seed": 2407564237,
+      "history": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "right"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 0,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "use"
+        }
+      ],
+      "root": {
+        "pits": [
+          [
+            [
+              1,
+              2,
+              4,
+              1,
+              0,
+              2,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              8,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              2
+            ]
+          ]
+        ],
+        "reserve": [
+          17,
+          18
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          true
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 10,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "records": [
+        {
+          "depth": 1,
+          "result": "UNKNOWN",
+          "nodes": 2,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "result": "UNKNOWN",
+          "nodes": 9,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "result": "UNKNOWN",
+          "nodes": 23,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "result": "UNKNOWN",
+          "nodes": 74,
+          "hits": 0,
+          "elapsedMs": 3,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "result": "UNKNOWN",
+          "nodes": 216,
+          "hits": 0,
+          "elapsedMs": 3,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 6,
+          "result": "UNKNOWN",
+          "nodes": 670,
+          "hits": 3,
+          "elapsedMs": 11,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 7,
+          "result": "UNKNOWN",
+          "nodes": 2241,
+          "hits": 31,
+          "elapsedMs": 41,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 8,
+          "result": "UNKNOWN",
+          "nodes": 8561,
+          "hits": 55,
+          "elapsedMs": 168,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        }
+      ],
+      "certificate": null
+    },
+    {
+      "name": "tactical-7",
+      "seed": 767032702,
+      "history": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "use"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        }
+      ],
+      "root": {
+        "pits": [
+          [
+            [
+              0,
+              0,
+              0,
+              1,
+              10,
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ]
+          ],
+          [
+            [
+              1,
+              0,
+              4,
+              0,
+              0,
+              1,
+              3,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "reserve": [
+          16,
+          16
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          false
+        ],
+        "player": 0,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 11,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "records": [
+        {
+          "depth": 1,
+          "result": "UNKNOWN",
+          "nodes": 4,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "result": "UNKNOWN",
+          "nodes": 15,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "result": "UNKNOWN",
+          "nodes": 50,
+          "hits": 0,
+          "elapsedMs": 1,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "result": "UNKNOWN",
+          "nodes": 171,
+          "hits": 0,
+          "elapsedMs": 3,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "result": "UNKNOWN",
+          "nodes": 711,
+          "hits": 0,
+          "elapsedMs": 13,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 6,
+          "result": "UNKNOWN",
+          "nodes": 2989,
+          "hits": 18,
+          "elapsedMs": 66,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 7,
+          "result": "UNKNOWN",
+          "nodes": 13213,
+          "hits": 59,
+          "elapsedMs": 271,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 8,
+          "result": "NODE_BUDGET",
+          "nodes": 20001,
+          "hits": 110,
+          "elapsedMs": 421
+        }
+      ],
+      "certificate": null
+    },
+    {
+      "name": "tactical-8",
+      "seed": 3421468463,
+      "history": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 3,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        }
+      ],
+      "root": {
+        "pits": [
+          [
+            [
+              1,
+              1,
+              2,
+              1,
+              3,
+              0,
+              3,
+              0
+            ],
+            [
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              11,
+              2,
+              3,
+              3
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "reserve": [
+          14,
+          15
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          true
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 12,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "records": [
+        {
+          "depth": 1,
+          "result": "UNKNOWN",
+          "nodes": 6,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "result": "UNKNOWN",
+          "nodes": 38,
+          "hits": 0,
+          "elapsedMs": 1,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "result": "UNKNOWN",
+          "nodes": 215,
+          "hits": 0,
+          "elapsedMs": 4,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "result": "UNKNOWN",
+          "nodes": 1166,
+          "hits": 3,
+          "elapsedMs": 24,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "result": "UNKNOWN",
+          "nodes": 6064,
+          "hits": 34,
+          "elapsedMs": 123,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 6,
+          "result": "NODE_BUDGET",
+          "nodes": 20001,
+          "hits": 70,
+          "elapsedMs": 430
+        }
+      ],
+      "certificate": null
+    },
+    {
+      "name": "tactical-9",
+      "seed": 1780936928,
+      "history": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "left"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 0,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 3,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        }
+      ],
+      "root": {
+        "pits": [
+          [
+            [
+              0,
+              1,
+              2,
+              3,
+              10,
+              3,
+              2,
+              1
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          16,
+          16
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          false
+        ],
+        "player": 0,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 13,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "records": [
+        {
+          "depth": 1,
+          "result": "FIRST_FORCED_WIN",
+          "nodes": 8,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "use"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 2,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 2,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 2,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "use"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "use"
+              },
+              "value": 1
+            }
+          ],
+          "certificate": {
+            "status": "PASS",
+            "nodes": 2,
+            "edges": 1,
+            "defenses": 0
+          }
+        }
+      ],
+      "certificate": "tactical-9-certificate.json"
+    },
+    {
+      "name": "tactical-10",
+      "seed": 140405393,
+      "history": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "use"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 1,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        }
+      ],
+      "root": {
+        "pits": [
+          [
+            [
+              1,
+              0,
+              0,
+              0,
+              8,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              2
+            ]
+          ],
+          [
+            [
+              2,
+              3,
+              0,
+              1,
+              1,
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              0
+            ]
+          ]
+        ],
+        "reserve": [
+          18,
+          18
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          false
+        ],
+        "player": 0,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 9,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "records": [
+        {
+          "depth": 1,
+          "result": "UNKNOWN",
+          "nodes": 3,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "result": "UNKNOWN",
+          "nodes": 13,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "result": "UNKNOWN",
+          "nodes": 46,
+          "hits": 0,
+          "elapsedMs": 1,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "result": "UNKNOWN",
+          "nodes": 137,
+          "hits": 0,
+          "elapsedMs": 3,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "result": "UNKNOWN",
+          "nodes": 444,
+          "hits": 2,
+          "elapsedMs": 8,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 6,
+          "result": "UNKNOWN",
+          "nodes": 1579,
+          "hits": 2,
+          "elapsedMs": 31,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 7,
+          "result": "UNKNOWN",
+          "nodes": 6202,
+          "hits": 18,
+          "elapsedMs": 121,
+          "openings": [
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 8,
+          "result": "NODE_BUDGET",
+          "nodes": 20001,
+          "hits": 56,
+          "elapsedMs": 402
+        }
+      ],
+      "certificate": null
+    },
+    {
+      "name": "tactical-11",
+      "seed": 2794841154,
+      "history": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        }
+      ],
+      "root": {
+        "pits": [
+          [
+            [
+              0,
+              0,
+              2,
+              0,
+              8,
+              3,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              7,
+              0,
+              5,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          17,
+          18
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          true
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 10,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "records": [
+        {
+          "depth": 1,
+          "result": "UNKNOWN",
+          "nodes": 4,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 7,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 7,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "result": "UNKNOWN",
+          "nodes": 25,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 7,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 7,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "result": "UNKNOWN",
+          "nodes": 110,
+          "hits": 0,
+          "elapsedMs": 2,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 7,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 7,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "result": "UNKNOWN",
+          "nodes": 509,
+          "hits": 0,
+          "elapsedMs": 8,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 7,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 7,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "result": "UNKNOWN",
+          "nodes": 2243,
+          "hits": 23,
+          "elapsedMs": 40,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 7,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 7,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 6,
+          "result": "UNKNOWN",
+          "nodes": 10075,
+          "hits": 33,
+          "elapsedMs": 187,
+          "openings": [
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "right"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 7,
+                "direction": "left"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 7,
+                "direction": "right"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 7,
+          "result": "NODE_BUDGET",
+          "nodes": 20001,
+          "hits": 56,
+          "elapsedMs": 408
+        }
+      ],
+      "certificate": null
+    }
+  ]
+}

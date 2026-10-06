@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "study": "NYAKUA-END-PIT-A-20261006",
+    "reference": "a093f527a9284184731bc44bde8ce8b62c39dc37",
+    "task": "search3",
+    "n": 120,
+    "config": {
+      "policies": [
+        "search3",
+        "search3"
+      ],
+      "pairs": 120
+    },
+    "sourceHashes": {
+      "engine.cjs": "ec2a3b137e98c36aadb8773ea3f6fce03962dd51765d20fa50ef7f3afab61f1c",
+      "core.cjs": "b3970df92fb4ef903bf3673bd27bc5f198e8e01ed96b16d1ec6d972a3b7a3c62",
+      "run.cjs": "ae745981e52008b835c387106950121ccdec8e2120ce610ee8adf62f82747823",
+      "proof.cjs": "ab18f53e338e2e9e672f087fd17d5532a400edecdf5c8c5a1fe471fc5aa9da6e",
+      "check.cjs": "204e24bd02c54061e5a1bbaafcdb4db50827ebca58ceae10e0074a8d55ddc2b6",
+      "report.cjs": "2833a959d2bfad5ea207a4cc4e37b00f21598b4d9e3435a231d552b1b295e3a3",
+      "legacy-cycle.json": "f3f4b8a3f07e82be273ff6379fedad8deb0e2ddd7d144756b97ab1f9e299ccb3",
+      "../../prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+      "../../prototype/steal.js": "a1886cdc5b3b9f8a69eb1955e8990deca809d6dc786491afd23f669a77be7ad2"
+    },
+    "node": "v24.19.0",
+    "commit": "6f91b5a1069fe9d54ca65d4a4fd988b0b5ffbf4f",
+    "runId": "37398350927"
+  },
+  "signature": "b2dabfadb49b4040bdff970f0533954a3b7a4d3ae689478c0dafe934c731d9dd",
+  "completed": true,
+  "results": [
+    {
+      "model": "A",
+      "pairs": 120,
+      "n": 240,
+      "normal": 240,
+      "firstWins": 69,
+      "secondWins": 171,
+      "firstWinPct": 28.75,
+      "descriptiveWilson95Pct": [
+        23.394165179548015,
+        34.77537642836435
+      ],
+      "completePairs": 120,
+      "pairMeanFirstWinPct": 28.749999999999996,
+      "pairCluster95Pct": [
+        23.1084387659269,
+        34.391561234073095
+      ],
+      "firstWinsAllGameBoundsPct": [
+        28.75,
+        28.75
+      ],
+      "avgPlies": 41.74583333333333,
+      "p95Plies": 62,
+      "maxPlies": 83,
+      "avgNamuaMoves": 28.85,
+      "mtajiPlayed": 239,
+      "nyakua": 1809,
+      "passes": 0,
+      "backAdds": 525,
+      "houseAdds": 238,
+      "maxRelays": 24,
+      "searchNodes": 892803,
+      "budgetStops": 0,
+      "avgCompletedDepth": 3,
+      "reasons": {
+        "front-empty": 192,
+        "no-move": 48
+      }
+    },
+    {
+      "model": "current",
+      "pairs": 120,
+      "n": 240,
+      "normal": 240,
+      "firstWins": 185,
+      "secondWins": 55,
+      "firstWinPct": 77.08333333333333,
+      "descriptiveWilson95Pct": [
+        71.36410037178638,
+        81.94922895146257
+      ],
+      "completePairs": 120,
+      "pairMeanFirstWinPct": 77.08333333333334,
+      "pairCluster95Pct": [
+        70.74209137256024,
+        83.42457529410643
+      ],
+      "firstWinsAllGameBoundsPct": [
+        77.08333333333333,
+        77.08333333333333
+      ],
+      "avgPlies": 34.77916666666667,
+      "p95Plies": 64,
+      "maxPlies": 81,
+      "avgNamuaMoves": 27.795833333333334,
+      "mtajiPlayed": 239,
+      "nyakua": 2062,
+      "passes": 0,
+      "backAdds": 0,
+      "houseAdds": 0,
+      "maxRelays": 23,
+      "searchNodes": 851703,
+      "budgetStops": 0,
+      "avgCompletedDepth": 3,
+      "reasons": {
+        "no-move": 168,
+        "front-empty": 72
+      }
+    },
+    {
+      "model": "none",
+      "pairs": 120,
+      "n": 240,
+      "normal": 240,
+      "firstWins": 149,
+      "secondWins": 91,
+      "firstWinPct": 62.083333333333336,
+      "descriptiveWilson95Pct": [
+        55.80028476436664,
+        67.98566216446751
+      ],
+      "completePairs": 120,
+      "pairMeanFirstWinPct": 62.083333333333336,
+      "pairCluster95Pct": [
+        56.057496579475355,
+        68.10917008719132
+      ],
+      "firstWinsAllGameBoundsPct": [
+        62.083333333333336,
+        62.083333333333336
+      ],
+      "avgPlies": 53.52916666666667,
+      "p95Plies": 72,
+      "maxPlies": 88,
+      "avgNamuaMoves": 43.375,
+      "mtajiPlayed": 223,
+      "nyakua": 0,
+      "passes": 0,
+      "backAdds": 0,
+      "houseAdds": 0,
+      "maxRelays": 29,
+      "searchNodes": 1104302,
+      "budgetStops": 0,
+      "avgCompletedDepth": 3,
+      "reasons": {
+        "front-empty": 201,
+        "no-move": 39
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+name: NYAKUA end-pit A raw-record audit
+on:
+  push:
+    branches: [experiment/nyakua-end-pit-a-20261006]
+    paths: ['tools/nyakua-end-pit/audit/*.cjs', '.github/workflows/nyakua-end-pit-audit.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: nyakua-end-pit-audit-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      COMPARISON_RUN: '37398350927'
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+      - name: Wait for original comparison jobs
+        run: |
+          for attempt in $(seq 1 80); do
+            gh run view "$COMPARISON_RUN" --json jobs > /tmp/nyakua-jobs.json
+            status=$(python - <<'PY'
+          import json
+          jobs=json.load(open('/tmp/nyakua-jobs.json'))['jobs']
+          relevant=[j for j in jobs if j['name']=='checks' or j['name'].startswith('study (')]
+          if any(j['conclusion'] in ['failure','cancelled','timed_out'] for j in relevant):
+              print('failed')
+          elif len(relevant)==12 and all(j['conclusion']=='success' for j in relevant):
+              print('ready')
+          else:
+              print('waiting')
+          PY
+            )
+            if [ "$status" = ready ]; then exit 0; fi
+            if [ "$status" = failed ]; then exit 1; fi
+            sleep 15
+          done
+          exit 1
+      - name: Restore unchanged original artifacts
+        run: |
+          gh run download "$COMPARISON_RUN" --name nyakua-end-pit-checks --dir tools/nyakua-end-pit/results
+          for task in random noisy greedy reply search3 search4 search6 mobility cross-0 cross-1 proof; do
+            gh run download "$COMPARISON_RUN" --name "nyakua-end-pit-$task" --dir "tools/nyakua-end-pit/results/$task"
+          done
+      - name: Verify signatures, recompute statistics and replay evidence
+        run: node tools/nyakua-end-pit/audit/normalize.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nyakua-end-pit-audited-final
+          path: |
+            tools/nyakua-end-pit/results/
+            doc/NYAKUA_END_PIT_A_STUDY_20261006.md
+          retention-days: 30
+          overwrite: true
+      - name: Preserve raw records and audited report
+        env:
+          STUDY_BRANCH: ${{ github.ref_name }}
+        run: |
+          test "$STUDY_BRANCH" = experiment/nyakua-end-pit-a-20261006
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add tools/nyakua-end-pit/results doc/NYAKUA_END_PIT_A_STUDY_20261006.md
+          git commit -m "docs: preserve original NYAKUA end-pit A trials after aggregation audit"
+          git push origin "HEAD:$STUDY_BRANCH"

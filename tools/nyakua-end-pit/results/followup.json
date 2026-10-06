@@ -1,0 +1,595 @@
+{
+  "status": "PASS",
+  "comparisonSource": "6f91b5a1069fe9d54ca65d4a4fd988b0b5ffbf4f",
+  "comparisonRunId": 37398350927,
+  "anomalies": 12,
+  "uniqueAnomalousMoves": 2,
+  "cycles": [
+    {
+      "before": {
+        "pits": [
+          [
+            [
+              0,
+              5,
+              1,
+              3,
+              2,
+              4,
+              4,
+              6
+            ],
+            [
+              1,
+              0,
+              1,
+              1,
+              2,
+              5,
+              0,
+              2
+            ]
+          ],
+          [
+            [
+              0,
+              1,
+              6,
+              0,
+              5,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              2,
+              3,
+              2,
+              3,
+              2,
+              0,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          0,
+          0
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          false
+        ],
+        "player": 1,
+        "phase": "mtaji",
+        "winner": null,
+        "reason": "",
+        "turn": 40,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "move": {
+        "row": 0,
+        "index": 2,
+        "direction": "right",
+        "type": "takata",
+        "phase": "mtaji"
+      },
+      "observed": 11,
+      "models": [
+        "A"
+      ],
+      "extended": {
+        "reason": "proven-cycle",
+        "cycle": {
+          "kind": "proven-cycle",
+          "first": 1,
+          "again": 273,
+          "period": 272
+        },
+        "relays": 272
+      },
+      "alternatives": [
+        {
+          "move": {
+            "row": 0,
+            "index": 2,
+            "direction": "left",
+            "type": "takata",
+            "phase": "mtaji"
+          },
+          "reason": "",
+          "staticScoreForMover": -42
+        },
+        {
+          "move": {
+            "row": 0,
+            "index": 2,
+            "direction": "right",
+            "type": "takata",
+            "phase": "mtaji"
+          },
+          "reason": "relay-limit",
+          "staticScoreForMover": 0
+        },
+        {
+          "move": {
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "type": "takata",
+            "phase": "mtaji"
+          },
+          "reason": "",
+          "staticScoreForMover": -36
+        },
+        {
+          "move": {
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "type": "takata",
+            "phase": "mtaji"
+          },
+          "reason": "",
+          "staticScoreForMover": -38
+        }
+      ]
+    },
+    {
+      "before": {
+        "pits": [
+          [
+            [
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              4,
+              0
+            ],
+            [
+              3,
+              0,
+              1,
+              4,
+              0,
+              4,
+              2,
+              1
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              4,
+              4,
+              10,
+              7,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              3,
+              2,
+              2,
+              0,
+              1,
+              5
+            ]
+          ]
+        ],
+        "reserve": [
+          0,
+          0
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          false
+        ],
+        "player": 0,
+        "phase": "mtaji",
+        "winner": null,
+        "reason": "",
+        "turn": 55,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "move": {
+        "row": 0,
+        "index": 6,
+        "direction": "right",
+        "type": "takata",
+        "phase": "mtaji"
+      },
+      "observed": 1,
+      "models": [
+        "current"
+      ],
+      "extended": {
+        "reason": "proven-cycle",
+        "cycle": {
+          "kind": "proven-cycle",
+          "first": 1,
+          "again": 285,
+          "period": 284
+        },
+        "relays": 284
+      },
+      "alternatives": [
+        {
+          "move": {
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "type": "takata",
+            "phase": "mtaji"
+          },
+          "reason": "",
+          "staticScoreForMover": -60
+        },
+        {
+          "move": {
+            "row": 0,
+            "index": 6,
+            "direction": "right",
+            "type": "takata",
+            "phase": "mtaji"
+          },
+          "reason": "relay-limit",
+          "staticScoreForMover": 0
+        }
+      ]
+    }
+  ],
+  "intervals": [
+    {
+      "task": "random",
+      "model": "A",
+      "pairs": 1000,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        46.25530591653262,
+        54.844694083467374
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "random",
+      "model": "current",
+      "pairs": 1000,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        46.85530591653262,
+        55.444694083467375
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "random",
+      "model": "none",
+      "pairs": 1000,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        46.405305916532626,
+        54.99469408346738
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "noisy",
+      "model": "A",
+      "pairs": 1000,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        43.405305916532626,
+        51.99469408346738
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "noisy",
+      "model": "current",
+      "pairs": 1000,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        46.10530591653262,
+        54.694694083467375
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "noisy",
+      "model": "none",
+      "pairs": 1000,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        46.055305916532625,
+        54.64469408346738
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "greedy",
+      "model": "A",
+      "pairs": 500,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        30.02638538091695,
+        42.173614619083054
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "greedy",
+      "model": "current",
+      "pairs": 500,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        40.326385380916946,
+        52.47361461908305
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "greedy",
+      "model": "none",
+      "pairs": 500,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        38.326385380916946,
+        50.47361461908305
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "reply",
+      "model": "A",
+      "pairs": 300,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        56.99233057633647,
+        72.67433609033019
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "reply",
+      "model": "current",
+      "pairs": 300,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        56.99233057633647,
+        72.67433609033019
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "reply",
+      "model": "none",
+      "pairs": 300,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        56.99233057633647,
+        72.67433609033019
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "search3",
+      "model": "A",
+      "pairs": 120,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        16.35228607411509,
+        41.147713925884915
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "search3",
+      "model": "current",
+      "pairs": 120,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        64.68561940744841,
+        89.48104725921824
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "search3",
+      "model": "none",
+      "pairs": 120,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        49.68561940744843,
+        74.48104725921824
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "search4",
+      "model": "A",
+      "pairs": 80,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        43.56596345229237,
+        80.80903654770763
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "search4",
+      "model": "current",
+      "pairs": 80,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        26.065963452292372,
+        57.05903654770763
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "search4",
+      "model": "none",
+      "pairs": 80,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        56.69096345229237,
+        87.05903654770763
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "search6",
+      "model": "A",
+      "pairs": 40,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        28.52652958266312,
+        71.47347041733688
+      ],
+      "pairedVarianceZero": true
+    },
+    {
+      "task": "search6",
+      "model": "current",
+      "pairs": 40,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        39.776529582663116,
+        82.72347041733688
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "search6",
+      "model": "none",
+      "pairs": 40,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        59.776529582663116,
+        100
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "mobility",
+      "model": "A",
+      "pairs": 80,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        10.44096345229237,
+        40.80903654770763
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "mobility",
+      "model": "current",
+      "pairs": 80,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        33.56596345229237,
+        63.93403654770763
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "mobility",
+      "model": "none",
+      "pairs": 80,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        32.94096345229237,
+        63.30903654770763
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "cross-0",
+      "model": "A",
+      "pairs": 80,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        34.19096345229237,
+        64.55903654770763
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "cross-0",
+      "model": "current",
+      "pairs": 80,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        39.81596345229237,
+        70.18403654770763
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "cross-0",
+      "model": "none",
+      "pairs": 80,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        33.56596345229237,
+        63.93403654770763
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "cross-1",
+      "model": "A",
+      "pairs": 60,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        31.633651490258433,
+        66.6996818430749
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "cross-1",
+      "model": "current",
+      "pairs": 60,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        40.8003181569251,
+        75.86634850974157
+      ],
+      "pairedVarianceZero": false
+    },
+    {
+      "task": "cross-1",
+      "model": "none",
+      "pairs": 60,
+      "assumption": "Independent seed-level observations; exploratory unadjusted reference interval",
+      "hoeffding95AllGameBoundsPct": [
+        34.13365149025843,
+        69.1996818430749
+      ],
+      "pairedVarianceZero": false
+    }
+  ]
+}
