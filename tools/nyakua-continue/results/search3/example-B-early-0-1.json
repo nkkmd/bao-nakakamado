@@ -1,0 +1,2898 @@
+{
+  "model": "B-early",
+  "policies": [
+    "search3",
+    "search3"
+  ],
+  "seed": 2537877591,
+  "swapStreams": true,
+  "plies": 29,
+  "namuaMoves": 26,
+  "mtajiMoves": 3,
+  "nyakua": 9,
+  "passes": 0,
+  "searchNodes": 3650,
+  "budgetStops": 0,
+  "searchDecisions": 25,
+  "completedDepthSum": 75,
+  "maxRelays": 9,
+  "backAdds": 0,
+  "houseAdds": 0,
+  "winner": 0,
+  "reason": "front-empty",
+  "final": {
+    "pits": [
+      [
+        [
+          2,
+          3,
+          0,
+          6,
+          8,
+          3,
+          6,
+          6
+        ],
+        [
+          0,
+          2,
+          0,
+          4,
+          2,
+          0,
+          6,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          3,
+          1,
+          0,
+          3,
+          0
+        ]
+      ]
+    ],
+    "reserve": [
+      0,
+      0
+    ],
+    "nyakuaReserve": [
+      0,
+      0
+    ],
+    "houseOwned": [
+      false,
+      false
+    ],
+    "player": 0,
+    "phase": "mtaji",
+    "winner": 0,
+    "reason": "front-empty",
+    "turn": 29,
+    "pending": [
+      5,
+      0
+    ]
+  },
+  "history": [
+    {
+      "move": {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "left"
+      },
+      "entry": {
+        "player": 0,
+        "move": {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        },
+        "placed": 1,
+        "captures": 0,
+        "stolen": 0,
+        "endpoint": null
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              0,
+              0,
+              1,
+              1,
+              7,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              6,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "reserve": [
+          21,
+          22
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          true
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 2,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 4,
+        "direction": "right",
+        "side": "left",
+        "houseChoice": "stop"
+      },
+      "entry": {
+        "player": 1,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        "placed": 1,
+        "captures": 1,
+        "stolen": 0,
+        "endpoint": null
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              0,
+              0,
+              1,
+              0,
+              7,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              1,
+              0,
+              0,
+              0,
+              7,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "reserve": [
+          21,
+          21
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          true
+        ],
+        "player": 0,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 3,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 2,
+        "direction": "right",
+        "side": "left",
+        "houseChoice": "stop"
+      },
+      "entry": {
+        "player": 0,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        "placed": 1,
+        "captures": 1,
+        "stolen": 0,
+        "endpoint": null
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              1,
+              1,
+              2,
+              0,
+              7,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              1,
+              0,
+              0,
+              0,
+              7,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "reserve": [
+          20,
+          21
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          true
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 4,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 6,
+        "direction": "left",
+        "side": "right",
+        "houseChoice": "stop"
+      },
+      "entry": {
+        "player": 1,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        "placed": 1,
+        "captures": 1,
+        "stolen": 0,
+        "endpoint": null
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              1,
+              0,
+              2,
+              0,
+              7,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              1,
+              0,
+              0,
+              0,
+              7,
+              0,
+              3,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "reserve": [
+          20,
+          20
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          true
+        ],
+        "player": 0,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 5,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 0,
+        "direction": "right",
+        "side": "left",
+        "houseChoice": "stop"
+      },
+      "entry": {
+        "player": 0,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 0,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        "placed": 1,
+        "captures": 1,
+        "stolen": 0,
+        "endpoint": null
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              0,
+              1,
+              3,
+              1,
+              7,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              1,
+              0,
+              0,
+              0,
+              7,
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "reserve": [
+          19,
+          20
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          true
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 6,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 4,
+        "direction": "left",
+        "side": "right",
+        "houseChoice": "stop"
+      },
+      "entry": {
+        "player": 1,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        "placed": 1,
+        "captures": 1,
+        "stolen": 0,
+        "endpoint": null
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              0,
+              1,
+              3,
+              0,
+              7,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              1,
+              0,
+              0,
+              0,
+              8,
+              0,
+              3,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "reserve": [
+          19,
+          19
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          true
+        ],
+        "player": 0,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 7,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 1,
+        "direction": "right",
+        "side": "left",
+        "houseChoice": "stop"
+      },
+      "entry": {
+        "player": 0,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 1,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        "placed": 1,
+        "captures": 1,
+        "stolen": 0,
+        "endpoint": null
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              1,
+              3,
+              0,
+              1,
+              8,
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ]
+          ],
+          [
+            [
+              1,
+              0,
+              0,
+              0,
+              8,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "reserve": [
+          18,
+          19
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          true
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 8,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 7,
+        "direction": "left",
+        "side": "right",
+        "houseChoice": "stop"
+      },
+      "entry": {
+        "player": 1,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        "placed": 1,
+        "captures": 2,
+        "stolen": 1,
+        "endpoint": {
+          "player": 1,
+          "row": 0,
+          "index": 7
+        }
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              0,
+              3,
+              0,
+              0,
+              8,
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ]
+          ],
+          [
+            [
+              1,
+              0,
+              0,
+              0,
+              10,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "reserve": [
+          17,
+          17
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          true
+        ],
+        "player": 0,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 9,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 1,
+        "direction": "right",
+        "side": "left",
+        "houseChoice": "stop"
+      },
+      "entry": {
+        "player": 0,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 1,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        "placed": 1,
+        "captures": 1,
+        "stolen": 0,
+        "endpoint": null
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              1,
+              0,
+              1,
+              1,
+              9,
+              2,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ]
+          ],
+          [
+            [
+              1,
+              0,
+              0,
+              0,
+              10,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "reserve": [
+          16,
+          17
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          true
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 10,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 4,
+        "direction": "right",
+        "side": "left",
+        "houseChoice": "stop"
+      },
+      "entry": {
+        "player": 1,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        "placed": 1,
+        "captures": 3,
+        "stolen": 1,
+        "endpoint": {
+          "player": 1,
+          "row": 0,
+          "index": 0
+        }
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              1,
+              0,
+              0,
+              0,
+              9,
+              2,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ]
+          ],
+          [
+            [
+              1,
+              1,
+              1,
+              1,
+              12,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "reserve": [
+          15,
+          15
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          true
+        ],
+        "player": 0,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 11,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "left",
+        "side": "right",
+        "houseChoice": "stop"
+      },
+      "entry": {
+        "player": 0,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        "placed": 1,
+        "captures": 1,
+        "stolen": 0,
+        "endpoint": null
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              1,
+              0,
+              0,
+              0,
+              9,
+              3,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ]
+          ],
+          [
+            [
+              1,
+              1,
+              0,
+              1,
+              12,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "reserve": [
+          14,
+          15
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          true
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 12,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 3,
+        "direction": "right",
+        "side": "left",
+        "houseChoice": "stop"
+      },
+      "entry": {
+        "player": 1,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 3,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        "placed": 1,
+        "captures": 1,
+        "stolen": 0,
+        "endpoint": null
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              3,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ]
+          ],
+          [
+            [
+              2,
+              2,
+              1,
+              3,
+              13,
+              4,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          14,
+          14
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          true
+        ],
+        "player": 0,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 13,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "right",
+        "side": "left",
+        "houseChoice": "stop"
+      },
+      "entry": {
+        "player": 0,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        "placed": 1,
+        "captures": 2,
+        "stolen": 1,
+        "endpoint": {
+          "player": 0,
+          "row": 0,
+          "index": 0
+        }
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              2,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              2,
+              2
+            ]
+          ],
+          [
+            [
+              2,
+              2,
+              0,
+              3,
+              13,
+              4,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          12,
+          13
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          true
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 14,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "left",
+        "side": "right",
+        "houseChoice": "stop"
+      },
+      "entry": {
+        "player": 1,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        "placed": 1,
+        "captures": 1,
+        "stolen": 0,
+        "endpoint": null
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              0,
+              1,
+              0,
+              1,
+              1,
+              0,
+              2,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              2,
+              2
+            ]
+          ],
+          [
+            [
+              2,
+              2,
+              0,
+              3,
+              13,
+              5,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          12,
+          12
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          true
+        ],
+        "player": 0,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 15,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 7,
+        "direction": "left",
+        "side": "right",
+        "houseChoice": "stop"
+      },
+      "entry": {
+        "player": 0,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        "placed": 1,
+        "captures": 2,
+        "stolen": 1,
+        "endpoint": {
+          "player": 0,
+          "row": 0,
+          "index": 6
+        }
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              1,
+              2,
+              1,
+              2,
+              2,
+              1,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              2,
+              2
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              0,
+              3,
+              13,
+              5,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          10,
+          11
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          true
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 16,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 7,
+        "direction": "left",
+        "side": "right",
+        "houseChoice": "stop"
+      },
+      "entry": {
+        "player": 1,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        "placed": 1,
+        "captures": 3,
+        "stolen": 1,
+        "endpoint": {
+          "player": 1,
+          "row": 0,
+          "index": 6
+        }
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              0,
+              0,
+              1,
+              0,
+              2,
+              1,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              2,
+              2
+            ]
+          ],
+          [
+            [
+              1,
+              1,
+              1,
+              4,
+              15,
+              7,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          9,
+          9
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          true
+        ],
+        "player": 0,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 17,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "right",
+        "side": "left",
+        "houseChoice": "stop"
+      },
+      "entry": {
+        "player": 0,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        "placed": 1,
+        "captures": 1,
+        "stolen": 0,
+        "endpoint": null
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              1,
+              0,
+              1,
+              0,
+              2,
+              2,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              2,
+              2
+            ]
+          ],
+          [
+            [
+              1,
+              1,
+              0,
+              4,
+              15,
+              7,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          8,
+          9
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          true
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 18,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 7,
+        "direction": "left",
+        "side": "right",
+        "houseChoice": "stop"
+      },
+      "entry": {
+        "player": 1,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        "placed": 1,
+        "captures": 2,
+        "stolen": 1,
+        "endpoint": {
+          "player": 1,
+          "row": 0,
+          "index": 6
+        }
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              2,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              2,
+              2
+            ]
+          ],
+          [
+            [
+              1,
+              1,
+              1,
+              6,
+              17,
+              9,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          7,
+          7
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          true
+        ],
+        "player": 0,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 19,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 2,
+        "direction": "left",
+        "side": "right",
+        "houseChoice": "stop"
+      },
+      "entry": {
+        "player": 0,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        "placed": 1,
+        "captures": 1,
+        "stolen": 0,
+        "endpoint": null
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              1,
+              1,
+              3,
+              1,
+              1,
+              3,
+              1,
+              6
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              2,
+              2
+            ]
+          ],
+          [
+            [
+              1,
+              1,
+              1,
+              6,
+              17,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          6,
+          7
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          true
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 20,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 7,
+        "direction": "left",
+        "side": "right",
+        "houseChoice": "use"
+      },
+      "entry": {
+        "player": 1,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "use"
+        },
+        "placed": 1,
+        "captures": 6,
+        "stolen": 1,
+        "endpoint": {
+          "player": 1,
+          "row": 0,
+          "index": 7
+        }
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              2,
+              2
+            ]
+          ],
+          [
+            [
+              7,
+              0,
+              1,
+              11,
+              4,
+              6,
+              5,
+              3
+            ],
+            [
+              0,
+              2,
+              0,
+              2,
+              0,
+              2,
+              2,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          5,
+          5
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          false
+        ],
+        "player": 0,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 21,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 4,
+        "direction": "left",
+        "side": "right",
+        "houseChoice": "stop"
+      },
+      "entry": {
+        "player": 0,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        "placed": 1,
+        "captures": 1,
+        "stolen": 0,
+        "endpoint": null
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              1,
+              2,
+              1,
+              1,
+              3,
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1,
+              0,
+              0,
+              1,
+              2,
+              2
+            ]
+          ],
+          [
+            [
+              7,
+              0,
+              1,
+              0,
+              4,
+              6,
+              5,
+              3
+            ],
+            [
+              0,
+              2,
+              0,
+              2,
+              0,
+              2,
+              2,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          4,
+          5
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          false
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 22,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 7,
+        "direction": "left",
+        "side": "right",
+        "houseChoice": "stop"
+      },
+      "entry": {
+        "player": 1,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 7,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        "placed": 1,
+        "captures": 3,
+        "stolen": 1,
+        "endpoint": {
+          "player": 1,
+          "row": 0,
+          "index": 7
+        }
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              0,
+              2,
+              1,
+              0,
+              3,
+              0,
+              1,
+              1
+            ],
+            [
+              2,
+              1,
+              1,
+              0,
+              0,
+              1,
+              2,
+              2
+            ]
+          ],
+          [
+            [
+              7,
+              0,
+              2,
+              1,
+              6,
+              8,
+              7,
+              1
+            ],
+            [
+              0,
+              2,
+              0,
+              2,
+              0,
+              2,
+              2,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          3,
+          3
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          false
+        ],
+        "player": 0,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 23,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 2,
+        "direction": "right",
+        "side": "left",
+        "houseChoice": "stop"
+      },
+      "entry": {
+        "player": 0,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 2,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        "placed": 1,
+        "captures": 3,
+        "stolen": 1,
+        "endpoint": {
+          "player": 0,
+          "row": 0,
+          "index": 1
+        }
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              2,
+              7,
+              5,
+              3,
+              6,
+              3,
+              0,
+              4
+            ],
+            [
+              2,
+              1,
+              1,
+              1,
+              1,
+              0,
+              3,
+              3
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              2,
+              1,
+              6,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              2,
+              0,
+              2,
+              0,
+              2,
+              2,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          1,
+          2
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          false
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 24,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 3,
+        "direction": "right",
+        "side": "left",
+        "houseChoice": "stop"
+      },
+      "entry": {
+        "player": 1,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 3,
+          "direction": "right",
+          "side": "left",
+          "houseChoice": "stop"
+        },
+        "placed": 1,
+        "captures": 1,
+        "stolen": 0,
+        "endpoint": null
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              2,
+              7,
+              5,
+              3,
+              0,
+              3,
+              0,
+              4
+            ],
+            [
+              2,
+              1,
+              1,
+              1,
+              1,
+              0,
+              3,
+              3
+            ]
+          ],
+          [
+            [
+              1,
+              1,
+              3,
+              3,
+              7,
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              2,
+              0,
+              2,
+              0,
+              2,
+              2,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          1,
+          1
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          false
+        ],
+        "player": 0,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 25,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "left",
+        "side": "right",
+        "houseChoice": "stop"
+      },
+      "entry": {
+        "player": 0,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        "placed": 1,
+        "captures": 4,
+        "stolen": 0,
+        "endpoint": null
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              1,
+              12,
+              1,
+              6,
+              3,
+              1,
+              2,
+              6
+            ],
+            [
+              0,
+              2,
+              0,
+              2,
+              0,
+              1,
+              4,
+              4
+            ]
+          ],
+          [
+            [
+              1,
+              1,
+              0,
+              0,
+              7,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              2,
+              0,
+              2,
+              2,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          0,
+          1
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          false
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 26,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 4,
+        "direction": "left",
+        "side": "right",
+        "houseChoice": "stop"
+      },
+      "entry": {
+        "player": 1,
+        "move": {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right",
+          "houseChoice": "stop"
+        },
+        "placed": 1,
+        "captures": 1,
+        "stolen": 0,
+        "endpoint": null
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              1,
+              12,
+              1,
+              0,
+              3,
+              1,
+              2,
+              6
+            ],
+            [
+              0,
+              2,
+              0,
+              2,
+              0,
+              1,
+              4,
+              4
+            ]
+          ],
+          [
+            [
+              1,
+              1,
+              1,
+              1,
+              9,
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              0,
+              2,
+              0,
+              2,
+              2,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          0,
+          0
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          false
+        ],
+        "player": 0,
+        "phase": "mtaji",
+        "winner": null,
+        "reason": "",
+        "turn": 27,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "row": 1,
+        "index": 1,
+        "direction": "right",
+        "type": "capture",
+        "phase": "mtaji"
+      },
+      "entry": {
+        "player": 0,
+        "move": {
+          "row": 1,
+          "index": 1,
+          "direction": "right",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "placed": 0,
+        "captures": 1,
+        "stolen": 0,
+        "endpoint": null
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              0,
+              13,
+              2,
+              1,
+              3,
+              1,
+              2,
+              6
+            ],
+            [
+              1,
+              0,
+              0,
+              2,
+              0,
+              1,
+              4,
+              4
+            ]
+          ],
+          [
+            [
+              1,
+              1,
+              1,
+              1,
+              9,
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              2,
+              0,
+              2,
+              2,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          0,
+          0
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          false
+        ],
+        "player": 1,
+        "phase": "mtaji",
+        "winner": null,
+        "reason": "",
+        "turn": 28,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "row": 1,
+        "index": 1,
+        "direction": "right",
+        "type": "capture",
+        "phase": "mtaji"
+      },
+      "entry": {
+        "player": 1,
+        "move": {
+          "row": 1,
+          "index": 1,
+          "direction": "right",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "placed": 0,
+        "captures": 3,
+        "stolen": 0,
+        "endpoint": null
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              0,
+              13,
+              0,
+              1,
+              3,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              2,
+              0,
+              1,
+              4,
+              4
+            ]
+          ],
+          [
+            [
+              5,
+              0,
+              3,
+              3,
+              11,
+              0,
+              2,
+              1
+            ],
+            [
+              1,
+              0,
+              1,
+              3,
+              1,
+              0,
+              3,
+              0
+            ]
+          ]
+        ],
+        "reserve": [
+          0,
+          0
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          false
+        ],
+        "player": 0,
+        "phase": "mtaji",
+        "winner": null,
+        "reason": "",
+        "turn": 29,
+        "pending": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "move": {
+        "row": 1,
+        "index": 7,
+        "direction": "left",
+        "type": "capture",
+        "phase": "mtaji"
+      },
+      "entry": {
+        "player": 0,
+        "move": {
+          "row": 1,
+          "index": 7,
+          "direction": "left",
+          "type": "capture",
+          "phase": "mtaji"
+        },
+        "placed": 0,
+        "captures": 6,
+        "stolen": 0,
+        "endpoint": null
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              2,
+              3,
+              0,
+              6,
+              8,
+              3,
+              6,
+              6
+            ],
+            [
+              0,
+              2,
+              0,
+              4,
+              2,
+              0,
+              6,
+              2
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              3,
+              1,
+              0,
+              3,
+              0
+            ]
+          ]
+        ],
+        "reserve": [
+          0,
+          0
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          false
+        ],
+        "player": 0,
+        "phase": "mtaji",
+        "winner": 0,
+        "reason": "front-empty",
+        "turn": 29,
+        "pending": [
+          5,
+          0
+        ]
+      }
+    }
+  ]
+}

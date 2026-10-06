@@ -1,0 +1,1087 @@
+{
+  "signature": "d63020b52484db630b42b652a3568ee1a4cae58357b25d7d6bccf50a00bc331a",
+  "model": "B-early",
+  "start": 120,
+  "rows": [
+    {
+      "index": 120,
+      "seed": 323147567,
+      "games": [
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 323147567,
+          "swapStreams": false,
+          "plies": 15,
+          "namuaMoves": 15,
+          "mtajiMoves": 0,
+          "nyakua": 6,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 4,
+          "backAdds": 0,
+          "houseAdds": 0,
+          "winner": 0,
+          "reason": "front-empty",
+          "finalHash": "128a2f7c0a2bc2611d389a6bb8fee1a495eb25d2689f255655e6d94947abf85f"
+        },
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 323147567,
+          "swapStreams": true,
+          "plies": 20,
+          "namuaMoves": 20,
+          "mtajiMoves": 0,
+          "nyakua": 11,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 12,
+          "backAdds": 0,
+          "houseAdds": 1,
+          "winner": 1,
+          "reason": "front-empty",
+          "finalHash": "e2868c46f589902f2094cc21a545530137012d9cc2d520b5afd2de574d4f46c7"
+        }
+      ]
+    },
+    {
+      "index": 121,
+      "seed": 2977583328,
+      "games": [
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 2977583328,
+          "swapStreams": false,
+          "plies": 41,
+          "namuaMoves": 22,
+          "mtajiMoves": 19,
+          "nyakua": 11,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 12,
+          "backAdds": 0,
+          "houseAdds": 0,
+          "winner": 0,
+          "reason": "no-move",
+          "finalHash": "c16226645a96e467db9f31384463df7cfafb84b64318af3800442dc0a5ba5ba7"
+        },
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 2977583328,
+          "swapStreams": true,
+          "plies": 17,
+          "namuaMoves": 17,
+          "mtajiMoves": 0,
+          "nyakua": 9,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 4,
+          "backAdds": 2,
+          "houseAdds": 0,
+          "winner": 0,
+          "reason": "front-empty",
+          "finalHash": "f160bb75c2ccb9e6c102bd871d8377b2db3a54ec6dc5248316ec290aeaf6201e"
+        }
+      ]
+    },
+    {
+      "index": 122,
+      "seed": 1337051793,
+      "games": [
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 1337051793,
+          "swapStreams": false,
+          "plies": 23,
+          "namuaMoves": 22,
+          "mtajiMoves": 1,
+          "nyakua": 11,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 4,
+          "backAdds": 0,
+          "houseAdds": 2,
+          "winner": 0,
+          "reason": "front-empty",
+          "finalHash": "9ccfbacc47abd6dd11bc7ddd3e968a001c1123a9cd127fb0b374463ac996c2ce"
+        },
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 1337051793,
+          "swapStreams": true,
+          "plies": 39,
+          "namuaMoves": 24,
+          "mtajiMoves": 15,
+          "nyakua": 10,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 14,
+          "backAdds": 1,
+          "houseAdds": 0,
+          "winner": 0,
+          "reason": "no-move",
+          "finalHash": "feddd265f6703109634a080ff2d69a8730304c6ce348fec5a2299a2f8a22a7cb"
+        }
+      ]
+    },
+    {
+      "index": 123,
+      "seed": 3991487554,
+      "games": [
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 3991487554,
+          "swapStreams": false,
+          "plies": 27,
+          "namuaMoves": 27,
+          "mtajiMoves": 0,
+          "nyakua": 7,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 14,
+          "backAdds": 1,
+          "houseAdds": 0,
+          "winner": 0,
+          "reason": "front-empty",
+          "finalHash": "513219be09db193aff816c5cfb0b881fcad1b1f044fa37c24f3c96e49d6d33ff"
+        },
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 3991487554,
+          "swapStreams": true,
+          "plies": 24,
+          "namuaMoves": 24,
+          "mtajiMoves": 0,
+          "nyakua": 9,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 18,
+          "backAdds": 0,
+          "houseAdds": 1,
+          "winner": 1,
+          "reason": "front-empty",
+          "finalHash": "129b6786192d6f28e5d0b1c714e233c2b057f96a8bcc535bc1fa65b439d04cc9"
+        }
+      ]
+    },
+    {
+      "index": 124,
+      "seed": 2350956019,
+      "games": [
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 2350956019,
+          "swapStreams": false,
+          "plies": 12,
+          "namuaMoves": 12,
+          "mtajiMoves": 0,
+          "nyakua": 5,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 8,
+          "backAdds": 0,
+          "houseAdds": 0,
+          "winner": 1,
+          "reason": "front-empty",
+          "finalHash": "f4a50ab53d550bea4ad29c12192bcd116d7bff99e426e913b431b1ac67d92e37"
+        },
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 2350956019,
+          "swapStreams": true,
+          "plies": 11,
+          "namuaMoves": 11,
+          "mtajiMoves": 0,
+          "nyakua": 3,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 3,
+          "backAdds": 0,
+          "houseAdds": 0,
+          "winner": 0,
+          "reason": "front-empty",
+          "finalHash": "946b4a46a63931ffab0de740a123c9c290c0eb7d0f0411656537b384a9b85fdf"
+        }
+      ]
+    },
+    {
+      "index": 125,
+      "seed": 710424484,
+      "games": [
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 710424484,
+          "swapStreams": false,
+          "plies": 17,
+          "namuaMoves": 17,
+          "mtajiMoves": 0,
+          "nyakua": 9,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 4,
+          "backAdds": 2,
+          "houseAdds": 0,
+          "winner": 0,
+          "reason": "front-empty",
+          "finalHash": "a0269017deb3c29b61faaa1c4595b2d1a7278930cb7eb086965fa7ac07002ade"
+        },
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 710424484,
+          "swapStreams": true,
+          "plies": 47,
+          "namuaMoves": 28,
+          "mtajiMoves": 19,
+          "nyakua": 8,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 15,
+          "backAdds": 0,
+          "houseAdds": 0,
+          "winner": 0,
+          "reason": "front-empty",
+          "finalHash": "44bcab7a941ae71340ab5eb66845c68a00e7c46deea67850e2e646233b7cabf5"
+        }
+      ]
+    },
+    {
+      "index": 126,
+      "seed": 3364860245,
+      "games": [
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 3364860245,
+          "swapStreams": false,
+          "plies": 36,
+          "namuaMoves": 22,
+          "mtajiMoves": 14,
+          "nyakua": 11,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 6,
+          "backAdds": 0,
+          "houseAdds": 0,
+          "winner": 1,
+          "reason": "no-move",
+          "finalHash": "0cce030ffe921819fc38a2307d33138bff05b625e7a61c1ba9d7ed4ac53f6426"
+        },
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 3364860245,
+          "swapStreams": true,
+          "plies": 24,
+          "namuaMoves": 24,
+          "mtajiMoves": 0,
+          "nyakua": 10,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 18,
+          "backAdds": 1,
+          "houseAdds": 0,
+          "winner": 1,
+          "reason": "front-empty",
+          "finalHash": "41aac5205872b6f83e142c34093c486958adfcee1b4856256481ebcfa1c1e2d9"
+        }
+      ]
+    },
+    {
+      "index": 127,
+      "seed": 1724328710,
+      "games": [
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 1724328710,
+          "swapStreams": false,
+          "plies": 25,
+          "namuaMoves": 24,
+          "mtajiMoves": 1,
+          "nyakua": 10,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 8,
+          "backAdds": 0,
+          "houseAdds": 0,
+          "winner": 0,
+          "reason": "front-empty",
+          "finalHash": "7237d8668ec0da799387751de08192474127fea52755ba4d5bda66d88653d99c"
+        },
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 1724328710,
+          "swapStreams": true,
+          "plies": 37,
+          "namuaMoves": 26,
+          "mtajiMoves": 11,
+          "nyakua": 9,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 10,
+          "backAdds": 0,
+          "houseAdds": 0,
+          "winner": 0,
+          "reason": "front-empty",
+          "finalHash": "8455cdc0030e6dcdd8a1b0a604f24fef5c9aa1a1e215f0641e25a28c9c702046"
+        }
+      ]
+    },
+    {
+      "index": 128,
+      "seed": 83797175,
+      "games": [
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 83797175,
+          "swapStreams": false,
+          "plies": 14,
+          "namuaMoves": 14,
+          "mtajiMoves": 0,
+          "nyakua": 7,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 7,
+          "backAdds": 2,
+          "houseAdds": 0,
+          "winner": 1,
+          "reason": "front-empty",
+          "finalHash": "d813eac7eb51bb0cdf50e94de56c5070034a7a3e0ccbb2fd39a929883a2b775c"
+        },
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 83797175,
+          "swapStreams": true,
+          "plies": 10,
+          "namuaMoves": 10,
+          "mtajiMoves": 0,
+          "nyakua": 3,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 2,
+          "backAdds": 0,
+          "houseAdds": 0,
+          "winner": 1,
+          "reason": "front-empty",
+          "finalHash": "bf9dc97ed42f529ff1dc420d8f8d4f280a9fff79856c53c37a6b11aad5c0ba8b"
+        }
+      ]
+    },
+    {
+      "index": 129,
+      "seed": 2738232936,
+      "games": [
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 2738232936,
+          "swapStreams": false,
+          "plies": 13,
+          "namuaMoves": 13,
+          "mtajiMoves": 0,
+          "nyakua": 2,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 2,
+          "backAdds": 0,
+          "houseAdds": 0,
+          "winner": 0,
+          "reason": "front-empty",
+          "finalHash": "c260688994b6a85cf66fc5720db593a11411655e900f225cecae9a08e272f496"
+        },
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 2738232936,
+          "swapStreams": true,
+          "plies": 24,
+          "namuaMoves": 22,
+          "mtajiMoves": 2,
+          "nyakua": 11,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 5,
+          "backAdds": 0,
+          "houseAdds": 1,
+          "winner": 1,
+          "reason": "front-empty",
+          "finalHash": "8757e43f8ad81a4a2be92b595b34532f23ae0b894f2453cc97c6b5171c863d77"
+        }
+      ]
+    },
+    {
+      "index": 130,
+      "seed": 1097701401,
+      "games": [
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 1097701401,
+          "swapStreams": false,
+          "plies": 40,
+          "namuaMoves": 28,
+          "mtajiMoves": 12,
+          "nyakua": 8,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 10,
+          "backAdds": 1,
+          "houseAdds": 1,
+          "winner": 1,
+          "reason": "front-empty",
+          "finalHash": "8502322b8e7672a63357b76a3c27e3664e5db4ffc73e4b5eb22cb8c89b71ac1e"
+        },
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 1097701401,
+          "swapStreams": true,
+          "plies": 29,
+          "namuaMoves": 24,
+          "mtajiMoves": 5,
+          "nyakua": 10,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 8,
+          "backAdds": 0,
+          "houseAdds": 0,
+          "winner": 0,
+          "reason": "front-empty",
+          "finalHash": "ff0a2517bc84ac4c6ef66d27857cf1df64a938782518eeb41fe41232dc42b165"
+        }
+      ]
+    },
+    {
+      "index": 131,
+      "seed": 3752137162,
+      "games": [
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 3752137162,
+          "swapStreams": false,
+          "plies": 20,
+          "namuaMoves": 20,
+          "mtajiMoves": 0,
+          "nyakua": 11,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 11,
+          "backAdds": 0,
+          "houseAdds": 1,
+          "winner": 1,
+          "reason": "front-empty",
+          "finalHash": "b5c2bb2afac2a5fce20856d14c45d099d7d0605cd2d52c935f7ce96fcdc7320e"
+        },
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 3752137162,
+          "swapStreams": true,
+          "plies": 10,
+          "namuaMoves": 10,
+          "mtajiMoves": 0,
+          "nyakua": 3,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 2,
+          "backAdds": 0,
+          "houseAdds": 0,
+          "winner": 1,
+          "reason": "front-empty",
+          "finalHash": "bf9dc97ed42f529ff1dc420d8f8d4f280a9fff79856c53c37a6b11aad5c0ba8b"
+        }
+      ]
+    },
+    {
+      "index": 132,
+      "seed": 2111605627,
+      "games": [
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 2111605627,
+          "swapStreams": false,
+          "plies": 38,
+          "namuaMoves": 24,
+          "mtajiMoves": 14,
+          "nyakua": 10,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 9,
+          "backAdds": 2,
+          "houseAdds": 0,
+          "winner": 1,
+          "reason": "no-move",
+          "finalHash": "b28eed7c25934ee35c4b3aa7de33312fdec42b3cffb27c5d5a350d0389a4bbd4"
+        },
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 2111605627,
+          "swapStreams": true,
+          "plies": 39,
+          "namuaMoves": 28,
+          "mtajiMoves": 11,
+          "nyakua": 8,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 8,
+          "backAdds": 0,
+          "houseAdds": 0,
+          "winner": 0,
+          "reason": "front-empty",
+          "finalHash": "cdc6307ae1373fb7b4b94b41d429a5eaf13962761322e67ac0eea62dd736262e"
+        }
+      ]
+    },
+    {
+      "index": 133,
+      "seed": 471074092,
+      "games": [
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 471074092,
+          "swapStreams": false,
+          "plies": 19,
+          "namuaMoves": 19,
+          "mtajiMoves": 0,
+          "nyakua": 8,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 11,
+          "backAdds": 0,
+          "houseAdds": 0,
+          "winner": 0,
+          "reason": "front-empty",
+          "finalHash": "4f4d2237e3362fff580ad2dbe7f6459ffa7ccddac216b8ee4cc7742130654d12"
+        },
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 471074092,
+          "swapStreams": true,
+          "plies": 34,
+          "namuaMoves": 32,
+          "mtajiMoves": 2,
+          "nyakua": 6,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 9,
+          "backAdds": 1,
+          "houseAdds": 0,
+          "winner": 1,
+          "reason": "no-move",
+          "finalHash": "b7ee2586ddcb55c7750242c7886cd6783dad639ae3d27b374b7331a5b5ddce9d"
+        }
+      ]
+    },
+    {
+      "index": 134,
+      "seed": 3125509853,
+      "games": [
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 3125509853,
+          "swapStreams": false,
+          "plies": 30,
+          "namuaMoves": 30,
+          "mtajiMoves": 0,
+          "nyakua": 6,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 11,
+          "backAdds": 0,
+          "houseAdds": 1,
+          "winner": 1,
+          "reason": "front-empty",
+          "finalHash": "0fbf47830be0bd8513dcb7c56f087a9162dc5765b287414bb322acaf9460c3b6"
+        },
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 3125509853,
+          "swapStreams": true,
+          "plies": 32,
+          "namuaMoves": 22,
+          "mtajiMoves": 10,
+          "nyakua": 11,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 11,
+          "backAdds": 0,
+          "houseAdds": 1,
+          "winner": 1,
+          "reason": "no-move",
+          "finalHash": "caca083d2f303d2e07873b921a5861258cdfe4c8822742bcf031b62b683b2cd5"
+        }
+      ]
+    },
+    {
+      "index": 135,
+      "seed": 1484978318,
+      "games": [
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 1484978318,
+          "swapStreams": false,
+          "plies": 14,
+          "namuaMoves": 14,
+          "mtajiMoves": 0,
+          "nyakua": 7,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 7,
+          "backAdds": 2,
+          "houseAdds": 0,
+          "winner": 1,
+          "reason": "front-empty",
+          "finalHash": "d813eac7eb51bb0cdf50e94de56c5070034a7a3e0ccbb2fd39a929883a2b775c"
+        },
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 1484978318,
+          "swapStreams": true,
+          "plies": 28,
+          "namuaMoves": 24,
+          "mtajiMoves": 4,
+          "nyakua": 10,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 10,
+          "backAdds": 0,
+          "houseAdds": 0,
+          "winner": 1,
+          "reason": "no-move",
+          "finalHash": "5ace28d8f3d161cc10ed39f7bffbc34a146fdde91dc838b936f65af4eb7a85b1"
+        }
+      ]
+    },
+    {
+      "index": 136,
+      "seed": 4139414079,
+      "games": [
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 4139414079,
+          "swapStreams": false,
+          "plies": 15,
+          "namuaMoves": 15,
+          "mtajiMoves": 0,
+          "nyakua": 8,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 3,
+          "backAdds": 1,
+          "houseAdds": 0,
+          "winner": 0,
+          "reason": "front-empty",
+          "finalHash": "6c2ce8de82f327d78c5e405a76c3adc39c39838092263f739b27c6f6ca4dd869"
+        },
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 4139414079,
+          "swapStreams": true,
+          "plies": 12,
+          "namuaMoves": 12,
+          "mtajiMoves": 0,
+          "nyakua": 5,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 8,
+          "backAdds": 0,
+          "houseAdds": 0,
+          "winner": 1,
+          "reason": "front-empty",
+          "finalHash": "f4a50ab53d550bea4ad29c12192bcd116d7bff99e426e913b431b1ac67d92e37"
+        }
+      ]
+    },
+    {
+      "index": 137,
+      "seed": 2498882544,
+      "games": [
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 2498882544,
+          "swapStreams": false,
+          "plies": 15,
+          "namuaMoves": 15,
+          "mtajiMoves": 0,
+          "nyakua": 8,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 3,
+          "backAdds": 1,
+          "houseAdds": 0,
+          "winner": 0,
+          "reason": "front-empty",
+          "finalHash": "6c2ce8de82f327d78c5e405a76c3adc39c39838092263f739b27c6f6ca4dd869"
+        },
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 2498882544,
+          "swapStreams": true,
+          "plies": 27,
+          "namuaMoves": 26,
+          "mtajiMoves": 1,
+          "nyakua": 9,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 9,
+          "backAdds": 0,
+          "houseAdds": 0,
+          "winner": 0,
+          "reason": "no-move",
+          "finalHash": "242f6d0114aef5641acbb61448a21fef8a0341043a81fdd111a2ed6085cd0a26"
+        }
+      ]
+    },
+    {
+      "index": 138,
+      "seed": 858351009,
+      "games": [
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 858351009,
+          "swapStreams": false,
+          "plies": 24,
+          "namuaMoves": 24,
+          "mtajiMoves": 0,
+          "nyakua": 10,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 8,
+          "backAdds": 0,
+          "houseAdds": 0,
+          "winner": 1,
+          "reason": "front-empty",
+          "finalHash": "4b61df55ac3c66b1c254fbd875e72c7fa28f4ad7b6e937d2a299ae051862a6be"
+        },
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 858351009,
+          "swapStreams": true,
+          "plies": 21,
+          "namuaMoves": 21,
+          "mtajiMoves": 0,
+          "nyakua": 9,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 4,
+          "backAdds": 0,
+          "houseAdds": 0,
+          "winner": 0,
+          "reason": "front-empty",
+          "finalHash": "7ae567d688e847f76aca19656aa335000c8366b5aa3b31aa57e14f6c424c25b1"
+        }
+      ]
+    },
+    {
+      "index": 139,
+      "seed": 3512786770,
+      "games": [
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 3512786770,
+          "swapStreams": false,
+          "plies": 18,
+          "namuaMoves": 18,
+          "mtajiMoves": 0,
+          "nyakua": 8,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 4,
+          "backAdds": 1,
+          "houseAdds": 0,
+          "winner": 1,
+          "reason": "front-empty",
+          "finalHash": "eeb2224ed5cfb5969e9f5dc2a06f17272270da5ae10eded6e9f2cd95e79c7f4e"
+        },
+        {
+          "model": "B-early",
+          "policies": [
+            "greedy",
+            "greedy"
+          ],
+          "seed": 3512786770,
+          "swapStreams": true,
+          "plies": 27,
+          "namuaMoves": 27,
+          "mtajiMoves": 0,
+          "nyakua": 8,
+          "passes": 0,
+          "searchNodes": 0,
+          "budgetStops": 0,
+          "searchDecisions": 0,
+          "completedDepthSum": 0,
+          "maxRelays": 8,
+          "backAdds": 1,
+          "houseAdds": 0,
+          "winner": 0,
+          "reason": "front-empty",
+          "finalHash": "f9a2f4c32454cbe8bf251131c694b6c9ec7daff26de96e5c5415d4b1ccb3b97a"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "metadata": {
+    "study": "NYAKUA-CONTINUE-B-20261006",
+    "reference": "1daf4d1bcbc6a115f1788da9fbd501b2dd036fe1",
+    "task": "search4",
+    "n": 80,
+    "config": {
+      "policies": [
+        "search4",
+        "search4"
+      ],
+      "pairs": 80
+    },
+    "sourceHashes": {
+      "engine.cjs": "52f331a5d7a319bf0efe66bfad1527739591439f113f5810364924b6dfa52da7",
+      "core.cjs": "1b4ffb68c8b85bea67ecffe1bcdf7d7c3986521ff90e00f4ac8d9e196831a03b",
+      "run.cjs": "5ef70732f59e43d8c6f368d9f9f8f09858ba30bf199b240f0378b5365949d82d",
+      "proof.cjs": "21d3ef5ce327b736551d3db51fa551c93d4d90ccb238be7cf6c9e46621854cdc",
+      "check.cjs": "da647596fc8e00f70c5b2df1b99c081ae7139068ffbe29d96d0e62697b738443",
+      "report.cjs": "2cce305b1442091bdda8f89c0d3d7cf9dd70d6a8bf01d2c0745e600de771f89c",
+      "../nyakua-end-pit/engine.cjs": "ec2a3b137e98c36aadb8773ea3f6fce03962dd51765d20fa50ef7f3afab61f1c",
+      "../nyakua-end-pit/core.cjs": "b3970df92fb4ef903bf3673bd27bc5f198e8e01ed96b16d1ec6d972a3b7a3c62",
+      "../nyakua-end-pit/legacy-cycle.json": "f3f4b8a3f07e82be273ff6379fedad8deb0e2ddd7d144756b97ab1f9e299ccb3",
+      "../nyakua-end-pit/diagnostics/followup.cjs": "2e5dc28f35b393bc853e4665ab06cdf02380091bea693ee374f282cf107fb570",
+      "../../prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+      "../../prototype/steal.js": "a1886cdc5b3b9f8a69eb1955e8990deca809d6dc786491afd23f669a77be7ad2"
+    },
+    "node": "v24.19.0",
+    "commit": "de32fb1c4712620e8598241d7894209c25f3a1cc",
+    "runId": "37401153919"
+  },
+  "signature": "7504140e22c82c2d7af40612f2f39fd32cd28be89f735cd34949b8b9bcb9e21a",
+  "completed": true,
+  "results": [
+    {
+      "model": "B-early",
+      "pairs": 80,
+      "n": 160,
+      "normal": 160,
+      "firstWins": 104,
+      "secondWins": 56,
+      "firstWinPct": 65,
+      "descriptiveWilson95Pct": [
+        57.33641382681218,
+        71.9602003072064
+      ],
+      "completePairs": 80,
+      "pairMeanFirstWinPct": 65,
+      "pairCluster95Pct": [
+        56.93542576187715,
+        73.06457423812286
+      ],
+      "firstWinsAllGameBoundsPct": [
+        65,
+        65
+      ],
+      "avgPlies": 60.9875,
+      "p95Plies": 83,
+      "maxPlies": 99,
+      "avgNamuaMoves": 39.275,
+      "mtajiPlayed": 160,
+      "nyakua": 378,
+      "passes": 0,
+      "backAdds": 1,
+      "houseAdds": 4,
+      "maxRelays": 26,
+      "searchNodes": 1329788,
+      "budgetStops": 0,
+      "avgCompletedDepth": 4,
+      "reasons": {
+        "front-empty": 118,
+        "no-move": 42
+      }
+    },
+    {
+      "model": "B-end",
+      "pairs": 80,
+      "n": 160,
+      "normal": 160,
+      "firstWins": 102,
+      "secondWins": 58,
+      "firstWinPct": 63.75,
+      "descriptiveWilson95Pct": [
+        56.059669053027264,
+        70.7955605698231
+      ],
+      "completePairs": 80,
+      "pairMeanFirstWinPct": 63.74999999999999,
+      "pairCluster95Pct": [
+        57.00381925047753,
+        70.49618074952247
+      ],
+      "firstWinsAllGameBoundsPct": [
+        63.75,
+        63.75
+      ],
+      "avgPlies": 51.6125,
+      "p95Plies": 75,
+      "maxPlies": 84,
+      "avgNamuaMoves": 34.05,
+      "mtajiPlayed": 156,
+      "nyakua": 780,
+      "passes": 0,
+      "backAdds": 81,
+      "houseAdds": 136,
+      "maxRelays": 31,
+      "searchNodes": 1325668,
+      "budgetStops": 0,
+      "avgCompletedDepth": 4,
+      "reasons": {
+        "front-empty": 113,
+        "no-move": 47
+      }
+    },
+    {
+      "model": "A",
+      "pairs": 80,
+      "n": 160,
+      "normal": 149,
+      "firstWins": 94,
+      "secondWins": 55,
+      "firstWinPct": 63.08724832214765,
+      "descriptiveWilson95Pct": [
+        55.100808823832594,
+        70.41582801374776
+      ],
+      "completePairs": 69,
+      "pairMeanFirstWinPct": 61.59420289855072,
+      "pairCluster95Pct": [
+        54.54318919312971,
+        68.64521660397173
+      ],
+      "firstWinsAllGameBoundsPct": [
+        58.75,
+        65.625
+      ],
+      "avgPlies": 53.175,
+      "p95Plies": 77,
+      "maxPlies": 91,
+      "avgNamuaMoves": 36.7875,
+      "mtajiPlayed": 152,
+      "nyakua": 525,
+      "passes": 0,
+      "backAdds": 85,
+      "houseAdds": 150,
+      "maxRelays": 512,
+      "searchNodes": 1307566,
+      "budgetStops": 0,
+      "avgCompletedDepth": 4,
+      "reasons": {
+        "no-move": 28,
+        "front-empty": 121,
+        "relay-limit": 11
+      }
+    },
+    {
+      "model": "current",
+      "pairs": 80,
+      "n": 160,
+      "normal": 159,
+      "firstWins": 66,
+      "secondWins": 93,
+      "firstWinPct": 41.509433962264154,
+      "descriptiveWilson95Pct": [
+        34.13906402866306,
+        49.28039181170634
+      ],
+      "completePairs": 79,
+      "pairMeanFirstWinPct": 41.139240506329116,
+      "pairCluster95Pct": [
+        33.09508184392843,
+        49.1833991687298
+      ],
+      "firstWinsAllGameBoundsPct": [
+        41.25,
+        41.875
+      ],
+      "avgPlies": 55.30625,
+      "p95Plies": 87,
+      "maxPlies": 105,
+      "avgNamuaMoves": 36.3375,
+      "mtajiPlayed": 156,
+      "nyakua": 630,
+      "passes": 0,
+      "backAdds": 0,
+      "houseAdds": 0,
+      "maxRelays": 512,
+      "searchNodes": 1341805,
+      "budgetStops": 0,
+      "avgCompletedDepth": 4,
+      "reasons": {
+        "no-move": 38,
+        "front-empty": 121,
+        "relay-limit": 1
+      }
+    }
+  ]
+}
