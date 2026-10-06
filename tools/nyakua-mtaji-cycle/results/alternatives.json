@@ -1,0 +1,2567 @@
+{
+  "status": "PASS",
+  "maxDepth": 14,
+  "nodesPerDepth": 100000,
+  "deadlineMsPerAlternative": 45000,
+  "records": [
+    {
+      "move": {
+        "row": 0,
+        "index": 2,
+        "direction": "left",
+        "type": "takata",
+        "phase": "mtaji"
+      },
+      "root": {
+        "pits": [
+          [
+            [
+              0,
+              5,
+              1,
+              3,
+              2,
+              4,
+              4,
+              6
+            ],
+            [
+              1,
+              0,
+              1,
+              1,
+              2,
+              5,
+              0,
+              2
+            ]
+          ],
+          [
+            [
+              1,
+              2,
+              0,
+              0,
+              5,
+              0,
+              1,
+              0
+            ],
+            [
+              2,
+              3,
+              4,
+              0,
+              4,
+              3,
+              1,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          0,
+          0
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          false
+        ],
+        "player": 0,
+        "phase": "mtaji",
+        "winner": null,
+        "reason": "",
+        "turn": 41,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "records": [
+        {
+          "depth": 1,
+          "result": "UNKNOWN",
+          "nodes": 6,
+          "hits": 0,
+          "elapsedMs": 3,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "result": "UNKNOWN",
+          "nodes": 18,
+          "hits": 0,
+          "elapsedMs": 4,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": -1
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "result": "UNKNOWN",
+          "nodes": 60,
+          "hits": 0,
+          "elapsedMs": 5,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": -1
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "result": "UNKNOWN",
+          "nodes": 248,
+          "hits": 0,
+          "elapsedMs": 13,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": -1
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "result": "UNKNOWN",
+          "nodes": 852,
+          "hits": 0,
+          "elapsedMs": 30,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": -1
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 6,
+          "result": "UNKNOWN",
+          "nodes": 2962,
+          "hits": 0,
+          "elapsedMs": 87,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": -1
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 7,
+          "result": "UNKNOWN",
+          "nodes": 9034,
+          "hits": 0,
+          "elapsedMs": 231,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": -1
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 8,
+          "result": "UNKNOWN",
+          "nodes": 30032,
+          "hits": 2,
+          "elapsedMs": 761,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": -1
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 9,
+          "result": "UNKNOWN",
+          "nodes": 92177,
+          "hits": 56,
+          "elapsedMs": 2249,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": -1
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 10,
+          "result": "NODE_BUDGET",
+          "nodes": 100001,
+          "hits": 121,
+          "elapsedMs": 2463
+        }
+      ],
+      "certificate": null,
+      "provenance": [
+        {
+          "path": "prototype/next-turn-engine.js",
+          "sha256": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f"
+        },
+        {
+          "path": "prototype/steal.js",
+          "sha256": "a1886cdc5b3b9f8a69eb1955e8990deca809d6dc786491afd23f669a77be7ad2"
+        },
+        {
+          "path": "tools/nyakua-end-pit/engine.cjs",
+          "sha256": "ec2a3b137e98c36aadb8773ea3f6fce03962dd51765d20fa50ef7f3afab61f1c"
+        },
+        {
+          "path": "tools/nyakua-end-pit/core.cjs",
+          "sha256": "b3970df92fb4ef903bf3673bd27bc5f198e8e01ed96b16d1ec6d972a3b7a3c62"
+        },
+        {
+          "path": "tools/nyakua-end-pit/proof.cjs",
+          "sha256": "ab18f53e338e2e9e672f087fd17d5532a400edecdf5c8c5a1fe471fc5aa9da6e"
+        }
+      ],
+      "maxDepth": 14,
+      "budget": 100000
+    },
+    {
+      "move": {
+        "row": 0,
+        "index": 4,
+        "direction": "left",
+        "type": "takata",
+        "phase": "mtaji"
+      },
+      "root": {
+        "pits": [
+          [
+            [
+              0,
+              5,
+              1,
+              3,
+              2,
+              4,
+              4,
+              6
+            ],
+            [
+              1,
+              0,
+              1,
+              1,
+              2,
+              5,
+              0,
+              2
+            ]
+          ],
+          [
+            [
+              1,
+              2,
+              7,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              3,
+              0,
+              3,
+              4,
+              3,
+              1,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          0,
+          0
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          false
+        ],
+        "player": 0,
+        "phase": "mtaji",
+        "winner": null,
+        "reason": "",
+        "turn": 41,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "records": [
+        {
+          "depth": 1,
+          "result": "UNKNOWN",
+          "nodes": 7,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "result": "UNKNOWN",
+          "nodes": 21,
+          "hits": 0,
+          "elapsedMs": 1,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "result": "UNKNOWN",
+          "nodes": 75,
+          "hits": 0,
+          "elapsedMs": 3,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "result": "UNKNOWN",
+          "nodes": 249,
+          "hits": 0,
+          "elapsedMs": 5,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "result": "UNKNOWN",
+          "nodes": 679,
+          "hits": 0,
+          "elapsedMs": 17,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 6,
+          "result": "UNKNOWN",
+          "nodes": 2240,
+          "hits": 0,
+          "elapsedMs": 54,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 7,
+          "result": "UNKNOWN",
+          "nodes": 6229,
+          "hits": 0,
+          "elapsedMs": 144,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 8,
+          "result": "UNKNOWN",
+          "nodes": 19113,
+          "hits": 0,
+          "elapsedMs": 497,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 9,
+          "result": "UNKNOWN",
+          "nodes": 55489,
+          "hits": 6,
+          "elapsedMs": 1360,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 10,
+          "result": "NODE_BUDGET",
+          "nodes": 100001,
+          "hits": 54,
+          "elapsedMs": 2365
+        }
+      ],
+      "certificate": null,
+      "provenance": [
+        {
+          "path": "prototype/next-turn-engine.js",
+          "sha256": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f"
+        },
+        {
+          "path": "prototype/steal.js",
+          "sha256": "a1886cdc5b3b9f8a69eb1955e8990deca809d6dc786491afd23f669a77be7ad2"
+        },
+        {
+          "path": "tools/nyakua-end-pit/engine.cjs",
+          "sha256": "ec2a3b137e98c36aadb8773ea3f6fce03962dd51765d20fa50ef7f3afab61f1c"
+        },
+        {
+          "path": "tools/nyakua-end-pit/core.cjs",
+          "sha256": "b3970df92fb4ef903bf3673bd27bc5f198e8e01ed96b16d1ec6d972a3b7a3c62"
+        },
+        {
+          "path": "tools/nyakua-end-pit/proof.cjs",
+          "sha256": "ab18f53e338e2e9e672f087fd17d5532a400edecdf5c8c5a1fe471fc5aa9da6e"
+        }
+      ],
+      "maxDepth": 14,
+      "budget": 100000
+    },
+    {
+      "move": {
+        "row": 0,
+        "index": 4,
+        "direction": "right",
+        "type": "takata",
+        "phase": "mtaji"
+      },
+      "root": {
+        "pits": [
+          [
+            [
+              0,
+              5,
+              1,
+              3,
+              2,
+              4,
+              4,
+              6
+            ],
+            [
+              1,
+              0,
+              1,
+              1,
+              2,
+              5,
+              0,
+              2
+            ]
+          ],
+          [
+            [
+              0,
+              1,
+              6,
+              0,
+              0,
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              3,
+              2,
+              3,
+              2,
+              1,
+              2
+            ]
+          ]
+        ],
+        "reserve": [
+          0,
+          0
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          false
+        ],
+        "player": 0,
+        "phase": "mtaji",
+        "winner": null,
+        "reason": "",
+        "turn": 41,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "records": [
+        {
+          "depth": 1,
+          "result": "UNKNOWN",
+          "nodes": 9,
+          "hits": 0,
+          "elapsedMs": 0,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 2,
+          "result": "UNKNOWN",
+          "nodes": 20,
+          "hits": 0,
+          "elapsedMs": 1,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": -1
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 3,
+          "result": "UNKNOWN",
+          "nodes": 47,
+          "hits": 0,
+          "elapsedMs": 1,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": -1
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 4,
+          "result": "UNKNOWN",
+          "nodes": 119,
+          "hits": 0,
+          "elapsedMs": 3,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": -1
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 5,
+          "result": "UNKNOWN",
+          "nodes": 326,
+          "hits": 0,
+          "elapsedMs": 6,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": -1
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 6,
+          "result": "UNKNOWN",
+          "nodes": 1132,
+          "hits": 0,
+          "elapsedMs": 27,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": -1
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 7,
+          "result": "UNKNOWN",
+          "nodes": 3839,
+          "hits": 0,
+          "elapsedMs": 86,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": -1
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 8,
+          "result": "UNKNOWN",
+          "nodes": 14194,
+          "hits": 1,
+          "elapsedMs": 337,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": -1
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 9,
+          "result": "UNKNOWN",
+          "nodes": 48861,
+          "hits": 40,
+          "elapsedMs": 1178,
+          "openings": [
+            {
+              "move": {
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": -1
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 5,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            },
+            {
+              "move": {
+                "row": 1,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "value": 0
+            }
+          ]
+        },
+        {
+          "depth": 10,
+          "result": "NODE_BUDGET",
+          "nodes": 100001,
+          "hits": 260,
+          "elapsedMs": 2439
+        }
+      ],
+      "certificate": null,
+      "provenance": [
+        {
+          "path": "prototype/next-turn-engine.js",
+          "sha256": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f"
+        },
+        {
+          "path": "prototype/steal.js",
+          "sha256": "a1886cdc5b3b9f8a69eb1955e8990deca809d6dc786491afd23f669a77be7ad2"
+        },
+        {
+          "path": "tools/nyakua-end-pit/engine.cjs",
+          "sha256": "ec2a3b137e98c36aadb8773ea3f6fce03962dd51765d20fa50ef7f3afab61f1c"
+        },
+        {
+          "path": "tools/nyakua-end-pit/core.cjs",
+          "sha256": "b3970df92fb4ef903bf3673bd27bc5f198e8e01ed96b16d1ec6d972a3b7a3c62"
+        },
+        {
+          "path": "tools/nyakua-end-pit/proof.cjs",
+          "sha256": "ab18f53e338e2e9e672f087fd17d5532a400edecdf5c8c5a1fe471fc5aa9da6e"
+        }
+      ],
+      "maxDepth": 14,
+      "budget": 100000
+    }
+  ]
+}

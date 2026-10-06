@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "move40": {
+        "row": 0,
+        "index": 2,
+        "direction": "left",
+        "type": "takata",
+        "phase": "mtaji"
+      },
+      "seed": 2026100601,
+      "policy": "search4",
+      "randomStream": "one shared xorshift32 stream; descriptive continuation only",
+      "pliesAfter40": 15,
+      "winner": 0,
+      "reason": "front-empty",
+      "stats": {
+        "searchNodes": 1950,
+        "budgetStops": 0,
+        "completedDepthSum": 48,
+        "searchDecisions": 12
+      }
+    },
+    {
+      "move40": {
+        "row": 0,
+        "index": 4,
+        "direction": "left",
+        "type": "takata",
+        "phase": "mtaji"
+      },
+      "seed": 2026100601,
+      "policy": "search4",
+      "randomStream": "one shared xorshift32 stream; descriptive continuation only",
+      "pliesAfter40": 22,
+      "winner": 1,
+      "reason": "front-empty",
+      "stats": {
+        "searchNodes": 2684,
+        "budgetStops": 0,
+        "completedDepthSum": 72,
+        "searchDecisions": 18
+      }
+    },
+    {
+      "move40": {
+        "row": 0,
+        "index": 4,
+        "direction": "right",
+        "type": "takata",
+        "phase": "mtaji"
+      },
+      "seed": 2026100601,
+      "policy": "search4",
+      "randomStream": "one shared xorshift32 stream; descriptive continuation only",
+      "pliesAfter40": 17,
+      "winner": 0,
+      "reason": "front-empty",
+      "stats": {
+        "searchNodes": 2843,
+        "budgetStops": 0,
+        "completedDepthSum": 52,
+        "searchDecisions": 13
+      }
+    }
+  ]
+}
