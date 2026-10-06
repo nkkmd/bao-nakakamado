@@ -1,0 +1,144 @@
+{
+  "status": "PASS",
+  "BReference": "1daf4d1bcbc6a115f1788da9fbd501b2dd036fe1",
+  "AReference": "a093f527a9284184731bc44bde8ce8b62c39dc37",
+  "BSourceCommits": [
+    "de32fb1c4712620e8598241d7894209c25f3a1cc"
+  ],
+  "BRunIds": [
+    "37401153919"
+  ],
+  "checks": [
+    {
+      "task": "random",
+      "model": "A",
+      "games": 2000,
+      "status": "IDENTICAL"
+    },
+    {
+      "task": "random",
+      "model": "current",
+      "games": 2000,
+      "status": "IDENTICAL"
+    },
+    {
+      "task": "noisy",
+      "model": "A",
+      "games": 2000,
+      "status": "IDENTICAL"
+    },
+    {
+      "task": "noisy",
+      "model": "current",
+      "games": 2000,
+      "status": "IDENTICAL"
+    },
+    {
+      "task": "greedy",
+      "model": "A",
+      "games": 1000,
+      "status": "IDENTICAL"
+    },
+    {
+      "task": "greedy",
+      "model": "current",
+      "games": 1000,
+      "status": "IDENTICAL"
+    },
+    {
+      "task": "reply",
+      "model": "A",
+      "games": 600,
+      "status": "IDENTICAL"
+    },
+    {
+      "task": "reply",
+      "model": "current",
+      "games": 600,
+      "status": "IDENTICAL"
+    },
+    {
+      "task": "search3",
+      "model": "A",
+      "games": 240,
+      "status": "IDENTICAL"
+    },
+    {
+      "task": "search3",
+      "model": "current",
+      "games": 240,
+      "status": "IDENTICAL"
+    },
+    {
+      "task": "search4",
+      "model": "A",
+      "games": 160,
+      "status": "IDENTICAL"
+    },
+    {
+      "task": "search4",
+      "model": "current",
+      "games": 160,
+      "status": "IDENTICAL"
+    },
+    {
+      "task": "search6",
+      "model": "A",
+      "games": 80,
+      "status": "IDENTICAL"
+    },
+    {
+      "task": "search6",
+      "model": "current",
+      "games": 80,
+      "status": "IDENTICAL"
+    },
+    {
+      "task": "mobility",
+      "model": "A",
+      "games": 160,
+      "status": "IDENTICAL"
+    },
+    {
+      "task": "mobility",
+      "model": "current",
+      "games": 160,
+      "status": "IDENTICAL"
+    },
+    {
+      "task": "cross-0",
+      "model": "A",
+      "games": 160,
+      "status": "IDENTICAL"
+    },
+    {
+      "task": "cross-0",
+      "model": "current",
+      "games": 160,
+      "status": "IDENTICAL"
+    },
+    {
+      "task": "cross-1",
+      "model": "A",
+      "games": 120,
+      "status": "IDENTICAL"
+    },
+    {
+      "task": "cross-1",
+      "model": "current",
+      "games": 120,
+      "status": "IDENTICAL"
+    }
+  ],
+  "proof": [
+    {
+      "model": "A",
+      "status": "IDENTICAL_EXCEPT_TIMING"
+    },
+    {
+      "model": "current",
+      "status": "IDENTICAL_EXCEPT_TIMING"
+    }
+  ],
+  "scope": "All 20 comparison summaries and both control proof searches; aggregated trial statistics, not a claim of independent game implementations."
+}

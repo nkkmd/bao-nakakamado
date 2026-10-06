@@ -1,0 +1,553 @@
+{
+  "status": "PASS",
+  "source": "mobility/example-B-early-0-0.json",
+  "rootAfterPly": 50,
+  "model": "B-early",
+  "records": [
+    {
+      "depth": 1,
+      "result": "UNKNOWN",
+      "nodes": 6,
+      "hits": 0,
+      "elapsedMs": 2,
+      "openings": [
+        {
+          "move": {
+            "row": 0,
+            "index": 2,
+            "direction": "right",
+            "type": "capture",
+            "phase": "mtaji"
+          },
+          "value": 0
+        },
+        {
+          "move": {
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "type": "capture",
+            "phase": "mtaji"
+          },
+          "value": 0
+        },
+        {
+          "move": {
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "type": "capture",
+            "phase": "mtaji"
+          },
+          "value": 0
+        },
+        {
+          "move": {
+            "row": 1,
+            "index": 4,
+            "direction": "left",
+            "type": "capture",
+            "phase": "mtaji"
+          },
+          "value": 0
+        },
+        {
+          "move": {
+            "row": 1,
+            "index": 5,
+            "direction": "left",
+            "type": "capture",
+            "phase": "mtaji"
+          },
+          "value": 0
+        },
+        {
+          "move": {
+            "row": 1,
+            "index": 7,
+            "direction": "left",
+            "type": "capture",
+            "phase": "mtaji"
+          },
+          "value": 0
+        }
+      ]
+    },
+    {
+      "depth": 2,
+      "result": "UNKNOWN",
+      "nodes": 19,
+      "hits": 0,
+      "elapsedMs": 2,
+      "openings": [
+        {
+          "move": {
+            "row": 0,
+            "index": 2,
+            "direction": "right",
+            "type": "capture",
+            "phase": "mtaji"
+          },
+          "value": 0
+        },
+        {
+          "move": {
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "type": "capture",
+            "phase": "mtaji"
+          },
+          "value": 0
+        },
+        {
+          "move": {
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "type": "capture",
+            "phase": "mtaji"
+          },
+          "value": 0
+        },
+        {
+          "move": {
+            "row": 1,
+            "index": 4,
+            "direction": "left",
+            "type": "capture",
+            "phase": "mtaji"
+          },
+          "value": 0
+        },
+        {
+          "move": {
+            "row": 1,
+            "index": 5,
+            "direction": "left",
+            "type": "capture",
+            "phase": "mtaji"
+          },
+          "value": 0
+        },
+        {
+          "move": {
+            "row": 1,
+            "index": 7,
+            "direction": "left",
+            "type": "capture",
+            "phase": "mtaji"
+          },
+          "value": 0
+        }
+      ]
+    },
+    {
+      "depth": 3,
+      "result": "FIRST_FORCED_WIN",
+      "nodes": 69,
+      "hits": 0,
+      "elapsedMs": 6,
+      "openings": [
+        {
+          "move": {
+            "row": 0,
+            "index": 2,
+            "direction": "right",
+            "type": "capture",
+            "phase": "mtaji"
+          },
+          "value": 0
+        },
+        {
+          "move": {
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "type": "capture",
+            "phase": "mtaji"
+          },
+          "value": 0
+        },
+        {
+          "move": {
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "type": "capture",
+            "phase": "mtaji"
+          },
+          "value": 0
+        },
+        {
+          "move": {
+            "row": 1,
+            "index": 4,
+            "direction": "left",
+            "type": "capture",
+            "phase": "mtaji"
+          },
+          "value": 1
+        },
+        {
+          "move": {
+            "row": 1,
+            "index": 5,
+            "direction": "left",
+            "type": "capture",
+            "phase": "mtaji"
+          },
+          "value": 1
+        },
+        {
+          "move": {
+            "row": 1,
+            "index": 7,
+            "direction": "left",
+            "type": "capture",
+            "phase": "mtaji"
+          },
+          "value": 1
+        }
+      ],
+      "certificate": {
+        "status": "PASS",
+        "nodes": 4,
+        "edges": 3,
+        "defenses": 1
+      }
+    }
+  ],
+  "certificate": {
+    "model": "B-early",
+    "target": 0,
+    "root": 0,
+    "nodes": [
+      {
+        "board": {
+          "pits": [
+            [
+              [
+                0,
+                0,
+                3,
+                6,
+                1,
+                2,
+                2,
+                2
+              ],
+              [
+                1,
+                2,
+                4,
+                5,
+                5,
+                4,
+                2,
+                5
+              ]
+            ],
+            [
+              [
+                0,
+                3,
+                2,
+                0,
+                1,
+                1,
+                0,
+                3
+              ],
+              [
+                0,
+                2,
+                1,
+                4,
+                1,
+                0,
+                1,
+                1
+              ]
+            ]
+          ],
+          "reserve": [
+            0,
+            0
+          ],
+          "nyakuaReserve": [
+            0,
+            0
+          ],
+          "houseOwned": [
+            false,
+            false
+          ],
+          "player": 0,
+          "phase": "mtaji",
+          "winner": null,
+          "reason": "",
+          "turn": 51,
+          "pending": [
+            0,
+            0
+          ]
+        },
+        "remaining": 3,
+        "edges": [
+          {
+            "move": {
+              "row": 1,
+              "index": 4,
+              "direction": "left",
+              "type": "capture",
+              "phase": "mtaji"
+            },
+            "to": 1
+          }
+        ]
+      },
+      {
+        "board": {
+          "pits": [
+            [
+              [
+                0,
+                1,
+                4,
+                7,
+                2,
+                4,
+                0,
+                5
+              ],
+              [
+                1,
+                2,
+                4,
+                5,
+                0,
+                5,
+                3,
+                6
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                3
+              ],
+              [
+                0,
+                2,
+                1,
+                4,
+                1,
+                0,
+                1,
+                1
+              ]
+            ]
+          ],
+          "reserve": [
+            0,
+            0
+          ],
+          "nyakuaReserve": [
+            0,
+            0
+          ],
+          "houseOwned": [
+            false,
+            false
+          ],
+          "player": 1,
+          "phase": "mtaji",
+          "winner": null,
+          "reason": "",
+          "turn": 52,
+          "pending": [
+            0,
+            0
+          ]
+        },
+        "remaining": 2,
+        "edges": [
+          {
+            "move": {
+              "row": 0,
+              "index": 7,
+              "direction": "left",
+              "type": "capture",
+              "phase": "mtaji"
+            },
+            "to": 2
+          }
+        ]
+      },
+      {
+        "board": {
+          "pits": [
+            [
+              [
+                0,
+                1,
+                4,
+                0,
+                2,
+                4,
+                0,
+                5
+              ],
+              [
+                1,
+                2,
+                4,
+                5,
+                0,
+                5,
+                3,
+                6
+              ]
+            ],
+            [
+              [
+                0,
+                1,
+                1,
+                1,
+                3,
+                3,
+                2,
+                1
+              ],
+              [
+                0,
+                2,
+                1,
+                4,
+                1,
+                0,
+                1,
+                1
+              ]
+            ]
+          ],
+          "reserve": [
+            0,
+            0
+          ],
+          "nyakuaReserve": [
+            0,
+            0
+          ],
+          "houseOwned": [
+            false,
+            false
+          ],
+          "player": 0,
+          "phase": "mtaji",
+          "winner": null,
+          "reason": "",
+          "turn": 53,
+          "pending": [
+            0,
+            0
+          ]
+        },
+        "remaining": 1,
+        "edges": [
+          {
+            "move": {
+              "row": 1,
+              "index": 2,
+              "direction": "right",
+              "type": "capture",
+              "phase": "mtaji"
+            },
+            "to": 3
+          }
+        ]
+      },
+      {
+        "board": {
+          "pits": [
+            [
+              [
+                2,
+                1,
+                0,
+                7,
+                1,
+                9,
+                4,
+                0
+              ],
+              [
+                0,
+                6,
+                3,
+                8,
+                3,
+                1,
+                6,
+                2
+              ]
+            ],
+            [
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                2,
+                1,
+                4,
+                1,
+                0,
+                1,
+                1
+              ]
+            ]
+          ],
+          "reserve": [
+            0,
+            0
+          ],
+          "nyakuaReserve": [
+            0,
+            0
+          ],
+          "houseOwned": [
+            false,
+            false
+          ],
+          "player": 0,
+          "phase": "mtaji",
+          "winner": 0,
+          "reason": "front-empty",
+          "turn": 53,
+          "pending": [
+            1,
+            0
+          ]
+        },
+        "remaining": 0,
+        "edges": []
+      }
+    ]
+  }
+}
