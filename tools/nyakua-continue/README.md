@@ -32,4 +32,18 @@ node tools/nyakua-continue/report.cjs
 
 `.github/workflows/nyakua-continue.yml`は専用の実験ブランチへのソース更新でのみ起動します。検査、比較10条件＋必勝探索、原記録の監査、異常診断の順で実行し、全処理が通った結果を同じ実験ブランチに保存します。文書や結果の追記は再計測を起動しません。保存したSHA-256と実行commitで測定時ソースを特定できます。
 
+## 同日追補の再現
+
+計測ソースcommitは `de32fb1c4712620e8598241d7894209c25f3a1cc`、Actions実行は `37401153919`。全13ジョブ成功後に`diagnostics/`を追加し、元の計測コードは凍結したまま、160戦全勝の経路・反例・選択初手の深掘りを行いました。原比較26,080局と、反例を見つけ次第停止する追加22局を合算しません。主報告の「同日追補」の文章は集計生成後の解析記録で、`report.cjs`は原表・監査を再生成します。
+
+```bash
+node tools/nyakua-continue/diagnostics/controls.cjs
+node tools/nyakua-continue/diagnostics/mobility.cjs
+node tools/nyakua-continue/diagnostics/opening.cjs
+node tools/nyakua-continue/diagnostics/terminal.cjs
+node tools/nyakua-continue/diagnostics/audit.cjs
+```
+
+`opening.cjs`はmobilityが選んだ初手1つだけを固定し、その後の相手の全応答を探索します。各深さ150万ノード・全体120秒で、全4初手に対する30万ノードの原試験と区別します。`terminal.cjs`の証明は保存棋譜の50手終了後の局面から3手以内の勝ちで、初期局面の必勝を主張しません。反例は相手方針をgreedy/reply/search3/search4に替えた最大10局ずつの探索で、後手勝ちを見つけた時点で停止します。実行時間による停止位置が変わる可能性は予算・記録に明示します。
+
 説明文は © 2026 nkkmd and Bao Nakakamado contributors、[CC BY-SA 4.0](../../LICENSE-CC-BY-SA-4.0.txt)。調査コード・設定は[MIT](../../LICENSE)。元エンジンの権利表示は[ENGINE_LICENSE.txt](../../prototype/ENGINE_LICENSE.txt)を保持しています。

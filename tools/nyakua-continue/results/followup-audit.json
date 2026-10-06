@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "comparisonSource": "de32fb1c4712620e8598241d7894209c25f3a1cc",
+  "comparisonRunId": 37401153919,
+  "frozenTrialHashesUnchanged": true,
+  "controlSummaries": 20,
+  "controlProofSearches": 2,
+  "deterministicPolicyPrefixPlies": 50,
+  "storedPolicyExamples": 4,
+  "counterSearchGames": 22,
+  "counterexamples": [
+    {
+      "file": "counter-reply.json",
+      "plies": 52,
+      "seed": 3635976681,
+      "winner": 1,
+      "reason": "no-move"
+    },
+    {
+      "file": "counter-search3.json",
+      "plies": 48,
+      "seed": 1995445146,
+      "winner": 1,
+      "reason": "front-empty"
+    },
+    {
+      "file": "counter-search4.json",
+      "plies": 40,
+      "seed": 354913611,
+      "winner": 1,
+      "reason": "front-empty"
+    }
+  ],
+  "replayedCounterPlies": 140,
+  "referenceCounterChecks": 140,
+  "terminalCertificate": {
+    "status": "PASS",
+    "nodes": 4,
+    "edges": 3,
+    "defenses": 1
+  },
+  "followupSourceHashes": {
+    "audit.cjs": "3dda07d41e412e1c64ea0840e1cc045492d61ce25d3c86f9b1b73b4270892c96",
+    "controls.cjs": "dc012f79264fac2aef51a4eb90b386843db6a371af8b645c55f66f24873bc394",
+    "mobility.cjs": "726fc97921f77cc1cc45db02843f486230d02fbe6cdc31b6f2787249c6a950a9",
+    "opening.cjs": "fb0e8bb18ba1e2453bdbdf9e8f5d65451eb78da30b3edf26bbbc1a904780322a",
+    "terminal.cjs": "98eb7d031b34526306b7c10fd139cdee8e6cf8bce1487c62e175a596f672c1eb"
+  },
+  "followupRecordHashes": {
+    "control-audit.json": "f94f8573754cc0fb9caa925bd9b45a74323005a313e4da3a826880d11cc17147",
+    "mobility-diagnostic.json": "25f8f2ead1edf31c6a5929e972f56596de53028ec1820cf3ed758a8ee9407706",
+    "opening-followup.json": "e9acbaec6b9eaca02dc66df516933bdf5d59c287155444f91d0a4ad5f53b1e1b",
+    "mobility-terminal-proof.json": "f2b2df059da224c7a7702dcd0b9970cf828d39191a0bd6e14a271b288c07453f",
+    "counter-reply.json": "31cb60ac7ba0df4a60b16e14ce2b7f67b57bb1ec72bb9157a5d8e5682c201c69",
+    "counter-search3.json": "2a38c958130ad9d4e4d743b59ea333e9aa905e9a489114487b8a325380b16532",
+    "counter-search4.json": "d21e3c035d4d61f83aaab21df183144a5b02207ecbc1bac2455456097d0f13cd"
+  }
+}
