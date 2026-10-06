@@ -19,7 +19,7 @@ node tools/nyakua-end-pit/check.cjs
 node tools/nyakua-end-pit/run.cjs random tools/nyakua-end-pit/results/random
 node tools/nyakua-end-pit/run.cjs search4 tools/nyakua-end-pit/results/search4
 node tools/nyakua-end-pit/run.cjs proof tools/nyakua-end-pit/results/proof
-node tools/nyakua-end-pit/report.cjs
+node tools/nyakua-end-pit/audit/normalize.cjs
 ```
 
 正式比較は `run.cjs` の固定10task。各taskで案A・現行v0.8.0・ニャクアなしを同じseed群で比較し、各seedの2局で乱数列と方針の先後担当を交換します。全条件で計19,560局です。方針・局数・seed・ソースハッシュを先に固定し、全task完了まで正式な棋力・先後判定を出しません。現行学習済みモデルは新規則用ではないため、この比較は同一の手作り評価と探索によります。
@@ -39,6 +39,16 @@ node tools/nyakua-end-pit/report.cjs
 - `legacy-cycle.json` は過去のMTAJI循環の開始局面を出典付きで保存した検査fixtureです。案Aからの到達棋譜ではありません。盤・終点・方向・捕獲モードなどが一致する一着手内状態の反復で周期を確認します。
 - 勝率は正常終局だけを対象にし、安全上限・局面反復・400手を別集計。seedを単位とする区間と、現行との同seed差を記録します。区間は探索的な漸近近似で、複数比較の補正はしていません。異なる指し方を合算して真の先手勝率とは呼びません。
 - AND/OR探索は正常終局だけを証拠とします。UNKNOWNは引き分けや必勝ルート不在の証明ではありません。証明できた場合は全防御を覆う証明木を保存・検証します。初期局面と途中の到達局面の証明を区別します。
+
+## 完了記録と集計の修正
+
+比較run 37398350927のchecks・全11調査jobで19,560局と必勝探索を完了しました。元のreportは、非探索方針の平均探索深さが内部NaN／JSONのnullになるため、厳密比較で停止しました。凍結したソース・checkpointを変えず、`audit/normalize.cjs` が再計算した集計をJSONの表現へそろえてから比較します。再監査run 37398582956で489ブロックと132棋譜を検証しました。`report.cjs` の直接実行は原不具合を再現するため、現在の再現には上記のnormalize入口を使います。
+
+```sh
+node tools/nyakua-end-pit/diagnostics/followup.cjs
+```
+
+追加診断は保存済みの異常棋譜からMTAJI循環を延長して判定し、`results/followup.json` にまとめます。案Aの11停止局が1つの同じ局面に収束し、周期272で循環すること、現行の1停止局は別の周期284の循環であることを確認しました。同じ局面で3条件の遷移も一致します。標本分散が0でも不確実性0と扱わないための参考区間も別に保存しています。原試験・原集計を書き換えません。
 
 全比較完了後の報告は [案Aの調査記録](../../doc/NYAKUA_END_PIT_A_STUDY_20261006.md)、検討の経緯は[2案の原記録](../../doc/NYAKUA_END_PIT_PROPOSALS_20261006.md)を参照してください。
 
