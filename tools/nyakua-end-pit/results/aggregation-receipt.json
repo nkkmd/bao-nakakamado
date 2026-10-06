@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "kind": "JSON representation normalization during independent aggregation",
+  "detail": "NaN from 0/0 average completed depth in non-search policies is represented as JSON null. No game, policy, checkpoint or frozen source is changed.",
+  "sourceCommit": "6f91b5a1069fe9d54ca65d4a4fd988b0b5ffbf4f",
+  "comparisonRunId": 37398350927,
+  "auditCommit": "8fd15648960b29ae91120c92c2214e88f5e082e7",
+  "auditRunId": "37398582956",
+  "wrapperSha256": "d6ee8a6dab7e5372cba22c77c53802c159937b0f675d5df2e90a4a36acf78f77",
+  "games": 19560,
+  "replayed": 132
+}

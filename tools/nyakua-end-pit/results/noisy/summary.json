@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "study": "NYAKUA-END-PIT-A-20261006",
+    "reference": "a093f527a9284184731bc44bde8ce8b62c39dc37",
+    "task": "noisy",
+    "n": 1000,
+    "config": {
+      "policies": [
+        "noisy",
+        "noisy"
+      ],
+      "pairs": 1000
+    },
+    "sourceHashes": {
+      "engine.cjs": "ec2a3b137e98c36aadb8773ea3f6fce03962dd51765d20fa50ef7f3afab61f1c",
+      "core.cjs": "b3970df92fb4ef903bf3673bd27bc5f198e8e01ed96b16d1ec6d972a3b7a3c62",
+      "run.cjs": "ae745981e52008b835c387106950121ccdec8e2120ce610ee8adf62f82747823",
+      "proof.cjs": "ab18f53e338e2e9e672f087fd17d5532a400edecdf5c8c5a1fe471fc5aa9da6e",
+      "check.cjs": "204e24bd02c54061e5a1bbaafcdb4db50827ebca58ceae10e0074a8d55ddc2b6",
+      "report.cjs": "2833a959d2bfad5ea207a4cc4e37b00f21598b4d9e3435a231d552b1b295e3a3",
+      "legacy-cycle.json": "f3f4b8a3f07e82be273ff6379fedad8deb0e2ddd7d144756b97ab1f9e299ccb3",
+      "../../prototype/next-turn-engine.js": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f",
+      "../../prototype/steal.js": "a1886cdc5b3b9f8a69eb1955e8990deca809d6dc786491afd23f669a77be7ad2"
+    },
+    "node": "v24.19.0",
+    "commit": "6f91b5a1069fe9d54ca65d4a4fd988b0b5ffbf4f",
+    "runId": "37398350927"
+  },
+  "signature": "5ffa020dd3f8d6aee3b8fd382973e3b44e21a78e7bb68c0bde0ca9f7f3cb3118",
+  "completed": true,
+  "results": [
+    {
+      "model": "A",
+      "pairs": 1000,
+      "n": 2000,
+      "normal": 2000,
+      "firstWins": 954,
+      "secondWins": 1046,
+      "firstWinPct": 47.7,
+      "descriptiveWilson95Pct": [
+        45.51751722715846,
+        49.89130119047416
+      ],
+      "completePairs": 1000,
+      "pairMeanFirstWinPct": 47.699999999999996,
+      "pairCluster95Pct": [
+        45.5210471480879,
+        49.878952851912096
+      ],
+      "firstWinsAllGameBoundsPct": [
+        47.7,
+        47.7
+      ],
+      "avgPlies": 31.814,
+      "p95Plies": 52,
+      "maxPlies": 92,
+      "avgNamuaMoves": 25.3905,
+      "mtajiPlayed": 1197,
+      "nyakua": 13749,
+      "passes": 0,
+      "backAdds": 3554,
+      "houseAdds": 1808,
+      "maxRelays": 46,
+      "searchNodes": 0,
+      "budgetStops": 0,
+      "avgCompletedDepth": null,
+      "reasons": {
+        "no-move": 264,
+        "front-empty": 1736
+      }
+    },
+    {
+      "model": "current",
+      "pairs": 1000,
+      "n": 2000,
+      "normal": 2000,
+      "firstWins": 1008,
+      "secondWins": 992,
+      "firstWinPct": 50.4,
+      "descriptiveWilson95Pct": [
+        48.210098160334134,
+        52.58836820181671
+      ],
+      "completePairs": 1000,
+      "pairMeanFirstWinPct": 50.4,
+      "pairCluster95Pct": [
+        48.203356764490515,
+        52.59664323550949
+      ],
+      "firstWinsAllGameBoundsPct": [
+        50.4,
+        50.4
+      ],
+      "avgPlies": 33.218,
+      "p95Plies": 54,
+      "maxPlies": 86,
+      "avgNamuaMoves": 26.4865,
+      "mtajiPlayed": 1266,
+      "nyakua": 14501,
+      "passes": 0,
+      "backAdds": 0,
+      "houseAdds": 0,
+      "maxRelays": 113,
+      "searchNodes": 0,
+      "budgetStops": 0,
+      "avgCompletedDepth": null,
+      "reasons": {
+        "no-move": 255,
+        "front-empty": 1745
+      }
+    },
+    {
+      "model": "none",
+      "pairs": 1000,
+      "n": 2000,
+      "normal": 2000,
+      "firstWins": 1007,
+      "secondWins": 993,
+      "firstWinPct": 50.35,
+      "descriptiveWilson95Pct": [
+        48.16017762467663,
+        52.53848044220535
+      ],
+      "completePairs": 1000,
+      "pairMeanFirstWinPct": 50.349999999999994,
+      "pairCluster95Pct": [
+        48.151136892964864,
+        52.548863107035125
+      ],
+      "firstWinsAllGameBoundsPct": [
+        50.35,
+        50.35
+      ],
+      "avgPlies": 37.5115,
+      "p95Plies": 64,
+      "maxPlies": 109,
+      "avgNamuaMoves": 33.479,
+      "mtajiPlayed": 695,
+      "nyakua": 0,
+      "passes": 0,
+      "backAdds": 0,
+      "houseAdds": 0,
+      "maxRelays": 37,
+      "searchNodes": 0,
+      "budgetStops": 0,
+      "avgCompletedDepth": null,
+      "reasons": {
+        "front-empty": 1909,
+        "no-move": 91
+      }
+    }
+  ]
+}
