@@ -1,0 +1,105 @@
+name: NYAKUA continue B investigation
+on:
+  push:
+    branches: [experiment/nyakua-continue-b-20261006]
+    paths: ['tools/nyakua-continue/*.cjs', '.github/workflows/nyakua-continue.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: nyakua-continue-${{ github.ref }}-${{ github.sha }}
+  cancel-in-progress: false
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+      - run: node tools/nyakua-continue/check.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nyakua-continue-checks
+          path: tools/nyakua-continue/results/checks.json
+          retention-days: 30
+          overwrite: true
+  study:
+    needs: checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        task: [random, noisy, greedy, reply, search3, search4, search6, mobility, cross-0, cross-1, proof]
+    env:
+      TASK: ${{ matrix.task }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+      - name: Restore earlier attempt checkpoints
+        if: github.run_attempt > 1
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p "tools/nyakua-continue/results/$TASK"
+          gh run download "$GITHUB_RUN_ID" --name "nyakua-continue-$TASK" --dir "tools/nyakua-continue/results/$TASK" || true
+      - name: Checkpointed investigation
+        run: node tools/nyakua-continue/run.cjs "$TASK" "tools/nyakua-continue/results/$TASK"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nyakua-continue-${{ matrix.task }}
+          path: tools/nyakua-continue/results/${{ matrix.task }}/
+          retention-days: 30
+          overwrite: true
+  report:
+    needs: [checks, study]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+      - uses: actions/download-artifact@v4
+        with:
+          name: nyakua-continue-checks
+          path: tools/nyakua-continue/results
+      - name: Download comparison and proof records
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for task in random noisy greedy reply search3 search4 search6 mobility cross-0 cross-1 proof; do
+            gh run download "$GITHUB_RUN_ID" --name "nyakua-continue-$task" --dir "tools/nyakua-continue/results/$task"
+          done
+      - name: Audit raw records and generate report
+        run: node tools/nyakua-continue/report.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nyakua-continue-final
+          path: |
+            tools/nyakua-continue/results/
+            doc/NYAKUA_CONTINUE_B_STUDY_20261006.md
+          retention-days: 30
+          overwrite: true
+      - name: Preserve on the investigation branch
+        env:
+          STUDY_BRANCH: ${{ github.ref_name }}
+        run: |
+          test "$STUDY_BRANCH" = experiment/nyakua-continue-b-20261006
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add tools/nyakua-continue/results doc/NYAKUA_CONTINUE_B_STUDY_20261006.md
+          git commit -m "docs: preserve NYAKUA continue B raw investigation results"
+          git push origin "HEAD:$STUDY_BRANCH"
