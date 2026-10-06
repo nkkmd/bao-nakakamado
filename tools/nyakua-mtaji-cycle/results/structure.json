@@ -1,0 +1,2410 @@
+{
+  "status": "PASS",
+  "baseCommit": "a0a6514f54a53b463f9c514f0b278400fa6662cd",
+  "node": "v24.19.0",
+  "provenance": [
+    {
+      "path": "prototype/next-turn-engine.js",
+      "sha256": "23939570e25728e33eaf3057029034afc77a7efa56de2f4a9752f2db7902b81f"
+    },
+    {
+      "path": "prototype/steal.js",
+      "sha256": "a1886cdc5b3b9f8a69eb1955e8990deca809d6dc786491afd23f669a77be7ad2"
+    },
+    {
+      "path": "tools/nyakua-end-pit/engine.cjs",
+      "sha256": "ec2a3b137e98c36aadb8773ea3f6fce03962dd51765d20fa50ef7f3afab61f1c"
+    },
+    {
+      "path": "tools/nyakua-end-pit/core.cjs",
+      "sha256": "b3970df92fb4ef903bf3673bd27bc5f198e8e01ed96b16d1ec6d972a3b7a3c62"
+    },
+    {
+      "path": "tools/nyakua-end-pit/proof.cjs",
+      "sha256": "ab18f53e338e2e9e672f087fd17d5532a400edecdf5c8c5a1fe471fc5aa9da6e"
+    }
+  ],
+  "cases": [
+    {
+      "file": "../nyakua-continue/results/search4/anomaly-A-2-1.json",
+      "sha256": "13531467d21c8fafbee9bdcc8d824b730052e49756094350a09860dcce3a28a4",
+      "seed": 716535241,
+      "swapStreams": true
+    },
+    {
+      "file": "../nyakua-continue/results/search4/anomaly-A-35-0.json",
+      "sha256": "64e7feb910de539b89c223db4731bb202d698cb4004cd23d438136977c501cef",
+      "seed": 2413569434,
+      "swapStreams": false
+    },
+    {
+      "file": "../nyakua-continue/results/search4/anomaly-A-37-1.json",
+      "sha256": "9bde8b2e7efc7e0f8cafccba8d13c404e280f86fc97a5b1fc968f0b9d63a2461",
+      "seed": 3427473660,
+      "swapStreams": true
+    },
+    {
+      "file": "../nyakua-continue/results/search4/anomaly-A-38-1.json",
+      "sha256": "62dcd8a9a591516e75155e009af5746863891e77b31584b1dd96da50e50b475d",
+      "seed": 1786942125,
+      "swapStreams": true
+    },
+    {
+      "file": "../nyakua-continue/results/search4/anomaly-A-49-0.json",
+      "sha256": "d1f0f3ab6904d338b85cd53c166786a9ac5d624c2256d0343d5f859491ee6378",
+      "seed": 920964424,
+      "swapStreams": false
+    },
+    {
+      "file": "../nyakua-continue/results/search4/anomaly-A-56-1.json",
+      "sha256": "bae92f1778b92b066e7bc63e25943978072e678bb2e2a6d059d0ed20e02e64ee",
+      "seed": 2322145567,
+      "swapStreams": true
+    },
+    {
+      "file": "../nyakua-continue/results/search4/anomaly-A-57-0.json",
+      "sha256": "d6ed424f5b4111e2db0f77347d7f6e475504d228700cd731ada02a7a43c55ba5",
+      "seed": 681614032,
+      "swapStreams": false
+    },
+    {
+      "file": "../nyakua-continue/results/search4/anomaly-A-58-1.json",
+      "sha256": "940542ae71351cc9fb37b638d2f93819af7cba1055f9011af068e3fc8e05efbb",
+      "seed": 3336049793,
+      "swapStreams": true
+    },
+    {
+      "file": "../nyakua-continue/results/search4/anomaly-A-59-1.json",
+      "sha256": "138cf7d9d7236221ce84dcc1b38e3ce6a8923e52e6d623ff065a54c67bbcd6eb",
+      "seed": 1695518258,
+      "swapStreams": true
+    },
+    {
+      "file": "../nyakua-continue/results/search4/anomaly-A-68-1.json",
+      "sha256": "9df571bbd4ccfa3ac60a5a01a0deb2949b7e1e8c4d9035a48ebb544fad39aeb9",
+      "seed": 4110603627,
+      "swapStreams": true
+    },
+    {
+      "file": "../nyakua-continue/results/search4/anomaly-A-76-0.json",
+      "sha256": "422ae447b78747e15b8299eb7c25bc9a9507879691322503855f0aaec4656737",
+      "seed": 3871253235,
+      "swapStreams": false
+    }
+  ],
+  "paths": {
+    "observations": 11,
+    "uniqueMoveSequences": 1,
+    "pathHash": "66f2599612042bed448640b088959e67284d39c9d48d6983f00c79e0fd070c1d",
+    "bonusTurns": [
+      8,
+      22,
+      24,
+      33
+    ],
+    "mtajiAfterPly": 36
+  },
+  "before": {
+    "pits": [
+      [
+        [
+          0,
+          5,
+          1,
+          3,
+          2,
+          4,
+          4,
+          6
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          2,
+          5,
+          0,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          6,
+          0,
+          5,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          3,
+          2,
+          3,
+          2,
+          0,
+          1
+        ]
+      ]
+    ],
+    "reserve": [
+      0,
+      0
+    ],
+    "nyakuaReserve": [
+      0,
+      0
+    ],
+    "houseOwned": [
+      false,
+      false
+    ],
+    "player": 1,
+    "phase": "mtaji",
+    "winner": null,
+    "reason": "",
+    "turn": 40,
+    "pending": [
+      0,
+      0
+    ]
+  },
+  "move": {
+    "row": 0,
+    "index": 2,
+    "direction": "right",
+    "type": "takata",
+    "phase": "mtaji"
+  },
+  "independent": {
+    "status": "cycle",
+    "firstBatch": 1,
+    "repeatBatch": 273,
+    "period": 272,
+    "dropsPerPeriod": 816,
+    "batches": 273,
+    "drops": 822,
+    "endpoint": 8,
+    "final": [
+      0,
+      1,
+      0,
+      1,
+      6,
+      1,
+      2,
+      1,
+      2,
+      0,
+      2,
+      3,
+      2,
+      3,
+      2,
+      1
+    ]
+  },
+  "comparedSnapshots": 272,
+  "captures": 0,
+  "additions": 0,
+  "sameMoveThreeModels": true,
+  "alternatives": [
+    {
+      "move": {
+        "row": 0,
+        "index": 2,
+        "direction": "left",
+        "type": "takata",
+        "phase": "mtaji"
+      },
+      "independent": {
+        "status": "finite",
+        "batches": 2,
+        "relays": 1,
+        "drops": 9,
+        "endpoint": 9,
+        "final": [
+          1,
+          2,
+          0,
+          0,
+          5,
+          0,
+          1,
+          0,
+          1,
+          1,
+          3,
+          4,
+          0,
+          4,
+          3,
+          2
+        ]
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              0,
+              5,
+              1,
+              3,
+              2,
+              4,
+              4,
+              6
+            ],
+            [
+              1,
+              0,
+              1,
+              1,
+              2,
+              5,
+              0,
+              2
+            ]
+          ],
+          [
+            [
+              1,
+              2,
+              0,
+              0,
+              5,
+              0,
+              1,
+              0
+            ],
+            [
+              2,
+              3,
+              4,
+              0,
+              4,
+              3,
+              1,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          0,
+          0
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          false
+        ],
+        "player": 0,
+        "phase": "mtaji",
+        "winner": null,
+        "reason": "",
+        "turn": 41,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "score": -42
+    },
+    {
+      "move": {
+        "row": 0,
+        "index": 2,
+        "direction": "right",
+        "type": "takata",
+        "phase": "mtaji"
+      },
+      "independent": {
+        "status": "cycle",
+        "firstBatch": 1,
+        "repeatBatch": 273,
+        "period": 272,
+        "dropsPerPeriod": 816,
+        "batches": 273,
+        "drops": 822,
+        "endpoint": 8,
+        "final": [
+          0,
+          1,
+          0,
+          1,
+          6,
+          1,
+          2,
+          1,
+          2,
+          0,
+          2,
+          3,
+          2,
+          3,
+          2,
+          1
+        ]
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              0,
+              5,
+              1,
+              3,
+              2,
+              4,
+              4,
+              6
+            ],
+            [
+              1,
+              0,
+              1,
+              1,
+              2,
+              5,
+              0,
+              2
+            ]
+          ],
+          [
+            [
+              2,
+              1,
+              0,
+              1,
+              0,
+              4,
+              3,
+              4
+            ],
+            [
+              1,
+              6,
+              1,
+              0,
+              1,
+              0,
+              1,
+              2
+            ]
+          ]
+        ],
+        "reserve": [
+          0,
+          0
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          false
+        ],
+        "player": 1,
+        "phase": "mtaji",
+        "winner": 0,
+        "reason": "relay-limit",
+        "turn": 40,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "score": 0
+    },
+    {
+      "move": {
+        "row": 0,
+        "index": 4,
+        "direction": "left",
+        "type": "takata",
+        "phase": "mtaji"
+      },
+      "independent": {
+        "status": "finite",
+        "batches": 3,
+        "relays": 2,
+        "drops": 11,
+        "endpoint": 9,
+        "final": [
+          1,
+          2,
+          7,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          3,
+          4,
+          3,
+          0,
+          3,
+          0
+        ]
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              0,
+              5,
+              1,
+              3,
+              2,
+              4,
+              4,
+              6
+            ],
+            [
+              1,
+              0,
+              1,
+              1,
+              2,
+              5,
+              0,
+              2
+            ]
+          ],
+          [
+            [
+              1,
+              2,
+              7,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              3,
+              0,
+              3,
+              4,
+              3,
+              1,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          0,
+          0
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          false
+        ],
+        "player": 0,
+        "phase": "mtaji",
+        "winner": null,
+        "reason": "",
+        "turn": 41,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "score": -36
+    },
+    {
+      "move": {
+        "row": 0,
+        "index": 4,
+        "direction": "right",
+        "type": "takata",
+        "phase": "mtaji"
+      },
+      "independent": {
+        "status": "finite",
+        "batches": 1,
+        "relays": 0,
+        "drops": 5,
+        "endpoint": 9,
+        "final": [
+          0,
+          1,
+          6,
+          0,
+          0,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          3,
+          2,
+          3,
+          2,
+          1
+        ]
+      },
+      "after": {
+        "pits": [
+          [
+            [
+              0,
+              5,
+              1,
+              3,
+              2,
+              4,
+              4,
+              6
+            ],
+            [
+              1,
+              0,
+              1,
+              1,
+              2,
+              5,
+              0,
+              2
+            ]
+          ],
+          [
+            [
+              0,
+              1,
+              6,
+              0,
+              0,
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              3,
+              2,
+              3,
+              2,
+              1,
+              2
+            ]
+          ]
+        ],
+        "reserve": [
+          0,
+          0
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          false
+        ],
+        "player": 0,
+        "phase": "mtaji",
+        "winner": null,
+        "reason": "",
+        "turn": 41,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "score": -38
+    }
+  ],
+  "fixedSearch4": {
+    "depth": 4,
+    "nodes": 188,
+    "openings": [
+      {
+        "move": {
+          "row": 0,
+          "index": 2,
+          "direction": "left",
+          "type": "takata",
+          "phase": "mtaji"
+        },
+        "value": -70
+      },
+      {
+        "move": {
+          "row": 0,
+          "index": 2,
+          "direction": "right",
+          "type": "takata",
+          "phase": "mtaji"
+        },
+        "value": 0
+      },
+      {
+        "move": {
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "type": "takata",
+          "phase": "mtaji"
+        },
+        "value": -74
+      },
+      {
+        "move": {
+          "row": 0,
+          "index": 4,
+          "direction": "right",
+          "type": "takata",
+          "phase": "mtaji"
+        },
+        "value": -92
+      }
+    ]
+  },
+  "counterfactuals": [
+    {
+      "mode": "none",
+      "firstDifference": 8,
+      "movesReplayed": 25,
+      "illegalAt": 26,
+      "phaseAt": null,
+      "bonuses": [],
+      "final": {
+        "pits": [
+          [
+            [
+              0,
+              0,
+              1,
+              1,
+              14,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ]
+          ],
+          [
+            [
+              1,
+              0,
+              5,
+              0,
+              2,
+              1,
+              4,
+              1
+            ],
+            [
+              3,
+              1,
+              0,
+              1,
+              3,
+              1,
+              2,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          9,
+          10
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          false
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 26,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "targetReached": false
+    },
+    {
+      "mode": 8,
+      "firstDifference": 8,
+      "movesReplayed": 25,
+      "illegalAt": 26,
+      "phaseAt": null,
+      "bonuses": [
+        23
+      ],
+      "final": {
+        "pits": [
+          [
+            [
+              0,
+              0,
+              1,
+              3,
+              14,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ]
+          ],
+          [
+            [
+              1,
+              0,
+              5,
+              0,
+              2,
+              1,
+              4,
+              1
+            ],
+            [
+              3,
+              1,
+              0,
+              1,
+              3,
+              1,
+              2,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          8,
+          9
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          false
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 26,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "targetReached": false
+    },
+    {
+      "mode": 22,
+      "firstDifference": 22,
+      "movesReplayed": 33,
+      "illegalAt": 34,
+      "phaseAt": null,
+      "bonuses": [
+        8,
+        24
+      ],
+      "final": {
+        "pits": [
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              16,
+              2,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ]
+          ],
+          [
+            [
+              1,
+              8,
+              2,
+              0,
+              1,
+              4,
+              2,
+              0
+            ],
+            [
+              5,
+              1,
+              1,
+              1,
+              5,
+              1,
+              4,
+              0
+            ]
+          ]
+        ],
+        "reserve": [
+          3,
+          4
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          false
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 34,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "targetReached": false
+    },
+    {
+      "mode": 24,
+      "firstDifference": 24,
+      "movesReplayed": 33,
+      "illegalAt": 34,
+      "phaseAt": null,
+      "bonuses": [
+        8,
+        22,
+        32
+      ],
+      "final": {
+        "pits": [
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              16,
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ]
+          ],
+          [
+            [
+              1,
+              8,
+              3,
+              0,
+              2,
+              5,
+              3,
+              2
+            ],
+            [
+              5,
+              1,
+              0,
+              1,
+              0,
+              2,
+              5,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          2,
+          3
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          false
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 34,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "targetReached": false
+    },
+    {
+      "mode": 33,
+      "firstDifference": 33,
+      "movesReplayed": 38,
+      "illegalAt": 39,
+      "phaseAt": 36,
+      "bonuses": [
+        8,
+        22,
+        24,
+        34
+      ],
+      "final": {
+        "pits": [
+          [
+            [
+              6,
+              2,
+              0,
+              0,
+              4,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              4,
+              0,
+              3,
+              1,
+              3
+            ]
+          ],
+          [
+            [
+              6,
+              1,
+              8,
+              4,
+              5,
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              3,
+              2,
+              3,
+              2,
+              0,
+              1
+            ]
+          ]
+        ],
+        "reserve": [
+          0,
+          0
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          false,
+          false
+        ],
+        "player": 0,
+        "phase": "mtaji",
+        "winner": null,
+        "reason": "",
+        "turn": 39,
+        "pending": [
+          0,
+          0
+        ]
+      },
+      "targetReached": false
+    }
+  ],
+  "sensitivity": [
+    {
+      "from": 1,
+      "to": 0,
+      "legal": false,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 1,
+      "to": 2,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 1,
+      "to": 3,
+      "legal": true,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 1,
+      "to": 4,
+      "legal": true,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 1,
+      "to": 5,
+      "legal": true,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 1,
+      "to": 6,
+      "legal": false,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 1,
+      "to": 7,
+      "legal": true,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 1,
+      "to": 8,
+      "legal": false,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 1,
+      "to": 9,
+      "legal": true,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 1,
+      "to": 10,
+      "legal": true,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 1,
+      "to": 11,
+      "legal": true,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 1,
+      "to": 12,
+      "legal": true,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 1,
+      "to": 13,
+      "legal": true,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 1,
+      "to": 14,
+      "legal": true,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 1,
+      "to": 15,
+      "legal": true,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 2,
+      "to": 0,
+      "legal": false,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 2,
+      "to": 1,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 2,
+      "to": 4,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 2,
+      "to": 5,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 2,
+      "to": 6,
+      "legal": false,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 2,
+      "to": 7,
+      "legal": true,
+      "status": "finite",
+      "batches": 2,
+      "period": null
+    },
+    {
+      "from": 2,
+      "to": 8,
+      "legal": false,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 2,
+      "to": 9,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 2,
+      "to": 10,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 2,
+      "to": 11,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 2,
+      "to": 12,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 2,
+      "to": 13,
+      "legal": false,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 2,
+      "to": 14,
+      "legal": false,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 2,
+      "to": 15,
+      "legal": false,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 4,
+      "to": 0,
+      "legal": false,
+      "status": "finite",
+      "batches": 11,
+      "period": null
+    },
+    {
+      "from": 4,
+      "to": 1,
+      "legal": true,
+      "status": "finite",
+      "batches": 6,
+      "period": null
+    },
+    {
+      "from": 4,
+      "to": 2,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 4,
+      "to": 3,
+      "legal": true,
+      "status": "finite",
+      "batches": 12,
+      "period": null
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "legal": true,
+      "status": "finite",
+      "batches": 7,
+      "period": null
+    },
+    {
+      "from": 4,
+      "to": 6,
+      "legal": false,
+      "status": "finite",
+      "batches": 13,
+      "period": null
+    },
+    {
+      "from": 4,
+      "to": 7,
+      "legal": true,
+      "status": "finite",
+      "batches": 8,
+      "period": null
+    },
+    {
+      "from": 4,
+      "to": 8,
+      "legal": false,
+      "status": "finite",
+      "batches": 9,
+      "period": null
+    },
+    {
+      "from": 4,
+      "to": 9,
+      "legal": true,
+      "status": "finite",
+      "batches": 19,
+      "period": null
+    },
+    {
+      "from": 4,
+      "to": 10,
+      "legal": true,
+      "status": "finite",
+      "batches": 13,
+      "period": null
+    },
+    {
+      "from": 4,
+      "to": 11,
+      "legal": true,
+      "status": "finite",
+      "batches": 10,
+      "period": null
+    },
+    {
+      "from": 4,
+      "to": 12,
+      "legal": true,
+      "status": "finite",
+      "batches": 13,
+      "period": null
+    },
+    {
+      "from": 4,
+      "to": 13,
+      "legal": false,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 4,
+      "to": 14,
+      "legal": false,
+      "status": "finite",
+      "batches": 13,
+      "period": null
+    },
+    {
+      "from": 4,
+      "to": 15,
+      "legal": false,
+      "status": "finite",
+      "batches": 13,
+      "period": null
+    },
+    {
+      "from": 6,
+      "to": 0,
+      "legal": false,
+      "status": "finite",
+      "batches": 11,
+      "period": null
+    },
+    {
+      "from": 6,
+      "to": 1,
+      "legal": true,
+      "status": "finite",
+      "batches": 9,
+      "period": null
+    },
+    {
+      "from": 6,
+      "to": 2,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 6,
+      "to": 3,
+      "legal": true,
+      "status": "finite",
+      "batches": 7,
+      "period": null
+    },
+    {
+      "from": 6,
+      "to": 4,
+      "legal": true,
+      "status": "finite",
+      "batches": 20,
+      "period": null
+    },
+    {
+      "from": 6,
+      "to": 5,
+      "legal": true,
+      "status": "finite",
+      "batches": 7,
+      "period": null
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "legal": true,
+      "status": "finite",
+      "batches": 8,
+      "period": null
+    },
+    {
+      "from": 6,
+      "to": 8,
+      "legal": true,
+      "status": "finite",
+      "batches": 9,
+      "period": null
+    },
+    {
+      "from": 6,
+      "to": 9,
+      "legal": true,
+      "status": "finite",
+      "batches": 13,
+      "period": null
+    },
+    {
+      "from": 6,
+      "to": 10,
+      "legal": true,
+      "status": "finite",
+      "batches": 23,
+      "period": null
+    },
+    {
+      "from": 6,
+      "to": 11,
+      "legal": true,
+      "status": "finite",
+      "batches": 10,
+      "period": null
+    },
+    {
+      "from": 6,
+      "to": 12,
+      "legal": true,
+      "status": "finite",
+      "batches": 14,
+      "period": null
+    },
+    {
+      "from": 6,
+      "to": 13,
+      "legal": false,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 6,
+      "to": 14,
+      "legal": false,
+      "status": "finite",
+      "batches": 25,
+      "period": null
+    },
+    {
+      "from": 6,
+      "to": 15,
+      "legal": false,
+      "status": "finite",
+      "batches": 25,
+      "period": null
+    },
+    {
+      "from": 8,
+      "to": 0,
+      "legal": false,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 8,
+      "to": 1,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 8,
+      "to": 2,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 8,
+      "to": 3,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 8,
+      "to": 4,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 8,
+      "to": 5,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 8,
+      "to": 6,
+      "legal": false,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 8,
+      "to": 7,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 8,
+      "to": 9,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 8,
+      "to": 10,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 8,
+      "to": 11,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 8,
+      "to": 12,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 8,
+      "to": 13,
+      "legal": false,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 8,
+      "to": 14,
+      "legal": false,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 8,
+      "to": 15,
+      "legal": false,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 10,
+      "to": 0,
+      "legal": false,
+      "status": "finite",
+      "batches": 12,
+      "period": null
+    },
+    {
+      "from": 10,
+      "to": 1,
+      "legal": true,
+      "status": "finite",
+      "batches": 10,
+      "period": null
+    },
+    {
+      "from": 10,
+      "to": 2,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 10,
+      "to": 3,
+      "legal": true,
+      "status": "finite",
+      "batches": 22,
+      "period": null
+    },
+    {
+      "from": 10,
+      "to": 4,
+      "legal": true,
+      "status": "finite",
+      "batches": 20,
+      "period": null
+    },
+    {
+      "from": 10,
+      "to": 5,
+      "legal": true,
+      "status": "finite",
+      "batches": 8,
+      "period": null
+    },
+    {
+      "from": 10,
+      "to": 6,
+      "legal": false,
+      "status": "finite",
+      "batches": 24,
+      "period": null
+    },
+    {
+      "from": 10,
+      "to": 7,
+      "legal": true,
+      "status": "finite",
+      "batches": 9,
+      "period": null
+    },
+    {
+      "from": 10,
+      "to": 8,
+      "legal": false,
+      "status": "finite",
+      "batches": 9,
+      "period": null
+    },
+    {
+      "from": 10,
+      "to": 9,
+      "legal": true,
+      "status": "finite",
+      "batches": 10,
+      "period": null
+    },
+    {
+      "from": 10,
+      "to": 11,
+      "legal": true,
+      "status": "finite",
+      "batches": 11,
+      "period": null
+    },
+    {
+      "from": 10,
+      "to": 12,
+      "legal": true,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 10,
+      "to": 13,
+      "legal": false,
+      "status": "finite",
+      "batches": 22,
+      "period": null
+    },
+    {
+      "from": 10,
+      "to": 14,
+      "legal": false,
+      "status": "finite",
+      "batches": 16,
+      "period": null
+    },
+    {
+      "from": 10,
+      "to": 15,
+      "legal": false,
+      "status": "finite",
+      "batches": 5,
+      "period": null
+    },
+    {
+      "from": 11,
+      "to": 0,
+      "legal": false,
+      "status": "finite",
+      "batches": 22,
+      "period": null
+    },
+    {
+      "from": 11,
+      "to": 1,
+      "legal": true,
+      "status": "finite",
+      "batches": 9,
+      "period": null
+    },
+    {
+      "from": 11,
+      "to": 2,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 11,
+      "to": 3,
+      "legal": true,
+      "status": "finite",
+      "batches": 22,
+      "period": null
+    },
+    {
+      "from": 11,
+      "to": 4,
+      "legal": true,
+      "status": "finite",
+      "batches": 14,
+      "period": null
+    },
+    {
+      "from": 11,
+      "to": 5,
+      "legal": true,
+      "status": "finite",
+      "batches": 7,
+      "period": null
+    },
+    {
+      "from": 11,
+      "to": 6,
+      "legal": false,
+      "status": "finite",
+      "batches": 24,
+      "period": null
+    },
+    {
+      "from": 11,
+      "to": 7,
+      "legal": true,
+      "status": "finite",
+      "batches": 8,
+      "period": null
+    },
+    {
+      "from": 11,
+      "to": 8,
+      "legal": false,
+      "status": "finite",
+      "batches": 9,
+      "period": null
+    },
+    {
+      "from": 11,
+      "to": 9,
+      "legal": true,
+      "status": "finite",
+      "batches": 13,
+      "period": null
+    },
+    {
+      "from": 11,
+      "to": 10,
+      "legal": true,
+      "status": "finite",
+      "batches": 47,
+      "period": null
+    },
+    {
+      "from": 11,
+      "to": 12,
+      "legal": true,
+      "status": "finite",
+      "batches": 14,
+      "period": null
+    },
+    {
+      "from": 11,
+      "to": 13,
+      "legal": false,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 11,
+      "to": 14,
+      "legal": false,
+      "status": "finite",
+      "batches": 26,
+      "period": null
+    },
+    {
+      "from": 11,
+      "to": 15,
+      "legal": false,
+      "status": "finite",
+      "batches": 11,
+      "period": null
+    },
+    {
+      "from": 12,
+      "to": 0,
+      "legal": false,
+      "status": "finite",
+      "batches": 11,
+      "period": null
+    },
+    {
+      "from": 12,
+      "to": 1,
+      "legal": true,
+      "status": "finite",
+      "batches": 9,
+      "period": null
+    },
+    {
+      "from": 12,
+      "to": 2,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 12,
+      "to": 3,
+      "legal": true,
+      "status": "finite",
+      "batches": 13,
+      "period": null
+    },
+    {
+      "from": 12,
+      "to": 4,
+      "legal": true,
+      "status": "finite",
+      "batches": 20,
+      "period": null
+    },
+    {
+      "from": 12,
+      "to": 5,
+      "legal": true,
+      "status": "finite",
+      "batches": 7,
+      "period": null
+    },
+    {
+      "from": 12,
+      "to": 6,
+      "legal": false,
+      "status": "finite",
+      "batches": 14,
+      "period": null
+    },
+    {
+      "from": 12,
+      "to": 7,
+      "legal": true,
+      "status": "finite",
+      "batches": 8,
+      "period": null
+    },
+    {
+      "from": 12,
+      "to": 8,
+      "legal": false,
+      "status": "finite",
+      "batches": 9,
+      "period": null
+    },
+    {
+      "from": 12,
+      "to": 9,
+      "legal": true,
+      "status": "finite",
+      "batches": 13,
+      "period": null
+    },
+    {
+      "from": 12,
+      "to": 10,
+      "legal": true,
+      "status": "finite",
+      "batches": 14,
+      "period": null
+    },
+    {
+      "from": 12,
+      "to": 11,
+      "legal": true,
+      "status": "finite",
+      "batches": 10,
+      "period": null
+    },
+    {
+      "from": 12,
+      "to": 13,
+      "legal": false,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 12,
+      "to": 14,
+      "legal": false,
+      "status": "finite",
+      "batches": 14,
+      "period": null
+    },
+    {
+      "from": 12,
+      "to": 15,
+      "legal": false,
+      "status": "finite",
+      "batches": 14,
+      "period": null
+    },
+    {
+      "from": 13,
+      "to": 0,
+      "legal": false,
+      "status": "finite",
+      "batches": 5,
+      "period": null
+    },
+    {
+      "from": 13,
+      "to": 1,
+      "legal": true,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 13,
+      "to": 2,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 13,
+      "to": 3,
+      "legal": true,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 13,
+      "to": 4,
+      "legal": true,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 13,
+      "to": 5,
+      "legal": true,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 13,
+      "to": 6,
+      "legal": false,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 13,
+      "to": 7,
+      "legal": true,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 13,
+      "to": 8,
+      "legal": false,
+      "status": "finite",
+      "batches": 9,
+      "period": null
+    },
+    {
+      "from": 13,
+      "to": 9,
+      "legal": true,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 13,
+      "to": 10,
+      "legal": true,
+      "status": "finite",
+      "batches": 21,
+      "period": null
+    },
+    {
+      "from": 13,
+      "to": 11,
+      "legal": true,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 13,
+      "to": 12,
+      "legal": true,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 13,
+      "to": 14,
+      "legal": false,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 13,
+      "to": 15,
+      "legal": false,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 14,
+      "to": 0,
+      "legal": false,
+      "status": "finite",
+      "batches": 11,
+      "period": null
+    },
+    {
+      "from": 14,
+      "to": 1,
+      "legal": true,
+      "status": "finite",
+      "batches": 9,
+      "period": null
+    },
+    {
+      "from": 14,
+      "to": 2,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 14,
+      "to": 3,
+      "legal": true,
+      "status": "finite",
+      "batches": 23,
+      "period": null
+    },
+    {
+      "from": 14,
+      "to": 4,
+      "legal": true,
+      "status": "finite",
+      "batches": 20,
+      "period": null
+    },
+    {
+      "from": 14,
+      "to": 5,
+      "legal": true,
+      "status": "finite",
+      "batches": 7,
+      "period": null
+    },
+    {
+      "from": 14,
+      "to": 6,
+      "legal": false,
+      "status": "finite",
+      "batches": 25,
+      "period": null
+    },
+    {
+      "from": 14,
+      "to": 7,
+      "legal": true,
+      "status": "finite",
+      "batches": 8,
+      "period": null
+    },
+    {
+      "from": 14,
+      "to": 8,
+      "legal": false,
+      "status": "finite",
+      "batches": 9,
+      "period": null
+    },
+    {
+      "from": 14,
+      "to": 9,
+      "legal": true,
+      "status": "finite",
+      "batches": 13,
+      "period": null
+    },
+    {
+      "from": 14,
+      "to": 10,
+      "legal": true,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 14,
+      "to": 11,
+      "legal": true,
+      "status": "finite",
+      "batches": 10,
+      "period": null
+    },
+    {
+      "from": 14,
+      "to": 12,
+      "legal": true,
+      "status": "finite",
+      "batches": 14,
+      "period": null
+    },
+    {
+      "from": 14,
+      "to": 13,
+      "legal": false,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 14,
+      "to": 15,
+      "legal": false,
+      "status": "finite",
+      "batches": 27,
+      "period": null
+    },
+    {
+      "from": 15,
+      "to": 0,
+      "legal": false,
+      "status": "finite",
+      "batches": 11,
+      "period": null
+    },
+    {
+      "from": 15,
+      "to": 1,
+      "legal": true,
+      "status": "finite",
+      "batches": 9,
+      "period": null
+    },
+    {
+      "from": 15,
+      "to": 2,
+      "legal": true,
+      "status": "finite",
+      "batches": 1,
+      "period": null
+    },
+    {
+      "from": 15,
+      "to": 3,
+      "legal": true,
+      "status": "finite",
+      "batches": 23,
+      "period": null
+    },
+    {
+      "from": 15,
+      "to": 4,
+      "legal": true,
+      "status": "finite",
+      "batches": 15,
+      "period": null
+    },
+    {
+      "from": 15,
+      "to": 5,
+      "legal": true,
+      "status": "finite",
+      "batches": 7,
+      "period": null
+    },
+    {
+      "from": 15,
+      "to": 6,
+      "legal": false,
+      "status": "finite",
+      "batches": 25,
+      "period": null
+    },
+    {
+      "from": 15,
+      "to": 7,
+      "legal": true,
+      "status": "finite",
+      "batches": 8,
+      "period": null
+    },
+    {
+      "from": 15,
+      "to": 8,
+      "legal": false,
+      "status": "finite",
+      "batches": 3,
+      "period": null
+    },
+    {
+      "from": 15,
+      "to": 9,
+      "legal": true,
+      "status": "finite",
+      "batches": 13,
+      "period": null
+    },
+    {
+      "from": 15,
+      "to": 10,
+      "legal": true,
+      "status": "finite",
+      "batches": 32,
+      "period": null
+    },
+    {
+      "from": 15,
+      "to": 11,
+      "legal": true,
+      "status": "finite",
+      "batches": 10,
+      "period": null
+    },
+    {
+      "from": 15,
+      "to": 12,
+      "legal": true,
+      "status": "finite",
+      "batches": 14,
+      "period": null
+    },
+    {
+      "from": 15,
+      "to": 13,
+      "legal": false,
+      "status": "finite",
+      "batches": 4,
+      "period": null
+    },
+    {
+      "from": 15,
+      "to": 14,
+      "legal": false,
+      "status": "finite",
+      "batches": 27,
+      "period": null
+    }
+  ]
+}

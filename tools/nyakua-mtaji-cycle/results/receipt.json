@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "date": "2026-10-06",
+  "timezone": "Asia/Tokyo",
+  "baseCommit": "a0a6514f54a53b463f9c514f0b278400fa6662cd",
+  "scope": "Independent fixed-position and stored-record diagnostics; no public-rule change",
+  "files": [
+    {
+      "path": "tools/nyakua-mtaji-cycle/README.md",
+      "sha256": "11975fc309d2833bf8448bd172e376db9414fdd9241cdf82d4c3f06fde64feb1",
+      "bytes": 2600
+    },
+    {
+      "path": "tools/nyakua-mtaji-cycle/check.cjs",
+      "sha256": "b2e0cec741178a1f4fe5a769291276d870a85546e9a1d93cbbb8e18c3f3fb3b9",
+      "bytes": 3120
+    },
+    {
+      "path": "tools/nyakua-mtaji-cycle/results/alternative-0.json",
+      "sha256": "992c787763266648fa4abb1266036ca7170091cb48e8a8e32511a4e47bb464c6",
+      "bytes": 14794
+    },
+    {
+      "path": "tools/nyakua-mtaji-cycle/results/alternative-2.json",
+      "sha256": "9decb22abbf05b8ed28265b67d453033c66a2eaea5857c43b9940652381bcf0a",
+      "bytes": 16709
+    },
+    {
+      "path": "tools/nyakua-mtaji-cycle/results/alternative-3.json",
+      "sha256": "00a5e8a753ac294b5ff93005fd4088ee7448521d69f39890afbd4f95ac2992ee",
+      "bytes": 20570
+    },
+    {
+      "path": "tools/nyakua-mtaji-cycle/results/alternatives.json",
+      "sha256": "8955280cf9774affa30ce2e5b754f3105b0a30e66a1f4bf9030a951d5eef0e40",
+      "bytes": 62436
+    },
+    {
+      "path": "tools/nyakua-mtaji-cycle/results/checks.json",
+      "sha256": "d887208f102ed707fab5a9520b33cd5db997130c37763192c219dc46d139aa0d",
+      "bytes": 226
+    },
+    {
+      "path": "tools/nyakua-mtaji-cycle/results/continuation-0.json",
+      "sha256": "73295acf884e27968738a62e5568ac07cdc78bb1ad4a721e32908453b1f9fb1f",
+      "bytes": 19531
+    },
+    {
+      "path": "tools/nyakua-mtaji-cycle/results/continuation-2.json",
+      "sha256": "9b8f3eb524c9951652c69bbeecf3482f157c162bcaadf621324915ef725180fc",
+      "bytes": 28435
+    },
+    {
+      "path": "tools/nyakua-mtaji-cycle/results/continuation-3.json",
+      "sha256": "c4ff95d8b386ebe8107482b33d55b9d3f1928f8e415d77604cb6431b7327f704",
+      "bytes": 22087
+    },
+    {
+      "path": "tools/nyakua-mtaji-cycle/results/continuations.json",
+      "sha256": "a495c07586f1f5d0ab58b02a04c6bfd6ff7fd4fc46fe54900795536fc7c6b23c",
+      "bytes": 1588
+    },
+    {
+      "path": "tools/nyakua-mtaji-cycle/results/cycle-trace.json",
+      "sha256": "397cdd625077fce711c34f36e5245c71f6dd8b6d3c256f70a3c2f0668afc74cc",
+      "bytes": 68235
+    },
+    {
+      "path": "tools/nyakua-mtaji-cycle/results/structure.json",
+      "sha256": "e2f61c02e4836b8a2c7970f70d72814a87ff57a00d2de641c8edfe1bf24d3772",
+      "bytes": 41503
+    },
+    {
+      "path": "tools/nyakua-mtaji-cycle/ring.cjs",
+      "sha256": "e365f79b71d0d28556388a0bc57002e381c2125649fe3228df7fd93ea7b1def4",
+      "bytes": 1938
+    },
+    {
+      "path": "tools/nyakua-mtaji-cycle/run.cjs",
+      "sha256": "9a8506d9903370f2b92e701164e3fc00b6447def6ab56218b7a6645e606557ad",
+      "bytes": 11243
+    }
+  ]
+}

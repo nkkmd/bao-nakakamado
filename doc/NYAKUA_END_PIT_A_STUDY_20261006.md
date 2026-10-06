@@ -122,6 +122,8 @@ UNKNOWNは必勝ルートがないという証明ではありません。途中�
 
 ## 原記録と再現
 
+同日の[案AのMTAJI循環の追加調査](NYAKUA_A_MTAJI_CYCLE_FOLLOWUP_20261006.md)では、11局が初手から40手目まで同じ経路であること、周期272が独立した種まき計算でも成立すること、調査AIの勝敗不明0点処理が循環手の選択を誘導していたことを確認しました。有限な代替手からの継続には北側の勝ちもありますが、必勝は未証明です。本書の元対局・集計は変更していません。
+
 [集計・監査JSON](../tools/nyakua-end-pit/results/summary.json)、[境界と残数検査](../tools/nyakua-end-pit/results/checks.json)、[再現手順](../tools/nyakua-end-pit/README.md)、[元の2案](NYAKUA_END_PIT_PROPOSALS_20261006.md)。元の基礎規則・出典は[ルールブック](RULEBOOK.md)、考案・初公開日は[履歴](ORIGIN_AND_HISTORY.md)を参照してください。全taskの集計完了後に一括判断し、原チェックポイントとソースSHA-256を保持しています。
 
 本書の説明文は © 2026 nkkmd and Bao Nakakamado contributors、[CC BY-SA 4.0](../LICENSE-CC-BY-SA-4.0.txt)。調査コードはMITです。既存の公開実装・過去の試験原記録は変更していません。
