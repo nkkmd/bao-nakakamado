@@ -133,4 +133,6 @@ UNKNOWNは必勝がないことの証明ではありません。B各解釈につ
 
 ## 原記録と再現
 
+同日の[案AのMTAJI循環の追加調査](NYAKUA_A_MTAJI_CYCLE_FOLLOWUP_20261006.md)では、本調査の案A対照11棋譜を全再生しました。全40手が同じ経路であること、周期272の独立再現、調査用search4の勝敗不明0点による循環手の選択を確認しています。案Aの11件と各Bの1件は特定AI条件での到達観測であり、案A・Bの一般的な循環率や固有の破綻の件数とは扱いません。本書の原対局・集計・必勝探索は変更していません。
+
 基礎の固定点は `1daf4d1bcbc6a115f1788da9fbd501b2dd036fe1`、計測ソースcommitとActions実行IDは各taskのmetadataに保存しています。[全集計と監査](../tools/nyakua-continue/results/summary.json)、[境界検査](../tools/nyakua-continue/results/checks.json)、[実行手順](../tools/nyakua-continue/README.md)、[元の2案](NYAKUA_END_PIT_PROPOSALS_20261006.md)、[案Aの調査](NYAKUA_END_PIT_A_STUDY_20261006.md)を参照してください。元規則の考案者nkkmd・初公開2026年9月30日の記録は[履歴](ORIGIN_AND_HISTORY.md)に保持します。調査コード・仕様固定・解析はAI支援。説明文は© 2026 nkkmd and Bao Nakakamado contributors、[CC BY-SA 4.0](../LICENSE-CC-BY-SA-4.0.txt)。コードはMIT。

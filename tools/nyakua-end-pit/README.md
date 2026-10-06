@@ -50,6 +50,8 @@ node tools/nyakua-end-pit/diagnostics/followup.cjs
 
 追加診断は保存済みの異常棋譜からMTAJI循環を延長して判定し、`results/followup.json` にまとめます。案Aの11停止局が1つの同じ局面に収束し、周期272で循環すること、現行の1停止局は別の周期284の循環であることを確認しました。同じ局面で3条件の遷移も一致します。標本分散が0でも不確実性0と扱わないための参考区間も別に保存しています。原試験・原集計を書き換えません。
 
+続く[案AのMTAJI循環の追加調査](../../doc/NYAKUA_A_MTAJI_CYCLE_FOLLOWUP_20261006.md)は、別の `tools/nyakua-mtaji-cycle/` にコードと結果を保存しています。11局の全40手の同一性、独立した種まき計算による周期272の再現、調査AIの評価、有限手からの継続例・必勝探索・人工近傍の検査を追加しました。再現は[追加分析の手順](../nyakua-mtaji-cycle/README.md)を参照してください。上記の元 `followup.cjs` と正式対局・集計は変更していません。
+
 全比較完了後の報告は [案Aの調査記録](../../doc/NYAKUA_END_PIT_A_STUDY_20261006.md)、検討の経緯は[2案の原記録](../../doc/NYAKUA_END_PIT_PROPOSALS_20261006.md)を参照してください。
 
 説明文は © 2026 nkkmd and Bao Nakakamado contributors、[CC BY-SA 4.0](../../LICENSE-CC-BY-SA-4.0.txt)。コードは[MIT](../../LICENSE)。基礎コード・基礎規則の出典は既存の[ライセンスと出典](../../LICENSES.md)と[現行ルールブック](../../doc/RULEBOOK.md)に保持します。

@@ -85,6 +85,7 @@ Baoの非捕獲手に無限種まきが存在すること自体は、Kronenburg�
 - [構造・経路・近傍の結果](../tools/nyakua-mtaji-cycle/results/structure.json)、[周期272の全境界状態](../tools/nyakua-mtaji-cycle/results/cycle-trace.json)
 - [有限手の必勝探索](../tools/nyakua-mtaji-cycle/results/alternatives.json)、[継続例の集計](../tools/nyakua-mtaji-cycle/results/continuations.json)、[検査結果](../tools/nyakua-mtaji-cycle/results/checks.json)
 - [再現コードと手順](../tools/nyakua-mtaji-cycle/README.md)。全依存のSHA-256・11棋譜のSHA-256・同一手順のハッシュを保存しています。短い既存棋譜・固定局面の追加分析としてローカルで実行しました。新規大規模対局は実施していません。
+- `structure.json` の `provenance[].path` はリポジトリ直下、`cases[].file` は `tools/nyakua-mtaji-cycle/` を基準にした相対パスです。[元成果の受付記録](../tools/nyakua-mtaji-cycle/results/receipt.json)は元実行のコード・出力の整合確認用で、再実行時に自動更新されません。新たに探索を実行する場合は作業コピーで行い、実測時間などの差を含む再実行結果で元成果を置き換えないでください。
 - Kronenburg, T., Donkers, H.H.L.M., and de Voogt, A.J. (2006). *Never-Ending Moves in Bao*. ICGA Journal 29(2), 74–78. [DOI:10.3233/ICG-2006-29204](https://doi.org/10.3233/ICG-2006-29204)／[著者公開の本文](https://www.researchgate.net/publication/220174528_NEVER-ENDING_MOVES_IN_BAO)。外部論文は上記の背景説明に要約して参照し、本文・図・コードを配信物へ複製していません。
 
 案の提案者・Bao NakakamadoとNYAKUAの考案者はnkkmd、初公開日は2026年9月30日。今回の解析・調査コード・説明文はAI支援によるものです。公開採用・サイト配信は行っていません。本書の説明文は © 2026 nkkmd and Bao Nakakamado contributors、[CC BY-SA 4.0](../LICENSE-CC-BY-SA-4.0.txt)。調査コードはMITです。

@@ -2,7 +2,7 @@
 
 **対象：遊べる試作v0.8.0（各人の前列・後列16穴、ハンド22個）**
 
-**更新日：2026年10月2日／文書版：第5版（出典・ライセンス・考案記録を整備。規則はv0.8.0を維持）**
+**更新日：2026年10月6日／文書版：第6版（MTAJI循環の追加調査への参照と対戦方式の案内を更新。規則はv0.8.0を維持）**
 
 **Bao Nakakamado・NYAKUAの考案者：nkkmd／初公開日：2026年9月30日。** [考案・公開・変更履歴](ORIGIN_AND_HISTORY.md)を参照してください。本書の説明文・図表は[CC BY-SA 4.0](../LICENSE-CC-BY-SA-4.0.txt)です。元資料と変更内容は第10章に記載します。
 
@@ -173,7 +173,7 @@ MTAJIではNYUMBAを通常の穴として扱い、特別な停止・2個蒔き�
 
 ## 9. 画面・棋譜・実装範囲
 
-「対局設定」で2人対戦か簡易コンピューター対戦を選び、開始します。光る穴を選び、方向・入口・NYUMBAの選択肢を選んでください。上からNORTH後列、NORTH前列、SOUTH前列、SOUTH後列の順に32穴を表示します。高速再生、サウンド、棋譜JSON保存に対応します。
+「対局設定」で2人対戦・簡易コンピューター・探索コンピューターを選び、開始します。光る穴を選び、方向・入口・NYUMBAの選択肢を選んでください。上からNORTH後列、NORTH前列、SOUTH前列、SOUTH後列の順に32穴を表示します。高速再生、サウンド、棋譜JSON保存に対応します。
 
 棋譜はversion 7、`rulesVersion: "0.8.0"`、`boardRowsPerPlayer: 2`、`sowingPath: "ring"`、`initialHand: 22`、`totalKete: 64`、`nyakuaProtectLast: true`、`nyakuaFixedPitBulk: false`、`nyakuaNextTurnThree: true`、`nyakuaReservedProtected: true`です。盤の `reserve` は通常ハンド、`nyakuaReserve` は確保分、`pending` は終局時の盤上捕獲保留分です。各着手の `placed`（合計）・`ordinaryPlaced`・`reservedPlaced`・`captures`・`stolen` を保存します。画面での棋譜読み込みは未実装です。
 
@@ -181,14 +181,17 @@ MTAJIではNYUMBAを通常の穴として扱い、特別な停止・2個蒔き�
 
 **MTAJIの一部局面で一着手内の種まき循環が発生する既知の制約があります。** この実装でも連続種まき512回の安全上限で対局を停止します。画面では通常の勝敗と区別し、棋譜の `adjudication: "safety-stop"` を正規終局とは扱いません。元エンジンとの再現用に内部の `winner`・`reason: "relay-limit"` は保持します。循環時の正式な停止規定は別途検討が必要です。
 
+[案AのMTAJI循環の追加調査](NYAKUA_A_MTAJI_CYCLE_FOLLOWUP_20261006.md)では、共通MTAJIの周期272を独立した種まき計算で確認しました。同じ盤面・同じ手なら案A・現行・ニャクアなしで再現します。案Aの11停止局は調査AIによる同一の全40手の経路で、案A固有の11種類の不具合や一般的な発生率とは扱いません。この研究は案Aの採用や循環時の新しい裁定を意味せず、本書の公開規則v0.8.0と512回の安全上限を維持します。
+
 先後均衡は未確認です。旧1列盤の勝率・必勝証明はこの条件へ適用しません。NYUMBA残数による部分捕獲上限は採用せず、毎回全捕獲を維持します。[3個投入の比較調査](NYAKUA_THREE_STUDY_20261002.md)と[実装・検証記録](NYAKUA_THREE_ADOPTION_20261002.md)を参照してください。
 
 ## 10. 出典・変更内容・再利用
 
 基礎ルールの説明は、[Bao la Kiswahili 日本語完全ガイド](https://github.com/nkkmd/bao-la-kiswahili-ja/tree/1179267b1f19b27a2138791253f2cb9cbfe98c14)（© 2026 bao-la-kiswahili-ja contributors）と[元ゲームの図解ルール](https://github.com/nkkmd/bao-la-kiswahili-game/blob/096ee1fbc6f562f7a2959e62ea80b628ea78f7c8/public/rules.html)（© 2026 bao-la-kiswahili-game contributors）のCC BY-SA 4.0の説明を参照・再構成しています。
 
-このプロジェクトでは構成・表現を変え、NYAKUA、ハンド枯渇時の処理、盤の変更と復元、最後の1個保護、別確保・次手3個投入、操作方法、棋譜、実装上の細則・制約を追加しました。第5版では元資料のクレジットとライセンスを復元し、考案者・初公開日・履歴への案内を追加しました。第1〜9章のv0.8.0の規則は変更していません。
+このプロジェクトでは構成・表現を変え、NYAKUA、ハンド枯渇時の処理、盤の変更と復元、最後の1個保護、別確保・次手3個投入、操作方法、棋譜、実装上の細則・制約を追加しました。第5版では元資料のクレジットとライセンスを復元し、考案者・初公開日・履歴への案内を追加しました。第6版ではMTAJI循環の追加研究への参照と対戦方式の案内を更新しました。第1〜9章のv0.8.0の規則は変更していません。
 
 本書の説明文・図表は © 2026 nkkmd and Bao Nakakamado contributors、[Creative Commons Attribution-ShareAlike 4.0 International（CC BY-SA 4.0）](https://creativecommons.org/licenses/by-sa/4.0/deed.ja)で提供します。共有時は著作者・元資料・ライセンス・変更表示を保持し、改変物の公開には条文で認められた継承条件を適用してください。無保証などの正式な条件は[条文](../LICENSE-CC-BY-SA-4.0.txt)を参照してください。
 
 この指定は説明文・図表に適用し、プログラムのMITライセンスを変更しません。適用範囲、元コードの表示、配信物の同梱条件は[ライセンスと出典](../LICENSES.md)にまとめています。
+
