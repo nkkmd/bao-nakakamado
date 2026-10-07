@@ -27,6 +27,10 @@ def main():
         if name.endswith('.html'):
             for link in re.findall(r'(?:src|href)="\./([^"?#]+)', content.decode()):
                 assert link in data, f'Missing packaged link {name}: {link}'
+        if name.endswith('.md'):
+            for link in re.findall(r'\]\(([^)]+)\)', content.decode()):
+                if not re.match(r'^[a-zA-Z][a-zA-Z0-9+.-]*:', link) and not link.startswith('#'):
+                    assert link.split('#')[0] in data, f'Missing packaged Markdown link {name}: {link}'
     html = data['index.html'].decode()
     assert '試作 v0.9.0' in html and 'search-computer' not in html
     assert '独自ルールの NYAKUA' in html and 'オリジナルの Bao' in html

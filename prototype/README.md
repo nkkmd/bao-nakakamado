@@ -1,6 +1,6 @@
 # Bao Nakakamado：遊べる試作v0.9.0
 
-Bao la Kiswahiliをベースに独自ルールNYAKUAを採用したオリジナルのBaoです。2026年10月7日に案Aを正式採用しました。考案者nkkmd、初公開日2026年9月30日を保持します。[ルールブック](../doc/RULEBOOK.md)・[採用記録](../doc/NYAKUA_V090_ADOPTION_20261007.md)を参照してください。
+Bao la Kiswahiliをベースに独自ルールNYAKUAを採用したオリジナルのBaoです。2026年10月7日に案Aを正式採用しました。考案者nkkmd、初公開日2026年9月30日を保持します。[ルールブック](RULEBOOK.md)・[採用記録](https://github.com/nkkmd/bao-nakakamado/blob/main/doc/NYAKUA_V090_ADOPTION_20261007.md)を参照してください。
 
 ## 起動・配布
 
@@ -29,7 +29,7 @@ ENGINE_LICENSE.txt
 manifest.json
 ```
 
-プログラム・画面構造はMIT、説明文はCC BY-SA 4.0。元資料・変更内容は[ライセンス案内](licenses.html)に記載し、ルートと同一の条文を同梱します。実際のサイト配信日・URLは未記録です。配信の確認後に[変更履歴](../doc/ORIGIN_AND_HISTORY.md)へ追記してください。
+プログラム・画面構造はMIT、説明文はCC BY-SA 4.0。元資料・変更内容は[ライセンス案内](licenses.html)に記載し、ルートと同一の条文を同梱します。実際のサイト配信日・URLは未記録です。配信の確認後に[変更履歴](https://github.com/nkkmd/bao-nakakamado/blob/main/doc/ORIGIN_AND_HISTORY.md)へ追記してください。
 
 ## 現行規則と棋譜
 
@@ -53,4 +53,4 @@ python3 tools/package-v090.py /tmp/bao-v090
 
 研究用案Aとの遷移・残数境界・総数保存・棋譜再構築・既知循環を照合します。実ブラウザーでは通常終局と安全停止、デスクトップと320/390/432px、簡易AIの先後、棋譜保存、説明とライセンスを確認します。旧v0.8.0の画面テスト・探索AIテストは原bytesのtrials/v0.8.0/を対象に継続します。
 
-旧公開版・学習済みAIは[保存フォルダー](../trials/v0.8.0/)と保存ブランチpreserve/v0.8.0-public-20261007に保持しています。研究・モデル・原棋譜の数値を新規則へ書き換えません。共通MTAJIの循環、takasia未実装など、元エンジンの実装範囲は引き継ぎます。
+旧公開版・学習済みAIは[保存フォルダー](https://github.com/nkkmd/bao-nakakamado/tree/main/trials/v0.8.0)と保存ブランチpreserve/v0.8.0-public-20261007に保持しています。研究・モデル・原棋譜の数値を新規則へ書き換えません。共通MTAJIの循環、takasia未実装など、元エンジンの実装範囲は引き継ぎます。
