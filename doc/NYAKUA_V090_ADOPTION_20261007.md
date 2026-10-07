@@ -28,6 +28,13 @@ NAMUAの一手で捕獲2回以上、通常処理完了時に自分のハンド1�
 
 ## 確認と公開状態
 
-[採用実装PR #32](https://github.com/nkkmd/bao-nakakamado/pull/32)で検証・統合を行います。tools/end-pit-live-check.cjsで保存済み研究用案Aとの100局・18,940候補遷移、残数境界・総数保存・棋譜再構築・既知循環11局を確認します。tools/end-pit-browser-check.cjsで通常終局と安全停止、デスクトップ・320/390/432px、簡易AIの両手番、棋譜保存、新しい説明とライセンスを確認します。結果とCIへの参照は完了後に追記します。
+[採用実装PR #32](https://github.com/nkkmd/bao-nakakamado/pull/32)の採用実装d27534ca8a18dfaf9976b555191d378bef86bbbcを検証しました。[PR側CI](https://github.com/nkkmd/bao-nakakamado/actions/runs/37609754811)と[push側CI](https://github.com/nkkmd/bao-nakakamado/actions/runs/37609749029)がすべて成功しました。
+
+- [遷移レポート](v090-public-ci/live-results.json)：研究用案Aとの100局・18,940候補遷移が一致。NYAKUA追加3,466件、後列960件、所有中NYUMBA427件、残数境界・総数保存・棋譜再構築・既知循環11局を確認しました。
+- [ブラウザーレポート](v090-public-ci/browser-results.json)：PCのHTTP起動と320/390/432pxのfile起動で、通常終局49手・安全停止40手の計8対局が研究棋譜と一致。簡易AI両側の8構成、棋譜保存、新しい版・説明・ルール・ライセンスを確認し、画面エラー・横はみ出しは0件です。PCと320pxのabout、390pxの追加表示の画像も目視確認しました。
+- [梱包レポート](v090-public-ci/package-results.json)：旧v0.8.0の29ファイルが固定コミットのGit blob SHAと一致。条文コピー、HTML・Markdownの同梱リンク、ZIP内13ファイルとCRCを確認しました。CI生成ZIPと配布ZIPはbytes一致、SHA256はe14a5fee0317afdcb20c01b7363ceb2ea3fd7bc5fd41113841258ac8e70d1b1bです。
+- 既存の旧画面・探索Worker・探索遷移・学習/凍結モデル・正式評価準備の回帰確認も成功しました。これは旧モデルをv0.9.0へ採用した結果ではありません。
+
+[確認情報JSON](NYAKUA_V090_ADOPTION_CI_20261007.json)にCI・成果物の識別情報を保存します。初回CIではブラウザー用棋譜の参照先不足で失敗し、リポジトリ内の保存棋譜へ修正しました。その後、配布READMEのリポジトリ外リンクを単独ZIPでも読めるリンクへ変更し、上記の最終CIで再確認しました。ゲームの規則と実行ファイルはそのリンク修正で変更していません。mainの統合コミットと日時はPR #32のマージ記録を基準とします。
 
 配布ZIPはindex.htmlを直下に置き、コードMIT・説明文CC BY-SA 4.0の案内と条文を同梱します。正式採用・main統合・ZIP作成と、実際のサイト配信は別です。v0.9.0のサイト配信日・URLは未記録です。

@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "games": 100,
+  "transitions": 18940,
+  "snapshots": 1084,
+  "additions": 3466,
+  "backAdditions": 960,
+  "houseAdditions": 427,
+  "frontEmpty": 247,
+  "mtaji": 5831,
+  "passes": 0,
+  "cycles": 11,
+  "boundaryChecks": [
+    "addition",
+    "threeCapturesOneAddition",
+    "backAddition",
+    "houseAddition",
+    "ownLast",
+    "opponentLast",
+    "pairMinimum"
+  ]
+}
