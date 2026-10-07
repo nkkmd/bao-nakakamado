@@ -3,7 +3,7 @@
 const {chromium} = require("playwright");
 const assert = require("node:assert/strict"), fs = require("node:fs"), path = require("node:path");
 const {pathToFileURL} = require("node:url");
-const fixtures = [require("./nyakua-continue/results/search4/anomaly-A-2-1.json"),require("./nyakua-end-pit/results/final-pilot-search4/example-A-0-0.json")];
+const fixtures = [require("./nyakua-continue/results/search4/anomaly-A-2-1.json"),require("./nyakua-continue/results/search6/example-A-0-0.json")];
 const publicRoot=path.resolve(__dirname,"../prototype");
 let target = process.argv[2];
 const output = process.argv[3] || "/tmp/bao-v090-browser-check";
@@ -81,7 +81,8 @@ const report = {status:"PASS", surfaces:[], errors:[], additions:[], computerSid
       }
       assert.ok((await page.locator("#status").innerText()).includes(fixture.reason==="relay-limit" ? "通常の勝敗は未判定" : "の勝ち"));
       assert.equal(await page.locator("#board button:enabled").count(),0);
-      await page.getByText("棋譜の保存",{exact:true}).click();
+      if(!await page.locator("details").filter({has:page.locator("#download")}).evaluate(el=>el.open))
+        await page.getByText("棋譜の保存",{exact:true}).click();
       const [download]=await Promise.all([page.waitForEvent("download"),page.locator("#download").click()]);
       await download.saveAs(path.join(output,label+"-"+fixture.reason+"-game.json"));
       assert.equal(download.suggestedFilename(),"bao-nakakamado-v0.9.0-game.json");
