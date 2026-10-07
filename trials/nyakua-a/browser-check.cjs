@@ -73,8 +73,9 @@ const report = {status:"PASS", surfaces:[], errors:[], additions:[], computerSid
       }
       assert.ok((await page.locator("#status").innerText()).includes("通常の勝敗は未判定"));
       assert.equal(await page.locator("#board button:enabled").count(),0);
-      const downloadPromise=page.waitForEvent("download");await page.locator("#download").click();
-      const download=await downloadPromise;await download.saveAs(path.join(output,label+"-game.json"));
+      await page.getByText("棋譜の保存",{exact:true}).click();
+      const [download]=await Promise.all([page.waitForEvent("download"),page.locator("#download").click()]);
+      await download.saveAs(path.join(output,label+"-game.json"));
       assert.equal(download.suggestedFilename(),"bao-nakakamado-nyakua-a-trial-001-game.json");
       const record=JSON.parse(fs.readFileSync(path.join(output,label+"-game.json")));
       assert.equal(record.adjudication,"safety-stop");assert.equal(record.outcome.winner,null);
