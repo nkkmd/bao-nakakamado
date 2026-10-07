@@ -345,7 +345,7 @@
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = "bao-nakakamado-v0.9.0-game.json";
+    link.download = "bao-nakakamado-nyakua-a-trial-001-game.json";
     link.click();
     window.setTimeout(() => URL.revokeObjectURL(url), 1000);
   });

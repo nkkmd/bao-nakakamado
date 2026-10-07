@@ -1,38 +1,35 @@
 # Bao Nakakamado の用語
 
-対象：現行試作v0.8.0。更新日：2026年10月2日。
+対象：現行試作v0.9.0。更新日：2026年10月7日。
 
 ## NYAKUA（ニャクア）
 
-2026年9月30日に、ハンドからKETEを奪う動作の名称として **NYAKUA** を採用しました。日本語の読みは **ニャクア**。初めて説明するときは「NYAKUA（ニャクア、ハンド奪取）」と書きます。
+NYAKUAは独自のハンド奪取規則の名称です。2026年9月30日に採用し、日本語ではニャクアと読みます。Bao Nakakamado・NYAKUAの考案者はnkkmd、初公開日は2026年9月30日。[変更履歴](ORIGIN_AND_HISTORY.md)に根拠を保存しています。
 
-Bao Nakakamado・NYAKUAの考案者は **nkkmd**、初公開日は **2026年9月30日**です。ハンド奪取の実装記録は9月29日、NYAKUAの名称採用は9月30日で、初公開日とは区別します。根拠と変更の経緯は[考案・公開・変更履歴](ORIGIN_AND_HISTORY.md)を参照してください。
+v0.9.0では、NAMUAの一手で捕獲2回以上、通常処理完了時に自分のハンド1個以上・相手2個以上なら、双方から1個ずつ蒔き終わりの穴へ計2個追加します。相手の最後の1個は保護。一手につき一度、追加後の捕獲・種まき・終点再判定はありません。即時終局・安全停止した手では発動しません。
 
-現行v0.8.0では、NAMUAで始めた一着手で捕獲2回以上、相手の**通常ハンドに2個以上**残っていれば、着手後に1個だけ奪い、自分の**確保分**へ移します。3回以上捕獲しても1個です。捕獲1回以下、相手の通常ハンド0〜1個、MTAJIの着手では発動しません。相手の最後の1個と確保分は奪えません。
-
-| 用語 | 現行v0.8.0での意味 |
+| 用語 | v0.9.0での意味 |
 |---|---|
-| 通常ハンド | 初期22個から盤へ未投入のKETE。NYAKUAで奪われる対象 |
-| 確保分 | NYAKUAで得た1個。通常ハンドに混ぜず、次の自分の手番で必ず使う。相手には奪われない |
-| 次手3個投入 | 通常ハンド2個＋確保分1個を、次の自分の手番で同じ合法な開始穴へ一度に投入する。通常ハンドが1個なら計2個、0個なら確保分1個 |
-| 捕獲 | 相手の前列穴のKETEを取る盤上の動作 |
-| 一穴全投入 | 相手ハンド0のとき残り全部を一穴へ置く旧仕様。v0.8.0では次手3個投入へ置き換えた |
+| ハンド | 初期22個から盤へ未投入のKETE。開始時投入とNYAKUAの追加で減る |
+| 終点2個追加 | 双方のハンドから各1個を、通常処理が完了した手の蒔き終わりの穴へ置く |
+| 捕獲 | 相手前列の穴のKETEを取る盤上の動作 |
+| 連続種まき | 種まきの終点の中身を持ち上げ、同じ着手を続けること。NYAKUA追加後には行わない |
+| 確保分・次手3個投入 | 旧v0.8.0の規則。現行v0.9.0では使わない |
 
-NYAKUAは奪取動作、次手3個投入は確保分の使用規則です。確保分を使った手でもNYAKUAは発動し、新しく奪った1個はさらに次の自分の手番用に確保します。追加手番は与えません。両者の通常ハンドと確保分がすべて0になると共通MTAJIへ移ります。
+両者のハンドが0になると、現在の着手のNAMUA処理を完了して共通MTAJIへ移ります。追加手番や片側だけのMTAJI移行はありません。通常初期局面からハンド枯渇パスは生じません。
 
-画面の説明・発動表示・着手候補ではNYAKUAを使います。棋譜の `stolen`、イベントの `steal`、既存のファイル名は維持します。盤の `reserve` は通常ハンド、`nyakuaReserve` は確保分です。各手の `placed` は合計投入数、`ordinaryPlaced` と `reservedPlaced` はその内訳です。
+## 棋譜
 
-## 仕様・棋譜の履歴
+現行formatはbao-nakakamado-prototype、version 8、rulesVersion 0.9.0、variantRule namua-end-pit-two-protect-last-two-row-ring-hand22、publicAdopted trueです。nyakuaEndPitAdd true、nyakuaProtectLast true、nyakuaNextTurnThree false、nyakuaReservedProtected false、nyakuaFixedPitBulk false。
 
-以前の「自分のハンドへ移す」「ハンド間の1個奪取」は、通常ハンドへ加算していた旧仕様の表現です。過去の試験では、その文書が指定する条件を使います。
+placedは開始時投入数、capturesは捕獲回数、stolenは相手ハンドから取った数、addedは終点へ追加した総数（0か2）、ownAdded・opponentAddedは各ハンドから追加した数、endpointは追加先（非発動はnull）。イベント名はend-pit-add。reserveはハンド、nyakuaReserveは互換用[0,0]、pendingは終局時捕獲保留数です。安全停止はadjudication safety-stop・outcome.winner nullで通常勝敗と区別します。
 
 | ルール版 | 盤・初期ハンド | NYAKUA後の扱い | 棋譜version |
 |---|---|---|---:|
 | v0.6.0 | 各人1列・折り返し・12個 | 最後の1個も奪い、通常ハンドへ加算。一穴全投入 | 4 |
 | v0.6.1 | 各人1列・折り返し・12個 | 最後の1個を保護し、通常ハンドへ加算。一穴全投入 | 5 |
 | v0.7.0 | 各人前後2列・循環・22個 | 最後の1個保護と一穴全投入を固定 | 6 |
-| **v0.8.0** | **各人前後2列・循環・22個** | **最後の1個と確保分を保護。別確保・次手3個投入** | **7** |
+| v0.8.0 | 各人前後2列・循環・22個 | 最後の1個と確保分を保護。別確保・次手3個投入 | 7 |
+| **v0.9.0** | **各人前後2列・循環・22個** | **最後の1個を保護。着手終了後に両ハンドから終点へ2個追加** | **8** |
 
-現行棋譜は `rulesVersion: "0.8.0"`、`nyakuaProtectLast: true`、`nyakuaFixedPitBulk: false`、`nyakuaNextTurnThree: true`、`nyakuaReservedProtected: true`、`variantRule: "namua-steal-one-protect-last-reserved-next-own-turn-three-two-row-ring-hand22"` です。旧棋譜を現行ルールの棋譜として解釈しません。
-
-初期配置から終局までの遊び方は[現行ルールブック](RULEBOOK.md)、実装と棋譜の扱いは[試作README](../prototype/README.md)、採用の経緯は[実装・採用記録](NYAKUA_THREE_ADOPTION_20261002.md)を参照してください。
+案A実機試験版は別format bao-nakakamado-nyakua-a-trial、version 1、rulesVersion nyakua-a-trial-001、publicAdopted falseです。旧・試験棋譜を現行棋譜として解釈しません。初期配置と遊び方は[ルールブック](RULEBOOK.md)、実装・配布は[試作README](../prototype/README.md)を参照してください。

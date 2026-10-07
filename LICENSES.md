@@ -1,6 +1,6 @@
 # ライセンスと出典
 
-更新日：2026年10月6日。コードは **MIT**、説明文・図版は **CC BY-SA 4.0** で提供します。同じファイルを利用者が自由に選べる二重ライセンスではなく、以下の対象ごとに適用します。
+更新日：2026年10月7日。コードは **MIT**、説明文・図版は **CC BY-SA 4.0** で提供します。同じファイルを利用者が自由に選べる二重ライセンスではなく、以下の対象ごとに適用します。
 
 ## 適用範囲
 
@@ -8,7 +8,7 @@
 |---|---|
 | JavaScript・Pythonなどのプログラム、テスト、CSS、HTMLの構造、操作ラベル、設定、GitHub Actions | [MIT](LICENSE) |
 | 本リポジトリのMarkdown文書の文章・表・自作図版（README、ルールブック、調査報告、管理ルール、ツールのREADMEを含む） | [CC BY-SA 4.0](LICENSE-CC-BY-SA-4.0.txt) |
-| `prototype/index.html` の `#about`・`#rules` 内の説明文、および `prototype/licenses.html` の説明文 | CC BY-SA 4.0。HTML・CSSのコードにはMITを適用 |
+| `prototype/index.html` の `#about`・`#rules` 内の説明文、`prototype/rules.html`、および `prototype/licenses.html` の説明文 | CC BY-SA 4.0。HTML・CSSのコードにはMITを適用 |
 | 文書内の実行可能なコード例・コマンド例 | MIT。周囲の説明文・図表にはCC BY-SA 4.0を適用 |
 | JSONなどの機械可読な試験結果・棋譜・検証データ | 著作権による保護がある部分はMIT。単なる事実・数値に新たな制限は設けない |
 | ライセンス条文、第三者の引用、リンク先の資料、別途ライセンスを明記した素材 | それぞれの元の条件。上記の指定で上書きしない |
@@ -43,7 +43,7 @@ CC BY-SA対象の文書は © 2026 nkkmd and Bao Nakakamado contributors。元�
 1. [Bao la Kiswahili 日本語完全ガイド](https://github.com/nkkmd/bao-la-kiswahili-ja/tree/1179267b1f19b27a2138791253f2cb9cbfe98c14)、© 2026 bao-la-kiswahili-ja contributors。[元資料のライセンス](https://github.com/nkkmd/bao-la-kiswahili-ja/blob/1179267b1f19b27a2138791253f2cb9cbfe98c14/LICENSE)。
 2. [元ゲームの図解ルール](https://github.com/nkkmd/bao-la-kiswahili-game/blob/096ee1fbc6f562f7a2959e62ea80b628ea78f7c8/public/rules.html)、© 2026 bao-la-kiswahili-game contributors。確認時点の版を固定して示しています。この説明ページ自体も日本語完全ガイドの説明を要約・英訳・再構成しています。
 
-Bao Nakakamadoでは説明の構成・表現を変更し、NYAKUA、ハンド枯渇時の処理、盤の変更と復元、最後の1個保護、別確保・次手3個投入、操作方法、棋譜、実装上の制約を追加しました。現行v0.8.0の説明に過去仕様を引き継いでいません。[ルールブック](doc/RULEBOOK.md)と[変更履歴](doc/ORIGIN_AND_HISTORY.md)に具体的な内容を記録します。
+Bao Nakakamadoでは説明の構成・表現を変更し、NYAKUA、ハンド枯渇時の処理、盤の変更と復元、最後の1個保護、別確保・次手3個投入、操作方法、棋譜、実装上の制約を追加しました。v0.8.0への変更時も過去仕様と区別して説明を整備しました。[ルールブック](doc/RULEBOOK.md)と[変更履歴](doc/ORIGIN_AND_HISTORY.md)に具体的な内容を記録します。
 
 以前のルールブックの「出典と再利用」にあったCC BY-SA表示を、2026年10月2日に現行版へ復元しました。今回の整備で、元資料の著作権・ライセンスを置き換えることはありません。
 
@@ -55,7 +55,7 @@ Bao Nakakamadoでは説明の構成・表現を変更し、NYAKUA、ハンド枯
 
 説明文のクレジット例：
 
-> Bao Nakakamado ルールブック v0.8.0 — © 2026 nkkmd and Bao Nakakamado contributors。Bao la Kiswahili 日本語完全ガイド（© 2026 bao-la-kiswahili-ja contributors）と元ゲームの図解ルール（© 2026 bao-la-kiswahili-game contributors）を参照・再構成し、NYAKUAなどを追加。CC BY-SA 4.0。出典と各ライセンスへのリンクは本ページ参照。
+> Bao Nakakamado ルールブック v0.9.0 — © 2026 nkkmd and Bao Nakakamado contributors。Bao la Kiswahili 日本語完全ガイド（© 2026 bao-la-kiswahili-ja contributors）と元ゲームの図解ルール（© 2026 bao-la-kiswahili-game contributors）を参照・再構成し、NYAKUAなどを追加。CC BY-SA 4.0。出典と各ライセンスへのリンクは本ページ参照。
 
 ライセンスは著作権等による保護がある表現に適用します。ゲームのルールというアイデア自体に独占権や考案者表示の義務を新たに作るものではありません。Bao Nakakamado・NYAKUAの名称について、商標登録済みとの表示や、元資料・考案者が第三者の作品を公式に承認したとの表示は行いません。
 
@@ -74,3 +74,13 @@ Bao Nakakamadoでは説明の構成・表現を変更し、NYAKUA、ハンド枯
 2026年10月5日の[正式学習結果](doc/AI_FORMAL_LEARNING_RUN_20261005.md)に基づく `tools/ai-integration/frozen-models/formal-v1-linear-2026100401/` は、本ゲームの固定trainから新規に学習した開発候補です。元ゲームの学習済み重みは流用していません。モデル・学習記録・receipt・validation報告の保護対象部分はMIT、説明文はCC BY-SA 4.0。公開AI採用・最終評価の合格とは区別します。
 
 2026年10月5日の[試験用画面接続](doc/AI_BROWSER_WORKER_20261005.md)では、本ゲームの凍結線形モデルと専用エンコーダーを `prototype/browser-model.js` に決定的に生成しました。元ゲームの学習済み重みは流用していません。エンコーダーのMIT表示（Copyright (c) 2026 cultivationdata.net）を保持し、モデル・推論・Worker・clientはMITです。この試験接続時点では実機確認と公開採用判断は後続工程でした。2026年10月6日、実機試験の報告を受けて[公開AIとして採用](doc/AI_PUBLIC_ADOPTION_20261006.md)しました。ライセンスと元の著作権表示は維持します。
+
+## 案A実機試験版の適用範囲
+
+2026年10月7日、`trials/nyakua-a/`へ未採用の案Aを隔離実装しました。engine.js・rules.js・app.js・CSS・HTML構造・操作ラベル・テスト・検証結果の保護対象部分・梱包スクリプト・設定はMIT、README・RULEBOOK・HTMLの説明文はCC BY-SA 4.0です。元エンジン・CSSの表示と同梱条文を保持し、v0.8.0の別確保・次手3個投入を終点2個追加へ変更しました。開発ブラウザー検証は既存CIと同じPlaywright 1.62.1を使用します。学習済みモデル・探索Workerは案A配布物に同梱しません。配布物内の`licenses.html`にも出典・変更内容を記載しています。現行`prototype/`の表示・条文は変更しません。
+
+## v0.9.0の正式採用と保存版
+
+2026年10月7日、管理者の正式採用指示に基づき、prototype/end-pit-engine.js・end-pit-rules.js・app.jsに案Aの終点2個追加を採用しました。コード・テスト・梱包・設定はMIT、画面about・rules・rules.html・ライセンスページ・README・ルールブックの説明文はCC BY-SA 4.0。元コード・CSS・元説明文の表示と同梱条文を保持します。「Bao la Kiswahiliをベースに独自ルールNYAKUAを採用したオリジナルのBao」と説明を追加しました。
+
+旧v0.8.0の画面・探索AIを含む29ファイルはtrials/v0.8.0/に原bytesで保存します。旧AIのソース・モデル・採用記録のライセンスは維持し、現行v0.9.0の配布ZIPに旧モデルやWorkerは含めません。案A試験版と研究結果も当時の記録として保存します。上記の試験実装時点の「未採用」「prototypeを変更しない」は、その作業時点の適用範囲で、正式採用後の現在状態は本節を基準とします。

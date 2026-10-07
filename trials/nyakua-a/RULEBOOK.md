@@ -1,10 +1,10 @@
-# Bao Nakakamado ルールブック
+# Bao Nakakamado 案A試験版ルールブック
 
-**対象：遊べる試作v0.9.0（各人の前列・後列16穴、ハンド22個）。更新日：2026年10月7日／文書版：第8版。**
+**対象：未採用の案A実機試験 nyakua-a-trial-001。更新日：2026年10月7日（日本時間）。**
 
-**Bao Nakakamado・NYAKUAの考案者：nkkmd／初公開日：2026年9月30日。** [考案・公開・変更履歴](https://github.com/nkkmd/bao-nakakamado/blob/main/doc/ORIGIN_AND_HISTORY.md)を参照してください。
+**考案者：nkkmd／Bao Nakakamado・NYAKUAの初公開日：2026年9月30日。** 本試験版の作成日を初公開日として扱いません。現行公開規則v0.8.0は別に保存し、案Aは採用していません。
 
-Bao Nakakamadoは、Bao la Kiswahiliをベースに独自ルールNYAKUAを採用したオリジナルのBaoです。盤・種まき・捕獲の仕組みを受け継ぎ、ハンドのKETEを使った駆け引きを加えています。v0.9.0では案Aを正式採用し、通常処理の完了後に両ハンドから終点へ2個追加します。出典・変更表示とライセンスは第10章に記載します。
+通常の種まきと捕獲を最後まで処理した後、条件を満たせば両者のハンドから1個ずつ、計2個を蒔き終わりの穴へ追加します。追加による捕獲・種まきは再開しません。出典・変更表示とライセンスは第10章および[同梱のライセンス案内](licenses.html)を参照してください。
 
 ## 1. 勝利条件
 
@@ -31,7 +31,7 @@ Bao Nakakamadoは、Bao la Kiswahiliをベースに独自ルールNYAKUAを採�
 | kichwa（キチュワ） | 前列の両端1番・8番。捕獲したKETEの入口 |
 | kimbi（キンビ） | 前列2番・7番。捕獲時の入口に制約がある穴 |
 | NYAKUA（ニャクア） | NAMUAの連続捕獲後に相手のハンドから1個奪う動作 |
-| 終点2個追加 | 着手完了時、両者のハンドから1個ずつ蒔き終わりの穴へ置く現行NYAKUAの動作 |
+| 終点2個追加 | 着手完了時、両者のハンドから1個ずつ蒔き終わりの穴へ置く案Aの動作 |
 
 各人の初期配置は次のとおりです。
 
@@ -100,7 +100,7 @@ Bao Nakakamadoは、Bao la Kiswahiliをベースに独自ルールNYAKUAを採�
 
 相手前列が全空になった時点で終局し、最後に取ったKETEを蒔き直しません。棋譜内部ではその分を保留数として記録し、総数を保存します。
 
-## 6. NYAKUA：着手終了後の終点2個追加
+## 6. 案AのNYAKUA：着手終了後の終点2個追加
 
 NAMUAで開始した一手の通常処理を完了してから、次のすべてを満たせば追加します。
 
@@ -150,9 +150,9 @@ MTAJIではNYUMBAを通常の穴として扱い、特別な停止・2個蒔き�
 
 ## 9. 画面・棋譜・実装範囲
 
-2人対戦・簡易コンピューター対戦を選べます。光る穴を選び、方向・入口・NYUMBAの選択肢を選んでください。高速再生・サウンド・棋譜JSON保存に対応します。簡易AIは現行ルールの合法手と遷移を使い、v0.8.0の学習済みモデルを使用しません。
+2人対戦・簡易コンピューター対戦を選べます。光る穴を選び、方向・入口・NYUMBAの選択肢を選んでください。高速再生・サウンド・棋譜JSON保存に対応します。簡易AIは案Aの合法手と遷移を使い、v0.8.0の学習済みモデルを使用しません。
 
-棋譜はformat `bao-nakakamado-prototype`、version 8、`rulesVersion: "0.9.0"`、`variantRule: "namua-end-pit-two-protect-last-two-row-ring-hand22"`、`publicAdopted: true`。旧v0.8.0のversion 7と試験版のversion 1は、このルールの棋譜として読み込みません。`placed`は手の開始時の投入数、`captures`は捕獲回数、`stolen`は相手ハンドから取った数、`added`は終点への追加数（0か2）、`ownAdded`・`opponentAdded`は各ハンドから追加した数、`endpoint`は追加先（非発動ならnull）。通常ハンドは`reserve`、互換用`nyakuaReserve`は常に[0,0]、終局時の捕獲保留数は`pending`です。画面での棋譜読み込みは未実装です。
+棋譜は専用format `bao-nakakamado-nyakua-a-trial`、version 1、`rulesVersion: "nyakua-a-trial-001"`、`variantRule: "nyakua-end-pit-a-trial-001"`、`publicAdopted: false`。現行version 7とは別形式です。`placed`は手の開始時の投入数、`captures`は捕獲回数、`stolen`は相手ハンドから取った数、`added`は終点への追加数（0か2）、`ownAdded`・`opponentAdded`は各ハンドから追加した数、`endpoint`は追加先（非発動ならnull）。通常ハンドは`reserve`、互換用`nyakuaReserve`は常に[0,0]、終局時の捕獲保留数は`pending`です。画面での棋譜読み込みは未実装です。
 
 MTAJI循環は共通エンジンの既知の制約です。連続種まき512回の安全上限で停止し、画面と`adjudication: "safety-stop"`で通常勝敗と区別します。再現用`final.winner`は元エンジンの内部値を保持しますが、裁定結果の`outcome.winner`はnullです。循環禁止手・引き分けなどの新裁定は導入していません。
 
@@ -162,9 +162,9 @@ takasia未実装など、保存済みエンジンの範囲を引き継ぎます�
 
 基礎ルールの説明は、[Bao la Kiswahili 日本語完全ガイド](https://github.com/nkkmd/bao-la-kiswahili-ja/tree/1179267b1f19b27a2138791253f2cb9cbfe98c14)（© 2026 bao-la-kiswahili-ja contributors）と[元ゲームの図解ルール](https://github.com/nkkmd/bao-la-kiswahili-game/blob/096ee1fbc6f562f7a2959e62ea80b628ea78f7c8/public/rules.html)（© 2026 bao-la-kiswahili-game contributors）のCC BY-SA 4.0の説明を参照・再構成しています。
 
-旧v0.8.0のルールブックを出発点として、2026年10月7日にv0.9.0の説明へ変更しました。基礎ルール・元資料の表示は維持し、別確保・次手3個投入を着手終了後の終点2個追加へ置き換え、専用の画面・棋譜・安全停止の扱いを記載しました。管理者の正式採用判断に基づくルール改訂です。
+現行v0.8.0のルールブックを出発点として、2026年10月7日に案A試験版の説明へ変更しました。基礎ルール・元資料の表示は維持し、別確保・次手3個投入を着手終了後の終点2個追加へ置き換え、専用の画面・棋譜・安全停止の扱いを記載しました。現行公開規則の改訂ではありません。
 
-本書の説明文・図表は © 2026 nkkmd and Bao Nakakamado contributors、[Creative Commons Attribution-ShareAlike 4.0 International（CC BY-SA 4.0）](https://creativecommons.org/licenses/by-sa/4.0/deed.ja)で提供します。共有時は著作者・元資料・ライセンス・変更表示を保持し、改変物の公開には条文で認められた継承条件を適用してください。無保証などの正式な条件は[条文](../LICENSE-CC-BY-SA-4.0.txt)を参照してください。
+本書の説明文・図表は © 2026 nkkmd and Bao Nakakamado contributors、[Creative Commons Attribution-ShareAlike 4.0 International（CC BY-SA 4.0）](https://creativecommons.org/licenses/by-sa/4.0/deed.ja)で提供します。共有時は著作者・元資料・ライセンス・変更表示を保持し、改変物の公開には条文で認められた継承条件を適用してください。無保証などの正式な条件は[条文](LICENSE-CC-BY-SA-4.0.txt)を参照してください。
 
-この指定は説明文・図表に適用し、プログラムのMITライセンスを変更しません。適用範囲、元コードの表示、配信物の同梱条件は[ライセンスと出典](../prototype/licenses.html)にまとめています。
+この指定は説明文・図表に適用し、プログラムのMITライセンスを変更しません。適用範囲、元コードの表示、配信物の同梱条件は[ライセンスと出典](licenses.html)にまとめています。
 

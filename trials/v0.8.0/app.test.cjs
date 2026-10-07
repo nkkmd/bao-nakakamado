@@ -56,7 +56,7 @@ test("four-row replay handles rear moves, NYAKUA, next-turn three-KETE placement
     window.BaoEngine = require("./next-turn-engine.js");
     const S = require("./steal.js").createForEngine(window.BaoEngine);
     window.NakakamadoSteal = S;
-    require("../trials/v0.8.0/app.js");
+    require("./app.js");
     elements.start.click();
     let reference = S.initialGame();
     assert.equal(elements.board.children.length, 32);
@@ -200,7 +200,7 @@ test("search computer reset discards an in-flight response and records only the 
   function reply(w){w.onmessage({data:{...w.input,modelSha256:C.MODEL_SHA256,
     result:{move:Q.moveVariants(w.input.state)[0],stats:{evaluatorId:"NAKAKAMADO-FROZEN-LINEAR-2026100401-v1",allocatedTimeMs:150,completedDepth:1,elapsedMs:1}}}});}
   try{
-    delete require.cache[require.resolve("../trials/v0.8.0/app.js")];require("../trials/v0.8.0/app.js");
+    delete require.cache[require.resolve("./app.js")];require("./app.js");
     elements.start.click();fireNext();assert.equal(workers.length,1);
     assert.equal(elements.board.attrs.get("aria-busy"),"true");
     elements["new-game"].click();assert.ok(workers[0].terminated);assert.equal(timers.size,0);
@@ -219,6 +219,6 @@ test("search computer reset discards an in-flight response and records only the 
   }finally{
     global.document=oldDocument;global.window=oldWindow;global.Blob=oldBlob;
     URL.createObjectURL=oldCreate;URL.revokeObjectURL=oldRevoke;
-    delete require.cache[require.resolve("../trials/v0.8.0/app.js")];
+    delete require.cache[require.resolve("./app.js")];
   }
 });

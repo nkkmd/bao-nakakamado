@@ -2,7 +2,7 @@
 const assert=require("node:assert/strict"),fs=require("node:fs"),path=require("node:path"),http=require("node:http");
 const {chromium}=require("playwright");
 const Study=require("./next-turn-live-check.cjs");
-const root=path.resolve(__dirname,"../prototype"),out=process.env.BAO_UI_OUTPUT||"/tmp/bao-next-turn-ui";
+const root=path.resolve(__dirname,"../trials/v0.8.0"),out=process.env.BAO_UI_OUTPUT||"/tmp/bao-next-turn-ui";
 async function main() {
  fs.mkdirSync(out,{recursive:true});
  const server=http.createServer((req,res)=>{

@@ -5,7 +5,7 @@ const {chromium}=require("playwright");
 const E=require("../../prototype/next-turn-engine.js"), S=require("../../prototype/steal.js").createForEngine(E);
 const Q=require("../../prototype/search-transition.js").createForEngine(E), F=require("./frozen-model-search.cjs");
 async function main(){
-  const root=path.resolve(__dirname,"../../prototype"),out=process.env.BAO_WORKER_UI_OUTPUT||"/tmp/bao-worker-ui";
+  const root=path.resolve(__dirname,"../../trials/v0.8.0"),out=process.env.BAO_WORKER_UI_OUTPUT||"/tmp/bao-worker-ui";
   fs.mkdirSync(out,{recursive:true});
   const server=http.createServer((req,res)=>{
     const pathname=new URL(req.url,"http://localhost").pathname;
