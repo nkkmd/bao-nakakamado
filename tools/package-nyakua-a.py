@@ -9,6 +9,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parent.parent
 TRIAL = ROOT / 'trials/nyakua-a'
+V080 = ROOT / 'trials/v0.8.0'
 PRESERVED = json.loads((TRIAL / 'v0.8.0-preserved.json').read_text())
 PUBLIC_FILES = ['index.html', 'app.js', 'style.css', 'next-turn-engine.js', 'steal.js',
                 'search-transition.js', 'computer-client.js', 'computer-worker.js',
@@ -22,12 +23,12 @@ def main():
     output = Path(sys.argv[1] if len(sys.argv) > 1 else '/tmp/nyakua-a-zips')
     output.mkdir(parents=True, exist_ok=True)
     for name, expected in PRESERVED['files'].items():
-        data = (ROOT / name).read_bytes()
+        data = (V080 / Path(name).name).read_bytes()
         actual = hashlib.sha1(b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest()
         assert actual == expected, f'Frozen v0.8.0 file changed: {name}'
     reports = []
     for label, directory, files, rule in [
-        ('bao-nakakamado-v0.8.0-preserved-20261007', ROOT / 'prototype', PUBLIC_FILES, '0.8.0'),
+        ('bao-nakakamado-v0.8.0-preserved-20261007', V080, PUBLIC_FILES, '0.8.0'),
         ('bao-nakakamado-nyakua-a-trial-001-20261007', TRIAL, TRIAL_FILES, 'nyakua-a-trial-001'),
     ]:
         for license_name in ['LICENSE', 'LICENSE-CC-BY-SA-4.0.txt']:

@@ -8,11 +8,13 @@
   <meta name="theme-color" content="#172c2b">
   <meta name="robots" content="noindex, nofollow">
   <title>Bao Nakakamado — 遊べる試作</title>
-  <meta name="description" content="Bao la Kiswahiliをベースに独自ルールNYAKUAを採用したオリジナルBao。NAMUAの連続捕獲後、両者のハンドから1個ずつ蒔き終わりの穴へ追加します。">
-  <link rel="stylesheet" href="./style.css?v=0.9.0">
-  <script defer src="./end-pit-engine.js?v=0.9.0"></script>
-  <script defer src="./end-pit-rules.js?v=0.9.0"></script>
-  <script defer src="./app.js?v=0.9.0"></script>
+  <meta name="description" content="各人の前列・後列16穴、初期ハンド22個。Bao la Kiswahili にNYAKUA（ニャクア）を追加した試作版。最後の1個保護と、奪取分を次の自分の手番で使う3個投入を採用。">
+  <link rel="stylesheet" href="./style.css?v=0.8.0-four-row-20261002">
+  <script defer src="./next-turn-engine.js?v=0.8.0"></script>
+  <script defer src="./steal.js?v=0.8.0"></script>
+  <script defer src="./search-transition.js?v=0.8.0"></script>
+  <script defer src="./computer-client.js?v=ai-release001"></script>
+  <script defer src="./app.js?v=0.8.0-ai-release001"></script>
 </head>
 <body>
   <main class="game-shell">
@@ -20,7 +22,7 @@
       <div>
         <span class="kicker">A NEW BAO EXPERIMENT</span>
         <h1>BAO NAKAKAMADO</h1>
-        <span class="prototype-badge">試作 v0.9.0</span>
+        <span class="prototype-badge">試作 v0.8.0</span>
         <span id="opponent-badge" class="opponent-badge">2人対戦</span>
       </div>
       <div class="toolbar">
@@ -40,6 +42,15 @@
             <select id="mode">
               <option value="local">2人で対戦</option>
               <option value="computer">簡易コンピューター</option>
+              <option value="search-computer">探索コンピューター</option>
+            </select>
+          </label>
+          <label id="difficulty-field" class="setup-field" for="difficulty" hidden>
+            <span>強さ</span>
+            <select id="difficulty">
+              <option value="easy">やさしい</option>
+              <option value="normal">ふつう</option>
+              <option value="hard" selected>強い</option>
             </select>
           </label>
           <label id="side-field" class="setup-field" for="side" hidden>
@@ -50,8 +61,8 @@
             </select>
           </label>
           <button id="start" class="start-button" type="button">対局開始</button>
-          <p class="hint">NAMUAで一手に2回以上捕獲すると、蒔き終わりの穴へ両者のハンドから1個ずつ、計2個追加します。自分に1個以上、相手に2個以上残る場合のみ。追加したら、その手は終了します。</p>
-          <p class="hint">2人対戦、または簡易コンピューターとの対戦で遊べます。</p>
+          <p class="hint">各人の前列・後列16穴、ハンド22個で開始。種まきは自分の前列と後列を循環します。NAMUAの連続捕獲でNYAKUA。奪った1個を確保し、次の自分の手番で通常ハンド2個と一緒に一穴へ投入します。相手の最後の1個と確保分は保護します。</p>
+          <p class="hint">探索コンピューターは本ゲーム専用の学習済みモデルを使います。簡易コンピューターも選べます。</p>
         </div>
       </section>
       <div class="game-info" aria-label="対局状況">
@@ -61,8 +72,8 @@
         </div>
         <strong id="phase-name">NAMUA</strong>
         <div class="reserves">
-          <span>NORTH <small class="hand-label">手元</small> <strong id="north-hand">22</strong></span>
-          <span>SOUTH <small class="hand-label">手元</small> <strong id="south-hand">22</strong></span>
+          <span>NORTH <small class="hand-label">手元</small> <strong id="north-hand">22</strong><small class="reserved-label">確保 <strong id="north-nyakua" class="reserved-count">0</strong></small></span>
+          <span>SOUTH <small class="hand-label">手元</small> <strong id="south-hand">22</strong><small class="reserved-label">確保 <strong id="south-nyakua" class="reserved-count">0</strong></small></span>
         </div>
       </div>
       <div class="board-surface">
@@ -74,26 +85,26 @@
     <p id="status" class="controls" role="status" aria-live="polite">対局を始めてください。</p>
 
     <section class="nyakua-status" aria-label="NYAKUAの記録">
-      <div class="nyakua-heading"><strong>NYAKUA（ニャクア）</strong><span id="steal-count">SOUTH 0回 ／ NORTH 0回</span></div>
+      <div class="nyakua-heading"><strong>NYAKUA（ニャクア）</strong><span id="steal-count">SOUTH 0個 ／ NORTH 0個</span></div>
       <p id="steal-result" aria-live="polite">NYAKUAはまだ発動していません。</p>
     </section>
     <details id="about">
       <summary>Bao Nakakamado について</summary>
       <div class="rules">
-        <p>Bao Nakakamado は、伝統的なマンカラゲーム Bao la Kiswahili をベースに、独自ルールの NYAKUA（ニャクア）を加えたオリジナルの Bao です。Bao la Kiswahili の盤や種まき・捕獲の仕組みを受け継ぎ、ハンドのKETEを使った駆け引きを追加しています。</p>
-        <p>NYAKUAは、NAMUAで一手に2回以上捕獲したとき、相手と自分のハンドからKETEを1個ずつ取り、蒔き終わりの自分の穴へ計2個追加するルールです。追加後に種まきや捕獲を再開せず、相手の最後の1個は奪いません。</p>
+        <p>Bao la Kiswahili の前列・後列と初期ハンド22個を使い、NYAKUA（ニャクア）を追加した試作です。連続捕獲で相手のハンドから1個奪い、次の自分の手番用に別確保します。相手の最後の1個と確保分は奪えません。</p>
+        <p>v0.8.0では、確保分1個と通常ハンド2個を次の自分の手番で同じ合法な開始穴へ一度に投入します。終盤に通常ハンドが1個なら計2個、0個なら確保分1個を投入します。</p>
       </div>
     </details>
 
     <details id="rules">
       <summary>遊び方・試作ルール</summary>
       <div class="rules">
-      <a class="rules-guide-link" href="./rules.html"><strong>Bao Nakakamado のルールブック ↗</strong><span>初期配置・捕獲・NYUMBA・終点2個追加・勝敗まで。</span></a>
+      <a class="rules-guide-link" href="https://github.com/nkkmd/bao-nakakamado/blob/main/doc/RULEBOOK.md" target="_blank" rel="noopener noreferrer"><strong>Bao Nakakamado のルールブック ↗</strong><span>初期配置からNYAKUA、次手3個投入、勝敗まで。</span></a>
       <div class="rules-grid">
         <div><b>01 / 前列・後列と循環</b><p>光っている穴を選び、方向・入口を選びます。自分の前列8穴と後列8穴を循環して蒔きます。前列の端の次は後列の同じ側の端へ進みます。捕獲するのは相手の前列です。</p></div>
-        <div><b>02 / 終点へ2個追加</b><p>NAMUAで一手に2回以上捕獲し、通常処理の完了時に自分のハンド1個以上・相手2個以上なら、双方から1個ずつ終点へ置きます。相手の最後の1個は保護。一手につき一度です。</p></div>
-        <div><b>03 / 手番の通常投入は1個</b><p>各NAMUA手の開始時は自分のハンドから1個だけ投入します。別確保・次手3個投入はありません。終点への2個追加で捕獲や種まきを再開せず、相手へ手番を渡します。</p></div>
-        <div><b>04 / 段階と終局</b><p>両者のハンドがともに0になるとMTAJIへ移ります。通常の初期局面からハンド枯渇によるパスは生じません。相手の前列8穴をすべて空にするか、相手の手番に合法手をなくせば勝ちです。</p></div>
+        <div><b>02 / NYAKUA（ハンド奪取）</b><p>NAMUA中、一手の中で2回以上捕獲すると、相手のハンドからKETEを1個奪います。何回続いても奪うのは一手につき1個です。相手のハンドが最後の1個なら奪えません。奪ったKETEは別に確保し、確保分は奪われません。</p></div>
+        <div><b>03 / 次の自分の手番で3個投入</b><p>確保分がある次の自分の手番では、通常ハンド2個＋確保分1個を同じ合法な開始穴へ一度に投入します。通常ハンドが1個なら計2個、0個なら確保分1個のみ。確保分は必ず使い、その手でもNYAKUAが発動します。確保分がなければ通常1個投入です。</p></div>
+        <div><b>04 / 段階と終局</b><p>両者の通常ハンドと確保分がすべて0になるとMTAJIへ移ります。通常の初期局面からハンド枯渇によるパスは生じません。相手の前列8穴をすべて空にするか、相手の手番に合法手をなくせば勝ちです。</p></div>
       </div>
       <p class="footnote">初期盤上は各人10個、ハンド22個、合計64個です。捕獲義務やNYUMBAの細則は上のルールブックを参照してください。一部のMTAJIで種まきが循環する既知の制約があります。連続種まきの安全上限で対局を停止し、通常勝敗とは区別します。元ゲームの <a href="https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/doc/RULES_BASELINE.md" target="_blank" rel="noopener">採用ルール基準</a>を出発点に変更しています。</p>
       </div>
@@ -101,13 +112,13 @@
     <details>
       <summary>棋譜の保存</summary>
       <div class="rules">
-        <p>対局の棋譜をJSONファイルとして保存できます。v0.9.0の識別情報、NYAKUAの発動、追加先と両者のハンドから使った数も記録します。旧v0.8.0の棋譜とは区別します。画面での棋譜読み込みは未実装です。</p>
+        <p>対局の棋譜をJSONファイルとして保存できます。NYAKUAの発動、通常ハンドと確保分の投入数も記録します。</p>
         <button id="download" type="button" disabled>棋譜を保存</button>
       </div>
     </details>
     <footer>
-      2人対戦・簡易コンピューター対戦<br>
-      <a href="https://github.com/nkkmd/bao-nakakamado" target="_blank" rel="noopener noreferrer">GitHub</a> · 試作 v0.9.0<br>
+      2人対戦・簡易／探索コンピューター対戦<br>
+      <a href="https://github.com/nkkmd/bao-nakakamado" target="_blank" rel="noopener noreferrer">GitHub</a> · 試作 v0.8.0<br>
       Based on <a href="https://github.com/nkkmd/bao-la-kiswahili-game" target="_blank" rel="noopener noreferrer">Bao la Kiswahili</a><br>
       <a href="./licenses.html">ライセンス・考案と公開の記録</a>
     </footer>

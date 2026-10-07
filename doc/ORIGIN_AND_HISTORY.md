@@ -84,3 +84,11 @@ Bao Nakakamadoは伝統ゲーム **Bao la Kiswahiliを出発点にした派生�
 現行版の固定コミットは[6aba3b2d149aa7b7700148d672969b48481cfe31](https://github.com/nkkmd/bao-nakakamado/commit/6aba3b2d149aa7b7700148d672969b48481cfe31)、保存ブランチは`preserve/v0.8.0-public-20261007`。試験実装は`trial/nyakua-a-20261007`で記録します。ZIP作成日も2026年10月7日。実機確認は後続工程で、試験版のサイト配信日・URLは未記録です。ゲーム・NYAKUAの初公開日2026年9月30日は保持します。
 
 [試験実装PR #32](https://github.com/nkkmd/bao-nakakamado/pull/32)と[実装・検証記録](NYAKUA_A_PLAYABLE_TRIAL_20261007.md)に別版の実装と合格したCIを記録しました。実端末での確認・正式採用は未実施です。
+
+## 案Aの正式採用・v0.9.0
+
+2026年10月7日（日本時間）、nkkmd（管理者）が「案Aを正式に採用」「ひとまず簡易コンピュータのみ」「探索コンピュータは後ほど」と指示しました。NYAKUAを別確保・次手3個投入から、着手終了後に両ハンドから終点へ計2個追加する規則へ変更し、ルール版をv0.9.0、棋譜をversion 8に更新します。採用判断者・提案者はnkkmd。新しいゲームやNYAKUAの初公開日を変更する判断ではありません。
+
+「Bao Nakakamadoについて」に、Bao la Kiswahiliをベースに独自ルールNYAKUAを採用したオリジナルのBaoである説明を追加しました。元の盤・種まき・捕獲を受け継いだ派生ゲームとして説明し、伝統ゲームそのものの考案は主張しません。
+
+[採用実装PR #32](https://github.com/nkkmd/bao-nakakamado/pull/32)と[v0.9.0採用記録](NYAKUA_V090_ADOPTION_20261007.md)を根拠とします。試験時点の記録・数値・棋譜は保持し、旧公開版29ファイルはtrials/v0.8.0/へ原bytesで保存。保存ブランチpreserve/v0.8.0-public-20261007も保持します。旧探索AIの公開採用はv0.8.0での履歴であり、v0.9.0の公開画面には搭載しません。実際のv0.9.0サイト配信日・URLは未記録です。

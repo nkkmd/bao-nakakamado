@@ -15,7 +15,12 @@
   let fast = false;
   let sound = false;
   let audio = null;
+  let difficulty = "hard";
   let computerTimer = null;
+  let computerToken = 0;
+  let aiDiagnostics = [];
+  const Q = window.NakakamadoSearchTransition?.createForEngine(E);
+  const client = Q && window.NakakamadoComputerClient?.createClient(Q);
   let lastResult = "NYAKUAはまだ発動していません。";
 
   function tone(frequency = 300) {
@@ -41,7 +46,9 @@
     const computer = $("mode").value !== "local";
     $("side").disabled = !computer;
     $("side-field").hidden = !computer;
-    $("opponent-badge").textContent = computer ? "簡易コンピューター" : "2人対戦";
+    if ($("difficulty-field")) $("difficulty-field").hidden = $("mode").value !== "search-computer";
+    if ($("difficulty")) $("difficulty").disabled = $("mode").value !== "search-computer";
+    $("opponent-badge").textContent = $("mode").value === "search-computer" ? "探索コンピューター" : computer ? "簡易コンピューター" : "2人対戦";
   }
   function focusBoard() {
     const first = Array.from($("board").children).find((pit) => !pit.disabled);
@@ -50,6 +57,11 @@
 
   function name(player) { return player === 0 ? "SOUTH" : "NORTH"; }
   function humanTurn() { return mode === "local" || game.board.player === human; }
+  function placementCount(board) {
+    if (board.phase !== "namua") return 0;
+    const extra = board.nyakuaReserve[board.player];
+    return Math.min(board.reserve[board.player], extra ? 2 : 1) + extra;
+  }
   function variants() { return S.moveVariants(game); }
   function key(move) { return `${move.row}:${move.index}`; }
   function selectable() { return started && !busy && game.board.winner === null && humanTurn(); }
@@ -124,12 +136,14 @@
   function eventDescription(event) {
     const place = event.position ? pitName(event.position) : "";
     switch (event.kind) {
-      case "reserve": return `${name(event.position.player)} のハンドから ${place} にKETEを1個置きました。`;
+      case "reserve": return event.nyakuaCount
+        ? `${name(event.position.player)} が通常ハンド${event.ordinaryCount}個＋確保分${event.nyakuaCount}個、計${event.count}個を ${place} へ一度に投入しました。`
+        : `${name(event.position.player)} のハンドから ${place} にKETEを1個置きました。`;
       case "lift": return `${place} からKETEを${event.count}個持ち上げました。`;
       case "sow": return `${place} にKETEを1個蒔きました。`;
       case "relay": return `${place} から${event.count}個で連続種まきします。`;
       case "capture": return `${name(animation.mover)} が ${name(event.player)} の ${pitName({ player: event.player, row: E.FRONT, index: event.index })} からKETEを${event.count}個捕獲しました。`;
-      case "end-pit-add": return `NYAKUA！ 両者のハンドから1個ずつ取り、蒔き終わりの ${place} に計2個追加しました。`;
+      case "steal": return `NYAKUA！ ${name(event.to)} が ${name(event.from)} のハンドから1個奪い、次の自分の手番用に確保しました。`;
       case "phase": return "MTAJIに移りました。";
       case "win": return "終局しました。";
       case "limit": return "連続種まきの安全上限に達しました。";
@@ -142,7 +156,9 @@
     const event = animation?.index ? animation.events[animation.index - 1] : null;
     for (const [player, id] of [[0, "south-hand"], [1, "north-hand"]]) {
       const hand = $(id).parentElement.classList;
-      hand.toggle("active-hand", (event?.kind === "reserve" && event.position.player === player) || event?.kind === "end-pit-add");
+      hand.toggle("active-hand", event?.kind === "reserve" && event.position.player === player);
+      hand.toggle("donor-hand", event?.kind === "steal" && event.from === player);
+      hand.toggle("recipient-hand", event?.kind === "steal" && event.to === player);
     }
   }
 
@@ -157,7 +173,8 @@
     view = game.board;
     busy = false;
     const result = game.history.at(-1);
-    if (result?.stolen) lastResult = `NYAKUA！ ${name(result.player)} が${result.captures}回捕獲し、両者のハンドから1個ずつ ${pitName(result.endpoint)} へ計2個追加しました。`;
+    if (result?.stolen) lastResult = `NYAKUA！ ${name(result.player)} が同じ着手で${result.captures}回捕獲し、${name(1 - result.player)} のハンドから1個確保しました。次の自分の手番で必ず使います。`;
+    else if (result?.reservedPlaced) lastResult = `${name(result.player)} が通常ハンド${result.ordinaryPlaced}個＋確保分${result.reservedPlaced}個、計${result.placed}個を一穴へ投入しました。`;
     render();
     if (selectable()) focusBoard();
     scheduleComputer();
@@ -202,8 +219,10 @@
     $("phase-name").textContent = state.phase.toUpperCase();
     $("north-hand").textContent = state.reserve[1];
     $("south-hand").textContent = state.reserve[0];
+    $("north-nyakua").textContent = state.nyakuaReserve[1];
+    $("south-nyakua").textContent = state.nyakuaReserve[0];
     const shownHistory = animation ? game.history.slice(0, -1) : game.history;
-    $("steal-count").textContent = `SOUTH ${shownHistory.filter((entry) => entry.player === 0 && entry.stolen).length}回 ／ NORTH ${shownHistory.filter((entry) => entry.player === 1 && entry.stolen).length}回`;
+    $("steal-count").textContent = `SOUTH ${shownHistory.filter((entry) => entry.player === 0 && entry.stolen).length}個 ／ NORTH ${shownHistory.filter((entry) => entry.player === 1 && entry.stolen).length}個`;
     $("steal-result").textContent = lastResult;
     $("download").disabled = !started || Boolean(animation) || !game.history.length;
     renderBoard(moves);
@@ -219,6 +238,7 @@
     else if (busy) $("status").textContent = "コンピューターが考えています…";
     else if (!humanTurn()) $("status").textContent = `${name(state.player)} の手番です。待機中…`;
     else if (moves.length === 1 && moves[0].type === "pass") $("status").textContent = `${name(state.player)} のハンドが0です。パスして相手へ手番を渡してください。`;
+    else if (state.nyakuaReserve[state.player]) $("status").textContent = `${name(state.player)} の手番。通常ハンド${placementCount(state) - 1}個＋確保分1個、計${placementCount(state)}個を一穴へ投入します。${selected ? "方向・入口を選んでください。" : "光る穴を選んでください。"}`;
     else if (selected) $("status").textContent = `${pitName({ player: state.player, ...selected })} を選択しました。方向・入口を選んでください。`;
     else $("status").textContent = `${name(state.player)} の手番。光る穴を選んでください。`;
     if (!selectable()) return;
@@ -233,7 +253,7 @@
       const button = document.createElement("button");
       button.type = "button";
       const preview = S.apply(game, move).history.at(-1);
-      button.textContent = `${moveLabel(move)}${preview.stolen ? `・NYAKUA（${pitName(preview.endpoint)}へ2個追加）` : ""}`;
+      button.textContent = `${moveLabel(move)}${preview.reservedPlaced ? `・通常${preview.ordinaryPlaced}個＋確保1個（計${preview.placed}個）` : ""}${preview.stolen ? "・NYAKUA（次の自分の手番用に1個確保）" : ""}`;
       button.addEventListener("click", () => play(move));
       choices.append(button);
     }
@@ -296,13 +316,25 @@
       computerTimer = null;
       if (scheduledFor !== generation) return;
       if (!started || mode === "local" || game.board.winner !== null || game.board.player === human) { busy = false; return; }
-      play(chooseComputerMove());
+      if (mode === "computer") { play(chooseComputerMove()); return; }
+      const token = ++computerToken;
+      const stateKey = Q.stateKey(game.board);
+      const answer = await client.request(game.board, difficulty);
+      if (!answer || token !== computerToken || scheduledFor !== generation || !started
+        || mode !== "search-computer" || humanTurn() || stateKey !== Q.stateKey(game.board)) return;
+      const legal = variants().find(move => window.NakakamadoComputerClient.moveKey(move) === window.NakakamadoComputerClient.moveKey(answer.move));
+      if (!legal) { busy = false; render(); $("status").textContent = "コンピューターの着手を確認できません。新しい対局からやり直してください。"; return; }
+      aiDiagnostics.push({turn:game.board.turn, player:game.board.player, ...answer.diagnostic});
+      $("opponent-badge").textContent = answer.diagnostic.fallback ? "探索コンピューター（代替手）" : "探索コンピューター";
+      play(legal);
     }, 260);
   }
 
   function cancelComputer() {
+    computerToken += 1;
     if (computerTimer !== null) window.clearTimeout(computerTimer);
     computerTimer = null;
+    client?.cancel();
   }
 
   function start() {
@@ -314,6 +346,8 @@
     view = game.board;
     mode = $("mode").value;
     human = Number($("side").value);
+    difficulty = $("difficulty")?.value || "hard";
+    aiDiagnostics = [];
     updateSetup();
     started = true;
     selected = null;
@@ -340,12 +374,15 @@
   });
   $("download").addEventListener("click", () => {
     if (!started || !game.history.length) return;
-    const record = S.record(game, {mode});
+    const record = { format: "bao-nakakamado-prototype", version: 7, baseRules: "R-002", variantRule: E.RULE_ID, rulesVersion: E.RULES_VERSION, boardRowsPerPlayer: E.BOARD_ROWS_PER_PLAYER, sowingPath: E.SOWING_PATH, nyakuaProtectLast: E.NYAKUA_PROTECT_LAST, nyakuaFixedPitBulk: E.NYAKUA_FIXED_PIT_BULK, nyakuaNextTurnThree: E.NYAKUA_NEXT_TURN_THREE, nyakuaReservedProtected: E.NYAKUA_RESERVED_PROTECTED, initialHand: E.INITIAL_HAND, totalKete: E.TOTAL_KETE, mode:mode === "search-computer" ? "computer" : mode, history: game.history, final: game.board, adjudication: game.board.reason === "relay-limit" ? "safety-stop" : game.board.winner === null ? "ongoing" : "normal" };
+    if (mode === "search-computer") record.computer = {id:window.NakakamadoComputerClient.AI_ID, releaseId:window.NakakamadoComputerClient.RELEASE_ID,
+      publicAdopted:window.NakakamadoComputerClient.PUBLIC_ADOPTED,
+      modelSha256:window.NakakamadoComputerClient.MODEL_SHA256, difficulty, diagnostics:aiDiagnostics};
     const blob = new Blob([JSON.stringify(record, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = "bao-nakakamado-v0.9.0-game.json";
+    link.download = "bao-nakakamado-game.json";
     link.click();
     window.setTimeout(() => URL.revokeObjectURL(url), 1000);
   });

@@ -164,7 +164,7 @@ takasia未実装など、保存済みエンジンの範囲を引き継ぎます�
 
 旧v0.8.0のルールブックを出発点として、2026年10月7日にv0.9.0の説明へ変更しました。基礎ルール・元資料の表示は維持し、別確保・次手3個投入を着手終了後の終点2個追加へ置き換え、専用の画面・棋譜・安全停止の扱いを記載しました。管理者の正式採用判断に基づくルール改訂です。
 
-本書の説明文・図表は © 2026 nkkmd and Bao Nakakamado contributors、[Creative Commons Attribution-ShareAlike 4.0 International（CC BY-SA 4.0）](https://creativecommons.org/licenses/by-sa/4.0/deed.ja)で提供します。共有時は著作者・元資料・ライセンス・変更表示を保持し、改変物の公開には条文で認められた継承条件を適用してください。無保証などの正式な条件は[条文](../LICENSE-CC-BY-SA-4.0.txt)を参照してください。
+本書の説明文・図表は © 2026 nkkmd and Bao Nakakamado contributors、[Creative Commons Attribution-ShareAlike 4.0 International（CC BY-SA 4.0）](https://creativecommons.org/licenses/by-sa/4.0/deed.ja)で提供します。共有時は著作者・元資料・ライセンス・変更表示を保持し、改変物の公開には条文で認められた継承条件を適用してください。無保証などの正式な条件は[条文](LICENSE-CC-BY-SA-4.0.txt)を参照してください。
 
-この指定は説明文・図表に適用し、プログラムのMITライセンスを変更しません。適用範囲、元コードの表示、配信物の同梱条件は[ライセンスと出典](../prototype/licenses.html)にまとめています。
+この指定は説明文・図表に適用し、プログラムのMITライセンスを変更しません。適用範囲、元コードの表示、配信物の同梱条件は[ライセンスと出典](licenses.html)にまとめています。
 
