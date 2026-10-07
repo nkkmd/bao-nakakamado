@@ -1,6 +1,6 @@
 # Bao Nakakamado の用語
 
-対象：現行試作v0.8.0。更新日：2026年10月2日。
+対象：現行試作v0.8.0。更新日：2026年10月7日（案A試験版の用語を追記。現行規則は維持）。
 
 ## NYAKUA（ニャクア）
 
@@ -36,3 +36,9 @@ NYAKUAは奪取動作、次手3個投入は確保分の使用規則です。確�
 現行棋譜は `rulesVersion: "0.8.0"`、`nyakuaProtectLast: true`、`nyakuaFixedPitBulk: false`、`nyakuaNextTurnThree: true`、`nyakuaReservedProtected: true`、`variantRule: "namua-steal-one-protect-last-reserved-next-own-turn-three-two-row-ring-hand22"` です。旧棋譜を現行ルールの棋譜として解釈しません。
 
 初期配置から終局までの遊び方は[現行ルールブック](RULEBOOK.md)、実装と棋譜の扱いは[試作README](../prototype/README.md)、採用の経緯は[実装・採用記録](NYAKUA_THREE_ADOPTION_20261002.md)を参照してください。
+
+## 案A実機試験の用語・棋譜（未採用）
+
+2026年10月7日の[案A試験版](../trials/nyakua-a/README.md)では、NYAKUA後に「終点2個追加」を行います。自分と相手のハンドから各1個を、完了した手の蒔き終わりの穴へ置きます。別確保・次手3個投入はありません。発動条件と終局時の除外は[試験版ルールブック](../trials/nyakua-a/RULEBOOK.md)を参照してください。
+
+棋譜はformat `bao-nakakamado-nyakua-a-trial`、version 1、rulesVersion `nyakua-a-trial-001`、variantRule `nyakua-end-pit-a-trial-001`、publicAdopted falseです。`stolen`は相手ハンドから取った数、`added`は終点への追加数、`ownAdded`・`opponentAdded`は各ハンドからの追加数、`endpoint`は追加先。イベント名は`end-pit-add`。互換用`nyakuaReserve`は[0,0]です。現行公開版のversion 7と混同しません。

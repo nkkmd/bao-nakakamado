@@ -75,3 +75,7 @@ PR #24は新規15テスト・13 ZIP境界・除外済み8局の実thread／artif
 基礎ルールの説明は「Bao la Kiswahili 日本語完全ガイド」（© 2026 bao-la-kiswahili-ja contributors）と元ゲームの図解ルール（© 2026 bao-la-kiswahili-game contributors）を参照・再構成し、NYAKUAなどを追加しました。元プログラムのMIT表示（© 2026 cultivationdata.net）は[ENGINE_LICENSE.txt](prototype/ENGINE_LICENSE.txt)に保持しています。
 
 考案者・公開日・変更履歴・ライセンスを今後も維持する手順は[リポジトリ管理ルール](AGENTS.md)に定めます。ゲームの仕組み自体に独占権を主張するものではありません。
+
+## 案Aの実機試験（未採用）
+
+2026年10月7日、現行v0.8.0を保存して、別の[案A試験版](trials/nyakua-a/README.md)を実装しました。`trials/nyakua-a/`に画面・エンジン・専用棋譜・簡易AIを隔離しています。現行`prototype/`と学習済みAIは保存基点の29ファイルを保持し、研究用エンジンと原結果も変更していません。試験は`trial/nyakua-a-20261007`、保存版は`preserve/v0.8.0-public-20261007`です。mainへの統合・案Aの正式採用・サイト配信は別判断です。

@@ -1,0 +1,116 @@
+<!doctype html>
+<!-- HTML/UI structure: MIT (LICENSE). Explanatory text in #about and #rules:
+     CC-BY-SA-4.0; attribution and modifications: licenses.html. -->
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#172c2b">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Bao Nakakamado — 案A実機試験</title>
+  <meta name="description" content="未採用の案A実機試験。NAMUAの連続捕獲後、両者のハンドから1個ずつ蒔き終わりの穴へ追加します。">
+  <link rel="stylesheet" href="./style.css?v=0.8.0-four-row-20261002">
+  <script defer src="./engine.js?v=nyakua-a-trial-001"></script>
+  <script defer src="./rules.js?v=nyakua-a-trial-001"></script>
+  <script defer src="./app.js?v=nyakua-a-trial-001"></script>
+</head>
+<body>
+  <main class="game-shell">
+    <header class="titlebar">
+      <div>
+        <span class="kicker">A NEW BAO EXPERIMENT</span>
+        <h1>BAO NAKAKAMADO</h1>
+        <span class="prototype-badge">案A 実機試験 trial-001（未採用）</span>
+        <span id="opponent-badge" class="opponent-badge">2人対戦</span>
+      </div>
+      <div class="toolbar">
+        <button id="sound" type="button" aria-pressed="false">サウンド OFF</button>
+        <button id="speed" type="button" aria-pressed="false">高速 OFF</button>
+        <button id="new-game" type="button">新しい対局</button>
+      </div>
+    </header>
+
+    <section class="screen-frame" aria-label="対局">
+      <section id="setup" class="start-screen" aria-labelledby="start-title">
+        <div class="start-panel">
+          <span class="kicker">GAME SETUP</span>
+          <h2 id="start-title">対局設定</h2>
+          <label class="setup-field" for="mode">
+            <span>MODE</span>
+            <select id="mode">
+              <option value="local">2人で対戦</option>
+              <option value="computer">簡易コンピューター</option>
+            </select>
+          </label>
+          <label id="side-field" class="setup-field" for="side" hidden>
+            <span>手番</span>
+            <select id="side">
+              <option value="0">先手（SOUTH）</option>
+              <option value="1">後手（NORTH）</option>
+            </select>
+          </label>
+          <button id="start" class="start-button" type="button">対局開始</button>
+          <p class="hint">案Aの実機試験版です。NAMUAで一手に2回以上捕獲すると、蒔き終わりの穴へ両者のハンドから1個ずつ、計2個追加します。自分に1個以上、相手に2個以上残る場合のみ。現行公開版v0.8.0は別に保存しています。</p>
+          <p class="hint">2人対戦または案Aの合法手を使う簡易コンピューターで試せます。</p>
+        </div>
+      </section>
+      <div class="game-info" aria-label="対局状況">
+        <div class="turn-info">
+          <span id="turn-number">TURN 1</span>
+          <strong id="turn-name">▼ SOUTH</strong>
+        </div>
+        <strong id="phase-name">NAMUA</strong>
+        <div class="reserves">
+          <span>NORTH <small class="hand-label">手元</small> <strong id="north-hand">22</strong></span>
+          <span>SOUTH <small class="hand-label">手元</small> <strong id="south-hand">22</strong></span>
+        </div>
+      </div>
+      <div class="board-surface">
+        <div id="board" class="board" role="group" aria-label="各人の前列・後列16穴、4列32穴の盤面"></div>
+        <div class="board-labels" aria-hidden="true"><span>KICHWA</span><span>NYUMBA</span><span>KICHWA</span></div>
+      </div>
+      <div id="move-choices" class="move-choices" aria-label="方向・入口の選択"></div>
+    </section>
+    <p id="status" class="controls" role="status" aria-live="polite">対局を始めてください。</p>
+
+    <section class="nyakua-status" aria-label="NYAKUAの記録">
+      <div class="nyakua-heading"><strong>NYAKUA（ニャクア）</strong><span id="steal-count">SOUTH 0回 ／ NORTH 0回</span></div>
+      <p id="steal-result" aria-live="polite">NYAKUAはまだ発動していません。</p>
+    </section>
+    <details id="about">
+      <summary>Bao Nakakamado について</summary>
+      <div class="rules">
+        <p>未採用の案Aを実機で確認するための別版です。4列32穴・ハンド22個・合計64個。NYAKUAで相手のハンド1個と自分のハンド1個を、その手の蒔き終わりの穴へ追加します。</p>
+        <p>追加分による捕獲・種まき・終点判定のやり直しはありません。後列や、所有中NYUMBAで停止した穴にも追加します。即時終局・安全停止した手には追加しません。</p>
+      </div>
+    </details>
+
+    <details id="rules">
+      <summary>遊び方・試作ルール</summary>
+      <div class="rules">
+      <a class="rules-guide-link" href="./rules.html"><strong>案A試験版のルールブック ↗</strong><span>初期配置・捕獲・NYUMBA・終点2個追加・勝敗まで。</span></a>
+      <div class="rules-grid">
+        <div><b>01 / 前列・後列と循環</b><p>光っている穴を選び、方向・入口を選びます。自分の前列8穴と後列8穴を循環して蒔きます。前列の端の次は後列の同じ側の端へ進みます。捕獲するのは相手の前列です。</p></div>
+        <div><b>02 / 終点へ2個追加</b><p>NAMUAで一手に2回以上捕獲し、通常処理の完了時に自分のハンド1個以上・相手2個以上なら、双方から1個ずつ終点へ置きます。相手の最後の1個は保護。一手につき一度です。</p></div>
+        <div><b>03 / 手番の通常投入は1個</b><p>各NAMUA手の開始時は自分のハンドから1個だけ投入します。別確保・次手3個投入はありません。終点への2個追加で捕獲や種まきを再開せず、相手へ手番を渡します。</p></div>
+        <div><b>04 / 段階と終局</b><p>両者のハンドがともに0になるとMTAJIへ移ります。通常の初期局面からハンド枯渇によるパスは生じません。相手の前列8穴をすべて空にするか、相手の手番に合法手をなくせば勝ちです。</p></div>
+      </div>
+      <p class="footnote">初期盤上は各人10個、ハンド22個、合計64個です。捕獲義務やNYUMBAの細則は上のルールブックを参照してください。一部のMTAJIで種まきが循環する既知の制約があります。連続種まきの安全上限で対局を停止し、通常勝敗とは区別します。元ゲームの <a href="https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/doc/RULES_BASELINE.md" target="_blank" rel="noopener">採用ルール基準</a>を出発点に変更しています。</p>
+      </div>
+    </details>
+    <details>
+      <summary>棋譜の保存</summary>
+      <div class="rules">
+        <p>対局の棋譜をJSONファイルとして保存できます。案A専用の識別情報、NYAKUAの発動、追加先と両者のハンドから使った数も記録します。現行v0.8.0の棋譜とは区別します。画面での棋譜読み込みは未実装です。</p>
+        <button id="download" type="button" disabled>棋譜を保存</button>
+      </div>
+    </details>
+    <footer>
+      2人対戦・簡易コンピューター対戦<br>
+      <a href="https://github.com/nkkmd/bao-nakakamado" target="_blank" rel="noopener noreferrer">GitHub</a> · 案A 実機試験 trial-001（未採用）<br>
+      Based on <a href="https://github.com/nkkmd/bao-la-kiswahili-game" target="_blank" rel="noopener noreferrer">Bao la Kiswahili</a><br>
+      <a href="./licenses.html">ライセンス・考案と公開の記録</a>
+    </footer>
+  </main>
+</body>
+</html>

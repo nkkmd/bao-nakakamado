@@ -74,3 +74,7 @@ Bao Nakakamadoでは説明の構成・表現を変更し、NYAKUA、ハンド枯
 2026年10月5日の[正式学習結果](doc/AI_FORMAL_LEARNING_RUN_20261005.md)に基づく `tools/ai-integration/frozen-models/formal-v1-linear-2026100401/` は、本ゲームの固定trainから新規に学習した開発候補です。元ゲームの学習済み重みは流用していません。モデル・学習記録・receipt・validation報告の保護対象部分はMIT、説明文はCC BY-SA 4.0。公開AI採用・最終評価の合格とは区別します。
 
 2026年10月5日の[試験用画面接続](doc/AI_BROWSER_WORKER_20261005.md)では、本ゲームの凍結線形モデルと専用エンコーダーを `prototype/browser-model.js` に決定的に生成しました。元ゲームの学習済み重みは流用していません。エンコーダーのMIT表示（Copyright (c) 2026 cultivationdata.net）を保持し、モデル・推論・Worker・clientはMITです。この試験接続時点では実機確認と公開採用判断は後続工程でした。2026年10月6日、実機試験の報告を受けて[公開AIとして採用](doc/AI_PUBLIC_ADOPTION_20261006.md)しました。ライセンスと元の著作権表示は維持します。
+
+## 案A実機試験版の適用範囲
+
+2026年10月7日、`trials/nyakua-a/`へ未採用の案Aを隔離実装しました。engine.js・rules.js・app.js・CSS・HTML構造・操作ラベル・テスト・検証結果の保護対象部分・梱包スクリプト・設定はMIT、README・RULEBOOK・HTMLの説明文はCC BY-SA 4.0です。元エンジン・CSSの表示と同梱条文を保持し、v0.8.0の別確保・次手3個投入を終点2個追加へ変更しました。開発ブラウザー検証は既存CIと同じPlaywright 1.62.1を使用します。学習済みモデル・探索Workerは案A配布物に同梱しません。配布物内の`licenses.html`にも出典・変更内容を記載しています。現行`prototype/`の表示・条文は変更しません。

@@ -1,0 +1,42 @@
+name: Nyakua A playable trial
+on:
+  push:
+    paths: ['trials/nyakua-a/**', 'tools/package-nyakua-a.py', '.github/workflows/nyakua-a-trial.yml']
+  pull_request:
+    paths: ['trials/nyakua-a/**', 'tools/package-nyakua-a.py', '.github/workflows/nyakua-a-trial.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  trial:
+    if: github.event_name != 'pull_request' || !github.event.pull_request.draft
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Research parity, boundary hands, history and eleven cycle records
+        run: node trials/nyakua-a/check.cjs "$RUNNER_TEMP/check-results.json"
+      - name: Preserved public v0.8.0 regression
+        run: node --test prototype/next-turn.test.cjs prototype/app.test.cjs prototype/search-transition.test.cjs
+      - name: Flat ZIPs and preservation hashes
+        run: python3 tools/package-nyakua-a.py "$RUNNER_TEMP/nyakua-a-zips"
+      - name: Install existing pinned development browser dependency
+        run: |
+          npm install --prefix "$RUNNER_TEMP/bao-browser" --no-audit --no-fund playwright@1.62.1
+          node "$RUNNER_TEMP/bao-browser/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Desktop HTTP and mobile file play, cycle, records and simple AI
+        env:
+          NODE_PATH: ${{ runner.temp }}/bao-browser/node_modules
+        run: node trials/nyakua-a/browser-check.cjs "" "$RUNNER_TEMP/browser"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nyakua-a-trial-001-checks-and-zips
+          path: |
+            ${{ runner.temp }}/check-results.json
+            ${{ runner.temp }}/browser
+            ${{ runner.temp }}/nyakua-a-zips
+          retention-days: 30
