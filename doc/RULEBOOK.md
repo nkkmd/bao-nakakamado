@@ -2,7 +2,7 @@
 
 **対象：遊べる試作v0.8.0（各人の前列・後列16穴、ハンド22個）**
 
-**更新日：2026年10月6日／文書版：第6版（MTAJI循環の追加調査への参照と対戦方式の案内を更新。規則はv0.8.0を維持）**
+**更新日：2026年10月7日／文書版：第7版（未採用の案A試験版の案内を追加。公開規則はv0.8.0を維持）**
 
 **Bao Nakakamado・NYAKUAの考案者：nkkmd／初公開日：2026年9月30日。** [考案・公開・変更履歴](ORIGIN_AND_HISTORY.md)を参照してください。本書の説明文・図表は[CC BY-SA 4.0](../LICENSE-CC-BY-SA-4.0.txt)です。元資料と変更内容は第10章に記載します。
 
@@ -191,7 +191,7 @@ MTAJIではNYUMBAを通常の穴として扱い、特別な停止・2個蒔き�
 
 基礎ルールの説明は、[Bao la Kiswahili 日本語完全ガイド](https://github.com/nkkmd/bao-la-kiswahili-ja/tree/1179267b1f19b27a2138791253f2cb9cbfe98c14)（© 2026 bao-la-kiswahili-ja contributors）と[元ゲームの図解ルール](https://github.com/nkkmd/bao-la-kiswahili-game/blob/096ee1fbc6f562f7a2959e62ea80b628ea78f7c8/public/rules.html)（© 2026 bao-la-kiswahili-game contributors）のCC BY-SA 4.0の説明を参照・再構成しています。
 
-このプロジェクトでは構成・表現を変え、NYAKUA、ハンド枯渇時の処理、盤の変更と復元、最後の1個保護、別確保・次手3個投入、操作方法、棋譜、実装上の細則・制約を追加しました。第5版では元資料のクレジットとライセンスを復元し、考案者・初公開日・履歴への案内を追加しました。第6版ではMTAJI循環の追加研究への参照と対戦方式の案内を更新しました。第1〜9章のv0.8.0の規則は変更していません。
+このプロジェクトでは構成・表現を変え、NYAKUA、ハンド枯渇時の処理、盤の変更と復元、最後の1個保護、別確保・次手3個投入、操作方法、棋譜、実装上の細則・制約を追加しました。第5版では元資料のクレジットとライセンスを復元し、考案者・初公開日・履歴への案内を追加しました。第6版ではMTAJI循環の追加研究への参照と対戦方式の案内を更新しました。第7版では別の案A試験版への案内を追加しました。第1〜9章のv0.8.0の規則は変更していません。
 
 本書の説明文・図表は © 2026 nkkmd and Bao Nakakamado contributors、[Creative Commons Attribution-ShareAlike 4.0 International（CC BY-SA 4.0）](https://creativecommons.org/licenses/by-sa/4.0/deed.ja)で提供します。共有時は著作者・元資料・ライセンス・変更表示を保持し、改変物の公開には条文で認められた継承条件を適用してください。無保証などの正式な条件は[条文](../LICENSE-CC-BY-SA-4.0.txt)を参照してください。
 

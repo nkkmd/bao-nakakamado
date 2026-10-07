@@ -79,3 +79,5 @@ PR #24は新規15テスト・13 ZIP境界・除外済み8局の実thread／artif
 ## 案Aの実機試験（未採用）
 
 2026年10月7日、現行v0.8.0を保存して、別の[案A試験版](trials/nyakua-a/README.md)を実装しました。`trials/nyakua-a/`に画面・エンジン・専用棋譜・簡易AIを隔離しています。現行`prototype/`と学習済みAIは保存基点の29ファイルを保持し、研究用エンジンと原結果も変更していません。試験は`trial/nyakua-a-20261007`、保存版は`preserve/v0.8.0-public-20261007`です。mainへの統合・案Aの正式採用・サイト配信は別判断です。
+
+[案A実機試験版の実装・検証記録](doc/NYAKUA_A_PLAYABLE_TRIAL_20261007.md)に合格したCIと配布ZIPの照合結果を記載しています。

@@ -1,0 +1,154 @@
+{
+  "status": "PASS",
+  "verifiedCodeCommit": "f8e0cceffc43017b71c47342b61c229c5a4ac821",
+  "preservedPublicCommit": "6aba3b2d149aa7b7700148d672969b48481cfe31",
+  "workflowRunId": 37570213280,
+  "workflowJobId": 112626910378,
+  "workflowUrl": "https://github.com/nkkmd/bao-nakakamado/actions/runs/37570213280",
+  "artifactId": 11460218106,
+  "artifactDigest": "sha256:a736efa2373511c105a60c14af1c58f6a7abd2e56e256e0dc9ed612f3613105d",
+  "researchParity": {
+    "status": "PASS",
+    "games": 100,
+    "transitions": 18940,
+    "snapshots": 1084,
+    "additions": 3466,
+    "backAdditions": 960,
+    "houseAdditions": 427,
+    "frontEmpty": 247,
+    "mtaji": 5831,
+    "passes": 0,
+    "cycles": 11,
+    "boundaryChecks": [
+      "addition",
+      "threeCapturesOneAddition",
+      "backAddition",
+      "houseAddition",
+      "ownLast",
+      "opponentLast",
+      "pairMinimum"
+    ]
+  },
+  "browser": {
+    "status": "PASS",
+    "surfaces": [
+      "desktop-http",
+      "mobile-file"
+    ],
+    "errors": [],
+    "additions": [
+      {
+        "surface": "desktop-http",
+        "turn": 8,
+        "endpoint": {
+          "player": 1,
+          "row": 0,
+          "index": 4
+        }
+      },
+      {
+        "surface": "desktop-http",
+        "turn": 22,
+        "endpoint": {
+          "player": 1,
+          "row": 1,
+          "index": 5
+        }
+      },
+      {
+        "surface": "desktop-http",
+        "turn": 24,
+        "endpoint": {
+          "player": 1,
+          "row": 0,
+          "index": 6
+        }
+      },
+      {
+        "surface": "desktop-http",
+        "turn": 33,
+        "endpoint": {
+          "player": 0,
+          "row": 1,
+          "index": 4
+        }
+      },
+      {
+        "surface": "mobile-file",
+        "turn": 8,
+        "endpoint": {
+          "player": 1,
+          "row": 0,
+          "index": 4
+        }
+      },
+      {
+        "surface": "mobile-file",
+        "turn": 22,
+        "endpoint": {
+          "player": 1,
+          "row": 1,
+          "index": 5
+        }
+      },
+      {
+        "surface": "mobile-file",
+        "turn": 24,
+        "endpoint": {
+          "player": 1,
+          "row": 0,
+          "index": 6
+        }
+      },
+      {
+        "surface": "mobile-file",
+        "turn": 33,
+        "endpoint": {
+          "player": 0,
+          "row": 1,
+          "index": 4
+        }
+      }
+    ],
+    "computerSides": [
+      {
+        "surface": "desktop-http",
+        "humanSide": 0
+      },
+      {
+        "surface": "desktop-http",
+        "humanSide": 1
+      },
+      {
+        "surface": "mobile-file",
+        "humanSide": 0
+      },
+      {
+        "surface": "mobile-file",
+        "humanSide": 1
+      }
+    ]
+  },
+  "packaging": {
+    "status": "PASS",
+    "preservedFiles": 29,
+    "packages": [
+      {
+        "file": "bao-nakakamado-v0.8.0-preserved-20261007.zip",
+        "sha256": "14c43d9b5c43d01f0d55c3a336349bc0888f9c11a1d2c24fcacc392d3f9c2724",
+        "files": 18,
+        "rulesVersion": "0.8.0"
+      },
+      {
+        "file": "bao-nakakamado-nyakua-a-trial-001-20261007.zip",
+        "sha256": "85023a29a879e696d959f7efa1a7460b5021c184308dc7910c54289a119e309a",
+        "files": 13,
+        "rulesVersion": "nyakua-a-trial-001"
+      }
+    ]
+  },
+  "publicRegressionTests": 16,
+  "localZipsMatchCi": true,
+  "physicalDeviceConfirmation": "pending",
+  "publicAdopted": false
+}

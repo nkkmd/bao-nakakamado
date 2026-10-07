@@ -82,3 +82,5 @@ Bao Nakakamadoは伝統ゲーム **Bao la Kiswahiliを出発点にした派生�
 2026年10月7日（日本時間）、nkkmd（管理者）の「現行v0.8.0を確保したまま案Aを実装する」指示に基づき、[案A実機試験trial-001](../trials/nyakua-a/README.md)を別ブランチ・別フォルダーへ実装しました。研究用案Aと同じ、両ハンドから終点への2個追加、最後の1個保護、即時終局・安全停止時の追加省略を使います。画面・棋譜・簡易AIを専用化しました。正式な規則採用・mainへの統合・サイト配信を承認した記録ではありません。
 
 現行版の固定コミットは[6aba3b2d149aa7b7700148d672969b48481cfe31](https://github.com/nkkmd/bao-nakakamado/commit/6aba3b2d149aa7b7700148d672969b48481cfe31)、保存ブランチは`preserve/v0.8.0-public-20261007`。試験実装は`trial/nyakua-a-20261007`で記録します。ZIP作成日も2026年10月7日。実機確認は後続工程で、試験版のサイト配信日・URLは未記録です。ゲーム・NYAKUAの初公開日2026年9月30日は保持します。
+
+[試験実装PR #32](https://github.com/nkkmd/bao-nakakamado/pull/32)と[実装・検証記録](NYAKUA_A_PLAYABLE_TRIAL_20261007.md)に別版の実装と合格したCIを記録しました。実端末での確認・正式採用は未実施です。
