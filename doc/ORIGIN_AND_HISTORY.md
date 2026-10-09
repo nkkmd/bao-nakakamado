@@ -1,6 +1,6 @@
 # Bao Nakakamado・NYAKUAの考案、公開、変更履歴
 
-更新日：2026年10月7日。日付は日本時間（Asia/Tokyo）です。本書を考案者・初公開日・採用した規則変更の記録の基準とします。
+更新日：2026年10月9日。日付は日本時間（Asia/Tokyo）です。本書を考案者・初公開日・採用した規則変更の記録の基準とします。
 
 ## 考案者と初公開日
 
@@ -92,3 +92,11 @@ Bao Nakakamadoは伝統ゲーム **Bao la Kiswahiliを出発点にした派生�
 「Bao Nakakamadoについて」に、Bao la Kiswahiliをベースに独自ルールNYAKUAを採用したオリジナルのBaoである説明を追加しました。元の盤・種まき・捕獲を受け継いだ派生ゲームとして説明し、伝統ゲームそのものの考案は主張しません。
 
 [採用実装PR #32](https://github.com/nkkmd/bao-nakakamado/pull/32)と[v0.9.0採用記録](NYAKUA_V090_ADOPTION_20261007.md)を根拠とします。試験時点の記録・数値・棋譜は保持し、旧公開版29ファイルはtrials/v0.8.0/へ原bytesで保存。保存ブランチpreserve/v0.8.0-public-20261007も保持します。旧探索AIの公開採用はv0.8.0での履歴であり、v0.9.0の公開画面には搭載しません。実際のv0.9.0サイト配信日・URLは未記録です。
+
+## takasiaの正式採用・v0.10.0
+
+2026年10月9日（日本時間）、nkkmd（管理者）のv0.10.0実装指示に基づき、原型Bao la Kiswahiliで正式採用された **takasia** をBao Nakakamadoの基礎規則へ追加しました。NYAKUAはv0.9.0の案A「NAMUAの通常処理終了後、条件を満たすと両ハンドから終点へ計2個追加」を維持します。takasiaはMTAJIだけで作用するため、NYAKUAの終点追加とは同じ着手で競合しません。
+
+実装は、MTAJIのtakata正常終了後の成立判定、対象穴からのtakata開始禁止、最後のKETEが対象穴へ入った場合のrelay sowing停止、1手での失効・再成立を含みます。原型側のE30固定局面を回帰試験に使い、簡易コンピューターもv0.10.0の合法手・遷移へ追従させました。棋譜はversion 9、rulesVersion `0.10.0`、baseRulesRevision `BAO-RULES-V0.2.0-TAKASIA-001`へ更新しました。探索コンピューターと旧v0.8.0学習済みモデルは現行v0.10.0へ適用しません。
+
+根拠は[実装・検証記録](TAKASIA_V010_IMPLEMENTATION_20261009.md)と[PR #33](https://github.com/nkkmd/bao-nakakamado/pull/33)です。元ルールの参照はBao la Kiswahili日本語完全ガイドv0.2.0と元ゲームの同ルール改訂で、出典・ライセンスは[ライセンスと出典](../LICENSES.md)に記録します。v0.10.0の実際のサイト配信日・URLは未記録です。Bao Nakakamado・NYAKUAの初公開日2026年9月30日は変更しません。

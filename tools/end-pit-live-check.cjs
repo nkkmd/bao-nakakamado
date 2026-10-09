@@ -1,22 +1,32 @@
 "use strict";
-// MIT. Compare the playable trial with the preserved research implementation.
+// MIT. Preserve NYAKUA proposal-A parity while validating v0.10.0 takasia transitions.
 const assert = require("node:assert/strict"), fs = require("node:fs"), path = require("node:path");
 const R = require("./nyakua-end-pit/engine.cjs");
 const E = require("../prototype/end-pit-engine.js"), S = require("../prototype/end-pit-rules.js");
 const same = (a,b) => assert.equal(JSON.stringify(a), JSON.stringify(b));
+const withoutTakasia = value => { const c=E.clone(value); delete c.takasia; return c; };
 const total = b => [...b.pits.flat(2), ...b.reserve, ...b.nyakuaReserve, ...b.pending].reduce((a,n)=>a+n,0);
-const report = {status:"PASS", games:0, transitions:0, snapshots:0, additions:0, backAdditions:0,
-  houseAdditions:0, frontEmpty:0, mtaji:0, passes:0, cycles:0, boundaryChecks:[]};
+const report = {status:"PASS", rulesVersion:E.RULES_VERSION, games:0, transitions:0, snapshots:0, additions:0,
+  backAdditions:0, houseAdditions:0, frontEmpty:0, mtaji:0, passes:0, cycles:0,
+  takasiaActivations:0, takasiaStops:0, constrainedTransitions:0, boundaryChecks:[]};
 function compare(b,m,snapshots=false) {
   const input = E.clone(b), expected = R.advance("A",b,m);
   const result = snapshots ? S.applyWithEvents({board:b,history:[]},m)
-    : {game:S.apply({board:b,history:[]},m)};
+    : {game:S.apply({board:b,history:[]},m),events:[]};
   const after = result.game.board, entry = result.game.history.at(-1);
-  same(after,expected.b); same(b,input); assert.equal(total(after),total(b));
+  if (!b.takasia) same(withoutTakasia(after),withoutTakasia(expected.b));
+  else report.constrainedTransitions++;
+  same(b,input); assert.equal(total(after),total(b));
   assert.ok([...after.pits.flat(2),...after.reserve,...after.pending].every(n=>Number.isInteger(n)&&n>=0));
   same(after.nyakuaReserve,[0,0]);
   for (const k of ["player","placed","captures","stolen","endpoint"]) same(entry[k],expected.entry[k]);
-  if (snapshots) {same(result.events.at(-1).state,after); report.snapshots++;}
+  same(entry.takasiaBefore,b.takasia||null); same(entry.takasiaAfter,after.takasia||null);
+  if (snapshots) {
+    assert.ok(result.events.length);
+    same(result.events.at(-1).state,after); report.snapshots++;
+    report.takasiaActivations += result.events.filter(e=>e.kind==="takasia"&&e.action==="activate").length;
+    report.takasiaStops += result.events.filter(e=>e.kind==="takasia"&&e.action==="stop").length;
+  }
   if (entry.stolen) {
     report.additions++; assert.equal(entry.added,2); assert.equal(entry.ownAdded,1); assert.equal(entry.opponentAdded,1);
     assert.equal(after.reserve[b.player],b.reserve[b.player]-2);
@@ -28,7 +38,7 @@ function compare(b,m,snapshots=false) {
   }
   if(after.reason==="front-empty"||after.reason==="relay-limit")assert.equal(entry.added,0);
   if(after.reason==="front-empty")report.frontEmpty++;
-  if(b.phase==="mtaji") {same(after,R.advance("none",b,m).b); report.mtaji++;}
+  if(b.phase==="mtaji") { if(!b.takasia) same(withoutTakasia(after),withoutTakasia(R.advance("none",b,m).b)); report.mtaji++; }
   if(m.type==="pass")report.passes++;
   report.transitions++;return result.game;
 }
@@ -36,7 +46,7 @@ const fixtures = require("./nyakua-end-pit/results/checks.json").examples;
 for(const [name,f] of Object.entries(fixtures)) {
   compare(f.before,f.move,true); report.boundaryChecks.push(name);
 }
-let seed=20261007;
+let seed=20261009;
 const random=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};
 for(let i=0;i<100;i++) {
   let game=S.initialGame();
@@ -53,18 +63,25 @@ assert.ok(report.backAdditions&&report.houseAdditions&&report.frontEmpty&&report
 const dir=path.join(__dirname,"nyakua-continue/results/search4");
 for(const name of fs.readdirSync(dir).filter(n=>/^anomaly-A-.*\.json$/.test(n))) {
   const saved=JSON.parse(fs.readFileSync(path.join(dir,name))), game=saved.history.reduce((g,turn)=>{
-    const next=compare(g.board,turn.move,true); same(next.board,turn.after);
+    // Historical anomaly files predate takasia. They remain useful only while no
+    // active takasia constraint changes the physical sowing path.
+    const next=compare(g.board,turn.move,true);
+    if (!g.board.takasia) same(withoutTakasia(next.board),withoutTakasia(turn.after));
     return {board:next.board,history:[...g.history,next.history[0]]};
   },S.initialGame());
-  assert.equal(game.board.reason,"relay-limit");
-  const record=S.record(game);assert.equal(record.adjudication,"safety-stop");assert.equal(record.outcome.winner,null);
-  same(S.replay(record),game);report.cycles++;
+  if(game.board.reason==="relay-limit") {
+    const record=S.record(game);assert.equal(record.adjudication,"safety-stop");assert.equal(record.outcome.winner,null);
+    same(S.replay(record),game);report.cycles++;
+  }
 }
 const game=S.apply(S.initialGame(),S.moveVariants(S.initialGame())[0]);
-const publicRecord=S.record(game);assert.equal(publicRecord.version,8);assert.equal(publicRecord.rulesVersion,"0.9.0");assert.equal(publicRecord.publicAdopted,true);
-assert.equal(publicRecord.variantRule,"namua-end-pit-two-protect-last-two-row-ring-hand22");
+const publicRecord=S.record(game,{mode:"computer"});
+assert.equal(publicRecord.version,9);assert.equal(publicRecord.rulesVersion,"0.10.0");assert.equal(publicRecord.publicAdopted,true);
+assert.equal(publicRecord.takasia,true);assert.equal(publicRecord.baseRulesRevision,"BAO-RULES-V0.2.0-TAKASIA-001");
+assert.equal(publicRecord.variantRule,"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22");
+assert.equal(publicRecord.computer.id,"nyakua-takasia-simple-v2");
 const bad=S.record(game);bad.history[0].added++;assert.throws(()=>S.replay(bad),/mismatch/);
-assert.throws(()=>S.replay({format:"bao-nakakamado-prototype",version:7,rulesVersion:"0.8.0",history:[]}),/supported/);
+assert.throws(()=>S.replay({format:"bao-nakakamado-prototype",version:8,rulesVersion:"0.9.0",history:[]}),/supported/);
 const reserved=E.initialState();reserved.nyakuaReserve[0]=1;
 assert.throws(()=>S.apply({board:reserved,history:[]},E.legalMoves(reserved)[0]),/reserved hand/);
 assert.throws(()=>S.replay({format:"bao-nakakamado-nyakua-a-trial",version:1,rulesVersion:"nyakua-a-trial-001",history:[]}),/supported/);

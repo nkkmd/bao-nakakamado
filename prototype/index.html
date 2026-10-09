@@ -8,11 +8,11 @@
   <meta name="theme-color" content="#172c2b">
   <meta name="robots" content="noindex, nofollow">
   <title>Bao Nakakamado — 遊べる試作</title>
-  <meta name="description" content="Bao la Kiswahiliをベースに独自ルールNYAKUAを採用したオリジナルBao。NAMUAの連続捕獲後、両者のハンドから1個ずつ蒔き終わりの穴へ追加します。">
-  <link rel="stylesheet" href="./style.css?v=0.9.0">
-  <script defer src="./end-pit-engine.js?v=0.9.0"></script>
-  <script defer src="./end-pit-rules.js?v=0.9.0"></script>
-  <script defer src="./app.js?v=0.9.0"></script>
+  <meta name="description" content="Bao la Kiswahiliのtakasiaを採用し、独自ルールNYAKUAを組み合わせたオリジナルBao。">
+  <link rel="stylesheet" href="./style.css?v=0.10.0">
+  <script defer src="./end-pit-engine.js?v=0.10.0"></script>
+  <script defer src="./end-pit-rules.js?v=0.10.0"></script>
+  <script defer src="./app.js?v=0.10.0"></script>
 </head>
 <body>
   <main class="game-shell">
@@ -20,7 +20,7 @@
       <div>
         <span class="kicker">A NEW BAO EXPERIMENT</span>
         <h1>BAO NAKAKAMADO</h1>
-        <span class="prototype-badge">試作 v0.9.0</span>
+        <span class="prototype-badge">試作 v0.10.0</span>
         <span id="opponent-badge" class="opponent-badge">2人対戦</span>
       </div>
       <div class="toolbar">
@@ -50,7 +50,8 @@
             </select>
           </label>
           <button id="start" class="start-button" type="button">対局開始</button>
-          <p class="hint">NAMUAで一手に2回以上捕獲すると、蒔き終わりの穴へ両者のハンドから1個ずつ、計2個追加します。自分に1個以上、相手に2個以上残る場合のみ。追加したら、その手は終了します。</p>
+          <p class="hint">NYAKUA：NAMUAで一手に2回以上捕獲すると、条件を満たす場合に両者のハンドから1個ずつ蒔き終わりの穴へ追加します。</p>
+          <p class="hint">TAKASIA：MTAJIで成立すると、対象穴は次の1手の開始穴にできず、最後のKETEがその穴へ入ればそこで連続種まきを止めます。</p>
           <p class="hint">2人対戦、または簡易コンピューターとの対戦で遊べます。</p>
         </div>
       </section>
@@ -80,34 +81,35 @@
     <details id="about">
       <summary>Bao Nakakamado について</summary>
       <div class="rules">
-        <p>Bao Nakakamado は、伝統的なマンカラゲーム Bao la Kiswahili をベースに、独自ルールの NYAKUA（ニャクア）を加えたオリジナルの Bao です。Bao la Kiswahili の盤や種まき・捕獲の仕組みを受け継ぎ、ハンドのKETEを使った駆け引きを追加しています。</p>
+        <p>Bao Nakakamado は、伝統的なマンカラゲーム Bao la Kiswahili をベースに、独自ルールの NYAKUA（ニャクア）を加えたオリジナルの Bao です。v0.10.0では、原型側で正式採用された takasia も基礎規則として採用しています。</p>
         <p>NYAKUAは、NAMUAで一手に2回以上捕獲したとき、相手と自分のハンドからKETEを1個ずつ取り、蒔き終わりの自分の穴へ計2個追加するルールです。追加後に種まきや捕獲を再開せず、相手の最後の1個は奪いません。</p>
+        <p>takasia は MTAJI の takata 後に一定条件で成立し、防御側の次の1手だけ特定の前列穴を制約します。対象穴から takata を開始できず、relay sowing の最後の1個が対象穴へ入れば、そこで種まきを停止します。</p>
       </div>
     </details>
 
     <details id="rules">
       <summary>遊び方・試作ルール</summary>
       <div class="rules">
-      <a class="rules-guide-link" href="./rules.html"><strong>Bao Nakakamado のルールブック ↗</strong><span>初期配置・捕獲・NYUMBA・終点2個追加・勝敗まで。</span></a>
+      <a class="rules-guide-link" href="./rules.html"><strong>Bao Nakakamado のルールブック ↗</strong><span>初期配置・捕獲・NYUMBA・takasia・NYAKUA・勝敗まで。</span></a>
       <div class="rules-grid">
         <div><b>01 / 前列・後列と循環</b><p>光っている穴を選び、方向・入口を選びます。自分の前列8穴と後列8穴を循環して蒔きます。前列の端の次は後列の同じ側の端へ進みます。捕獲するのは相手の前列です。</p></div>
-        <div><b>02 / 終点へ2個追加</b><p>NAMUAで一手に2回以上捕獲し、通常処理の完了時に自分のハンド1個以上・相手2個以上なら、双方から1個ずつ終点へ置きます。相手の最後の1個は保護。一手につき一度です。</p></div>
-        <div><b>03 / 手番の通常投入は1個</b><p>各NAMUA手の開始時は自分のハンドから1個だけ投入します。別確保・次手3個投入はありません。終点への2個追加で捕獲や種まきを再開せず、相手へ手番を渡します。</p></div>
-        <div><b>04 / 段階と終局</b><p>両者のハンドがともに0になるとMTAJIへ移ります。通常の初期局面からハンド枯渇によるパスは生じません。相手の前列8穴をすべて空にするか、相手の手番に合法手をなくせば勝ちです。</p></div>
+        <div><b>02 / TAKASIA</b><p>MTAJIのtakata後に条件を満たすと、相手の次の1手だけ対象穴を開始穴にできません。種まきの途中で通過するときは通常どおり置き、最後の1個が入ればそこで停止します。</p></div>
+        <div><b>03 / NYAKUA</b><p>NAMUAで一手に2回以上捕獲し、通常処理の完了時に自分のハンド1個以上・相手2個以上なら、双方から1個ずつ終点へ置きます。相手の最後の1個は保護。一手につき一度です。</p></div>
+        <div><b>04 / 段階と終局</b><p>両者のハンドがともに0になるとMTAJIへ移ります。相手の前列8穴をすべて空にするか、相手の手番に合法手をなくせば勝ちです。</p></div>
       </div>
-      <p class="footnote">初期盤上は各人10個、ハンド22個、合計64個です。捕獲義務やNYUMBAの細則は上のルールブックを参照してください。一部のMTAJIで種まきが循環する既知の制約があります。連続種まきの安全上限で対局を停止し、通常勝敗とは区別します。元ゲームの <a href="https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/doc/RULES_BASELINE.md" target="_blank" rel="noopener">採用ルール基準</a>を出発点に変更しています。</p>
+      <p class="footnote">初期盤上は各人10個、ハンド22個、合計64個です。捕獲義務、NYUMBA、takasiaの成立例外、NYAKUAの細則は上のルールブックを参照してください。一部のMTAJIで種まきが循環する既知の制約があります。連続種まきの安全上限で対局を停止し、通常勝敗とは区別します。</p>
       </div>
     </details>
     <details>
       <summary>棋譜の保存</summary>
       <div class="rules">
-        <p>対局の棋譜をJSONファイルとして保存できます。v0.9.0の識別情報、NYAKUAの発動、追加先と両者のハンドから使った数も記録します。旧v0.8.0の棋譜とは区別します。画面での棋譜読み込みは未実装です。</p>
+        <p>対局の棋譜をJSONファイルとして保存できます。v0.10.0／棋譜version 9として、NYAKUAとtakasiaの状態を記録します。旧v0.9.0以前の棋譜とは区別し、自動的にtakasiaを適用しません。画面での棋譜読み込みは未実装です。</p>
         <button id="download" type="button" disabled>棋譜を保存</button>
       </div>
     </details>
     <footer>
       2人対戦・簡易コンピューター対戦<br>
-      <a href="https://github.com/nkkmd/bao-nakakamado" target="_blank" rel="noopener noreferrer">GitHub</a> · 試作 v0.9.0<br>
+      <a href="https://github.com/nkkmd/bao-nakakamado" target="_blank" rel="noopener noreferrer">GitHub</a> · 試作 v0.10.0<br>
       Based on <a href="https://github.com/nkkmd/bao-la-kiswahili-game" target="_blank" rel="noopener noreferrer">Bao la Kiswahili</a><br>
       <a href="./licenses.html">ライセンス・考案と公開の記録</a>
     </footer>

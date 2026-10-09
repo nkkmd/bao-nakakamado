@@ -1,35 +1,65 @@
 # Bao Nakakamado の用語
 
-対象：現行試作v0.9.0。更新日：2026年10月7日。
+対象：現行試作 v0.10.0。更新日：2026年10月9日。
 
 ## NYAKUA（ニャクア）
 
-NYAKUAは独自のハンド奪取規則の名称です。2026年9月30日に採用し、日本語ではニャクアと読みます。Bao Nakakamado・NYAKUAの考案者はnkkmd、初公開日は2026年9月30日。[変更履歴](ORIGIN_AND_HISTORY.md)に根拠を保存しています。
+NYAKUAはBao Nakakamado独自のハンド奪取規則の名称です。2026年9月30日に採用し、日本語ではニャクアと読みます。Bao Nakakamado・NYAKUAの考案者はnkkmd、初公開日は2026年9月30日。[変更履歴](ORIGIN_AND_HISTORY.md)に根拠を保存しています。
 
-v0.9.0では、NAMUAの一手で捕獲2回以上、通常処理完了時に自分のハンド1個以上・相手2個以上なら、双方から1個ずつ蒔き終わりの穴へ計2個追加します。相手の最後の1個は保護。一手につき一度、追加後の捕獲・種まき・終点再判定はありません。即時終局・安全停止した手では発動しません。
+v0.10.0でもv0.9.0案Aを維持します。NAMUAの一手で捕獲2回以上、通常処理完了時に自分のハンド1個以上・相手2個以上なら、双方から1個ずつ蒔き終わりの穴へ計2個追加します。相手の最後の1個は保護。一手につき一度、追加後の捕獲・種まき・終点再判定はありません。即時終局・安全停止した手では発動しません。
 
-| 用語 | v0.9.0での意味 |
+## takasia（タカシア）
+
+takasiaはBao la Kiswahili側で正式採用されたMTAJIの規則で、v0.10.0からBao Nakakamadoの基礎規則として採用します。
+
+MTAJIのtakata終了後、所定の成立条件を満たすと、防御側の次の1手だけ特定の前列穴が対象になります。
+
+- 対象穴からtakataを開始できません。
+- 種まき途中で通過するときは通常どおり1個置いて続行します。
+- 最後の1個が対象穴へ入れば、その時点の個数にかかわらずrelay sowingを停止します。
+- 制約はその1手で失効し、新規成立した場合だけ反対側へ新しい対象を設定します。
+
+対象穴が1個だけ、防御側前列の唯一の占有穴、防御側前列で唯一2個以上ある穴、所有中NYUMBAの場合は対象外です。所有を失ったNYUMBA位置は通常穴として扱います。
+
+## 主な用語
+
+| 用語 | v0.10.0での意味 |
 |---|---|
-| ハンド | 初期22個から盤へ未投入のKETE。開始時投入とNYAKUAの追加で減る |
-| 終点2個追加 | 双方のハンドから各1個を、通常処理が完了した手の蒔き終わりの穴へ置く |
-| 捕獲 | 相手前列の穴のKETEを取る盤上の動作 |
-| 連続種まき | 種まきの終点の中身を持ち上げ、同じ着手を続けること。NYAKUA追加後には行わない |
-| 確保分・次手3個投入 | 旧v0.8.0の規則。現行v0.9.0では使わない |
+| ハンド | 初期22個から盤へ未投入のKETE。NAMUA開始時投入とNYAKUAの追加で減る |
+| NAMUA | ハンドを使う段階。NYAKUAが作用する |
+| MTAJI | 両者のハンドが0になった後、盤上だけで指す段階。takasiaが作用する |
+| takata | 一着手を通じて捕獲しない手 |
+| relay sowing | 終点のKETEを持ち上げ、同じ着手で種まきを続けること |
+| NYUMBA | 各人の前列5番にある特別な穴。所有状態を別に持つ |
+| 終点2個追加 | NYAKUA発動時、双方のハンドから各1個を通常処理後の終点へ置くこと |
+| 確保分・次手3個投入 | 旧v0.8.0の規則。現行では使わない |
 
-両者のハンドが0になると、現在の着手のNAMUA処理を完了して共通MTAJIへ移ります。追加手番や片側だけのMTAJI移行はありません。通常初期局面からハンド枯渇パスは生じません。
+両者のハンドが0になると、現在のNAMUA着手を完了して共通MTAJIへ移ります。NAMUAからMTAJIへ移行しただけではtakasiaは成立しません。
 
 ## 棋譜
 
-現行formatはbao-nakakamado-prototype、version 8、rulesVersion 0.9.0、variantRule namua-end-pit-two-protect-last-two-row-ring-hand22、publicAdopted trueです。nyakuaEndPitAdd true、nyakuaProtectLast true、nyakuaNextTurnThree false、nyakuaReservedProtected false、nyakuaFixedPitBulk false。
+現行棋譜は次の識別情報を使用します。
 
-placedは開始時投入数、capturesは捕獲回数、stolenは相手ハンドから取った数、addedは終点へ追加した総数（0か2）、ownAdded・opponentAddedは各ハンドから追加した数、endpointは追加先（非発動はnull）。イベント名はend-pit-add。reserveはハンド、nyakuaReserveは互換用[0,0]、pendingは終局時捕獲保留数です。安全停止はadjudication safety-stop・outcome.winner nullで通常勝敗と区別します。
+- format: `bao-nakakamado-prototype`
+- version: `9`
+- rulesVersion: `0.10.0`
+- baseRulesVersion: `0.2.0`
+- baseRulesRevision: `BAO-RULES-V0.2.0-TAKASIA-001`
+- variantRule: `takasia-namua-end-pit-two-protect-last-two-row-ring-hand22`
+- publicAdopted: `true`
+- takasia: `true`
 
-| ルール版 | 盤・初期ハンド | NYAKUA後の扱い | 棋譜version |
+各着手の `takasiaBefore` と `takasiaAfter`、最終局面のtakasia状態を保存します。`placed`は開始時投入数、`captures`は捕獲回数、`stolen`はNYAKUAで相手ハンドから取った数、`added`は終点への追加総数、`ownAdded`・`opponentAdded`は各ハンドから追加した数、`endpoint`は追加先です。
+
+安全停止は `adjudication: safety-stop`、`outcome.winner: null` として通常勝敗と区別します。
+
+| ルール版 | 盤・初期ハンド | NYAKUA／基礎規則の主な変更 | 棋譜version |
 |---|---|---|---:|
 | v0.6.0 | 各人1列・折り返し・12個 | 最後の1個も奪い、通常ハンドへ加算。一穴全投入 | 4 |
 | v0.6.1 | 各人1列・折り返し・12個 | 最後の1個を保護し、通常ハンドへ加算。一穴全投入 | 5 |
 | v0.7.0 | 各人前後2列・循環・22個 | 最後の1個保護と一穴全投入を固定 | 6 |
 | v0.8.0 | 各人前後2列・循環・22個 | 最後の1個と確保分を保護。別確保・次手3個投入 | 7 |
-| **v0.9.0** | **各人前後2列・循環・22個** | **最後の1個を保護。着手終了後に両ハンドから終点へ2個追加** | **8** |
+| v0.9.0 | 各人前後2列・循環・22個 | 着手終了後に両ハンドから終点へ2個追加 | 8 |
+| **v0.10.0** | **各人前後2列・循環・22個** | **NYAKUA案Aを維持し、基礎規則にtakasiaを追加** | **9** |
 
-案A実機試験版は別format bao-nakakamado-nyakua-a-trial、version 1、rulesVersion nyakua-a-trial-001、publicAdopted falseです。旧・試験棋譜を現行棋譜として解釈しません。初期配置と遊び方は[ルールブック](RULEBOOK.md)、実装・配布は[試作README](../prototype/README.md)を参照してください。
+旧版・試験版の棋譜を現行棋譜として解釈せず、v0.9.0以前の棋譜へtakasiaを自動適用しません。初期配置と遊び方は[ルールブック](RULEBOOK.md)、実装・配布は[試作README](../prototype/README.md)を参照してください。
