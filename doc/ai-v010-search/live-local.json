@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "rulesVersion": "0.10.0",
+  "games": 100,
+  "transitions": 18582,
+  "snapshots": 1072,
+  "additions": 3263,
+  "backAdditions": 941,
+  "houseAdditions": 421,
+  "frontEmpty": 254,
+  "mtaji": 6244,
+  "passes": 0,
+  "cycles": 11,
+  "takasiaActivations": 0,
+  "takasiaStops": 0,
+  "constrainedTransitions": 36,
+  "boundaryChecks": [
+    "addition",
+    "threeCapturesOneAddition",
+    "backAddition",
+    "houseAddition",
+    "ownLast",
+    "opponentLast",
+    "pairMinimum"
+  ]
+}

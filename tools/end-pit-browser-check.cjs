@@ -43,7 +43,7 @@ const report = {status:"PASS", surfaces:[], errors:[], computerSides:[], takasia
           }});
       });
       await page.clock.install();await page.goto(url);
-      assert.equal(await page.locator("#mode option").count(),2);
+      assert.equal(await page.locator("#mode option").count(),3);
       assert.equal(await page.locator(".prototype-badge").innerText(),"試作 v0.10.0");
       await page.locator("#about summary").click();
       const about=await page.locator("#about .rules").innerText();
@@ -55,6 +55,7 @@ const report = {status:"PASS", surfaces:[], errors:[], computerSides:[], takasia
       await page.locator("#speed").click();
 
       // Standard local move, then verify the v0.10.0 record surface.
+      await page.locator("#mode").selectOption("local");
       await page.locator("#start").click();
       assert.equal(await page.locator("#board button").count(),32);
       await page.locator("#board button:enabled").first().click();

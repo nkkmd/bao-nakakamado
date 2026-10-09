@@ -63,3 +63,7 @@ MTAJIのtakata終了後、所定の成立条件を満たすと、防御側の次
 | **v0.10.0** | **各人前後2列・循環・22個** | **NYAKUA案Aを維持し、基礎規則にtakasiaを追加** | **9** |
 
 旧版・試験版の棋譜を現行棋譜として解釈せず、v0.9.0以前の棋譜へtakasiaを自動適用しません。初期配置と遊び方は[ルールブック](RULEBOOK.md)、実装・配布は[試作README](../prototype/README.md)を参照してください。
+
+## v0.10.0試験用探索の棋譜メタデータ
+
+探索対局もmodeはcomputer、棋譜本体はversion 9です。任意のcomputerフィールドに試験AI ID・releaseId・searchId・evaluatorId・learnedModel:false・difficulty・budgetMs・着手別diagnosticsを記録します。トップレベルpublicAdopted:trueは現行ルールの採用、computer.publicAdopted:falseは試験AIの未採用を意味します。通常のhistory/final/takasia再生はAI診断に依存しません。Worker失敗と、深度0での時間切れ代替を区別して記録します。

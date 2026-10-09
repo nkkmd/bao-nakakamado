@@ -12,7 +12,10 @@
   <link rel="stylesheet" href="./style.css?v=0.10.0">
   <script defer src="./end-pit-engine.js?v=0.10.0"></script>
   <script defer src="./end-pit-rules.js?v=0.10.0"></script>
-  <script defer src="./app.js?v=0.10.0"></script>
+  <script defer src="./end-pit-search-transition.js?v=v010-release001"></script>
+  <script defer src="./end-pit-simple-ai.js?v=v010-release001"></script>
+  <script defer src="./end-pit-computer-client.js?v=v010-release001"></script>
+  <script defer src="./app.js?v=v010-release001"></script>
 </head>
 <body>
   <main class="game-shell">
@@ -40,6 +43,7 @@
             <select id="mode">
               <option value="local">2人で対戦</option>
               <option value="computer">簡易コンピューター</option>
+              <option value="search-computer" selected>探索コンピューター</option>
             </select>
           </label>
           <label id="side-field" class="setup-field" for="side" hidden>
@@ -49,10 +53,18 @@
               <option value="1">後手（NORTH）</option>
             </select>
           </label>
+          <label id="difficulty-field" class="setup-field" for="difficulty" hidden>
+            <span>強さ</span>
+            <select id="difficulty">
+              <option value="easy">やさしい</option>
+              <option value="normal">ふつう</option>
+              <option value="hard" selected>強い</option>
+            </select>
+          </label>
           <button id="start" class="start-button" type="button">対局開始</button>
           <p class="hint">NYAKUA：NAMUAで一手に2回以上捕獲すると、条件を満たす場合に両者のハンドから1個ずつ蒔き終わりの穴へ追加します。</p>
           <p class="hint">TAKASIA：MTAJIで成立すると、対象穴は次の1手の開始穴にできず、最後のKETEがその穴へ入ればそこで連続種まきを止めます。</p>
-          <p class="hint">2人対戦、または簡易コンピューターとの対戦で遊べます。</p>
+          <p class="hint">2人対戦、簡易コンピューター、探索コンピューターで遊べます。</p>
         </div>
       </section>
       <div class="game-info" aria-label="対局状況">
@@ -108,7 +120,7 @@
       </div>
     </details>
     <footer>
-      2人対戦・簡易コンピューター対戦<br>
+      2人対戦・簡易／探索コンピューター対戦<br>
       <a href="https://github.com/nkkmd/bao-nakakamado" target="_blank" rel="noopener noreferrer">GitHub</a> · 試作 v0.10.0<br>
       Based on <a href="https://github.com/nkkmd/bao-la-kiswahili-game" target="_blank" rel="noopener noreferrer">Bao la Kiswahili</a><br>
       <a href="./licenses.html">ライセンス・考案と公開の記録</a>

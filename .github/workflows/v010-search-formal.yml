@@ -1,0 +1,69 @@
+name: v0.10.0 independent search versus simple comparison
+# This fixed experiment starts on its uniquely named first push only. Routine
+# corrections/docs pushes do not silently repeat the measured games.
+on:
+  push:
+    branches: ['feat/v010-search-computer-20261009']
+permissions:
+  contents: read
+  actions: read
+jobs:
+  formal:
+    if: startsWith(github.event.head_commit.message, 'Start v0.10.0 search trial and fixed independent comparison')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Current rule and search correctness before measured games
+        run: node --test prototype/takasia.test.cjs prototype/end-pit-search.test.cjs prototype/end-pit-search-formal.test.cjs
+      - name: Record preregistered contract and independent openings
+        run: node tools/end-pit-search-formal.cjs manifest "$RUNNER_TEMP/manifest.json"
+      - name: Measure 32 complete pairs on the same runner
+        run: node tools/end-pit-search-formal.cjs shard "$RUNNER_TEMP/formal" "${{ matrix.shard }}"
+      - name: Audit completed pairs with zero new measurements
+        run: |
+          node tools/end-pit-search-formal.cjs shard "$RUNNER_TEMP/formal" "${{ matrix.shard }}"
+          node - <<'JS'
+          const fs=require('node:fs'),assert=require('node:assert/strict');
+          const shard=process.env.SHARD;
+          const r=JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP+'/formal/shard-'+shard+'.json'));
+          assert.equal(r.newPairs,0);assert.equal(r.reusedPairs,32);
+          JS
+        env:
+          SHARD: ${{ matrix.shard }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v010-formal-${{ matrix.shard }}
+          path: |
+            ${{ runner.temp }}/manifest.json
+            ${{ runner.temp }}/formal/
+          retention-days: 90
+  aggregate:
+    needs: formal
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: v010-formal-*
+          merge-multiple: true
+          path: ${{ runner.temp }}/download
+      - name: Audit all 512 records before computing fixed criteria
+        run: node tools/end-pit-search-formal.cjs aggregate "$RUNNER_TEMP/download/formal"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v010-formal-summary
+          path: ${{ runner.temp }}/download/formal/results.json
+          retention-days: 90

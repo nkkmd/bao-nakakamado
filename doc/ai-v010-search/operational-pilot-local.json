@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "contract": {
+    "id": "NAKAKAMADO-V010-OPERATIONAL-PILOT-v1",
+    "rulesVersion": "0.10.0",
+    "developmentOnly": true,
+    "seedStart": 2026100920,
+    "budgets": [
+      25,
+      75,
+      150
+    ],
+    "pairsPerBudget": 4,
+    "maxPlies": 200,
+    "maxDepth": 32,
+    "quiescenceDepth": 1,
+    "sourceSha256": {
+      "prototype/end-pit-engine.js": "d57dc799fbe6db61916ba632a6472264bead666f1f9e9b77c3f70fc15d5de21c",
+      "prototype/end-pit-rules.js": "e51aa17641802669cc5986a8891d6db1dce122b70a799afeba992c78736b5e8a",
+      "prototype/end-pit-search-transition.js": "594877db0d07501997cb943d01400281083df44ab0fe0fc456a93c063d24a59e",
+      "prototype/end-pit-search-ai.js": "35c6b5ec555efbd8fb0ca14ab55ad9eb2a75bc60b76573316ef5b94c11a7309e",
+      "prototype/end-pit-search-evaluator.js": "9bd4959c9eebb0a3fd93d3c33e4405b97734142d9fbef036cf63261422df51e3",
+      "prototype/end-pit-simple-ai.js": "a20fb0bb597245dc125595df85f4d25bfe348e1b37a1ea6d9a107d1688e06c7b",
+      "tools/end-pit-search-pilot.cjs": "5b6c5af439113bd190c64dc16403cb84663fcf9023ba57cfb22c6ffe041d11d5"
+    }
+  },
+  "fingerprint": "12720c5fa74e134d2f7751d6ce7a2136c3074d6fe89ca10149b8fbc6f2fe9428",
+  "newPairs": 0,
+  "reusedPairs": 12,
+  "pairs": 12,
+  "games": 24,
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "linux",
+    "arch": "x64",
+    "cpu": "AMD EPYC 9V74 80-Core Processor"
+  },
+  "reports": [
+    {
+      "budgetMs": 25,
+      "games": 8,
+      "wins": 8,
+      "losses": 0,
+      "safetyStops": 0,
+      "unfinished": 0,
+      "searchMoves": 81,
+      "depthZero": 1,
+      "p50Ms": 25.058390000000145,
+      "p95Ms": 25.34151,
+      "maxMs": 27.351611000000048,
+      "medianDepth": 3,
+      "conservativeScoreInterval": [
+        1,
+        1
+      ],
+      "operationalPass": false
+    },
+    {
+      "budgetMs": 75,
+      "games": 8,
+      "wins": 7,
+      "losses": 1,
+      "safetyStops": 0,
+      "unfinished": 0,
+      "searchMoves": 63,
+      "depthZero": 0,
+      "p50Ms": 75.06802200000038,
+      "p95Ms": 75.34923000000026,
+      "maxMs": 76.60959600000024,
+      "medianDepth": 4,
+      "conservativeScoreInterval": [
+        0.875,
+        0.875
+      ],
+      "operationalPass": true
+    },
+    {
+      "budgetMs": 150,
+      "games": 8,
+      "wins": 8,
+      "losses": 0,
+      "safetyStops": 0,
+      "unfinished": 0,
+      "searchMoves": 65,
+      "depthZero": 0,
+      "p50Ms": 150.06394499999988,
+      "p95Ms": 150.54499299999952,
+      "maxMs": 152.59629200000018,
+      "medianDepth": 5,
+      "conservativeScoreInterval": [
+        1,
+        1
+      ],
+      "operationalPass": true
+    }
+  ],
+  "technicalFailures": 0,
+  "adoptionDecision": false,
+  "largestOperationalBudget": 150
+}

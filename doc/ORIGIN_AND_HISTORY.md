@@ -97,6 +97,16 @@ Bao Nakakamadoは伝統ゲーム **Bao la Kiswahiliを出発点にした派生�
 
 2026年10月9日（日本時間）、nkkmd（管理者）のv0.10.0実装指示に基づき、原型Bao la Kiswahiliで正式採用された **takasia** をBao Nakakamadoの基礎規則へ追加しました。NYAKUAはv0.9.0の案A「NAMUAの通常処理終了後、条件を満たすと両ハンドから終点へ計2個追加」を維持します。takasiaはMTAJIだけで作用するため、NYAKUAの終点追加とは同じ着手で競合しません。
 
-実装は、MTAJIのtakata正常終了後の成立判定、対象穴からのtakata開始禁止、最後のKETEが対象穴へ入った場合のrelay sowing停止、1手での失効・再成立を含みます。原型側のE30固定局面を回帰試験に使い、簡易コンピューターもv0.10.0の合法手・遷移へ追従させました。棋譜はversion 9、rulesVersion `0.10.0`、baseRulesRevision `BAO-RULES-V0.2.0-TAKASIA-001`へ更新しました。探索コンピューターと旧v0.8.0学習済みモデルは現行v0.10.0へ適用しません。
+実装は、MTAJIのtakata正常終了後の成立判定、対象穴からのtakata開始禁止、最後のKETEが対象穴へ入った場合のrelay sowing停止、1手での失効・再成立を含みます。原型側のE30固定局面を回帰試験に使い、簡易コンピューターもv0.10.0の合法手・遷移へ追従させました。棋譜はversion 9、rulesVersion `0.10.0`、baseRulesRevision `BAO-RULES-V0.2.0-TAKASIA-001`へ更新しました。takasia初回対応時点では探索コンピューターと旧v0.8.0学習済みモデルを現行v0.10.0へ適用していません。
 
 根拠は[実装・検証記録](TAKASIA_V010_IMPLEMENTATION_20261009.md)と[PR #33](https://github.com/nkkmd/bao-nakakamado/pull/33)です。元ルールの参照はBao la Kiswahili日本語完全ガイドv0.2.0と元ゲームの同ルール改訂で、出典・ライセンスは[ライセンスと出典](../LICENSES.md)に記録します。v0.10.0の実際のサイト配信日・URLは未記録です。Bao Nakakamado・NYAKUAの初公開日2026年9月30日は変更しません。
+
+## v0.10.0専用探索AIの開発
+
+2026年10月9日（日本時間）、管理者が簡易コンピューターから探索コンピューターへの切り替え手順を確認し、その手順に従う実装を指示しました。[実装・検証記録](AI_V010_SEARCH_IMPLEMENTATION_20261009.md)に、現行NYAKUA案A・takasiaの探索接続、手作り評価、Worker、棋譜diagnosticと採用前の確認を記録します。実装はAI支援。開発開始時点では試験AIは未公開採用で、ルールv0.10.0・棋譜version 9・考案者nkkmd・初公開2026年9月30日を維持します。その時点では実機確認・main統合・実際のサイト配信日は未完了でした。正式採用は次節を参照してください。
+
+## v0.10.0専用探索AIの正式採用
+
+2026年10月9日（日本時間）、nkkmd（管理者）の実機確認報告「問題なさそうです」を受け、専用探索AIを正式採用しました。実装はAI支援、採用判断者はnkkmd。現行簡易AIとの独立512局比較は487勝・25敗で固定基準をすべて通過し、実ChromiumのWorker・取消し・代替・棋譜・スマホ幅表示も通過しています。実機は管理者の総括報告に基づき、個別の操作記録・計測値は未記録です。
+
+既定を探索コンピューター・強い（150ms）へ変更し、採用識別子NAKAKAMADO-AI-V010-RELEASE-001を棋譜に記録します。ルールv0.10.0・棋譜version 9・考案者・初公開日は維持します。根拠は[PR #34](https://github.com/nkkmd/bao-nakakamado/pull/34)と[実装・検証記録](AI_V010_SEARCH_IMPLEMENTATION_20261009.md)。main統合日はPRのマージ記録、ZIP作成日は配布物を基準とします。実際のサイト配信日・URLは未記録です。前節の未採用状態は開発当時の履歴です。
