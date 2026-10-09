@@ -1,0 +1,792 @@
+{
+  "id": "75-2",
+  "fingerprint": "12720c5fa74e134d2f7751d6ce7a2136c3074d6fe89ca10149b8fbc6f2fe9428",
+  "rootKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[1,1,0,0,3,1,3,1],[1,0,1,1,1,1,1,1]],[[1,0,0,0,13,0,0,1],[0,0,0,0,0,0,1,1]]],[15,15],[0,0],[false,true],0,\"namua\",null,\"\",[0,0],13,null]",
+  "payload": {
+    "budgetMs": 75,
+    "games": [
+      {
+        "searchPlayer": 0,
+        "record": {
+          "format": "bao-nakakamado-prototype",
+          "version": 9,
+          "baseRules": "bao-la-kiswahili-ja",
+          "baseRulesVersion": "0.2.0",
+          "baseRulesRevision": "BAO-RULES-V0.2.0-TAKASIA-001",
+          "variantRule": "takasia-namua-end-pit-two-protect-last-two-row-ring-hand22",
+          "rulesVersion": "0.10.0",
+          "publicAdopted": true,
+          "boardRowsPerPlayer": 2,
+          "sowingPath": "ring",
+          "initialHand": 22,
+          "totalKete": 64,
+          "takasia": true,
+          "nyakuaProtectLast": true,
+          "nyakuaFixedPitBulk": false,
+          "nyakuaNextTurnThree": false,
+          "nyakuaReservedProtected": false,
+          "nyakuaEndPitAdd": true,
+          "mode": "computer",
+          "computer": {
+            "id": "development-v010-pair",
+            "searchPlayer": 0,
+            "budgetMs": 75,
+            "learnedModel": false
+          },
+          "history": [
+            {
+              "player": 0,
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "placed": 1,
+              "captures": 0,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "placed": 1,
+              "captures": 0,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "use"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "placed": 1,
+              "captures": 3,
+              "stolen": 1,
+              "added": 2,
+              "ownAdded": 1,
+              "opponentAdded": 1,
+              "endpoint": {
+                "player": 1,
+                "row": 0,
+                "index": 4
+              },
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 7,
+                "direction": "right"
+              },
+              "placed": 1,
+              "captures": 0,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "placed": 1,
+              "captures": 0,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 2,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 3,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            }
+          ],
+          "final": {
+            "pits": [
+              [
+                [
+                  0,
+                  3,
+                  2,
+                  2,
+                  0,
+                  2,
+                  4,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              ],
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  1
+                ]
+              ]
+            ],
+            "reserve": [
+              14,
+              15
+            ],
+            "nyakuaReserve": [
+              0,
+              0
+            ],
+            "houseOwned": [
+              false,
+              false
+            ],
+            "player": 0,
+            "phase": "namua",
+            "winner": 0,
+            "reason": "front-empty",
+            "turn": 13,
+            "pending": [
+              13,
+              0
+            ],
+            "takasia": null
+          },
+          "adjudication": "normal",
+          "outcome": {
+            "winner": 0,
+            "adjudication": "normal"
+          }
+        },
+        "turns": [
+          {
+            "ply": 13,
+            "player": 0,
+            "search": true,
+            "elapsedMs": 75.08813099999952,
+            "stats": {
+              "searchId": "NAKAKAMADO-SEARCH-V010-v1",
+              "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+              "nodes": 709,
+              "quiescenceNodes": 415,
+              "cutoffs": 183,
+              "cacheHits": 2,
+              "cacheStores": 132,
+              "evaluationRequests": 278,
+              "evaluations": 269,
+              "evaluationCacheHits": 8,
+              "evaluationCacheEvictions": 0,
+              "cachePeak": 67,
+              "evaluationCachePeak": 269,
+              "pvsResearches": 0,
+              "aspirationResearches": 0,
+              "historyUpdates": 0,
+              "safetyStops": 0,
+              "completedDepth": 7,
+              "rootScore": 999999,
+              "timedOut": true,
+              "elapsedMs": 75.07092600000033,
+              "allocatedTimeMs": 75
+            }
+          }
+        ],
+        "outcome": "normal-terminal"
+      },
+      {
+        "searchPlayer": 1,
+        "record": {
+          "format": "bao-nakakamado-prototype",
+          "version": 9,
+          "baseRules": "bao-la-kiswahili-ja",
+          "baseRulesVersion": "0.2.0",
+          "baseRulesRevision": "BAO-RULES-V0.2.0-TAKASIA-001",
+          "variantRule": "takasia-namua-end-pit-two-protect-last-two-row-ring-hand22",
+          "rulesVersion": "0.10.0",
+          "publicAdopted": true,
+          "boardRowsPerPlayer": 2,
+          "sowingPath": "ring",
+          "initialHand": 22,
+          "totalKete": 64,
+          "takasia": true,
+          "nyakuaProtectLast": true,
+          "nyakuaFixedPitBulk": false,
+          "nyakuaNextTurnThree": false,
+          "nyakuaReservedProtected": false,
+          "nyakuaEndPitAdd": true,
+          "mode": "computer",
+          "computer": {
+            "id": "development-v010-pair",
+            "searchPlayer": 1,
+            "budgetMs": 75,
+            "learnedModel": false
+          },
+          "history": [
+            {
+              "player": 0,
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "placed": 1,
+              "captures": 0,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "placed": 1,
+              "captures": 0,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "use"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "side": "right",
+                "houseChoice": "stop"
+              },
+              "placed": 1,
+              "captures": 3,
+              "stolen": 1,
+              "added": 2,
+              "ownAdded": 1,
+              "opponentAdded": 1,
+              "endpoint": {
+                "player": 1,
+                "row": 0,
+                "index": 4
+              },
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 7,
+                "direction": "right"
+              },
+              "placed": 1,
+              "captures": 0,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "placed": 1,
+              "captures": 0,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 2,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 3,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            }
+          ],
+          "final": {
+            "pits": [
+              [
+                [
+                  0,
+                  3,
+                  2,
+                  2,
+                  0,
+                  2,
+                  4,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              ],
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  1
+                ]
+              ]
+            ],
+            "reserve": [
+              14,
+              15
+            ],
+            "nyakuaReserve": [
+              0,
+              0
+            ],
+            "houseOwned": [
+              false,
+              false
+            ],
+            "player": 0,
+            "phase": "namua",
+            "winner": 0,
+            "reason": "front-empty",
+            "turn": 13,
+            "pending": [
+              13,
+              0
+            ],
+            "takasia": null
+          },
+          "adjudication": "normal",
+          "outcome": {
+            "winner": 0,
+            "adjudication": "normal"
+          }
+        },
+        "turns": [
+          {
+            "ply": 13,
+            "player": 0,
+            "search": false,
+            "elapsedMs": 0.036393999999745574,
+            "stats": null
+          }
+        ],
+        "outcome": "normal-terminal"
+      }
+    ]
+  },
+  "checksum": "a671f2ad0c7ea8223a7bd7f3ec3f8d84e9a5aa8b5af6a1597887a51ba40bceb5"
+}

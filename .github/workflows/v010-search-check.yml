@@ -1,0 +1,59 @@
+name: v0.10.0 search computer trial checks
+on:
+  push:
+    paths: ['prototype/**', 'tools/end-pit-*', 'tools/package-v010.py', '.github/workflows/v010-search-check.yml']
+  pull_request:
+    paths: ['prototype/**', 'tools/end-pit-*', 'tools/package-v010.py', '.github/workflows/v010-search-check.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  search-trial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Current rules, exhaustive search, cancellation and DOM
+        run: node --test prototype/takasia.test.cjs prototype/end-pit-search.test.cjs prototype/end-pit-computer-client.test.cjs prototype/end-pit-app.test.cjs
+      - name: Reachable transition parity and exhaustive search
+        run: node tools/end-pit-search-check.cjs "$RUNNER_TEMP/search-check.json"
+      - name: Retained NYAKUA rules and cycles
+        run: node tools/end-pit-live-check.cjs "$RUNNER_TEMP/live-check.json"
+      - name: Package all current Worker dependencies and check preserved bytes
+        run: python3 tools/package-v010.py "$RUNNER_TEMP/package"
+      - name: Operational pilot and zero-new-measurement resume
+        run: |
+          node tools/end-pit-search-pilot.cjs "$RUNNER_TEMP/pilot"
+          node tools/end-pit-search-pilot.cjs "$RUNNER_TEMP/pilot"
+          node - <<'JS'
+          const fs=require('node:fs'),assert=require('node:assert/strict');
+          const r=JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP+'/pilot/results.json'));
+          assert.equal(r.newPairs,0);assert.equal(r.reusedPairs,12);assert.equal(r.technicalFailures,0);
+          JS
+      - name: Install pinned real browser
+        run: |
+          npm install --prefix "$RUNNER_TEMP/browser" --no-audit --no-fund playwright@1.62.1
+          node "$RUNNER_TEMP/browser/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Current simple and local UI regressions
+        env:
+          NODE_PATH: ${{ runner.temp }}/browser/node_modules
+        run: node tools/end-pit-browser-check.cjs "" "$RUNNER_TEMP/simple-ui"
+      - name: Real search Worker, both sides, cancellation, fallback and mobile widths
+        env:
+          NODE_PATH: ${{ runner.temp }}/browser/node_modules
+        run: node tools/end-pit-search-browser-check.cjs "$RUNNER_TEMP/search-ui"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v010-search-trial-results
+          path: |
+            ${{ runner.temp }}/search-check.json
+            ${{ runner.temp }}/live-check.json
+            ${{ runner.temp }}/package/
+            ${{ runner.temp }}/pilot/
+            ${{ runner.temp }}/simple-ui/
+            ${{ runner.temp }}/search-ui/
+          retention-days: 30

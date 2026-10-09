@@ -91,4 +91,8 @@ Bao Nakakamadoでは説明の構成・表現を変更し、NYAKUA、ハンド枯
 
 2026年10月9日、原型Bao la Kiswahiliで正式採用されたtakasiaをBao Nakakamadoの基礎規則として取り込みました。NYAKUA案Aは維持します。現行の`prototype/end-pit-engine.js`・`end-pit-rules.js`・`app.js`、takasia回帰試験、梱包・CIのコード部分はMIT、ルールブック・README・画面説明・`rules.html`・`licenses.html`の説明文はCC BY-SA 4.0です。
 
-現行v0.10.0の配布ZIPには簡易コンピューターだけを含め、旧v0.8.0の探索Worker・学習済みモデルは同梱しません。過去版の原記録・保存版・ライセンス表示は変更せず、現行説明だけをtakasia対応へ更新します。実際のv0.10.0サイト配信日・URLは未記録です。
+takasia初回対応のv0.10.0配布ZIPには簡易コンピューターだけを含め、旧v0.8.0の探索Worker・学習済みモデルは同梱しません。過去版の原記録・保存版・ライセンス表示は変更せず、現行説明だけをtakasia対応へ更新します。実際のv0.10.0サイト配信日・URLは未記録です。
+
+## v0.10.0専用探索の試験実装
+
+2026年10月9日、現行NYAKUA案Aとtakasiaを処理する専用探索・手作り評価器・Worker/client・簡易AI共通入口を追加しました。保存済みv0.8.0探索を介し、元ゲームの固定commit `8c87ed44c9b08f75456766f0a9bd9f76d06209d4` のMITコードを適応し、Copyright (c) 2026 cultivationdata.netを保持します。新規コード・テスト・JSON・梱包・CIはMIT、実装記録・README・画面説明の本文はCC BY-SA 4.0。学習済みモデルを流用せず、試験ZIPには現行Workerと手作り評価器を同梱します。試験AIの公開採用状態はfalseです。

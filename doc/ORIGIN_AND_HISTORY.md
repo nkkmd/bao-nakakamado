@@ -100,3 +100,7 @@ Bao Nakakamadoは伝統ゲーム **Bao la Kiswahiliを出発点にした派生�
 実装は、MTAJIのtakata正常終了後の成立判定、対象穴からのtakata開始禁止、最後のKETEが対象穴へ入った場合のrelay sowing停止、1手での失効・再成立を含みます。原型側のE30固定局面を回帰試験に使い、簡易コンピューターもv0.10.0の合法手・遷移へ追従させました。棋譜はversion 9、rulesVersion `0.10.0`、baseRulesRevision `BAO-RULES-V0.2.0-TAKASIA-001`へ更新しました。探索コンピューターと旧v0.8.0学習済みモデルは現行v0.10.0へ適用しません。
 
 根拠は[実装・検証記録](TAKASIA_V010_IMPLEMENTATION_20261009.md)と[PR #33](https://github.com/nkkmd/bao-nakakamado/pull/33)です。元ルールの参照はBao la Kiswahili日本語完全ガイドv0.2.0と元ゲームの同ルール改訂で、出典・ライセンスは[ライセンスと出典](../LICENSES.md)に記録します。v0.10.0の実際のサイト配信日・URLは未記録です。Bao Nakakamado・NYAKUAの初公開日2026年9月30日は変更しません。
+
+## v0.10.0専用探索AIの開発
+
+2026年10月9日（日本時間）、管理者が簡易コンピューターから探索コンピューターへの切り替え手順を確認し、その手順に従う実装を指示しました。[実装・検証記録](AI_V010_SEARCH_IMPLEMENTATION_20261009.md)に、現行NYAKUA案A・takasiaの探索接続、手作り評価、Worker、棋譜diagnosticと採用前の確認を記録します。実装はAI支援。試験AIは未公開採用で、ルールv0.10.0・棋譜version 9・考案者nkkmd・初公開2026年9月30日を維持します。実機確認・main統合・実際のサイト配信日は未完了です。

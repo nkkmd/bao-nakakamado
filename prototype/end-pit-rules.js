@@ -37,7 +37,7 @@
       return JSON.stringify(a) === JSON.stringify(b) ? [move] : [stop, use];
     });
   }
-  function record(game, {mode = "local"} = {}) {
+  function record(game, {mode = "local", computer = null} = {}) {
     const safety = game.board.reason === "relay-limit";
     const adjudication = safety ? "safety-stop" : game.board.winner === null ? "ongoing" : "normal";
     return E.clone({format: FORMAT, version: VERSION, baseRules: "bao-la-kiswahili-ja",
@@ -47,7 +47,7 @@
       takasia: true,
       nyakuaProtectLast: true, nyakuaFixedPitBulk: false, nyakuaNextTurnThree: false,
       nyakuaReservedProtected: false, nyakuaEndPitAdd: true, mode,
-      ...(mode === "computer" ? {computer: {id: "nyakua-takasia-simple-v2", learnedModel: false}} : {}),
+      ...(mode === "computer" ? {computer: computer || {id: "nyakua-takasia-simple-v2", learnedModel: false}} : {}),
       history: game.history, final: game.board, adjudication,
       outcome: {winner: safety ? null : game.board.winner, adjudication},
     });

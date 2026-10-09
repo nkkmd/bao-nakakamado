@@ -1,0 +1,2397 @@
+{
+  "id": "25-1",
+  "fingerprint": "12720c5fa74e134d2f7751d6ce7a2136c3074d6fe89ca10149b8fbc6f2fe9428",
+  "rootKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[2,1,0,0,10,2,0,1],[0,0,0,0,0,0,0,0]],[[0,2,0,1,9,0,0,1],[0,0,0,0,0,0,0,0]]],[17,18],[0,0],[true,true],1,\"namua\",null,\"\",[0,0],10,null]",
+  "payload": {
+    "budgetMs": 25,
+    "games": [
+      {
+        "searchPlayer": 0,
+        "record": {
+          "format": "bao-nakakamado-prototype",
+          "version": 9,
+          "baseRules": "bao-la-kiswahili-ja",
+          "baseRulesVersion": "0.2.0",
+          "baseRulesRevision": "BAO-RULES-V0.2.0-TAKASIA-001",
+          "variantRule": "takasia-namua-end-pit-two-protect-last-two-row-ring-hand22",
+          "rulesVersion": "0.10.0",
+          "publicAdopted": true,
+          "boardRowsPerPlayer": 2,
+          "sowingPath": "ring",
+          "initialHand": 22,
+          "totalKete": 64,
+          "takasia": true,
+          "nyakuaProtectLast": true,
+          "nyakuaFixedPitBulk": false,
+          "nyakuaNextTurnThree": false,
+          "nyakuaReservedProtected": false,
+          "nyakuaEndPitAdd": true,
+          "mode": "computer",
+          "computer": {
+            "id": "development-v010-pair",
+            "searchPlayer": 0,
+            "budgetMs": 25,
+            "learnedModel": false
+          },
+          "history": [
+            {
+              "player": 0,
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "placed": 1,
+              "captures": 0,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "placed": 1,
+              "captures": 0,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 2,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 2,
+              "stolen": 1,
+              "added": 2,
+              "ownAdded": 1,
+              "opponentAdded": 1,
+              "endpoint": {
+                "player": 0,
+                "row": 0,
+                "index": 4
+              },
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 3,
+              "stolen": 1,
+              "added": 2,
+              "ownAdded": 1,
+              "opponentAdded": 1,
+              "endpoint": {
+                "player": 1,
+                "row": 0,
+                "index": 2
+              },
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 2,
+              "stolen": 1,
+              "added": 2,
+              "ownAdded": 1,
+              "opponentAdded": 1,
+              "endpoint": {
+                "player": 0,
+                "row": 1,
+                "index": 0
+              },
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 2,
+              "stolen": 1,
+              "added": 2,
+              "ownAdded": 1,
+              "opponentAdded": 1,
+              "endpoint": {
+                "player": 1,
+                "row": 0,
+                "index": 0
+              },
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 2,
+              "stolen": 1,
+              "added": 2,
+              "ownAdded": 1,
+              "opponentAdded": 1,
+              "endpoint": {
+                "player": 0,
+                "row": 0,
+                "index": 5
+              },
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 2,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 3,
+              "stolen": 1,
+              "added": 2,
+              "ownAdded": 1,
+              "opponentAdded": 1,
+              "endpoint": {
+                "player": 1,
+                "row": 1,
+                "index": 3
+              },
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 5,
+              "stolen": 1,
+              "added": 2,
+              "ownAdded": 1,
+              "opponentAdded": 1,
+              "endpoint": {
+                "player": 1,
+                "row": 0,
+                "index": 7
+              },
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 3,
+              "stolen": 1,
+              "added": 2,
+              "ownAdded": 1,
+              "opponentAdded": 1,
+              "endpoint": {
+                "player": 1,
+                "row": 1,
+                "index": 3
+              },
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 2,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 3,
+              "stolen": 1,
+              "added": 2,
+              "ownAdded": 1,
+              "opponentAdded": 1,
+              "endpoint": {
+                "player": 0,
+                "row": 0,
+                "index": 6
+              },
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 2,
+              "stolen": 1,
+              "added": 2,
+              "ownAdded": 1,
+              "opponentAdded": 1,
+              "endpoint": {
+                "player": 0,
+                "row": 1,
+                "index": 5
+              },
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "row": 1,
+                "index": 6,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "placed": 0,
+              "captures": 2,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "row": 1,
+                "index": 6,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "placed": 0,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "placed": 0,
+              "captures": 4,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "row": 1,
+                "index": 0,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "placed": 0,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "placed": 0,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "placed": 0,
+              "captures": 4,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "row": 1,
+                "index": 2,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "placed": 0,
+              "captures": 7,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            }
+          ],
+          "final": {
+            "pits": [
+              [
+                [
+                  7,
+                  1,
+                  0,
+                  3,
+                  5,
+                  2,
+                  0,
+                  1
+                ],
+                [
+                  2,
+                  1,
+                  0,
+                  4,
+                  8,
+                  2,
+                  5,
+                  7
+                ]
+              ],
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  3,
+                  4,
+                  0,
+                  3,
+                  1,
+                  0
+                ]
+              ]
+            ],
+            "reserve": [
+              0,
+              0
+            ],
+            "nyakuaReserve": [
+              0,
+              0
+            ],
+            "houseOwned": [
+              false,
+              false
+            ],
+            "player": 0,
+            "phase": "mtaji",
+            "winner": 0,
+            "reason": "front-empty",
+            "turn": 31,
+            "pending": [
+              4,
+              0
+            ],
+            "takasia": null
+          },
+          "adjudication": "normal",
+          "outcome": {
+            "winner": 0,
+            "adjudication": "normal"
+          }
+        },
+        "turns": [
+          {
+            "ply": 10,
+            "player": 1,
+            "search": false,
+            "elapsedMs": 0.06234200000005785,
+            "stats": null
+          },
+          {
+            "ply": 11,
+            "player": 0,
+            "search": true,
+            "elapsedMs": 25.084159,
+            "stats": {
+              "searchId": "NAKAKAMADO-SEARCH-V010-v1",
+              "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+              "nodes": 161,
+              "quiescenceNodes": 113,
+              "cutoffs": 28,
+              "cacheHits": 1,
+              "cacheStores": 10,
+              "evaluationRequests": 79,
+              "evaluations": 65,
+              "evaluationCacheHits": 13,
+              "evaluationCacheEvictions": 0,
+              "cachePeak": 8,
+              "evaluationCachePeak": 65,
+              "pvsResearches": 2,
+              "aspirationResearches": 0,
+              "historyUpdates": 0,
+              "safetyStops": 0,
+              "completedDepth": 2,
+              "rootScore": 76,
+              "timedOut": true,
+              "elapsedMs": 25.074095000000057,
+              "allocatedTimeMs": 25
+            }
+          },
+          {
+            "ply": 12,
+            "player": 1,
+            "search": false,
+            "elapsedMs": 0.10033899999996265,
+            "stats": null
+          },
+          {
+            "ply": 13,
+            "player": 0,
+            "search": true,
+            "elapsedMs": 25.529809999999998,
+            "stats": {
+              "searchId": "NAKAKAMADO-SEARCH-V010-v1",
+              "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+              "nodes": 145,
+              "quiescenceNodes": 113,
+              "cutoffs": 14,
+              "cacheHits": 0,
+              "cacheStores": 7,
+              "evaluationRequests": 91,
+              "evaluations": 77,
+              "evaluationCacheHits": 13,
+              "evaluationCacheEvictions": 0,
+              "cachePeak": 6,
+              "evaluationCachePeak": 77,
+              "pvsResearches": 2,
+              "aspirationResearches": 0,
+              "historyUpdates": 0,
+              "safetyStops": 0,
+              "completedDepth": 2,
+              "rootScore": 180,
+              "timedOut": true,
+              "elapsedMs": 25.518854000000033,
+              "allocatedTimeMs": 25
+            }
+          },
+          {
+            "ply": 14,
+            "player": 1,
+            "search": false,
+            "elapsedMs": 0.21321599999998853,
+            "stats": null
+          },
+          {
+            "ply": 15,
+            "player": 0,
+            "search": true,
+            "elapsedMs": 25.050484000000097,
+            "stats": {
+              "searchId": "NAKAKAMADO-SEARCH-V010-v1",
+              "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+              "nodes": 181,
+              "quiescenceNodes": 136,
+              "cutoffs": 27,
+              "cacheHits": 1,
+              "cacheStores": 6,
+              "evaluationRequests": 99,
+              "evaluations": 77,
+              "evaluationCacheHits": 21,
+              "evaluationCacheEvictions": 0,
+              "cachePeak": 5,
+              "evaluationCachePeak": 77,
+              "pvsResearches": 4,
+              "aspirationResearches": 0,
+              "historyUpdates": 0,
+              "safetyStops": 0,
+              "completedDepth": 1,
+              "rootScore": -339,
+              "timedOut": true,
+              "elapsedMs": 25.034029000000032,
+              "allocatedTimeMs": 25
+            }
+          },
+          {
+            "ply": 16,
+            "player": 1,
+            "search": false,
+            "elapsedMs": 0.11339799999996103,
+            "stats": null
+          },
+          {
+            "ply": 17,
+            "player": 0,
+            "search": true,
+            "elapsedMs": 25.116246000000046,
+            "stats": {
+              "searchId": "NAKAKAMADO-SEARCH-V010-v1",
+              "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+              "nodes": 152,
+              "quiescenceNodes": 110,
+              "cutoffs": 25,
+              "cacheHits": 0,
+              "cacheStores": 8,
+              "evaluationRequests": 78,
+              "evaluations": 70,
+              "evaluationCacheHits": 7,
+              "evaluationCacheEvictions": 0,
+              "cachePeak": 7,
+              "evaluationCachePeak": 70,
+              "pvsResearches": 1,
+              "aspirationResearches": 0,
+              "historyUpdates": 0,
+              "safetyStops": 0,
+              "completedDepth": 2,
+              "rootScore": 152,
+              "timedOut": true,
+              "elapsedMs": 25.10686199999998,
+              "allocatedTimeMs": 25
+            }
+          },
+          {
+            "ply": 18,
+            "player": 1,
+            "search": false,
+            "elapsedMs": 0.21927499999992506,
+            "stats": null
+          },
+          {
+            "ply": 19,
+            "player": 0,
+            "search": true,
+            "elapsedMs": 25.08855600000004,
+            "stats": {
+              "searchId": "NAKAKAMADO-SEARCH-V010-v1",
+              "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+              "nodes": 216,
+              "quiescenceNodes": 155,
+              "cutoffs": 36,
+              "cacheHits": 1,
+              "cacheStores": 15,
+              "evaluationRequests": 111,
+              "evaluations": 86,
+              "evaluationCacheHits": 24,
+              "evaluationCacheEvictions": 0,
+              "cachePeak": 12,
+              "evaluationCachePeak": 86,
+              "pvsResearches": 2,
+              "aspirationResearches": 0,
+              "historyUpdates": 0,
+              "safetyStops": 0,
+              "completedDepth": 2,
+              "rootScore": 378,
+              "timedOut": true,
+              "elapsedMs": 25.078611000000024,
+              "allocatedTimeMs": 25
+            }
+          },
+          {
+            "ply": 20,
+            "player": 1,
+            "search": false,
+            "elapsedMs": 0.14286199999992277,
+            "stats": null
+          },
+          {
+            "ply": 21,
+            "player": 0,
+            "search": true,
+            "elapsedMs": 25.040358999999967,
+            "stats": {
+              "searchId": "NAKAKAMADO-SEARCH-V010-v1",
+              "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+              "nodes": 136,
+              "quiescenceNodes": 100,
+              "cutoffs": 16,
+              "cacheHits": 1,
+              "cacheStores": 8,
+              "evaluationRequests": 74,
+              "evaluations": 60,
+              "evaluationCacheHits": 13,
+              "evaluationCacheEvictions": 0,
+              "cachePeak": 6,
+              "evaluationCachePeak": 60,
+              "pvsResearches": 3,
+              "aspirationResearches": 0,
+              "historyUpdates": 0,
+              "safetyStops": 0,
+              "completedDepth": 2,
+              "rootScore": 345,
+              "timedOut": true,
+              "elapsedMs": 25.0296229999999,
+              "allocatedTimeMs": 25
+            }
+          },
+          {
+            "ply": 22,
+            "player": 1,
+            "search": false,
+            "elapsedMs": 0.058857000000102744,
+            "stats": null
+          },
+          {
+            "ply": 23,
+            "player": 0,
+            "search": true,
+            "elapsedMs": 25.050970000000007,
+            "stats": {
+              "searchId": "NAKAKAMADO-SEARCH-V010-v1",
+              "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+              "nodes": 226,
+              "quiescenceNodes": 167,
+              "cutoffs": 28,
+              "cacheHits": 1,
+              "cacheStores": 17,
+              "evaluationRequests": 126,
+              "evaluations": 114,
+              "evaluationCacheHits": 11,
+              "evaluationCacheEvictions": 0,
+              "cachePeak": 14,
+              "evaluationCachePeak": 114,
+              "pvsResearches": 4,
+              "aspirationResearches": 0,
+              "historyUpdates": 0,
+              "safetyStops": 0,
+              "completedDepth": 2,
+              "rootScore": 222,
+              "timedOut": true,
+              "elapsedMs": 25.039461999999958,
+              "allocatedTimeMs": 25
+            }
+          },
+          {
+            "ply": 24,
+            "player": 1,
+            "search": false,
+            "elapsedMs": 0.08075900000005731,
+            "stats": null
+          },
+          {
+            "ply": 25,
+            "player": 0,
+            "search": true,
+            "elapsedMs": 25.049156999999923,
+            "stats": {
+              "searchId": "NAKAKAMADO-SEARCH-V010-v1",
+              "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+              "nodes": 331,
+              "quiescenceNodes": 185,
+              "cutoffs": 77,
+              "cacheHits": 4,
+              "cacheStores": 60,
+              "evaluationRequests": 136,
+              "evaluations": 109,
+              "evaluationCacheHits": 26,
+              "evaluationCacheEvictions": 0,
+              "cachePeak": 30,
+              "evaluationCachePeak": 109,
+              "pvsResearches": 5,
+              "aspirationResearches": 0,
+              "historyUpdates": 0,
+              "safetyStops": 0,
+              "completedDepth": 5,
+              "rootScore": 144,
+              "timedOut": true,
+              "elapsedMs": 25.037879999999973,
+              "allocatedTimeMs": 25
+            }
+          },
+          {
+            "ply": 26,
+            "player": 1,
+            "search": false,
+            "elapsedMs": 0.02141200000005483,
+            "stats": null
+          },
+          {
+            "ply": 27,
+            "player": 0,
+            "search": true,
+            "elapsedMs": 25.053393999999912,
+            "stats": {
+              "searchId": "NAKAKAMADO-SEARCH-V010-v1",
+              "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+              "nodes": 326,
+              "quiescenceNodes": 193,
+              "cutoffs": 74,
+              "cacheHits": 4,
+              "cacheStores": 49,
+              "evaluationRequests": 153,
+              "evaluations": 111,
+              "evaluationCacheHits": 41,
+              "evaluationCacheEvictions": 0,
+              "cachePeak": 30,
+              "evaluationCachePeak": 111,
+              "pvsResearches": 6,
+              "aspirationResearches": 0,
+              "historyUpdates": 0,
+              "safetyStops": 0,
+              "completedDepth": 3,
+              "rootScore": 144,
+              "timedOut": true,
+              "elapsedMs": 25.037830999999983,
+              "allocatedTimeMs": 25
+            }
+          },
+          {
+            "ply": 28,
+            "player": 1,
+            "search": false,
+            "elapsedMs": 0.05615299999999479,
+            "stats": null
+          },
+          {
+            "ply": 29,
+            "player": 0,
+            "search": true,
+            "elapsedMs": 25.053493000000003,
+            "stats": {
+              "searchId": "NAKAKAMADO-SEARCH-V010-v1",
+              "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+              "nodes": 417,
+              "quiescenceNodes": 277,
+              "cutoffs": 68,
+              "cacheHits": 9,
+              "cacheStores": 44,
+              "evaluationRequests": 228,
+              "evaluations": 162,
+              "evaluationCacheHits": 65,
+              "evaluationCacheEvictions": 0,
+              "cachePeak": 29,
+              "evaluationCachePeak": 162,
+              "pvsResearches": 7,
+              "aspirationResearches": 0,
+              "historyUpdates": 0,
+              "safetyStops": 0,
+              "completedDepth": 3,
+              "rootScore": 755,
+              "timedOut": true,
+              "elapsedMs": 25.04123500000003,
+              "allocatedTimeMs": 25
+            }
+          },
+          {
+            "ply": 30,
+            "player": 1,
+            "search": false,
+            "elapsedMs": 0.07950800000003255,
+            "stats": null
+          },
+          {
+            "ply": 31,
+            "player": 0,
+            "search": true,
+            "elapsedMs": 25.060194000000024,
+            "stats": {
+              "searchId": "NAKAKAMADO-SEARCH-V010-v1",
+              "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+              "nodes": 343,
+              "quiescenceNodes": 199,
+              "cutoffs": 88,
+              "cacheHits": 0,
+              "cacheStores": 56,
+              "evaluationRequests": 125,
+              "evaluations": 118,
+              "evaluationCacheHits": 6,
+              "evaluationCacheEvictions": 0,
+              "cachePeak": 32,
+              "evaluationCachePeak": 118,
+              "pvsResearches": 0,
+              "aspirationResearches": 0,
+              "historyUpdates": 0,
+              "safetyStops": 0,
+              "completedDepth": 4,
+              "rootScore": 999999,
+              "timedOut": true,
+              "elapsedMs": 25.042656999999963,
+              "allocatedTimeMs": 25
+            }
+          }
+        ],
+        "outcome": "normal-terminal"
+      },
+      {
+        "searchPlayer": 1,
+        "record": {
+          "format": "bao-nakakamado-prototype",
+          "version": 9,
+          "baseRules": "bao-la-kiswahili-ja",
+          "baseRulesVersion": "0.2.0",
+          "baseRulesRevision": "BAO-RULES-V0.2.0-TAKASIA-001",
+          "variantRule": "takasia-namua-end-pit-two-protect-last-two-row-ring-hand22",
+          "rulesVersion": "0.10.0",
+          "publicAdopted": true,
+          "boardRowsPerPlayer": 2,
+          "sowingPath": "ring",
+          "initialHand": 22,
+          "totalKete": 64,
+          "takasia": true,
+          "nyakuaProtectLast": true,
+          "nyakuaFixedPitBulk": false,
+          "nyakuaNextTurnThree": false,
+          "nyakuaReservedProtected": false,
+          "nyakuaEndPitAdd": true,
+          "mode": "computer",
+          "computer": {
+            "id": "development-v010-pair",
+            "searchPlayer": 1,
+            "budgetMs": 25,
+            "learnedModel": false
+          },
+          "history": [
+            {
+              "player": 0,
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left"
+              },
+              "placed": 1,
+              "captures": 0,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "takata",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left"
+              },
+              "placed": 1,
+              "captures": 0,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 1,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "stop"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 2,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 3,
+              "stolen": 1,
+              "added": 2,
+              "ownAdded": 1,
+              "opponentAdded": 1,
+              "endpoint": {
+                "player": 0,
+                "row": 0,
+                "index": 0
+              },
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 3,
+              "stolen": 1,
+              "added": 2,
+              "ownAdded": 1,
+              "opponentAdded": 1,
+              "endpoint": {
+                "player": 1,
+                "row": 0,
+                "index": 0
+              },
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 2,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 2,
+              "stolen": 1,
+              "added": 2,
+              "ownAdded": 1,
+              "opponentAdded": 1,
+              "endpoint": {
+                "player": 1,
+                "row": 0,
+                "index": 0
+              },
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left",
+                "houseChoice": "use"
+              },
+              "placed": 1,
+              "captures": 2,
+              "stolen": 1,
+              "added": 2,
+              "ownAdded": 1,
+              "opponentAdded": 1,
+              "endpoint": {
+                "player": 1,
+                "row": 0,
+                "index": 4
+              },
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 4,
+              "stolen": 1,
+              "added": 2,
+              "ownAdded": 1,
+              "opponentAdded": 1,
+              "endpoint": {
+                "player": 0,
+                "row": 1,
+                "index": 5
+              },
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 2,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 2,
+              "stolen": 1,
+              "added": 2,
+              "ownAdded": 1,
+              "opponentAdded": 1,
+              "endpoint": {
+                "player": 1,
+                "row": 0,
+                "index": 4
+              },
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 7,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 2,
+              "stolen": 1,
+              "added": 2,
+              "ownAdded": 1,
+              "opponentAdded": 1,
+              "endpoint": {
+                "player": 0,
+                "row": 0,
+                "index": 0
+              },
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 6,
+              "stolen": 1,
+              "added": 2,
+              "ownAdded": 1,
+              "opponentAdded": 1,
+              "endpoint": {
+                "player": 1,
+                "row": 0,
+                "index": 4
+              },
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 5,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 7,
+              "stolen": 1,
+              "added": 2,
+              "ownAdded": 1,
+              "opponentAdded": 1,
+              "endpoint": {
+                "player": 1,
+                "row": 0,
+                "index": 5
+              },
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 3,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 3,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 6,
+                "direction": "left",
+                "side": "right"
+              },
+              "placed": 1,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "type": "capture",
+                "phase": "namua",
+                "row": 0,
+                "index": 4,
+                "direction": "right",
+                "side": "left"
+              },
+              "placed": 1,
+              "captures": 3,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "row": 0,
+                "index": 0,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "placed": 0,
+              "captures": 1,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "row": 1,
+                "index": 0,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "placed": 0,
+              "captures": 6,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "row": 0,
+                "index": 2,
+                "direction": "left",
+                "type": "takata",
+                "phase": "mtaji"
+              },
+              "placed": 0,
+              "captures": 0,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "row": 1,
+                "index": 3,
+                "direction": "left",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "placed": 0,
+              "captures": 2,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 0,
+              "move": {
+                "row": 1,
+                "index": 3,
+                "direction": "left",
+                "type": "takata",
+                "phase": "mtaji"
+              },
+              "placed": 0,
+              "captures": 0,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            },
+            {
+              "player": 1,
+              "move": {
+                "row": 0,
+                "index": 6,
+                "direction": "right",
+                "type": "capture",
+                "phase": "mtaji"
+              },
+              "placed": 0,
+              "captures": 3,
+              "stolen": 0,
+              "added": 0,
+              "ownAdded": 0,
+              "opponentAdded": 0,
+              "endpoint": null,
+              "takasiaBefore": null,
+              "takasiaAfter": null
+            }
+          ],
+          "final": {
+            "pits": [
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  2,
+                  0,
+                  0,
+                  1,
+                  0,
+                  1,
+                  3
+                ]
+              ],
+              [
+                [
+                  7,
+                  3,
+                  9,
+                  1,
+                  5,
+                  5,
+                  0,
+                  2
+                ],
+                [
+                  2,
+                  5,
+                  4,
+                  2,
+                  1,
+                  4,
+                  1,
+                  5
+                ]
+              ]
+            ],
+            "reserve": [
+              0,
+              0
+            ],
+            "nyakuaReserve": [
+              0,
+              0
+            ],
+            "houseOwned": [
+              false,
+              false
+            ],
+            "player": 1,
+            "phase": "mtaji",
+            "winner": 1,
+            "reason": "front-empty",
+            "turn": 32,
+            "pending": [
+              0,
+              1
+            ],
+            "takasia": null
+          },
+          "adjudication": "normal",
+          "outcome": {
+            "winner": 1,
+            "adjudication": "normal"
+          }
+        },
+        "turns": [
+          {
+            "ply": 10,
+            "player": 1,
+            "search": true,
+            "elapsedMs": 25.099913000000015,
+            "stats": {
+              "searchId": "NAKAKAMADO-SEARCH-V010-v1",
+              "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+              "nodes": 238,
+              "quiescenceNodes": 160,
+              "cutoffs": 45,
+              "cacheHits": 7,
+              "cacheStores": 20,
+              "evaluationRequests": 109,
+              "evaluations": 86,
+              "evaluationCacheHits": 23,
+              "evaluationCacheEvictions": 0,
+              "cachePeak": 14,
+              "evaluationCachePeak": 86,
+              "pvsResearches": 5,
+              "aspirationResearches": 0,
+              "historyUpdates": 0,
+              "safetyStops": 0,
+              "completedDepth": 2,
+              "rootScore": 254,
+              "timedOut": true,
+              "elapsedMs": 25.053714000000014,
+              "allocatedTimeMs": 25
+            }
+          },
+          {
+            "ply": 11,
+            "player": 0,
+            "search": false,
+            "elapsedMs": 0.1801070000000209,
+            "stats": null
+          },
+          {
+            "ply": 12,
+            "player": 1,
+            "search": true,
+            "elapsedMs": 25.04504200000008,
+            "stats": {
+              "searchId": "NAKAKAMADO-SEARCH-V010-v1",
+              "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+              "nodes": 150,
+              "quiescenceNodes": 113,
+              "cutoffs": 19,
+              "cacheHits": 0,
+              "cacheStores": 9,
+              "evaluationRequests": 88,
+              "evaluations": 80,
+              "evaluationCacheHits": 7,
+              "evaluationCacheEvictions": 0,
+              "cachePeak": 8,
+              "evaluationCachePeak": 80,
+              "pvsResearches": 1,
+              "aspirationResearches": 0,
+              "historyUpdates": 0,
+              "safetyStops": 0,
+              "completedDepth": 2,
+              "rootScore": 327,
+              "timedOut": true,
+              "elapsedMs": 25.031720999999948,
+              "allocatedTimeMs": 25
+            }
+          },
+          {
+            "ply": 13,
+            "player": 0,
+            "search": false,
+            "elapsedMs": 0.09925799999996343,
+            "stats": null
+          },
+          {
+            "ply": 14,
+            "player": 1,
+            "search": true,
+            "elapsedMs": 25.048306000000025,
+            "stats": {
+              "searchId": "NAKAKAMADO-SEARCH-V010-v1",
+              "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+              "nodes": 154,
+              "quiescenceNodes": 116,
+              "cutoffs": 23,
+              "cacheHits": 2,
+              "cacheStores": 5,
+              "evaluationRequests": 85,
+              "evaluations": 71,
+              "evaluationCacheHits": 13,
+              "evaluationCacheEvictions": 0,
+              "cachePeak": 4,
+              "evaluationCachePeak": 71,
+              "pvsResearches": 4,
+              "aspirationResearches": 0,
+              "historyUpdates": 0,
+              "safetyStops": 0,
+              "completedDepth": 1,
+              "rootScore": -66,
+              "timedOut": true,
+              "elapsedMs": 25.03461500000003,
+              "allocatedTimeMs": 25
+            }
+          },
+          {
+            "ply": 15,
+            "player": 0,
+            "search": false,
+            "elapsedMs": 0.03487200000006396,
+            "stats": null
+          },
+          {
+            "ply": 16,
+            "player": 1,
+            "search": true,
+            "elapsedMs": 25.04206700000009,
+            "stats": {
+              "searchId": "NAKAKAMADO-SEARCH-V010-v1",
+              "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+              "nodes": 165,
+              "quiescenceNodes": 123,
+              "cutoffs": 23,
+              "cacheHits": 0,
+              "cacheStores": 10,
+              "evaluationRequests": 93,
+              "evaluations": 86,
+              "evaluationCacheHits": 6,
+              "evaluationCacheEvictions": 0,
+              "cachePeak": 9,
+              "evaluationCachePeak": 86,
+              "pvsResearches": 1,
+              "aspirationResearches": 0,
+              "historyUpdates": 0,
+              "safetyStops": 0,
+              "completedDepth": 2,
+              "rootScore": 292,
+              "timedOut": true,
+              "elapsedMs": 25.029578000000015,
+              "allocatedTimeMs": 25
+            }
+          },
+          {
+            "ply": 17,
+            "player": 0,
+            "search": false,
+            "elapsedMs": 0.10900100000003476,
+            "stats": null
+          },
+          {
+            "ply": 18,
+            "player": 1,
+            "search": true,
+            "elapsedMs": 25.458263000000102,
+            "stats": {
+              "searchId": "NAKAKAMADO-SEARCH-V010-v1",
+              "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+              "nodes": 225,
+              "quiescenceNodes": 168,
+              "cutoffs": 29,
+              "cacheHits": 2,
+              "cacheStores": 11,
+              "evaluationRequests": 125,
+              "evaluations": 85,
+              "evaluationCacheHits": 40,
+              "evaluationCacheEvictions": 0,
+              "cachePeak": 8,
+              "evaluationCachePeak": 85,
+              "pvsResearches": 6,
+              "aspirationResearches": 0,
+              "historyUpdates": 0,
+              "safetyStops": 0,
+              "completedDepth": 2,
+              "rootScore": 606,
+              "timedOut": true,
+              "elapsedMs": 25.445865000000026,
+              "allocatedTimeMs": 25
+            }
+          },
+          {
+            "ply": 19,
+            "player": 0,
+            "search": false,
+            "elapsedMs": 0.06482600000003913,
+            "stats": null
+          },
+          {
+            "ply": 20,
+            "player": 1,
+            "search": true,
+            "elapsedMs": 25.21182799999997,
+            "stats": {
+              "searchId": "NAKAKAMADO-SEARCH-V010-v1",
+              "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+              "nodes": 131,
+              "quiescenceNodes": 103,
+              "cutoffs": 11,
+              "cacheHits": 0,
+              "cacheStores": 6,
+              "evaluationRequests": 83,
+              "evaluations": 58,
+              "evaluationCacheHits": 24,
+              "evaluationCacheEvictions": 0,
+              "cachePeak": 6,
+              "evaluationCachePeak": 58,
+              "pvsResearches": 3,
+              "aspirationResearches": 0,
+              "historyUpdates": 0,
+              "safetyStops": 0,
+              "completedDepth": 1,
+              "rootScore": 46,
+              "timedOut": true,
+              "elapsedMs": 25.199128999999857,
+              "allocatedTimeMs": 25
+            }
+          },
+          {
+            "ply": 21,
+            "player": 0,
+            "search": false,
+            "elapsedMs": 0.13616199999978562,
+            "stats": null
+          },
+          {
+            "ply": 22,
+            "player": 1,
+            "search": true,
+            "elapsedMs": 25.078580999999986,
+            "stats": {
+              "searchId": "NAKAKAMADO-SEARCH-V010-v1",
+              "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+              "nodes": 108,
+              "quiescenceNodes": 82,
+              "cutoffs": 16,
+              "cacheHits": 0,
+              "cacheStores": 5,
+              "evaluationRequests": 63,
+              "evaluations": 56,
+              "evaluationCacheHits": 6,
+              "evaluationCacheEvictions": 0,
+              "cachePeak": 5,
+              "evaluationCachePeak": 56,
+              "pvsResearches": 0,
+              "aspirationResearches": 0,
+              "historyUpdates": 0,
+              "safetyStops": 0,
+              "completedDepth": 1,
+              "rootScore": 60,
+              "timedOut": true,
+              "elapsedMs": 25.064329000000043,
+              "allocatedTimeMs": 25
+            }
+          },
+          {
+            "ply": 23,
+            "player": 0,
+            "search": false,
+            "elapsedMs": 0.051397000000179105,
+            "stats": null
+          },
+          {
+            "ply": 24,
+            "player": 1,
+            "search": true,
+            "elapsedMs": 25.04410000000007,
+            "stats": {
+              "searchId": "NAKAKAMADO-SEARCH-V010-v1",
+              "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+              "nodes": 217,
+              "quiescenceNodes": 165,
+              "cutoffs": 28,
+              "cacheHits": 1,
+              "cacheStores": 10,
+              "evaluationRequests": 125,
+              "evaluations": 90,
+              "evaluationCacheHits": 34,
+              "evaluationCacheEvictions": 0,
+              "cachePeak": 9,
+              "evaluationCachePeak": 90,
+              "pvsResearches": 5,
+              "aspirationResearches": 0,
+              "historyUpdates": 0,
+              "safetyStops": 0,
+              "completedDepth": 1,
+              "rootScore": 218,
+              "timedOut": true,
+              "elapsedMs": 25.030970000000025,
+              "allocatedTimeMs": 25
+            }
+          },
+          {
+            "ply": 25,
+            "player": 0,
+            "search": false,
+            "elapsedMs": 0.09320800000000418,
+            "stats": null
+          },
+          {
+            "ply": 26,
+            "player": 1,
+            "search": true,
+            "elapsedMs": 25.039203000000043,
+            "stats": {
+              "searchId": "NAKAKAMADO-SEARCH-V010-v1",
+              "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+              "nodes": 341,
+              "quiescenceNodes": 195,
+              "cutoffs": 77,
+              "cacheHits": 10,
+              "cacheStores": 45,
+              "evaluationRequests": 196,
+              "evaluations": 128,
+              "evaluationCacheHits": 67,
+              "evaluationCacheEvictions": 0,
+              "cachePeak": 26,
+              "evaluationCachePeak": 128,
+              "pvsResearches": 7,
+              "aspirationResearches": 0,
+              "historyUpdates": 0,
+              "safetyStops": 0,
+              "completedDepth": 3,
+              "rootScore": 849,
+              "timedOut": true,
+              "elapsedMs": 25.027275000000145,
+              "allocatedTimeMs": 25
+            }
+          },
+          {
+            "ply": 27,
+            "player": 0,
+            "search": false,
+            "elapsedMs": 0.021222000000079788,
+            "stats": null
+          },
+          {
+            "ply": 28,
+            "player": 1,
+            "search": true,
+            "elapsedMs": 25.058390000000145,
+            "stats": {
+              "searchId": "NAKAKAMADO-SEARCH-V010-v1",
+              "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+              "nodes": 318,
+              "quiescenceNodes": 187,
+              "cutoffs": 64,
+              "cacheHits": 0,
+              "cacheStores": 62,
+              "evaluationRequests": 227,
+              "evaluations": 182,
+              "evaluationCacheHits": 45,
+              "evaluationCacheEvictions": 0,
+              "cachePeak": 37,
+              "evaluationCachePeak": 182,
+              "pvsResearches": 0,
+              "aspirationResearches": 0,
+              "historyUpdates": 0,
+              "safetyStops": 0,
+              "completedDepth": 4,
+              "rootScore": 999995,
+              "timedOut": true,
+              "elapsedMs": 25.045881999999892,
+              "allocatedTimeMs": 25
+            }
+          },
+          {
+            "ply": 29,
+            "player": 0,
+            "search": false,
+            "elapsedMs": 0.04652899999996407,
+            "stats": null
+          },
+          {
+            "ply": 30,
+            "player": 1,
+            "search": true,
+            "elapsedMs": 25.042277000000013,
+            "stats": {
+              "searchId": "NAKAKAMADO-SEARCH-V010-v1",
+              "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+              "nodes": 374,
+              "quiescenceNodes": 184,
+              "cutoffs": 98,
+              "cacheHits": 0,
+              "cacheStores": 74,
+              "evaluationRequests": 221,
+              "evaluations": 128,
+              "evaluationCacheHits": 93,
+              "evaluationCacheEvictions": 0,
+              "cachePeak": 32,
+              "evaluationCachePeak": 128,
+              "pvsResearches": 0,
+              "aspirationResearches": 0,
+              "historyUpdates": 0,
+              "safetyStops": 0,
+              "completedDepth": 5,
+              "rootScore": 999997,
+              "timedOut": true,
+              "elapsedMs": 25.03044,
+              "allocatedTimeMs": 25
+            }
+          },
+          {
+            "ply": 31,
+            "player": 0,
+            "search": false,
+            "elapsedMs": 0.1629720000000816,
+            "stats": null
+          },
+          {
+            "ply": 32,
+            "player": 1,
+            "search": true,
+            "elapsedMs": 25.043388999999934,
+            "stats": {
+              "searchId": "NAKAKAMADO-SEARCH-V010-v1",
+              "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+              "nodes": 325,
+              "quiescenceNodes": 184,
+              "cutoffs": 78,
+              "cacheHits": 0,
+              "cacheStores": 55,
+              "evaluationRequests": 144,
+              "evaluations": 132,
+              "evaluationCacheHits": 11,
+              "evaluationCacheEvictions": 0,
+              "cachePeak": 29,
+              "evaluationCachePeak": 132,
+              "pvsResearches": 0,
+              "aspirationResearches": 0,
+              "historyUpdates": 0,
+              "safetyStops": 0,
+              "completedDepth": 5,
+              "rootScore": 999999,
+              "timedOut": true,
+              "elapsedMs": 25.030590000000075,
+              "allocatedTimeMs": 25
+            }
+          }
+        ],
+        "outcome": "normal-terminal"
+      }
+    ]
+  },
+  "checksum": "15a5973192d4bddd5fa6669a31e06aebea21a4eb4e321b519d3fdea59686ec69"
+}

@@ -2,6 +2,12 @@
 (function () {
   const E = window.BaoEngine;
   const S = window.NakakamadoSteal;
+  const Q = window.NakakamadoEndPitSearchTransition.createForEngine(E);
+  const C = window.NakakamadoEndPitComputerClient;
+  const simpleAI = window.NakakamadoEndPitSimpleAI.createAI(Q);
+  const computerClient = C.createClient(Q);
+  let difficulty = "normal";
+  let diagnostics = [];
   const $ = (id) => document.getElementById(id);
   let game = S.initialGame();
   let started = false;
@@ -41,7 +47,10 @@
     const computer = $("mode").value !== "local";
     $("side").disabled = !computer;
     $("side-field").hidden = !computer;
-    $("opponent-badge").textContent = computer ? "簡易コンピューター" : "2人対戦";
+    const searching = $("mode").value === "search-computer";
+    $("difficulty-field").hidden = !searching;
+    $("difficulty").disabled = !searching;
+    $("opponent-badge").textContent = searching ? "探索コンピューター（試験）" : computer ? "簡易コンピューター" : "2人対戦";
   }
   function focusBoard() {
     const first = Array.from($("board").children).find((pit) => !pit.disabled);
@@ -283,27 +292,7 @@
     }
   }
 
-  function evaluate(board, player) {
-    if (board.reason === "relay-limit") return 0;
-    if (board.winner !== null) return board.winner === player ? 100000 : -100000;
-    const front = (side) => board.pits[side][E.FRONT].reduce((a, b) => a + b, 0);
-    const all = (side) => board.reserve[side] + board.nyakuaReserve[side] + board.pits[side].flat().reduce((a, b) => a + b, 0);
-    const takasia = board.takasia?.player === 1 - player ? 1 : 0;
-    return 2 * (front(player) - front(1 - player)) + all(player) - all(1 - player) + takasia;
-  }
-
-  function chooseComputerMove() {
-    const player = game.board.player;
-    const moves = variants();
-    let best = null;
-    let bestScore = -Infinity;
-    for (const move of moves) {
-      let score = evaluate(S.apply(game, move).board, player);
-      score += move.type === "capture" ? 2 : 0;
-      if (score > bestScore) { bestScore = score; best = move; }
-    }
-    return best;
-  }
+  function chooseComputerMove() { return simpleAI.chooseMove(game.board); }
 
   function scheduleComputer() {
     if (!started || mode === "local" || game.board.winner !== null || game.board.player === human) return;
@@ -314,13 +303,27 @@
       computerTimer = null;
       if (scheduledFor !== generation) return;
       if (!started || mode === "local" || game.board.winner !== null || game.board.player === human) { busy = false; return; }
-      play(chooseComputerMove());
+      const expectedKey = Q.stateKey(game.board);
+      if (mode === "search-computer") {
+        const answer = await computerClient.request(game.board, difficulty);
+        if (!answer || scheduledFor !== generation || !started || mode !== "search-computer"
+          || game.board.player === human || game.board.winner !== null || Q.stateKey(game.board) !== expectedKey) return;
+        const move = variants().find(m => C.moveKey(m) === C.moveKey(answer.move));
+        if (!move) { busy = false; $("status").textContent = "コンピューターの着手を確認できませんでした。新しい対局を開始してください。"; return; }
+        const ply = game.history.length;
+        play(move);
+        if (game.history.length === ply + 1) diagnostics.push({...answer.diagnostic, ply: ply + 1});
+        $("opponent-badge").textContent = answer.diagnostic.fallback
+          ? "探索コンピューター（簡易方式で代替）"
+          : answer.diagnostic.searchFallback ? "探索コンピューター（時間切れ代替）" : "探索コンピューター（試験）";
+      } else play(chooseComputerMove());
     }, 260);
   }
 
   function cancelComputer() {
     if (computerTimer !== null) window.clearTimeout(computerTimer);
     computerTimer = null;
+    computerClient.cancel();
   }
 
   function start() {
@@ -331,6 +334,8 @@
     game = S.initialGame();
     view = game.board;
     mode = $("mode").value;
+    difficulty = $("difficulty").value;
+    diagnostics = [];
     human = Number($("side").value);
     updateSetup();
     started = true;
@@ -358,7 +363,10 @@
   });
   $("download").addEventListener("click", () => {
     if (!started || !game.history.length) return;
-    const record = S.record(game, {mode});
+    const record = S.record(game, {mode: mode === "search-computer" ? "computer" : mode,
+      ...(mode === "search-computer" ? {computer: {id:C.AI_ID, releaseId:C.RELEASE_ID,
+        publicAdopted:C.PUBLIC_ADOPTED, learnedModel:false, evaluatorId:C.EVALUATOR_ID,
+        searchId:C.SEARCH_ID, difficulty, budgetMs:C.BUDGETS[difficulty], diagnostics}} : {})});
     const blob = new Blob([JSON.stringify(record, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");

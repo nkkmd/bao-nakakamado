@@ -11,7 +11,9 @@ ROOT = Path(__file__).resolve().parent.parent
 PUBLIC = ROOT / 'prototype'
 FILES = ['index.html', 'app.js', 'style.css', 'end-pit-engine.js', 'end-pit-rules.js',
          'rules.html', 'RULEBOOK.md', 'README.md', 'licenses.html', 'LICENSE',
-         'LICENSE-CC-BY-SA-4.0.txt', 'ENGINE_LICENSE.txt']
+         'LICENSE-CC-BY-SA-4.0.txt', 'ENGINE_LICENSE.txt', 'end-pit-search-transition.js',
+         'end-pit-simple-ai.js', 'end-pit-computer-client.js', 'end-pit-computer-worker.js',
+         'end-pit-search-ai.js', 'end-pit-search-evaluator.js']
 
 def main():
     out = Path(sys.argv[1] if len(sys.argv) > 1 else '/tmp/bao-v010')
@@ -32,19 +34,25 @@ def main():
                 if not re.match(r'^[a-zA-Z][a-zA-Z0-9+.-]*:', link) and not link.startswith('#'):
                     assert link.split('#')[0] in data, f'Missing packaged Markdown link {name}: {link}'
     html = data['index.html'].decode()
-    assert '試作 v0.10.0' in html and 'search-computer' not in html
+    assert '試作 v0.10.0' in html and 'search-computer' in html
     assert '独自ルールの NYAKUA' in html and 'オリジナルの Bao' in html and 'takasia' in html
-    assert re.findall(r'<script[^>]+src="\./([^"?]+)', html) == ['end-pit-engine.js', 'end-pit-rules.js', 'app.js']
+    assert re.findall(r'<script[^>]+src="\./([^"?]+)', html) == ['end-pit-engine.js', 'end-pit-rules.js', 'end-pit-search-transition.js',
+        'end-pit-simple-ai.js', 'end-pit-computer-client.js', 'app.js']
+    worker = data['end-pit-computer-worker.js'].decode()
+    for script in re.findall(r'\./([^\"\']+\.js)', worker):
+        assert script in data, f'Missing Worker dependency: {script}'
+    assert 'next-turn-engine' not in worker and 'browser-model' not in worker
     engine = data['end-pit-engine.js'].decode()
     rules = data['end-pit-rules.js'].decode()
     assert 'RULES_VERSION: "0.10.0"' in engine and 'BAO-RULES-V0.2.0-TAKASIA-001' in engine
     assert 'const VERSION = 9' in rules and 'takasia: true' in rules
     manifest = {'rulesVersion': '0.10.0', 'recordVersion': 9, 'publicAdopted': True,
                 'baseRulesRevision': 'BAO-RULES-V0.2.0-TAKASIA-001', 'takasia': True,
-                'computer': 'simple', 'preservedPublicCommit': preserved['baseCommit'],
+                'computer': 'search-trial', 'aiPublicAdopted': False, 'learnedModel': False,
+                'aiId': 'NAKAKAMADO-AI-V010-TRIAL-v1', 'preservedPublicCommit': preserved['baseCommit'],
                 'sha256': {name: hashlib.sha256(content).hexdigest() for name, content in data.items()}}
     data['manifest.json'] = (json.dumps(manifest, ensure_ascii=False, indent=2) + '\n').encode()
-    target = out / 'bao-nakakamado-v0.10.0-flat-20261009.zip'
+    target = out / 'bao-nakakamado-v0.10.0-search-trial-flat-20261009.zip'
     with zipfile.ZipFile(target, 'w', zipfile.ZIP_DEFLATED) as archive:
         for name, content in data.items():
             info = zipfile.ZipInfo(name, (2026, 10, 9, 0, 0, 0))
