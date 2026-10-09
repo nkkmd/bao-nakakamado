@@ -1,6 +1,6 @@
 # ライセンスと出典
 
-更新日：2026年10月7日。コードは **MIT**、説明文・図版は **CC BY-SA 4.0** で提供します。同じファイルを利用者が自由に選べる二重ライセンスではなく、以下の対象ごとに適用します。
+更新日：2026年10月9日。コードは **MIT**、説明文・図版は **CC BY-SA 4.0** で提供します。同じファイルを利用者が自由に選べる二重ライセンスではなく、以下の対象ごとに適用します。
 
 ## 適用範囲
 
@@ -22,6 +22,7 @@ CC BY-SA対象の文書は © 2026 nkkmd and Bao Nakakamado contributors。元�
 - 出発点：[bao-la-kiswahili-game](https://github.com/nkkmd/bao-la-kiswahili-game)。元のプログラム・画面のMIT表示は **Copyright (c) 2026 cultivationdata.net**。
 - 取り込んだエンジンと画面の表示を [prototype/ENGINE_LICENSE.txt](prototype/ENGINE_LICENSE.txt) に原文のまま保存しています。`prototype/style.css` の既存クレジットも保持します。
 - このプロジェクトではNYAKUA、投入方法、試作画面、棋譜、調査ツールなどを追加・変更しています。規則変更は[考案・公開・変更履歴](doc/ORIGIN_AND_HISTORY.md)、現行実装は[試作README](prototype/README.md)を参照してください。
+- 2026年10月9日、v0.10.0で原型側に正式採用されたtakasiaを現行エンジンへ追加しました。実装はBao la Kiswahiliの採用ルール改訂 `BAO-RULES-V0.2.0-TAKASIA-001` と日本語完全ガイドv0.2.0を参照し、Bao NakakamadoのNYAKUA案Aと共存するよう状態・合法手・relay sowing停止・棋譜を変更しています。[実装記録](doc/TAKASIA_V010_IMPLEMENTATION_20261009.md)を参照してください。元コードのMIT表示を維持します。
 - 2026年10月4日、開発用の `prototype/search-ai.js` と `prototype/search-evaluator.js` に、元ゲームの固定コミット `8c87ed44c9b08f75456766f0a9bd9f76d06209d4` の `public/ai.js`・`public/ai-weights.js` を適応しました。MIT、Copyright (c) 2026 cultivationdata.net。探索接続、局面識別、時間制限、安全停止、ニャクアの評価特徴・重みを変更しています。[移植記録](doc/AI_SEARCH_IMPLEMENTATION_20261004.md)を参照してください。学習済み論理ゲート型評価器は取り込んでいません。
 - 2026年10月5日、上記の `prototype/search-ai.js` を原本のまま保存し、`prototype/model-search-ai.js` に評価器の接続口・整数値検査・別の識別名を追加しました。探索処理と既存のMIT表示を維持しています。[凍結モデルの探索接続](doc/AI_MODEL_SEARCH_CONNECTION_20261005.md)を参照してください。
 - 同日、`tools/ai-integration/learning-input.cjs`・`learning_input.py` の二値・しきい値入力方式を、同じ固定版の `public/logic-evaluator.js`・`tools/engineering/train-pbai-p6.py` を参考に適応しました。MIT、Copyright (c) 2026 cultivationdata.net。通常ハンドと確保分の区別、投入数、範囲検査、南北正規化、入力幅を本ゲーム用に変更しました。[学習設計](doc/AI_LEARNING_DESIGN_20261004.md)に出典と変更を記録しています。元モデル・学習器のコピーは含みません。
@@ -40,10 +41,11 @@ CC BY-SA対象の文書は © 2026 nkkmd and Bao Nakakamado contributors。元�
 
 基礎ルールの説明は、次のCC BY-SA 4.0の資料を参照・再構成しています。
 
-1. [Bao la Kiswahili 日本語完全ガイド](https://github.com/nkkmd/bao-la-kiswahili-ja/tree/1179267b1f19b27a2138791253f2cb9cbfe98c14)、© 2026 bao-la-kiswahili-ja contributors。[元資料のライセンス](https://github.com/nkkmd/bao-la-kiswahili-ja/blob/1179267b1f19b27a2138791253f2cb9cbfe98c14/LICENSE)。
-2. [元ゲームの図解ルール](https://github.com/nkkmd/bao-la-kiswahili-game/blob/096ee1fbc6f562f7a2959e62ea80b628ea78f7c8/public/rules.html)、© 2026 bao-la-kiswahili-game contributors。確認時点の版を固定して示しています。この説明ページ自体も日本語完全ガイドの説明を要約・英訳・再構成しています。
+1. [Bao la Kiswahili 日本語完全ガイドの固定版](https://github.com/nkkmd/bao-la-kiswahili-ja/tree/1179267b1f19b27a2138791253f2cb9cbfe98c14)、© 2026 bao-la-kiswahili-ja contributors。[元資料のライセンス](https://github.com/nkkmd/bao-la-kiswahili-ja/blob/1179267b1f19b27a2138791253f2cb9cbfe98c14/LICENSE)。v0.9.0までの基礎説明を整えた際の固定参照です。
+2. [元ゲームの図解ルール固定版](https://github.com/nkkmd/bao-la-kiswahili-game/blob/096ee1fbc6f562f7a2959e62ea80b628ea78f7c8/public/rules.html)、© 2026 bao-la-kiswahili-game contributors。確認時点の版を固定して示しています。この説明ページ自体も日本語完全ガイドの説明を要約・英訳・再構成しています。
+3. v0.10.0のtakasia説明は [Bao la Kiswahili 日本語完全ガイド v0.2.0](https://github.com/nkkmd/bao-la-kiswahili-ja/releases/tag/v0.2.0) を追加参照しています。© 2026 bao-la-kiswahili-ja contributors、CC BY-SA 4.0。同リリースはtakasiaの成立条件・例外・停止処理とE30を収録しています。
 
-Bao Nakakamadoでは説明の構成・表現を変更し、NYAKUA、ハンド枯渇時の処理、盤の変更と復元、最後の1個保護、別確保・次手3個投入、操作方法、棋譜、実装上の制約を追加しました。v0.8.0への変更時も過去仕様と区別して説明を整備しました。[ルールブック](doc/RULEBOOK.md)と[変更履歴](doc/ORIGIN_AND_HISTORY.md)に具体的な内容を記録します。
+Bao Nakakamadoでは説明の構成・表現を変更し、NYAKUA、ハンド枯渇時の処理、盤の変更と復元、最後の1個保護、別確保・次手3個投入、操作方法、棋譜、実装上の制約を追加しました。v0.9.0でNYAKUAを着手終了後の終点2個追加へ変更し、v0.10.0で基礎規則としてtakasiaを追加しました。[ルールブック](doc/RULEBOOK.md)と[変更履歴](doc/ORIGIN_AND_HISTORY.md)に具体的な内容を記録します。
 
 以前のルールブックの「出典と再利用」にあったCC BY-SA表示を、2026年10月2日に現行版へ復元しました。今回の整備で、元資料の著作権・ライセンスを置き換えることはありません。
 
@@ -55,7 +57,7 @@ Bao Nakakamadoでは説明の構成・表現を変更し、NYAKUA、ハンド枯
 
 説明文のクレジット例：
 
-> Bao Nakakamado ルールブック v0.9.0 — © 2026 nkkmd and Bao Nakakamado contributors。Bao la Kiswahili 日本語完全ガイド（© 2026 bao-la-kiswahili-ja contributors）と元ゲームの図解ルール（© 2026 bao-la-kiswahili-game contributors）を参照・再構成し、NYAKUAなどを追加。CC BY-SA 4.0。出典と各ライセンスへのリンクは本ページ参照。
+> Bao Nakakamado ルールブック v0.10.0 — © 2026 nkkmd and Bao Nakakamado contributors。Bao la Kiswahili 日本語完全ガイド（© 2026 bao-la-kiswahili-ja contributors）と元ゲームの図解ルール（© 2026 bao-la-kiswahili-game contributors）を参照・再構成し、NYAKUAとtakasia対応などを追加・変更。CC BY-SA 4.0。出典と各ライセンスへのリンクは本ページ参照。
 
 ライセンスは著作権等による保護がある表現に適用します。ゲームのルールというアイデア自体に独占権や考案者表示の義務を新たに作るものではありません。Bao Nakakamado・NYAKUAの名称について、商標登録済みとの表示や、元資料・考案者が第三者の作品を公式に承認したとの表示は行いません。
 
@@ -84,3 +86,9 @@ Bao Nakakamadoでは説明の構成・表現を変更し、NYAKUA、ハンド枯
 2026年10月7日、管理者の正式採用指示に基づき、prototype/end-pit-engine.js・end-pit-rules.js・app.jsに案Aの終点2個追加を採用しました。コード・テスト・梱包・設定はMIT、画面about・rules・rules.html・ライセンスページ・README・ルールブックの説明文はCC BY-SA 4.0。元コード・CSS・元説明文の表示と同梱条文を保持します。「Bao la Kiswahiliをベースに独自ルールNYAKUAを採用したオリジナルのBao」と説明を追加しました。
 
 旧v0.8.0の画面・探索AIを含む29ファイルはtrials/v0.8.0/に原bytesで保存します。旧AIのソース・モデル・採用記録のライセンスは維持し、現行v0.9.0の配布ZIPに旧モデルやWorkerは含めません。案A試験版と研究結果も当時の記録として保存します。上記の試験実装時点の「未採用」「prototypeを変更しない」は、その作業時点の適用範囲で、正式採用後の現在状態は本節を基準とします。
+
+## v0.10.0のtakasia対応
+
+2026年10月9日、原型Bao la Kiswahiliで正式採用されたtakasiaをBao Nakakamadoの基礎規則として取り込みました。NYAKUA案Aは維持します。現行の`prototype/end-pit-engine.js`・`end-pit-rules.js`・`app.js`、takasia回帰試験、梱包・CIのコード部分はMIT、ルールブック・README・画面説明・`rules.html`・`licenses.html`の説明文はCC BY-SA 4.0です。
+
+現行v0.10.0の配布ZIPには簡易コンピューターだけを含め、旧v0.8.0の探索Worker・学習済みモデルは同梱しません。過去版の原記録・保存版・ライセンス表示は変更せず、現行説明だけをtakasia対応へ更新します。実際のv0.10.0サイト配信日・URLは未記録です。
