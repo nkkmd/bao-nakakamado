@@ -4,7 +4,7 @@ on:
     paths:
       - 'prototype/**'
       - 'tools/end-pit-*'
-      - 'tools/package-v090.py'
+      - 'tools/package-v010.py'
       - 'trials/v0.8.0/**'
       - 'tools/four-row-*'
       - 'tools/next-turn-*'
@@ -16,7 +16,7 @@ on:
     paths:
       - 'prototype/**'
       - 'tools/end-pit-*'
-      - 'tools/package-v090.py'
+      - 'tools/package-v010.py'
       - 'trials/v0.8.0/**'
       - 'tools/four-row-*'
       - 'tools/next-turn-*'
@@ -63,11 +63,11 @@ jobs:
         with:
           node-version: '24'
       - name: Rule and DOM tests
-        run: node --test tools/ai-integration/formal-selection-v2.test.cjs tools/ai-integration/formal-collection.test.cjs tools/ai-integration/teacher-feasibility.test.cjs tools/ai-integration/learning-pipeline.test.cjs prototype/search-ai.test.cjs prototype/search-transition.test.cjs prototype/next-turn.test.cjs prototype/four-row.test.cjs prototype/app.test.cjs prototype/bounce.test.cjs prototype/steal.test.js tools/fixed-pit-bulk-study.test.cjs tools/fixed-pit-triggered-study.test.cjs
-      - name: Current v0.9.0 research parity, records and cycles
+        run: node --test prototype/takasia.test.cjs tools/ai-integration/formal-selection-v2.test.cjs tools/ai-integration/formal-collection.test.cjs tools/ai-integration/teacher-feasibility.test.cjs tools/ai-integration/learning-pipeline.test.cjs prototype/search-ai.test.cjs prototype/search-transition.test.cjs prototype/next-turn.test.cjs prototype/four-row.test.cjs prototype/app.test.cjs prototype/bounce.test.cjs prototype/steal.test.js tools/fixed-pit-bulk-study.test.cjs tools/fixed-pit-triggered-study.test.cjs
+      - name: Current v0.10.0 NYAKUA parity, takasia, records and cycles
         run: node tools/end-pit-live-check.cjs "$RUNNER_TEMP/end-pit-live-results.json"
       - name: Current public ZIP and original v0.8.0 preservation
-        run: python3 tools/package-v090.py "$RUNNER_TEMP/bao-v090"
+        run: python3 tools/package-v010.py "$RUNNER_TEMP/bao-v010"
       - name: Learning input, split and checkpoint pilot
         run: node tools/ai-integration/verify-learning-pilot.cjs "$RUNNER_TEMP/learning-pilot"
       - name: Frozen browser model and cancellation protocol
@@ -118,10 +118,10 @@ jobs:
         run: |
           npm install --prefix "$RUNNER_TEMP/bao-browser" --no-audit --no-fund playwright@1.62.1
           node "$RUNNER_TEMP/bao-browser/node_modules/playwright/cli.js" install --with-deps chromium
-      - name: Real browser v0.9.0, descriptions, full games and simple computer
+      - name: Real browser v0.10.0, takasia descriptions and simple computer
         env:
           NODE_PATH: ${{ runner.temp }}/bao-browser/node_modules
-        run: node tools/end-pit-browser-check.cjs "" "$RUNNER_TEMP/bao-v090-ui"
+        run: node tools/end-pit-browser-check.cjs "" "$RUNNER_TEMP/bao-v010-ui"
       - name: Archived v0.8.0 desktop, mobile and full-game replay
         env:
           NODE_PATH: ${{ runner.temp }}/bao-browser/node_modules
@@ -138,8 +138,8 @@ jobs:
           name: next-turn-prototype-verification
           path: |
             ${{ runner.temp }}/end-pit-live-results.json
-            ${{ runner.temp }}/bao-v090/
-            ${{ runner.temp }}/bao-v090-ui/
+            ${{ runner.temp }}/bao-v010/
+            ${{ runner.temp }}/bao-v010-ui/
             ${{ runner.temp }}/next-turn-live-results.json
             ${{ runner.temp }}/transition-verification.json
             ${{ runner.temp }}/search-verification.json
