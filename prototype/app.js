@@ -56,6 +56,9 @@
   function pitName(position) {
     return `${position.player === 0 ? "S" : "N"}${position.row === E.FRONT ? "F" : "B"}${position.index + 1}`;
   }
+  function takasiaName(target) {
+    return target ? pitName({player: target.player, row: E.FRONT, index: target.index}) : "";
+  }
   function activePit() {
     if (!animation || animation.index === 0) return null;
     const event = animation.events[animation.index - 1];
@@ -96,6 +99,8 @@
           pit.classList.add("house-position");
           if (view.houseOwned[player]) pit.classList.add("house");
         }
+        const takasiaTarget = view.takasia?.player === player && row === E.FRONT && view.takasia.index === index;
+        if (takasiaTarget) pit.setAttribute("data-takasia", "true");
         if (active?.player === player && active.row === row && active.index === index) {
           pit.classList.add("active-step");
           if (animation.events[animation.index - 1].kind === "capture") pit.classList.add("capture-step");
@@ -104,7 +109,7 @@
         if (legal) pit.classList.add("legal");
         if (selected?.row === row && selected?.index === index && player === game.board.player) pit.classList.add("selected");
         pit.disabled = !legal;
-        pit.setAttribute("aria-label", `${name(player)} ${row === E.FRONT ? "前列" : "後列"} ${index + 1}番 ${count}個${legal ? " 選択可能" : ""}`);
+        pit.setAttribute("aria-label", `${name(player)} ${row === E.FRONT ? "前列" : "後列"} ${index + 1}番 ${count}個${takasiaTarget ? " TAKASIA対象" : ""}${legal ? " 選択可能" : ""}`);
         const number = document.createElement("span");
         number.className = "count";
         number.textContent = count;
@@ -130,6 +135,12 @@
       case "relay": return `${place} から${event.count}個で連続種まきします。`;
       case "capture": return `${name(animation.mover)} が ${name(event.player)} の ${pitName({ player: event.player, row: E.FRONT, index: event.index })} からKETEを${event.count}個捕獲しました。`;
       case "end-pit-add": return `NYAKUA！ 両者のハンドから1個ずつ取り、蒔き終わりの ${place} に計2個追加しました。`;
+      case "takasia": {
+        const target = takasiaName(event.target);
+        if (event.action === "activate") return `TAKASIAが成立しました。${target} は次の手で開始穴にできず、最後のKETEが入ればそこで停止します。`;
+        if (event.action === "stop") return `TAKASIAにより ${target} で連続種まきを停止しました。`;
+        return `TAKASIAの制約が失効しました。`;
+      }
       case "phase": return "MTAJIに移りました。";
       case "win": return "終局しました。";
       case "limit": return "連続種まきの安全上限に達しました。";
@@ -216,10 +227,15 @@
       : `${name(animation.mover)} の着手を再生しています…`;
     else if (state.reason === "relay-limit") $("status").textContent = "連続種まきの安全上限に達したため対局を停止しました。通常の勝敗は未判定です。";
     else if (state.winner !== null) $("status").textContent = `${name(state.winner)} の勝ち（${state.reason === "front-empty" ? "前列が全空" : "合法手なし"}）。`;
-    else if (busy) $("status").textContent = "コンピューターが考えています…";
-    else if (!humanTurn()) $("status").textContent = `${name(state.player)} の手番です。待機中…`;
+    else if (busy) $("status").textContent = state.takasia
+      ? `コンピューターが考えています… TAKASIA対象は ${takasiaName(state.takasia)} です。`
+      : "コンピューターが考えています…";
+    else if (!humanTurn()) $("status").textContent = state.takasia
+      ? `${name(state.player)} の手番です。TAKASIA対象は ${takasiaName(state.takasia)} です。`
+      : `${name(state.player)} の手番です。待機中…`;
     else if (moves.length === 1 && moves[0].type === "pass") $("status").textContent = `${name(state.player)} のハンドが0です。パスして相手へ手番を渡してください。`;
     else if (selected) $("status").textContent = `${pitName({ player: state.player, ...selected })} を選択しました。方向・入口を選んでください。`;
+    else if (state.takasia) $("status").textContent = `${name(state.player)} の手番。TAKASIA対象 ${takasiaName(state.takasia)} からは開始できません。光る穴を選んでください。`;
     else $("status").textContent = `${name(state.player)} の手番。光る穴を選んでください。`;
     if (!selectable()) return;
     const candidates = selected ? moves.filter((m) => m.row === selected.row && m.index === selected.index) : [];
@@ -233,7 +249,8 @@
       const button = document.createElement("button");
       button.type = "button";
       const preview = S.apply(game, move).history.at(-1);
-      button.textContent = `${moveLabel(move)}${preview.stolen ? `・NYAKUA（${pitName(preview.endpoint)}へ2個追加）` : ""}`;
+      const takasia = preview.takasiaAfter ? `・TAKASIA（${takasiaName(preview.takasiaAfter)}）` : "";
+      button.textContent = `${moveLabel(move)}${preview.stolen ? `・NYAKUA（${pitName(preview.endpoint)}へ2個追加）` : ""}${takasia}`;
       button.addEventListener("click", () => play(move));
       choices.append(button);
     }
@@ -271,7 +288,8 @@
     if (board.winner !== null) return board.winner === player ? 100000 : -100000;
     const front = (side) => board.pits[side][E.FRONT].reduce((a, b) => a + b, 0);
     const all = (side) => board.reserve[side] + board.nyakuaReserve[side] + board.pits[side].flat().reduce((a, b) => a + b, 0);
-    return 2 * (front(player) - front(1 - player)) + all(player) - all(1 - player);
+    const takasia = board.takasia?.player === 1 - player ? 1 : 0;
+    return 2 * (front(player) - front(1 - player)) + all(player) - all(1 - player) + takasia;
   }
 
   function chooseComputerMove() {
@@ -345,7 +363,7 @@
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = "bao-nakakamado-v0.9.0-game.json";
+    link.download = "bao-nakakamado-v0.10.0-game.json";
     link.click();
     window.setTimeout(() => URL.revokeObjectURL(url), 1000);
   });
