@@ -4,7 +4,7 @@
 
 ## 現在状態
 
-現行NYAKUA案Aとtakasiaを先読みする手作り評価付き探索、試験用Worker、取消し・代替・診断付き棋譜を実装した。試験AIの公開採用状態はfalse。正式512局比較、実ブラウザーCI、moto g52j 5Gでの実機確認、公開採用・既定設定変更・main統合・実際のサイト配信は未完了。進捗は本書へ追記する。
+現行NYAKUA案Aとtakasiaを先読みする手作り評価付き探索、試験用Worker、取消し・代替・診断付き棋譜を実装した。[PR #34](https://github.com/nkkmd/bao-nakakamado/pull/34)で実ブラウザーCIと独立した正式512局比較を完了し、固定基準をすべて通過した。試験AIの公開採用状態はfalse。moto g52j 5Gでの現行版の実機確認、公開採用・既定設定変更・main統合・実際のサイト配信は未完了。
 
 v0.8.0の探索・モデル・検証結果とtrials/v0.8.0の29ファイルは変更しない。現行向けの新しいファイルを作り、旧ルール判定・旧確保分の評価・旧学習済みモデルを現行画面から読み込まない。
 
@@ -32,7 +32,7 @@ Workerの起動・通信は探索予算外。5秒watchdog、失敗時の現行�
 
 探索・takasia・client・DOMの21テスト、正式manifest・中断HOLDの2テストが通過。強制勝敗、終局距離、deadline、PVSと小さいキャッシュ、取消し、古い応答、違法返却手、Worker不可、実WorkerスクリプトのVM実行を確認した。旧ルール・旧探索・旧client・旧画面を含む39回帰テストも通過。[既存現行規則の確認](ai-v010-search/live-local.json)は100局・18,582候補遷移・旧周期11件の再生を通過した。
 
-梱包は直下19ファイル、現行Workerの依存を全同梱し、旧v0.8.0原bytes29件と条文一致を確認した。ローカルのChromium取得は不完全なダウンロードで失敗したため、実ブラウザーはGitHub Actionsで検証する。VM/DOM確認を実ブラウザー・実機確認とは読み替えない。
+梱包は直下19ファイル、現行Workerの依存を全同梱し、旧v0.8.0原bytes29件と条文一致を確認した。ローカルのChromium取得は不完全なダウンロードで失敗したため、後述のGitHub Actionsで実ブラウザーを検証した。VM/DOM確認を実ブラウザー・実機確認とは読み替えない。
 
 ## 運用試走
 
@@ -58,10 +58,38 @@ Workerの起動・通信は探索予算外。5秒watchdog、失敗時の現行�
 
 探索と基準重みは保存済みv0.8.0実装を経由し、元ゲーム`8c87ed44c9b08f75456766f0a9bd9f76d06209d4`のMITコードを適応した。Copyright (c) 2026 cultivationdata.net とENGINE_LICENSE.txtを保持する。コード・テスト・JSONはMIT、本文はCC BY-SA 4.0。学習済みモデルや新しい第三者素材は取り込まない。
 
-次はCI・正式512局の全件監査、原成果保存、moto g52j 5G実機確認。合格時に試験表記を外し、AI専用の採用識別子・既定設定・関連文書を更新してmain統合・配布へ進む。ルール版v0.10.0と棋譜version 9をAI変更だけで上げない。
+次はmoto g52j 5Gでの現行版の実機確認。合格時に試験表記を外し、AI専用の採用識別子・既定設定・関連文書を更新してmain統合・配布へ進む。ルール版v0.10.0と棋譜version 9をAI変更だけで上げない。
 
-## ローカル最終確認と送信の保留
+## ローカル最終確認と初回送信の保留（当時の記録）
 
 現行・旧版の関連規則、探索、Worker/client、DOM、収集・入力・再開の既存回帰を合わせた117テストが成功した。相対リンク・diff check・直下19ファイルの梱包と旧v0.8.0原bytes29ファイルの保持も通過した。
 
-GitHubへの初回pushは自動承認審査で拒否された。理由は「実装は許可されているが、作成したコード・文書・試験結果・workflow一式のGitHubへの送信は明示承認されていない」。リモートブランチ検索結果は0件で、ブランチ・PR・Actionsの起動は未実施。別手段で送信せず、変更45ファイルをローカルcommitに保持する。管理者には、nkkmd/bao-nakakamadoのfeat/v010-search-computer-20261009への送信、PR作成、CIおよび固定512局比較の起動を具体的な承認対象として示す。
+GitHubへの初回pushは自動承認審査で拒否された。理由は「実装は許可されているが、作成したコード・文書・試験結果・workflow一式のGitHubへの送信は明示承認されていない」。その時点のリモートブランチ検索結果は0件で、ブランチ・PR・Actionsの起動は未実施だった。変更45ファイルをローカルcommitに保持し、管理者には、nkkmd/bao-nakakamadoのfeat/v010-search-computer-20261009への送信、PR作成、CIおよび固定512局比較の起動を具体的な承認対象として示した。
+
+## 承認後のCI・正式比較・原成果保存
+
+管理者の「承認します。進めてください」を受けて、45ファイルを隔離ブランチへ送信し、PR #34を作成した。検証対象commitは `c5dfe8c0140dd6b2c19b66feca6df3a4c56498b2`、treeは `8a08f74bdc9dfe1b34cab69ffe691c29add23f8e`。GitHubに作成したtreeは、ローカル最終検証時のtreeと一致する。
+
+[CI run原記録](ai-v010-search/ci-runs.json)の全9workflowが成功した。新規探索試験の[PR run 37926354119](https://github.com/nkkmd/bao-nakakamado/actions/runs/37926354119)は、規則・探索・取消し・正式入力のテスト、候補遷移と全探索照合、梱包、24局の運用試走と再開、実ブラウザーの簡易/探索画面を通過した。
+
+[実ブラウザー原結果](ai-v010-search/browser-results.json)では、NAMUAとtakasia有効MTAJIに対する25/75/150msの実HTTP Worker要求6件で完了深度4〜7を確認した。南北を替えたUI対局は14手・35手で通常終局し、25探索着手の深度0・意図しない代替・技術的失敗は0件。取消し後の古い実Worker応答の破棄、意図的なWorker遮断時の簡易方式への代替、320/390/432px表示を確認し、保存した3棋譜を通常ルールで再生した。[従来画面の原結果](ai-v010-search/simple-browser-results.json)も成功した。これらはCIのChromium上の結果で、スマホ実機の結果ではない。
+
+[正式run 37926349468](https://github.com/nkkmd/bao-nakakamado/actions/runs/37926349468)の8shardと集計がすべて成功した。[原集計](ai-v010-search/formal-results.json)は以下のとおり。
+
+| 判定項目 | 結果 | 事前条件 |
+|---|---|---|
+| 独立開幕・対局数 | 256ペア・512局 | 全件完了・監査 |
+| 探索対簡易の勝敗 | 487勝・25敗（95.12%） | ペア効用の片側95%下限 > 50% |
+| 上記下限 | 87.47% | 合格 |
+| 未判定・安全停止 | 0局 | 未判定2%以下 |
+| 探索着手・深度0 | 4,028手・0件 | 深度0比率1%以下 |
+| 探索時間p95 / 最大 | 約150.16 / 151.35ms | 400 / 2,000ms以下 |
+| 技術的失敗 | 0件 | 0件 |
+
+全512棋譜を通常ルールで再生し、checksum・manifest・source fingerprint・shard receiptを再監査した。ローカルでも変更していない正式集計プログラムを使い、Actions原集計との完全一致を確認した。勝敗とHoeffding下限は別途再計算して一致した。評価器・予算・開幕・閾値を結果閲覧後に変更していない。これは固定条件における現行簡易AIとの比較であり、AI-GEN4との同等性、一般局面の棋力、先後均衡の証明とはしない。
+
+[正式原artifact保存ZIP](ai-v010-search/formal-original-artifacts.zip)には、8shardとsummaryの9原ZIPを原bytesで格納した。[ブラウザーCI原artifact](ai-v010-search/browser-ci-original-artifact.zip)は画面結果・棋譜・画像・梱包済み試験ZIPなどを含む。正式manifestは各shard原ZIP内に保存し、8件の同一性を確認した。[artifact metadata](ai-v010-search/formal-artifact-metadata.json)と[再監査receipt・全原ZIPのSHA-256](ai-v010-search/verification-receipt.json)を併記した。Actionsの保存期限後も同じ原成果を監査できる。
+
+実機確認には、CIで検証した直下19ファイルの `bao-nakakamado-v0.10.0-search-trial-flat-20261009.zip` をそのまま使う。SHA-256は `9e6f3434d85725d2178d2117a7950f1ee45857796caf2c7209460856ae7c8f95`。実機では探索モードの25/75/150ms、連続対局、思考中の新規対局、音・スクロール・操作応答を確認する。端末環境でWorkerが使えず「簡易方式で代替」と表示された場合は、その表示と棋譜の診断を区別して記録する。
+
+この原成果保存の追記は文書と証跡だけの変更で、検証した実行コード・配布ZIP・事前条件は変更しない。正式対局を再計測せず、現行版の実機報告を待つ。

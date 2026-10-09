@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "surfaces": [
+    "desktop-http",
+    "mobile-file-320",
+    "mobile-file-390",
+    "mobile-file-432"
+  ],
+  "errors": [],
+  "computerSides": [
+    {
+      "surface": "desktop-http",
+      "humanSide": 0
+    },
+    {
+      "surface": "desktop-http",
+      "humanSide": 1
+    },
+    {
+      "surface": "mobile-file-320",
+      "humanSide": 0
+    },
+    {
+      "surface": "mobile-file-320",
+      "humanSide": 1
+    },
+    {
+      "surface": "mobile-file-390",
+      "humanSide": 0
+    },
+    {
+      "surface": "mobile-file-390",
+      "humanSide": 1
+    },
+    {
+      "surface": "mobile-file-432",
+      "humanSide": 0
+    },
+    {
+      "surface": "mobile-file-432",
+      "humanSide": 1
+    }
+  ],
+  "takasiaChecks": [
+    {
+      "surface": "desktop-http",
+      "target": "NF4",
+      "hasStop": true
+    },
+    {
+      "surface": "mobile-file-320",
+      "target": "NF4",
+      "hasStop": true
+    },
+    {
+      "surface": "mobile-file-390",
+      "target": "NF4",
+      "hasStop": true
+    },
+    {
+      "surface": "mobile-file-432",
+      "target": "NF4",
+      "hasStop": true
+    }
+  ],
+  "records": [
+    {
+      "surface": "desktop-http",
+      "version": 9,
+      "rulesVersion": "0.10.0"
+    },
+    {
+      "surface": "mobile-file-320",
+      "version": 9,
+      "rulesVersion": "0.10.0"
+    },
+    {
+      "surface": "mobile-file-390",
+      "version": 9,
+      "rulesVersion": "0.10.0"
+    },
+    {
+      "surface": "mobile-file-432",
+      "version": 9,
+      "rulesVersion": "0.10.0"
+    }
+  ]
+}

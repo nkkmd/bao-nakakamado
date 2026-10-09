@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "contract": {
+    "id": "NAKAKAMADO-V010-SEARCH-SIMPLE-FORMAL-001",
+    "rulesVersion": "0.10.0",
+    "budgetMs": 150,
+    "maxDepth": 32,
+    "quiescenceDepth": 1,
+    "pairs": 256,
+    "shards": 8,
+    "maxPlies": 200,
+    "seedRange": [
+      2026200000,
+      2026209999
+    ],
+    "openingPolicies": [
+      "random",
+      "noisy-simple"
+    ],
+    "minOpeningPlies": 6,
+    "maxOpeningPlies": 24,
+    "oneSidedAlpha": 0.05,
+    "confidenceMethod": "Hoeffding on independent opening-pair bounded utilities",
+    "minimumConfidenceLower": 0.5,
+    "maximumUnresolvedFraction": 0.02,
+    "maximumDepthZeroFraction": 0.01,
+    "maximumP95Ms": 400,
+    "maximumMoveMs": 2000,
+    "maximumTechnicalFailures": 0,
+    "sourceSha256": {
+      "prototype/end-pit-engine.js": "d57dc799fbe6db61916ba632a6472264bead666f1f9e9b77c3f70fc15d5de21c",
+      "prototype/end-pit-rules.js": "e51aa17641802669cc5986a8891d6db1dce122b70a799afeba992c78736b5e8a",
+      "prototype/end-pit-search-transition.js": "594877db0d07501997cb943d01400281083df44ab0fe0fc456a93c063d24a59e",
+      "prototype/end-pit-search-ai.js": "35c6b5ec555efbd8fb0ca14ab55ad9eb2a75bc60b76573316ef5b94c11a7309e",
+      "prototype/end-pit-search-evaluator.js": "9bd4959c9eebb0a3fd93d3c33e4405b97734142d9fbef036cf63261422df51e3",
+      "prototype/end-pit-simple-ai.js": "a20fb0bb597245dc125595df85f4d25bfe348e1b37a1ea6d9a107d1688e06c7b",
+      "tools/end-pit-search-formal.cjs": "d99a7db982a64ab9d2fa4e90d0f3406b0c9afd564905f6f6ccaa343b2fa6911a"
+    }
+  },
+  "fingerprint": "fcb7f8ebae850ae1b19410cd6111a719dd1e59f1cdca02249e7e9d1cd4066b56",
+  "manifestDigest": "1b1aa8419c25514f5c783bc3d4c7e381e857e790195b579150b7a4ed4a69acbb",
+  "pairs": 256,
+  "games": 512,
+  "wins": 487,
+  "losses": 25,
+  "unresolved": 0,
+  "lowerUtility": 0.951171875,
+  "confidenceLower": 0.8746797865412245,
+  "p95Ms": 150.16328200000135,
+  "maxMs": 151.34898099999555,
+  "searchMoves": 4028,
+  "depthZero": 0,
+  "technicalFailures": 0,
+  "criteria": {
+    "strength": true,
+    "unresolved": true,
+    "depthZero": true,
+    "latency": true,
+    "technicalFailures": true
+  },
+  "publicAdopted": false,
+  "requiresCurrentDeviceCheck": true
+}
