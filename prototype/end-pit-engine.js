@@ -1,8 +1,8 @@
 "use strict";
 
-// Playable v0.9.0, adopting proposal A. Frozen v0.8.0 is retained separately.
-// NYAKUA adds one KETE from each hand to the completed move endpoint.
-// Sowing and capture rules match the historical four-row engine.
+// Playable v0.10.0: NYAKUA proposal A plus the adopted takasia rule.
+// Frozen v0.8.0 and the v0.9.0 adoption record are retained separately.
+// NYAKUA adds one KETE from each hand to a qualifying completed NAMUA move endpoint.
 // MIT; original attribution retained in ENGINE_LICENSE.txt.
 
 (function exposeBaoEngine(root) {
@@ -36,6 +36,7 @@
       reason: "",
       turn: 1,
       pending: [0, 0],
+      takasia: null,
     };
   }
 
@@ -98,14 +99,60 @@
     return state.pits[player][FRONT][index] > 0 && opposite(state, player, index) > 0;
   }
 
-  function wouldCapture(state, player, row, index, direction) {
+  function initialCaptureTarget(state, player, row, index, direction) {
     const seeds = state.pits[player][row][index];
-    if (seeds < 2 || seeds > 15) return false;
+    if (seeds < 2 || seeds > 15) return null;
     let cursor = pit(player, row, index);
     for (let i = 0; i < seeds; i += 1) cursor = nextPit(player, cursor, direction);
     return cursor.row === FRONT
       && state.pits[player][FRONT][cursor.index] > 0
-      && opposite(state, player, cursor.index) > 0;
+      && opposite(state, player, cursor.index) > 0 ? 7 - cursor.index : null;
+  }
+
+  function wouldCapture(state, player, row, index, direction) {
+    return initialCaptureTarget(state, player, row, index, direction) !== null;
+  }
+
+  // Takasia examines only the initial sowing of each possible MTAJI start.
+  // It does not recursively apply moves and therefore cannot mutate the state.
+  function captureTargets(state, player) {
+    const targets = new Set();
+    for (let row = 0; row < 2; row += 1) {
+      for (let index = 0; index < 8; index += 1) {
+        for (const direction of ["left", "right"]) {
+          const target = initialCaptureTarget(state, player, row, index, direction);
+          if (target !== null) targets.add(target);
+        }
+      }
+    }
+    return targets;
+  }
+
+  function detectTakasia(state, attacker, previousMove) {
+    if (state.winner !== null || state.phase !== "mtaji"
+      || previousMove?.phase !== "mtaji" || previousMove.type !== "takata") return null;
+    const defender = 1 - attacker;
+    if (captureTargets(state, defender).size) return null;
+    const targets = captureTargets(state, attacker);
+    if (targets.size !== 1) return null;
+    const index = targets.values().next().value;
+    const front = state.pits[defender][FRONT];
+    if (front[index] <= 1 || front.filter((value) => value > 0).length === 1
+      || front.filter((value) => value >= 2).length === 1
+      || (index === HOUSE && state.houseOwned[defender])) return null;
+    return { player: defender, index };
+  }
+
+  function activeTakasia(state, player) {
+    const target = state.takasia;
+    return state.phase === "mtaji" && target?.player === player
+      && Number.isInteger(target.index) && target.index >= 0 && target.index < 8 ? target : null;
+  }
+
+  function clearTakasia(state, events) {
+    const target = state.takasia;
+    state.takasia = null;
+    if (target) snapshotEvent(events, state, "takasia", { action: "expire", target });
   }
 
   function legalMoves(state) {
@@ -116,8 +163,7 @@
   }
 
   // A nyumba reached during a capturing namua move may either stop the move or
-  // be emptied and continue.  Both choices share the same physical opening
-  // move, so expand them here for UI and AI consumers.
+  // be emptied and continue. Both choices share the same physical opening move.
   function moveVariants(state, moves = legalMoves(state), recording) {
     return moves.flatMap((move) => {
       if (move.phase !== "namua" || move.type !== "capture") return [move];
@@ -168,17 +214,17 @@
     for (let row = 0; row < 2; row += 1) {
       for (let index = 0; index < 8; index += 1) {
         if (state.pits[player][row][index] < 2) continue;
-        for (const direction of ["left", "right"]) {
-          candidates.push({ row, index, direction });
-        }
+        for (const direction of ["left", "right"]) candidates.push({ row, index, direction });
       }
     }
     const captures = candidates.filter((move) => wouldCapture(
       state, player, move.row, move.index, move.direction,
     ));
     if (captures.length) return captures.map((move) => ({ ...move, type: "capture", phase: "mtaji" }));
-    const hasFront = candidates.some((move) => move.row === FRONT);
-    return candidates.filter((move) => !hasFront || move.row === FRONT)
+    const target = activeTakasia(state, player);
+    const takata = candidates.filter((move) => !(target && move.row === FRONT && move.index === target.index));
+    const hasFront = takata.some((move) => move.row === FRONT);
+    return takata.filter((move) => !hasFront || move.row === FRONT)
       .map((move) => ({ ...move, type: "takata", phase: "mtaji" }))
       .filter((move) => !emptiesOwnFront(state, move));
   }
@@ -210,19 +256,20 @@
 
   function applyMove(source, move, recording) {
     const state = clone(source);
+    state.takasia ??= null;
     const events = [];
     if (recording?.snapshots === false) compactEventLists.add(events);
-    if (!legalMoves(source).some((candidate) => sameMove(candidate, move))) {
-      throw new Error("Illegal move");
-    }
+    if (!legalMoves(source).some((candidate) => sameMove(candidate, move))) throw new Error("Illegal move");
     const player = state.player;
+    const previousMove = { type: move.type, phase: source.phase };
     if (move.type === "pass") {
-      finishTurn(state, events);
+      finishTurn(state, events, undefined, previousMove);
       return { state, events };
     }
     let cursor = pit(player, move.row, move.index);
     let direction = move.direction;
-    let captureTurn = move.type === "capture";
+    const captureTurn = move.type === "capture";
+    const target = captureTurn ? null : activeTakasia(state, player);
     let wasEmpty = false;
 
     if (state.phase === "namua") {
@@ -260,11 +307,18 @@
     }
 
     let relays = 0;
+    let takasiaStop = false;
     while (relays < MAX_RELAY && !wasEmpty) {
+      if (target && cursor.row === FRONT && cursor.index === target.index) {
+        takasiaStop = true;
+        snapshotEvent(events, state, "takasia", { action: "stop", target });
+        break;
+      }
       relays += 1;
       if (!frontOccupied(state, 1 - player)) {
         state.winner = player;
         state.reason = "front-empty";
+        clearTakasia(state, events);
         snapshotEvent(events, state, "win");
         return { state, events };
       }
@@ -297,13 +351,20 @@
       wasEmpty = result.wasEmpty;
     }
 
-    if (relays >= MAX_RELAY && !wasEmpty) {
+    // If the final allowed sow lands on the takasia target, the rule-defined
+    // stop takes precedence over the implementation relay safety limit.
+    if (!wasEmpty && target && cursor.row === FRONT && cursor.index === target.index && !takasiaStop) {
+      takasiaStop = true;
+      snapshotEvent(events, state, "takasia", { action: "stop", target });
+    }
+    if (relays >= MAX_RELAY && !wasEmpty && !takasiaStop) {
       state.winner = 1 - player;
       state.reason = "relay-limit";
+      clearTakasia(state, events);
       snapshotEvent(events, state, "limit");
       return { state, events };
     }
-    finishTurn(state, events, cursor);
+    finishTurn(state, events, cursor, previousMove);
     return { state, events };
   }
 
@@ -328,11 +389,14 @@
     state.pending[player] += captured;
     state.winner = player;
     state.reason = "front-empty";
+    clearTakasia(state, events);
     snapshotEvent(events, state, "win");
     return true;
   }
 
-  function finishTurn(state, events, endpoint) {
+  function finishTurn(state, events, endpoint, previousMove) {
+    const attacker = state.player;
+    clearTakasia(state, events);
     if (!frontOccupied(state, 1 - state.player)) {
       state.winner = state.player;
       state.reason = "front-empty";
@@ -345,14 +409,18 @@
       snapshotEvent(events, state, "win");
       return;
     }
-    // Only completed nonterminal NAMUA moves qualify. Do not rejudge the pit.
-    const mover = state.player, opponent = 1 - mover;
-    const captures = events.filter(event => event.kind === "capture").length;
+
+    // NYAKUA remains a NAMUA-only post-move addition. Takasia is MTAJI-only,
+    // so the two rules cannot compete for the same endpoint operation.
+    const mover = state.player;
+    const opponent = 1 - mover;
+    const captures = events.filter((event) => event.kind === "capture").length;
     if (state.phase === "namua" && endpoint && captures >= 2
       && state.reserve[mover] >= 1 && state.reserve[opponent] >= 2) {
-      state.reserve[mover]--; state.reserve[opponent]--;
+      state.reserve[mover] -= 1;
+      state.reserve[opponent] -= 1;
       setAt(state, endpoint, countAt(state, endpoint) + 2);
-      snapshotEvent(events, state, "end-pit-add", {position: endpoint, count: 2});
+      snapshotEvent(events, state, "end-pit-add", { position: endpoint, count: 2 });
     }
     if (state.phase === "namua" && state.reserve[0] + state.nyakuaReserve[0] === 0
       && state.reserve[1] + state.nyakuaReserve[1] === 0) {
@@ -361,13 +429,16 @@
     }
     state.player = 1 - state.player;
     state.turn += 1;
+    state.takasia = detectTakasia(state, attacker, previousMove);
     const nextMoves = legalMoves(state);
     if (!nextMoves.length) {
       state.winner = 1 - state.player;
       state.reason = "no-move";
+      clearTakasia(state, events);
       snapshotEvent(events, state, "win");
       return;
     }
+    if (state.takasia) snapshotEvent(events, state, "takasia", { action: "activate", target: state.takasia });
     snapshotEvent(events, state, "turn");
   }
 
@@ -376,7 +447,6 @@
       && a.direction === b.direction && a.side === b.side && Boolean(a.houseTwo) === Boolean(b.houseTwo);
   }
 
-  // Search uses the same rules and event metadata, without display snapshots.
   function applyMoveForSearch(source, move) {
     return applyMove(source, move, SEARCH_RECORDING);
   }
@@ -385,12 +455,17 @@
     return moveVariants(state, moves, SEARCH_RECORDING);
   }
 
-  const api = Object.freeze({ applyMoveForSearch, moveVariantsForSearch, initialState, legalMoves, moveVariants, applyMove, ring, nextPit, clone, FRONT, BACK, HOUSE,
+  const api = Object.freeze({
+    detectTakasia, applyMoveForSearch, moveVariantsForSearch,
+    initialState, legalMoves, moveVariants, applyMove, ring, nextPit, clone,
+    FRONT, BACK, HOUSE,
     INITIAL_HAND: 22, TOTAL_KETE: 64, BOARD_ROWS_PER_PLAYER: 2, SOWING_PATH: "ring",
-    RULES_VERSION: "0.9.0", BASE_RULES_VERSION: "0.8.0",
+    RULES_VERSION: "0.10.0", BASE_RULES_VERSION: "0.2.0",
+    BASE_RULES_REVISION: "BAO-RULES-V0.2.0-TAKASIA-001",
+    TAKASIA: true,
     NYAKUA_END_PIT_ADD: true, NYAKUA_PROTECT_LAST: true, NYAKUA_FIXED_PIT_BULK: false,
     NYAKUA_NEXT_TURN_THREE: false, NYAKUA_RESERVED_PROTECTED: false,
-    RULE_ID: "namua-end-pit-two-protect-last-two-row-ring-hand22",
+    RULE_ID: "takasia-namua-end-pit-two-protect-last-two-row-ring-hand22",
   });
   root.BaoEngine = api;
   if (typeof module !== "undefined" && module.exports) module.exports = api;
