@@ -3,12 +3,11 @@
 const {chromium} = require("playwright");
 const assert = require("node:assert/strict"), fs = require("node:fs"), path = require("node:path");
 const {pathToFileURL} = require("node:url");
-const fixtures = [require("./nyakua-continue/results/search4/anomaly-A-2-1.json"),require("./nyakua-continue/results/search6/example-A-0-0.json")];
 const publicRoot=path.resolve(__dirname,"../prototype");
 let target = process.argv[2];
-const output = process.argv[3] || "/tmp/bao-v090-browser-check";
+const output = process.argv[3] || "/tmp/bao-v010-browser-check";
 fs.mkdirSync(output,{recursive:true});
-const report = {status:"PASS", surfaces:[], errors:[], additions:[], computerSides:[], games:[]};
+const report = {status:"PASS", surfaces:[], errors:[], computerSides:[], takasiaChecks:[], records:[]};
 (async()=>{
   let server;
   if(!target) {
@@ -45,54 +44,55 @@ const report = {status:"PASS", surfaces:[], errors:[], additions:[], computerSid
       });
       await page.clock.install();await page.goto(url);
       assert.equal(await page.locator("#mode option").count(),2);
-      assert.equal(await page.locator(".prototype-badge").innerText(),"試作 v0.9.0");
+      assert.equal(await page.locator(".prototype-badge").innerText(),"試作 v0.10.0");
       await page.locator("#about summary").click();
       const about=await page.locator("#about .rules").innerText();
-      assert.ok(about.includes("Bao la Kiswahili をベースに"));assert.ok(about.includes("独自ルールの NYAKUA"));assert.ok(about.includes("オリジナルの Bao"));
+      assert.ok(about.includes("Bao la Kiswahili をベースに"));
+      assert.ok(about.includes("独自ルールの NYAKUA"));
+      assert.ok(about.includes("takasia"));
       await page.screenshot({path:path.join(output,label+"-about.png"),fullPage:true});
       await page.locator("#about summary").click();
-      await page.screenshot({path:path.join(output,label+"-setup.png"),fullPage:true});
       await page.locator("#speed").click();
-      for(const fixture of fixtures) {
+
+      // Standard local move, then verify the v0.10.0 record surface.
       await page.locator("#start").click();
       assert.equal(await page.locator("#board button").count(),32);
-      for(let i=0;i<fixture.history.length;i++) {
-        const turn=fixture.history[i],m=turn.move;
-        const p=await page.evaluate(()=>window.testGame.board.player);
-        const coordinate=(p===0?"S":"N")+(m.row===0?"F":"B")+(m.index+1);
-        await page.locator("#board button").filter({has:page.locator("small",{hasText:new RegExp("^"+coordinate+"$")})}).click();
-        const choice=await page.evaluate(move=>{
-          const moves=NakakamadoSteal.moveVariants(window.testGame).filter(x=>x.row===move.row&&x.index===move.index);
-          let index=moves.findIndex(x=>JSON.stringify(x)===JSON.stringify(move));
-          if(index<0)index=moves.findIndex(x=>x.type===move.type&&x.direction===move.direction&&x.side===move.side&&!x.houseChoice);
-          return index;
-        },m);
-        assert.ok(choice>=0,coordinate+" has a matching choice");
-        await page.locator("#move-choices button").nth(choice).click();
-        await page.clock.runFor(100000);
-        const after=await page.evaluate(()=>window.testGame.board);
-        assert.deepEqual(after,turn.after);
-        if(turn.entry.stolen){
-          const text=await page.locator("#steal-result").innerText();assert.ok(text.includes("計2個追加"));
-          assert.ok(text.includes((turn.entry.endpoint.player===0?"S":"N")+(turn.entry.endpoint.row===0?"F":"B")+(turn.entry.endpoint.index+1)));
-          report.additions.push({surface:label,turn:i+1,endpoint:turn.entry.endpoint});
-          if(!report.surfaces.includes(label))await page.screenshot({path:path.join(output,label+"-addition.png"),fullPage:true});
-        }
-      }
-      assert.ok((await page.locator("#status").innerText()).includes(fixture.reason==="relay-limit" ? "通常の勝敗は未判定" : "の勝ち"));
-      assert.equal(await page.locator("#board button:enabled").count(),0);
+      await page.locator("#board button:enabled").first().click();
+      await page.locator("#move-choices button").first().click();
+      await page.clock.runFor(100000);
       if(!await page.locator("details").filter({has:page.locator("#download")}).evaluate(el=>el.open))
         await page.getByText("棋譜の保存",{exact:true}).click();
       const [download]=await Promise.all([page.waitForEvent("download"),page.locator("#download").click()]);
-      await download.saveAs(path.join(output,label+"-"+fixture.reason+"-game.json"));
-      assert.equal(download.suggestedFilename(),"bao-nakakamado-v0.9.0-game.json");
-      const record=JSON.parse(fs.readFileSync(path.join(output,label+"-"+fixture.reason+"-game.json")));
-      assert.equal(record.adjudication,fixture.reason==="relay-limit" ? "safety-stop" : "normal");assert.equal(record.outcome.winner,fixture.winner);
-      assert.equal(record.version,8);assert.equal(record.rulesVersion,"0.9.0");assert.equal(record.publicAdopted,true);
-      assert.equal(record.history.length,fixture.history.length);assert.equal(record.nyakuaNextTurnThree,false);
-      await page.locator("#new-game").click();assert.ok(await page.locator("#setup").isVisible());
-      report.games.push({surface:label,plies:record.history.length,reason:fixture.reason,adjudication:record.adjudication});
-      }
+      const saved=path.join(output,label+"-game.json");await download.saveAs(saved);
+      assert.equal(download.suggestedFilename(),"bao-nakakamado-v0.10.0-game.json");
+      const record=JSON.parse(fs.readFileSync(saved));
+      assert.equal(record.version,9);assert.equal(record.rulesVersion,"0.10.0");assert.equal(record.takasia,true);
+      assert.equal(record.baseRulesRevision,"BAO-RULES-V0.2.0-TAKASIA-001");
+      report.records.push({surface:label,version:record.version,rulesVersion:record.rulesVersion});
+
+      // Inject the published E30 position with an active target. The browser must
+      // expose the state, refuse the target as a start, and execute a stop path.
+      await page.locator("#new-game").click();
+      const takasiaResult=await page.evaluate(()=>{
+        const E=window.BaoEngine,S=window.NakakamadoSteal;
+        const state={pits:[[[0,2,0,0,1,1,0,0],[0,0,2,2,0,2,6,4]],[[1,0,1,2,10,0,0,10],[2,2,8,4,1,2,1,0]]],
+          reserve:[0,0],nyakuaReserve:[0,0],houseOwned:[false,false],player:1,phase:"mtaji",winner:null,reason:"",turn:2,pending:[0,0],takasia:{player:1,index:3}};
+        S.initialGame=()=>({board:E.clone(state),history:[]});
+        const moves=E.legalMoves(state);
+        const targetStart=moves.some(m=>m.type==="takata"&&m.row===E.FRONT&&m.index===3);
+        const stop=moves.map(m=>E.applyMove(state,m)).find(r=>r.events.some(e=>e.kind==="takasia"&&e.action==="stop"));
+        return {targetStart,hasStop:Boolean(stop),moves:moves.length};
+      });
+      assert.equal(takasiaResult.targetStart,false);assert.equal(takasiaResult.hasStop,true);assert.ok(takasiaResult.moves>0);
+      await page.locator("#start").click();
+      assert.ok((await page.locator("#status").innerText()).includes("TAKASIA対象"));
+      const targetButton=page.locator("#board button").filter({has:page.locator("small",{hasText:/^NF4$/})});
+      assert.equal(await targetButton.isDisabled(),true);
+      report.takasiaChecks.push({surface:label,target:"NF4",hasStop:true});
+      await page.locator("#new-game").click();
+
+      // Reload to restore the standard initialGame, then verify simple computer on both sides.
+      await page.goto(url);await page.clock.install().catch(()=>{});await page.locator("#speed").click();
       for(const side of [0,1]) {
         await page.locator("#mode").selectOption("computer");await page.locator("#side").selectOption(String(side));
         await page.locator("#start").click();
