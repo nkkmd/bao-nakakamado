@@ -31,7 +31,10 @@ const report={status:'PASS',errors:[],workers:[],games:[],cancellation:false,fal
       }});
     });
     await page.goto(target);assert.equal(await page.locator('#mode option').count(),3);
-    // Actual HTTP Worker, both current phases, all tentative budgets.
+    assert.equal(await page.locator('#mode').inputValue(),'search-computer');
+    assert.equal(await page.locator('#difficulty').inputValue(),'hard');
+    assert.equal(await page.locator('#opponent-badge').innerText(),'探索コンピューター');
+    // Actual HTTP Worker, both current phases, all supported budgets.
     for(const state of [E.initialState(),e30()])for(const budgetMs of [25,75,150]) {
       const r=await page.evaluate(({state,budgetMs})=>new Promise((resolve,reject)=>{
         const q=window.NakakamadoEndPitSearchTransition.createForEngine(window.BaoEngine),w=new Worker('./end-pit-computer-worker.js');
@@ -79,8 +82,8 @@ const report={status:'PASS',errors:[],workers:[],games:[],cancellation:false,fal
       await page.getByText('棋譜の保存',{exact:true}).click();
       const [download]=await Promise.all([page.waitForEvent('download'),page.locator('#download').click()]);
       const file=path.join(out,`search-human-${side}.json`);await download.saveAs(file);const record=JSON.parse(fs.readFileSync(file));
-      assert.equal(record.version,9);assert.equal(record.rulesVersion,'0.10.0');assert.equal(record.computer.publicAdopted,false);
-      assert.equal(record.computer.learnedModel,false);assert.equal(record.computer.id,'NAKAKAMADO-AI-V010-TRIAL-v1');
+      assert.equal(record.version,9);assert.equal(record.rulesVersion,'0.10.0');assert.equal(record.computer.publicAdopted,true);
+      assert.equal(record.computer.learnedModel,false);assert.equal(record.computer.id,'NAKAKAMADO-AI-V010-v1');
       assert.deepEqual(S.replay(record).board,record.final);
       assert.ok(record.computer.diagnostics.length>0);assert.ok(record.computer.diagnostics.every(d=>!d.fallback));
       report.games.push({humanSide:side,plies:record.history.length,adjudication:record.adjudication,

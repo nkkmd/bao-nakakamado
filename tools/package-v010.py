@@ -48,11 +48,13 @@ def main():
     assert 'const VERSION = 9' in rules and 'takasia: true' in rules
     manifest = {'rulesVersion': '0.10.0', 'recordVersion': 9, 'publicAdopted': True,
                 'baseRulesRevision': 'BAO-RULES-V0.2.0-TAKASIA-001', 'takasia': True,
-                'computer': 'search-trial', 'aiPublicAdopted': False, 'learnedModel': False,
-                'aiId': 'NAKAKAMADO-AI-V010-TRIAL-v1', 'preservedPublicCommit': preserved['baseCommit'],
+                'computer': 'search', 'aiPublicAdopted': True, 'learnedModel': False,
+                'aiId': 'NAKAKAMADO-AI-V010-v1', 'aiReleaseId': 'NAKAKAMADO-AI-V010-RELEASE-001',
+                'defaultMode': 'search-computer', 'defaultDifficulty': 'hard', 'defaultBudgetMs': 150,
+                'preservedPublicCommit': preserved['baseCommit'],
                 'sha256': {name: hashlib.sha256(content).hexdigest() for name, content in data.items()}}
     data['manifest.json'] = (json.dumps(manifest, ensure_ascii=False, indent=2) + '\n').encode()
-    target = out / 'bao-nakakamado-v0.10.0-search-trial-flat-20261009.zip'
+    target = out / 'bao-nakakamado-v0.10.0-search-flat-20261009.zip'
     with zipfile.ZipFile(target, 'w', zipfile.ZIP_DEFLATED) as archive:
         for name, content in data.items():
             info = zipfile.ZipInfo(name, (2026, 10, 9, 0, 0, 0))

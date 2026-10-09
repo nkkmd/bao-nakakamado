@@ -4,7 +4,7 @@ Bao la Kiswahiliをベースに独自ルールNYAKUAを採用したオリジナ�
 
 ## 起動・配布
 
-index.htmlをブラウザーで開くか、このフォルダーを静的サイトとして配信してください。2人対戦・簡易コンピューター・探索コンピューター（試験）、着手アニメーション、サウンド、高速表示、棋譜JSON保存に対応します。探索の正式比較・実機確認・公開採用は後続工程です。
+index.htmlをブラウザーで開くか、このフォルダーを静的サイトとして配信してください。2人対戦・簡易コンピューター・探索コンピューター、着手アニメーション、サウンド、高速表示、棋譜JSON保存に対応します。独立512局比較・ブラウザー検証と管理者の実機確認報告を経て探索方式を正式採用しました。既定は探索・強い（150ms）です。
 
 ```sh
 cd prototype
@@ -65,10 +65,12 @@ E30固定局面でtakasia成立・開始穴禁止・relay停止・1手失効を�
 
 旧公開版・学習済みAIは[保存フォルダー](https://github.com/nkkmd/bao-nakakamado/tree/main/trials/v0.8.0)と保存ブランチpreserve/v0.8.0-public-20261007に保持しています。研究・モデル・原棋譜の数値を新規則へ書き換えません。v0.9.0の採用記録も当時の仕様として保持します。
 
-## 探索コンピューターの試験
+## 探索コンピューター
 
-ルールと棋譜本体の版はv0.10.0／9を維持します。試験AIはNAKAKAMADO-AI-V010-TRIAL-v1、評価器はNAKAKAMADO-HANDCRAFT-V010-v1、学習済みモデルなし、AIの公開採用状態はfalseです。探索は反復深化・Alpha-Beta・PVS・置換表・捕獲の静止探索を用い、全遷移で現行NYAKUAとtakasiaを処理します。
+2026年10月9日、管理者の実機確認報告「問題なさそうです」を受け、現行NYAKUA案A・takasiaに対応する探索コンピューターを正式採用しました。既定は探索コンピューター・強い（150ms）です。2人対戦と簡易コンピューターも選べます。
 
-暫定予算はやさしい25ms／ふつう75ms／強い150ms、最大深度32。難易度別の棋力は未確定です。Worker起動・通信を探索予算に含めず、着手計算は協調的な時間制限のため超過し得ます。要求ID・局面key・対局世代・合法variantを照合し、新しい対局でWorkerを終了します。失敗時は現行簡易AIへ代替し、表示と棋譜computer.diagnosticsに理由を記録します。深度0の時間切れ代替は別に記録します。
+ルールと棋譜本体の版はv0.10.0／9を維持します。AIはNAKAKAMADO-AI-V010-v1、採用識別子はNAKAKAMADO-AI-V010-RELEASE-001、評価器はNAKAKAMADO-HANDCRAFT-V010-v1、学習済みモデルなし、AIの公開採用状態はtrueです。探索は反復深化・Alpha-Beta・PVS・置換表・捕獲の静止探索を用い、全遷移で現行NYAKUAとtakasiaを処理します。
 
-HTTP localhostまたはHTTPSで試してください。file URLやWorker/CSP制限で起動できない場合は簡易方式へ代替します。main統合・正式比較・moto g52j 5Gでの実機確認・公開採用の状態は[実装記録](https://github.com/nkkmd/bao-nakakamado/blob/main/doc/AI_V010_SEARCH_IMPLEMENTATION_20261009.md)で管理します。
+予算はやさしい25ms／ふつう75ms／強い150ms、最大深度32。独立512局の正式比較は150msで現行簡易AIに対して487勝・25敗でした。25／75msの相対棋力は未確定です。Worker起動・通信を探索予算に含めず、着手計算は協調的な時間制限のため超過し得ます。要求ID・局面key・対局世代・合法variantを照合し、新しい対局でWorkerを終了します。失敗時は現行簡易AIへ代替し、表示と棋譜computer.diagnosticsに理由を記録します。深度0の時間切れ代替は別に記録します。
+
+HTTP localhostまたはHTTPSで利用してください。file URLやWorker/CSP制限で起動できない場合は簡易方式へ代替します。試験AI識別子を持つ既存v0.10.0棋譜も同じ規則で再生できます。検証と採用は[実装記録](https://github.com/nkkmd/bao-nakakamado/blob/main/doc/AI_V010_SEARCH_IMPLEMENTATION_20261009.md)、main統合状態は[PR #34](https://github.com/nkkmd/bao-nakakamado/pull/34)を参照してください。実際のサイト配信日・URLは未記録です。

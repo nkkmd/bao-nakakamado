@@ -1,4 +1,4 @@
-name: v0.10.0 search computer trial checks
+name: v0.10.0 search computer checks
 on:
   push:
     paths: ['prototype/**', 'tools/end-pit-*', 'tools/package-v010.py', '.github/workflows/v010-search-check.yml']
@@ -8,7 +8,7 @@ on:
 permissions:
   contents: read
 jobs:
-  search-trial:
+  search-computer:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -48,7 +48,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: v010-search-trial-results
+          name: v010-search-results
           path: |
             ${{ runner.temp }}/search-check.json
             ${{ runner.temp }}/live-check.json

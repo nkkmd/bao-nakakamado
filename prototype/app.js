@@ -6,12 +6,12 @@
   const C = window.NakakamadoEndPitComputerClient;
   const simpleAI = window.NakakamadoEndPitSimpleAI.createAI(Q);
   const computerClient = C.createClient(Q);
-  let difficulty = "normal";
+  let difficulty = "hard";
   let diagnostics = [];
   const $ = (id) => document.getElementById(id);
   let game = S.initialGame();
   let started = false;
-  let mode = "local";
+  let mode = "search-computer";
   let human = 0;
   let selected = null;
   let busy = false;
@@ -50,7 +50,7 @@
     const searching = $("mode").value === "search-computer";
     $("difficulty-field").hidden = !searching;
     $("difficulty").disabled = !searching;
-    $("opponent-badge").textContent = searching ? "探索コンピューター（試験）" : computer ? "簡易コンピューター" : "2人対戦";
+    $("opponent-badge").textContent = searching ? "探索コンピューター" : computer ? "簡易コンピューター" : "2人対戦";
   }
   function focusBoard() {
     const first = Array.from($("board").children).find((pit) => !pit.disabled);
@@ -315,7 +315,7 @@
         if (game.history.length === ply + 1) diagnostics.push({...answer.diagnostic, ply: ply + 1});
         $("opponent-badge").textContent = answer.diagnostic.fallback
           ? "探索コンピューター（簡易方式で代替）"
-          : answer.diagnostic.searchFallback ? "探索コンピューター（時間切れ代替）" : "探索コンピューター（試験）";
+          : answer.diagnostic.searchFallback ? "探索コンピューター（時間切れ代替）" : "探索コンピューター";
       } else play(chooseComputerMove());
     }, 260);
   }

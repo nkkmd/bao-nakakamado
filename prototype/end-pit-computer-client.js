@@ -2,14 +2,14 @@
 // MIT. Current-position validation and cancellation for browser search.
 (function(root) {
   const PROTOCOL = "NAKAKAMADO-BROWSER-WORKER-V010-v1";
-  const AI_ID = "NAKAKAMADO-AI-V010-TRIAL-v1";
-  const RELEASE_ID = "NAKAKAMADO-AI-V010-TRIAL-001";
-  const PUBLIC_ADOPTED = false;
+  const AI_ID = "NAKAKAMADO-AI-V010-v1";
+  const RELEASE_ID = "NAKAKAMADO-AI-V010-RELEASE-001";
+  const PUBLIC_ADOPTED = true;
   const EVALUATOR_ID = "NAKAKAMADO-HANDCRAFT-V010-v1";
   const SEARCH_ID = "NAKAKAMADO-SEARCH-V010-v1";
   const BUDGETS = Object.freeze({easy:25, normal:75, hard:150});
   const moveKey = m => JSON.stringify([m?.type,m?.phase,m?.row,m?.index,m?.direction,m?.side,m?.houseChoice,Boolean(m?.houseTwo)]);
-  function createClient(Q, {createWorker=()=>new root.Worker("./end-pit-computer-worker.js?v=v010-trial001"),
+  function createClient(Q, {createWorker=()=>new root.Worker("./end-pit-computer-worker.js?v=v010-release001"),
     setTimer=(f,ms)=>root.setTimeout(f,ms), clearTimer=id=>root.clearTimeout(id),
     fallback=b=>root.NakakamadoEndPitSimpleAI.createAI(Q).chooseMove(b)}={}) {
     let active=null, nextId=0;

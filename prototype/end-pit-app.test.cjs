@@ -56,7 +56,7 @@ test("search computer reset discards an in-flight response and records only the 
     assert.equal(elements.board.attrs.get("aria-busy"),"false");
     elements.download.click();assert.equal(saved.mode,"computer");assert.equal(saved.version,9);
     assert.equal(saved.computer.id,C.AI_ID);assert.equal(saved.computer.releaseId,C.RELEASE_ID);
-    assert.equal(saved.computer.publicAdopted,false);assert.equal(saved.computer.diagnostics.length,1);
+    assert.equal(saved.computer.publicAdopted,true);assert.equal(saved.computer.diagnostics.length,1);
     assert.equal(saved.computer.diagnostics[0].requestId,2);
     assert.equal(saved.computer.diagnostics[0].fallback,null);
     assert.deepEqual(window.NakakamadoSteal.replay(saved).board,saved.final);
