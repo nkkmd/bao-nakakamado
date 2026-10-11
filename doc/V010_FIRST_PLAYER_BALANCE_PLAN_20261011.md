@@ -95,3 +95,11 @@
 [正式workflow](../.github/workflows/v010-balance-formal.yml)は専用ブランチの一意な起動commit題名で起動する。通常のpushでは再計測しない。runの再実行では計測しない。全shard成功後だけ全件をストリーム監査して正式勝率を出し、未完了の部分結果から主判断を行わない。集計は大きな棋譜全体をメモリーへ保持しない。
 
 基盤の新規10テストと現行の21回帰テストが通過し、現行公開探索の[4,903候補遷移・810全探索照合](v010-balance/public-search-check.json)も一致した。`prototype/` と `trials/` は基準コミットから原bytesのまま。準備CIの確認後に正式runへ進む。この追記時点の正式対局は未起動・先後差は未判定。
+
+## GitHub保存・準備CI・正式起動
+
+[Draft PR #35](https://github.com/nkkmd/bao-nakakamado/pull/35)へ計画・基盤・試走原成果を保存した。APIで作成した準備tree `816a17f88e766107f0c9b2e621d4ab73de724915` は、ローカル検証済みtreeと完全一致した。
+
+初回準備CIはテスト・manifest・試走再監査を通過したが、浅いcheckoutに基準コミットがないため最後のgit比較だけが失敗した。履歴を取得する設定へ修正し、[push CI 38141043313](https://github.com/nkkmd/bao-nakakamado/actions/runs/38141043313)と[PR CI 38141046236](https://github.com/nkkmd/bao-nakakamado/actions/runs/38141046236)が全ステップ成功した。修正は準備CIの取得設定のみで、正式探索・manifest・試走原成果は変更していない。
+
+2026年10月11日（日本時間）、検証済みtreeを維持する起動commit `76a414bfcd03def5f557fe1fa870558179302015` で、[正式run 38141114334](https://github.com/nkkmd/bao-nakakamado/actions/runs/38141114334)を起動した。工程1〜3を完了し、工程4の実行に入った。この起動追記時点の状態は実行中で、正式勝率・先後差は未判定。完了後に原artifactを保存し、全10,240局を監査・再集計して工程5〜7へ進む。途中組を除いて先後差を結論付けない。

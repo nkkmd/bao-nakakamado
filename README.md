@@ -22,7 +22,7 @@ Bao la Kiswahiliをベースに、独自ルール **NYAKUA（ニャクア）** �
 
 ## v0.10.0の先後差検証
 
-[検証計画](doc/V010_FIRST_PLAYER_BALANCE_PLAN_20261011.md)と[調査基盤](tools/v010-balance/README.md)を整備しています。標準初期配置の同条件自己対戦を中心に、探索量と南北の席による差を調べます。現在は基盤の検証・運用試走の工程で、正式試験の先後差は未判定です。
+[検証計画](doc/V010_FIRST_PLAYER_BALANCE_PLAN_20261011.md)と[調査基盤](tools/v010-balance/README.md)を整備しています。標準初期配置の同条件自己対戦を中心に、探索量と南北の席による差を調べます。56局の運用試走と準備CIを完了し、[正式10,240局の試験](https://github.com/nkkmd/bao-nakakamado/actions/runs/38141114334)を起動しました。正式試験の先後差は全件完了・監査後に判断します。
 
 ## 保存版と検証
 
