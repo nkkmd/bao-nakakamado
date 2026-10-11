@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: '24'
       - name: Exact roots, seed controls, mirror, uncertainty, interrupted-pair rejection
-        run: node --test tools/v010-balance/check.test.cjs
+        run: node --test tools/v010-balance/check.test.cjs tools/v010-balance/diagnostics/check.test.cjs
       - name: Current rule and public AI regressions
         run: node --test prototype/takasia.test.cjs prototype/end-pit-search.test.cjs prototype/end-pit-computer-client.test.cjs prototype/end-pit-app.test.cjs
       - name: Audit frozen contract and completed pilot with zero new measurements
