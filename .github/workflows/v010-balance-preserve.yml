@@ -1,0 +1,62 @@
+name: v0.10.0 balance original preservation and independent audit
+on:
+  push:
+    branches: ['research/v010-first-player-balance-20261011']
+permissions:
+  contents: write
+  actions: read
+jobs:
+  preserve:
+    if: startsWith(github.event.head_commit.message, 'Preserve v0.10.0 completed balance originals 001') && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Download all 161 original ZIPs and verify pinned metadata digests
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 tools/v010-balance/preserve.py "$RUNNER_TEMP/originals"
+      - name: Audit all games again without new searches or games
+        run: |
+          cp "$RUNNER_TEMP/originals/data/summary.json" "$RUNNER_TEMP/actions-summary.json"
+          node tools/v010-balance/formal.cjs aggregate "$RUNNER_TEMP/originals/data"
+          python3 tools/v010-balance/diagnostics/trace.py "$RUNNER_TEMP/originals/data" "$RUNNER_TEMP/trace.json"
+          python3 - <<'PY'
+          import os,json
+          from pathlib import Path
+          p=Path(os.environ['RUNNER_TEMP']);assert json.loads((p/'actions-summary.json').read_text())==json.loads((p/'originals/data/summary.json').read_text())
+          PY
+      - name: Package original bytes and save to a dedicated results branch
+        env:
+          PRESERVATION_SOURCE_SHA: ${{ github.sha }}
+        run: |
+          python3 - <<'PY'
+          import os,zipfile,hashlib,json
+          from pathlib import Path
+          root=Path('doc/v010-balance');p=Path(os.environ['RUNNER_TEMP']);out=root/'formal-original-artifacts.zip'
+          files=sorted((p/'originals').glob('*.zip'))
+          with zipfile.ZipFile(out,'w',compression=zipfile.ZIP_STORED) as z:
+              for f in files:z.write(f,'originals/'+f.name)
+          (root/'formal-summary.json').write_bytes((p/'actions-summary.json').read_bytes())
+          (root/'formal-trace.json').write_bytes((p/'trace.json').read_bytes())
+          receipt={'formalRun':38141114334,'preservationSource':os.environ['PRESERVATION_SOURCE_SHA'],'originalZips':len(files),'archiveSha256':hashlib.sha256(out.read_bytes()).hexdigest(),'archiveBytes':out.stat().st_size,'newGames':0,'reaggregationMatches':True}
+          (root/'preservation-receipt.json').write_text(json.dumps(receipt,indent=2)+'\n')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git switch -c results/v010-balance-formal-38141114334
+          git add doc/v010-balance/formal-original-artifacts.zip doc/v010-balance/formal-summary.json doc/v010-balance/formal-trace.json doc/v010-balance/preservation-receipt.json
+          git commit -m 'Preserve all v0.10.0 balance original artifacts and zero-game reaggregation'
+          git push origin HEAD:refs/heads/results/v010-balance-formal-38141114334
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v010-balance-preservation-receipt
+          path: |
+            doc/v010-balance/preservation-receipt.json
+            doc/v010-balance/formal-summary.json
+            doc/v010-balance/formal-trace.json
+          retention-days: 90
