@@ -20,6 +20,10 @@ Bao la Kiswahiliをベースに、独自ルール **NYAKUA（ニャクア）** �
 
 [ルールブック](doc/RULEBOOK.md)、[用語・棋譜](doc/TERMINOLOGY.md)、[起動・配布・検証](prototype/README.md)、[v0.10.0 takasia実装記録](doc/TAKASIA_V010_IMPLEMENTATION_20261009.md)、[v0.9.0のNYAKUA採用記録](doc/NYAKUA_V090_ADOPTION_20261007.md)を参照してください。先後均衡・初期局面の必勝・全局面の停止は未確定です。
 
+## v0.10.0の先後差検証
+
+[検証計画](doc/V010_FIRST_PLAYER_BALANCE_PLAN_20261011.md)と[調査基盤](tools/v010-balance/README.md)を整備しています。標準初期配置の同条件自己対戦を中心に、探索量と南北の席による差を調べます。現在は基盤の検証・運用試走の工程で、正式試験の先後差は未判定です。
+
 ## 保存版と検証
 
 案Aの[研究](doc/NYAKUA_END_PIT_A_STUDY_20261006.md)・[循環の追加調査](doc/NYAKUA_A_MTAJI_CYCLE_FOLLOWUP_20261006.md)・[実機試験版の検証](doc/NYAKUA_A_PLAYABLE_TRIAL_20261007.md)を経て採用しました。試験版は`trials/nyakua-a/`に当時の識別情報で保存しています。

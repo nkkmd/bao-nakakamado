@@ -1,0 +1,80 @@
+name: v0.10.0 fixed first-player balance study 001
+on:
+  push:
+    branches: ['research/v010-first-player-balance-20261011']
+permissions:
+  contents: read
+  actions: read
+jobs:
+  preflight:
+    if: startsWith(github.event.head_commit.message, 'Start v0.10.0 fixed first-player balance study 001') && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      shards: ${{ steps.matrix.outputs.shards }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --test tools/v010-balance/check.test.cjs prototype/takasia.test.cjs prototype/end-pit-search.test.cjs
+      - run: node tools/v010-balance/formal.cjs manifest
+      - id: matrix
+        run: |
+          node - <<'JS'
+          const fs=require('node:fs'),m=require('./tools/v010-balance/formal-manifest.json');
+          fs.appendFileSync(process.env.GITHUB_OUTPUT,'shards='+JSON.stringify(Array.from({length:m.contract.shards},(_,i)=>i))+'\n');
+          JS
+  measure:
+    needs: preflight
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 16
+      matrix:
+        shard: ${{ fromJSON(needs.preflight.outputs.shards) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Fixed node self-play, both seats on same host
+        run: node tools/v010-balance/formal.cjs shard "$RUNNER_TEMP/formal" "${{ matrix.shard }}"
+      - name: Reuse completed pairs with zero new measurements
+        run: |
+          node tools/v010-balance/formal.cjs shard "$RUNNER_TEMP/formal" "${{ matrix.shard }}"
+          node - <<'JS'
+          const fs=require('node:fs'),assert=require('node:assert/strict');
+          const r=JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP+'/formal/shard-'+process.env.SHARD+'.json'));
+          assert.equal(r.newPairs,0);assert.equal(r.reusedPairs,r.expectedPairs);
+          JS
+        env:
+          SHARD: ${{ matrix.shard }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v010-balance-shard-${{ matrix.shard }}
+          path: ${{ runner.temp }}/formal/
+          retention-days: 90
+  aggregate:
+    needs: measure
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: v010-balance-shard-*
+          merge-multiple: true
+          path: ${{ runner.temp }}/formal
+      - name: Audit all pairs before the only formal win-rate summary
+        run: node tools/v010-balance/formal.cjs aggregate "$RUNNER_TEMP/formal"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v010-balance-summary
+          path: ${{ runner.temp }}/formal/summary.json
+          retention-days: 90
