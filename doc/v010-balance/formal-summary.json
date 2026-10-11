@@ -1,0 +1,209 @@
+{
+  "status": "AUDITED-COMPLETE",
+  "manifestDigest": "be9e0d009a4103ce65cba23e34a7e9e1d99538bc4ff8ef0796c387da3d7dedbe",
+  "profiles": [
+    {
+      "id": "primary-8192",
+      "kind": "research",
+      "role": "primary",
+      "nodes": 8192,
+      "pairs": 4096,
+      "games": 8192,
+      "normal": 8192,
+      "firstWins": 0,
+      "secondWins": 8192,
+      "unresolved": 0,
+      "normalFirstWinRate": 0,
+      "unresolvedBounds": [
+        0,
+        0
+      ],
+      "alpha": 0.05,
+      "hoeffdingRadius": 0.02122033618344718,
+      "conservativeInterval": [
+        0,
+        0.02122033618344718
+      ],
+      "direction": "SECOND",
+      "practicalBalanceSupported": false,
+      "operations": {
+        "games": 8192,
+        "turns": 311296,
+        "searchTurns": 311296,
+        "depthZero": 0,
+        "medianDepth": 6,
+        "p95Ms": 1306.5481859999709,
+        "maxMs": 3157.13322399999,
+        "uniqueTrajectories": 143,
+        "distinctFirstMoves": 1,
+        "normal": 8192,
+        "safetyStops": 0,
+        "repeats": 0,
+        "plyLimits": 0
+      },
+      "interpretationHold": false,
+      "firstMoves": {
+        "takata:namua:0:5:right:::false": {
+          "games": 8192,
+          "firstWins": 0,
+          "secondWins": 8192,
+          "unresolved": 0
+        }
+      },
+      "phaseWins": {
+        "namua": [
+          0,
+          0
+        ],
+        "mtaji": [
+          0,
+          8192
+        ]
+      },
+      "reasons": {
+        "no-move": 6482,
+        "front-empty": 1710
+      },
+      "events": {
+        "nyakua": 65536,
+        "takasia": 0
+      }
+    },
+    {
+      "id": "low-512",
+      "kind": "research",
+      "role": "supplementary",
+      "nodes": 512,
+      "pairs": 512,
+      "games": 1024,
+      "normal": 1024,
+      "firstWins": 0,
+      "secondWins": 1024,
+      "unresolved": 0,
+      "normalFirstWinRate": 0,
+      "unresolvedBounds": [
+        0,
+        0
+      ],
+      "alpha": 0.025,
+      "hoeffdingRadius": 0.06541653373134128,
+      "conservativeInterval": [
+        0,
+        0.06541653373134128
+      ],
+      "direction": "SECOND",
+      "practicalBalanceSupported": false,
+      "operations": {
+        "games": 1024,
+        "turns": 55296,
+        "searchTurns": 55296,
+        "depthZero": 0,
+        "medianDepth": 4,
+        "p95Ms": 84.04840600001626,
+        "maxMs": 182.95747000002302,
+        "uniqueTrajectories": 14,
+        "distinctFirstMoves": 1,
+        "normal": 1024,
+        "safetyStops": 0,
+        "repeats": 0,
+        "plyLimits": 0
+      },
+      "interpretationHold": false,
+      "firstMoves": {
+        "takata:namua:0:5:right:::false": {
+          "games": 1024,
+          "firstWins": 0,
+          "secondWins": 1024,
+          "unresolved": 0
+        }
+      },
+      "phaseWins": {
+        "namua": [
+          0,
+          0
+        ],
+        "mtaji": [
+          0,
+          1024
+        ]
+      },
+      "reasons": {
+        "no-move": 248,
+        "front-empty": 776
+      },
+      "events": {
+        "nyakua": 8192,
+        "takasia": 0
+      }
+    },
+    {
+      "id": "middle-2048",
+      "kind": "research",
+      "role": "supplementary",
+      "nodes": 2048,
+      "pairs": 512,
+      "games": 1024,
+      "normal": 1024,
+      "firstWins": 1024,
+      "secondWins": 0,
+      "unresolved": 0,
+      "normalFirstWinRate": 1,
+      "unresolvedBounds": [
+        1,
+        1
+      ],
+      "alpha": 0.025,
+      "hoeffdingRadius": 0.06541653373134128,
+      "conservativeInterval": [
+        0.9345834662686587,
+        1
+      ],
+      "direction": "FIRST",
+      "practicalBalanceSupported": false,
+      "operations": {
+        "games": 1024,
+        "turns": 64512,
+        "searchTurns": 64512,
+        "depthZero": 0,
+        "medianDepth": 5,
+        "p95Ms": 285.4777180000674,
+        "maxMs": 425.6770770000294,
+        "uniqueTrajectories": 225,
+        "distinctFirstMoves": 1,
+        "normal": 1024,
+        "safetyStops": 0,
+        "repeats": 0,
+        "plyLimits": 0
+      },
+      "interpretationHold": false,
+      "firstMoves": {
+        "takata:namua:0:6:right:::false": {
+          "games": 1024,
+          "firstWins": 1024,
+          "secondWins": 0,
+          "unresolved": 0
+        }
+      },
+      "phaseWins": {
+        "namua": [
+          0,
+          0
+        ],
+        "mtaji": [
+          1024,
+          0
+        ]
+      },
+      "reasons": {
+        "front-empty": 876,
+        "no-move": 148
+      },
+      "events": {
+        "nyakua": 6144,
+        "takasia": 1024
+      }
+    }
+  ],
+  "technicalFailures": 0,
+  "conditionsApply": "fixed evaluator, node budget and exact-tie policy; not a minimax proof"
+}
