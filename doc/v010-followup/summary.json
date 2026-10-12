@@ -1,0 +1,6620 @@
+{
+  "status": "AUDITED-COMPLETE",
+  "manifestDigest": "44c585bf8cf0dc6f4d9af6db2a219065786ba5bdaf864d7c2f290ebfd1e957a4",
+  "pairs": 210,
+  "games": 420,
+  "matrix": [
+    {
+      "openingId": "reference",
+      "forced": false,
+      "first": "base-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 152,
+      "searchTurns": 152,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "reference",
+      "forced": false,
+      "first": "base-32768",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 160,
+      "searchTurns": 160,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "reference",
+      "forced": false,
+      "first": "mobility-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 128,
+      "searchTurns": 128,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "reference",
+      "forced": false,
+      "first": "base-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 148,
+      "searchTurns": 148,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "reference",
+      "forced": false,
+      "first": "mobility-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 168,
+      "searchTurns": 168,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "reference",
+      "forced": false,
+      "first": "base-8192",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 144,
+      "searchTurns": 144,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "reference",
+      "forced": false,
+      "first": "base-32768",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 196,
+      "searchTurns": 196,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-0",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 148,
+      "searchTurns": 140,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-0",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 144,
+      "searchTurns": 136,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-0",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 128,
+      "searchTurns": 120,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-0",
+      "forced": true,
+      "first": "base-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 1,
+      "turns": 212,
+      "searchTurns": 204,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-0",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 168,
+      "searchTurns": 160,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-0",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 120,
+      "searchTurns": 112,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-0",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 192,
+      "searchTurns": 184,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-1",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 1,
+      "turns": 144,
+      "searchTurns": 136,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-1",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 168,
+      "searchTurns": 160,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-1",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 204,
+      "searchTurns": 196,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-1",
+      "forced": true,
+      "first": "base-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 232,
+      "searchTurns": 224,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-1",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 168,
+      "searchTurns": 160,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-1",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 152,
+      "searchTurns": 144,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-1",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 268,
+      "searchTurns": 260,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-2",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 216,
+      "searchTurns": 208,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-2",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 172,
+      "searchTurns": 164,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-2",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 268,
+      "searchTurns": 260,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-2",
+      "forced": true,
+      "first": "base-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 216,
+      "searchTurns": 208,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-2",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 1,
+      "turns": 212,
+      "searchTurns": 204,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-2",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 148,
+      "searchTurns": 140,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-2",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 164,
+      "searchTurns": 156,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-3",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 144,
+      "searchTurns": 136,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-3",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 168,
+      "searchTurns": 160,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-3",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 1,
+      "turns": 160,
+      "searchTurns": 152,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-3",
+      "forced": true,
+      "first": "base-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 144,
+      "searchTurns": 136,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-3",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 140,
+      "searchTurns": 132,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-3",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 132,
+      "searchTurns": 124,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-0-3",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 156,
+      "searchTurns": 148,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-0",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 160,
+      "searchTurns": 152,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-0",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 1,
+      "turns": 164,
+      "searchTurns": 156,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-0",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 180,
+      "searchTurns": 172,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-0",
+      "forced": true,
+      "first": "base-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 188,
+      "searchTurns": 180,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-0",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 128,
+      "searchTurns": 120,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-0",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 152,
+      "searchTurns": 144,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-0",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 204,
+      "searchTurns": 196,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-1",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 1,
+      "turns": 136,
+      "searchTurns": 128,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-1",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 1,
+      "turns": 152,
+      "searchTurns": 144,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-1",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 252,
+      "searchTurns": 244,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-1",
+      "forced": true,
+      "first": "base-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 148,
+      "searchTurns": 140,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-1",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 160,
+      "searchTurns": 152,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-1",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 192,
+      "searchTurns": 184,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-1",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 168,
+      "searchTurns": 160,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-2",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 180,
+      "searchTurns": 172,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-2",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 256,
+      "searchTurns": 248,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-2",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 160,
+      "searchTurns": 152,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-2",
+      "forced": true,
+      "first": "base-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 160,
+      "searchTurns": 152,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-2",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 144,
+      "searchTurns": 136,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-2",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 216,
+      "searchTurns": 208,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-2",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 172,
+      "searchTurns": 164,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-3",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 152,
+      "searchTurns": 144,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-3",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 160,
+      "searchTurns": 152,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-3",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 144,
+      "searchTurns": 136,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-3",
+      "forced": true,
+      "first": "base-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 152,
+      "searchTurns": 144,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-3",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 152,
+      "searchTurns": 144,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-3",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 1,
+      "turns": 144,
+      "searchTurns": 136,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-1-3",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 196,
+      "searchTurns": 188,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-2-0",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 180,
+      "searchTurns": 172,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-2-0",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 140,
+      "searchTurns": 132,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-2-0",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 148,
+      "searchTurns": 140,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-2-0",
+      "forced": true,
+      "first": "base-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 244,
+      "searchTurns": 236,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-2-0",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 136,
+      "searchTurns": 128,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-2-0",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 1,
+      "turns": 160,
+      "searchTurns": 152,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-2-0",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 140,
+      "searchTurns": 132,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-2-1",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 168,
+      "searchTurns": 160,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-2-1",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 152,
+      "searchTurns": 144,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-2-1",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 124,
+      "searchTurns": 116,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-2-1",
+      "forced": true,
+      "first": "base-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 1,
+      "turns": 116,
+      "searchTurns": 108,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-2-1",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 152,
+      "searchTurns": 144,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-2-1",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 136,
+      "searchTurns": 128,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-2-1",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 172,
+      "searchTurns": 164,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-0",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 168,
+      "searchTurns": 160,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-0",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 248,
+      "searchTurns": 240,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-0",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 140,
+      "searchTurns": 132,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-0",
+      "forced": true,
+      "first": "base-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 1,
+      "turns": 152,
+      "searchTurns": 144,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-0",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 128,
+      "searchTurns": 120,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-0",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 176,
+      "searchTurns": 168,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-0",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 192,
+      "searchTurns": 184,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-1",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 192,
+      "searchTurns": 184,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-1",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 1,
+      "turns": 160,
+      "searchTurns": 152,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-1",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 140,
+      "searchTurns": 132,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-1",
+      "forced": true,
+      "first": "base-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 1,
+      "turns": 184,
+      "searchTurns": 176,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-1",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 1,
+      "turns": 192,
+      "searchTurns": 184,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-1",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 188,
+      "searchTurns": 180,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-1",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 220,
+      "searchTurns": 212,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-2",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 1,
+      "turns": 200,
+      "searchTurns": 192,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-2",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 188,
+      "searchTurns": 180,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-2",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 152,
+      "searchTurns": 144,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-2",
+      "forced": true,
+      "first": "base-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 1,
+      "turns": 260,
+      "searchTurns": 252,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-2",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 152,
+      "searchTurns": 144,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-2",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 1,
+      "turns": 160,
+      "searchTurns": 152,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-2",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 180,
+      "searchTurns": 172,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-3",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 152,
+      "searchTurns": 144,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-3",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 176,
+      "searchTurns": 168,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-3",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 2,
+      "secondWins": 2,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 222,
+      "searchTurns": 214,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-3",
+      "forced": true,
+      "first": "base-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 192,
+      "searchTurns": 184,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-3",
+      "forced": true,
+      "first": "mobility-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 140,
+      "searchTurns": 132,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-3",
+      "forced": true,
+      "first": "base-8192",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 152,
+      "searchTurns": 144,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "opening-3-3",
+      "forced": true,
+      "first": "base-32768",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 196,
+      "searchTurns": 188,
+      "depthZero": 0,
+      "interpretationHold": false
+    }
+  ],
+  "proofs": [
+    {
+      "rootId": "initial",
+      "index": 0,
+      "target": 0,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "proofNodes": 0,
+      "visits": 1000000,
+      "bookUses": 0,
+      "opponentCuts": 0,
+      "attempts": [
+        {
+          "depth": 1,
+          "status": "UNKNOWN",
+          "visits": 5,
+          "totalVisits": 5,
+          "elapsedMs": 0.6844350000000077
+        },
+        {
+          "depth": 2,
+          "status": "UNKNOWN",
+          "visits": 9,
+          "totalVisits": 14,
+          "elapsedMs": 0.27084899999999834
+        },
+        {
+          "depth": 3,
+          "status": "UNKNOWN",
+          "visits": 21,
+          "totalVisits": 35,
+          "elapsedMs": 0.6831929999999886
+        },
+        {
+          "depth": 4,
+          "status": "UNKNOWN",
+          "visits": 33,
+          "totalVisits": 68,
+          "elapsedMs": 0.685356000000013
+        },
+        {
+          "depth": 5,
+          "status": "UNKNOWN",
+          "visits": 68,
+          "totalVisits": 136,
+          "elapsedMs": 1.152070999999978
+        },
+        {
+          "depth": 6,
+          "status": "UNKNOWN",
+          "visits": 103,
+          "totalVisits": 239,
+          "elapsedMs": 2.4178249999999935
+        },
+        {
+          "depth": 7,
+          "status": "UNKNOWN",
+          "visits": 211,
+          "totalVisits": 450,
+          "elapsedMs": 3.9705319999999915
+        },
+        {
+          "depth": 8,
+          "status": "UNKNOWN",
+          "visits": 314,
+          "totalVisits": 764,
+          "elapsedMs": 8.060254999999984
+        },
+        {
+          "depth": 9,
+          "status": "UNKNOWN",
+          "visits": 674,
+          "totalVisits": 1438,
+          "elapsedMs": 12.970957999999996
+        },
+        {
+          "depth": 10,
+          "status": "UNKNOWN",
+          "visits": 1027,
+          "totalVisits": 2465,
+          "elapsedMs": 27.688578000000007
+        },
+        {
+          "depth": 11,
+          "status": "UNKNOWN",
+          "visits": 2439,
+          "totalVisits": 4904,
+          "elapsedMs": 55.76558299999999
+        },
+        {
+          "depth": 12,
+          "status": "UNKNOWN",
+          "visits": 3794,
+          "totalVisits": 8698,
+          "elapsedMs": 107.185449
+        },
+        {
+          "depth": 13,
+          "status": "UNKNOWN",
+          "visits": 10191,
+          "totalVisits": 18889,
+          "elapsedMs": 188.71620900000005
+        },
+        {
+          "depth": 14,
+          "status": "UNKNOWN",
+          "visits": 16354,
+          "totalVisits": 35243,
+          "elapsedMs": 467.7481059999999
+        },
+        {
+          "depth": 15,
+          "status": "UNKNOWN",
+          "visits": 49177,
+          "totalVisits": 84420,
+          "elapsedMs": 955.7746209999998
+        },
+        {
+          "depth": 16,
+          "status": "UNKNOWN",
+          "visits": 80679,
+          "totalVisits": 165099,
+          "elapsedMs": 2572.61749
+        },
+        {
+          "depth": 17,
+          "status": "UNKNOWN",
+          "visits": 258927,
+          "totalVisits": 424026,
+          "elapsedMs": 5325.521923999999
+        },
+        {
+          "depth": 18,
+          "status": "UNKNOWN",
+          "visits": 430052,
+          "totalVisits": 854078,
+          "elapsedMs": 14620.916821999997
+        },
+        {
+          "depth": 19,
+          "status": "NODE_BUDGET",
+          "visits": 145922,
+          "totalVisits": 1000000,
+          "elapsedMs": 2850.235908999999
+        }
+      ]
+    },
+    {
+      "rootId": "initial",
+      "index": 0,
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "proofNodes": 0,
+      "visits": 1000000,
+      "bookUses": 0,
+      "opponentCuts": 0,
+      "attempts": [
+        {
+          "depth": 1,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 2,
+          "elapsedMs": 0.27398899999997184
+        },
+        {
+          "depth": 2,
+          "status": "UNKNOWN",
+          "visits": 6,
+          "totalVisits": 8,
+          "elapsedMs": 0.30096900000000915
+        },
+        {
+          "depth": 3,
+          "status": "UNKNOWN",
+          "visits": 10,
+          "totalVisits": 18,
+          "elapsedMs": 0.6408059999999978
+        },
+        {
+          "depth": 4,
+          "status": "UNKNOWN",
+          "visits": 20,
+          "totalVisits": 38,
+          "elapsedMs": 0.5505110000000286
+        },
+        {
+          "depth": 5,
+          "status": "UNKNOWN",
+          "visits": 30,
+          "totalVisits": 68,
+          "elapsedMs": 0.7901689999999917
+        },
+        {
+          "depth": 6,
+          "status": "UNKNOWN",
+          "visits": 66,
+          "totalVisits": 134,
+          "elapsedMs": 1.3720769999999902
+        },
+        {
+          "depth": 7,
+          "status": "UNKNOWN",
+          "visits": 102,
+          "totalVisits": 236,
+          "elapsedMs": 4.191441999999995
+        },
+        {
+          "depth": 8,
+          "status": "UNKNOWN",
+          "visits": 210,
+          "totalVisits": 446,
+          "elapsedMs": 5.927150999999981
+        },
+        {
+          "depth": 9,
+          "status": "UNKNOWN",
+          "visits": 314,
+          "totalVisits": 760,
+          "elapsedMs": 11.673363000000052
+        },
+        {
+          "depth": 10,
+          "status": "UNKNOWN",
+          "visits": 707,
+          "totalVisits": 1467,
+          "elapsedMs": 20.399931000000038
+        },
+        {
+          "depth": 11,
+          "status": "UNKNOWN",
+          "visits": 1087,
+          "totalVisits": 2554,
+          "elapsedMs": 47.01993900000002
+        },
+        {
+          "depth": 12,
+          "status": "UNKNOWN",
+          "visits": 2816,
+          "totalVisits": 5370,
+          "elapsedMs": 78.04687100000001
+        },
+        {
+          "depth": 13,
+          "status": "UNKNOWN",
+          "visits": 4461,
+          "totalVisits": 9831,
+          "elapsedMs": 183.08181000000002
+        },
+        {
+          "depth": 14,
+          "status": "UNKNOWN",
+          "visits": 12964,
+          "totalVisits": 22795,
+          "elapsedMs": 354.527243
+        },
+        {
+          "depth": 15,
+          "status": "UNKNOWN",
+          "visits": 21119,
+          "totalVisits": 43914,
+          "elapsedMs": 910.6548280000002
+        },
+        {
+          "depth": 16,
+          "status": "UNKNOWN",
+          "visits": 65281,
+          "totalVisits": 109195,
+          "elapsedMs": 1850.997037
+        },
+        {
+          "depth": 17,
+          "status": "UNKNOWN",
+          "visits": 107732,
+          "totalVisits": 216927,
+          "elapsedMs": 5128.085271000001
+        },
+        {
+          "depth": 18,
+          "status": "UNKNOWN",
+          "visits": 350274,
+          "totalVisits": 567201,
+          "elapsedMs": 10296.337662000002
+        },
+        {
+          "depth": 19,
+          "status": "NODE_BUDGET",
+          "visits": 432799,
+          "totalVisits": 1000000,
+          "elapsedMs": 21465.989781
+        }
+      ]
+    },
+    {
+      "rootId": "after-first-0",
+      "index": 1,
+      "target": 0,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "proofNodes": 0,
+      "visits": 1000000,
+      "bookUses": 0,
+      "opponentCuts": 0,
+      "attempts": [
+        {
+          "depth": 1,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 2,
+          "elapsedMs": 0.8475379999999859
+        },
+        {
+          "depth": 2,
+          "status": "UNKNOWN",
+          "visits": 4,
+          "totalVisits": 6,
+          "elapsedMs": 0.47997399999997015
+        },
+        {
+          "depth": 3,
+          "status": "UNKNOWN",
+          "visits": 6,
+          "totalVisits": 12,
+          "elapsedMs": 0.7207789999999932
+        },
+        {
+          "depth": 4,
+          "status": "UNKNOWN",
+          "visits": 10,
+          "totalVisits": 22,
+          "elapsedMs": 0.7494930000000295
+        },
+        {
+          "depth": 5,
+          "status": "UNKNOWN",
+          "visits": 14,
+          "totalVisits": 36,
+          "elapsedMs": 0.9514439999999809
+        },
+        {
+          "depth": 6,
+          "status": "UNKNOWN",
+          "visits": 30,
+          "totalVisits": 66,
+          "elapsedMs": 1.1270549999999844
+        },
+        {
+          "depth": 7,
+          "status": "UNKNOWN",
+          "visits": 44,
+          "totalVisits": 110,
+          "elapsedMs": 2.3654879999999707
+        },
+        {
+          "depth": 8,
+          "status": "UNKNOWN",
+          "visits": 105,
+          "totalVisits": 215,
+          "elapsedMs": 4.823703000000023
+        },
+        {
+          "depth": 9,
+          "status": "UNKNOWN",
+          "visits": 165,
+          "totalVisits": 380,
+          "elapsedMs": 11.018298999999956
+        },
+        {
+          "depth": 10,
+          "status": "UNKNOWN",
+          "visits": 406,
+          "totalVisits": 786,
+          "elapsedMs": 18.148098000000005
+        },
+        {
+          "depth": 11,
+          "status": "UNKNOWN",
+          "visits": 639,
+          "totalVisits": 1425,
+          "elapsedMs": 42.544114000000036
+        },
+        {
+          "depth": 12,
+          "status": "UNKNOWN",
+          "visits": 1790,
+          "totalVisits": 3215,
+          "elapsedMs": 82.24409300000002
+        },
+        {
+          "depth": 13,
+          "status": "UNKNOWN",
+          "visits": 2912,
+          "totalVisits": 6127,
+          "elapsedMs": 212.88182000000006
+        },
+        {
+          "depth": 14,
+          "status": "UNKNOWN",
+          "visits": 9290,
+          "totalVisits": 15417,
+          "elapsedMs": 376.17108099999996
+        },
+        {
+          "depth": 15,
+          "status": "UNKNOWN",
+          "visits": 15425,
+          "totalVisits": 30842,
+          "elapsedMs": 1013.9693719999998
+        },
+        {
+          "depth": 16,
+          "status": "UNKNOWN",
+          "visits": 52108,
+          "totalVisits": 82950,
+          "elapsedMs": 2038.8083090000005
+        },
+        {
+          "depth": 17,
+          "status": "UNKNOWN",
+          "visits": 87535,
+          "totalVisits": 170485,
+          "elapsedMs": 5875.9170970000005
+        },
+        {
+          "depth": 18,
+          "status": "UNKNOWN",
+          "visits": 306172,
+          "totalVisits": 476657,
+          "elapsedMs": 12035.101042
+        },
+        {
+          "depth": 19,
+          "status": "UNKNOWN",
+          "visits": 515699,
+          "totalVisits": 992356,
+          "elapsedMs": 34840.177328000005
+        },
+        {
+          "depth": 20,
+          "status": "NODE_BUDGET",
+          "visits": 7644,
+          "totalVisits": 1000000,
+          "elapsedMs": 304.5793099999937
+        }
+      ]
+    },
+    {
+      "rootId": "after-first-0",
+      "index": 1,
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "proofNodes": 0,
+      "visits": 1000000,
+      "bookUses": 0,
+      "opponentCuts": 0,
+      "attempts": [
+        {
+          "depth": 1,
+          "status": "UNKNOWN",
+          "visits": 5,
+          "totalVisits": 5,
+          "elapsedMs": 0.9246259999999893
+        },
+        {
+          "depth": 2,
+          "status": "UNKNOWN",
+          "visits": 9,
+          "totalVisits": 14,
+          "elapsedMs": 0.8944999999999936
+        },
+        {
+          "depth": 3,
+          "status": "UNKNOWN",
+          "visits": 23,
+          "totalVisits": 37,
+          "elapsedMs": 1.2555150000000026
+        },
+        {
+          "depth": 4,
+          "status": "UNKNOWN",
+          "visits": 36,
+          "totalVisits": 73,
+          "elapsedMs": 2.0830910000000245
+        },
+        {
+          "depth": 5,
+          "status": "UNKNOWN",
+          "visits": 76,
+          "totalVisits": 149,
+          "elapsedMs": 3.054505000000006
+        },
+        {
+          "depth": 6,
+          "status": "UNKNOWN",
+          "visits": 116,
+          "totalVisits": 265,
+          "elapsedMs": 8.566730000000007
+        },
+        {
+          "depth": 7,
+          "status": "UNKNOWN",
+          "visits": 253,
+          "totalVisits": 518,
+          "elapsedMs": 14.538523999999995
+        },
+        {
+          "depth": 8,
+          "status": "UNKNOWN",
+          "visits": 386,
+          "totalVisits": 904,
+          "elapsedMs": 29.834135000000003
+        },
+        {
+          "depth": 9,
+          "status": "UNKNOWN",
+          "visits": 964,
+          "totalVisits": 1868,
+          "elapsedMs": 43.27337300000005
+        },
+        {
+          "depth": 10,
+          "status": "UNKNOWN",
+          "visits": 1526,
+          "totalVisits": 3394,
+          "elapsedMs": 100.12903399999993
+        },
+        {
+          "depth": 11,
+          "status": "UNKNOWN",
+          "visits": 4406,
+          "totalVisits": 7800,
+          "elapsedMs": 195.36846500000001
+        },
+        {
+          "depth": 12,
+          "status": "UNKNOWN",
+          "visits": 7234,
+          "totalVisits": 15034,
+          "elapsedMs": 455.72737399999994
+        },
+        {
+          "depth": 13,
+          "status": "UNKNOWN",
+          "visits": 24419,
+          "totalVisits": 39453,
+          "elapsedMs": 955.3816820000002
+        },
+        {
+          "depth": 14,
+          "status": "UNKNOWN",
+          "visits": 40835,
+          "totalVisits": 80288,
+          "elapsedMs": 2659.5558869999995
+        },
+        {
+          "depth": 15,
+          "status": "UNKNOWN",
+          "visits": 139789,
+          "totalVisits": 220077,
+          "elapsedMs": 5420.8766749999995
+        },
+        {
+          "depth": 16,
+          "status": "UNKNOWN",
+          "visits": 234780,
+          "totalVisits": 454857,
+          "elapsedMs": 15152.581489000002
+        },
+        {
+          "depth": 17,
+          "status": "NODE_BUDGET",
+          "visits": 545143,
+          "totalVisits": 1000000,
+          "elapsedMs": 21054.648613999998
+        }
+      ]
+    },
+    {
+      "rootId": "after-first-1",
+      "index": 2,
+      "target": 0,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "proofNodes": 0,
+      "visits": 1000000,
+      "bookUses": 0,
+      "opponentCuts": 0,
+      "attempts": [
+        {
+          "depth": 1,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 2,
+          "elapsedMs": 0.5747560000000362
+        },
+        {
+          "depth": 2,
+          "status": "UNKNOWN",
+          "visits": 6,
+          "totalVisits": 8,
+          "elapsedMs": 0.48130099999997356
+        },
+        {
+          "depth": 3,
+          "status": "UNKNOWN",
+          "visits": 10,
+          "totalVisits": 18,
+          "elapsedMs": 0.8140040000000113
+        },
+        {
+          "depth": 4,
+          "status": "UNKNOWN",
+          "visits": 23,
+          "totalVisits": 41,
+          "elapsedMs": 1.3029399999999782
+        },
+        {
+          "depth": 5,
+          "status": "UNKNOWN",
+          "visits": 36,
+          "totalVisits": 77,
+          "elapsedMs": 3.124389000000008
+        },
+        {
+          "depth": 6,
+          "status": "UNKNOWN",
+          "visits": 75,
+          "totalVisits": 152,
+          "elapsedMs": 4.421357999999998
+        },
+        {
+          "depth": 7,
+          "status": "UNKNOWN",
+          "visits": 113,
+          "totalVisits": 265,
+          "elapsedMs": 8.748649999999998
+        },
+        {
+          "depth": 8,
+          "status": "UNKNOWN",
+          "visits": 260,
+          "totalVisits": 525,
+          "elapsedMs": 14.760041000000001
+        },
+        {
+          "depth": 9,
+          "status": "UNKNOWN",
+          "visits": 403,
+          "totalVisits": 928,
+          "elapsedMs": 31.666634999999985
+        },
+        {
+          "depth": 10,
+          "status": "UNKNOWN",
+          "visits": 1023,
+          "totalVisits": 1951,
+          "elapsedMs": 42.789465000000064
+        },
+        {
+          "depth": 11,
+          "status": "UNKNOWN",
+          "visits": 1618,
+          "totalVisits": 3569,
+          "elapsedMs": 105.64632400000005
+        },
+        {
+          "depth": 12,
+          "status": "UNKNOWN",
+          "visits": 4616,
+          "totalVisits": 8185,
+          "elapsedMs": 196.336816
+        },
+        {
+          "depth": 13,
+          "status": "UNKNOWN",
+          "visits": 7498,
+          "totalVisits": 15683,
+          "elapsedMs": 488.22919000000013
+        },
+        {
+          "depth": 14,
+          "status": "UNKNOWN",
+          "visits": 23127,
+          "totalVisits": 38810,
+          "elapsedMs": 872.6972090000002
+        },
+        {
+          "depth": 15,
+          "status": "UNKNOWN",
+          "visits": 38171,
+          "totalVisits": 76981,
+          "elapsedMs": 2376.0678070000004
+        },
+        {
+          "depth": 16,
+          "status": "UNKNOWN",
+          "visits": 123296,
+          "totalVisits": 200277,
+          "elapsedMs": 4794.220464
+        },
+        {
+          "depth": 17,
+          "status": "UNKNOWN",
+          "visits": 205189,
+          "totalVisits": 405466,
+          "elapsedMs": 13194.826567
+        },
+        {
+          "depth": 18,
+          "status": "NODE_BUDGET",
+          "visits": 594534,
+          "totalVisits": 1000000,
+          "elapsedMs": 23361.150099
+        }
+      ]
+    },
+    {
+      "rootId": "after-first-1",
+      "index": 2,
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "proofNodes": 0,
+      "visits": 1000000,
+      "bookUses": 0,
+      "opponentCuts": 0,
+      "attempts": [
+        {
+          "depth": 1,
+          "status": "UNKNOWN",
+          "visits": 5,
+          "totalVisits": 5,
+          "elapsedMs": 0.4526299999999992
+        },
+        {
+          "depth": 2,
+          "status": "UNKNOWN",
+          "visits": 9,
+          "totalVisits": 14,
+          "elapsedMs": 0.38838900000001786
+        },
+        {
+          "depth": 3,
+          "status": "UNKNOWN",
+          "visits": 21,
+          "totalVisits": 35,
+          "elapsedMs": 0.5924290000000383
+        },
+        {
+          "depth": 4,
+          "status": "UNKNOWN",
+          "visits": 33,
+          "totalVisits": 68,
+          "elapsedMs": 0.7946479999999951
+        },
+        {
+          "depth": 5,
+          "status": "UNKNOWN",
+          "visits": 65,
+          "totalVisits": 133,
+          "elapsedMs": 1.2362239999999929
+        },
+        {
+          "depth": 6,
+          "status": "UNKNOWN",
+          "visits": 96,
+          "totalVisits": 229,
+          "elapsedMs": 3.003535999999997
+        },
+        {
+          "depth": 7,
+          "status": "UNKNOWN",
+          "visits": 205,
+          "totalVisits": 434,
+          "elapsedMs": 5.0353829999999675
+        },
+        {
+          "depth": 8,
+          "status": "UNKNOWN",
+          "visits": 312,
+          "totalVisits": 746,
+          "elapsedMs": 10.495980000000031
+        },
+        {
+          "depth": 9,
+          "status": "UNKNOWN",
+          "visits": 773,
+          "totalVisits": 1519,
+          "elapsedMs": 23.668733999999972
+        },
+        {
+          "depth": 10,
+          "status": "UNKNOWN",
+          "visits": 1219,
+          "totalVisits": 2738,
+          "elapsedMs": 49.834475
+        },
+        {
+          "depth": 11,
+          "status": "UNKNOWN",
+          "visits": 3637,
+          "totalVisits": 6375,
+          "elapsedMs": 89.35883100000001
+        },
+        {
+          "depth": 12,
+          "status": "UNKNOWN",
+          "visits": 5939,
+          "totalVisits": 12314,
+          "elapsedMs": 233.37328599999995
+        },
+        {
+          "depth": 13,
+          "status": "UNKNOWN",
+          "visits": 18493,
+          "totalVisits": 30807,
+          "elapsedMs": 441.32476800000006
+        },
+        {
+          "depth": 14,
+          "status": "UNKNOWN",
+          "visits": 30604,
+          "totalVisits": 61411,
+          "elapsedMs": 1188.304508
+        },
+        {
+          "depth": 15,
+          "status": "UNKNOWN",
+          "visits": 100646,
+          "totalVisits": 162057,
+          "elapsedMs": 2586.0014790000005
+        },
+        {
+          "depth": 16,
+          "status": "UNKNOWN",
+          "visits": 168111,
+          "totalVisits": 330168,
+          "elapsedMs": 7471.204211
+        },
+        {
+          "depth": 17,
+          "status": "UNKNOWN",
+          "visits": 573831,
+          "totalVisits": 903999,
+          "elapsedMs": 15571.133714000001
+        },
+        {
+          "depth": 18,
+          "status": "NODE_BUDGET",
+          "visits": 96001,
+          "totalVisits": 1000000,
+          "elapsedMs": 4296.721558000001
+        }
+      ]
+    },
+    {
+      "rootId": "after-first-2",
+      "index": 3,
+      "target": 0,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "proofNodes": 0,
+      "visits": 1000000,
+      "bookUses": 0,
+      "opponentCuts": 0,
+      "attempts": [
+        {
+          "depth": 1,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 2,
+          "elapsedMs": 0.6405889999999772
+        },
+        {
+          "depth": 2,
+          "status": "UNKNOWN",
+          "visits": 4,
+          "totalVisits": 6,
+          "elapsedMs": 0.3000589999999761
+        },
+        {
+          "depth": 3,
+          "status": "UNKNOWN",
+          "visits": 6,
+          "totalVisits": 12,
+          "elapsedMs": 0.4471039999999675
+        },
+        {
+          "depth": 4,
+          "status": "UNKNOWN",
+          "visits": 9,
+          "totalVisits": 21,
+          "elapsedMs": 0.5919480000000021
+        },
+        {
+          "depth": 5,
+          "status": "UNKNOWN",
+          "visits": 12,
+          "totalVisits": 33,
+          "elapsedMs": 0.49725499999999556
+        },
+        {
+          "depth": 6,
+          "status": "UNKNOWN",
+          "visits": 21,
+          "totalVisits": 54,
+          "elapsedMs": 0.8663829999999848
+        },
+        {
+          "depth": 7,
+          "status": "UNKNOWN",
+          "visits": 30,
+          "totalVisits": 84,
+          "elapsedMs": 1.0919740000000502
+        },
+        {
+          "depth": 8,
+          "status": "UNKNOWN",
+          "visits": 51,
+          "totalVisits": 135,
+          "elapsedMs": 1.7646799999999985
+        },
+        {
+          "depth": 9,
+          "status": "UNKNOWN",
+          "visits": 71,
+          "totalVisits": 206,
+          "elapsedMs": 3.0534260000000017
+        },
+        {
+          "depth": 10,
+          "status": "UNKNOWN",
+          "visits": 144,
+          "totalVisits": 350,
+          "elapsedMs": 6.128961000000004
+        },
+        {
+          "depth": 11,
+          "status": "UNKNOWN",
+          "visits": 217,
+          "totalVisits": 567,
+          "elapsedMs": 16.13346899999999
+        },
+        {
+          "depth": 12,
+          "status": "UNKNOWN",
+          "visits": 578,
+          "totalVisits": 1145,
+          "elapsedMs": 22.295434
+        },
+        {
+          "depth": 13,
+          "status": "UNKNOWN",
+          "visits": 926,
+          "totalVisits": 2071,
+          "elapsedMs": 55.69280699999996
+        },
+        {
+          "depth": 14,
+          "status": "UNKNOWN",
+          "visits": 2985,
+          "totalVisits": 5056,
+          "elapsedMs": 106.84387399999997
+        },
+        {
+          "depth": 15,
+          "status": "UNKNOWN",
+          "visits": 4943,
+          "totalVisits": 9999,
+          "elapsedMs": 269.743924
+        },
+        {
+          "depth": 16,
+          "status": "UNKNOWN",
+          "visits": 17358,
+          "totalVisits": 27357,
+          "elapsedMs": 597.659093
+        },
+        {
+          "depth": 17,
+          "status": "UNKNOWN",
+          "visits": 29037,
+          "totalVisits": 56394,
+          "elapsedMs": 1712.230656
+        },
+        {
+          "depth": 18,
+          "status": "UNKNOWN",
+          "visits": 103346,
+          "totalVisits": 159740,
+          "elapsedMs": 3621.062173
+        },
+        {
+          "depth": 19,
+          "status": "UNKNOWN",
+          "visits": 174303,
+          "totalVisits": 334043,
+          "elapsedMs": 10569.253228999998
+        },
+        {
+          "depth": 20,
+          "status": "UNKNOWN",
+          "visits": 625427,
+          "totalVisits": 959470,
+          "elapsedMs": 22613.652082
+        },
+        {
+          "depth": 21,
+          "status": "NODE_BUDGET",
+          "visits": 40530,
+          "totalVisits": 1000000,
+          "elapsedMs": 2636.6421450000053
+        }
+      ]
+    },
+    {
+      "rootId": "after-first-2",
+      "index": 3,
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "proofNodes": 0,
+      "visits": 1000000,
+      "bookUses": 0,
+      "opponentCuts": 0,
+      "attempts": [
+        {
+          "depth": 1,
+          "status": "UNKNOWN",
+          "visits": 3,
+          "totalVisits": 3,
+          "elapsedMs": 0.7277920000000222
+        },
+        {
+          "depth": 2,
+          "status": "UNKNOWN",
+          "visits": 5,
+          "totalVisits": 8,
+          "elapsedMs": 0.29786300000000665
+        },
+        {
+          "depth": 3,
+          "status": "UNKNOWN",
+          "visits": 15,
+          "totalVisits": 23,
+          "elapsedMs": 0.6107279999999946
+        },
+        {
+          "depth": 4,
+          "status": "UNKNOWN",
+          "visits": 23,
+          "totalVisits": 46,
+          "elapsedMs": 0.823615000000018
+        },
+        {
+          "depth": 5,
+          "status": "UNKNOWN",
+          "visits": 60,
+          "totalVisits": 106,
+          "elapsedMs": 2.019632999999999
+        },
+        {
+          "depth": 6,
+          "status": "UNKNOWN",
+          "visits": 94,
+          "totalVisits": 200,
+          "elapsedMs": 4.319952999999998
+        },
+        {
+          "depth": 7,
+          "status": "UNKNOWN",
+          "visits": 231,
+          "totalVisits": 431,
+          "elapsedMs": 8.562290000000019
+        },
+        {
+          "depth": 8,
+          "status": "UNKNOWN",
+          "visits": 365,
+          "totalVisits": 796,
+          "elapsedMs": 17.902405999999985
+        },
+        {
+          "depth": 9,
+          "status": "UNKNOWN",
+          "visits": 1027,
+          "totalVisits": 1823,
+          "elapsedMs": 31.618548999999973
+        },
+        {
+          "depth": 10,
+          "status": "UNKNOWN",
+          "visits": 1679,
+          "totalVisits": 3502,
+          "elapsedMs": 81.299081
+        },
+        {
+          "depth": 11,
+          "status": "UNKNOWN",
+          "visits": 5179,
+          "totalVisits": 8681,
+          "elapsedMs": 158.64392799999996
+        },
+        {
+          "depth": 12,
+          "status": "UNKNOWN",
+          "visits": 8521,
+          "totalVisits": 17202,
+          "elapsedMs": 410.2039769999999
+        },
+        {
+          "depth": 13,
+          "status": "UNKNOWN",
+          "visits": 27496,
+          "totalVisits": 44698,
+          "elapsedMs": 797.6153280000001
+        },
+        {
+          "depth": 14,
+          "status": "UNKNOWN",
+          "visits": 45873,
+          "totalVisits": 90571,
+          "elapsedMs": 2206.7684770000005
+        },
+        {
+          "depth": 15,
+          "status": "UNKNOWN",
+          "visits": 155334,
+          "totalVisits": 245905,
+          "elapsedMs": 4615.221822
+        },
+        {
+          "depth": 16,
+          "status": "UNKNOWN",
+          "visits": 260961,
+          "totalVisits": 506866,
+          "elapsedMs": 13449.429321
+        },
+        {
+          "depth": 17,
+          "status": "NODE_BUDGET",
+          "visits": 493134,
+          "totalVisits": 1000000,
+          "elapsedMs": 15130.609550999998
+        }
+      ]
+    },
+    {
+      "rootId": "after-first-3",
+      "index": 4,
+      "target": 0,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "proofNodes": 0,
+      "visits": 1000000,
+      "bookUses": 0,
+      "opponentCuts": 0,
+      "attempts": [
+        {
+          "depth": 1,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 2,
+          "elapsedMs": 0.3782489999999825
+        },
+        {
+          "depth": 2,
+          "status": "UNKNOWN",
+          "visits": 6,
+          "totalVisits": 8,
+          "elapsedMs": 0.44495799999998553
+        },
+        {
+          "depth": 3,
+          "status": "UNKNOWN",
+          "visits": 10,
+          "totalVisits": 18,
+          "elapsedMs": 0.6327850000000126
+        },
+        {
+          "depth": 4,
+          "status": "UNKNOWN",
+          "visits": 25,
+          "totalVisits": 43,
+          "elapsedMs": 0.9505950000000212
+        },
+        {
+          "depth": 5,
+          "status": "UNKNOWN",
+          "visits": 40,
+          "totalVisits": 83,
+          "elapsedMs": 2.071401000000037
+        },
+        {
+          "depth": 6,
+          "status": "UNKNOWN",
+          "visits": 84,
+          "totalVisits": 167,
+          "elapsedMs": 2.6596999999999866
+        },
+        {
+          "depth": 7,
+          "status": "UNKNOWN",
+          "visits": 126,
+          "totalVisits": 293,
+          "elapsedMs": 4.522444000000007
+        },
+        {
+          "depth": 8,
+          "status": "UNKNOWN",
+          "visits": 257,
+          "totalVisits": 550,
+          "elapsedMs": 7.1402120000000195
+        },
+        {
+          "depth": 9,
+          "status": "UNKNOWN",
+          "visits": 387,
+          "totalVisits": 937,
+          "elapsedMs": 15.454477999999995
+        },
+        {
+          "depth": 10,
+          "status": "UNKNOWN",
+          "visits": 865,
+          "totalVisits": 1802,
+          "elapsedMs": 24.04763700000001
+        },
+        {
+          "depth": 11,
+          "status": "UNKNOWN",
+          "visits": 1319,
+          "totalVisits": 3121,
+          "elapsedMs": 56.32386300000002
+        },
+        {
+          "depth": 12,
+          "status": "UNKNOWN",
+          "visits": 3206,
+          "totalVisits": 6327,
+          "elapsedMs": 82.863272
+        },
+        {
+          "depth": 13,
+          "status": "UNKNOWN",
+          "visits": 5017,
+          "totalVisits": 11344,
+          "elapsedMs": 190.73512600000004
+        },
+        {
+          "depth": 14,
+          "status": "UNKNOWN",
+          "visits": 13774,
+          "totalVisits": 25118,
+          "elapsedMs": 378.01573099999996
+        },
+        {
+          "depth": 15,
+          "status": "UNKNOWN",
+          "visits": 22139,
+          "totalVisits": 47257,
+          "elapsedMs": 910.536724
+        },
+        {
+          "depth": 16,
+          "status": "UNKNOWN",
+          "visits": 66164,
+          "totalVisits": 113421,
+          "elapsedMs": 1842.7525510000003
+        },
+        {
+          "depth": 17,
+          "status": "UNKNOWN",
+          "visits": 108291,
+          "totalVisits": 221712,
+          "elapsedMs": 4902.280821
+        },
+        {
+          "depth": 18,
+          "status": "UNKNOWN",
+          "visits": 352535,
+          "totalVisits": 574247,
+          "elapsedMs": 10217.157271
+        },
+        {
+          "depth": 19,
+          "status": "NODE_BUDGET",
+          "visits": 425753,
+          "totalVisits": 1000000,
+          "elapsedMs": 20240.252655
+        }
+      ]
+    },
+    {
+      "rootId": "after-first-3",
+      "index": 4,
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "proofNodes": 0,
+      "visits": 1000000,
+      "bookUses": 0,
+      "opponentCuts": 0,
+      "attempts": [
+        {
+          "depth": 1,
+          "status": "UNKNOWN",
+          "visits": 5,
+          "totalVisits": 5,
+          "elapsedMs": 0.9941530000000398
+        },
+        {
+          "depth": 2,
+          "status": "UNKNOWN",
+          "visits": 9,
+          "totalVisits": 14,
+          "elapsedMs": 0.8933739999999943
+        },
+        {
+          "depth": 3,
+          "status": "UNKNOWN",
+          "visits": 19,
+          "totalVisits": 33,
+          "elapsedMs": 0.782286000000056
+        },
+        {
+          "depth": 4,
+          "status": "UNKNOWN",
+          "visits": 29,
+          "totalVisits": 62,
+          "elapsedMs": 1.1901110000000017
+        },
+        {
+          "depth": 5,
+          "status": "UNKNOWN",
+          "visits": 65,
+          "totalVisits": 127,
+          "elapsedMs": 2.040784999999971
+        },
+        {
+          "depth": 6,
+          "status": "UNKNOWN",
+          "visits": 101,
+          "totalVisits": 228,
+          "elapsedMs": 5.501570999999956
+        },
+        {
+          "depth": 7,
+          "status": "UNKNOWN",
+          "visits": 209,
+          "totalVisits": 437,
+          "elapsedMs": 8.549204999999972
+        },
+        {
+          "depth": 8,
+          "status": "UNKNOWN",
+          "visits": 313,
+          "totalVisits": 750,
+          "elapsedMs": 23.78711900000002
+        },
+        {
+          "depth": 9,
+          "status": "UNKNOWN",
+          "visits": 706,
+          "totalVisits": 1456,
+          "elapsedMs": 28.55709999999999
+        },
+        {
+          "depth": 10,
+          "status": "UNKNOWN",
+          "visits": 1086,
+          "totalVisits": 2542,
+          "elapsedMs": 62.28962999999999
+        },
+        {
+          "depth": 11,
+          "status": "UNKNOWN",
+          "visits": 2815,
+          "totalVisits": 5357,
+          "elapsedMs": 113.21893900000009
+        },
+        {
+          "depth": 12,
+          "status": "UNKNOWN",
+          "visits": 4460,
+          "totalVisits": 9817,
+          "elapsedMs": 246.98854100000005
+        },
+        {
+          "depth": 13,
+          "status": "UNKNOWN",
+          "visits": 12963,
+          "totalVisits": 22780,
+          "elapsedMs": 481.154484
+        },
+        {
+          "depth": 14,
+          "status": "UNKNOWN",
+          "visits": 21118,
+          "totalVisits": 43898,
+          "elapsedMs": 1211.18762
+        },
+        {
+          "depth": 15,
+          "status": "UNKNOWN",
+          "visits": 65280,
+          "totalVisits": 109178,
+          "elapsedMs": 2410.5385570000003
+        },
+        {
+          "depth": 16,
+          "status": "UNKNOWN",
+          "visits": 107731,
+          "totalVisits": 216909,
+          "elapsedMs": 6714.363508
+        },
+        {
+          "depth": 17,
+          "status": "UNKNOWN",
+          "visits": 350273,
+          "totalVisits": 567182,
+          "elapsedMs": 13266.804683999999
+        },
+        {
+          "depth": 18,
+          "status": "NODE_BUDGET",
+          "visits": 432818,
+          "totalVisits": 1000000,
+          "elapsedMs": 27090.337032
+        }
+      ]
+    },
+    {
+      "rootId": "primary-8192-before-21",
+      "index": 5,
+      "target": 0,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "proofNodes": 0,
+      "visits": 1000000,
+      "bookUses": 0,
+      "opponentCuts": 10,
+      "attempts": [
+        {
+          "depth": 1,
+          "status": "UNKNOWN",
+          "visits": 4,
+          "totalVisits": 4,
+          "elapsedMs": 0.7778030000000058
+        },
+        {
+          "depth": 2,
+          "status": "UNKNOWN",
+          "visits": 7,
+          "totalVisits": 11,
+          "elapsedMs": 0.9998279999999795
+        },
+        {
+          "depth": 3,
+          "status": "UNKNOWN",
+          "visits": 18,
+          "totalVisits": 29,
+          "elapsedMs": 1.396338999999955
+        },
+        {
+          "depth": 4,
+          "status": "UNKNOWN",
+          "visits": 29,
+          "totalVisits": 58,
+          "elapsedMs": 2.365238999999974
+        },
+        {
+          "depth": 5,
+          "status": "UNKNOWN",
+          "visits": 97,
+          "totalVisits": 155,
+          "elapsedMs": 4.491020999999989
+        },
+        {
+          "depth": 6,
+          "status": "UNKNOWN",
+          "visits": 163,
+          "totalVisits": 318,
+          "elapsedMs": 14.54417699999999
+        },
+        {
+          "depth": 7,
+          "status": "UNKNOWN",
+          "visits": 545,
+          "totalVisits": 863,
+          "elapsedMs": 25.910575999999992
+        },
+        {
+          "depth": 8,
+          "status": "UNKNOWN",
+          "visits": 923,
+          "totalVisits": 1786,
+          "elapsedMs": 89.77149599999996
+        },
+        {
+          "depth": 9,
+          "status": "UNKNOWN",
+          "visits": 2827,
+          "totalVisits": 4613,
+          "elapsedMs": 145.05130900000006
+        },
+        {
+          "depth": 10,
+          "status": "UNKNOWN",
+          "visits": 4676,
+          "totalVisits": 9289,
+          "elapsedMs": 439.689832
+        },
+        {
+          "depth": 11,
+          "status": "UNKNOWN",
+          "visits": 11834,
+          "totalVisits": 21123,
+          "elapsedMs": 615.7480970000001
+        },
+        {
+          "depth": 12,
+          "status": "UNKNOWN",
+          "visits": 18770,
+          "totalVisits": 39893,
+          "elapsedMs": 1151.680744
+        },
+        {
+          "depth": 13,
+          "status": "UNKNOWN",
+          "visits": 43661,
+          "totalVisits": 83554,
+          "elapsedMs": 1819.8071659999996
+        },
+        {
+          "depth": 14,
+          "status": "UNKNOWN",
+          "visits": 66996,
+          "totalVisits": 150550,
+          "elapsedMs": 2741.1702419999992
+        },
+        {
+          "depth": 15,
+          "status": "UNKNOWN",
+          "visits": 153434,
+          "totalVisits": 303984,
+          "elapsedMs": 5078.185872999999
+        },
+        {
+          "depth": 16,
+          "status": "UNKNOWN",
+          "visits": 233810,
+          "totalVisits": 537794,
+          "elapsedMs": 7970.286390000001
+        },
+        {
+          "depth": 17,
+          "status": "NODE_BUDGET",
+          "visits": 462206,
+          "totalVisits": 1000000,
+          "elapsedMs": 14177.753826999997
+        }
+      ]
+    },
+    {
+      "rootId": "primary-8192-before-21",
+      "index": 5,
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "proofNodes": 0,
+      "visits": 1000000,
+      "bookUses": 0,
+      "opponentCuts": 0,
+      "attempts": [
+        {
+          "depth": 1,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 2,
+          "elapsedMs": 0.29987799999997833
+        },
+        {
+          "depth": 2,
+          "status": "UNKNOWN",
+          "visits": 5,
+          "totalVisits": 7,
+          "elapsedMs": 0.9279359999999883
+        },
+        {
+          "depth": 3,
+          "status": "UNKNOWN",
+          "visits": 8,
+          "totalVisits": 15,
+          "elapsedMs": 0.38220000000001164
+        },
+        {
+          "depth": 4,
+          "status": "UNKNOWN",
+          "visits": 24,
+          "totalVisits": 39,
+          "elapsedMs": 0.7460239999999771
+        },
+        {
+          "depth": 5,
+          "status": "UNKNOWN",
+          "visits": 40,
+          "totalVisits": 79,
+          "elapsedMs": 1.5920269999999732
+        },
+        {
+          "depth": 6,
+          "status": "UNKNOWN",
+          "visits": 150,
+          "totalVisits": 229,
+          "elapsedMs": 4.211918999999966
+        },
+        {
+          "depth": 7,
+          "status": "UNKNOWN",
+          "visits": 256,
+          "totalVisits": 485,
+          "elapsedMs": 10.864702999999963
+        },
+        {
+          "depth": 8,
+          "status": "UNKNOWN",
+          "visits": 999,
+          "totalVisits": 1484,
+          "elapsedMs": 33.05027100000001
+        },
+        {
+          "depth": 9,
+          "status": "UNKNOWN",
+          "visits": 1706,
+          "totalVisits": 3190,
+          "elapsedMs": 58.79358300000001
+        },
+        {
+          "depth": 10,
+          "status": "UNKNOWN",
+          "visits": 5419,
+          "totalVisits": 8609,
+          "elapsedMs": 140.61338800000004
+        },
+        {
+          "depth": 11,
+          "status": "UNKNOWN",
+          "visits": 8785,
+          "totalVisits": 17394,
+          "elapsedMs": 220.880656
+        },
+        {
+          "depth": 12,
+          "status": "UNKNOWN",
+          "visits": 27062,
+          "totalVisits": 44456,
+          "elapsedMs": 551.4519200000001
+        },
+        {
+          "depth": 13,
+          "status": "UNKNOWN",
+          "visits": 42054,
+          "totalVisits": 86510,
+          "elapsedMs": 850.8701570000001
+        },
+        {
+          "depth": 14,
+          "status": "UNKNOWN",
+          "visits": 116089,
+          "totalVisits": 202599,
+          "elapsedMs": 2114.6473990000004
+        },
+        {
+          "depth": 15,
+          "status": "UNKNOWN",
+          "visits": 178352,
+          "totalVisits": 380951,
+          "elapsedMs": 3415.196828
+        },
+        {
+          "depth": 16,
+          "status": "NODE_BUDGET",
+          "visits": 619049,
+          "totalVisits": 1000000,
+          "elapsedMs": 11175.521004
+        }
+      ]
+    },
+    {
+      "rootId": "primary-8192-before-23",
+      "index": 6,
+      "target": 0,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "proofNodes": 0,
+      "visits": 1000000,
+      "bookUses": 0,
+      "opponentCuts": 16,
+      "attempts": [
+        {
+          "depth": 1,
+          "status": "UNKNOWN",
+          "visits": 4,
+          "totalVisits": 4,
+          "elapsedMs": 0.4129560000000083
+        },
+        {
+          "depth": 2,
+          "status": "UNKNOWN",
+          "visits": 7,
+          "totalVisits": 11,
+          "elapsedMs": 0.34191999999998757
+        },
+        {
+          "depth": 3,
+          "status": "UNKNOWN",
+          "visits": 20,
+          "totalVisits": 31,
+          "elapsedMs": 0.8627859999999998
+        },
+        {
+          "depth": 4,
+          "status": "UNKNOWN",
+          "visits": 32,
+          "totalVisits": 63,
+          "elapsedMs": 1.4285509999999988
+        },
+        {
+          "depth": 5,
+          "status": "UNKNOWN",
+          "visits": 80,
+          "totalVisits": 143,
+          "elapsedMs": 2.3894339999999943
+        },
+        {
+          "depth": 6,
+          "status": "UNKNOWN",
+          "visits": 128,
+          "totalVisits": 271,
+          "elapsedMs": 7.889497000000006
+        },
+        {
+          "depth": 7,
+          "status": "UNKNOWN",
+          "visits": 248,
+          "totalVisits": 519,
+          "elapsedMs": 9.484677000000005
+        },
+        {
+          "depth": 8,
+          "status": "UNKNOWN",
+          "visits": 369,
+          "totalVisits": 888,
+          "elapsedMs": 15.077408999999989
+        },
+        {
+          "depth": 9,
+          "status": "UNKNOWN",
+          "visits": 701,
+          "totalVisits": 1589,
+          "elapsedMs": 20.491033000000016
+        },
+        {
+          "depth": 10,
+          "status": "UNKNOWN",
+          "visits": 1029,
+          "totalVisits": 2618,
+          "elapsedMs": 30.270415000000014
+        },
+        {
+          "depth": 11,
+          "status": "UNKNOWN",
+          "visits": 2016,
+          "totalVisits": 4634,
+          "elapsedMs": 50.16984100000002
+        },
+        {
+          "depth": 12,
+          "status": "UNKNOWN",
+          "visits": 3000,
+          "totalVisits": 7634,
+          "elapsedMs": 77.85847000000001
+        },
+        {
+          "depth": 13,
+          "status": "UNKNOWN",
+          "visits": 5786,
+          "totalVisits": 13420,
+          "elapsedMs": 132.31258299999996
+        },
+        {
+          "depth": 14,
+          "status": "UNKNOWN",
+          "visits": 8501,
+          "totalVisits": 21921,
+          "elapsedMs": 199.887253
+        },
+        {
+          "depth": 15,
+          "status": "UNKNOWN",
+          "visits": 16422,
+          "totalVisits": 38343,
+          "elapsedMs": 332.1737059999999
+        },
+        {
+          "depth": 16,
+          "status": "UNKNOWN",
+          "visits": 24051,
+          "totalVisits": 62394,
+          "elapsedMs": 502.81346600000006
+        },
+        {
+          "depth": 17,
+          "status": "UNKNOWN",
+          "visits": 47839,
+          "totalVisits": 110233,
+          "elapsedMs": 918.7096149999998
+        },
+        {
+          "depth": 18,
+          "status": "UNKNOWN",
+          "visits": 70599,
+          "totalVisits": 180832,
+          "elapsedMs": 1582.6088009999999
+        },
+        {
+          "depth": 19,
+          "status": "UNKNOWN",
+          "visits": 153715,
+          "totalVisits": 334547,
+          "elapsedMs": 2844.733932
+        },
+        {
+          "depth": 20,
+          "status": "UNKNOWN",
+          "visits": 228268,
+          "totalVisits": 562815,
+          "elapsedMs": 4517.408166
+        },
+        {
+          "depth": 21,
+          "status": "NODE_BUDGET",
+          "visits": 437185,
+          "totalVisits": 1000000,
+          "elapsedMs": 8049.119914999999
+        }
+      ]
+    },
+    {
+      "rootId": "primary-8192-before-23",
+      "index": 6,
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "proofNodes": 0,
+      "visits": 1000000,
+      "bookUses": 0,
+      "opponentCuts": 0,
+      "attempts": [
+        {
+          "depth": 1,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 2,
+          "elapsedMs": 0.4418679999999995
+        },
+        {
+          "depth": 2,
+          "status": "UNKNOWN",
+          "visits": 9,
+          "totalVisits": 11,
+          "elapsedMs": 0.5067760000000021
+        },
+        {
+          "depth": 3,
+          "status": "UNKNOWN",
+          "visits": 16,
+          "totalVisits": 27,
+          "elapsedMs": 1.550294000000008
+        },
+        {
+          "depth": 4,
+          "status": "UNKNOWN",
+          "visits": 50,
+          "totalVisits": 77,
+          "elapsedMs": 1.727753000000007
+        },
+        {
+          "depth": 5,
+          "status": "UNKNOWN",
+          "visits": 82,
+          "totalVisits": 159,
+          "elapsedMs": 3.6705109999999763
+        },
+        {
+          "depth": 6,
+          "status": "UNKNOWN",
+          "visits": 276,
+          "totalVisits": 435,
+          "elapsedMs": 9.320905000000039
+        },
+        {
+          "depth": 7,
+          "status": "UNKNOWN",
+          "visits": 449,
+          "totalVisits": 884,
+          "elapsedMs": 15.561011000000008
+        },
+        {
+          "depth": 8,
+          "status": "UNKNOWN",
+          "visits": 1382,
+          "totalVisits": 2266,
+          "elapsedMs": 40.528858000000014
+        },
+        {
+          "depth": 9,
+          "status": "UNKNOWN",
+          "visits": 2188,
+          "totalVisits": 4454,
+          "elapsedMs": 58.14095099999997
+        },
+        {
+          "depth": 10,
+          "status": "UNKNOWN",
+          "visits": 5365,
+          "totalVisits": 9819,
+          "elapsedMs": 133.63397300000003
+        },
+        {
+          "depth": 11,
+          "status": "UNKNOWN",
+          "visits": 8267,
+          "totalVisits": 18086,
+          "elapsedMs": 199.44549199999994
+        },
+        {
+          "depth": 12,
+          "status": "UNKNOWN",
+          "visits": 20750,
+          "totalVisits": 38836,
+          "elapsedMs": 424.650272
+        },
+        {
+          "depth": 13,
+          "status": "UNKNOWN",
+          "visits": 31738,
+          "totalVisits": 70574,
+          "elapsedMs": 656.780156
+        },
+        {
+          "depth": 14,
+          "status": "UNKNOWN",
+          "visits": 120799,
+          "totalVisits": 191373,
+          "elapsedMs": 2343.2719849999994
+        },
+        {
+          "depth": 15,
+          "status": "UNKNOWN",
+          "visits": 185308,
+          "totalVisits": 376681,
+          "elapsedMs": 3798.605509
+        },
+        {
+          "depth": 16,
+          "status": "UNKNOWN",
+          "visits": 442852,
+          "totalVisits": 819533,
+          "elapsedMs": 8202.395788
+        },
+        {
+          "depth": 17,
+          "status": "NODE_BUDGET",
+          "visits": 180467,
+          "totalVisits": 1000000,
+          "elapsedMs": 3604.564147000001
+        }
+      ]
+    },
+    {
+      "rootId": "primary-8192-before-25",
+      "index": 7,
+      "target": 0,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "proofNodes": 0,
+      "visits": 1000000,
+      "bookUses": 0,
+      "opponentCuts": 17,
+      "attempts": [
+        {
+          "depth": 1,
+          "status": "UNKNOWN",
+          "visits": 9,
+          "totalVisits": 9,
+          "elapsedMs": 1.0933440000000019
+        },
+        {
+          "depth": 2,
+          "status": "UNKNOWN",
+          "visits": 17,
+          "totalVisits": 26,
+          "elapsedMs": 2.029685000000029
+        },
+        {
+          "depth": 3,
+          "status": "UNKNOWN",
+          "visits": 54,
+          "totalVisits": 80,
+          "elapsedMs": 2.396809000000019
+        },
+        {
+          "depth": 4,
+          "status": "UNKNOWN",
+          "visits": 91,
+          "totalVisits": 171,
+          "elapsedMs": 8.576448000000028
+        },
+        {
+          "depth": 5,
+          "status": "UNKNOWN",
+          "visits": 178,
+          "totalVisits": 349,
+          "elapsedMs": 12.876383999999973
+        },
+        {
+          "depth": 6,
+          "status": "UNKNOWN",
+          "visits": 265,
+          "totalVisits": 614,
+          "elapsedMs": 16.660282999999993
+        },
+        {
+          "depth": 7,
+          "status": "UNKNOWN",
+          "visits": 480,
+          "totalVisits": 1094,
+          "elapsedMs": 18.407228999999973
+        },
+        {
+          "depth": 8,
+          "status": "UNKNOWN",
+          "visits": 693,
+          "totalVisits": 1787,
+          "elapsedMs": 26.097569999999962
+        },
+        {
+          "depth": 9,
+          "status": "UNKNOWN",
+          "visits": 1299,
+          "totalVisits": 3086,
+          "elapsedMs": 41.69600600000001
+        },
+        {
+          "depth": 10,
+          "status": "UNKNOWN",
+          "visits": 1902,
+          "totalVisits": 4988,
+          "elapsedMs": 73.48625199999998
+        },
+        {
+          "depth": 11,
+          "status": "UNKNOWN",
+          "visits": 3536,
+          "totalVisits": 8524,
+          "elapsedMs": 129.125626
+        },
+        {
+          "depth": 12,
+          "status": "UNKNOWN",
+          "visits": 5131,
+          "totalVisits": 13655,
+          "elapsedMs": 145.50248899999997
+        },
+        {
+          "depth": 13,
+          "status": "UNKNOWN",
+          "visits": 9326,
+          "totalVisits": 22981,
+          "elapsedMs": 249.12767300000007
+        },
+        {
+          "depth": 14,
+          "status": "UNKNOWN",
+          "visits": 13414,
+          "totalVisits": 36395,
+          "elapsedMs": 368.23245699999984
+        },
+        {
+          "depth": 15,
+          "status": "UNKNOWN",
+          "visits": 25193,
+          "totalVisits": 61588,
+          "elapsedMs": 614.829142
+        },
+        {
+          "depth": 16,
+          "status": "UNKNOWN",
+          "visits": 36479,
+          "totalVisits": 98067,
+          "elapsedMs": 964.9600140000002
+        },
+        {
+          "depth": 17,
+          "status": "UNKNOWN",
+          "visits": 75272,
+          "totalVisits": 173339,
+          "elapsedMs": 1799.8687959999997
+        },
+        {
+          "depth": 18,
+          "status": "UNKNOWN",
+          "visits": 110465,
+          "totalVisits": 283804,
+          "elapsedMs": 2822.169411
+        },
+        {
+          "depth": 19,
+          "status": "UNKNOWN",
+          "visits": 233524,
+          "totalVisits": 517328,
+          "elapsedMs": 5519.187098
+        },
+        {
+          "depth": 20,
+          "status": "UNKNOWN",
+          "visits": 346465,
+          "totalVisits": 863793,
+          "elapsedMs": 8677.033464
+        },
+        {
+          "depth": 21,
+          "status": "NODE_BUDGET",
+          "visits": 136207,
+          "totalVisits": 1000000,
+          "elapsedMs": 3194.219986
+        }
+      ]
+    },
+    {
+      "rootId": "primary-8192-before-25",
+      "index": 7,
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "proofNodes": 0,
+      "visits": 1000000,
+      "bookUses": 0,
+      "opponentCuts": 0,
+      "attempts": [
+        {
+          "depth": 1,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 2,
+          "elapsedMs": 0.773288999999977
+        },
+        {
+          "depth": 2,
+          "status": "UNKNOWN",
+          "visits": 8,
+          "totalVisits": 10,
+          "elapsedMs": 1.1673279999999977
+        },
+        {
+          "depth": 3,
+          "status": "UNKNOWN",
+          "visits": 14,
+          "totalVisits": 24,
+          "elapsedMs": 1.3653299999999717
+        },
+        {
+          "depth": 4,
+          "status": "UNKNOWN",
+          "visits": 66,
+          "totalVisits": 90,
+          "elapsedMs": 4.218855000000019
+        },
+        {
+          "depth": 5,
+          "status": "UNKNOWN",
+          "visits": 112,
+          "totalVisits": 202,
+          "elapsedMs": 6.109287999999992
+        },
+        {
+          "depth": 6,
+          "status": "UNKNOWN",
+          "visits": 329,
+          "totalVisits": 531,
+          "elapsedMs": 17.879195999999922
+        },
+        {
+          "depth": 7,
+          "status": "UNKNOWN",
+          "visits": 514,
+          "totalVisits": 1045,
+          "elapsedMs": 22.77339799999993
+        },
+        {
+          "depth": 8,
+          "status": "UNKNOWN",
+          "visits": 698,
+          "totalVisits": 1743,
+          "elapsedMs": 27.463480000000004
+        },
+        {
+          "depth": 9,
+          "status": "UNKNOWN",
+          "visits": 1049,
+          "totalVisits": 2792,
+          "elapsedMs": 43.54439000000002
+        },
+        {
+          "depth": 10,
+          "status": "UNKNOWN",
+          "visits": 2554,
+          "totalVisits": 5346,
+          "elapsedMs": 101.48520700000006
+        },
+        {
+          "depth": 11,
+          "status": "UNKNOWN",
+          "visits": 3861,
+          "totalVisits": 9207,
+          "elapsedMs": 153.44739200000004
+        },
+        {
+          "depth": 12,
+          "status": "UNKNOWN",
+          "visits": 9216,
+          "totalVisits": 18423,
+          "elapsedMs": 295.980145
+        },
+        {
+          "depth": 13,
+          "status": "UNKNOWN",
+          "visits": 14008,
+          "totalVisits": 32431,
+          "elapsedMs": 492.018153
+        },
+        {
+          "depth": 14,
+          "status": "UNKNOWN",
+          "visits": 37897,
+          "totalVisits": 70328,
+          "elapsedMs": 1222.8844729999998
+        },
+        {
+          "depth": 15,
+          "status": "UNKNOWN",
+          "visits": 57756,
+          "totalVisits": 128084,
+          "elapsedMs": 2197.538481
+        },
+        {
+          "depth": 16,
+          "status": "UNKNOWN",
+          "visits": 132099,
+          "totalVisits": 260183,
+          "elapsedMs": 5088.764515999999
+        },
+        {
+          "depth": 17,
+          "status": "UNKNOWN",
+          "visits": 201786,
+          "totalVisits": 461969,
+          "elapsedMs": 7538.551657000002
+        },
+        {
+          "depth": 18,
+          "status": "NODE_BUDGET",
+          "visits": 538031,
+          "totalVisits": 1000000,
+          "elapsedMs": 17508.428185999997
+        }
+      ]
+    },
+    {
+      "rootId": "primary-8192-before-27",
+      "index": 8,
+      "target": 0,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "proofNodes": 0,
+      "visits": 1000000,
+      "bookUses": 0,
+      "opponentCuts": 24,
+      "attempts": [
+        {
+          "depth": 1,
+          "status": "UNKNOWN",
+          "visits": 7,
+          "totalVisits": 7,
+          "elapsedMs": 1.1036419999999225
+        },
+        {
+          "depth": 2,
+          "status": "UNKNOWN",
+          "visits": 13,
+          "totalVisits": 20,
+          "elapsedMs": 1.747284000000036
+        },
+        {
+          "depth": 3,
+          "status": "UNKNOWN",
+          "visits": 27,
+          "totalVisits": 47,
+          "elapsedMs": 2.3087920000000395
+        },
+        {
+          "depth": 4,
+          "status": "UNKNOWN",
+          "visits": 41,
+          "totalVisits": 88,
+          "elapsedMs": 2.753673000000049
+        },
+        {
+          "depth": 5,
+          "status": "UNKNOWN",
+          "visits": 60,
+          "totalVisits": 148,
+          "elapsedMs": 3.523600999999985
+        },
+        {
+          "depth": 6,
+          "status": "UNKNOWN",
+          "visits": 79,
+          "totalVisits": 227,
+          "elapsedMs": 4.860517999999956
+        },
+        {
+          "depth": 7,
+          "status": "UNKNOWN",
+          "visits": 139,
+          "totalVisits": 366,
+          "elapsedMs": 10.73224499999992
+        },
+        {
+          "depth": 8,
+          "status": "UNKNOWN",
+          "visits": 199,
+          "totalVisits": 565,
+          "elapsedMs": 10.554032000000007
+        },
+        {
+          "depth": 9,
+          "status": "UNKNOWN",
+          "visits": 339,
+          "totalVisits": 904,
+          "elapsedMs": 14.700576999999953
+        },
+        {
+          "depth": 10,
+          "status": "UNKNOWN",
+          "visits": 479,
+          "totalVisits": 1383,
+          "elapsedMs": 21.631782000000044
+        },
+        {
+          "depth": 11,
+          "status": "UNKNOWN",
+          "visits": 768,
+          "totalVisits": 2151,
+          "elapsedMs": 35.020789000000036
+        },
+        {
+          "depth": 12,
+          "status": "UNKNOWN",
+          "visits": 1053,
+          "totalVisits": 3204,
+          "elapsedMs": 47.19809299999997
+        },
+        {
+          "depth": 13,
+          "status": "UNKNOWN",
+          "visits": 1677,
+          "totalVisits": 4881,
+          "elapsedMs": 69.90594499999997
+        },
+        {
+          "depth": 14,
+          "status": "UNKNOWN",
+          "visits": 2296,
+          "totalVisits": 7177,
+          "elapsedMs": 111.45350399999995
+        },
+        {
+          "depth": 15,
+          "status": "UNKNOWN",
+          "visits": 3696,
+          "totalVisits": 10873,
+          "elapsedMs": 138.24812999999995
+        },
+        {
+          "depth": 16,
+          "status": "UNKNOWN",
+          "visits": 5032,
+          "totalVisits": 15905,
+          "elapsedMs": 191.37163799999985
+        },
+        {
+          "depth": 17,
+          "status": "UNKNOWN",
+          "visits": 7825,
+          "totalVisits": 23730,
+          "elapsedMs": 279.1090079999999
+        },
+        {
+          "depth": 18,
+          "status": "UNKNOWN",
+          "visits": 10563,
+          "totalVisits": 34293,
+          "elapsedMs": 406.099524
+        },
+        {
+          "depth": 19,
+          "status": "UNKNOWN",
+          "visits": 17299,
+          "totalVisits": 51592,
+          "elapsedMs": 577.2417710000002
+        },
+        {
+          "depth": 20,
+          "status": "UNKNOWN",
+          "visits": 23774,
+          "totalVisits": 75366,
+          "elapsedMs": 857.121513
+        },
+        {
+          "depth": 21,
+          "status": "UNKNOWN",
+          "visits": 40150,
+          "totalVisits": 115516,
+          "elapsedMs": 1369.2375109999998
+        },
+        {
+          "depth": 22,
+          "status": "UNKNOWN",
+          "visits": 56429,
+          "totalVisits": 171945,
+          "elapsedMs": 2040.8945700000004
+        },
+        {
+          "depth": 23,
+          "status": "UNKNOWN",
+          "visits": 105010,
+          "totalVisits": 276955,
+          "elapsedMs": 3362.2736029999996
+        },
+        {
+          "depth": 24,
+          "status": "UNKNOWN",
+          "visits": 151053,
+          "totalVisits": 428008,
+          "elapsedMs": 5129.653431000001
+        },
+        {
+          "depth": 25,
+          "status": "UNKNOWN",
+          "visits": 299537,
+          "totalVisits": 727545,
+          "elapsedMs": 9590.130597000001
+        },
+        {
+          "depth": 26,
+          "status": "NODE_BUDGET",
+          "visits": 272455,
+          "totalVisits": 1000000,
+          "elapsedMs": 9267.393937999997
+        }
+      ]
+    },
+    {
+      "rootId": "primary-8192-before-27",
+      "index": 8,
+      "target": 1,
+      "status": "PROVED",
+      "winner": 1,
+      "depth": 14,
+      "proofNodes": 1319,
+      "visits": 100229,
+      "bookUses": 1,
+      "opponentCuts": 0,
+      "attempts": [
+        {
+          "depth": 1,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 2,
+          "elapsedMs": 0.541103000000021
+        },
+        {
+          "depth": 2,
+          "status": "UNKNOWN",
+          "visits": 8,
+          "totalVisits": 10,
+          "elapsedMs": 0.666259000000025
+        },
+        {
+          "depth": 3,
+          "status": "UNKNOWN",
+          "visits": 14,
+          "totalVisits": 24,
+          "elapsedMs": 1.0283660000000054
+        },
+        {
+          "depth": 4,
+          "status": "UNKNOWN",
+          "visits": 39,
+          "totalVisits": 63,
+          "elapsedMs": 1.4349090000000047
+        },
+        {
+          "depth": 5,
+          "status": "UNKNOWN",
+          "visits": 64,
+          "totalVisits": 127,
+          "elapsedMs": 2.082209999999975
+        },
+        {
+          "depth": 6,
+          "status": "UNKNOWN",
+          "visits": 202,
+          "totalVisits": 329,
+          "elapsedMs": 5.955418000000009
+        },
+        {
+          "depth": 7,
+          "status": "UNKNOWN",
+          "visits": 334,
+          "totalVisits": 663,
+          "elapsedMs": 11.79574500000001
+        },
+        {
+          "depth": 8,
+          "status": "UNKNOWN",
+          "visits": 964,
+          "totalVisits": 1627,
+          "elapsedMs": 29.455360999999982
+        },
+        {
+          "depth": 9,
+          "status": "UNKNOWN",
+          "visits": 1559,
+          "totalVisits": 3186,
+          "elapsedMs": 45.79929400000003
+        },
+        {
+          "depth": 10,
+          "status": "UNKNOWN",
+          "visits": 4628,
+          "totalVisits": 7814,
+          "elapsedMs": 118.09496899999999
+        },
+        {
+          "depth": 11,
+          "status": "UNKNOWN",
+          "visits": 7407,
+          "totalVisits": 15221,
+          "elapsedMs": 203.62548200000003
+        },
+        {
+          "depth": 12,
+          "status": "UNKNOWN",
+          "visits": 18660,
+          "totalVisits": 33881,
+          "elapsedMs": 438.107574
+        },
+        {
+          "depth": 13,
+          "status": "UNKNOWN",
+          "visits": 29141,
+          "totalVisits": 63022,
+          "elapsedMs": 750.156262
+        },
+        {
+          "depth": 14,
+          "status": "PROVED",
+          "visits": 37207,
+          "totalVisits": 100229,
+          "elapsedMs": 867.177987
+        }
+      ]
+    },
+    {
+      "rootId": "primary-8192-before-28",
+      "index": 9,
+      "target": 0,
+      "status": "UNKNOWN",
+      "winner": null,
+      "depth": null,
+      "proofNodes": 0,
+      "visits": 80,
+      "bookUses": 0,
+      "opponentCuts": 40,
+      "attempts": [
+        {
+          "depth": 1,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 2,
+          "elapsedMs": 0.9258209999999849
+        },
+        {
+          "depth": 2,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 4,
+          "elapsedMs": 0.5079900000000066
+        },
+        {
+          "depth": 3,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 6,
+          "elapsedMs": 0.38034099999998716
+        },
+        {
+          "depth": 4,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 8,
+          "elapsedMs": 0.3932649999999853
+        },
+        {
+          "depth": 5,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 10,
+          "elapsedMs": 0.37173500000000104
+        },
+        {
+          "depth": 6,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 12,
+          "elapsedMs": 0.32996700000001056
+        },
+        {
+          "depth": 7,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 14,
+          "elapsedMs": 0.36855900000000474
+        },
+        {
+          "depth": 8,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 16,
+          "elapsedMs": 0.35595599999999195
+        },
+        {
+          "depth": 9,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 18,
+          "elapsedMs": 0.3896379999999908
+        },
+        {
+          "depth": 10,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 20,
+          "elapsedMs": 0.6538120000000163
+        },
+        {
+          "depth": 11,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 22,
+          "elapsedMs": 0.33255200000002105
+        },
+        {
+          "depth": 12,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 24,
+          "elapsedMs": 0.31857599999995045
+        },
+        {
+          "depth": 13,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 26,
+          "elapsedMs": 0.3175239999999917
+        },
+        {
+          "depth": 14,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 28,
+          "elapsedMs": 0.3129950000000008
+        },
+        {
+          "depth": 15,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 30,
+          "elapsedMs": 0.3404170000000022
+        },
+        {
+          "depth": 16,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 32,
+          "elapsedMs": 0.31473899999997457
+        },
+        {
+          "depth": 17,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 34,
+          "elapsedMs": 0.34260100000000193
+        },
+        {
+          "depth": 18,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 36,
+          "elapsedMs": 0.31861600000002
+        },
+        {
+          "depth": 19,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 38,
+          "elapsedMs": 0.3228430000000344
+        },
+        {
+          "depth": 20,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 40,
+          "elapsedMs": 0.31652199999996355
+        },
+        {
+          "depth": 21,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 42,
+          "elapsedMs": 0.3181250000000091
+        },
+        {
+          "depth": 22,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 44,
+          "elapsedMs": 0.3407569999999964
+        },
+        {
+          "depth": 23,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 46,
+          "elapsedMs": 0.6790599999999927
+        },
+        {
+          "depth": 24,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 48,
+          "elapsedMs": 0.3329620000000091
+        },
+        {
+          "depth": 25,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 50,
+          "elapsedMs": 0.32060999999998785
+        },
+        {
+          "depth": 26,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 52,
+          "elapsedMs": 0.33820300000002135
+        },
+        {
+          "depth": 27,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 54,
+          "elapsedMs": 0.30516099999999824
+        },
+        {
+          "depth": 28,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 56,
+          "elapsedMs": 0.32590999999996484
+        },
+        {
+          "depth": 29,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 58,
+          "elapsedMs": 0.3238759999999843
+        },
+        {
+          "depth": 30,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 60,
+          "elapsedMs": 0.21851899999995794
+        },
+        {
+          "depth": 31,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 62,
+          "elapsedMs": 0.2529930000000036
+        },
+        {
+          "depth": 32,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 64,
+          "elapsedMs": 0.21599400000002333
+        },
+        {
+          "depth": 33,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 66,
+          "elapsedMs": 0.2165549999999712
+        },
+        {
+          "depth": 34,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 68,
+          "elapsedMs": 0.24483800000001565
+        },
+        {
+          "depth": 35,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 70,
+          "elapsedMs": 0.2139799999999923
+        },
+        {
+          "depth": 36,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 72,
+          "elapsedMs": 0.43655599999999595
+        },
+        {
+          "depth": 37,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 74,
+          "elapsedMs": 0.24361600000003136
+        },
+        {
+          "depth": 38,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 76,
+          "elapsedMs": 0.2159639999999854
+        },
+        {
+          "depth": 39,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 78,
+          "elapsedMs": 0.2137000000000171
+        },
+        {
+          "depth": 40,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 80,
+          "elapsedMs": 0.24149099999999635
+        }
+      ]
+    },
+    {
+      "rootId": "primary-8192-before-28",
+      "index": 9,
+      "target": 1,
+      "status": "PROVED",
+      "winner": 1,
+      "depth": 11,
+      "proofNodes": 94,
+      "visits": 10919,
+      "bookUses": 21,
+      "opponentCuts": 0,
+      "attempts": [
+        {
+          "depth": 1,
+          "status": "UNKNOWN",
+          "visits": 6,
+          "totalVisits": 6,
+          "elapsedMs": 0.5607880000000023
+        },
+        {
+          "depth": 2,
+          "status": "UNKNOWN",
+          "visits": 11,
+          "totalVisits": 17,
+          "elapsedMs": 0.4644540000000461
+        },
+        {
+          "depth": 3,
+          "status": "UNKNOWN",
+          "visits": 44,
+          "totalVisits": 61,
+          "elapsedMs": 1.2280450000000087
+        },
+        {
+          "depth": 4,
+          "status": "UNKNOWN",
+          "visits": 77,
+          "totalVisits": 138,
+          "elapsedMs": 2.01493099999999
+        },
+        {
+          "depth": 5,
+          "status": "UNKNOWN",
+          "visits": 178,
+          "totalVisits": 316,
+          "elapsedMs": 4.333776
+        },
+        {
+          "depth": 6,
+          "status": "UNKNOWN",
+          "visits": 277,
+          "totalVisits": 593,
+          "elapsedMs": 9.374798999999996
+        },
+        {
+          "depth": 7,
+          "status": "UNKNOWN",
+          "visits": 795,
+          "totalVisits": 1388,
+          "elapsedMs": 17.147433999999976
+        },
+        {
+          "depth": 8,
+          "status": "UNKNOWN",
+          "visits": 1286,
+          "totalVisits": 2674,
+          "elapsedMs": 26.854209000000026
+        },
+        {
+          "depth": 9,
+          "status": "UNKNOWN",
+          "visits": 3213,
+          "totalVisits": 5887,
+          "elapsedMs": 75.23907199999996
+        },
+        {
+          "depth": 10,
+          "status": "UNKNOWN",
+          "visits": 5030,
+          "totalVisits": 10917,
+          "elapsedMs": 110.85929999999996
+        },
+        {
+          "depth": 11,
+          "status": "PROVED",
+          "visits": 2,
+          "totalVisits": 10919,
+          "elapsedMs": 0.7552389999999605
+        }
+      ]
+    },
+    {
+      "rootId": "primary-8192-before-29",
+      "index": 10,
+      "target": 0,
+      "status": "OPPONENT-PROVED",
+      "winner": 1,
+      "depth": 10,
+      "proofNodes": 93,
+      "visits": 0,
+      "bookUses": 1,
+      "opponentCuts": 0,
+      "attempts": []
+    },
+    {
+      "rootId": "primary-8192-before-29",
+      "index": 10,
+      "target": 1,
+      "status": "PROVED",
+      "winner": 1,
+      "depth": 10,
+      "proofNodes": 93,
+      "visits": 0,
+      "bookUses": 1,
+      "opponentCuts": 0,
+      "attempts": []
+    },
+    {
+      "rootId": "low-512-before-29",
+      "index": 11,
+      "target": 0,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "proofNodes": 0,
+      "visits": 1000000,
+      "bookUses": 0,
+      "opponentCuts": 0,
+      "attempts": [
+        {
+          "depth": 1,
+          "status": "UNKNOWN",
+          "visits": 5,
+          "totalVisits": 5,
+          "elapsedMs": 0.8481859999999983
+        },
+        {
+          "depth": 2,
+          "status": "UNKNOWN",
+          "visits": 9,
+          "totalVisits": 14,
+          "elapsedMs": 0.8836210000000051
+        },
+        {
+          "depth": 3,
+          "status": "UNKNOWN",
+          "visits": 16,
+          "totalVisits": 30,
+          "elapsedMs": 1.3020850000000337
+        },
+        {
+          "depth": 4,
+          "status": "UNKNOWN",
+          "visits": 23,
+          "totalVisits": 53,
+          "elapsedMs": 1.5223670000000311
+        },
+        {
+          "depth": 5,
+          "status": "UNKNOWN",
+          "visits": 39,
+          "totalVisits": 92,
+          "elapsedMs": 1.5472219999999766
+        },
+        {
+          "depth": 6,
+          "status": "UNKNOWN",
+          "visits": 55,
+          "totalVisits": 147,
+          "elapsedMs": 2.5568810000000326
+        },
+        {
+          "depth": 7,
+          "status": "UNKNOWN",
+          "visits": 101,
+          "totalVisits": 248,
+          "elapsedMs": 4.427339000000018
+        },
+        {
+          "depth": 8,
+          "status": "UNKNOWN",
+          "visits": 147,
+          "totalVisits": 395,
+          "elapsedMs": 6.67657399999996
+        },
+        {
+          "depth": 9,
+          "status": "UNKNOWN",
+          "visits": 353,
+          "totalVisits": 748,
+          "elapsedMs": 16.471146999999974
+        },
+        {
+          "depth": 10,
+          "status": "UNKNOWN",
+          "visits": 525,
+          "totalVisits": 1273,
+          "elapsedMs": 24.699491999999964
+        },
+        {
+          "depth": 11,
+          "status": "UNKNOWN",
+          "visits": 1266,
+          "totalVisits": 2539,
+          "elapsedMs": 48.777120999999966
+        },
+        {
+          "depth": 12,
+          "status": "UNKNOWN",
+          "visits": 1906,
+          "totalVisits": 4445,
+          "elapsedMs": 77.47001699999998
+        },
+        {
+          "depth": 13,
+          "status": "UNKNOWN",
+          "visits": 5620,
+          "totalVisits": 10065,
+          "elapsedMs": 243.22553500000004
+        },
+        {
+          "depth": 14,
+          "status": "UNKNOWN",
+          "visits": 8475,
+          "totalVisits": 18540,
+          "elapsedMs": 317.13045999999997
+        },
+        {
+          "depth": 15,
+          "status": "UNKNOWN",
+          "visits": 19398,
+          "totalVisits": 37938,
+          "elapsedMs": 701.9345089999999
+        },
+        {
+          "depth": 16,
+          "status": "UNKNOWN",
+          "visits": 29554,
+          "totalVisits": 67492,
+          "elapsedMs": 1065.4856490000002
+        },
+        {
+          "depth": 17,
+          "status": "UNKNOWN",
+          "visits": 61922,
+          "totalVisits": 129414,
+          "elapsedMs": 2120.1349819999996
+        },
+        {
+          "depth": 18,
+          "status": "UNKNOWN",
+          "visits": 94045,
+          "totalVisits": 223459,
+          "elapsedMs": 3246.743097999999
+        },
+        {
+          "depth": 19,
+          "status": "UNKNOWN",
+          "visits": 195777,
+          "totalVisits": 419236,
+          "elapsedMs": 6325.6776979999995
+        },
+        {
+          "depth": 20,
+          "status": "UNKNOWN",
+          "visits": 296024,
+          "totalVisits": 715260,
+          "elapsedMs": 10394.570044999999
+        },
+        {
+          "depth": 21,
+          "status": "NODE_BUDGET",
+          "visits": 284740,
+          "totalVisits": 1000000,
+          "elapsedMs": 9166.685193000001
+        }
+      ]
+    },
+    {
+      "rootId": "low-512-before-29",
+      "index": 11,
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "proofNodes": 0,
+      "visits": 1000000,
+      "bookUses": 0,
+      "opponentCuts": 0,
+      "attempts": [
+        {
+          "depth": 1,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 2,
+          "elapsedMs": 0.4366850000000113
+        },
+        {
+          "depth": 2,
+          "status": "UNKNOWN",
+          "visits": 5,
+          "totalVisits": 7,
+          "elapsedMs": 0.6169820000000072
+        },
+        {
+          "depth": 3,
+          "status": "UNKNOWN",
+          "visits": 8,
+          "totalVisits": 15,
+          "elapsedMs": 0.8819669999999746
+        },
+        {
+          "depth": 4,
+          "status": "UNKNOWN",
+          "visits": 23,
+          "totalVisits": 38,
+          "elapsedMs": 1.2734080000000176
+        },
+        {
+          "depth": 5,
+          "status": "UNKNOWN",
+          "visits": 38,
+          "totalVisits": 76,
+          "elapsedMs": 1.3480970000000525
+        },
+        {
+          "depth": 6,
+          "status": "UNKNOWN",
+          "visits": 98,
+          "totalVisits": 174,
+          "elapsedMs": 3.8654579999999896
+        },
+        {
+          "depth": 7,
+          "status": "UNKNOWN",
+          "visits": 152,
+          "totalVisits": 326,
+          "elapsedMs": 6.3393669999999815
+        },
+        {
+          "depth": 8,
+          "status": "UNKNOWN",
+          "visits": 347,
+          "totalVisits": 673,
+          "elapsedMs": 18.27077700000001
+        },
+        {
+          "depth": 9,
+          "status": "UNKNOWN",
+          "visits": 524,
+          "totalVisits": 1197,
+          "elapsedMs": 20.932737999999972
+        },
+        {
+          "depth": 10,
+          "status": "UNKNOWN",
+          "visits": 1173,
+          "totalVisits": 2370,
+          "elapsedMs": 42.99691800000005
+        },
+        {
+          "depth": 11,
+          "status": "UNKNOWN",
+          "visits": 1794,
+          "totalVisits": 4164,
+          "elapsedMs": 66.11231100000003
+        },
+        {
+          "depth": 12,
+          "status": "UNKNOWN",
+          "visits": 5332,
+          "totalVisits": 9496,
+          "elapsedMs": 221.13415399999997
+        },
+        {
+          "depth": 13,
+          "status": "UNKNOWN",
+          "visits": 8131,
+          "totalVisits": 17627,
+          "elapsedMs": 297.049495
+        },
+        {
+          "depth": 14,
+          "status": "UNKNOWN",
+          "visits": 25973,
+          "totalVisits": 43600,
+          "elapsedMs": 821.3753459999998
+        },
+        {
+          "depth": 15,
+          "status": "UNKNOWN",
+          "visits": 39336,
+          "totalVisits": 82936,
+          "elapsedMs": 1282.061964
+        },
+        {
+          "depth": 16,
+          "status": "UNKNOWN",
+          "visits": 70261,
+          "totalVisits": 153197,
+          "elapsedMs": 2255.7722970000004
+        },
+        {
+          "depth": 17,
+          "status": "UNKNOWN",
+          "visits": 105392,
+          "totalVisits": 258589,
+          "elapsedMs": 3424.986984
+        },
+        {
+          "depth": 18,
+          "status": "UNKNOWN",
+          "visits": 173083,
+          "totalVisits": 431672,
+          "elapsedMs": 5338.548495000001
+        },
+        {
+          "depth": 19,
+          "status": "UNKNOWN",
+          "visits": 258964,
+          "totalVisits": 690636,
+          "elapsedMs": 8391.159759
+        },
+        {
+          "depth": 20,
+          "status": "NODE_BUDGET",
+          "visits": 309364,
+          "totalVisits": 1000000,
+          "elapsedMs": 9584.262730999999
+        }
+      ]
+    },
+    {
+      "rootId": "middle-2048-before-33",
+      "index": 12,
+      "target": 0,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "proofNodes": 0,
+      "visits": 1000000,
+      "bookUses": 0,
+      "opponentCuts": 0,
+      "attempts": [
+        {
+          "depth": 1,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 2,
+          "elapsedMs": 0.43008700000001454
+        },
+        {
+          "depth": 2,
+          "status": "UNKNOWN",
+          "visits": 3,
+          "totalVisits": 5,
+          "elapsedMs": 0.4119230000000016
+        },
+        {
+          "depth": 3,
+          "status": "UNKNOWN",
+          "visits": 5,
+          "totalVisits": 10,
+          "elapsedMs": 0.4926449999999818
+        },
+        {
+          "depth": 4,
+          "status": "UNKNOWN",
+          "visits": 7,
+          "totalVisits": 17,
+          "elapsedMs": 0.6147540000000049
+        },
+        {
+          "depth": 5,
+          "status": "UNKNOWN",
+          "visits": 14,
+          "totalVisits": 31,
+          "elapsedMs": 0.9081540000000246
+        },
+        {
+          "depth": 6,
+          "status": "UNKNOWN",
+          "visits": 21,
+          "totalVisits": 52,
+          "elapsedMs": 0.9774550000000204
+        },
+        {
+          "depth": 7,
+          "status": "UNKNOWN",
+          "visits": 50,
+          "totalVisits": 102,
+          "elapsedMs": 2.069172999999978
+        },
+        {
+          "depth": 8,
+          "status": "UNKNOWN",
+          "visits": 79,
+          "totalVisits": 181,
+          "elapsedMs": 2.9480729999999653
+        },
+        {
+          "depth": 9,
+          "status": "UNKNOWN",
+          "visits": 236,
+          "totalVisits": 417,
+          "elapsedMs": 8.960035000000005
+        },
+        {
+          "depth": 10,
+          "status": "UNKNOWN",
+          "visits": 387,
+          "totalVisits": 804,
+          "elapsedMs": 16.023983999999984
+        },
+        {
+          "depth": 11,
+          "status": "UNKNOWN",
+          "visits": 1005,
+          "totalVisits": 1809,
+          "elapsedMs": 35.063604
+        },
+        {
+          "depth": 12,
+          "status": "UNKNOWN",
+          "visits": 1605,
+          "totalVisits": 3414,
+          "elapsedMs": 58.071582999999976
+        },
+        {
+          "depth": 13,
+          "status": "UNKNOWN",
+          "visits": 3634,
+          "totalVisits": 7048,
+          "elapsedMs": 141.95557700000006
+        },
+        {
+          "depth": 14,
+          "status": "UNKNOWN",
+          "visits": 5703,
+          "totalVisits": 12751,
+          "elapsedMs": 221.5741079999999
+        },
+        {
+          "depth": 15,
+          "status": "UNKNOWN",
+          "visits": 14032,
+          "totalVisits": 26783,
+          "elapsedMs": 446.165166
+        },
+        {
+          "depth": 16,
+          "status": "UNKNOWN",
+          "visits": 21708,
+          "totalVisits": 48491,
+          "elapsedMs": 780.8973300000002
+        },
+        {
+          "depth": 17,
+          "status": "UNKNOWN",
+          "visits": 58293,
+          "totalVisits": 106784,
+          "elapsedMs": 1834.8920239999998
+        },
+        {
+          "depth": 18,
+          "status": "UNKNOWN",
+          "visits": 89389,
+          "totalVisits": 196173,
+          "elapsedMs": 2844.136028
+        },
+        {
+          "depth": 19,
+          "status": "UNKNOWN",
+          "visits": 186871,
+          "totalVisits": 383044,
+          "elapsedMs": 5477.634678
+        },
+        {
+          "depth": 20,
+          "status": "UNKNOWN",
+          "visits": 285069,
+          "totalVisits": 668113,
+          "elapsedMs": 9091.560148999999
+        },
+        {
+          "depth": 21,
+          "status": "NODE_BUDGET",
+          "visits": 331887,
+          "totalVisits": 1000000,
+          "elapsedMs": 9941.455367999999
+        }
+      ]
+    },
+    {
+      "rootId": "middle-2048-before-33",
+      "index": 12,
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "proofNodes": 0,
+      "visits": 1000000,
+      "bookUses": 0,
+      "opponentCuts": 1,
+      "attempts": [
+        {
+          "depth": 1,
+          "status": "UNKNOWN",
+          "visits": 2,
+          "totalVisits": 2,
+          "elapsedMs": 0.27122500000001537
+        },
+        {
+          "depth": 2,
+          "status": "UNKNOWN",
+          "visits": 4,
+          "totalVisits": 6,
+          "elapsedMs": 0.29575199999999313
+        },
+        {
+          "depth": 3,
+          "status": "UNKNOWN",
+          "visits": 6,
+          "totalVisits": 12,
+          "elapsedMs": 0.2487910000000113
+        },
+        {
+          "depth": 4,
+          "status": "UNKNOWN",
+          "visits": 18,
+          "totalVisits": 30,
+          "elapsedMs": 0.672994999999986
+        },
+        {
+          "depth": 5,
+          "status": "UNKNOWN",
+          "visits": 30,
+          "totalVisits": 60,
+          "elapsedMs": 0.7500499999999874
+        },
+        {
+          "depth": 6,
+          "status": "UNKNOWN",
+          "visits": 70,
+          "totalVisits": 130,
+          "elapsedMs": 1.4972160000000088
+        },
+        {
+          "depth": 7,
+          "status": "UNKNOWN",
+          "visits": 110,
+          "totalVisits": 240,
+          "elapsedMs": 2.424400999999989
+        },
+        {
+          "depth": 8,
+          "status": "UNKNOWN",
+          "visits": 231,
+          "totalVisits": 471,
+          "elapsedMs": 4.4991489999999885
+        },
+        {
+          "depth": 9,
+          "status": "UNKNOWN",
+          "visits": 350,
+          "totalVisits": 821,
+          "elapsedMs": 9.250945999999999
+        },
+        {
+          "depth": 10,
+          "status": "UNKNOWN",
+          "visits": 764,
+          "totalVisits": 1585,
+          "elapsedMs": 14.60259899999997
+        },
+        {
+          "depth": 11,
+          "status": "UNKNOWN",
+          "visits": 1152,
+          "totalVisits": 2737,
+          "elapsedMs": 20.80797700000005
+        },
+        {
+          "depth": 12,
+          "status": "UNKNOWN",
+          "visits": 2654,
+          "totalVisits": 5391,
+          "elapsedMs": 46.01042899999999
+        },
+        {
+          "depth": 13,
+          "status": "UNKNOWN",
+          "visits": 4003,
+          "totalVisits": 9394,
+          "elapsedMs": 84.53804100000002
+        },
+        {
+          "depth": 14,
+          "status": "UNKNOWN",
+          "visits": 8917,
+          "totalVisits": 18311,
+          "elapsedMs": 167.668049
+        },
+        {
+          "depth": 15,
+          "status": "UNKNOWN",
+          "visits": 13364,
+          "totalVisits": 31675,
+          "elapsedMs": 267.6685339999999
+        },
+        {
+          "depth": 16,
+          "status": "UNKNOWN",
+          "visits": 14112,
+          "totalVisits": 45787,
+          "elapsedMs": 316.189121
+        },
+        {
+          "depth": 17,
+          "status": "UNKNOWN",
+          "visits": 20964,
+          "totalVisits": 66751,
+          "elapsedMs": 401.32553600000006
+        },
+        {
+          "depth": 18,
+          "status": "UNKNOWN",
+          "visits": 49560,
+          "totalVisits": 116311,
+          "elapsedMs": 908.4406920000001
+        },
+        {
+          "depth": 19,
+          "status": "UNKNOWN",
+          "visits": 73643,
+          "totalVisits": 189954,
+          "elapsedMs": 1410.7199209999999
+        },
+        {
+          "depth": 20,
+          "status": "UNKNOWN",
+          "visits": 174328,
+          "totalVisits": 364282,
+          "elapsedMs": 3187.268619
+        },
+        {
+          "depth": 21,
+          "status": "UNKNOWN",
+          "visits": 262336,
+          "totalVisits": 626618,
+          "elapsedMs": 4962.827611
+        },
+        {
+          "depth": 22,
+          "status": "NODE_BUDGET",
+          "visits": 373382,
+          "totalVisits": 1000000,
+          "elapsedMs": 6696.4290489999985
+        }
+      ]
+    }
+  ],
+  "initialPosition": {
+    "status": "UNKNOWN",
+    "winner": null,
+    "composed": false,
+    "certificateDepth": null
+  },
+  "technicalFailures": 0,
+  "searchTurns": 17142,
+  "depthZero": 0,
+  "confidenceIntervalsApplied": false,
+  "interpretation": "forced opening and policy cells are separate; UNKNOWN is not draw or absence of a winning strategy"
+}
