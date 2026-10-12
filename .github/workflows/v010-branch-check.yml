@@ -1,0 +1,23 @@
+name: v0.10.0 branch proof study checks
+on:
+  pull_request:
+    paths: ['tools/v010-branch/**', 'doc/V010_BRANCH_*', 'doc/v010-branch/**', '.github/workflows/v010-branch-*.yml']
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --expose-gc --test tools/v010-branch/check.test.cjs
+      - run: node tools/v010-branch/study.cjs manifest
+      - name: Previous records, sources, manifests and production remain immutable
+        run: |
+          git diff --exit-code 024ef96712a0851daaa23c6a34d7b0e80004eaa5 -- prototype trials tools/v010-balance tools/v010-followup tools/v010-certainty tools/v010-gc doc/v010-research-completed doc/v010-balance doc/v010-followup doc/v010-certainty doc/v010-gc
+          git diff --check
