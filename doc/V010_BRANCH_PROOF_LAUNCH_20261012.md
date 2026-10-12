@@ -22,4 +22,12 @@
 
 再開時は正式runの成否・各job・artifact・結果branchを確認し、完了jobを再実行しない。全件が完了して保存できたら、原ZIPを一時展開してSHA・全証明・段階入力・再集計summary bytesを再監査する。探索が中断したjobは自動再開せずHOLDとし、完了原記録を保持した追加計画を別途固定する。
 
+完了後の読取り専用再監査には[004再監査器](../tools/v010-branch/reaudit.py)を用意した。結果commitのGit blob、全ZIP片と原ファイルのSHA、通常遷移による全証明・段階入力、再集計summaryと合成証明のbytes一致を確認する。原ファイルを一時展開して終了時に削除し、`job`を呼ばない。結果commitの`doc/v010-branch/completed/`を取得したcheckoutで実行する。
+
+```sh
+python3 tools/v010-branch/reaudit.py doc/v010-branch/completed <results-commit>
+```
+
+この再監査器は正式起動後に追加した読取り専用補助で、正式探索のsource・manifest・条件には含めない。正式結果が未完了の時点で全件再監査成功とは記録しない。
+
 本文 © 2026 nkkmd and Bao Nakakamado contributors、[CC BY-SA 4.0](../LICENSE-CC-BY-SA-4.0.txt)。調査コードはMIT。
