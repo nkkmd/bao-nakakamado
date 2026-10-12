@@ -1,0 +1,37 @@
+name: v0.10.0 first-player balance preparation checks
+on:
+  push:
+    branches: ['research/v010-first-player-balance-20261011']
+  pull_request:
+    paths: ['tools/v010-balance/**', 'doc/V010_FIRST_PLAYER_BALANCE_PLAN_20261011.md', 'doc/v010-balance/**', '.github/workflows/v010-balance-*.yml']
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Exact roots, seed controls, mirror, uncertainty, interrupted-pair rejection
+        run: node --test tools/v010-balance/check.test.cjs tools/v010-balance/diagnostics/check.test.cjs
+      - name: Current rule and public AI regressions
+        run: node --test prototype/takasia.test.cjs prototype/end-pit-search.test.cjs prototype/end-pit-computer-client.test.cjs prototype/end-pit-app.test.cjs
+      - name: Audit frozen contract and completed pilot with zero new measurements
+        run: |
+          node tools/v010-balance/formal.cjs manifest
+          tar -xzf doc/v010-balance/pilot-original.tar.gz -C "$RUNNER_TEMP"
+          node tools/v010-balance/run.cjs pilot "$RUNNER_TEMP/v010-balance-pilot-20261011"
+          node - <<'JS'
+          const assert=require('node:assert/strict'),fs=require('node:fs');
+          const r=JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP+'/v010-balance-pilot-20261011/operations.json'));
+          assert.equal(r.newPairs,0);assert.equal(r.reusedPairs,28);assert.equal(r.selectedNodes,8192);
+          JS
+      - name: Check unchanged production bytes and whitespace
+        run: |
+          git diff --exit-code eb851e38750b74bda23aba7c462d7ff6f45447db -- prototype trials
+          git diff --check eb851e38750b74bda23aba7c462d7ff6f45447db

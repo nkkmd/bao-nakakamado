@@ -1,0 +1,163 @@
+{
+  "id": "NAKAKAMADO-V010-FOLLOWUP-OPERATIONAL-BENCHMARK-001",
+  "policySelection": false,
+  "weightChanges": false,
+  "reports": [
+    {
+      "policy": "base-8192",
+      "requests": 6,
+      "depthZero": 0,
+      "medianDepth": 7,
+      "p95Ms": 1174.3354539999996,
+      "maxMs": 1174.3354539999996
+    },
+    {
+      "policy": "base-32768",
+      "requests": 6,
+      "depthZero": 0,
+      "medianDepth": 10,
+      "p95Ms": 5858.473333000002,
+      "maxMs": 5858.473333000002
+    },
+    {
+      "policy": "mobility-8192",
+      "requests": 6,
+      "depthZero": 0,
+      "medianDepth": 7,
+      "p95Ms": 1329.4204160000008,
+      "maxMs": 1329.4204160000008
+    }
+  ],
+  "rows": [
+    {
+      "policy": "base-8192",
+      "root": "initial",
+      "nodes": 8192,
+      "depth": 7,
+      "elapsedMs": 871.321886
+    },
+    {
+      "policy": "base-8192",
+      "root": "primary-8192-before-23",
+      "nodes": 8192,
+      "depth": 7,
+      "elapsedMs": 1157.37511
+    },
+    {
+      "policy": "base-8192",
+      "root": "primary-8192-before-27",
+      "nodes": 8192,
+      "depth": 6,
+      "elapsedMs": 1174.3354539999996
+    },
+    {
+      "policy": "base-8192",
+      "root": "primary-8192-before-29",
+      "nodes": 8192,
+      "depth": 9,
+      "elapsedMs": 1081.7584859999997
+    },
+    {
+      "policy": "base-8192",
+      "root": "low-512-before-29",
+      "nodes": 8192,
+      "depth": 8,
+      "elapsedMs": 903.6830719999998
+    },
+    {
+      "policy": "base-8192",
+      "root": "middle-2048-before-33",
+      "nodes": 8192,
+      "depth": 11,
+      "elapsedMs": 1014.2936200000004
+    },
+    {
+      "policy": "base-32768",
+      "root": "initial",
+      "nodes": 32768,
+      "depth": 9,
+      "elapsedMs": 4309.788489
+    },
+    {
+      "policy": "base-32768",
+      "root": "primary-8192-before-23",
+      "nodes": 32768,
+      "depth": 10,
+      "elapsedMs": 5858.473333000002
+    },
+    {
+      "policy": "base-32768",
+      "root": "primary-8192-before-27",
+      "nodes": 32768,
+      "depth": 8,
+      "elapsedMs": 5828.406919999998
+    },
+    {
+      "policy": "base-32768",
+      "root": "primary-8192-before-29",
+      "nodes": 32768,
+      "depth": 11,
+      "elapsedMs": 5101.523331
+    },
+    {
+      "policy": "base-32768",
+      "root": "low-512-before-29",
+      "nodes": 32768,
+      "depth": 10,
+      "elapsedMs": 5666.949782000003
+    },
+    {
+      "policy": "base-32768",
+      "root": "middle-2048-before-33",
+      "nodes": 32768,
+      "depth": 14,
+      "elapsedMs": 5526.542974000004
+    },
+    {
+      "policy": "mobility-8192",
+      "root": "initial",
+      "nodes": 8192,
+      "depth": 7,
+      "elapsedMs": 889.8659699999989
+    },
+    {
+      "policy": "mobility-8192",
+      "root": "primary-8192-before-23",
+      "nodes": 8192,
+      "depth": 7,
+      "elapsedMs": 1299.7753789999988
+    },
+    {
+      "policy": "mobility-8192",
+      "root": "primary-8192-before-27",
+      "nodes": 8192,
+      "depth": 6,
+      "elapsedMs": 1246.5253969999976
+    },
+    {
+      "policy": "mobility-8192",
+      "root": "primary-8192-before-29",
+      "nodes": 8192,
+      "depth": 9,
+      "elapsedMs": 1329.4204160000008
+    },
+    {
+      "policy": "mobility-8192",
+      "root": "low-512-before-29",
+      "nodes": 8192,
+      "depth": 8,
+      "elapsedMs": 1208.9142720000018
+    },
+    {
+      "policy": "mobility-8192",
+      "root": "middle-2048-before-33",
+      "nodes": 8192,
+      "depth": 11,
+      "elapsedMs": 1306.146197999995
+    }
+  ],
+  "environment": {
+    "node": "v24.19.0",
+    "cpu": "INTEL(R) XEON(R) PLATINUM 8573C"
+  }
+}

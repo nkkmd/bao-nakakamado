@@ -1,0 +1,179 @@
+name: v0.10.0 proof collection and staged backwards study 003
+on:
+  push:
+    branches: ['research/v010-proof-gc-20261012']
+permissions:
+  contents: read
+  actions: read
+jobs:
+  preflight:
+    if: startsWith(github.event.head_commit.message, 'Start v0.10.0 proof collection study 003') && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      openings: ${{ steps.roots.outputs.openings }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --expose-gc --test tools/v010-gc/check.test.cjs
+      - run: node tools/v010-gc/study.cjs manifest
+      - run: test "$(git ls-remote origin refs/heads/results/v010-proof-gc-study-003 | cut -f1)" = "$GITHUB_SHA"
+      - id: roots
+        run: |
+          node - <<'JS'
+          require('node:fs').appendFileSync(process.env.GITHUB_OUTPUT,'openings='+JSON.stringify(Array.from({length:14},(_,i)=>i))+'\n');
+          JS
+  back21:
+    needs: preflight
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        target: [0, 1]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Complete-response proof with retained active frames
+        run: node --expose-gc --max-old-space-size=4096 tools/v010-gc/study.cjs job "$RUNNER_TEMP/proofs" "14" "${{ matrix.target }}"
+      - name: Reuse complete job without new exploration
+        run: node tools/v010-gc/study.cjs job "$RUNNER_TEMP/proofs" "14" "${{ matrix.target }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v010-gc-back-14-${{ matrix.target }}
+          path: ${{ runner.temp }}/proofs/
+          retention-days: 90
+  back19:
+    needs: back21
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        target: [0, 1]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: v010-gc-back-*
+          merge-multiple: true
+          path: ${{ runner.temp }}/earlier
+      - name: Complete-response proof with retained active frames
+        run: node --expose-gc --max-old-space-size=4096 tools/v010-gc/study.cjs job "$RUNNER_TEMP/proofs" "15" "${{ matrix.target }}" "$RUNNER_TEMP/earlier"
+      - name: Reuse complete job without new exploration
+        run: node tools/v010-gc/study.cjs job "$RUNNER_TEMP/proofs" "15" "${{ matrix.target }}" "$RUNNER_TEMP/earlier"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v010-gc-back-15-${{ matrix.target }}
+          path: ${{ runner.temp }}/proofs/
+          retention-days: 90
+  back17:
+    needs: back19
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        target: [0, 1]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: v010-gc-back-*
+          merge-multiple: true
+          path: ${{ runner.temp }}/earlier
+      - name: Complete-response proof with retained active frames
+        run: node --expose-gc --max-old-space-size=4096 tools/v010-gc/study.cjs job "$RUNNER_TEMP/proofs" "16" "${{ matrix.target }}" "$RUNNER_TEMP/earlier"
+      - name: Reuse complete job without new exploration
+        run: node tools/v010-gc/study.cjs job "$RUNNER_TEMP/proofs" "16" "${{ matrix.target }}" "$RUNNER_TEMP/earlier"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v010-gc-back-16-${{ matrix.target }}
+          path: ${{ runner.temp }}/proofs/
+          retention-days: 90
+  openings:
+    needs: [preflight, back17]
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix:
+        root: ${{ fromJSON(needs.preflight.outputs.openings) }}
+        target: [0, 1]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: v010-gc-back-*
+          merge-multiple: true
+          path: ${{ runner.temp }}/earlier
+      - name: Complete-response proof with retained active frames
+        run: node --expose-gc --max-old-space-size=4096 tools/v010-gc/study.cjs job "$RUNNER_TEMP/proofs" "${{ matrix.root }}" "${{ matrix.target }}" "$RUNNER_TEMP/earlier"
+      - name: Reuse complete job without new exploration
+        run: node tools/v010-gc/study.cjs job "$RUNNER_TEMP/proofs" "${{ matrix.root }}" "${{ matrix.target }}" "$RUNNER_TEMP/earlier"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v010-gc-opening-${{ matrix.root }}-${{ matrix.target }}
+          path: ${{ runner.temp }}/proofs/
+          retention-days: 90
+  aggregate:
+    needs: [back21, back19, back17, openings]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: v010-gc-*
+          merge-multiple: true
+          path: ${{ runner.temp }}/proofs
+      - name: Audit all proof records, exact earlier inputs, and initial quantifiers
+        run: node --max-old-space-size=4096 tools/v010-gc/study.cjs aggregate "$RUNNER_TEMP/proofs"
+      - name: Persist exact records on precreated source branch
+        env:
+          STUDY_SOURCE_SHA: ${{ github.sha }}
+          STUDY_RUN_ID: ${{ github.run_id }}
+        run: |
+          test "$(git ls-remote origin refs/heads/results/v010-proof-gc-study-003 | cut -f1)" = "$GITHUB_SHA"
+          python3 tools/v010-followup/archive.py "$RUNNER_TEMP/proofs" doc/v010-gc
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git switch -c results/v010-proof-gc-study-003
+          git add doc/v010-gc
+          git commit -m 'Preserve study 003 collected proof trees and staged opening results'
+          git push origin HEAD:refs/heads/results/v010-proof-gc-study-003
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v010-gc-summary
+          path: |
+            ${{ runner.temp }}/proofs/summary.json
+            doc/v010-gc/
+          retention-days: 90

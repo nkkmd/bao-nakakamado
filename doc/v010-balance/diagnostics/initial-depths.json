@@ -1,0 +1,855 @@
+{
+  "id": "NAKAKAMADO-V010-INITIAL-DEPTH-SENSITIVITY-001",
+  "posthoc": true,
+  "maxNodes": 262144,
+  "quiescenceDepth": 1,
+  "sourceSha256": {
+    "prototype/end-pit-engine.js": "d57dc799fbe6db61916ba632a6472264bead666f1f9e9b77c3f70fc15d5de21c",
+    "prototype/end-pit-rules.js": "e51aa17641802669cc5986a8891d6db1dce122b70a799afeba992c78736b5e8a",
+    "prototype/end-pit-search-transition.js": "594877db0d07501997cb943d01400281083df44ab0fe0fc456a93c063d24a59e",
+    "prototype/end-pit-search-ai.js": "35c6b5ec555efbd8fb0ca14ab55ad9eb2a75bc60b76573316ef5b94c11a7309e",
+    "prototype/end-pit-search-evaluator.js": "9bd4959c9eebb0a3fd93d3c33e4405b97734142d9fbef036cf63261422df51e3",
+    "prototype/end-pit-simple-ai.js": "a20fb0bb597245dc125595df85f4d25bfe348e1b37a1ea6d9a107d1688e06c7b",
+    "tools/v010-balance/research-search.cjs": "310e2d92e66e22889a949789c9b6630fde3d83b7d513de927c3cc060e6e7f0ab",
+    "tools/v010-balance/core.cjs": "ae90f5fc692d9b970590b279e12e28917c8b07ec20c613c2f4bc0abce7cf3aba",
+    "tools/v010-balance/run.cjs": "2b44206af5bea4a0231561f26d5d4b455ddc4aa367b84791f2b4f9e61f872a46"
+  },
+  "rows": [
+    {
+      "requestedDepth": 1,
+      "move": {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "right"
+      },
+      "searchId": "NAKAKAMADO-BALANCE-SEARCH-V010-v1",
+      "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+      "nodes": 15,
+      "quiescenceNodes": 10,
+      "cutoffs": 0,
+      "cacheHits": 0,
+      "cacheStores": 1,
+      "evaluationRequests": 12,
+      "evaluations": 10,
+      "evaluationCacheHits": 2,
+      "evaluationCacheEvictions": 0,
+      "cachePeak": 1,
+      "evaluationCachePeak": 10,
+      "pvsResearches": 0,
+      "aspirationResearches": 0,
+      "historyUpdates": 0,
+      "safetyStops": 0,
+      "completedDepth": 1,
+      "rootScore": -9,
+      "timedOut": false,
+      "nodeBudgetReached": false,
+      "exactRootScores": [
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          "score": -67
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          "score": -135
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          "score": -9
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "right"
+          },
+          "score": -14
+        }
+      ],
+      "maxNodes": 262144,
+      "elapsedMs": 0,
+      "allocatedTimeMs": 60000
+    },
+    {
+      "requestedDepth": 2,
+      "move": {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "left"
+      },
+      "searchId": "NAKAKAMADO-BALANCE-SEARCH-V010-v1",
+      "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+      "nodes": 73,
+      "quiescenceNodes": 45,
+      "cutoffs": 4,
+      "cacheHits": 0,
+      "cacheStores": 6,
+      "evaluationRequests": 50,
+      "evaluations": 33,
+      "evaluationCacheHits": 17,
+      "evaluationCacheEvictions": 0,
+      "cachePeak": 5,
+      "evaluationCachePeak": 33,
+      "pvsResearches": 4,
+      "aspirationResearches": 0,
+      "historyUpdates": 0,
+      "safetyStops": 0,
+      "completedDepth": 2,
+      "rootScore": 148,
+      "timedOut": false,
+      "nodeBudgetReached": false,
+      "exactRootScores": [
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          "score": 2
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          "score": 148
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          "score": -135
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "right"
+          },
+          "score": -3
+        }
+      ],
+      "maxNodes": 262144,
+      "elapsedMs": 0,
+      "allocatedTimeMs": 60000
+    },
+    {
+      "requestedDepth": 3,
+      "move": {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "right"
+      },
+      "searchId": "NAKAKAMADO-BALANCE-SEARCH-V010-v1",
+      "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+      "nodes": 195,
+      "quiescenceNodes": 114,
+      "cutoffs": 21,
+      "cacheHits": 1,
+      "cacheStores": 26,
+      "evaluationRequests": 135,
+      "evaluations": 82,
+      "evaluationCacheHits": 53,
+      "evaluationCacheEvictions": 0,
+      "cachePeak": 19,
+      "evaluationCachePeak": 82,
+      "pvsResearches": 9,
+      "aspirationResearches": 0,
+      "historyUpdates": 0,
+      "safetyStops": 0,
+      "completedDepth": 3,
+      "rootScore": 7,
+      "timedOut": false,
+      "nodeBudgetReached": false,
+      "exactRootScores": [
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          "score": -3
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          "score": -109
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          "score": 7
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "right"
+          },
+          "score": -2
+        }
+      ],
+      "maxNodes": 262144,
+      "elapsedMs": 0,
+      "allocatedTimeMs": 60000
+    },
+    {
+      "requestedDepth": 4,
+      "move": {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "left"
+      },
+      "searchId": "NAKAKAMADO-BALANCE-SEARCH-V010-v1",
+      "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+      "nodes": 602,
+      "quiescenceNodes": 357,
+      "cutoffs": 96,
+      "cacheHits": 19,
+      "cacheStores": 93,
+      "evaluationRequests": 425,
+      "evaluations": 254,
+      "evaluationCacheHits": 171,
+      "evaluationCacheEvictions": 0,
+      "cachePeak": 51,
+      "evaluationCachePeak": 254,
+      "pvsResearches": 25,
+      "aspirationResearches": 0,
+      "historyUpdates": 0,
+      "safetyStops": 0,
+      "completedDepth": 4,
+      "rootScore": 178,
+      "timedOut": false,
+      "nodeBudgetReached": false,
+      "exactRootScores": [
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          "score": 11
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          "score": 178
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          "score": 52
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "right"
+          },
+          "score": 2
+        }
+      ],
+      "maxNodes": 262144,
+      "elapsedMs": 0,
+      "allocatedTimeMs": 60000
+    },
+    {
+      "requestedDepth": 5,
+      "move": {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 6,
+        "direction": "right"
+      },
+      "searchId": "NAKAKAMADO-BALANCE-SEARCH-V010-v1",
+      "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+      "nodes": 1250,
+      "quiescenceNodes": 718,
+      "cutoffs": 239,
+      "cacheHits": 53,
+      "cacheStores": 223,
+      "evaluationRequests": 807,
+      "evaluations": 471,
+      "evaluationCacheHits": 336,
+      "evaluationCacheEvictions": 0,
+      "cachePeak": 112,
+      "evaluationCachePeak": 471,
+      "pvsResearches": 40,
+      "aspirationResearches": 0,
+      "historyUpdates": 0,
+      "safetyStops": 0,
+      "completedDepth": 5,
+      "rootScore": -117,
+      "timedOut": false,
+      "nodeBudgetReached": false,
+      "exactRootScores": [
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          "score": -191
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          "score": -187
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          "score": -189
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "right"
+          },
+          "score": -117
+        }
+      ],
+      "maxNodes": 262144,
+      "elapsedMs": 0,
+      "allocatedTimeMs": 60000
+    },
+    {
+      "requestedDepth": 6,
+      "move": {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "left"
+      },
+      "searchId": "NAKAKAMADO-BALANCE-SEARCH-V010-v1",
+      "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+      "nodes": 2630,
+      "quiescenceNodes": 1476,
+      "cutoffs": 554,
+      "cacheHits": 123,
+      "cacheStores": 510,
+      "evaluationRequests": 1708,
+      "evaluations": 1013,
+      "evaluationCacheHits": 695,
+      "evaluationCacheEvictions": 0,
+      "cachePeak": 249,
+      "evaluationCachePeak": 1013,
+      "pvsResearches": 65,
+      "aspirationResearches": 0,
+      "historyUpdates": 0,
+      "safetyStops": 0,
+      "completedDepth": 6,
+      "rootScore": 133,
+      "timedOut": false,
+      "nodeBudgetReached": false,
+      "exactRootScores": [
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "right"
+          },
+          "score": 2
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          "score": 133
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          "score": -74
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          "score": -7
+        }
+      ],
+      "maxNodes": 262144,
+      "elapsedMs": 0,
+      "allocatedTimeMs": 60000
+    },
+    {
+      "requestedDepth": 7,
+      "move": {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "right"
+      },
+      "searchId": "NAKAKAMADO-BALANCE-SEARCH-V010-v1",
+      "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+      "nodes": 5379,
+      "quiescenceNodes": 3014,
+      "cutoffs": 1250,
+      "cacheHits": 196,
+      "cacheStores": 1097,
+      "evaluationRequests": 3418,
+      "evaluations": 2249,
+      "evaluationCacheHits": 1169,
+      "evaluationCacheEvictions": 201,
+      "cachePeak": 596,
+      "evaluationCachePeak": 2048,
+      "pvsResearches": 88,
+      "aspirationResearches": 0,
+      "historyUpdates": 0,
+      "safetyStops": 0,
+      "completedDepth": 7,
+      "rootScore": -92,
+      "timedOut": false,
+      "nodeBudgetReached": false,
+      "exactRootScores": [
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          "score": -196
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          "score": -134
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          "score": -92
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "right"
+          },
+          "score": -129
+        }
+      ],
+      "maxNodes": 262144,
+      "elapsedMs": 0,
+      "allocatedTimeMs": 60000
+    },
+    {
+      "requestedDepth": 8,
+      "move": {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "right"
+      },
+      "searchId": "NAKAKAMADO-BALANCE-SEARCH-V010-v1",
+      "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+      "nodes": 10906,
+      "quiescenceNodes": 6151,
+      "cutoffs": 2684,
+      "cacheHits": 393,
+      "cacheStores": 2217,
+      "evaluationRequests": 6436,
+      "evaluations": 4746,
+      "evaluationCacheHits": 1690,
+      "evaluationCacheEvictions": 2698,
+      "cachePeak": 1193,
+      "evaluationCachePeak": 2048,
+      "pvsResearches": 120,
+      "aspirationResearches": 0,
+      "historyUpdates": 0,
+      "safetyStops": 0,
+      "completedDepth": 8,
+      "rootScore": 94,
+      "timedOut": false,
+      "nodeBudgetReached": false,
+      "exactRootScores": [
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          "score": 94
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          "score": 90
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          "score": -41
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "right"
+          },
+          "score": -13
+        }
+      ],
+      "maxNodes": 262144,
+      "elapsedMs": 0,
+      "allocatedTimeMs": 60000
+    },
+    {
+      "requestedDepth": 9,
+      "move": {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "right"
+      },
+      "searchId": "NAKAKAMADO-BALANCE-SEARCH-V010-v1",
+      "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+      "nodes": 24048,
+      "quiescenceNodes": 13911,
+      "cutoffs": 5933,
+      "cacheHits": 938,
+      "cacheStores": 4759,
+      "evaluationRequests": 13479,
+      "evaluations": 10710,
+      "evaluationCacheHits": 2769,
+      "evaluationCacheEvictions": 8662,
+      "cachePeak": 2631,
+      "evaluationCachePeak": 2048,
+      "pvsResearches": 195,
+      "aspirationResearches": 0,
+      "historyUpdates": 0,
+      "safetyStops": 0,
+      "completedDepth": 9,
+      "rootScore": -68,
+      "timedOut": false,
+      "nodeBudgetReached": false,
+      "exactRootScores": [
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          "score": -68
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          "score": -146
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          "score": -206
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "right"
+          },
+          "score": -124
+        }
+      ],
+      "maxNodes": 262144,
+      "elapsedMs": 0,
+      "allocatedTimeMs": 60000
+    },
+    {
+      "requestedDepth": 10,
+      "move": {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "right"
+      },
+      "searchId": "NAKAKAMADO-BALANCE-SEARCH-V010-v1",
+      "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+      "nodes": 42704,
+      "quiescenceNodes": 24391,
+      "cutoffs": 11148,
+      "cacheHits": 1616,
+      "cacheStores": 8584,
+      "evaluationRequests": 22594,
+      "evaluations": 18664,
+      "evaluationCacheHits": 3930,
+      "evaluationCacheEvictions": 16616,
+      "cachePeak": 4577,
+      "evaluationCachePeak": 2048,
+      "pvsResearches": 248,
+      "aspirationResearches": 0,
+      "historyUpdates": 0,
+      "safetyStops": 0,
+      "completedDepth": 10,
+      "rootScore": 108,
+      "timedOut": false,
+      "nodeBudgetReached": false,
+      "exactRootScores": [
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          "score": 108
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          "score": 95
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          "score": 106
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "right"
+          },
+          "score": 45
+        }
+      ],
+      "maxNodes": 262144,
+      "elapsedMs": 0,
+      "allocatedTimeMs": 60000
+    },
+    {
+      "requestedDepth": 11,
+      "move": {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "right"
+      },
+      "searchId": "NAKAKAMADO-BALANCE-SEARCH-V010-v1",
+      "evaluatorId": "NAKAKAMADO-HANDCRAFT-V010-v1",
+      "nodes": 90275,
+      "quiescenceNodes": 53027,
+      "cutoffs": 22809,
+      "cacheHits": 3013,
+      "cacheStores": 17886,
+      "evaluationRequests": 47043,
+      "evaluations": 40955,
+      "evaluationCacheHits": 6088,
+      "evaluationCacheEvictions": 38907,
+      "cachePeak": 10644,
+      "evaluationCachePeak": 2048,
+      "pvsResearches": 380,
+      "aspirationResearches": 0,
+      "historyUpdates": 0,
+      "safetyStops": 0,
+      "completedDepth": 11,
+      "rootScore": -141,
+      "timedOut": false,
+      "nodeBudgetReached": false,
+      "exactRootScores": [
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          "score": -141
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          "score": -327
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          "score": -168
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "right"
+          },
+          "score": -161
+        }
+      ],
+      "maxNodes": 262144,
+      "elapsedMs": 0,
+      "allocatedTimeMs": 60000
+    }
+  ]
+}

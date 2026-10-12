@@ -1,0 +1,28 @@
+name: v0.10.0 initial proof study checks
+on:
+  push:
+    branches: ['research/v010-initial-proof-20261012']
+  pull_request:
+    paths: ['tools/v010-certainty/**', 'doc/V010_INITIAL_PROOF_*', '.github/workflows/v010-certainty-*.yml']
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --test tools/v010-certainty/check.test.cjs
+      - run: node --test prototype/takasia.test.cjs prototype/end-pit-search.test.cjs
+      - name: All previous source and data remain immutable
+        run: |
+          node tools/v010-certainty/study.cjs manifest
+          node tools/v010-followup/study.cjs manifest
+          node tools/v010-balance/formal.cjs manifest
+          git diff --exit-code 73af579145a4e8225010d61fe7a948abccffcf17 -- prototype trials tools/v010-balance tools/v010-followup doc/v010-balance doc/v010-followup
+          git diff --check

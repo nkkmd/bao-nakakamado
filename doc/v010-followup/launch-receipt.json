@@ -1,0 +1,48 @@
+{
+  "studyId": "NAKAKAMADO-V010-OPENING-PROOF-STUDY-001",
+  "manifestDigest": "44c585bf8cf0dc6f4d9af6db2a219065786ba5bdaf864d7c2f290ebfd1e957a4",
+  "recordedDate": "2026-10-12",
+  "timezone": "Asia/Tokyo",
+  "preparationCommit": "4f86f775f3b72ad3ad83c074a9109ec486cf1328",
+  "launchCommit": "105b56bb84c489f12d65357bde268d07003043ae",
+  "launchRunId": 38186936008,
+  "launchRunUrl": "https://github.com/nkkmd/bao-nakakamado/actions/runs/38186936008",
+  "preparationChecks": [
+    {
+      "runId": 38186866391,
+      "event": "push",
+      "conclusion": "success"
+    },
+    {
+      "runId": 38186882362,
+      "event": "pull_request",
+      "conclusion": "success"
+    }
+  ],
+  "preflight": {
+    "jobId": 114611170083,
+    "conclusion": "success"
+  },
+  "observedProgress": {
+    "completedPreflight": 1,
+    "runningMatrixJobs": 8,
+    "runningProofJobs": 8,
+    "completedStudyJobs": 0
+  },
+  "planned": {
+    "games": 420,
+    "pairedSeeds": 210,
+    "forcedOpeningGames": 392,
+    "naturalReferenceGames": 28,
+    "matrixShards": 32,
+    "proofRoots": 13,
+    "proofJobs": 26,
+    "maxProofDepth": 40,
+    "maxProofNodesPerJob": 1000000,
+    "maxProofWallMsPerJob": 600000
+  },
+  "resultsBranch": "results/v010-opening-proof-study-001",
+  "statusAtRecord": "RUNNING-NOT-YET-AGGREGATED",
+  "initialWinner": null,
+  "pullRequest": 36
+}

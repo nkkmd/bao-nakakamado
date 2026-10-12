@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "rulesVersion": "0.10.0",
+  "developmentSeed": 2026100910,
+  "games": 32,
+  "transitions": 4903,
+  "additions": 825,
+  "takasiaActivations": 17,
+  "takasiaStops": 4,
+  "constrainedTransitions": 22,
+  "symmetry": 4903,
+  "replays": 32,
+  "oracleComparisons": 810,
+  "roots": 45,
+  "normalTerminal": 32,
+  "safetyStop": 0,
+  "unfinished": 0,
+  "sourceSha256": {
+    "prototype/end-pit-engine.js": "d57dc799fbe6db61916ba632a6472264bead666f1f9e9b77c3f70fc15d5de21c",
+    "prototype/end-pit-rules.js": "e51aa17641802669cc5986a8891d6db1dce122b70a799afeba992c78736b5e8a",
+    "prototype/end-pit-search-transition.js": "594877db0d07501997cb943d01400281083df44ab0fe0fc456a93c063d24a59e",
+    "prototype/end-pit-search-ai.js": "35c6b5ec555efbd8fb0ca14ab55ad9eb2a75bc60b76573316ef5b94c11a7309e",
+    "prototype/end-pit-search-evaluator.js": "9bd4959c9eebb0a3fd93d3c33e4405b97734142d9fbef036cf63261422df51e3",
+    "tools/end-pit-search-oracle.cjs": "51e00fbed7c578b0d8c417ed1d87b2a94368d957243e697190b6febf85626250",
+    "tools/end-pit-search-check.cjs": "51363c195241de8c35b12190265d1abf9493723c766c321c1be9a9409733c055"
+  },
+  "namuaRoots": 18,
+  "mtajiRoots": 27,
+  "rootDigest": "355758e6e0b0b9db6c469c559e60933584d4efbb18672b8c9dc0791051798b44"
+}

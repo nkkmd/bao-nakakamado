@@ -1,0 +1,112 @@
+# v0.10.0先後差・必勝調査：完了分と再開手順
+
+整理日：2026年10月12日（Asia/Tokyo）。対象は `nkkmd/bao-nakakamado` の現行v0.10.0、標準初期配置（前列6・2・2、普通ハンド22個ずつ）。完了した研究HEADは `958217da937c6bfcf91aba3d94e1ea67e3cf8a9d`。この文書と保存結果を含む統合の実績は、mainのコミット履歴と統合PRを確認する。
+
+## 現時点の判断
+
+**初期配置の必勝側と、ルール全体の公平性は未確定。主試験の共通経路で20手を終えた局面からは、後攻が相手の全合法応答に対して18着手以内に通常勝利できることを証明済み。**
+
+これは初期配置からその局面へ強制できる証明ではない。21手目が最初の敗着、18着手が最短、後攻の勝ち手が唯一、という結論でもない。未証明・予算停止を公平、引き分け、必勝不在と扱わない。
+
+次の調査では二つの問いを区別する。
+
+| 問い | 必要な根拠 | 現状 |
+|---|---|---|
+| 標準初期配置から、完全な応答をしても勝つ側があるか | 初期状態を根とし、相手の全合法応答を網羅する検証済み戦略 | UNKNOWN |
+| 特定AI・探索量・開幕条件では、どちらが勝ちやすいか | 条件を固定した対局、南北交換、異なる方針・探索量への感度 | 強い条件依存を確認 |
+| ルール全体を公平と言えるか | 公平性の定義を固定し、上の理論値・実用上の先後差・未解決の循環を区別した評価 | 未確定 |
+
+盤面の南北対称性は席に固有の差を調べる根拠になるが、先に指すことの有利不利の証明にはならない。ルール変更や初期配置調整の採用判断は今回行っていない。
+
+## 完了した調査
+
+| 区分 | 完了量 | 主な結果 | 限界 |
+|---|---:|---|---|
+| 固定ノード自己対戦 | 10,240局、5,120交換ペア | 8,192ノードは後攻8,192勝、512ノードは後攻1,024勝、2,048ノードは先攻1,024勝 | 評価器と探索量を固定した成績 |
+| 追加診断 | 探索的35局、深度感度、既存3証明 | 同条件の長い固定序盤、初手・応手の変更による勝敗反転 | 正式10,240局と混ぜない |
+| 調査001 | 420局、26証明job | 14強制開幕のうち10通りで方針・探索量により勝敗が変化。27手目直前から後攻14着手以内を新規証明 | 2seedと席交換。強制開幕を混ぜた勝率や一般的信頼区間は作らない |
+| 調査002 | 38証明job、新規対局0 | 23手目直前から後攻20着手以内、25手目から後攻18着手以内を新規証明 | 全14開幕の2手後は両目標とも未証明 |
+| 調査003 | 34証明job、新規対局0 | 21手目直前から後攻18着手以内を新規証明。保存容量・heap・時間上限停止0 | 19・17手目、全14開幕はノード上限で未証明 |
+
+正式対局は全局通常終局、深度0・安全停止・反復停止・着手上限・技術的失敗は0。主条件の4,096ペアは最初の33手を共有し、全局38着手で終局した。seedの多さを、独立した序盤の多さと見なさない。
+
+001の自由開幕における同方針3条件はいずれも後攻4勝だった。一方、32,768ノードの方針は8,192ノードの同評価器を両方の役割で破り、8,192ノードの基準評価器は診断用mobility評価器を両役割で破った。先後差とAIの強さの差を混同しない。
+
+詳しい解釈と元数値は、[正式対局の診断](V010_FIRST_PLAYER_BALANCE_DIAGNOSIS_20261012.md)、[001結果](V010_OPENING_PROOF_RESULTS_20261012.md)、[002結果](V010_INITIAL_PROOF_RESULTS_20261012.md)、[003結果](V010_PROOF_GC_RESULTS_20261012.md)にある。起動記録・計画文書は当時の状態として保持する。
+
+## 確認済みの必勝範囲
+
+手数は両側の着手の合計。対象の「主経路」は正式8,192ノード自己対戦の共通棋譜。「直前」はその番号の手をまだ指していない状態。
+
+| 主経路の局面 | 確認した勝者 | 通常勝利までの上限 | 証明ノード | 出典 |
+|---|---|---:|---:|---|
+| 21手目直前 | 後攻 | 18着手 | 7,721 | 003 `proof-14-1.json.gz` |
+| 23手目直前 | 後攻 | 20着手 | 25,745 | 002 `proof-17-1.json.gz` |
+| 25手目直前 | 後攻 | 18着手 | 17,593 | 002 `proof-18-1.json.gz` |
+| 27手目直前 | 後攻 | 14着手 | 1,319 | 001 |
+| 28手目直前 | 後攻 | 11着手 | 94 | 001 |
+| 29手目直前 | 後攻 | 10着手 | 93 | 正式対局の追加診断 |
+
+512ノード経路51手目直前には後攻4着手以内、2,048ノード経路55手目直前には先攻9着手以内の旧証明もある。違う経路の盤面を同じ主経路へ移さない。
+
+21手目直前はNAMUAで普通ハンド各7個、先攻の合法捕獲手は3種類。先攻2番・右への後攻4番・左、先攻5番・右への後攻6番・右、先攻5番・左への後攻3番・左を証明で確認した。その後も相手の選択に応じて証明の勝ち手を続ける戦略であり、1本の固定棋譜ではない。
+
+## 保存結果と再監査
+
+原記録・summary・保存receiptは、main統合用に [完了結果ディレクトリ](v010-research-completed/)へ元Git blobと同じbytesで複製した。元の結果ブランチと固定ソースは保持する。[機械可読index](v010-research-completed/index.json)に全ファイルの元パス、Git blob、SHA-256、サイズ、manifestを記録した。
+
+| 調査 | 正式run | 結果commit | main内の原記録・summary・receipt |
+|---|---|---|---|
+| 正式10,240局 | [38141114334](https://github.com/nkkmd/bao-nakakamado/actions/runs/38141114334) | 保存結果 `c753a48abf1f8bcd89651f541906a56dde37f20e` | [保存ZIP](v010-balance/formal-original-artifacts.zip)、[summary](v010-balance/formal-summary.json)、[receipt](v010-balance/preservation-receipt.json) |
+| 001 | [38186936008](https://github.com/nkkmd/bao-nakakamado/actions/runs/38186936008) | `de8dc2e32f8b924d63a30d85edb8fd0bcbcf8735` | [原記録](v010-research-completed/study-001/original-records-001.zip)、[summary](v010-research-completed/study-001/summary.json)、[receipt](v010-research-completed/study-001/preservation-receipt.json) |
+| 002 | [38204293817](https://github.com/nkkmd/bao-nakakamado/actions/runs/38204293817) | `15346359243d5193606f1b7bced31eaa66ea69d9` | [原記録](v010-research-completed/study-002/original-records-001.zip)、[summary](v010-research-completed/study-002/summary.json)、[receipt](v010-research-completed/study-002/preservation-receipt.json) |
+| 003 | [38212885592](https://github.com/nkkmd/bao-nakakamado/actions/runs/38212885592) | `97cb04a4dfb021765ef25f72e744e38c98335c7a` | [原記録](v010-research-completed/study-003/original-records-001.zip)、[summary](v010-research-completed/study-003/summary.json)、[receipt](v010-research-completed/study-003/preservation-receipt.json) |
+
+001は計算・監査成功後、初回保存だけがActionsのworkflow権限不足で失敗した。保存専用run [38196030884](https://github.com/nkkmd/bao-nakakamado/actions/runs/38196030884)で新規計測・探索0の復旧を完了している。[初回保存receipt](v010-research-completed/study-001/initial-preservation-attempt-receipt.json)と[復旧記録](v010-research-completed/study-001/preservation-recovery.json)を併存させ、初回runを全job成功と書き換えない。正式10,240局の保存専用runは [38183853253](https://github.com/nkkmd/bao-nakakamado/actions/runs/38183853253)。
+
+全履歴を取得したcheckout、Node 24、Python 3で、次を実行できる。
+
+```sh
+git fetch origin
+python3 tools/v010-research-integration/audit.py
+node --expose-gc --test tools/v010-balance/check.test.cjs tools/v010-balance/diagnostics/check.test.cjs tools/v010-followup/check.test.cjs tools/v010-certainty/check.test.cjs tools/v010-gc/check.test.cjs prototype/takasia.test.cjs prototype/end-pit-search.test.cjs prototype/end-pit-computer-client.test.cjs prototype/end-pit-app.test.cjs
+```
+
+監査は正式原ZIP161個、5,120ペア、001の976原ファイル、002の863、003の771を復元・SHA照合し、全棋譜・全証明・段階依存入力を検証する。各保存summaryと再集計bytesの完全一致も確認する。一時ディレクトリに展開し、終了時に削除する。新規対局・証明探索は起動しない。26件の証明専用チェックポイントも再監査する。main統合用の読取り専用CIにこの監査を登録した。
+
+統合前のローカル最終確認は、上記全件監査と関連54テストがすべて成功。相対リンク・差分の空白・固定研究ソース・公開実装の不変も確認した。[最終監査記録](v010-research-completed/final-check.json)に結果を保存した。新規の正式対局・証明探索は0件。CIとmain統合の最終成否は、統合PRおよびmainのActionsを確認する。
+
+最新の21手目証明だけを確認するときは、003のZIPから `proof-14-1.json.gz` を読み、その `result.certificate` を `tools/v010-balance/diagnostics/proof.cjs` の `verify` に渡す。証明を実験入力として採用する前には全監査とmanifest確認を行う。既存 `job`、`matrix`、`shard` は新規計測の入口なので、再監査に使わない。
+
+## 再開時に最初に確認すること
+
+1. mainを取得し、[AGENTS.md](../AGENTS.md)、この文書、003結果、[003固定manifest](../tools/v010-gc/manifest.json)を読む。作業開始時のmain SHAを記録する。
+2. 上記読取り専用監査で、保存記録・固定ソース・最新証明が整合することを確認する。正式対局や完了jobの再実行でデータを増やさない。
+3. 「理論的な初期配置の必勝」と「複数のAI条件における先後差」を別の評価項目にする。公平性を勝率50%だけで定義せず、対象・循環・打切りを明記する。
+4. 調査004の方法・予算・入力・成功条件・停止条件を決め、旧manifestを変更せず、新しいID・研究ディレクトリ・結果ブランチを用意する。
+
+## 次の調査候補と未着手の範囲
+
+**調査004は未計画固定・未実装・未起動。** 別方式の探索や19手目以前の分割は検討候補であり、性能を確認済みとは扱わない。
+
+003では1jobあたり1,000万訪問、20分、最大80着手（開幕2手後は残り78）、cache10万、証明保存50万ノード。34jobはPROVED1・NODE_BUDGET33で、開幕28目標は完了深度18〜23で停止した。最大深度まで解けたという意味ではない。残る制約は今回の訪問予算と探索方法であり、単純に同じ試験を繰り返しても初期配置の結論が出る保証はない。
+
+優先候補は、主経路19手目の合法手・応手を小さく分け、21手目の証明へつなぐ遡及探索。それと並行して方法を比較するなら、proof-number／DFPNなど証明対象を優先する方式を一次文献から確認し、小規模な解ける局面と独立検証器で実装を検証してから固定する。方式はまだ採用していない。
+
+初期配置への合成は、先攻勝ちなら「ある初手について全後攻応手に先攻の勝ち」、後攻勝ちなら「全4初手それぞれに後攻の勝つ応手」が必要。標準初期状態は4合法初手、2手後は14局面。21手目への一本道を示すだけでは、この条件を満たさない。14開幕の個別優先順位を決める場合も、全体証明に必要な分岐を除外しない。
+
+循環・安全停止・予算停止は通常勝利末端として扱わない。有限深度の失敗を無期限の敗北へ昇格させない。失敗cacheの深度支配、相手応答の全列挙、既知証明の再利用、改ざん拒否、途中停止のUNKNOWN維持を確認する。状態キーからturnなどを除く案は未検証であり、盤だけの一致でcacheや証明を共有しない。takasia、手番、phase、ハンド等を含む将来遷移の一致が必要。
+
+実用上の先後差を追加調査する場合は、既存開幕の偏りを踏まえ、方針・探索量・担当交換・開幕の扱いを事前に固定する。証明探索と対局標本を混ぜず、既存420局の強制開幕成績をゲーム全体の推定値へ合算しない。
+
+## 新しいチャットへの依頼文
+
+```text
+@GitHub bao-nakakamado
+main の doc/V010_RESEARCH_HANDOFF_20261012.md と AGENTS.md を読んでください。
+完了済み調査の保存記録を読取り専用で再監査し、初期配置の必勝側とルール全体の公平性を調べる調査004を進めてください。
+まず未解決分岐と方法・予算・成功条件を整理し、新方式を小規模検証してから固定計画で実行してください。
+主経路21手目からの後攻必勝と初期配置の必勝を区別し、旧試験・原記録・manifestは保持してください。
+```
+
+本文 © 2026 nkkmd and Bao Nakakamado contributors、[CC BY-SA 4.0](../LICENSE-CC-BY-SA-4.0.txt)。調査コードと実行可能なコード例はMIT。

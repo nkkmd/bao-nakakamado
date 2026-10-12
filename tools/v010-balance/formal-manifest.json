@@ -1,0 +1,80 @@
+{
+  "contract": {
+    "id": "NAKAKAMADO-V010-FIRST-PLAYER-FORMAL-001",
+    "baseline": "eb851e38750b74bda23aba7c462d7ff6f45447db",
+    "rulesVersion": "0.10.0",
+    "baseRulesRevision": "BAO-RULES-V0.2.0-TAKASIA-001",
+    "variantRule": "takasia-namua-end-pit-two-protect-last-two-row-ring-hand22",
+    "start": "standard initial board, both seats",
+    "maxPlies": 400,
+    "maxDepth": 32,
+    "quiescenceDepth": 1,
+    "exactRoot": true,
+    "tiePolicy": "minimum SHA256 of seed, relative root position, and move key among EXACT equal best root scores",
+    "seedDomain": "NAKAKAMADO-V010-FIRST-PLAYER-FORMAL-001-INDEPENDENT",
+    "profiles": [
+      {
+        "id": "primary-8192",
+        "kind": "research",
+        "role": "primary",
+        "nodes": 8192,
+        "pairs": 4096
+      },
+      {
+        "id": "low-512",
+        "kind": "research",
+        "role": "supplementary",
+        "nodes": 512,
+        "pairs": 512
+      },
+      {
+        "id": "middle-2048",
+        "kind": "research",
+        "role": "supplementary",
+        "nodes": 2048,
+        "pairs": 512
+      }
+    ],
+    "shards": 160,
+    "mainAlpha": 0.05,
+    "supplementaryFamilyAlpha": 0.05,
+    "confidence": "Hoeffding by seed pair; unresolved extremes",
+    "practicalRange": [
+      0.47,
+      0.53
+    ],
+    "depthZeroMaximum": 0.01,
+    "stopReasons": [
+      "normal-terminal",
+      "safety-stop",
+      "state-repeat",
+      "ply-limit"
+    ],
+    "selectionUsedWins": false,
+    "posthocChangesAllowed": false
+  },
+  "sourceSha256": {
+    "prototype/end-pit-engine.js": "d57dc799fbe6db61916ba632a6472264bead666f1f9e9b77c3f70fc15d5de21c",
+    "prototype/end-pit-rules.js": "e51aa17641802669cc5986a8891d6db1dce122b70a799afeba992c78736b5e8a",
+    "prototype/end-pit-search-transition.js": "594877db0d07501997cb943d01400281083df44ab0fe0fc456a93c063d24a59e",
+    "prototype/end-pit-search-ai.js": "35c6b5ec555efbd8fb0ca14ab55ad9eb2a75bc60b76573316ef5b94c11a7309e",
+    "prototype/end-pit-search-evaluator.js": "9bd4959c9eebb0a3fd93d3c33e4405b97734142d9fbef036cf63261422df51e3",
+    "prototype/end-pit-simple-ai.js": "a20fb0bb597245dc125595df85f4d25bfe348e1b37a1ea6d9a107d1688e06c7b",
+    "tools/v010-balance/research-search.cjs": "310e2d92e66e22889a949789c9b6630fde3d83b7d513de927c3cc060e6e7f0ab",
+    "tools/v010-balance/core.cjs": "ae90f5fc692d9b970590b279e12e28917c8b07ec20c613c2f4bc0abce7cf3aba",
+    "tools/v010-balance/run.cjs": "2b44206af5bea4a0231561f26d5d4b455ddc4aa367b84791f2b4f9e61f872a46",
+    "tools/v010-balance/formal.cjs": "b158e249ea9220a451236326151916f9590cbc7a96f53ad64ba3d4f4233b7967",
+    "tools/v010-balance/stats.cjs": "c93e3c4290e1f7e9e2994dbc30d888f117bf0b02f6d4aaf193b8006cc7595143",
+    "tools/v010-balance/freeze.cjs": "742cc9654ac8a351611652270abf41a22eec4a9e2009fe4e0038d055c5cab1fe",
+    "tools/v010-balance/generate-search.py": "bcfad825f0d3d0080e3eb133b1ef13edbb3701f522db739be2c314493fa384dd",
+    "tools/v010-balance/oracle.cjs": "ec66c5b0806d883f3d20c14fd51387c515ba3229b56704acd609d8737eb960ac",
+    "tools/v010-balance/check.test.cjs": "ee624bea9147d3b212ff6d6f816c665400734db80afc6d4148acb92c54d7d1b0",
+    ".github/workflows/v010-balance-formal.yml": "b62cf68cab7534a222183559552133d1b07be6585658f51248657a36d09c91a2"
+  },
+  "pilot": {
+    "operationsDigest": "8b342a24425621d7a7125531911fbc1f83ca4217156aca69dbe73f15b00ffa53",
+    "pilotManifestDigest": "f4c86f1c666c59883b624de2e7338d3ef0e95c867c9f6d72a98168b67e287c74",
+    "originalArchiveSha256": "3ff3dbf40682b7dda768678e9fe8627ae1e161ef3b77aed9d0be23ef9a6c8cc4"
+  },
+  "digest": "be9e0d009a4103ce65cba23e34a7e9e1d99538bc4ff8ef0796c387da3d7dedbe"
+}
