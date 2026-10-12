@@ -1,0 +1,29 @@
+name: v0.10.0 opening and proof study checks
+on:
+  push:
+    branches: ['research/v010-opening-proof-20261012']
+  pull_request:
+    paths: ['tools/v010-followup/**', 'doc/V010_OPENING_PROOF_PLAN_20261012.md', 'doc/v010-followup/**', '.github/workflows/v010-followup-*.yml']
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Full legal opening registry, alternate root oracle, proof scope and recovery
+        run: node --test tools/v010-followup/check.test.cjs tools/v010-balance/diagnostics/check.test.cjs
+      - name: Current public rules and AI remain intact
+        run: node --test prototype/takasia.test.cjs prototype/end-pit-search.test.cjs
+      - name: Verify frozen study and previous immutable formal source
+        run: |
+          node tools/v010-followup/study.cjs manifest
+          node tools/v010-balance/formal.cjs manifest
+          git diff --exit-code e4929df7b15e9f9fb123346959a99f78dc827958 -- prototype trials tools/v010-balance doc/v010-balance
+          git diff --check

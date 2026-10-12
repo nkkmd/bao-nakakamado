@@ -24,6 +24,8 @@ Bao la Kiswahiliをベースに、独自ルール **NYAKUA（ニャクア）** �
 
 [検証計画](doc/V010_FIRST_PLAYER_BALANCE_PLAN_20261011.md)と[調査基盤](tools/v010-balance/README.md)を整備しています。標準初期配置の同条件自己対戦を中心に、探索量と南北の席による差を調べます。56局の運用試走と[正式10,240局の試験](https://github.com/nkkmd/bao-nakakamado/actions/runs/38141114334)・全件監査を完了しました。[追加診断](doc/V010_FIRST_PLAYER_BALANCE_DIAGNOSIS_20261012.md)では、条件ごとの固定序盤、初手・応手による勝敗反転、主経路のMTAJI開始局面からの後攻10手以内勝利を確認しました。ゲーム全体の先後差・初期局面の必勝は未確定です。
 
+[全開局・評価方針・必勝ルートの追加調査](doc/V010_OPENING_PROOF_PLAN_20261012.md)では、全14初手／応手、探索量と評価方針の担当交換、初期・到達局面の全応答証明を準備しています。強制した開幕の成績を自然な初期局面の勝率と混ぜず、必勝は証明木が得られた場合だけ確定します。
+
 ## 保存版と検証
 
 案Aの[研究](doc/NYAKUA_END_PIT_A_STUDY_20261006.md)・[循環の追加調査](doc/NYAKUA_A_MTAJI_CYCLE_FOLLOWUP_20261006.md)・[実機試験版の検証](doc/NYAKUA_A_PLAYABLE_TRIAL_20261007.md)を経て採用しました。試験版は`trials/nyakua-a/`に当時の識別情報で保存しています。

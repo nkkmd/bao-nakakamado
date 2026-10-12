@@ -1,0 +1,125 @@
+name: v0.10.0 full opening matrix and winning-route proof 001
+on:
+  push:
+    branches: ['research/v010-opening-proof-20261012']
+permissions:
+  contents: read
+  actions: read
+jobs:
+  preflight:
+    if: startsWith(github.event.head_commit.message, 'Start v0.10.0 full opening and proof study 001') && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      matrix: ${{ steps.registry.outputs.matrix }}
+      roots: ${{ steps.registry.outputs.roots }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --test tools/v010-followup/check.test.cjs
+      - run: node tools/v010-followup/study.cjs manifest
+      - id: registry
+        run: |
+          node - <<'JS'
+          const fs=require('node:fs'),m=require('./tools/v010-followup/manifest.json');
+          fs.appendFileSync(process.env.GITHUB_OUTPUT,'matrix='+JSON.stringify(Array.from({length:m.contract.matrixShards},(_,i)=>i))+'\n');
+          fs.appendFileSync(process.env.GITHUB_OUTPUT,'roots='+JSON.stringify(m.proofRoots.map((_,i)=>i))+'\n');
+          JS
+  matrix:
+    needs: preflight
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix:
+        shard: ${{ fromJSON(needs.preflight.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Whole legal openings and frozen equal/cross policies on both seats
+        run: node tools/v010-followup/study.cjs matrix "$RUNNER_TEMP/study" "${{ matrix.shard }}"
+      - name: Reuse complete pairs with zero new games
+        run: |
+          node tools/v010-followup/study.cjs matrix "$RUNNER_TEMP/study" "${{ matrix.shard }}"
+          node - <<'JS'
+          const fs=require('node:fs'),assert=require('node:assert/strict');
+          const r=JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP+'/study/matrix-receipt-'+process.env.SHARD+'.json'));
+          assert.equal(r.newPairs,0);assert.equal(r.reusedPairs,r.expectedPairs);
+          JS
+        env:
+          SHARD: ${{ matrix.shard }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v010-opening-matrix-${{ matrix.shard }}
+          path: ${{ runner.temp }}/study/
+          retention-days: 90
+  proof:
+    needs: preflight
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix:
+        root: ${{ fromJSON(needs.preflight.outputs.roots) }}
+        target: [0, 1]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Goal-specific full-response proof with pinned verified book
+        run: node tools/v010-followup/study.cjs proof "$RUNNER_TEMP/study" "${{ matrix.root }}" "${{ matrix.target }}"
+      - name: Verify/reuse completed proof job without new exploration
+        run: node tools/v010-followup/study.cjs proof "$RUNNER_TEMP/study" "${{ matrix.root }}" "${{ matrix.target }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v010-opening-proof-${{ matrix.root }}-${{ matrix.target }}
+          path: ${{ runner.temp }}/study/
+          retention-days: 90
+  aggregate:
+    needs: [matrix, proof]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: v010-opening-*
+          merge-multiple: true
+          path: ${{ runner.temp }}/study
+      - name: Audit all records and proofs; compose initial win only with complete quantifiers
+        run: node tools/v010-followup/study.cjs aggregate "$RUNNER_TEMP/study"
+      - name: Persist exact record bytes automatically on a results branch
+        env:
+          STUDY_SOURCE_SHA: ${{ github.sha }}
+          STUDY_RUN_ID: ${{ github.run_id }}
+        run: |
+          python3 tools/v010-followup/archive.py "$RUNNER_TEMP/study" doc/v010-followup
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git switch -c results/v010-opening-proof-study-001
+          git add doc/v010-followup
+          git commit -m 'Preserve v0.10.0 opening matrix and bounded winning-route proofs'
+          git push origin HEAD:refs/heads/results/v010-opening-proof-study-001
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v010-opening-summary
+          path: |
+            ${{ runner.temp }}/study/summary.json
+            doc/v010-followup/preservation-receipt.json
+          retention-days: 90
