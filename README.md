@@ -48,6 +48,10 @@ Bao la Kiswahiliをベースに、独自ルール **NYAKUA（ニャクア）** �
 
 調査005の[全応手分割の結果](doc/V010_REPLY_PROOF_RESULTS_20261013.md)には、新しい「3番・左」の後攻証明、残る「4番・左」「6番・右」、938原ファイルの保存と独立再監査を記録しています。
 
+調査006の[応手深化結果](doc/V010_REPLY_DEEPEN_RESULTS_20261013.md)では34目標を完了し、新証明0・19手目7／9を保持しました。残る2分岐は未解決です。
+
+調査007は[有限手数df-pnの固定計画](doc/V010_PN007_PROOF_PLAN_20261013.md)により[正式起動](doc/V010_PN007_PROOF_LAUNCH_20261013.md)しました。残る17応手の両勝者を探索中です。完了済み調査とは区別して確認してください。
+
 全局面での停止も未確定です。連続種まきは512回の安全上限で停止し、通常勝敗と区別します。コンピューターの強さを比べた試験は[AI開発の索引](doc/AI_DEVELOPMENT_INDEX.md)を参照してください。
 
 ## ライセンス・出典・管理
@@ -57,5 +61,3 @@ Bao la Kiswahiliをベースに、独自ルール **NYAKUA（ニャクア）** �
 基礎ルールの説明は「Bao la Kiswahili 日本語完全ガイド」（© 2026 bao-la-kiswahili-ja contributors）と[元ゲーム](https://github.com/nkkmd/bao-la-kiswahili-game)の図解ルール（© 2026 bao-la-kiswahili-game contributors）を参照・再構成し、NYAKUAなどを追加しました。元プログラムのMIT表示（© 2026 cultivationdata.net）は[ENGINE_LICENSE.txt](prototype/ENGINE_LICENSE.txt)に保持しています。[原型側の採用ルール基準](https://github.com/nkkmd/bao-la-kiswahili-game/blob/main/doc/RULES_BASELINE.md)も参照できます。
 
 考案者・公開日・変更履歴は[履歴文書](doc/ORIGIN_AND_HISTORY.md)、更新時の手順は[リポジトリ管理ルール](AGENTS.md)に定めます。ゲームの仕組み自体に独占権を主張するものではありません。
-
-調査006の[応手深化結果](doc/V010_REPLY_DEEPEN_RESULTS_20261013.md)では34目標を完了し、新証明0・19手目7／9を保持しました。残る2分岐は未解決です。
