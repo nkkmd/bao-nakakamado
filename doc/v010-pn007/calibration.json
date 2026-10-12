@@ -1,0 +1,89 @@
+{
+  "classification": "EXPLORATORY-NOT-FORMAL",
+  "budget": {
+    "maxNodes": 2000000,
+    "wallMs": 15000
+  },
+  "sources": {
+    "tools/v010-pn007/calibrate.cjs": "c712791599c9920141335e0ba1d8f1eb001594cddee3e9afac9f37bb4ea23312",
+    "tools/v010-pn007/prover.cjs": "64f4f0e924ea0baaf052039e47523fa94cd001f5da0abe166cca28708b18c7ae",
+    "tools/v010-gc/prover.cjs": "98bc14b00a79169c0f7474633cbe94b5fd685a9c147448923da10b04bb1d1328"
+  },
+  "rows": [
+    {
+      "case": 0,
+      "method": "dfs003",
+      "depth": 12,
+      "status": "PROVED",
+      "winner": 1,
+      "certificateNodes": 1185,
+      "visits": 82909,
+      "elapsedMs": 1922.78586,
+      "file": "calibration-0-dfs003.json.gz",
+      "sha256": "0b2e3c9a89f577dec4d8a6139b507ceebdb5f56e3578a11bb057dc1351861ab3"
+    },
+    {
+      "case": 0,
+      "method": "dfpn007",
+      "depth": 12,
+      "status": "PROVED",
+      "winner": 1,
+      "certificateNodes": 363,
+      "visits": 36061,
+      "elapsedMs": 674.306286,
+      "file": "calibration-0-dfpn007.json.gz",
+      "sha256": "4a7f08d2aa31274f9a02ae4d87eb1e9d56661acd37343f4f333b8504b8694c5d"
+    },
+    {
+      "case": 1,
+      "method": "dfs003",
+      "depth": 8,
+      "status": "PROVED",
+      "winner": 1,
+      "certificateNodes": 51,
+      "visits": 187,
+      "elapsedMs": 6.558944999999767,
+      "file": "calibration-1-dfs003.json.gz",
+      "sha256": "3f53c09e97020168bd23dd921274863db3d38dd419f48b689591c2462037c442"
+    },
+    {
+      "case": 1,
+      "method": "dfpn007",
+      "depth": 8,
+      "status": "PROVED",
+      "winner": 1,
+      "certificateNodes": 25,
+      "visits": 122,
+      "elapsedMs": 4.025215000000117,
+      "file": "calibration-1-dfpn007.json.gz",
+      "sha256": "ed05f34e3b5093b8fe8d467493c230116bc5f96d0feff35e4ac2ff2fe6592954"
+    },
+    {
+      "case": 2,
+      "method": "dfs003",
+      "depth": 4,
+      "status": "PROVED",
+      "winner": 1,
+      "certificateNodes": 13,
+      "visits": 18,
+      "elapsedMs": 1.6336889999997766,
+      "file": "calibration-2-dfs003.json.gz",
+      "sha256": "908693bcb5382d50be500e2d2994d865cbee369f9ee116aadd51260d0e6e47da"
+    },
+    {
+      "case": 2,
+      "method": "dfpn007",
+      "depth": 4,
+      "status": "PROVED",
+      "winner": 1,
+      "certificateNodes": 13,
+      "visits": 39,
+      "elapsedMs": 1.841403999999784,
+      "file": "calibration-2-dfpn007.json.gz",
+      "sha256": "12587b731ef0187229874336d7daea5f7d492cceebb14affd5345c7835f3413e"
+    }
+  ],
+  "interpretation": "Known states selected from verified 003 strategy, win book and guidance disabled. Equal ceilings do not make visits equal work. No general performance claim.",
+  "newGames": 0,
+  "formalJobs": 0
+}
