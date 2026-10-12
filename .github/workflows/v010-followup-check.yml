@@ -27,3 +27,5 @@ jobs:
           node tools/v010-balance/formal.cjs manifest
           git diff --exit-code e4929df7b15e9f9fb123346959a99f78dc827958 -- prototype trials tools/v010-balance doc/v010-balance
           git diff --check
+      - name: Verify completed proof checkpoint without new games or searches
+        run: node tools/v010-followup/audit-proof-checkpoint.cjs
