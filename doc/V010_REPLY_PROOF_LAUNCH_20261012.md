@@ -29,4 +29,6 @@
 python3 tools/v010-reply/reaudit.py doc/v010-reply/completed <results-commit> 975e1a8188dbe43fda1c39b3b97e8858db8a97e3 38265400792
 ```
 
+完了追記（2026年10月13日）：正式runは00:04:28（日本時間）に全54job成功し、全件監査と938原ファイルの保存を完了した。結果commitは`428cf47b3d27a18e82fef28fa66c66e6cad1c628`。保存結果の独立再監査も成功。[005結果・残る2分岐](V010_REPLY_PROOF_RESULTS_20261013.md)を参照する。上記の起動時点の状態・source・固定条件は保持する。
+
 本文 © 2026 nkkmd and Bao Nakakamado contributors、[CC BY-SA 4.0](../LICENSE-CC-BY-SA-4.0.txt)。調査コードはMIT。
