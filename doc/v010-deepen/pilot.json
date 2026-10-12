@@ -1,0 +1,65 @@
+{
+  "classification": "EXPLORATORY-METHOD-CHECK-NOT-FORMAL",
+  "baseline": "aa8e3860821b80b63d3b27d1eea9a28c9cefa96c",
+  "date": "2026-10-13 Asia/Tokyo",
+  "sources": {
+    "tools/v010-deepen/inputs.cjs": "1f4e0f1a9eabe6d1cb0d0c5178262f9aa4043261663749b3d1f33f41f0369d72",
+    "tools/v010-deepen/pilot.cjs": "eab80420682419f33b3adf192a3d29b909998cd51270fc287e58edcfdf160f3f",
+    "tools/v010-gc/prover.cjs": "98bc14b00a79169c0f7474633cbe94b5fd685a9c147448923da10b04bb1d1328",
+    "tools/v010-branch/compose.cjs": "b014e377d682b1f913574fe979cfdc9bccd1f7cbaadb97580887de8ccbf30d5a",
+    "tools/v010-branch/manifest.json": "6793fb10bf2161598d6e0423cb50efa48f47240d3c37d23524087fc8f2a33bcb"
+  },
+  "inputArchiveSha256": "d25c1dfc9721e9c15fedc69d57165eee33fb0d3cecf8674b20074fd057103bf1",
+  "verifiedStates": 56604,
+  "known21": {
+    "branches": 3,
+    "winner": 1,
+    "depth": 18,
+    "proofNodes": 7721,
+    "newVisits": 0
+  },
+  "probes": [
+    {
+      "rootId": "primary-before-19-move-4-reply-0",
+      "target": 0,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 100000,
+      "elapsedMs": 6482.756518,
+      "resultSha256": "4ab1b43148494be7799e9bb675573bbeffffe6235ac835adef20ceadf402b3ab"
+    },
+    {
+      "rootId": "primary-before-19-move-4-reply-0",
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 100000,
+      "elapsedMs": 4010.2678379999998,
+      "resultSha256": "95f644d4153aac3d9a35d0de2a63f72b48cfcdb8c56b64088e3d8f512098a789"
+    },
+    {
+      "rootId": "primary-before-19-move-5-reply-0",
+      "target": 0,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 100000,
+      "elapsedMs": 5786.141716999999,
+      "resultSha256": "5f89aa1741a0ce977155abbaad4c0efc3f025e9b6ced08c03f085ad4f0370efc"
+    },
+    {
+      "rootId": "primary-before-19-move-5-reply-0",
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 100000,
+      "elapsedMs": 2854.198704000002,
+      "resultSha256": "d378e4b507ad06e1c40f546b8bd80d82808f2f0886fba5c1e63a6d42f6af7272"
+    }
+  ],
+  "newGames": 0,
+  "formalJobs": 0
+}

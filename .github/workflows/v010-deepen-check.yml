@@ -1,0 +1,27 @@
+name: v0.10.0 reply deepening study checks
+on:
+  pull_request:
+    paths: ['tools/v010-deepen/**', 'doc/V010_REPLY_DEEPEN_*', 'doc/v010-deepen/**', '.github/workflows/v010-deepen-*.yml']
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --expose-gc --test tools/v010-deepen/check.test.cjs
+      - run: node tools/v010-deepen/study.cjs manifest
+      - name: Reverify completed 005 originals and composition without new searches
+        run: python3 tools/v010-reply/reaudit.py doc/v010-reply/completed 428cf47b3d27a18e82fef28fa66c66e6cad1c628 975e1a8188dbe43fda1c39b3b97e8858db8a97e3 38265400792
+      - name: Read-only audit of preserved 004 inputs
+        run: python3 tools/v010-branch/reaudit.py doc/v010-branch/completed b1e9bdbcab21760c1bd1017c685e0842d02bb85c
+      - name: Frozen previous sources, evidence and production remain unchanged
+        run: |
+          git diff --exit-code aa8e3860821b80b63d3b27d1eea9a28c9cefa96c -- prototype trials tools/v010-balance tools/v010-followup tools/v010-certainty tools/v010-gc tools/v010-branch tools/v010-reply doc/v010-research-completed doc/v010-balance doc/v010-followup doc/v010-certainty doc/v010-gc doc/v010-branch doc/v010-reply
+          git diff --check
