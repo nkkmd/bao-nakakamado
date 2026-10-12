@@ -25,3 +25,6 @@ jobs:
         run: |
           git diff --exit-code aa8e3860821b80b63d3b27d1eea9a28c9cefa96c -- prototype trials tools/v010-balance tools/v010-followup tools/v010-certainty tools/v010-gc tools/v010-branch tools/v010-reply doc/v010-research-completed doc/v010-balance doc/v010-followup doc/v010-certainty doc/v010-gc doc/v010-branch doc/v010-reply
           git diff --check
+
+      - name: Reverify completed 006 original records without exploration
+        run: python3 tools/v010-deepen/reaudit.py doc/v010-deepen/completed 02335fc03e9ee2ef226c8b226c03d3f8e919456f d4163c3c171117b1fce7dd30b39faad733605418 38271005778
