@@ -1,0 +1,25 @@
+name: v0.10.0 reply proof study checks
+on:
+  pull_request:
+    paths: ['tools/v010-reply/**', 'doc/V010_REPLY_*', 'doc/v010-reply/**', '.github/workflows/v010-reply-*.yml']
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --expose-gc --test tools/v010-reply/check.test.cjs
+      - run: node tools/v010-reply/study.cjs manifest
+      - name: Read-only audit of preserved 004 inputs
+        run: python3 tools/v010-branch/reaudit.py doc/v010-branch/completed b1e9bdbcab21760c1bd1017c685e0842d02bb85c
+      - name: Frozen previous sources, evidence and production remain unchanged
+        run: |
+          git diff --exit-code efcf80f499de46a41122333e64736700416f0b35 -- prototype trials tools/v010-balance tools/v010-followup tools/v010-certainty tools/v010-gc tools/v010-branch doc/v010-research-completed doc/v010-balance doc/v010-followup doc/v010-certainty doc/v010-gc doc/v010-branch
+          git diff --check

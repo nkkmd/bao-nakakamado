@@ -1,0 +1,85 @@
+{
+  "classification": "EXPLORATORY-METHOD-CHECK-NOT-FORMAL",
+  "baseline": "efcf80f499de46a41122333e64736700416f0b35",
+  "date": "2026-10-12 Asia/Tokyo",
+  "sources": {
+    "tools/v010-reply/inputs.cjs": "635b79df42a226a37f89589caaafb03a198fe27cb6de6932cbbd95f9947206fa",
+    "tools/v010-reply/pilot.cjs": "e47708fce8fd8fc7a9fe2b9c0dbf17d510aa74d7ffcf0fdd5fc15f40a8fdec47",
+    "tools/v010-gc/prover.cjs": "98bc14b00a79169c0f7474633cbe94b5fd685a9c147448923da10b04bb1d1328",
+    "tools/v010-branch/compose.cjs": "b014e377d682b1f913574fe979cfdc9bccd1f7cbaadb97580887de8ccbf30d5a",
+    "tools/v010-branch/manifest.json": "6793fb10bf2161598d6e0423cb50efa48f47240d3c37d23524087fc8f2a33bcb"
+  },
+  "inputArchiveSha256": "5c997efc5d9a6108904695930b96a1d2418a01d88a18b01034abbcdda714a58e",
+  "verifiedStates": 56105,
+  "known21": {
+    "branches": 3,
+    "winner": 1,
+    "depth": 18,
+    "proofNodes": 7721,
+    "newVisits": 0
+  },
+  "probes": [
+    {
+      "rootId": "primary-before-19-move-2-reply-0",
+      "target": 0,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 100000,
+      "elapsedMs": 5688.380612999999,
+      "resultSha256": "fc844e5ac9b46f10a8b69a20021d5a9920b658206d3cf86504ba21603fa8cf1e"
+    },
+    {
+      "rootId": "primary-before-19-move-2-reply-0",
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 100000,
+      "elapsedMs": 3364.3616310000016,
+      "resultSha256": "0d2e45419bcc311e77921f58e3a2599ddbd972b6ba465df9a97988debd98ac81"
+    },
+    {
+      "rootId": "primary-before-19-move-4-reply-0",
+      "target": 0,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 100000,
+      "elapsedMs": 5141.405629000001,
+      "resultSha256": "5e39335c07427809816be0f5af8826c188fb36ce7a767dbf2ae759465c4ba6a5"
+    },
+    {
+      "rootId": "primary-before-19-move-4-reply-0",
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 100000,
+      "elapsedMs": 3807.929143000001,
+      "resultSha256": "e67dae6a80b106967583aec6eb11312713727e532ebe7badc7110a0d6bd83720"
+    },
+    {
+      "rootId": "primary-before-19-move-5-reply-0",
+      "target": 0,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 100000,
+      "elapsedMs": 5004.416909,
+      "resultSha256": "a21e645daaa9c4a5193d837606041444b7bc3f92bb04ec307c1f8a7fceeb2aab"
+    },
+    {
+      "rootId": "primary-before-19-move-5-reply-0",
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 100000,
+      "elapsedMs": 3126.9011639999953,
+      "resultSha256": "45cceb58e57173dd65d930853b56c23a0d23832a1e033f508389a5f2df90da25"
+    }
+  ],
+  "newGames": 0,
+  "formalJobs": 0
+}
