@@ -1,0 +1,26 @@
+name: v0.10.0 completed research audit
+on:
+  push:
+    branches: ['main', 'research/v010-completed-integration-20261012']
+    paths: ['tools/v010-*/**', 'doc/V010_*', 'doc/v010-*/**', '.github/workflows/v010-*.yml']
+  pull_request:
+    paths: ['tools/v010-*/**', 'doc/V010_*', 'doc/v010-*/**', '.github/workflows/v010-*.yml']
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Reaggregate preserved records and verify all certificates without new searches
+        run: python3 tools/v010-research-integration/audit.py
+      - name: Frozen source and whitespace checks
+        run: |
+          git diff --exit-code 958217da937c6bfcf91aba3d94e1ea67e3cf8a9d -- prototype trials tools/v010-balance tools/v010-followup tools/v010-certainty tools/v010-gc doc/v010-balance doc/v010-followup doc/v010-certainty doc/v010-gc
+          git diff --check

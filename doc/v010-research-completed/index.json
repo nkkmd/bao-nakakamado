@@ -1,0 +1,134 @@
+{
+  "recordedDateJST": "2026-10-12",
+  "completedResearchHead": "958217da937c6bfcf91aba3d94e1ea67e3cf8a9d",
+  "productionBaseline": "eb851e38750b74bda23aba7c462d7ff6f45447db",
+  "newGamesDuringIntegration": 0,
+  "newProofSearchesDuringIntegration": 0,
+  "studies": [
+    {
+      "number": "001",
+      "studyId": "NAKAKAMADO-V010-OPENING-PROOF-STUDY-001",
+      "manifestDigest": "44c585bf8cf0dc6f4d9af6db2a219065786ba5bdaf864d7c2f290ebfd1e957a4",
+      "sourceCommit": "105b56bb84c489f12d65357bde268d07003043ae",
+      "runId": 38186936008,
+      "resultsCommit": "de8dc2e32f8b924d63a30d85edb8fd0bcbcf8735",
+      "resultsBranch": "results/v010-opening-proof-study-001",
+      "directory": "doc/v010-research-completed/study-001",
+      "aggregator": "tools/v010-followup/study.cjs",
+      "proofJobs": 26,
+      "originalFiles": 976,
+      "games": 420,
+      "files": [
+        {
+          "name": "original-records-001.zip",
+          "sourcePath": "doc/v010-followup/original-records-001.zip",
+          "gitBlob": "e51082f1d2b34d98d772d16aa5591829b5d3c169",
+          "sha256": "d51cc469a456b1b35e03d2287940476194a2bd82e27d26a26297fb0cd39599b6",
+          "bytes": 2919962
+        },
+        {
+          "name": "summary.json",
+          "sourcePath": "doc/v010-followup/summary.json",
+          "gitBlob": "40bd36d86588ff82356df4fd9dd324d59ee222ff",
+          "sha256": "cbf4fe7402995271a5f22f2cda94fca316dad8c8b62c8684c06462553e7525ee",
+          "bytes": 149052
+        },
+        {
+          "name": "preservation-receipt.json",
+          "sourcePath": "doc/v010-followup/preservation-receipt.json",
+          "gitBlob": "18231741d60cebafc0b6590e7eb4136a7684adc8",
+          "sha256": "07d6faaff0ed652824b38d7adfd5a219ff5a966a8839e0f496cb6bc331c62d49",
+          "bytes": 407378
+        },
+        {
+          "name": "initial-preservation-attempt-receipt.json",
+          "sourcePath": "doc/v010-followup/initial-preservation-attempt-receipt.json",
+          "gitBlob": "fc01ffd4c88588849fc752741168eda54e53b68a",
+          "sha256": "d40b1aa0eb16158f039398a856445dfc1fee49d536340784ba7af41e8d7956cb",
+          "bytes": 407378
+        },
+        {
+          "name": "preservation-recovery.json",
+          "sourcePath": "doc/v010-followup/preservation-recovery.json",
+          "gitBlob": "30abe4cdabfd3109ca9845c73c8c1b435f53eba2",
+          "sha256": "9570cd09dec368b1e8c3e6d06fae73fc3eda0cb1850fc7ae061357649425dc5c",
+          "bytes": 418
+        }
+      ]
+    },
+    {
+      "number": "002",
+      "studyId": "NAKAKAMADO-V010-INITIAL-PROOF-STUDY-002",
+      "manifestDigest": "a62374153e312544d0fe31fa118750ba211f6034b601c95c613bb8c40cb87b19",
+      "sourceCommit": "1d70facc20c217e48c14d3ed243b329220dc5771",
+      "runId": 38204293817,
+      "resultsCommit": "15346359243d5193606f1b7bced31eaa66ea69d9",
+      "resultsBranch": "results/v010-initial-proof-study-002",
+      "directory": "doc/v010-research-completed/study-002",
+      "aggregator": "tools/v010-certainty/study.cjs",
+      "proofJobs": 38,
+      "originalFiles": 863,
+      "games": 0,
+      "files": [
+        {
+          "name": "original-records-001.zip",
+          "sourcePath": "doc/v010-certainty/original-records-001.zip",
+          "gitBlob": "53833f33055768fef66cfb3c4fdf6489ffc0f29a",
+          "sha256": "9fc4cd03a8ba907e413dcf75c00998561f02a9bfdab8f6d1e94642e8be86c3f4",
+          "bytes": 2909399
+        },
+        {
+          "name": "summary.json",
+          "sourcePath": "doc/v010-certainty/summary.json",
+          "gitBlob": "920e37ce69804bd1e1c6eec259907c67365599fa",
+          "sha256": "5b7066850153217b20eda29443f0e1d3fbc2561d74fe834987f1e2806e801fa7",
+          "bytes": 13972
+        },
+        {
+          "name": "preservation-receipt.json",
+          "sourcePath": "doc/v010-certainty/preservation-receipt.json",
+          "gitBlob": "0bcba374c66bcb292b1b8db59a3849a0afdedd01",
+          "sha256": "60b0dada5a793e03f24daefb3f35760cd9fdab4c3664e05721165e056e4cbdfa",
+          "bytes": 347556
+        }
+      ]
+    },
+    {
+      "number": "003",
+      "studyId": "NAKAKAMADO-V010-PROOF-GC-STUDY-003",
+      "manifestDigest": "8b24cd382bb08d2e9bbae157696b936a2f56af24017f3803ee6d511bd6277ca4",
+      "sourceCommit": "b2da2e60c834d0c771306987bd8a6e3ae56671c6",
+      "runId": 38212885592,
+      "resultsCommit": "97cb04a4dfb021765ef25f72e744e38c98335c7a",
+      "resultsBranch": "results/v010-proof-gc-study-003",
+      "directory": "doc/v010-research-completed/study-003",
+      "aggregator": "tools/v010-gc/study.cjs",
+      "proofJobs": 34,
+      "originalFiles": 771,
+      "games": 0,
+      "files": [
+        {
+          "name": "original-records-001.zip",
+          "sourcePath": "doc/v010-gc/original-records-001.zip",
+          "gitBlob": "b65c7f50fe4d6ed987fa56a66ee1a211def674f6",
+          "sha256": "f1ddd2d366f011c9ff154f261e218d98d49c068b104775ceba9313d0644859d3",
+          "bytes": 763268
+        },
+        {
+          "name": "summary.json",
+          "sourcePath": "doc/v010-gc/summary.json",
+          "gitBlob": "495c6bb0614b59cac8fbff32210acce5ba4c8bbc",
+          "sha256": "f10f54c4e8fdd5515c83caacd626dd50c43871fab572045eb1522805cd679adc",
+          "bytes": 19200
+        },
+        {
+          "name": "preservation-receipt.json",
+          "sourcePath": "doc/v010-gc/preservation-receipt.json",
+          "gitBlob": "3e392e3eafccc2a28a57993e386e285933bb205d",
+          "sha256": "66e7d94ea39fcd5ef550d0538639a7fea54dc30a20368090a4edbbfddf8b33f6",
+          "bytes": 310484
+        }
+      ]
+    }
+  ]
+}
