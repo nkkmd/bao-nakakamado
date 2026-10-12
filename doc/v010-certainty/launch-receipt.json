@@ -1,0 +1,42 @@
+{
+  "studyId": "NAKAKAMADO-V010-INITIAL-PROOF-STUDY-002",
+  "manifestDigest": "a62374153e312544d0fe31fa118750ba211f6034b601c95c613bb8c40cb87b19",
+  "recordedAtJST": "2026-10-12T13:34:00+09:00",
+  "sourceCommit": "1d70facc20c217e48c14d3ed243b329220dc5771",
+  "runId": 38204293817,
+  "runURL": "https://github.com/nkkmd/bao-nakakamado/actions/runs/38204293817",
+  "preparationCommit": "800585972545248153c46ab3748fd01d48eba224",
+  "preparationChecks": [
+    {
+      "runId": 38204210619,
+      "event": "push",
+      "conclusion": "success"
+    },
+    {
+      "runId": 38204233759,
+      "event": "pull_request",
+      "conclusion": "success"
+    }
+  ],
+  "preflight": {
+    "jobId": 114664240472,
+    "conclusion": "success"
+  },
+  "observed": {
+    "runningProofJobs": 8,
+    "queuedProofJobs": 30,
+    "completedProofJobs": 0
+  },
+  "planned": {
+    "roots": 19,
+    "proofJobs": 38,
+    "maxNodesPerJob": 10000000,
+    "wallMsPerJob": 1200000,
+    "maxInitialDepth": 80,
+    "newGames": 0
+  },
+  "resultBranch": "results/v010-initial-proof-study-002",
+  "resultBranchCreatedAtSource": true,
+  "statusAtRecord": "RUNNING; INITIAL-WINNER-UNKNOWN",
+  "pullRequest": 37
+}
