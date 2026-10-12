@@ -38,6 +38,7 @@
 | 追加調査002：初期配置の分割必勝探索 | [002結果](V010_INITIAL_PROOF_RESULTS_20261012.md) | [計画](V010_INITIAL_PROOF_PLAN_20261012.md)／[基盤](../tools/v010-certainty/README.md) | 38証明job・新規対局0。主経路23手目直前から後攻20着手以内、25手目から18着手以内を証明 |
 | 追加調査003：証明データ整理・遡及探索 | [003結果](V010_PROOF_GC_RESULTS_20261012.md) | [計画](V010_PROOF_GC_PLAN_20261012.md)／[基盤](../tools/v010-gc/README.md) | 34証明job・新規対局0。主経路21手目直前から後攻18着手以内を証明。19・17手目と全14開幕は未証明 |
 | 追加調査004：合法手分割・証明合成 | [004結果](V010_BRANCH_PROOF_RESULTS_20261012.md) | [固定計画](V010_BRANCH_PROOF_PLAN_20261012.md)／[起動記録](V010_BRANCH_PROOF_LAUNCH_20261012.md)／[manifest](../tools/v010-branch/manifest.json) | 54目標・全件監査・保存完了。19手目の9分岐中6分岐で分岐後の後攻必勝を証明。残る3分岐・17手目・初期配置は未確定 |
+| 追加調査005：未解決3分岐の応手分割 | [起動記録・正式run](V010_REPLY_PROOF_LAUNCH_20261012.md) | [固定計画](V010_REPLY_PROOF_PLAN_20261012.md)／[manifest](../tools/v010-reply/manifest.json) | 起動済み・26応手×両勝者52目標。004の6証明を保持。全件監査と保存が済むまで完了分へ数えない |
 
 [完了分と再開手順](V010_RESEARCH_HANDOFF_20261012.md)を研究全体の入口とします。原記録ZIP・summary・receiptへのリンク、証明した局面、読取り専用の全件再監査手順があります。001の初回保存失敗と計測0件の復旧も原報告書に保持しています。
 
