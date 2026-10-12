@@ -1,0 +1,105 @@
+name: v0.10.0 study 001 record preservation recovery
+on:
+  push:
+    branches: ['research/v010-opening-proof-20261012']
+permissions:
+  contents: write
+  actions: read
+jobs:
+  preserve:
+    if: startsWith(github.event.head_commit.message, 'Recover v0.10.0 study 001 record preservation') && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '105b56bb84c489f12d65357bde268d07003043ae'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Verify original measurement run and precreated result branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api repos/nkkmd/bao-nakakamado/actions/runs/38186936008 > "$RUNNER_TEMP/source-run.json"
+          gh api 'repos/nkkmd/bao-nakakamado/actions/runs/38186936008/jobs?per_page=100' > "$RUNNER_TEMP/source-jobs.json"
+          node - <<'JS'
+          const fs=require('node:fs'),assert=require('node:assert/strict'),p=process.env.RUNNER_TEMP;
+          const r=JSON.parse(fs.readFileSync(p+'/source-run.json')),j=JSON.parse(fs.readFileSync(p+'/source-jobs.json')).jobs;
+          assert.equal(r.head_sha,'105b56bb84c489f12d65357bde268d07003043ae');
+          assert.equal(j.filter(x=>x.name.startsWith('matrix')&&x.conclusion==='success').length,32);
+          assert.equal(j.filter(x=>x.name.startsWith('proof')&&x.conclusion==='success').length,26);
+          assert.equal(j.find(x=>x.name==='aggregate').steps.find(x=>x.name.startsWith('Audit all records')).conclusion,'success');
+          JS
+          test "$(git ls-remote origin refs/heads/results/v010-opening-proof-study-001 | cut -f1)" = '105b56bb84c489f12d65357bde268d07003043ae'
+          node tools/v010-followup/study.cjs manifest
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 38186936008
+          pattern: v010-opening-matrix-*
+          merge-multiple: true
+          path: ${{ runner.temp }}/study
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 38186936008
+          pattern: v010-opening-proof-*
+          merge-multiple: true
+          path: ${{ runner.temp }}/study
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 38186936008
+          name: v010-opening-summary
+          path: ${{ runner.temp }}/original-summary
+      - name: Reaudit saved records with zero new games or searches
+        run: |
+          node tools/v010-followup/study.cjs aggregate "$RUNNER_TEMP/study" > "$RUNNER_TEMP/reaudit-output.json"
+          python3 - <<'PY'
+          import pathlib,os,json
+          p=pathlib.Path(os.environ['RUNNER_TEMP'])
+          originals=list((p/'original-summary').rglob('summary.json'));assert len(originals)==1
+          assert originals[0].read_bytes()==(p/'study/summary.json').read_bytes()
+          s=json.loads((p/'study/summary.json').read_text());assert s['games']==420 and s['pairs']==210
+          assert s['technicalFailures']==0 and s['depthZero']==0
+          print('420 games and 26 proof jobs reaudited; original summary bytes match; new games/searches: 0')
+          PY
+      - name: Preserve original data without changing workflow files
+        env:
+          STUDY_SOURCE_SHA: '105b56bb84c489f12d65357bde268d07003043ae'
+          STUDY_RUN_ID: '38186936008'
+          RECOVERY_RUN_ID: ${{ github.run_id }}
+        run: |
+          python3 tools/v010-followup/archive.py "$RUNNER_TEMP/study" doc/v010-followup
+          python3 - <<'PY'
+          import pathlib,json,os,datetime
+          p=pathlib.Path(os.environ['RUNNER_TEMP']);out=pathlib.Path('doc/v010-followup')
+          old=list((p/'original-summary').rglob('preservation-receipt.json'));assert len(old)==1
+          (out/'initial-preservation-attempt-receipt.json').write_bytes(old[0].read_bytes())
+          receipt={'measurementRunId':38186936008,'recoveryRunId':os.environ['RECOVERY_RUN_ID'],
+            'sourceCommit':os.environ['STUDY_SOURCE_SHA'],'newGames':0,'newSearches':0,
+            'originalSummaryBytesMatch':True,'reason':'Initial creation of result branch rejected because Actions token lacks workflows permission; result branch precreated via GitHub connector.',
+            'recordedAtJST':datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).isoformat()}
+          (out/'preservation-recovery.json').write_text(json.dumps(receipt,indent=2)+'\n')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git switch -c results/v010-opening-proof-study-001
+          git add doc/v010-followup
+          git diff --cached --name-only > "$RUNNER_TEMP/changed.txt"
+          python3 - <<'PY'
+          import pathlib,os
+          names=(pathlib.Path(os.environ['RUNNER_TEMP'])/'changed.txt').read_text().splitlines()
+          assert names and all(n.startswith('doc/v010-followup/') for n in names)
+          PY
+          git commit -m 'Preserve completed study 001 records after independent recovery audit'
+          git push origin HEAD:refs/heads/results/v010-opening-proof-study-001
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v010-study-001-preservation-recovery
+          path: |
+            doc/v010-followup/
+            ${{ runner.temp }}/reaudit-output.json
+          retention-days: 90
