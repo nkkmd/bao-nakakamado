@@ -1,0 +1,29 @@
+name: v0.10.0 proof collection study checks
+on:
+  push:
+    branches: ['research/v010-proof-gc-20261012']
+  pull_request:
+    paths: ['tools/v010-gc/**', 'doc/V010_PROOF_GC_*', 'doc/v010-gc/**', '.github/workflows/v010-gc-*.yml']
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --expose-gc --test tools/v010-gc/check.test.cjs
+      - run: node --test prototype/takasia.test.cjs prototype/end-pit-search.test.cjs
+      - name: Previous sources and evidence remain immutable
+        run: |
+          node tools/v010-gc/study.cjs manifest
+          node tools/v010-certainty/study.cjs manifest
+          node tools/v010-followup/study.cjs manifest
+          node tools/v010-balance/formal.cjs manifest
+          git diff --exit-code 126f088b1a6e41fa6277df8961081c3afd0220a1 -- prototype trials tools/v010-balance tools/v010-followup tools/v010-certainty doc/v010-balance doc/v010-followup doc/v010-certainty
+          git diff --check
