@@ -42,7 +42,7 @@
 
 | 追加調査006：未解決2分岐の応手深化 | [006結果](V010_REPLY_DEEPEN_RESULTS_20261013.md) | [固定計画](V010_REPLY_DEEPEN_PLAN_20261013.md)／[正式run](https://github.com/nkkmd/bao-nakakamado/actions/runs/38271005778)／[manifest](../tools/v010-deepen/manifest.json) | 34目標・698原ファイルの監査と保存完了。新証明0。19手目7／9を保持し残る2分岐・初期配置は未確定 |
 
-| 追加調査007：有限手数の証明数探索 | 実行中 | [固定計画](V010_PN007_PROOF_PLAN_20261013.md)／[起動記録](V010_PN007_PROOF_LAUNCH_20261013.md)／[manifest](../tools/v010-pn007/manifest.json) | 17未解決応手×両目標の34探索。既知7親・即勝ち2応手を保持。全件監査・保存・独立再監査待ち |
+| 追加調査007：有限手数の証明数探索 | [007結果](V010_PN007_PROOF_RESULTS_20261013.md) | [固定計画](V010_PN007_PROOF_PLAN_20261013.md)／[起動記録](V010_PN007_PROOF_LAUNCH_20261013.md)／[manifest](../tools/v010-pn007/manifest.json) | 34目標・268原ファイルの監査と保存完了。新しい5応手の後攻証明を得て全9分岐を合成。19手目直前から後攻48着手以内。初期配置は未確定 |
 
 [完了分と再開手順](V010_RESEARCH_HANDOFF_20261012.md)を研究全体の入口とします。原記録ZIP・summary・receiptへのリンク、証明した局面、読取り専用の全件再監査手順があります。001の初回保存失敗と計測0件の復旧も原報告書に保持しています。
 

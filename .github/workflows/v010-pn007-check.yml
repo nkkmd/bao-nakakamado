@@ -25,3 +25,6 @@ jobs:
         run: |
           git diff --exit-code fec4ccb68101be28e2a5e82d5310f557c3a7edd4 -- prototype trials tools/v010-balance tools/v010-followup tools/v010-certainty tools/v010-gc tools/v010-branch tools/v010-reply doc/v010-research-completed doc/v010-balance doc/v010-followup doc/v010-certainty doc/v010-gc doc/v010-branch doc/v010-reply tools/v010-deepen doc/v010-deepen/completed
           git diff --check
+
+      - name: Reverify completed 007 originals without exploration
+        run: python3 tools/v010-pn007/reaudit.py doc/v010-pn007/completed 5f44f34a3a279b232d3045b5b3edaad48096ac0d ce52d57f4a25d40664f1e12de8559691577af1c0 38313259149
