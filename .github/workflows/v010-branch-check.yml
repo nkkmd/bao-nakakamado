@@ -17,6 +17,8 @@ jobs:
           node-version: '24'
       - run: node --expose-gc --test tools/v010-branch/check.test.cjs
       - run: node tools/v010-branch/study.cjs manifest
+      - name: Reverify completed 004 originals without new searches
+        run: python3 tools/v010-branch/reaudit.py doc/v010-branch/completed b1e9bdbcab21760c1bd1017c685e0842d02bb85c
       - name: Previous records, sources, manifests and production remain immutable
         run: |
           git diff --exit-code 024ef96712a0851daaa23c6a34d7b0e80004eaa5 -- prototype trials tools/v010-balance tools/v010-followup tools/v010-certainty tools/v010-gc doc/v010-research-completed doc/v010-balance doc/v010-followup doc/v010-certainty doc/v010-gc

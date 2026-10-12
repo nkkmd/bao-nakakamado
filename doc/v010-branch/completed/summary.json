@@ -1,0 +1,1523 @@
+{
+  "status": "AUDITED-COMPLETE",
+  "digest": "bc6ba381019b403151692b661f0650e8ddbd497db01e4d2faa5b665103bf2b68",
+  "proofJobs": 54,
+  "games": 0,
+  "newGames": 0,
+  "parents": [
+    {
+      "id": "primary-before-19",
+      "ply": 19,
+      "winner": null,
+      "depth": null,
+      "proofNodes": 0,
+      "branches": [
+        {
+          "id": "primary-before-19-move-0",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 0,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": 1,
+          "depth": 15
+        },
+        {
+          "id": "primary-before-19-move-1",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 2,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": 1,
+          "depth": 15
+        },
+        {
+          "id": "primary-before-19-move-2",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 2,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "depth": null
+        },
+        {
+          "id": "primary-before-19-move-3",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": 1,
+          "depth": 19
+        },
+        {
+          "id": "primary-before-19-move-4",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "depth": null
+        },
+        {
+          "id": "primary-before-19-move-5",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "depth": null
+        },
+        {
+          "id": "primary-before-19-move-6",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": 1,
+          "depth": 15
+        },
+        {
+          "id": "primary-before-19-move-7",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": 1,
+          "depth": 15
+        },
+        {
+          "id": "primary-before-19-move-8",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": 1,
+          "depth": 15
+        }
+      ]
+    },
+    {
+      "id": "primary-before-17",
+      "ply": 17,
+      "winner": null,
+      "depth": null,
+      "proofNodes": 0,
+      "branches": [
+        {
+          "id": "primary-before-17-move-0",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "depth": null
+        },
+        {
+          "id": "primary-before-17-move-1",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "depth": null
+        },
+        {
+          "id": "primary-before-17-move-2",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "depth": null
+        },
+        {
+          "id": "primary-before-17-move-3",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "depth": null
+        }
+      ]
+    }
+  ],
+  "firstMoves": [
+    {
+      "index": 0,
+      "move": {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "left"
+      },
+      "winner": null,
+      "depth": null
+    },
+    {
+      "index": 1,
+      "move": {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "right"
+      },
+      "winner": null,
+      "depth": null
+    },
+    {
+      "index": 2,
+      "move": {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 6,
+        "direction": "left"
+      },
+      "winner": null,
+      "depth": null
+    },
+    {
+      "index": 3,
+      "move": {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 6,
+        "direction": "right"
+      },
+      "winner": null,
+      "depth": null
+    }
+  ],
+  "initial": {
+    "status": "UNKNOWN",
+    "winner": null,
+    "depth": null
+  },
+  "results": [
+    {
+      "rootId": "primary-before-19-move-0",
+      "scope": "split-successor",
+      "winner": 1,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 10000000,
+          "transitions": 9999978,
+          "bookUses": 0,
+          "cacheHits": 28341,
+          "gc": {
+            "collections": 1,
+            "removedNodes": 300004,
+            "evictedRoots": 0,
+            "peakNodes": 400005,
+            "remainingNodes": 228408
+          },
+          "elapsedMs": 846343.317975,
+          "completedDepth": 21
+        },
+        {
+          "target": 1,
+          "status": "PROVED",
+          "winner": 1,
+          "depth": 15,
+          "proofNodes": 3036,
+          "visits": 1928037,
+          "transitions": 1928022,
+          "bookUses": 0,
+          "cacheHits": 9079,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 139048,
+            "remainingNodes": 139048
+          },
+          "elapsedMs": 102605.141364,
+          "completedDepth": 15
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-19-move-1",
+      "scope": "split-successor",
+      "winner": 1,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 10000000,
+          "transitions": 9999978,
+          "bookUses": 0,
+          "cacheHits": 26320,
+          "gc": {
+            "collections": 1,
+            "removedNodes": 300003,
+            "evictedRoots": 0,
+            "peakNodes": 400003,
+            "remainingNodes": 210053
+          },
+          "elapsedMs": 712691.047348,
+          "completedDepth": 21
+        },
+        {
+          "target": 1,
+          "status": "PROVED",
+          "winner": 1,
+          "depth": 15,
+          "proofNodes": 3624,
+          "visits": 1807886,
+          "transitions": 1807871,
+          "bookUses": 0,
+          "cacheHits": 7175,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 126198,
+            "remainingNodes": 126198
+          },
+          "elapsedMs": 121173.455109,
+          "completedDepth": 15
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-19-move-2",
+      "scope": "split-successor",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 10000000,
+          "transitions": 9999981,
+          "bookUses": 0,
+          "cacheHits": 28957,
+          "gc": {
+            "collections": 1,
+            "removedNodes": 300001,
+            "evictedRoots": 0,
+            "peakNodes": 400001,
+            "remainingNodes": 139970
+          },
+          "elapsedMs": 647431.236453,
+          "completedDepth": 18
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 10000000,
+          "transitions": 9999984,
+          "bookUses": 0,
+          "cacheHits": 20890,
+          "gc": {
+            "collections": 1,
+            "removedNodes": 300001,
+            "evictedRoots": 0,
+            "peakNodes": 400001,
+            "remainingNodes": 362871
+          },
+          "elapsedMs": 733408.209489,
+          "completedDepth": 15
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-19-move-3",
+      "scope": "split-successor",
+      "winner": 1,
+      "targets": [
+        {
+          "target": 0,
+          "status": "UNKNOWN",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 158,
+          "transitions": 79,
+          "bookUses": 0,
+          "cacheHits": 0,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 0,
+            "remainingNodes": 0
+          },
+          "elapsedMs": 17.80515699999978,
+          "completedDepth": 79
+        },
+        {
+          "target": 1,
+          "status": "PROVED",
+          "winner": 1,
+          "depth": 19,
+          "proofNodes": 7722,
+          "visits": 2375920,
+          "transitions": 2375901,
+          "bookUses": 27,
+          "cacheHits": 19756,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 139231,
+            "remainingNodes": 139231
+          },
+          "elapsedMs": 147538.700491,
+          "completedDepth": 19
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-19-move-4",
+      "scope": "split-successor",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 10000000,
+          "transitions": 9999981,
+          "bookUses": 0,
+          "cacheHits": 32613,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 371706,
+            "remainingNodes": 371706
+          },
+          "elapsedMs": 792635.372918,
+          "completedDepth": 18
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 10000000,
+          "transitions": 9999985,
+          "bookUses": 0,
+          "cacheHits": 37566,
+          "gc": {
+            "collections": 2,
+            "removedNodes": 598445,
+            "evictedRoots": 0,
+            "peakNodes": 400002,
+            "remainingNodes": 243764
+          },
+          "elapsedMs": 636460.5990919999,
+          "completedDepth": 14
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-19-move-5",
+      "scope": "split-successor",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 10000000,
+          "transitions": 9999981,
+          "bookUses": 0,
+          "cacheHits": 24390,
+          "gc": {
+            "collections": 1,
+            "removedNodes": 299990,
+            "evictedRoots": 0,
+            "peakNodes": 400005,
+            "remainingNodes": 215771
+          },
+          "elapsedMs": 747432.871043,
+          "completedDepth": 18
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 10000000,
+          "transitions": 9999984,
+          "bookUses": 0,
+          "cacheHits": 23735,
+          "gc": {
+            "collections": 2,
+            "removedNodes": 599984,
+            "evictedRoots": 0,
+            "peakNodes": 400001,
+            "remainingNodes": 168972
+          },
+          "elapsedMs": 726202.2299899999,
+          "completedDepth": 15
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-19-move-6",
+      "scope": "split-successor",
+      "winner": 1,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 10000000,
+          "transitions": 9999980,
+          "bookUses": 0,
+          "cacheHits": 22983,
+          "gc": {
+            "collections": 1,
+            "removedNodes": 299988,
+            "evictedRoots": 0,
+            "peakNodes": 400000,
+            "remainingNodes": 229669
+          },
+          "elapsedMs": 617072.366365,
+          "completedDepth": 19
+        },
+        {
+          "target": 1,
+          "status": "PROVED",
+          "winner": 1,
+          "depth": 15,
+          "proofNodes": 4918,
+          "visits": 3073391,
+          "transitions": 3073376,
+          "bookUses": 0,
+          "cacheHits": 12845,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 250125,
+            "remainingNodes": 250125
+          },
+          "elapsedMs": 180654.871814,
+          "completedDepth": 15
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-19-move-7",
+      "scope": "split-successor",
+      "winner": 1,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 10000000,
+          "transitions": 9999981,
+          "bookUses": 0,
+          "cacheHits": 30766,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 346410,
+            "remainingNodes": 346410
+          },
+          "elapsedMs": 980388.830712,
+          "completedDepth": 18
+        },
+        {
+          "target": 1,
+          "status": "PROVED",
+          "winner": 1,
+          "depth": 15,
+          "proofNodes": 3686,
+          "visits": 5832696,
+          "transitions": 5832681,
+          "bookUses": 0,
+          "cacheHits": 23407,
+          "gc": {
+            "collections": 1,
+            "removedNodes": 300001,
+            "evictedRoots": 0,
+            "peakNodes": 400001,
+            "remainingNodes": 168367
+          },
+          "elapsedMs": 359067.311419,
+          "completedDepth": 15
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-19-move-8",
+      "scope": "split-successor",
+      "winner": 1,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 10000000,
+          "transitions": 9999981,
+          "bookUses": 0,
+          "cacheHits": 27390,
+          "gc": {
+            "collections": 1,
+            "removedNodes": 299970,
+            "evictedRoots": 0,
+            "peakNodes": 400001,
+            "remainingNodes": 113149
+          },
+          "elapsedMs": 418480.90481,
+          "completedDepth": 18
+        },
+        {
+          "target": 1,
+          "status": "PROVED",
+          "winner": 1,
+          "depth": 15,
+          "proofNodes": 5950,
+          "visits": 6970065,
+          "transitions": 6970050,
+          "bookUses": 0,
+          "cacheHits": 18658,
+          "gc": {
+            "collections": 1,
+            "removedNodes": 299785,
+            "evictedRoots": 0,
+            "peakNodes": 400001,
+            "remainingNodes": 310133
+          },
+          "elapsedMs": 430306.036256,
+          "completedDepth": 15
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-17-move-0",
+      "scope": "split-successor",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 10000000,
+          "transitions": 9999982,
+          "bookUses": 0,
+          "cacheHits": 42878,
+          "gc": {
+            "collections": 1,
+            "removedNodes": 299988,
+            "evictedRoots": 0,
+            "peakNodes": 400000,
+            "remainingNodes": 130008
+          },
+          "elapsedMs": 735298.3566389999,
+          "completedDepth": 17
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 10000000,
+          "transitions": 9999984,
+          "bookUses": 0,
+          "cacheHits": 41459,
+          "gc": {
+            "collections": 1,
+            "removedNodes": 299317,
+            "evictedRoots": 0,
+            "peakNodes": 400002,
+            "remainingNodes": 366526
+          },
+          "elapsedMs": 681311.507046,
+          "completedDepth": 15
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-17-move-1",
+      "scope": "split-successor",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 10000000,
+          "transitions": 9999981,
+          "bookUses": 0,
+          "cacheHits": 46343,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 330057,
+            "remainingNodes": 330057
+          },
+          "elapsedMs": 753127.449296,
+          "completedDepth": 18
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 10000000,
+          "transitions": 9999984,
+          "bookUses": 5,
+          "cacheHits": 36995,
+          "gc": {
+            "collections": 1,
+            "removedNodes": 299998,
+            "evictedRoots": 0,
+            "peakNodes": 400005,
+            "remainingNodes": 251444
+          },
+          "elapsedMs": 620216.8918890001,
+          "completedDepth": 15
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-17-move-2",
+      "scope": "split-successor",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 10000000,
+          "transitions": 9999982,
+          "bookUses": 0,
+          "cacheHits": 53163,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 270937,
+            "remainingNodes": 270937
+          },
+          "elapsedMs": 934060.4892760001,
+          "completedDepth": 17
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 10000000,
+          "transitions": 9999984,
+          "bookUses": 0,
+          "cacheHits": 45986,
+          "gc": {
+            "collections": 1,
+            "removedNodes": 300001,
+            "evictedRoots": 0,
+            "peakNodes": 400001,
+            "remainingNodes": 130817
+          },
+          "elapsedMs": 788806.394714,
+          "completedDepth": 15
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-17-move-3",
+      "scope": "split-successor",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 10000000,
+          "transitions": 9999980,
+          "bookUses": 0,
+          "cacheHits": 49354,
+          "gc": {
+            "collections": 1,
+            "removedNodes": 299970,
+            "evictedRoots": 0,
+            "peakNodes": 400001,
+            "remainingNodes": 159810
+          },
+          "elapsedMs": 912161.997678,
+          "completedDepth": 19
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 10000000,
+          "transitions": 9999983,
+          "bookUses": 0,
+          "cacheHits": 53970,
+          "gc": {
+            "collections": 2,
+            "removedNodes": 599994,
+            "evictedRoots": 0,
+            "peakNodes": 400001,
+            "remainingNodes": 131148
+          },
+          "elapsedMs": 382764.578506,
+          "completedDepth": 16
+        }
+      ]
+    },
+    {
+      "rootId": "opening-0-0",
+      "scope": "after-two",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999982,
+          "bookUses": 0,
+          "cacheHits": 14668,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 21115,
+            "remainingNodes": 21115
+          },
+          "elapsedMs": 128644.670248,
+          "completedDepth": 17
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999981,
+          "bookUses": 0,
+          "cacheHits": 14253,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 22453,
+            "remainingNodes": 22453
+          },
+          "elapsedMs": 76831.750064,
+          "completedDepth": 18
+        }
+      ]
+    },
+    {
+      "rootId": "opening-0-1",
+      "scope": "after-two",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999981,
+          "bookUses": 0,
+          "cacheHits": 11503,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 31300,
+            "remainingNodes": 31300
+          },
+          "elapsedMs": 97518.50648,
+          "completedDepth": 18
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999980,
+          "bookUses": 0,
+          "cacheHits": 13290,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 24614,
+            "remainingNodes": 24614
+          },
+          "elapsedMs": 69578.118117,
+          "completedDepth": 19
+        }
+      ]
+    },
+    {
+      "rootId": "opening-0-2",
+      "scope": "after-two",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999983,
+          "bookUses": 0,
+          "cacheHits": 11438,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 21270,
+            "remainingNodes": 21270
+          },
+          "elapsedMs": 121927.94645599999,
+          "completedDepth": 16
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999982,
+          "bookUses": 0,
+          "cacheHits": 11890,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 22811,
+            "remainingNodes": 22811
+          },
+          "elapsedMs": 108614.642387,
+          "completedDepth": 17
+        }
+      ]
+    },
+    {
+      "rootId": "opening-0-3",
+      "scope": "after-two",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999982,
+          "bookUses": 0,
+          "cacheHits": 11937,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 21869,
+            "remainingNodes": 21869
+          },
+          "elapsedMs": 106029.654206,
+          "completedDepth": 17
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999981,
+          "bookUses": 0,
+          "cacheHits": 15081,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 24163,
+            "remainingNodes": 24163
+          },
+          "elapsedMs": 123166.15735899999,
+          "completedDepth": 18
+        }
+      ]
+    },
+    {
+      "rootId": "opening-1-0",
+      "scope": "after-two",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999981,
+          "bookUses": 0,
+          "cacheHits": 16759,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 24455,
+            "remainingNodes": 24455
+          },
+          "elapsedMs": 75791.018528,
+          "completedDepth": 18
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999981,
+          "bookUses": 0,
+          "cacheHits": 33786,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 18617,
+            "remainingNodes": 18617
+          },
+          "elapsedMs": 136191.1429,
+          "completedDepth": 18
+        }
+      ]
+    },
+    {
+      "rootId": "opening-1-1",
+      "scope": "after-two",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999981,
+          "bookUses": 0,
+          "cacheHits": 18513,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 23428,
+            "remainingNodes": 23428
+          },
+          "elapsedMs": 128546.730885,
+          "completedDepth": 18
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999980,
+          "bookUses": 0,
+          "cacheHits": 15130,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 19053,
+            "remainingNodes": 19053
+          },
+          "elapsedMs": 136303.21235500003,
+          "completedDepth": 19
+        }
+      ]
+    },
+    {
+      "rootId": "opening-1-2",
+      "scope": "after-two",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999981,
+          "bookUses": 0,
+          "cacheHits": 12280,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 25083,
+            "remainingNodes": 25083
+          },
+          "elapsedMs": 73737.274412,
+          "completedDepth": 18
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999980,
+          "bookUses": 0,
+          "cacheHits": 11252,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 29348,
+            "remainingNodes": 29348
+          },
+          "elapsedMs": 118755.909006,
+          "completedDepth": 19
+        }
+      ]
+    },
+    {
+      "rootId": "opening-1-3",
+      "scope": "after-two",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999982,
+          "bookUses": 0,
+          "cacheHits": 20493,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 16866,
+            "remainingNodes": 16866
+          },
+          "elapsedMs": 145519.927304,
+          "completedDepth": 17
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999980,
+          "bookUses": 0,
+          "cacheHits": 14880,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 25362,
+            "remainingNodes": 25362
+          },
+          "elapsedMs": 130672.201684,
+          "completedDepth": 19
+        }
+      ]
+    },
+    {
+      "rootId": "opening-2-0",
+      "scope": "after-two",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999981,
+          "bookUses": 0,
+          "cacheHits": 17629,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 26663,
+            "remainingNodes": 26663
+          },
+          "elapsedMs": 111475.582094,
+          "completedDepth": 18
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999980,
+          "bookUses": 0,
+          "cacheHits": 10720,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 17844,
+            "remainingNodes": 17844
+          },
+          "elapsedMs": 108264.568885,
+          "completedDepth": 19
+        }
+      ]
+    },
+    {
+      "rootId": "opening-2-1",
+      "scope": "after-two",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999979,
+          "bookUses": 0,
+          "cacheHits": 17670,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 28889,
+            "remainingNodes": 28889
+          },
+          "elapsedMs": 141552.129884,
+          "completedDepth": 20
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999982,
+          "bookUses": 0,
+          "cacheHits": 14424,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 22658,
+            "remainingNodes": 22658
+          },
+          "elapsedMs": 143099.677819,
+          "completedDepth": 17
+        }
+      ]
+    },
+    {
+      "rootId": "opening-3-0",
+      "scope": "after-two",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999982,
+          "bookUses": 0,
+          "cacheHits": 13990,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 24366,
+            "remainingNodes": 24366
+          },
+          "elapsedMs": 134887.49931699998,
+          "completedDepth": 17
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999979,
+          "bookUses": 0,
+          "cacheHits": 20157,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 26245,
+            "remainingNodes": 26245
+          },
+          "elapsedMs": 86220.033738,
+          "completedDepth": 20
+        }
+      ]
+    },
+    {
+      "rootId": "opening-3-1",
+      "scope": "after-two",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999981,
+          "bookUses": 0,
+          "cacheHits": 14312,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 25905,
+            "remainingNodes": 25905
+          },
+          "elapsedMs": 123291.74296300001,
+          "completedDepth": 18
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999980,
+          "bookUses": 0,
+          "cacheHits": 12914,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 23551,
+            "remainingNodes": 23551
+          },
+          "elapsedMs": 99773.42088,
+          "completedDepth": 19
+        }
+      ]
+    },
+    {
+      "rootId": "opening-3-2",
+      "scope": "after-two",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999980,
+          "bookUses": 0,
+          "cacheHits": 19323,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 22067,
+            "remainingNodes": 22067
+          },
+          "elapsedMs": 165230.955059,
+          "completedDepth": 19
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999978,
+          "bookUses": 0,
+          "cacheHits": 15012,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 27997,
+            "remainingNodes": 27997
+          },
+          "elapsedMs": 132595.73707200002,
+          "completedDepth": 21
+        }
+      ]
+    },
+    {
+      "rootId": "opening-3-3",
+      "scope": "after-two",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999981,
+          "bookUses": 0,
+          "cacheHits": 15770,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 24852,
+            "remainingNodes": 24852
+          },
+          "elapsedMs": 124809.701657,
+          "completedDepth": 18
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "transitions": 1999980,
+          "bookUses": 0,
+          "cacheHits": 15758,
+          "gc": {
+            "collections": 0,
+            "removedNodes": 0,
+            "evictedRoots": 0,
+            "peakNodes": 23576,
+            "remainingNodes": 23576
+          },
+          "elapsedMs": 141029.819953,
+          "completedDepth": 19
+        }
+      ]
+    }
+  ],
+  "interpretation": "Budget stops and missing certificates are UNKNOWN; local branch proofs do not settle initial-state winner or rule-wide fairness"
+}

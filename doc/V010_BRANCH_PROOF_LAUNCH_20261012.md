@@ -30,4 +30,6 @@ python3 tools/v010-branch/reaudit.py doc/v010-branch/completed <results-commit>
 
 この再監査器は正式起動後に追加した読取り専用補助で、正式探索のsource・manifest・条件には含めない。正式結果が未完了の時点で全件再監査成功とは記録しない。
 
+完了追記（同日）：正式runは20:14:59（日本時間）に56jobすべて成功し、全件監査と1,167原ファイルの保存を完了した。結果commitは`b1e9bdbcab21760c1bd1017c685e0842d02bb85c`。保存結果の独立再監査も成功。[004結果と未解決分岐](V010_BRANCH_PROOF_RESULTS_20261012.md)を参照する。上記の起動時点の状態・固定条件は保持する。
+
 本文 © 2026 nkkmd and Bao Nakakamado contributors、[CC BY-SA 4.0](../LICENSE-CC-BY-SA-4.0.txt)。調査コードはMIT。
