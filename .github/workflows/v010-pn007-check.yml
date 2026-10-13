@@ -1,0 +1,30 @@
+name: v0.10.0 finite-horizon PN study checks
+on:
+  pull_request:
+    paths: ['tools/v010-pn007/**', 'doc/V010_PN007_*', 'doc/v010-pn007/**', '.github/workflows/v010-pn007-*.yml']
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --expose-gc --test tools/v010-pn007/prover.test.cjs tools/v010-pn007/check.test.cjs
+      - run: node tools/v010-pn007/study.cjs manifest
+      - run: node tools/v010-pn007/verify-pilot.cjs
+      - run: python3 tools/v010-deepen/reaudit.py doc/v010-deepen/completed 02335fc d4163c3c171117b1fce7dd30b39faad733605418 38271005778
+      - name: Read-only audit of preserved 005 inputs
+        run: python3 tools/v010-reply/reaudit.py doc/v010-reply/completed 428cf47b3d27a18e82fef28fa66c66e6cad1c628 975e1a8188dbe43fda1c39b3b97e8858db8a97e3 38265400792
+      - name: Old evidence and public implementation are unchanged
+        run: |
+          git diff --exit-code fec4ccb68101be28e2a5e82d5310f557c3a7edd4 -- prototype trials tools/v010-balance tools/v010-followup tools/v010-certainty tools/v010-gc tools/v010-branch tools/v010-reply doc/v010-research-completed doc/v010-balance doc/v010-followup doc/v010-certainty doc/v010-gc doc/v010-branch doc/v010-reply tools/v010-deepen doc/v010-deepen/completed
+          git diff --check
+
+      - name: Reverify completed 007 originals without exploration
+        run: python3 tools/v010-pn007/reaudit.py doc/v010-pn007/completed 5f44f34a3a279b232d3045b5b3edaad48096ac0d ce52d57f4a25d40664f1e12de8559691577af1c0 38313259149

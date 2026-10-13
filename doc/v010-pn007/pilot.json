@@ -1,0 +1,262 @@
+{
+  "classification": "EXPLORATORY-NOT-FORMAL",
+  "sources": {
+    "tools/v010-pn007/pilot.cjs": "775868974d9d3cdb4e5f05aa95d068109968318769fb8f6a4ed1aabe37beec6e",
+    "tools/v010-pn007/inputs.cjs": "d05b58ceef8a1f713c9493dd9cbadffbe8f27d9ee729734bfe2ea19c1a0c2ed6",
+    "tools/v010-pn007/prover.cjs": "64f4f0e924ea0baaf052039e47523fa94cd001f5da0abe166cca28708b18c7ae",
+    "tools/v010-pn007/schedule.cjs": "ce889bcd74beadddaddba19e58aa8847ab44fb3eeec3e4d07f2411151ab6ecf3"
+  },
+  "inputArchiveSha256": "666f507a20de60b69f19fb479608ab668259e642b82ea0f41e6c4de4d511bbb1",
+  "verifiedStates": 56605,
+  "rows": [
+    {
+      "name": "capacity-1000",
+      "method": "fixed-dfpn007",
+      "target": 1,
+      "status": "TABLE_BUDGET",
+      "winner": null,
+      "visits": 1920,
+      "tableEntries": 1000,
+      "depth": null,
+      "attempts": [
+        {
+          "depth": 12,
+          "status": "TABLE_BUDGET",
+          "visits": 1920,
+          "totalVisits": 1920,
+          "elapsedMs": 47.089507999999114
+        }
+      ],
+      "file": "capacity-1000.json.gz",
+      "sha256": "3f6771fdf77146e5601043907116dff75b5c918437631e454b2e2fc2a1081ef4"
+    },
+    {
+      "name": "capacity-10000",
+      "method": "fixed-dfpn007",
+      "target": 1,
+      "status": "TABLE_BUDGET",
+      "winner": null,
+      "visits": 23391,
+      "tableEntries": 10000,
+      "depth": null,
+      "attempts": [
+        {
+          "depth": 12,
+          "status": "TABLE_BUDGET",
+          "visits": 23391,
+          "totalVisits": 23391,
+          "elapsedMs": 522.5167369999999
+        }
+      ],
+      "file": "capacity-10000.json.gz",
+      "sha256": "9397b5b03b03c40716e480891be0dfaafbe2cebf9f2b1f9c5085ea662056684b"
+    },
+    {
+      "name": "capacity-100000",
+      "method": "fixed-dfpn007",
+      "target": 1,
+      "status": "PROVED",
+      "winner": 1,
+      "visits": 36061,
+      "tableEntries": 15635,
+      "depth": 12,
+      "attempts": [
+        {
+          "depth": 12,
+          "status": "PROVED",
+          "visits": 36061,
+          "totalVisits": 36061,
+          "elapsedMs": 771.8281439999992
+        }
+      ],
+      "file": "capacity-100000.json.gz",
+      "sha256": "774958a7df5389fe25b08d0847344081331940bfd28b566f767572a8541d0e02"
+    },
+    {
+      "name": "known-medium-staged",
+      "method": "staged-dfpn007",
+      "target": 1,
+      "status": "PROVED",
+      "winner": 1,
+      "visits": 16263,
+      "tableEntries": 6203,
+      "peakTable": 6203,
+      "depth": 16,
+      "attempts": [
+        {
+          "depth": 16,
+          "status": "PROVED",
+          "visits": 16263,
+          "totalVisits": 16263,
+          "elapsedMs": 363.053672,
+          "tableEntries": 6203,
+          "storedNodes": 326,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 0,
+          "disproofNumber": "INF"
+        }
+      ],
+      "file": "known-medium-staged.json.gz",
+      "sha256": "f5da70fff83c7148161bd891a3f37912b5f8c575a19b81963a6cc953f2ce61d8"
+    },
+    {
+      "name": "unresolved-0-0",
+      "method": "staged-dfpn007",
+      "target": 0,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "visits": 200000,
+      "tableEntries": 51007,
+      "peakTable": 51201,
+      "depth": null,
+      "attempts": [
+        {
+          "depth": 16,
+          "status": "NODE_BUDGET",
+          "visits": 100000,
+          "totalVisits": 100000,
+          "elapsedMs": 2383.9768619999995,
+          "tableEntries": 51201,
+          "storedNodes": 256,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 117,
+          "disproofNumber": 126
+        },
+        {
+          "depth": 20,
+          "status": "NODE_BUDGET",
+          "visits": 100000,
+          "totalVisits": 200000,
+          "elapsedMs": 2255.5914429999993,
+          "tableEntries": 51007,
+          "storedNodes": 256,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 116,
+          "disproofNumber": 127
+        }
+      ],
+      "file": "unresolved-0-0.json.gz",
+      "sha256": "fa1df3cb8bad2ba97ca2f530d6f1fa0f107d1d0ac2d17c0dc8afbfd9c4014d1e"
+    },
+    {
+      "name": "unresolved-0-1",
+      "method": "staged-dfpn007",
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "visits": 200000,
+      "tableEntries": 51007,
+      "peakTable": 51363,
+      "depth": null,
+      "attempts": [
+        {
+          "depth": 16,
+          "status": "NODE_BUDGET",
+          "visits": 100000,
+          "totalVisits": 100000,
+          "elapsedMs": 2226.4879489999985,
+          "tableEntries": 51363,
+          "storedNodes": 1327,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 129,
+          "disproofNumber": 115
+        },
+        {
+          "depth": 20,
+          "status": "NODE_BUDGET",
+          "visits": 100000,
+          "totalVisits": 200000,
+          "elapsedMs": 2396.601778,
+          "tableEntries": 51007,
+          "storedNodes": 1307,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 127,
+          "disproofNumber": 116
+        }
+      ],
+      "file": "unresolved-0-1.json.gz",
+      "sha256": "1418200cb0da37e455b82980b037797929ac39e2be6702ff07cc1db1d4fce98d"
+    },
+    {
+      "name": "unresolved-1-0",
+      "method": "staged-dfpn007",
+      "target": 0,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "visits": 200000,
+      "tableEntries": 45271,
+      "peakTable": 46845,
+      "depth": null,
+      "attempts": [
+        {
+          "depth": 16,
+          "status": "NODE_BUDGET",
+          "visits": 100000,
+          "totalVisits": 100000,
+          "elapsedMs": 2346.512408999999,
+          "tableEntries": 46845,
+          "storedNodes": 384,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 112,
+          "disproofNumber": 116
+        },
+        {
+          "depth": 20,
+          "status": "NODE_BUDGET",
+          "visits": 100000,
+          "totalVisits": 200000,
+          "elapsedMs": 2394.1487149999994,
+          "tableEntries": 45271,
+          "storedNodes": 367,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 104,
+          "disproofNumber": 125
+        }
+      ],
+      "file": "unresolved-1-0.json.gz",
+      "sha256": "0a3074ec663f9eb52caf39545912940292507c2f0cc331dd2b11202b0695582d"
+    },
+    {
+      "name": "unresolved-1-1",
+      "method": "staged-dfpn007",
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "visits": 200000,
+      "tableEntries": 45285,
+      "peakTable": 45836,
+      "depth": null,
+      "attempts": [
+        {
+          "depth": 16,
+          "status": "NODE_BUDGET",
+          "visits": 100000,
+          "totalVisits": 100000,
+          "elapsedMs": 2249.643194,
+          "tableEntries": 45836,
+          "storedNodes": 1421,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 118,
+          "disproofNumber": 95
+        },
+        {
+          "depth": 20,
+          "status": "NODE_BUDGET",
+          "visits": 100000,
+          "totalVisits": 200000,
+          "elapsedMs": 2405.1609339999995,
+          "tableEntries": 45285,
+          "storedNodes": 1136,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 132,
+          "disproofNumber": 102
+        }
+      ],
+      "file": "unresolved-1-1.json.gz",
+      "sha256": "49892cf142d9f903a97b020c31096cdd0866934e17d05c7a75db94d4cb62038f"
+    }
+  ],
+  "newGames": 0,
+  "formalJobs": 0,
+  "interpretation": "Finite-horizon and table sensitivity on selected states. No general speed claim; unknown is not another winner. Each staged attempt has separate fixed horizon and cumulative budget."
+}

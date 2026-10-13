@@ -1,0 +1,11 @@
+'use strict';
+// MIT. Equal wall and node ceilings for exploratory known-win calibration.
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const C=require('../v010-balance/core.cjs'),V=require('../v010-balance/diagnostics/proof.cjs'),Old=require('../v010-branch/inputs.cjs'),PN=require('./prover.cjs'),DFS=require('../v010-gc/prover.cjs'),S4=require('../v010-branch/study.cjs');
+const out=process.argv[2];fs.mkdirSync(out,{recursive:true});assert.ok(!fs.existsSync(path.join(out,'calibration.json')));
+const c=Old.load().find(r=>r.index===14&&r.target===1).result.certificate;V.verify(c);let state=c.start,id=c.root;const cases=[];
+while(c.nodes[id].children.length){if([12,8,4].includes(c.nodes[id].depth))cases.push({state,depth:c.nodes[id].depth,expectedWinner:1});const edge=c.nodes[id].children[0];state=C.S.apply({board:state,history:[]},edge.move).board;id=edge.to;}
+const rows=[];for(const [i,k] of cases.entries())for(const [method,P] of [['dfs003',DFS],['dfpn007',PN]]){
+ const result=P.prove(k.state,1,{maxDepth:k.depth,maxNodes:2000000,wallMs:15000});if(result.certificate){V.verify(result.certificate);assert.equal(result.winner,1);assert.ok(result.certificate.depth<=k.depth);}const file=`calibration-${i}-${method}.json.gz`;S4.write(path.join(out,file),{classification:'EXPLORATORY-NOT-FORMAL',state:k.state,method,expectedWinner:1,result});
+ const row={case:i,method,depth:k.depth,status:result.status,winner:result.winner,certificateNodes:result.certificate?Object.keys(result.certificate.nodes).length:0,visits:result.visits,elapsedMs:result.elapsedMs,file,sha256:C.hash(fs.readFileSync(path.join(out,file)))};rows.push(row);console.log(JSON.stringify(row));if(global.gc)global.gc();}
+const sources=['tools/v010-pn007/calibrate.cjs','tools/v010-pn007/prover.cjs','tools/v010-gc/prover.cjs'];fs.writeFileSync(path.join(out,'calibration.json'),JSON.stringify({classification:'EXPLORATORY-NOT-FORMAL',budget:{maxNodes:2000000,wallMs:15000},sources:Object.fromEntries(sources.map(f=>[f,C.hash(fs.readFileSync(path.join(C.root,f)))])),rows,interpretation:'Known states selected from verified 003 strategy, win book and guidance disabled. Equal ceilings do not make visits equal work. No general performance claim.',newGames:0,formalJobs:0},null,2)+'\n',{flag:'wx'});
