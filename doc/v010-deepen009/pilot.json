@@ -1,0 +1,140 @@
+{
+  "classification": "EXPLORATORY-NOT-FORMAL",
+  "inputArchiveSha256": "26193be89ea296dad8dcb0a54aa42c7f0a48dbdffee79efc929c9fdb77d14c17",
+  "sources": {
+    "tools/v010-deepen009/pilot.cjs": "7107f6dd249df4ea1d23996e8f267b53ba8bed395f702d56cd610d4ec1111da0",
+    "tools/v010-deepen009/inputs.cjs": "4582cf5d42e13178d6dad1606865969a1a01a4fc34a83ca33970506cd6355401",
+    "tools/v010-deepen009/schedule.cjs": "b099dd6c205e27501f141ab14539f0d7133bc2a0b1c164c0053a604fc854c858",
+    "tools/v010-pn007/prover.cjs": "64f4f0e924ea0baaf052039e47523fa94cd001f5da0abe166cca28708b18c7ae",
+    "tools/v010-pn007/schedule.cjs": "ce889bcd74beadddaddba19e58aa8847ab44fb3eeec3e4d07f2411151ab6ecf3"
+  },
+  "known": [
+    {
+      "id": "primary-before-17-move-0",
+      "target": 1,
+      "depth": 33,
+      "sha256": "2f5fccb46aaf1173c12f770d3945b4a48ce2f9b3e2a99c48ea725364494bb720"
+    },
+    {
+      "id": "primary-before-17-move-1",
+      "target": 1,
+      "depth": 49,
+      "sha256": "d8cc3186a23122ae7b341ddbbd1f9f9d3c10745c199fe558d0320a25c0713b63"
+    },
+    {
+      "id": "primary-before-17-move-2",
+      "target": 1,
+      "depth": 33,
+      "sha256": "ab10e47df3871ca604a9d237def092ab33731842af73b3396dfcd6a0d9ab3ba1"
+    }
+  ],
+  "rows": [
+    {
+      "index": 0,
+      "target": 0,
+      "maxTableEntries": 500000,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 400000,
+      "peakTable": 98097,
+      "elapsedMs": 8973.629339999996,
+      "file": "probe-0-0-500000.json.gz",
+      "sha256": "fde7e2e5051b0bf7450362fdf7857fd7082c2fe7f964dd37bc903a38422be27d"
+    },
+    {
+      "index": 0,
+      "target": 0,
+      "maxTableEntries": 1000000,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 400000,
+      "peakTable": 98097,
+      "elapsedMs": 9267.846748000004,
+      "file": "probe-0-0-1000000.json.gz",
+      "sha256": "d2bd9b28d2d0d3dc2b6597bfdb5d73cd7123f3d3fcd3205ea8da27953f8373f2"
+    },
+    {
+      "index": 0,
+      "target": 1,
+      "maxTableEntries": 500000,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 400000,
+      "peakTable": 97587,
+      "elapsedMs": 8487.695415000002,
+      "file": "probe-0-1-500000.json.gz",
+      "sha256": "9a9728a6b221d09faf42ea0840868f19c9020e94963bd3c6bae192d05e5e6a41"
+    },
+    {
+      "index": 0,
+      "target": 1,
+      "maxTableEntries": 1000000,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 400000,
+      "peakTable": 97587,
+      "elapsedMs": 8754.456309999994,
+      "file": "probe-0-1-1000000.json.gz",
+      "sha256": "de791db4817d5a1b6f5b8eeed75edd12c900d9fbe60a43188f9cb760015edec4"
+    },
+    {
+      "index": 1,
+      "target": 0,
+      "maxTableEntries": 500000,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 400000,
+      "peakTable": 95262,
+      "elapsedMs": 8423.579842,
+      "file": "probe-1-0-500000.json.gz",
+      "sha256": "1c0e830a2a06eb0e4178d4e00b796246b1b3ff1ca24af48558ab845ca144dbf3"
+    },
+    {
+      "index": 1,
+      "target": 0,
+      "maxTableEntries": 1000000,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 400000,
+      "peakTable": 95262,
+      "elapsedMs": 8562.866465999992,
+      "file": "probe-1-0-1000000.json.gz",
+      "sha256": "165f155499aa49db9c306012ba5eb1ee0d27d434929ba1d1ccfada0b7dfce9e4"
+    },
+    {
+      "index": 1,
+      "target": 1,
+      "maxTableEntries": 500000,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 400000,
+      "peakTable": 96514,
+      "elapsedMs": 8537.800967000003,
+      "file": "probe-1-1-500000.json.gz",
+      "sha256": "208aae72938391cfcb7a2d0033e339c3fda534f9e2c3bb13b75688e0861cd640"
+    },
+    {
+      "index": 1,
+      "target": 1,
+      "maxTableEntries": 1000000,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 400000,
+      "peakTable": 96514,
+      "elapsedMs": 9417.755468000003,
+      "file": "probe-1-1-1000000.json.gz",
+      "sha256": "977a66d504e98055087b5acbf6fec8747d49cfb91c9509c35835fe721a308454"
+    }
+  ],
+  "newGames": 0,
+  "formalJobs": 0,
+  "interpretation": "Small capped probes compare both table capacities on two selected roots, not performance proof or full-table stress. Formal 009 separately increases visits, time and table."
+}
