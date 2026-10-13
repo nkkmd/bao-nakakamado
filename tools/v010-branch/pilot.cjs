@@ -1,0 +1,10 @@
+'use strict';
+// MIT. Exploratory method check only; never pooled with formal study 004.
+const fs=require('node:fs'),path=require('node:path'),C=require('../v010-balance/core.cjs'),I=require('./inputs.cjs'),P=require('../v010-gc/prover.cjs'),V=require('../v010-balance/diagnostics/proof.cjs'),A=require('./compose.cjs');
+const output=process.argv[2];if(!output||fs.existsSync(output))throw Error('new output path required');
+const input=I.prepare(),known=I.load().find(r=>r.index===14&&r.target===1).result.certificate;V.verify(known);
+const sourcePaths=['tools/v010-branch/inputs.cjs','tools/v010-branch/compose.cjs','tools/v010-branch/pilot.cjs','tools/v010-gc/prover.cjs','tools/v010-gc/manifest.json'];
+const solvedChildren=C.Q.moveVariants(known.start).map(move=>{const r=P.prove(C.Q.applyMove(known.start,move).state,1,{book:input.book,maxDepth:17,maxNodes:100000});if(!r.certificate)throw Error('known strategy split did not reconnect');V.verify(r.certificate);return r.certificate;});
+const composed=A.compose(known.start,solvedChildren);V.verify(composed);
+const exploratory=I.roots().slice(0,9).map(root=>{const r=P.prove(root.state,1,{book:input.book,guidance:input.guidance,maxDepth:79,maxNodes:100000,wallMs:30000});if(r.certificate)V.verify(r.certificate);return {id:root.id,target:1,status:r.status,winner:r.winner,depth:r.certificate?.depth??null,visits:r.visits,bookUses:r.bookUses,elapsedMs:r.elapsedMs,resultSha256:C.hash(r)};});
+const result={classification:'EXPLORATORY-METHOD-CHECK-NOT-FORMAL',baseline:'024ef96712a0851daaa23c6a34d7b0e80004eaa5',date:'2026-10-12 Asia/Tokyo',sources:Object.fromEntries(sourcePaths.map(p=>[p,C.hash(fs.readFileSync(path.join(C.root,p)))])),inputSha256:I.SHA,verifiedStates:input.verifiedStates,known21:{allDefenderMoves:solvedChildren.length,winner:composed.target,depth:composed.depth,proofNodes:V.verify(composed)},exploratory,newGames:0,formalJobs:0};fs.writeFileSync(output,JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(result));

@@ -1,0 +1,152 @@
+name: v0.10.0 disjoint branch proof study 004
+on:
+  push:
+    branches: ['research/v010-branch-proof-004-20261012']
+permissions:
+  contents: read
+  actions: read
+jobs:
+  preflight:
+    if: startsWith(github.event.head_commit.message, 'Start v0.10.0 branch proof study 004') && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: python3 tools/v010-research-integration/audit.py
+      - run: node --expose-gc --test tools/v010-branch/check.test.cjs
+      - run: node tools/v010-branch/study.cjs manifest
+      - run: test "$(git ls-remote origin refs/heads/results/v010-branch-proof-study-004 | cut -f1)" = "$GITHUB_SHA"
+  split19:
+    needs: preflight
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix:
+        root: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+        target: [0, 1]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Complete-response proof for one pinned root
+        run: node --expose-gc --max-old-space-size=4096 tools/v010-branch/study.cjs job "$RUNNER_TEMP/proofs" "${{ matrix.root }}" "${{ matrix.target }}"
+      - name: Reuse completed bytes without new exploration
+        run: node tools/v010-branch/study.cjs job "$RUNNER_TEMP/proofs" "${{ matrix.root }}" "${{ matrix.target }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v010-branch-split19-${{ matrix.root }}-${{ matrix.target }}
+          path: ${{ runner.temp }}/proofs/
+          retention-days: 90
+  split17:
+    needs: split19
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix:
+        root: [9, 10, 11, 12]
+        target: [0, 1]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: v010-branch-split*
+          merge-multiple: true
+          path: ${{ runner.temp }}/earlier
+      - name: Complete-response proof for one pinned root
+        run: node --expose-gc --max-old-space-size=4096 tools/v010-branch/study.cjs job "$RUNNER_TEMP/proofs" "${{ matrix.root }}" "${{ matrix.target }}" "$RUNNER_TEMP/earlier"
+      - name: Reuse completed bytes without new exploration
+        run: node tools/v010-branch/study.cjs job "$RUNNER_TEMP/proofs" "${{ matrix.root }}" "${{ matrix.target }}" "$RUNNER_TEMP/earlier"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v010-branch-split17-${{ matrix.root }}-${{ matrix.target }}
+          path: ${{ runner.temp }}/proofs/
+          retention-days: 90
+  openings:
+    needs: split17
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix:
+        root: [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+        target: [0, 1]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: v010-branch-split*
+          merge-multiple: true
+          path: ${{ runner.temp }}/earlier
+      - name: Complete-response proof for one pinned root
+        run: node --expose-gc --max-old-space-size=4096 tools/v010-branch/study.cjs job "$RUNNER_TEMP/proofs" "${{ matrix.root }}" "${{ matrix.target }}" "$RUNNER_TEMP/earlier"
+      - name: Reuse completed bytes without new exploration
+        run: node tools/v010-branch/study.cjs job "$RUNNER_TEMP/proofs" "${{ matrix.root }}" "${{ matrix.target }}" "$RUNNER_TEMP/earlier"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v010-branch-openings-${{ matrix.root }}-${{ matrix.target }}
+          path: ${{ runner.temp }}/proofs/
+          retention-days: 90
+  aggregate:
+    needs: [split19, split17, openings]
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 70
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: v010-branch-*
+          merge-multiple: true
+          path: ${{ runner.temp }}/proofs
+      - name: Verify every certificate, nested dependency and initial-state quantifier
+        run: node --max-old-space-size=4096 tools/v010-branch/study.cjs aggregate "$RUNNER_TEMP/proofs"
+      - name: Preserve exact original bytes on precreated results branch
+        env:
+          STUDY_SOURCE_SHA: ${{ github.sha }}
+          STUDY_RUN_ID: ${{ github.run_id }}
+        run: |
+          test "$(git ls-remote origin refs/heads/results/v010-branch-proof-study-004 | cut -f1)" = "$GITHUB_SHA"
+          python3 tools/v010-followup/archive.py "$RUNNER_TEMP/proofs" doc/v010-branch/completed
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git switch -c results/v010-branch-proof-study-004
+          git add doc/v010-branch/completed
+          git commit -m 'Preserve study 004 disjoint branch proofs and original records'
+          git push origin HEAD:refs/heads/results/v010-branch-proof-study-004
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v010-branch-summary
+          path: |
+            ${{ runner.temp }}/proofs/summary.json
+            doc/v010-branch/completed/
+          retention-days: 90

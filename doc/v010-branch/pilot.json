@@ -1,0 +1,123 @@
+{
+  "classification": "EXPLORATORY-METHOD-CHECK-NOT-FORMAL",
+  "baseline": "024ef96712a0851daaa23c6a34d7b0e80004eaa5",
+  "date": "2026-10-12 Asia/Tokyo",
+  "sources": {
+    "tools/v010-branch/inputs.cjs": "29dd001bec5ca4a5e94bf2d6534df5536b42c6fe733dbfbe9bdfc15604befe74",
+    "tools/v010-branch/compose.cjs": "b014e377d682b1f913574fe979cfdc9bccd1f7cbaadb97580887de8ccbf30d5a",
+    "tools/v010-branch/pilot.cjs": "bf8f4970bb65459c4c7b3c5e907a96fe3449e3c67acf4b13051b651942dac192",
+    "tools/v010-gc/prover.cjs": "98bc14b00a79169c0f7474633cbe94b5fd685a9c147448923da10b04bb1d1328",
+    "tools/v010-gc/manifest.json": "c4781523969684c20c5421dca7833a2853e43fb7f32f53faf0c92b78cbbd9d60"
+  },
+  "inputSha256": "f1ddd2d366f011c9ff154f261e218d98d49c068b104775ceba9313d0644859d3",
+  "verifiedStates": 34890,
+  "known21": {
+    "allDefenderMoves": 3,
+    "winner": 1,
+    "depth": 18,
+    "proofNodes": 7721
+  },
+  "exploratory": [
+    {
+      "id": "primary-before-19-move-0",
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 100000,
+      "bookUses": 0,
+      "elapsedMs": 3877.4669299999987,
+      "resultSha256": "4ba4098ea47a0e145f2ec0dcf78899281925184d25c57fc090b3c68b25deaa45"
+    },
+    {
+      "id": "primary-before-19-move-1",
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 100000,
+      "bookUses": 0,
+      "elapsedMs": 3719.9029249999985,
+      "resultSha256": "5e878a36faec67272e146ccef675be12cf6e7e8ec31ac3ffe13c52357137b74e"
+    },
+    {
+      "id": "primary-before-19-move-2",
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 100000,
+      "bookUses": 0,
+      "elapsedMs": 3877.7056429999993,
+      "resultSha256": "fe1a2487cbcedfd7b6ba12d937d9a325486091c06643d196f970a09daf588dda"
+    },
+    {
+      "id": "primary-before-19-move-3",
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 100000,
+      "bookUses": 2,
+      "elapsedMs": 3513.9917120000027,
+      "resultSha256": "fefa0e1a3809d6c31d9d3d689f71c632eb2478b0aa7c165ded7fc031b4c80ead"
+    },
+    {
+      "id": "primary-before-19-move-4",
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 100000,
+      "bookUses": 0,
+      "elapsedMs": 4838.070323,
+      "resultSha256": "a2212093a88eaa347eb464a612e4f936aef6de114acc2b3b4fb84b575ef41fb0"
+    },
+    {
+      "id": "primary-before-19-move-5",
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 100000,
+      "bookUses": 0,
+      "elapsedMs": 4173.303103999999,
+      "resultSha256": "538b3fa4024cc9e79be1f2a44d0e48559b06d145b83f5487402b28a394839ae1"
+    },
+    {
+      "id": "primary-before-19-move-6",
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 100000,
+      "bookUses": 0,
+      "elapsedMs": 3977.3088160000007,
+      "resultSha256": "772428b5856afa82850380b5fd179d3f1e267be57ea69e8006125fea167fffd9"
+    },
+    {
+      "id": "primary-before-19-move-7",
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 100000,
+      "bookUses": 0,
+      "elapsedMs": 4878.0480890000035,
+      "resultSha256": "6f930ce3041a84e9caa9dedb6b6e74e31eba2a612fb6aaeb9d85ca3cc2fa532a"
+    },
+    {
+      "id": "primary-before-19-move-8",
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 100000,
+      "bookUses": 0,
+      "elapsedMs": 4960.244913000002,
+      "resultSha256": "b3d462582434ea23dcddc7ad06d5caf87b4789fa41499537b8843ba588e72fd7"
+    }
+  ],
+  "newGames": 0,
+  "formalJobs": 0
+}
