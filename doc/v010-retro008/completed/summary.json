@@ -1,0 +1,1294 @@
+{
+  "status": "AUDITED-COMPLETE",
+  "digest": "5b7717308192d1d330b5240bfb5f72b0bce02a5b0f1a6d3d0337896f57c61135",
+  "proofJobs": 32,
+  "games": 0,
+  "newGames": 0,
+  "parents": [
+    {
+      "id": "primary-before-17-move-0",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 1,
+        "direction": "right",
+        "side": "left"
+      },
+      "winner": 1,
+      "depth": 33,
+      "keptKnown": false,
+      "replies": [
+        {
+          "id": "primary-before-17-move-0-reply-0",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 0,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": true,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-17-move-0-reply-1",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": true,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-17-move-0-reply-2",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": true,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-17-move-0-reply-3",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": true,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-17-move-0-reply-4",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": true,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-17-move-0-reply-5",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": 1,
+          "explored": true,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-17-move-0-reply-6",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": true,
+          "pinnedInput": false
+        }
+      ]
+    },
+    {
+      "id": "primary-before-17-move-1",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 4,
+        "direction": "right",
+        "side": "left"
+      },
+      "winner": 1,
+      "depth": 49,
+      "keptKnown": true,
+      "replies": [
+        {
+          "id": "primary-before-17-move-1-reply-0",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 0,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-17-move-1-reply-1",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-17-move-1-reply-2",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-17-move-1-reply-3",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-17-move-1-reply-4",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": 1,
+          "explored": false,
+          "pinnedInput": true
+        },
+        {
+          "id": "primary-before-17-move-1-reply-5",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        }
+      ]
+    },
+    {
+      "id": "primary-before-17-move-2",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 4,
+        "direction": "left",
+        "side": "right"
+      },
+      "winner": 1,
+      "depth": 33,
+      "keptKnown": false,
+      "replies": [
+        {
+          "id": "primary-before-17-move-2-reply-0",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 0,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": true,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-17-move-2-reply-1",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": 1,
+          "explored": true,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-17-move-2-reply-2",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": true,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-17-move-2-reply-3",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": true,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-17-move-2-reply-4",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": true,
+          "pinnedInput": false
+        }
+      ]
+    },
+    {
+      "id": "primary-before-17-move-3",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 6,
+        "direction": "left",
+        "side": "right"
+      },
+      "winner": null,
+      "depth": null,
+      "keptKnown": false,
+      "replies": [
+        {
+          "id": "primary-before-17-move-3-reply-0",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 0,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": true,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-17-move-3-reply-1",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": true,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-17-move-3-reply-2",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": true,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-17-move-3-reply-3",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": true,
+          "pinnedInput": false
+        }
+      ]
+    }
+  ],
+  "primaryBefore17": {
+    "status": "UNKNOWN",
+    "winner": null,
+    "depth": null,
+    "coveredBranches": 3,
+    "totalBranches": 4
+  },
+  "preservedPrimaryBefore19": {
+    "status": "PROVED",
+    "winner": 1,
+    "depth": 48
+  },
+  "initial": {
+    "status": "UNKNOWN",
+    "winner": null,
+    "scope": "not searched; 4 initial moves and 14 responses remain unresolved"
+  },
+  "pinnedReplies": [
+    {
+      "id": "primary-before-17-move-1-reply-4",
+      "winner": 1,
+      "height": 48,
+      "stateKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[1,0,2,1,0,1,2,1],[0,0,0,0,0,0,1,2]],[[2,4,1,1,7,1,1,6],[1,3,1,0,2,2,0,1]]],[10,10],[0,0],[false,false],0,\"namua\",null,\"\",[0,0],19,null]"
+    }
+  ],
+  "results": [
+    {
+      "rootId": "primary-before-17-move-0-reply-0",
+      "parentId": "primary-before-17-move-0",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 0,
+        "direction": "right",
+        "side": "left"
+      },
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 707820,
+          "elapsedMs": 44996.555001,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 707718,
+          "elapsedMs": 45681.459804,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-17-move-0-reply-1",
+      "parentId": "primary-before-17-move-0",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 1,
+        "direction": "right",
+        "side": "left"
+      },
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 661610,
+          "elapsedMs": 27969.257395,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 661610,
+          "elapsedMs": 28600.221679999995,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-17-move-0-reply-2",
+      "parentId": "primary-before-17-move-0",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 3,
+        "direction": "right",
+        "side": "left"
+      },
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 726618,
+          "elapsedMs": 36552.161983,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 727051,
+          "elapsedMs": 41807.17067,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-17-move-0-reply-3",
+      "parentId": "primary-before-17-move-0",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 3,
+        "direction": "left",
+        "side": "right"
+      },
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 693811,
+          "elapsedMs": 37125.7144,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 693642,
+          "elapsedMs": 36500.294428,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-17-move-0-reply-4",
+      "parentId": "primary-before-17-move-0",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 4,
+        "direction": "right",
+        "side": "left"
+      },
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 729904,
+          "elapsedMs": 46696.847267,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 730128,
+          "elapsedMs": 44856.793349,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-17-move-0-reply-5",
+      "parentId": "primary-before-17-move-0",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 4,
+        "direction": "left",
+        "side": "right"
+      },
+      "winner": 1,
+      "targets": [
+        {
+          "target": 0,
+          "status": "UNKNOWN",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 1745509,
+          "bookUses": 0,
+          "cacheHits": 716376,
+          "elapsedMs": 23722.106269,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": [
+            32,
+            48,
+            78
+          ]
+        },
+        {
+          "target": 1,
+          "status": "PROVED",
+          "winner": 1,
+          "depth": 32,
+          "proofNodes": 2347,
+          "visits": 980502,
+          "bookUses": 0,
+          "cacheHits": 385805,
+          "elapsedMs": 13616.319688,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-17-move-0-reply-6",
+      "parentId": "primary-before-17-move-0",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 7,
+        "direction": "left",
+        "side": "right"
+      },
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 736610,
+          "elapsedMs": 48740.639544000005,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 736421,
+          "elapsedMs": 36784.356078,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-17-move-2-reply-0",
+      "parentId": "primary-before-17-move-2",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 0,
+        "direction": "right",
+        "side": "left"
+      },
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 675343,
+          "elapsedMs": 44688.91813,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 675302,
+          "elapsedMs": 44923.88217999999,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-17-move-2-reply-1",
+      "parentId": "primary-before-17-move-2",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 1,
+        "direction": "right",
+        "side": "left"
+      },
+      "winner": 1,
+      "targets": [
+        {
+          "target": 0,
+          "status": "UNKNOWN",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 1499466,
+          "bookUses": 0,
+          "cacheHits": 617811,
+          "elapsedMs": 27624.712156000005,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": [
+            24,
+            32,
+            48,
+            78
+          ]
+        },
+        {
+          "target": 1,
+          "status": "PROVED",
+          "winner": 1,
+          "depth": 32,
+          "proofNodes": 2447,
+          "visits": 906409,
+          "bookUses": 0,
+          "cacheHits": 365794,
+          "elapsedMs": 16149.947449000003,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-17-move-2-reply-2",
+      "parentId": "primary-before-17-move-2",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 4,
+        "direction": "right",
+        "side": "left"
+      },
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 735676,
+          "elapsedMs": 45738.15354500001,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 735245,
+          "elapsedMs": 45097.11408700001,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-17-move-2-reply-3",
+      "parentId": "primary-before-17-move-2",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 4,
+        "direction": "left",
+        "side": "right"
+      },
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 717995,
+          "elapsedMs": 45543.336004000004,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 717753,
+          "elapsedMs": 36142.269987,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-17-move-2-reply-4",
+      "parentId": "primary-before-17-move-2",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 6,
+        "direction": "left",
+        "side": "right"
+      },
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 691190,
+          "elapsedMs": 45387.280641000005,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 691118,
+          "elapsedMs": 47790.90090600001,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-17-move-3-reply-0",
+      "parentId": "primary-before-17-move-3",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 0,
+        "direction": "right",
+        "side": "left"
+      },
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 763369,
+          "elapsedMs": 29846.843058000006,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 766069,
+          "elapsedMs": 36274.164942,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-17-move-3-reply-1",
+      "parentId": "primary-before-17-move-3",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 3,
+        "direction": "right",
+        "side": "left"
+      },
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 714467,
+          "elapsedMs": 37403.319905,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 714507,
+          "elapsedMs": 49149.488213000004,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-17-move-3-reply-2",
+      "parentId": "primary-before-17-move-3",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 3,
+        "direction": "left",
+        "side": "right"
+      },
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 714265,
+          "elapsedMs": 44174.568675,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 714400,
+          "elapsedMs": 45186.39867,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-17-move-3-reply-3",
+      "parentId": "primary-before-17-move-3",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 6,
+        "direction": "left",
+        "side": "right"
+      },
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 698811,
+          "elapsedMs": 24605.239998,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        },
+        {
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 2000000,
+          "bookUses": 0,
+          "cacheHits": 699178,
+          "elapsedMs": 41069.411926,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    }
+  ],
+  "interpretation": "Normal certificates only. Fully retained 22 responses; five replies under an already proved parent are held unsearched. Finite-horizon refutations and budget stops are UNKNOWN, never fairness or another winner."
+}
