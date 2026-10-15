@@ -1,0 +1,48 @@
+{
+  "classification": "EXPLORATORY-NOT-FORMAL",
+  "inputArchiveSha256": "5c5b5ea0dd22f39e486a46c7dc58ec109207a1a96ffd0da0dfe15396332220db",
+  "sources": {
+    "tools/v010-retro010/pilot.cjs": "67f67c4178d73d3d4e2aa818a53d07e2118c85e4bad10c49853a473529c59d9b",
+    "tools/v010-retro010/inputs.cjs": "630a2784050894ece167eb162ab72a73b7f15aa83a5be505a2f6e8fe8e5f7287",
+    "tools/v010-deepen009/schedule.cjs": "b099dd6c205e27501f141ab14539f0d7133bc2a0b1c164c0053a604fc854c858",
+    "tools/v010-pn007/schedule.cjs": "ce889bcd74beadddaddba19e58aa8847ab44fb3eeec3e4d07f2411151ab6ecf3",
+    "tools/v010-pn007/prover.cjs": "64f4f0e924ea0baaf052039e47523fa94cd001f5da0abe166cca28708b18c7ae"
+  },
+  "verifiedStates": 82982,
+  "known": [
+    {
+      "id": "primary-before-15-move-1",
+      "target": 1,
+      "depth": 51,
+      "certificateSha256": "004d9438e8ed8f8f09bfdecfad019b13a72dccf3b149a8ed6b7b9d49478823db",
+      "newSearches": 0
+    }
+  ],
+  "rows": [
+    {
+      "rootId": "primary-before-15-move-0-reply-0",
+      "target": 0,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 200000,
+      "elapsedMs": 4595.703330999997,
+      "file": "primary-before-15-move-0-reply-0-0.json.gz",
+      "sha256": "12daa211a2b62426dbd1bb6c124af5e547431d5874c2d1bd2c1a62743f4dc1fb"
+    },
+    {
+      "rootId": "primary-before-15-move-0-reply-0",
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 200000,
+      "elapsedMs": 4572.113991999999,
+      "file": "primary-before-15-move-0-reply-0-1.json.gz",
+      "sha256": "da778cf86f9796486f50a1fcf01c184f7f4e0acf9140891be48b370d0423f468"
+    }
+  ],
+  "newGames": 0,
+  "formalJobs": 0,
+  "interpretation": "Read-only known-parent synthesis and two exploratory probes. Unknown is not another winner. Not part of formal 2 goals."
+}

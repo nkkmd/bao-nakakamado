@@ -1,0 +1,25 @@
+name: v0.10.0 retrograde study 010 checks
+on:
+  pull_request:
+    paths: ['tools/v010-retro010/**', 'doc/V010_RETRO010_*', 'doc/v010-retro010/**', '.github/workflows/v010-retro010-*.yml']
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --expose-gc --test tools/v010-retro010/check.test.cjs
+      - run: node tools/v010-retro010/study.cjs manifest
+      - run: node tools/v010-retro010/verify-pilot.cjs
+      - run: python3 tools/v010-deepen009/reaudit.py doc/v010-deepen009/completed 0b220daec7762254eb38a72019dc44f62c9f5a62 6f29c2bce728cba617ee2b72aa1733468891e28c 38423055308
+      - name: Preserve all original evidence and public implementation
+        run: |
+          git diff --exit-code 67771ddee141242bedd6a5cdddcc69dece4f8917 -- prototype trials tools/v010-balance tools/v010-followup tools/v010-certainty tools/v010-gc tools/v010-branch tools/v010-reply tools/v010-deepen tools/v010-pn tools/v010-pn007 tools/v010-retro008 tools/v010-deepen009 doc/v010-research-completed doc/v010-balance doc/v010-followup doc/v010-certainty doc/v010-gc doc/v010-branch doc/v010-reply doc/v010-deepen doc/v010-pn doc/v010-pn007 doc/v010-retro008 doc/v010-deepen009
+          git diff --check
