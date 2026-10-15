@@ -1,0 +1,26 @@
+name: v0.10.0 study 011 integration checks
+on:
+  pull_request:
+    paths: ['tools/v010-retro011*/**', 'doc/V010_RETRO011_*', 'doc/v010-retro011/**', '.github/workflows/v010-retro011-*.yml']
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --expose-gc --test tools/v010-retro011/check.test.cjs
+      - run: node tools/v010-retro011/study.cjs manifest
+      - run: node tools/v010-retro011/verify-pilot.cjs
+      - run: python3 tools/v010-retro011-integration/reaudit.py doc/v010-retro011/completed 68ba0b43ec2b6761fbb3d2a75667776a497432cd 682ad7e0f9dd997348c8766c073c2fe18b9005ca 38679332213
+      - name: Preserve frozen sources and original bytes
+        run: |
+          git diff --exit-code 682ad7e0f9dd997348c8766c073c2fe18b9005ca -- prototype trials tools/v010-retro011 doc/V010_RETRO011_PLAN_20261015.md doc/v010-retro011/pilot.json doc/v010-retro011/preflight-reaudit.json .github/workflows/v010-retro011-study.yml
+          git diff --exit-code 68ba0b43ec2b6761fbb3d2a75667776a497432cd -- doc/v010-retro011/completed
+          git diff --check
