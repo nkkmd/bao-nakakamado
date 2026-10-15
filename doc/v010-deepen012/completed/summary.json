@@ -1,0 +1,1019 @@
+{
+  "status": "AUDITED-COMPLETE",
+  "digest": "5153129295e9e4bcf885323691152cbc27c109fa368fc4554221d86a817452e6",
+  "proofJobs": 12,
+  "games": 0,
+  "newGames": 0,
+  "parents": [
+    {
+      "id": "primary-before-13-move-0",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 0,
+        "direction": "right",
+        "side": "left"
+      },
+      "winner": null,
+      "depth": null,
+      "keptKnown": false,
+      "replies": [
+        {
+          "id": "primary-before-13-move-0-reply-0",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 0,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-0-reply-1",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-0-reply-2",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-0-reply-3",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-0-reply-4",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-0-reply-5",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-0-reply-6",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-0-reply-7",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        }
+      ]
+    },
+    {
+      "id": "primary-before-13-move-1",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 2,
+        "direction": "right",
+        "side": "left"
+      },
+      "winner": 1,
+      "depth": 51,
+      "keptKnown": true,
+      "replies": [
+        {
+          "id": "primary-before-13-move-1-reply-0",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 0,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-1-reply-1",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-1-reply-2",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": 1,
+          "explored": false,
+          "pinnedInput": true
+        },
+        {
+          "id": "primary-before-13-move-1-reply-3",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-1-reply-4",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        }
+      ]
+    },
+    {
+      "id": "primary-before-13-move-2",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 2,
+        "direction": "left",
+        "side": "right"
+      },
+      "winner": null,
+      "depth": null,
+      "keptKnown": false,
+      "replies": [
+        {
+          "id": "primary-before-13-move-2-reply-0",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 0,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-2-reply-1",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-2-reply-2",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-2-reply-3",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-2-reply-4",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-2-reply-5",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-2-reply-6",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        }
+      ]
+    },
+    {
+      "id": "primary-before-13-move-3",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 4,
+        "direction": "right",
+        "side": "left"
+      },
+      "winner": null,
+      "depth": null,
+      "keptKnown": false,
+      "replies": [
+        {
+          "id": "primary-before-13-move-3-reply-0",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": true,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-3-reply-1",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": true,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-3-reply-2",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": true,
+          "pinnedInput": false
+        }
+      ]
+    },
+    {
+      "id": "primary-before-13-move-4",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 4,
+        "direction": "left",
+        "side": "right"
+      },
+      "winner": null,
+      "depth": null,
+      "keptKnown": false,
+      "replies": [
+        {
+          "id": "primary-before-13-move-4-reply-0",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 0,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": true,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-4-reply-1",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": 0,
+          "explored": false,
+          "pinnedInput": true
+        },
+        {
+          "id": "primary-before-13-move-4-reply-2",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": true,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-4-reply-3",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": true,
+          "pinnedInput": false
+        }
+      ]
+    },
+    {
+      "id": "primary-before-13-move-5",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 7,
+        "direction": "left",
+        "side": "right"
+      },
+      "winner": 1,
+      "depth": 53,
+      "keptKnown": true,
+      "replies": [
+        {
+          "id": "primary-before-13-move-5-reply-0",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-5-reply-1",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-5-reply-2",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-5-reply-3",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-5-reply-4",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-5-reply-5",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": 1,
+          "explored": false,
+          "pinnedInput": true
+        }
+      ]
+    }
+  ],
+  "primaryBefore13": {
+    "status": "UNKNOWN",
+    "winner": null,
+    "depth": null,
+    "coveredBranches": 2,
+    "totalBranches": 6
+  },
+  "preservedPrimaryBefore15": {
+    "status": "PROVED",
+    "winner": 1,
+    "depth": 52
+  },
+  "heldRoots": [
+    {
+      "id": "primary-before-13-move-0-reply-0",
+      "parentId": "primary-before-13-move-0",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-012"
+    },
+    {
+      "id": "primary-before-13-move-0-reply-1",
+      "parentId": "primary-before-13-move-0",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-012"
+    },
+    {
+      "id": "primary-before-13-move-0-reply-2",
+      "parentId": "primary-before-13-move-0",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-012"
+    },
+    {
+      "id": "primary-before-13-move-0-reply-3",
+      "parentId": "primary-before-13-move-0",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-012"
+    },
+    {
+      "id": "primary-before-13-move-0-reply-4",
+      "parentId": "primary-before-13-move-0",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-012"
+    },
+    {
+      "id": "primary-before-13-move-0-reply-5",
+      "parentId": "primary-before-13-move-0",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-012"
+    },
+    {
+      "id": "primary-before-13-move-0-reply-6",
+      "parentId": "primary-before-13-move-0",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-012"
+    },
+    {
+      "id": "primary-before-13-move-0-reply-7",
+      "parentId": "primary-before-13-move-0",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-012"
+    },
+    {
+      "id": "primary-before-13-move-2-reply-0",
+      "parentId": "primary-before-13-move-2",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-012"
+    },
+    {
+      "id": "primary-before-13-move-2-reply-1",
+      "parentId": "primary-before-13-move-2",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-012"
+    },
+    {
+      "id": "primary-before-13-move-2-reply-2",
+      "parentId": "primary-before-13-move-2",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-012"
+    },
+    {
+      "id": "primary-before-13-move-2-reply-3",
+      "parentId": "primary-before-13-move-2",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-012"
+    },
+    {
+      "id": "primary-before-13-move-2-reply-4",
+      "parentId": "primary-before-13-move-2",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-012"
+    },
+    {
+      "id": "primary-before-13-move-2-reply-5",
+      "parentId": "primary-before-13-move-2",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-012"
+    },
+    {
+      "id": "primary-before-13-move-2-reply-6",
+      "parentId": "primary-before-13-move-2",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-012"
+    }
+  ],
+  "initial": {
+    "status": "UNKNOWN",
+    "winner": null,
+    "scope": "not formally searched in 012; 14-root exploratory pilot remains separate; 4 initial moves and 14 responses remain unresolved"
+  },
+  "pinnedReplies": [
+    {
+      "id": "primary-before-13-move-1-reply-2",
+      "winner": 1,
+      "height": 50,
+      "stateKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,0,0,3,0],[0,0,0,0,0,0,1,2]],[[5,4,1,0,6,4,3,1],[1,0,1,3,0,2,0,1]]],[13,13],[0,0],[false,false],0,\"namua\",null,\"\",[0,0],15,null]"
+    },
+    {
+      "id": "primary-before-13-move-4-reply-1",
+      "winner": 0,
+      "height": 1,
+      "stateKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[1,0,0,0,2,1,4,4],[0,0,0,0,0,0,1,2]],[[2,1,1,0,2,3,3,1],[0,2,0,2,1,1,2,0]]],[14,14],[0,0],[false,false],0,\"namua\",null,\"\",[0,0],15,null]"
+    },
+    {
+      "id": "primary-before-13-move-5-reply-5",
+      "winner": 1,
+      "height": 52,
+      "stateKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,0,2,0,1],[0,0,0,0,0,0,1,2]],[[0,3,1,5,5,0,8,4],[0,2,0,2,1,1,2,0]]],[12,12],[0,0],[false,false],0,\"namua\",null,\"\",[0,0],15,null]"
+    }
+  ],
+  "results": [
+    {
+      "rootId": "primary-before-13-move-3-reply-0",
+      "parentId": "primary-before-13-move-3",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 4,
+        "direction": "right",
+        "side": "left"
+      },
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "WALL_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 7222078,
+          "bookUses": 0,
+          "cacheHits": 2646351,
+          "elapsedMs": 170148.358982,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        },
+        {
+          "target": 1,
+          "status": "TABLE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 7492730,
+          "bookUses": 0,
+          "cacheHits": 2753440,
+          "elapsedMs": 112312.748945,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-13-move-3-reply-1",
+      "parentId": "primary-before-13-move-3",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 4,
+        "direction": "left",
+        "side": "right"
+      },
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "TABLE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 7699154,
+          "bookUses": 0,
+          "cacheHits": 2937656,
+          "elapsedMs": 137285.256984,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": [
+            16
+          ]
+        },
+        {
+          "target": 1,
+          "status": "WALL_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 6734932,
+          "bookUses": 0,
+          "cacheHits": 2572297,
+          "elapsedMs": 165573.001207,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": [
+            16,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-13-move-3-reply-2",
+      "parentId": "primary-before-13-move-3",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 7,
+        "direction": "left",
+        "side": "right"
+      },
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "WALL_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 7327800,
+          "bookUses": 0,
+          "cacheHits": 2670783,
+          "elapsedMs": 167857.687763,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        },
+        {
+          "target": 1,
+          "status": "WALL_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 7261746,
+          "bookUses": 0,
+          "cacheHits": 2645102,
+          "elapsedMs": 170145.51516399998,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-13-move-4-reply-0",
+      "parentId": "primary-before-13-move-4",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 0,
+        "direction": "right",
+        "side": "left"
+      },
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "TABLE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 7430508,
+          "bookUses": 0,
+          "cacheHits": 2719564,
+          "elapsedMs": 137616.104148,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        },
+        {
+          "target": 1,
+          "status": "WALL_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 7412356,
+          "bookUses": 0,
+          "cacheHits": 2712957,
+          "elapsedMs": 167538.95884699997,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-13-move-4-reply-2",
+      "parentId": "primary-before-13-move-4",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "left",
+        "side": "right"
+      },
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "WALL_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 7086173,
+          "bookUses": 0,
+          "cacheHits": 2508853,
+          "elapsedMs": 173305.348053,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        },
+        {
+          "target": 1,
+          "status": "TABLE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 7252106,
+          "bookUses": 0,
+          "cacheHits": 2569541,
+          "elapsedMs": 164685.753605,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-13-move-4-reply-3",
+      "parentId": "primary-before-13-move-4",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 7,
+        "direction": "left",
+        "side": "right"
+      },
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "TABLE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 7311427,
+          "bookUses": 0,
+          "cacheHits": 2630706,
+          "elapsedMs": 167828.84269,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        },
+        {
+          "target": 1,
+          "status": "TABLE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "proofNodes": 0,
+          "visits": 7364532,
+          "bookUses": 0,
+          "cacheHits": 2650551,
+          "elapsedMs": 135487.099979,
+          "attemptedHorizons": [
+            16,
+            20,
+            24,
+            32,
+            48,
+            78
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    }
+  ],
+  "interpretation": "Normal certificates only. All 33 responses retained; old verified certificates retained; 15 unresolved roots outside the two selected parents are deferred. 012 starts fresh bounded searches, not a rerun of 011 jobs or a continuation of their failed tables. Finite-horizon refutations and budget stops are UNKNOWN, never fairness or another winner."
+}
