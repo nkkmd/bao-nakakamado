@@ -1,0 +1,136 @@
+{
+  "classification": "EXPLORATORY-NOT-FORMAL",
+  "inputArchiveSha256": "f8da9ff3c4f6891f28c90f3dfa33eea6caebaf02b8adb5448add5cd78c823e1c",
+  "sources": {
+    "tools/v010-retro011/pilot.cjs": "3399aa326dcbc3358415ea2b80f6e904d39f435e55a736906b4ae4a5d104aa3a",
+    "tools/v010-retro011/inputs.cjs": "c7eb80222eaf15cedc5250a7b612831f09a8108ae72cb97601315d251b819d5e",
+    "tools/v010-retro011/schedule.cjs": "9913488884160dafad19eca9a978ce6f5b0ee7fcf4bcd05697542bd7cc837227",
+    "tools/v010-pn007/schedule.cjs": "ce889bcd74beadddaddba19e58aa8847ab44fb3eeec3e4d07f2411151ab6ecf3",
+    "tools/v010-pn007/prover.cjs": "64f4f0e924ea0baaf052039e47523fa94cd001f5da0abe166cca28708b18c7ae"
+  },
+  "verifiedStates": 90189,
+  "known": [
+    {
+      "id": "primary-before-13-move-5",
+      "target": 1,
+      "depth": 53,
+      "certificateSha256": "6105daccc2aefb40bcbced74adaacbd574e618ee282ab471c7c9757931ccbcbf",
+      "newSearches": 0
+    }
+  ],
+  "rows": [
+    {
+      "rootId": "primary-before-13-move-0-reply-0",
+      "target": 0,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 50000,
+      "elapsedMs": 1393.0341669999907,
+      "file": "primary-before-13-move-0-reply-0-0.json.gz",
+      "sha256": "511625380dbefab6579649dd5da111ef9f4a77baee653100243762cc73383e42"
+    },
+    {
+      "rootId": "primary-before-13-move-0-reply-0",
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 50000,
+      "elapsedMs": 1162.9608169999992,
+      "file": "primary-before-13-move-0-reply-0-1.json.gz",
+      "sha256": "94ab1e8745687525af1295825939109767cb3ef1299cd7f3ecb6a09190dfb329"
+    },
+    {
+      "rootId": "primary-before-13-move-1-reply-0",
+      "target": 0,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 50000,
+      "elapsedMs": 1368.0092789999908,
+      "file": "primary-before-13-move-1-reply-0-0.json.gz",
+      "sha256": "d45b903a71c18e35691726c14f51d08ab00e2aec4a2c80556098b7db8858f1c4"
+    },
+    {
+      "rootId": "primary-before-13-move-1-reply-0",
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 50000,
+      "elapsedMs": 1561.285281000004,
+      "file": "primary-before-13-move-1-reply-0-1.json.gz",
+      "sha256": "6deb6b9aafdd76e23633ab7e3a4841a5f593355ceae24751f709ab03d563d00e"
+    },
+    {
+      "rootId": "primary-before-13-move-2-reply-0",
+      "target": 0,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 50000,
+      "elapsedMs": 1363.3251569999993,
+      "file": "primary-before-13-move-2-reply-0-0.json.gz",
+      "sha256": "3c8a35bedfd5f747005f6824d3f235ede5c5b110ef66ae9911d07746b40b776e"
+    },
+    {
+      "rootId": "primary-before-13-move-2-reply-0",
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 50000,
+      "elapsedMs": 1133.8169630000048,
+      "file": "primary-before-13-move-2-reply-0-1.json.gz",
+      "sha256": "a099555205ec2f80d5e0fba4fff79a51d88985d0056e9602b2b24e735729c3bd"
+    },
+    {
+      "rootId": "primary-before-13-move-3-reply-0",
+      "target": 0,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 50000,
+      "elapsedMs": 1514.4036760000017,
+      "file": "primary-before-13-move-3-reply-0-0.json.gz",
+      "sha256": "cca2a9592a2522581f1cbf63890868c5ab0e0d2c99f594d5e7794ebb28826ce2"
+    },
+    {
+      "rootId": "primary-before-13-move-3-reply-0",
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 50000,
+      "elapsedMs": 1444.364254,
+      "file": "primary-before-13-move-3-reply-0-1.json.gz",
+      "sha256": "7f944fb4f5696bda20d30b0aef6795403467dfcf70a64737e94a15a6ac6693c9"
+    },
+    {
+      "rootId": "primary-before-13-move-4-reply-0",
+      "target": 0,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 50000,
+      "elapsedMs": 1400.2467060000054,
+      "file": "primary-before-13-move-4-reply-0-0.json.gz",
+      "sha256": "b7b81a9cc9cae3af1463ea0da650cf7b3a7cc23d105001fe63ec55bffbafcdef"
+    },
+    {
+      "rootId": "primary-before-13-move-4-reply-0",
+      "target": 1,
+      "status": "NODE_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 50000,
+      "elapsedMs": 1418.6575589999993,
+      "file": "primary-before-13-move-4-reply-0-1.json.gz",
+      "sha256": "b9748d7c24c4d462e2afe6f25cbf18d56a7e8fcaebc7915f2010a172050b53d0"
+    }
+  ],
+  "newGames": 0,
+  "formalJobs": 0,
+  "interpretation": "Read-only known-parent synthesis and two exploratory probes. Unknown is not another winner. Not part of formal goals."
+}

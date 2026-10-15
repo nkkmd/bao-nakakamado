@@ -1,0 +1,1443 @@
+{
+  "classification": "READ-ONLY-LEGAL-COVERAGE-NOT-PROOF",
+  "initialMoves": 4,
+  "replies": 14,
+  "rows": [
+    {
+      "move": {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "left"
+      },
+      "state": {
+        "pits": [
+          [
+            [
+              0,
+              0,
+              1,
+              1,
+              7,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              6,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "reserve": [
+          21,
+          22
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          true
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 2,
+        "pending": [
+          0,
+          0
+        ],
+        "takasia": null
+      },
+      "replies": [
+        {
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          "state": {
+            "pits": [
+              [
+                [
+                  0,
+                  0,
+                  1,
+                  0,
+                  7,
+                  0,
+                  2,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              [
+                [
+                  1,
+                  0,
+                  0,
+                  0,
+                  7,
+                  2,
+                  2,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ]
+            ],
+            "reserve": [
+              21,
+              21
+            ],
+            "nyakuaReserve": [
+              0,
+              0
+            ],
+            "houseOwned": [
+              true,
+              true
+            ],
+            "player": 0,
+            "phase": "namua",
+            "winner": null,
+            "reason": "",
+            "turn": 3,
+            "pending": [
+              0,
+              0
+            ],
+            "takasia": null
+          }
+        },
+        {
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          "state": {
+            "pits": [
+              [
+                [
+                  0,
+                  0,
+                  1,
+                  0,
+                  7,
+                  0,
+                  2,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  7,
+                  2,
+                  2,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ]
+            ],
+            "reserve": [
+              21,
+              21
+            ],
+            "nyakuaReserve": [
+              0,
+              0
+            ],
+            "houseOwned": [
+              true,
+              true
+            ],
+            "player": 0,
+            "phase": "namua",
+            "winner": null,
+            "reason": "",
+            "turn": 3,
+            "pending": [
+              0,
+              0
+            ],
+            "takasia": null
+          }
+        },
+        {
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right",
+            "side": "left"
+          },
+          "state": {
+            "pits": [
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  1,
+                  7,
+                  0,
+                  2,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              [
+                [
+                  1,
+                  0,
+                  0,
+                  0,
+                  6,
+                  3,
+                  2,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ]
+            ],
+            "reserve": [
+              21,
+              21
+            ],
+            "nyakuaReserve": [
+              0,
+              0
+            ],
+            "houseOwned": [
+              true,
+              true
+            ],
+            "player": 0,
+            "phase": "namua",
+            "winner": null,
+            "reason": "",
+            "turn": 3,
+            "pending": [
+              0,
+              0
+            ],
+            "takasia": null
+          }
+        },
+        {
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right"
+          },
+          "state": {
+            "pits": [
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  1,
+                  7,
+                  0,
+                  2,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  6,
+                  3,
+                  2,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ]
+            ],
+            "reserve": [
+              21,
+              21
+            ],
+            "nyakuaReserve": [
+              0,
+              0
+            ],
+            "houseOwned": [
+              true,
+              true
+            ],
+            "player": 0,
+            "phase": "namua",
+            "winner": null,
+            "reason": "",
+            "turn": 3,
+            "pending": [
+              0,
+              0
+            ],
+            "takasia": null
+          }
+        }
+      ]
+    },
+    {
+      "move": {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "right"
+      },
+      "state": {
+        "pits": [
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              6,
+              0,
+              3,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              6,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "reserve": [
+          21,
+          22
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          true
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 2,
+        "pending": [
+          0,
+          0
+        ],
+        "takasia": null
+      },
+      "replies": [
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          "state": {
+            "pits": [
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  6,
+                  0,
+                  3,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              ],
+              [
+                [
+                  0,
+                  0,
+                  1,
+                  1,
+                  7,
+                  0,
+                  2,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ]
+            ],
+            "reserve": [
+              21,
+              21
+            ],
+            "nyakuaReserve": [
+              0,
+              0
+            ],
+            "houseOwned": [
+              true,
+              true
+            ],
+            "player": 0,
+            "phase": "namua",
+            "winner": null,
+            "reason": "",
+            "turn": 3,
+            "pending": [
+              0,
+              0
+            ],
+            "takasia": null
+          }
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          "state": {
+            "pits": [
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  6,
+                  0,
+                  3,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              ],
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  6,
+                  0,
+                  3,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              ]
+            ],
+            "reserve": [
+              21,
+              21
+            ],
+            "nyakuaReserve": [
+              0,
+              0
+            ],
+            "houseOwned": [
+              true,
+              true
+            ],
+            "player": 0,
+            "phase": "namua",
+            "winner": null,
+            "reason": "",
+            "turn": 3,
+            "pending": [
+              0,
+              0
+            ],
+            "takasia": null
+          }
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          "state": {
+            "pits": [
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  6,
+                  0,
+                  3,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              ],
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  1,
+                  7,
+                  3,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ]
+            ],
+            "reserve": [
+              21,
+              21
+            ],
+            "nyakuaReserve": [
+              0,
+              0
+            ],
+            "houseOwned": [
+              true,
+              true
+            ],
+            "player": 0,
+            "phase": "namua",
+            "winner": null,
+            "reason": "",
+            "turn": 3,
+            "pending": [
+              0,
+              0
+            ],
+            "takasia": null
+          }
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "right"
+          },
+          "state": {
+            "pits": [
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  6,
+                  0,
+                  3,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              ],
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  6,
+                  2,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  1
+                ]
+              ]
+            ],
+            "reserve": [
+              21,
+              21
+            ],
+            "nyakuaReserve": [
+              0,
+              0
+            ],
+            "houseOwned": [
+              true,
+              true
+            ],
+            "player": 0,
+            "phase": "namua",
+            "winner": null,
+            "reason": "",
+            "turn": 3,
+            "pending": [
+              0,
+              0
+            ],
+            "takasia": null
+          }
+        }
+      ]
+    },
+    {
+      "move": {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 6,
+        "direction": "left"
+      },
+      "state": {
+        "pits": [
+          [
+            [
+              0,
+              0,
+              0,
+              1,
+              7,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              6,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "reserve": [
+          21,
+          22
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          true
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 2,
+        "pending": [
+          0,
+          0
+        ],
+        "takasia": null
+      },
+      "replies": [
+        {
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          "state": {
+            "pits": [
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  7,
+                  3,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              [
+                [
+                  1,
+                  0,
+                  0,
+                  0,
+                  7,
+                  2,
+                  2,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ]
+            ],
+            "reserve": [
+              21,
+              21
+            ],
+            "nyakuaReserve": [
+              0,
+              0
+            ],
+            "houseOwned": [
+              true,
+              true
+            ],
+            "player": 0,
+            "phase": "namua",
+            "winner": null,
+            "reason": "",
+            "turn": 3,
+            "pending": [
+              0,
+              0
+            ],
+            "takasia": null
+          }
+        },
+        {
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          "state": {
+            "pits": [
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  7,
+                  3,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  7,
+                  2,
+                  2,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ]
+            ],
+            "reserve": [
+              21,
+              21
+            ],
+            "nyakuaReserve": [
+              0,
+              0
+            ],
+            "houseOwned": [
+              true,
+              true
+            ],
+            "player": 0,
+            "phase": "namua",
+            "winner": null,
+            "reason": "",
+            "turn": 3,
+            "pending": [
+              0,
+              0
+            ],
+            "takasia": null
+          }
+        }
+      ]
+    },
+    {
+      "move": {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 6,
+        "direction": "right"
+      },
+      "state": {
+        "pits": [
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              6,
+              2,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              0,
+              0,
+              6,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "reserve": [
+          21,
+          22
+        ],
+        "nyakuaReserve": [
+          0,
+          0
+        ],
+        "houseOwned": [
+          true,
+          true
+        ],
+        "player": 1,
+        "phase": "namua",
+        "winner": null,
+        "reason": "",
+        "turn": 2,
+        "pending": [
+          0,
+          0
+        ],
+        "takasia": null
+      },
+      "replies": [
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          "state": {
+            "pits": [
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  6,
+                  2,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  1
+                ]
+              ],
+              [
+                [
+                  0,
+                  0,
+                  1,
+                  1,
+                  7,
+                  0,
+                  2,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ]
+            ],
+            "reserve": [
+              21,
+              21
+            ],
+            "nyakuaReserve": [
+              0,
+              0
+            ],
+            "houseOwned": [
+              true,
+              true
+            ],
+            "player": 0,
+            "phase": "namua",
+            "winner": null,
+            "reason": "",
+            "turn": 3,
+            "pending": [
+              0,
+              0
+            ],
+            "takasia": null
+          }
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          "state": {
+            "pits": [
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  6,
+                  2,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  1
+                ]
+              ],
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  6,
+                  0,
+                  3,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ]
+              ]
+            ],
+            "reserve": [
+              21,
+              21
+            ],
+            "nyakuaReserve": [
+              0,
+              0
+            ],
+            "houseOwned": [
+              true,
+              true
+            ],
+            "player": 0,
+            "phase": "namua",
+            "winner": null,
+            "reason": "",
+            "turn": 3,
+            "pending": [
+              0,
+              0
+            ],
+            "takasia": null
+          }
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          "state": {
+            "pits": [
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  6,
+                  2,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  1
+                ]
+              ],
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  1,
+                  7,
+                  3,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ]
+            ],
+            "reserve": [
+              21,
+              21
+            ],
+            "nyakuaReserve": [
+              0,
+              0
+            ],
+            "houseOwned": [
+              true,
+              true
+            ],
+            "player": 0,
+            "phase": "namua",
+            "winner": null,
+            "reason": "",
+            "turn": 3,
+            "pending": [
+              0,
+              0
+            ],
+            "takasia": null
+          }
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "right"
+          },
+          "state": {
+            "pits": [
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  6,
+                  2,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  1
+                ]
+              ],
+              [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  6,
+                  2,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  1
+                ]
+              ]
+            ],
+            "reserve": [
+              21,
+              21
+            ],
+            "nyakuaReserve": [
+              0,
+              0
+            ],
+            "houseOwned": [
+              true,
+              true
+            ],
+            "player": 0,
+            "phase": "namua",
+            "winner": null,
+            "reason": "",
+            "turn": 3,
+            "pending": [
+              0,
+              0
+            ],
+            "takasia": null
+          }
+        }
+      ]
+    }
+  ]
+}
