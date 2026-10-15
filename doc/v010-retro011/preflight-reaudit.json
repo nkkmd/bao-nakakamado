@@ -1,0 +1,186 @@
+{
+  "mainAtStart": "f4da2a3d5c0c5f28250294da708cba97e570af8f",
+  "date": "2026-10-15",
+  "timezone": "Asia/Tokyo",
+  "status": "ALL-8-AUDITS-PASSED",
+  "newGames": 0,
+  "newProofSearches": 0,
+  "audits": [
+    {
+      "command": "python3 tools/v010-research-integration/audit.py",
+      "exitCode": 0,
+      "logSha256": "f10a9fb76623cf207072a2a5bde589633b7d93f715bbcbd94172d998d2a1afec",
+      "result": {
+        "status": "AUDITED-COMPLETE",
+        "formal": {
+          "originalZips": 161,
+          "verifiedPairs": 5120,
+          "source": "tools/v010-balance/formal.cjs",
+          "summaryBytesMatch": true,
+          "status": "AUDITED-COMPLETE",
+          "games": 10240,
+          "proofJobs": 0
+        },
+        "studies": [
+          {
+            "study": "001",
+            "verifiedOriginalFiles": 976,
+            "source": "tools/v010-followup/study.cjs",
+            "summaryBytesMatch": true,
+            "status": "AUDITED-COMPLETE",
+            "games": 420,
+            "proofJobs": 26
+          },
+          {
+            "study": "002",
+            "verifiedOriginalFiles": 863,
+            "source": "tools/v010-certainty/study.cjs",
+            "summaryBytesMatch": true,
+            "status": "AUDITED-COMPLETE",
+            "games": 0,
+            "proofJobs": 38
+          },
+          {
+            "study": "003",
+            "verifiedOriginalFiles": 771,
+            "source": "tools/v010-gc/study.cjs",
+            "summaryBytesMatch": true,
+            "status": "AUDITED-COMPLETE",
+            "games": 0,
+            "proofJobs": 34
+          }
+        ],
+        "proofCheckpointJobs": 26,
+        "productionBytesUnchanged": true,
+        "newGames": 0,
+        "newProofSearches": 0
+      }
+    },
+    {
+      "command": "python3 tools/v010-branch/reaudit.py doc/v010-branch/completed b1e9bdbcab21760c1bd1017c685e0842d02bb85c",
+      "exitCode": 0,
+      "logSha256": "06cceac6ef2a3c5131d4d25e3ea3d805876fa2f92703f814a82fce64c488f9ea",
+      "result": {
+        "status": "AUDITED-COMPLETE",
+        "sourceCommit": "d574fbac091de4d6c43f92581720952589764332",
+        "resultsCommit": "b1e9bdbcab21760c1bd1017c685e0842d02bb85c",
+        "runId": 38235313813,
+        "digest": "bc6ba381019b403151692b661f0650e8ddbd497db01e4d2faa5b665103bf2b68",
+        "verifiedOriginalFiles": 1167,
+        "summaryBytesMatch": true,
+        "regeneratedCertificateBytesMatch": true,
+        "proofJobs": 54,
+        "newGames": 0,
+        "newProofSearches": 0
+      }
+    },
+    {
+      "command": "python3 tools/v010-reply/reaudit.py doc/v010-reply/completed 428cf47b3d27a18e82fef28fa66c66e6cad1c628 975e1a8188dbe43fda1c39b3b97e8858db8a97e3 38265400792",
+      "exitCode": 0,
+      "logSha256": "9ddd37a99393c9ad3ac40acefa3ab82b9bcf0a5438ca064c44ca44c2348c80ea",
+      "result": {
+        "status": "AUDITED-COMPLETE",
+        "sourceCommit": "975e1a8188dbe43fda1c39b3b97e8858db8a97e3",
+        "resultsCommit": "428cf47b3d27a18e82fef28fa66c66e6cad1c628",
+        "runId": 38265400792,
+        "digest": "76b15cf8e75eec82db9b4b4489d1aeae418a675e0bc107f4407aa08c444c2686",
+        "verifiedOriginalFiles": 938,
+        "summaryBytesMatch": true,
+        "regeneratedCertificateBytesMatch": true,
+        "proofJobs": 52,
+        "newGames": 0,
+        "newProofSearches": 0
+      }
+    },
+    {
+      "command": "python3 tools/v010-deepen/reaudit.py doc/v010-deepen/completed 02335fc03e9ee2ef226c8b226c03d3f8e919456f d4163c3c171117b1fce7dd30b39faad733605418 38271005778",
+      "exitCode": 0,
+      "logSha256": "f77d66722bc6adad0ac0a351b82f931c3acbc03e0b36a16971ef58b77b5c2b2d",
+      "result": {
+        "status": "AUDITED-COMPLETE",
+        "sourceCommit": "d4163c3c171117b1fce7dd30b39faad733605418",
+        "resultsCommit": "02335fc03e9ee2ef226c8b226c03d3f8e919456f",
+        "runId": 38271005778,
+        "digest": "35fcda50aaf99029a561657dd9df8ce1eab8ce09196ea02f88f4f8606a7c8022",
+        "verifiedOriginalFiles": 698,
+        "summaryBytesMatch": true,
+        "regeneratedCertificateBytesMatch": true,
+        "proofJobs": 34,
+        "newGames": 0,
+        "newProofSearches": 0
+      }
+    },
+    {
+      "command": "python3 tools/v010-pn007/reaudit.py doc/v010-pn007/completed 5f44f34a3a279b232d3045b5b3edaad48096ac0d ce52d57f4a25d40664f1e12de8559691577af1c0 38313259149",
+      "exitCode": 0,
+      "logSha256": "5b87d88cc6c042dd6a2ec50d5f24cc69ad80603fe4ff3b4132fc9a1c6691812f",
+      "result": {
+        "status": "AUDITED-COMPLETE",
+        "sourceCommit": "ce52d57f4a25d40664f1e12de8559691577af1c0",
+        "resultsCommit": "5f44f34a3a279b232d3045b5b3edaad48096ac0d",
+        "runId": 38313259149,
+        "digest": "0548b5b55f7d289d77e6206f51b7ae760c7bffa7210fdb69cd5bd9cff58842ee",
+        "verifiedOriginalFiles": 268,
+        "summaryBytesMatch": true,
+        "regeneratedCertificateBytesMatch": true,
+        "proofJobs": 34,
+        "newGames": 0,
+        "newProofSearches": 0
+      }
+    },
+    {
+      "command": "python3 tools/v010-retro008/reaudit.py doc/v010-retro008/completed 6de6bcdbf5a315f33f19114608d78700b341992c c19aca2d13e7a2306096ef151f418fcc6ba6e2d8 38415683995",
+      "exitCode": 0,
+      "logSha256": "671d018f6897089bf60045601346db6d6afc37a3f47fa75fc94e3ba6f128c814",
+      "result": {
+        "status": "AUDITED-COMPLETE",
+        "sourceCommit": "c19aca2d13e7a2306096ef151f418fcc6ba6e2d8",
+        "resultsCommit": "6de6bcdbf5a315f33f19114608d78700b341992c",
+        "runId": 38415683995,
+        "digest": "5b7717308192d1d330b5240bfb5f72b0bce02a5b0f1a6d3d0337896f57c61135",
+        "verifiedOriginalFiles": 256,
+        "summaryBytesMatch": true,
+        "regeneratedCertificateBytesMatch": true,
+        "proofJobs": 32,
+        "newGames": 0,
+        "newProofSearches": 0
+      }
+    },
+    {
+      "command": "python3 tools/v010-deepen009/reaudit.py doc/v010-deepen009/completed 0b220daec7762254eb38a72019dc44f62c9f5a62 6f29c2bce728cba617ee2b72aa1733468891e28c 38423055308",
+      "exitCode": 0,
+      "logSha256": "bee005c80b83775c6a553e1b076b763eedc95480a754f24f58ad534a741b9ce3",
+      "result": {
+        "status": "AUDITED-COMPLETE",
+        "sourceCommit": "6f29c2bce728cba617ee2b72aa1733468891e28c",
+        "resultsCommit": "0b220daec7762254eb38a72019dc44f62c9f5a62",
+        "runId": 38423055308,
+        "digest": "8cd2fcde75f98c4872e5a54e9133b408f6bbd90c62be1b9f8e5aee94787887b7",
+        "verifiedOriginalFiles": 66,
+        "summaryBytesMatch": true,
+        "regeneratedCertificateBytesMatch": true,
+        "proofJobs": 8,
+        "newGames": 0,
+        "newProofSearches": 0
+      }
+    },
+    {
+      "command": "python3 tools/v010-retro010/reaudit.py doc/v010-retro010/completed 536a62cb876760afcda2720b37617f1340817691 2ac3e0da431f8e88a7b7f7317aa53d29c108a12c 38667352032",
+      "exitCode": 0,
+      "logSha256": "50148b112199150be76a41ec6c5189731d8f0045c07f893a95530dec58f92a20",
+      "result": {
+        "status": "AUDITED-COMPLETE",
+        "sourceCommit": "2ac3e0da431f8e88a7b7f7317aa53d29c108a12c",
+        "resultsCommit": "536a62cb876760afcda2720b37617f1340817691",
+        "runId": 38667352032,
+        "digest": "f28b1a441dc83eb6b15b7a28d2db081be945368bcc5e7e75e3c6e2d51b3eea0e",
+        "verifiedOriginalFiles": 19,
+        "summaryBytesMatch": true,
+        "regeneratedCertificateBytesMatch": true,
+        "proofJobs": 2,
+        "newGames": 0,
+        "newProofSearches": 0
+      }
+    }
+  ]
+}

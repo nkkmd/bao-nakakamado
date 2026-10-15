@@ -1,0 +1,98 @@
+name: v0.10.0 complete 13th-move retrograde study 011
+on:
+  push:
+    branches: ['research/v010-retro-011-20261015']
+permissions:
+  contents: read
+  actions: read
+jobs:
+  preflight:
+    if: startsWith(github.event.head_commit.message, 'Start v0.10.0 retro study 011') && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: python3 tools/v010-research-integration/audit.py
+      - run: python3 tools/v010-branch/reaudit.py doc/v010-branch/completed b1e9bdbcab21760c1bd1017c685e0842d02bb85c
+      - run: python3 tools/v010-reply/reaudit.py doc/v010-reply/completed 428cf47b3d27a18e82fef28fa66c66e6cad1c628 975e1a8188dbe43fda1c39b3b97e8858db8a97e3 38265400792
+      - run: python3 tools/v010-deepen/reaudit.py doc/v010-deepen/completed 02335fc03e9ee2ef226c8b226c03d3f8e919456f d4163c3c171117b1fce7dd30b39faad733605418 38271005778
+      - run: python3 tools/v010-pn007/reaudit.py doc/v010-pn007/completed 5f44f34a3a279b232d3045b5b3edaad48096ac0d ce52d57f4a25d40664f1e12de8559691577af1c0 38313259149
+      - run: python3 tools/v010-retro008/reaudit.py doc/v010-retro008/completed 6de6bcdbf5a315f33f19114608d78700b341992c c19aca2d13e7a2306096ef151f418fcc6ba6e2d8 38415683995
+      - run: python3 tools/v010-deepen009/reaudit.py doc/v010-deepen009/completed 0b220daec7762254eb38a72019dc44f62c9f5a62 6f29c2bce728cba617ee2b72aa1733468891e28c 38423055308
+      - run: python3 tools/v010-retro010/reaudit.py doc/v010-retro010/completed 536a62cb876760afcda2720b37617f1340817691 2ac3e0da431f8e88a7b7f7317aa53d29c108a12c 38667352032
+      - run: node tools/v010-retro011/verify-pilot.cjs
+      - run: node --expose-gc --test tools/v010-retro011/check.test.cjs
+      - run: node tools/v010-retro011/study.cjs manifest
+      - run: test "$(git ls-remote origin refs/heads/results/v010-retro-study-011 | cut -f1)" = "$GITHUB_SHA"
+  targets:
+    needs: preflight
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        root: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+        target: [0, 1]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Prove one complete-response root with retained 009 certificates
+        run: node --expose-gc --max-old-space-size=4096 tools/v010-retro011/study.cjs job "$RUNNER_TEMP/proofs" "${{ matrix.root }}" "${{ matrix.target }}"
+      - name: Reuse complete bytes with zero new exploration
+        run: node tools/v010-retro011/study.cjs job "$RUNNER_TEMP/proofs" "${{ matrix.root }}" "${{ matrix.target }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v010-retro011-${{ matrix.root }}-${{ matrix.target }}
+          path: ${{ runner.temp }}/proofs/
+          retention-days: 90
+  aggregate:
+    needs: targets
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: v010-retro011-*
+          merge-multiple: true
+          path: ${{ runner.temp }}/proofs
+      - name: Audit all targets and both levels of quantified composition
+        run: node --max-old-space-size=4096 tools/v010-retro011/study.cjs aggregate "$RUNNER_TEMP/proofs"
+      - name: Preserve original bytes on precreated source branch
+        env:
+          STUDY_SOURCE_SHA: ${{ github.sha }}
+          STUDY_RUN_ID: ${{ github.run_id }}
+        run: |
+          test "$(git ls-remote origin refs/heads/results/v010-retro-study-011 | cut -f1)" = "$GITHUB_SHA"
+          python3 tools/v010-followup/archive.py "$RUNNER_TEMP/proofs" doc/v010-retro011/completed
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git switch -c results/v010-retro-study-011
+          git add doc/v010-retro011/completed
+          git commit -m 'Preserve study 011 retrograde proofs and original records'
+          git push origin HEAD:refs/heads/results/v010-retro-study-011
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v010-retro011-summary
+          path: |
+            ${{ runner.temp }}/proofs/summary.json
+            doc/v010-retro011/completed/
+          retention-days: 90
