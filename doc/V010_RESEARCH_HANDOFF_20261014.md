@@ -1,5 +1,7 @@
 # v0.10.0先後差・必勝調査：調査009完了時点の引き継ぎ
 
+**調査010完了後の最新状況・全8監査・再開依頼文は[2026年10月15日の引き継ぎ](V010_RESEARCH_HANDOFF_20261015.md)を参照してください。以下は009完了時点と010起動時点の記録として保持します。**
+
 整理日：2026年10月14日（Asia/Tokyo）。対象は `nkkmd/bao-nakakamado` の現行v0.10.0、標準初期配置（前列6・2・2、普通ハンド22個ずつ）。完了研究HEADは `3a4d2292524a805402fdb74263251a77114fc825`。統合開始時のmainは `024ef96712a0851daaa23c6a34d7b0e80004eaa5`。関連文書の最終整合修正と調査004〜009の統合対象は[PR #46](https://github.com/nkkmd/bao-nakakamado/pull/46)。各調査のPR #41〜45も履歴を保持して順にmainへ統合する。実際の統合日時・main SHA・CI成否は各PRとmainのActionsを基準にする。
 
 [README](../README.md)／[ルール版と試験の索引](RULE_VERSIONS_AND_TESTS.md)／[管理ルール](../AGENTS.md)／[旧引き継ぎと当時の判断](V010_RESEARCH_HANDOFF_20261012.md)
