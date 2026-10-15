@@ -1,0 +1,9 @@
+'use strict';
+// MIT. Read only both equal-budget exploratory groups, never run a new goal.
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const C=require('../v010-balance/core.cjs'),I=require('./inputs.cjs'),V=require('../v010-balance/diagnostics/proof.cjs'),S4=require('../v010-branch/study.cjs');
+function verify(){const p=JSON.parse(fs.readFileSync(path.join(C.root,'doc/v010-deepen012/pilot.json')));assert.equal(p.formalJobs,0);assert.equal(p.newGames,0);assert.equal(p.inputArchiveSha256,I.SHA);for(const [file,sha]of Object.entries(p.sources))assert.equal(C.hash(fs.readFileSync(path.join(C.root,file))),sha);
+ const roots=new Map([...I.roots(),...I.initialRoots()].map(r=>[r.id,r]));assert.equal(p.rows.length,40);assert.equal(new Set(p.rows.map(r=>r.rootId+'-'+r.target)).size,40);assert.equal(p.rows.filter(r=>r.group==='initial').length,28);assert.equal(p.rows.filter(r=>r.group==='local-13').length,12);
+ for(const row of p.rows){const file=path.join(C.root,'doc/v010-deepen012',row.file);assert.equal(C.hash(fs.readFileSync(file)),row.sha256);const r=S4.read(file),x=r.result;assert.equal(r.classification,'EXPLORATORY-NOT-FORMAL');assert.equal(r.group,row.group);assert.equal(r.target,row.target);assert.equal(x.target,row.target);assert.deepEqual(r.state,roots.get(row.rootId).state);assert.ok(x.visits<=50000);assert.equal(x.visits,row.visits);assert.equal(x.status,row.status);assert.equal(x.winner,row.winner);if(x.certificate){V.verify(x.certificate);assert.deepEqual(x.certificate.start,r.state);assert.equal(x.certificate.target,x.winner);assert.equal(x.certificate.depth,row.depth);}else assert.equal(x.winner,null);}
+ return {status:'VERIFIED-PILOT-BYTES',files:40,initialGoals:28,localGoals:12,newSearches:0};}
+if(require.main===module)console.log(JSON.stringify(verify()));module.exports={verify};
