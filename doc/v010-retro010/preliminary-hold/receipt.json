@@ -1,0 +1,14 @@
+{
+  "classification": "EXCLUDED-HOLD-NOT-FORMAL",
+  "reason": "Input validation was edited while the exploratory process was running; its end-of-run source fingerprint differs from the source loaded at start. These two probes are excluded. A separate pilot snapshots source hashes before work.",
+  "exploratoryJobs": 2,
+  "formalJobs": 0,
+  "newGames": 0,
+  "files": {
+    "input-at-receipt.cjs.txt": "630a2784050894ece167eb162ab72a73b7f15aa83a5be505a2f6e8fe8e5f7287",
+    "input-at-start.cjs.txt": "332d7205493ca8900edd60f16552cbf8f4c9b4743f02fa776c378e0864c3b846",
+    "pilot.json": "3d33222342e292f6093ea24f1eda45987c5cb46860ba85b6dbdd2d9855cbfa67",
+    "primary-before-15-move-0-reply-0-0.json.gz": "12daa211a2b62426dbd1bb6c124af5e547431d5874c2d1bd2c1a62743f4dc1fb",
+    "primary-before-15-move-0-reply-0-1.json.gz": "da778cf86f9796486f50a1fcf01c184f7f4e0acf9140891be48b370d0423f468"
+  }
+}

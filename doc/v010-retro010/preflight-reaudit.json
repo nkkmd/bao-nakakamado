@@ -1,0 +1,132 @@
+{
+  "status": "ALL-SEVEN-AUDITS-PASSED",
+  "baselineMain": "67771ddee141242bedd6a5cdddcc69dece4f8917",
+  "recordedAtJST": "2026-10-15T10:41:44.834906+09:00",
+  "newGames": 0,
+  "newProofSearches": 0,
+  "audits": [
+    {
+      "status": "AUDITED-COMPLETE",
+      "formal": {
+        "originalZips": 161,
+        "verifiedPairs": 5120,
+        "source": "tools/v010-balance/formal.cjs",
+        "summaryBytesMatch": true,
+        "status": "AUDITED-COMPLETE",
+        "games": 10240,
+        "proofJobs": 0
+      },
+      "studies": [
+        {
+          "study": "001",
+          "verifiedOriginalFiles": 976,
+          "source": "tools/v010-followup/study.cjs",
+          "summaryBytesMatch": true,
+          "status": "AUDITED-COMPLETE",
+          "games": 420,
+          "proofJobs": 26
+        },
+        {
+          "study": "002",
+          "verifiedOriginalFiles": 863,
+          "source": "tools/v010-certainty/study.cjs",
+          "summaryBytesMatch": true,
+          "status": "AUDITED-COMPLETE",
+          "games": 0,
+          "proofJobs": 38
+        },
+        {
+          "study": "003",
+          "verifiedOriginalFiles": 771,
+          "source": "tools/v010-gc/study.cjs",
+          "summaryBytesMatch": true,
+          "status": "AUDITED-COMPLETE",
+          "games": 0,
+          "proofJobs": 34
+        }
+      ],
+      "proofCheckpointJobs": 26,
+      "productionBytesUnchanged": true,
+      "newGames": 0,
+      "newProofSearches": 0
+    },
+    {
+      "status": "AUDITED-COMPLETE",
+      "sourceCommit": "d574fbac091de4d6c43f92581720952589764332",
+      "resultsCommit": "b1e9bdbcab21760c1bd1017c685e0842d02bb85c",
+      "runId": 38235313813,
+      "digest": "bc6ba381019b403151692b661f0650e8ddbd497db01e4d2faa5b665103bf2b68",
+      "verifiedOriginalFiles": 1167,
+      "summaryBytesMatch": true,
+      "regeneratedCertificateBytesMatch": true,
+      "proofJobs": 54,
+      "newGames": 0,
+      "newProofSearches": 0
+    },
+    {
+      "status": "AUDITED-COMPLETE",
+      "sourceCommit": "975e1a8188dbe43fda1c39b3b97e8858db8a97e3",
+      "resultsCommit": "428cf47b3d27a18e82fef28fa66c66e6cad1c628",
+      "runId": 38265400792,
+      "digest": "76b15cf8e75eec82db9b4b4489d1aeae418a675e0bc107f4407aa08c444c2686",
+      "verifiedOriginalFiles": 938,
+      "summaryBytesMatch": true,
+      "regeneratedCertificateBytesMatch": true,
+      "proofJobs": 52,
+      "newGames": 0,
+      "newProofSearches": 0
+    },
+    {
+      "status": "AUDITED-COMPLETE",
+      "sourceCommit": "d4163c3c171117b1fce7dd30b39faad733605418",
+      "resultsCommit": "02335fc03e9ee2ef226c8b226c03d3f8e919456f",
+      "runId": 38271005778,
+      "digest": "35fcda50aaf99029a561657dd9df8ce1eab8ce09196ea02f88f4f8606a7c8022",
+      "verifiedOriginalFiles": 698,
+      "summaryBytesMatch": true,
+      "regeneratedCertificateBytesMatch": true,
+      "proofJobs": 34,
+      "newGames": 0,
+      "newProofSearches": 0
+    },
+    {
+      "status": "AUDITED-COMPLETE",
+      "sourceCommit": "ce52d57f4a25d40664f1e12de8559691577af1c0",
+      "resultsCommit": "5f44f34a3a279b232d3045b5b3edaad48096ac0d",
+      "runId": 38313259149,
+      "digest": "0548b5b55f7d289d77e6206f51b7ae760c7bffa7210fdb69cd5bd9cff58842ee",
+      "verifiedOriginalFiles": 268,
+      "summaryBytesMatch": true,
+      "regeneratedCertificateBytesMatch": true,
+      "proofJobs": 34,
+      "newGames": 0,
+      "newProofSearches": 0
+    },
+    {
+      "status": "AUDITED-COMPLETE",
+      "sourceCommit": "c19aca2d13e7a2306096ef151f418fcc6ba6e2d8",
+      "resultsCommit": "6de6bcdbf5a315f33f19114608d78700b341992c",
+      "runId": 38415683995,
+      "digest": "5b7717308192d1d330b5240bfb5f72b0bce02a5b0f1a6d3d0337896f57c61135",
+      "verifiedOriginalFiles": 256,
+      "summaryBytesMatch": true,
+      "regeneratedCertificateBytesMatch": true,
+      "proofJobs": 32,
+      "newGames": 0,
+      "newProofSearches": 0
+    },
+    {
+      "status": "AUDITED-COMPLETE",
+      "sourceCommit": "6f29c2bce728cba617ee2b72aa1733468891e28c",
+      "resultsCommit": "0b220daec7762254eb38a72019dc44f62c9f5a62",
+      "runId": 38423055308,
+      "digest": "8cd2fcde75f98c4872e5a54e9133b408f6bbd90c62be1b9f8e5aee94787887b7",
+      "verifiedOriginalFiles": 66,
+      "summaryBytesMatch": true,
+      "regeneratedCertificateBytesMatch": true,
+      "proofJobs": 8,
+      "newGames": 0,
+      "newProofSearches": 0
+    }
+  ]
+}
