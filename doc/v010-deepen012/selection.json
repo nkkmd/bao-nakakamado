@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-15",
+  "timezone": "Asia/Tokyo",
+  "classification": "PILOT-COMPARISON-NOT-FORMAL",
+  "groups": {
+    "local-13": {
+      "goals": 12,
+      "counts": {
+        "NODE_BUDGET": 12
+      },
+      "visits": 600000,
+      "elapsedMs": 21355.731410999957,
+      "proofs": []
+    },
+    "initial": {
+      "goals": 28,
+      "counts": {
+        "NODE_BUDGET": 28
+      },
+      "visits": 1400000,
+      "elapsedMs": 40280.018130999946,
+      "proofs": []
+    }
+  },
+  "selected": "two-13th-move-five-pit-parents",
+  "selectedRoots": 6,
+  "formalGoals": 12,
+  "deferredRoots": 15,
+  "reason": "Both equal-budget pilot groups yielded no new normal-win certificate. No empirical solvability ranking is established. Choose the two parents with fewest remaining responses to concentrate a larger fresh budget and preserve the known first-player response certificate; all other unresolved branches remain explicit. Initial 4-move / 14-reply proof conditions remain unmet.",
+  "newFormalGames": 0
+}
