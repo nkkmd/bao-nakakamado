@@ -1,0 +1,5 @@
+'use strict';
+// MIT. Read-only normal-engine inventory, no proof search.
+const fs=require('node:fs'),C=require('../v010-balance/core.cjs'),assert=require('node:assert/strict'),m=require('../v010-deepen012/manifest.json');
+const rows=m.roots.map(r=>{const moves=C.S.moveVariants({board:r.state,history:[]}),one=moves.map((move,i)=>{const state=C.S.apply({board:r.state,history:[]},move).board;assert.deepEqual(state,C.Q.applyMove(r.state,move).state);return {id:r.id+'-move-'+i,move,state};}),two=one.flatMap(c=>C.S.moveVariants({board:c.state,history:[]}).map(move=>C.S.apply({board:c.state,history:[]},move).board));return {id:r.id,parentMove:r.parentMove,onePly:one.length,twoPly:two.length,oneUnique:new Set(one.map(c=>C.Q.stateKey(c.state))).size,twoUnique:new Set(two.map(s=>C.Q.stateKey(s))).size,one};});
+fs.writeFileSync(process.argv[2],JSON.stringify({classification:'READ-ONLY-LEGAL-PARTITION-NOT-PROOF',sourceManifestSha256:C.hash(fs.readFileSync('tools/v010-deepen012/manifest.json')),rows,newProofSearches:0},null,2)+'\n',{flag:'wx'});

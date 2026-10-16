@@ -1,0 +1,12 @@
+'use strict';
+// MIT. Verify all 012 records; partition every legal move of the selected roots.
+const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process'),assert=require('node:assert/strict');
+const C=require('../v010-balance/core.cjs'),V=require('../v010-balance/diagnostics/proof.cjs'),S12=require('../v010-deepen012/study.cjs'),I12=require('../v010-deepen012/inputs.cjs');
+const FILE='doc/v010-deepen012/completed/original-records-001.zip',SHA='a1dd24245809456ee3b72de1c521edd73e5e08fc1af6f9bea49b631f5a8f6b64';let data,children;
+function load(){if(data)return data;const file=path.join(C.root,FILE);assert.equal(C.hash(fs.readFileSync(file)),SHA);const d=JSON.parse(cp.execFileSync('python3',['-c','import zipfile,gzip,json,sys;z=zipfile.ZipFile(sys.argv[1]);print(json.dumps({"rows":[json.loads(gzip.decompress(z.read(n))) for n in z.namelist() if n.startswith("proof-") and n.endswith(".json.gz")],"composed":[json.loads(gzip.decompress(z.read(n))) for n in z.namelist() if n.endswith("-certificate.json.gz")]}))',file],{maxBuffer:128*1024*1024}));const m=S12.manifest();assert.equal(d.rows.length,12);assert.equal(new Set(d.rows.map(r=>r.index+'-'+r.target)).size,12);for(const r of d.rows){S12.audit(r,r.index,r.target,m);assert.equal(r.result.certificate,null);}assert.equal(d.composed.length,2);for(const c of d.composed)V.verify(c);assert.deepEqual(d.composed.map(c=>c.depth).sort((a,b)=>a-b),[51,53]);return data=d;}
+function prepare(){load();return I12.prepare();}
+const whole=()=>I12.whole(),parents=()=>I12.parents(),allReplies=()=>I12.allReplies(),pinnedCertificates=()=>I12.pinnedCertificates(),pinnedReplies=()=>I12.pinnedReplies(),knownParents=()=>I12.knownParents();
+function splitParents(){return I12.roots().filter(r=>r.parentMove.direction==='right');}
+function roots(){if(children)return children;return children=splitParents().flatMap(r=>C.S.moveVariants({board:r.state,history:[]}).map((move,i)=>{const state=C.S.apply({board:r.state,history:[]},move).board;assert.deepEqual(state,C.Q.applyMove(r.state,move).state);return {...r,id:r.id+'-move-'+i,splitRootId:r.id,previousMove:r.move,move,state,path:[...r.path,move],scope:'after-all-legal-15th-moves'};}));}
+function heldRoots(){const chosen=new Set(splitParents().map(r=>r.id));return I12.unresolved().filter(r=>!chosen.has(r.id));}
+module.exports={FILE,SHA,load,prepare,whole,parents,allReplies,pinnedCertificates,pinnedReplies,knownParents,splitParents,roots,heldRoots};
