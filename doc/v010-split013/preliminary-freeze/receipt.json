@@ -1,0 +1,8 @@
+{
+  "classification": "EXCLUDED-PREPUBLICATION-CONFIG-CHANGE",
+  "sha256": "545e42b2a0b8bf6af07251f044ac90b357950559b1461b9bbe51bb6295142d57",
+  "formalJobs": 0,
+  "reason": "Generator started before Actions timeout allocation changed; runtime metadata600 differs from final allocation830. Old candidate retained, excluded from formal source.",
+  "sourceCheckpoint": "9af934e2d92fd4b741440164749a57babee45d4f",
+  "terminationNote": "The old process was allowed to finish; a watcher preserved and excluded its 600-minute-metadata candidate before final generation."
+}

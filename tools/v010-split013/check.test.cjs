@@ -22,3 +22,9 @@ test('16 one-visit development goals preserve incomplete split roots, exact reus
  const file=path.join(out,'proof-0-0.json.gz'),bytes=fs.readFileSync(file),row=S4.read(file);row.inputArchiveSha256='bad';assert.throws(()=>S.audit(row,0,0,m));fs.unlinkSync(file);assert.throws(()=>S.job(out,0,0,m),/HOLD/);fs.writeFileSync(file,bytes);
  }finally{fs.rmSync(out,{recursive:true,force:true});}
 });
+test('positive three-ply child cannot turn one opponent branch into a root win',()=>{
+ const prior=require('../v010-deepen012/manifest.json'),selected=prior.roots.filter(r=>r.parentMove.direction==='right');
+ for(const r of selected)for(const target of [0,1]){const cs=C.S.moveVariants({board:r.state,history:[]}).map(move=>PN.prove(C.S.apply({board:r.state,history:[]},move).board,target,{maxDepth:3,maxNodes:1000000,wallMs:30000}).certificate),composed=A.compose(r.state,cs);assert.equal(composed?.target===target,normal(r.state,target,4));if(composed)V.verify(composed);}
+ const r=selected[0],cs=C.S.moveVariants({board:r.state,history:[]}).map(move=>PN.prove(C.S.apply({board:r.state,history:[]},move).board,1,{maxDepth:3,maxNodes:1000000,wallMs:30000}).certificate);assert.ok(cs.some(Boolean));assert.ok(cs.some(c=>!c));assert.equal(A.compose(r.state,cs),null);
+ const cert=cs.find(Boolean);V.verify(cert);assert.equal(cert.depth,3);assert.equal(cert.start.player,1);const children=C.S.moveVariants({board:cert.start,history:[]}).map(move=>PN.prove(C.S.apply({board:cert.start,history:[]},move).board,1,{maxDepth:2,maxNodes:1000000,wallMs:30000}).certificate),win=A.compose(cert.start,children);assert.ok(win);assert.equal(win.target,1);V.verify(win);
+});
