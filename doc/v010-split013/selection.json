@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-16",
+  "timezone": "Asia/Tokyo",
+  "classification": "EXPLORATORY-METHOD-COMPARISON-NOT-FORMAL",
+  "groups": {
+    "direct": {
+      "goals": 6,
+      "counts": {
+        "WALL_BUDGET": 6
+      },
+      "visits": 214315,
+      "elapsedMs": 32474.26182799996,
+      "certificates": 0
+    },
+    "split": {
+      "goals": 16,
+      "counts": {
+        "UNKNOWN": 1,
+        "PROVED": 1,
+        "WALL_BUDGET": 14
+      },
+      "visits": 301509,
+      "elapsedMs": 26290.03690599982,
+      "certificates": 1
+    }
+  },
+  "compositions": [
+    {
+      "id": "primary-before-13-move-3-reply-0",
+      "winner": null,
+      "depth": null
+    },
+    {
+      "id": "primary-before-13-move-3-reply-1",
+      "winner": null,
+      "depth": null
+    },
+    {
+      "id": "primary-before-13-move-3-reply-2",
+      "winner": null,
+      "depth": null
+    }
+  ],
+  "selected": "complete-one-ply-partition-of-five-right-parent",
+  "formalChildRoots": 8,
+  "formalGoals": 16,
+  "deferredOriginalRoots": 18,
+  "reason": "Budget-matched pilot is not evidence of speedup or global solvability. Choose the smallest complete one-ply partition (2+2+4 children) to test whether separate bounded tables resolve original roots while preserving all quantifiers. Pilot certificates are excluded from formal input book and totals.",
+  "timingNote": "Per-goal wallMs values are matched requested stop deadlines, not hard elapsed ceilings; actual direct elapsed 32474.26182799996ms exceeds the 30000ms sum. Stop-check/transition/cleanup/scheduling overhead is retained. No timing speedup is claimed."
+}

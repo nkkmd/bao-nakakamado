@@ -1,0 +1,308 @@
+{
+  "classification": "EXPLORATORY-NOT-FORMAL",
+  "sources": {
+    "tools/v010-split013/pilot.cjs": "b7f4faf36a6eca12c4209a045f272632b42a06abbfdabafed9dc3fb08528d09d",
+    "tools/v010-split013/inputs.cjs": "fc3e1ad90a841a15c2bfb91efdd98f76aa7bcc3b7220ddf7a19d483d9fc19989",
+    "tools/v010-pn007/prover.cjs": "64f4f0e924ea0baaf052039e47523fa94cd001f5da0abe166cca28708b18c7ae"
+  },
+  "inputArchiveSha256": "a1dd24245809456ee3b72de1c521edd73e5e08fc1af6f9bea49b631f5a8f6b64",
+  "verifiedStates": 92276,
+  "rows": [
+    {
+      "group": "direct",
+      "rootId": "primary-before-13-move-3-reply-0",
+      "target": 0,
+      "status": "WALL_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 49004,
+      "elapsedMs": 5165.412312,
+      "file": "direct-primary-before-13-move-3-reply-0-0.json.gz",
+      "sha256": "32fe44e4986b939fc9fb79209edbc884bc04295f462e5e8ad517f505b9fc9b39"
+    },
+    {
+      "group": "direct",
+      "rootId": "primary-before-13-move-3-reply-0",
+      "target": 1,
+      "status": "WALL_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 37389,
+      "elapsedMs": 5000.403460999951,
+      "file": "direct-primary-before-13-move-3-reply-0-1.json.gz",
+      "sha256": "8412924c3033f96b6dd4affc5ce2435ac458fa5d1715d2f279bd5962e1cc0acd"
+    },
+    {
+      "group": "direct",
+      "rootId": "primary-before-13-move-3-reply-1",
+      "target": 0,
+      "status": "WALL_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 61376,
+      "elapsedMs": 5000.168408999976,
+      "file": "direct-primary-before-13-move-3-reply-1-0.json.gz",
+      "sha256": "b4e391b326b1dae1adf86f0e9d36d033827f39bb48a73708a327f09e70d66afc"
+    },
+    {
+      "group": "direct",
+      "rootId": "primary-before-13-move-3-reply-1",
+      "target": 1,
+      "status": "WALL_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 30045,
+      "elapsedMs": 7270.084495000017,
+      "file": "direct-primary-before-13-move-3-reply-1-1.json.gz",
+      "sha256": "9d7856807fd2731f70d2f113b18f21d1ccb3d5d0efe9631a94e4f0056ffc9e03"
+    },
+    {
+      "group": "direct",
+      "rootId": "primary-before-13-move-3-reply-2",
+      "target": 0,
+      "status": "WALL_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 5904,
+      "elapsedMs": 5038.14258699998,
+      "file": "direct-primary-before-13-move-3-reply-2-0.json.gz",
+      "sha256": "47ed52f0d69f1ad58b5b260f1830544b797f508f9a0666e9de33bcc7d6db7a31"
+    },
+    {
+      "group": "direct",
+      "rootId": "primary-before-13-move-3-reply-2",
+      "target": 1,
+      "status": "WALL_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 30597,
+      "elapsedMs": 5000.050564000034,
+      "file": "direct-primary-before-13-move-3-reply-2-1.json.gz",
+      "sha256": "7399228a8baf02e3b54e80caeda23e99ad5e67f07b430276a1c8278c09c019ae"
+    },
+    {
+      "group": "split",
+      "rootId": "primary-before-13-move-3-reply-0-move-0",
+      "target": 0,
+      "status": "UNKNOWN",
+      "winner": null,
+      "depth": null,
+      "visits": 21,
+      "elapsedMs": 0.7968310000142083,
+      "file": "split-primary-before-13-move-3-reply-0-move-0-0.json.gz",
+      "sha256": "de2839b1e2aff6e090079c05eea5edcc47904cb20b37fff6a5f95df1f03e8e7d"
+    },
+    {
+      "group": "split",
+      "rootId": "primary-before-13-move-3-reply-0-move-0",
+      "target": 1,
+      "status": "PROVED",
+      "winner": 1,
+      "depth": 3,
+      "visits": 21,
+      "elapsedMs": 32.234473999997135,
+      "file": "split-primary-before-13-move-3-reply-0-move-0-1.json.gz",
+      "sha256": "66f2ac209cab436b539ad8057099d7b8bee4d4f5ba1ce3c1d49dc672d8c99b24"
+    },
+    {
+      "group": "split",
+      "rootId": "primary-before-13-move-3-reply-0-move-1",
+      "target": 0,
+      "status": "WALL_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 18229,
+      "elapsedMs": 1875.1663659999613,
+      "file": "split-primary-before-13-move-3-reply-0-move-1-0.json.gz",
+      "sha256": "f3b02fd3e88c9f9004402e885d766937f2e71af07d5f964b820282528f3eed64"
+    },
+    {
+      "group": "split",
+      "rootId": "primary-before-13-move-3-reply-0-move-1",
+      "target": 1,
+      "status": "WALL_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 19025,
+      "elapsedMs": 1875.050007999991,
+      "file": "split-primary-before-13-move-3-reply-0-move-1-1.json.gz",
+      "sha256": "bdc068e188e7c3286528ec1b78807b1ba3fd24f32508881ad901cb1cb3da8539"
+    },
+    {
+      "group": "split",
+      "rootId": "primary-before-13-move-3-reply-1-move-0",
+      "target": 0,
+      "status": "WALL_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 16361,
+      "elapsedMs": 1875.630342999997,
+      "file": "split-primary-before-13-move-3-reply-1-move-0-0.json.gz",
+      "sha256": "da644ebfd3e1c950056177acd2b21fcdd29e9951b20a799634feb0d42f904911"
+    },
+    {
+      "group": "split",
+      "rootId": "primary-before-13-move-3-reply-1-move-0",
+      "target": 1,
+      "status": "WALL_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 22032,
+      "elapsedMs": 1875.0664479999687,
+      "file": "split-primary-before-13-move-3-reply-1-move-0-1.json.gz",
+      "sha256": "d5074c4a9cb40e420bad35d5cb91c5425c8cb106f09ddd79e3bddac0edefbd9a"
+    },
+    {
+      "group": "split",
+      "rootId": "primary-before-13-move-3-reply-1-move-1",
+      "target": 0,
+      "status": "WALL_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 22372,
+      "elapsedMs": 1875.060828000016,
+      "file": "split-primary-before-13-move-3-reply-1-move-1-0.json.gz",
+      "sha256": "d358c198d4473118d83dee1623d9d50eca5a9f535cb751c4e8cf0022504fc894"
+    },
+    {
+      "group": "split",
+      "rootId": "primary-before-13-move-3-reply-1-move-1",
+      "target": 1,
+      "status": "WALL_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 16848,
+      "elapsedMs": 1876.4736799999955,
+      "file": "split-primary-before-13-move-3-reply-1-move-1-1.json.gz",
+      "sha256": "0157b05fa7aedaac2123941b9ae04a4dbf82a58e9f8e571e8c1718356a696c15"
+    },
+    {
+      "group": "split",
+      "rootId": "primary-before-13-move-3-reply-2-move-0",
+      "target": 0,
+      "status": "WALL_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 8206,
+      "elapsedMs": 1876.2375149999862,
+      "file": "split-primary-before-13-move-3-reply-2-move-0-0.json.gz",
+      "sha256": "d73122b1fb714db8fba599c8c6112918b3f392a2113d9c7ba6fefc1101ae4203"
+    },
+    {
+      "group": "split",
+      "rootId": "primary-before-13-move-3-reply-2-move-0",
+      "target": 1,
+      "status": "WALL_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 31080,
+      "elapsedMs": 1875.0444679999491,
+      "file": "split-primary-before-13-move-3-reply-2-move-0-1.json.gz",
+      "sha256": "df270bb32d05d49c4848795fc2c2b9b12c963a5d069a4deba9c6a9c3cbd9d8d3"
+    },
+    {
+      "group": "split",
+      "rootId": "primary-before-13-move-3-reply-2-move-1",
+      "target": 0,
+      "status": "WALL_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 25707,
+      "elapsedMs": 1875.9260649999487,
+      "file": "split-primary-before-13-move-3-reply-2-move-1-0.json.gz",
+      "sha256": "8f60a32a96bf95c3b77644da19bc33ef0582e3f8e1426f6013fd783f92dbbc4b"
+    },
+    {
+      "group": "split",
+      "rootId": "primary-before-13-move-3-reply-2-move-1",
+      "target": 1,
+      "status": "WALL_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 23522,
+      "elapsedMs": 1875.1846670000232,
+      "file": "split-primary-before-13-move-3-reply-2-move-1-1.json.gz",
+      "sha256": "f1c85e4c2e431456555c2d76791d17259789c2cd542045952cdb695bf721e736"
+    },
+    {
+      "group": "split",
+      "rootId": "primary-before-13-move-3-reply-2-move-2",
+      "target": 0,
+      "status": "WALL_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 27219,
+      "elapsedMs": 1875.084256000002,
+      "file": "split-primary-before-13-move-3-reply-2-move-2-0.json.gz",
+      "sha256": "ef808d24bbe5a2d1cfdb91a1dab068e33611b51dfc82b03a93c8612beaec036f"
+    },
+    {
+      "group": "split",
+      "rootId": "primary-before-13-move-3-reply-2-move-2",
+      "target": 1,
+      "status": "WALL_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 25601,
+      "elapsedMs": 1875.4304849999608,
+      "file": "split-primary-before-13-move-3-reply-2-move-2-1.json.gz",
+      "sha256": "b92b7bbb40a33f6b7dd5a6a49fb2a3e6dae1bb0d407b72f8bf349c1a68e8d30c"
+    },
+    {
+      "group": "split",
+      "rootId": "primary-before-13-move-3-reply-2-move-3",
+      "target": 0,
+      "status": "WALL_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 24447,
+      "elapsedMs": 1876.0874220000114,
+      "file": "split-primary-before-13-move-3-reply-2-move-3-0.json.gz",
+      "sha256": "734146dbd88c27751bdde4648676e41236da63e8b0e9938fc9c11e6e631b544b"
+    },
+    {
+      "group": "split",
+      "rootId": "primary-before-13-move-3-reply-2-move-3",
+      "target": 1,
+      "status": "WALL_BUDGET",
+      "winner": null,
+      "depth": null,
+      "visits": 20818,
+      "elapsedMs": 1875.563049999997,
+      "file": "split-primary-before-13-move-3-reply-2-move-3-1.json.gz",
+      "sha256": "3c20eeefcaa73189cf7e477cd6954b9cd49aeec38f315ca377e7076eeb0ec8d4"
+    }
+  ],
+  "compositions": [
+    {
+      "id": "primary-before-13-move-3-reply-0",
+      "winner": null,
+      "depth": null
+    },
+    {
+      "id": "primary-before-13-move-3-reply-1",
+      "winner": null,
+      "depth": null
+    },
+    {
+      "id": "primary-before-13-move-3-reply-2",
+      "winner": null,
+      "depth": null
+    }
+  ],
+  "newGames": 0,
+  "formalJobs": 0,
+  "groupLimits": {
+    "direct": {
+      "goals": 6,
+      "visits": 1200000,
+      "wallMs": 30000
+    },
+    "split": {
+      "goals": 16,
+      "visits": 1200000,
+      "wallMs": 30000
+    }
+  },
+  "interpretation": "Visits/wall are matched by group; split roots get one fewer ply. Scheduling and repeated input overhead are separate. No pilot certificate enters formal book or results."
+}
