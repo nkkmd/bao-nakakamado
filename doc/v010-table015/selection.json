@@ -1,0 +1,66 @@
+{
+  "decision": "SELECT-FIFO-ON-TWO-014-ROOTS",
+  "stats": {
+    "directStop": {
+      "goals": 4,
+      "statuses": {
+        "TABLE_BUDGET": 4
+      },
+      "visits": 38240,
+      "elapsedMs": 969.101232999994,
+      "evictions": 0,
+      "maxTableEntries": 5000,
+      "heapBeforeBytesMax": 454436744
+    },
+    "directFifo": {
+      "goals": 4,
+      "statuses": {
+        "WALL_BUDGET": 3,
+        "NODE_BUDGET": 1
+      },
+      "visits": 379793,
+      "elapsedMs": 9846.931367000012,
+      "evictions": 182802,
+      "maxTableEntries": 5000,
+      "heapBeforeBytesMax": 454401976
+    },
+    "deeperStop": {
+      "goals": 16,
+      "statuses": {
+        "TABLE_BUDGET": 16
+      },
+      "visits": 149778,
+      "elapsedMs": 3613.4813689999864,
+      "evictions": 0,
+      "maxTableEntries": 5000,
+      "heapBeforeBytesMax": 454474800
+    },
+    "initialStop": {
+      "goals": 28,
+      "statuses": {
+        "TABLE_BUDGET": 28
+      },
+      "visits": 332796,
+      "elapsedMs": 6653.109414999984,
+      "evictions": 0,
+      "maxTableEntries": 5000,
+      "heapBeforeBytesMax": 454494464
+    },
+    "initialFifo": {
+      "goals": 28,
+      "statuses": {
+        "WALL_BUDGET": 2,
+        "NODE_BUDGET": 26
+      },
+      "visits": 398733,
+      "elapsedMs": 7726.164635999914,
+      "evictions": 21279,
+      "maxTableEntries": 5000,
+      "heapBeforeBytesMax": 456714752
+    }
+  },
+  "reason": "FIFO continued after resident cache reached its cap while stop mode halted; no new proof was found. Compare the isolated new policy on the same two 014 roots, horizons and visit/time/cache/storage ceilings. No claim of faster solving or better proof yield. Deeper partition expands 4 goals to 16 and remains unknown; initial responses remain unknown.",
+  "formalBookExcludesPilotCertificates": true,
+  "formalJobsAtSelection": 0,
+  "cacheBoundScope": "Resident Map entries only; active recursion references and certificate nodes are separately heap/storage limited."
+}

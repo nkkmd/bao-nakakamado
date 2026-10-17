@@ -25,7 +25,7 @@ jobs:
           git diff --exit-code 958217da937c6bfcf91aba3d94e1ea67e3cf8a9d -- prototype trials tools/v010-balance tools/v010-followup tools/v010-certainty tools/v010-gc doc/v010-balance doc/v010-followup doc/v010-certainty doc/v010-gc
           git diff --check
 
-  completed-004-014:
+  completed-004-015:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     strategy:
@@ -55,6 +55,8 @@ jobs:
             command: python3 tools/v010-split013/reaudit.py doc/v010-split013/completed 590780779601115cc5af4dd31307792adf846ba1 b0bdd634dc7c31b8adc29cf07cdb92969954eb97 38863188124
           - study: '014'
             command: python3 tools/v010-split014/reaudit.py doc/v010-split014/completed 972f441197148d9a7a1bce910a77ac39e1049683 23ddc84ed40041efc1afa13920cd31d7cc1e074a 39033955570
+          - study: '015'
+            command: python3 tools/v010-table015/reaudit.py doc/v010-table015/completed 63edba242e87a5fee3dff225e464b7cd9adce739 a5c671ad0e37eaf85dc1b8e1b2d9afcf775161de 39042654147
     steps:
       - uses: actions/checkout@v4
         with:

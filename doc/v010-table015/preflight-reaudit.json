@@ -1,0 +1,80 @@
+{
+  "status": "ALL-12-AUDITS-PASSED",
+  "baseline": "6bed715b46caba7bb23edd5b6a268aa6431f4d3a",
+  "audits": [
+    {
+      "index": 0,
+      "command": "python3 tools/v010-research-integration/audit.py",
+      "exitCode": 0,
+      "log": "preflight-logs/audit-0.log"
+    },
+    {
+      "index": 1,
+      "command": "python3 tools/v010-branch/reaudit.py doc/v010-branch/completed b1e9bdbcab21760c1bd1017c685e0842d02bb85c",
+      "exitCode": 0,
+      "log": "preflight-logs/audit-1.log"
+    },
+    {
+      "index": 2,
+      "command": "python3 tools/v010-reply/reaudit.py doc/v010-reply/completed 428cf47b3d27a18e82fef28fa66c66e6cad1c628 975e1a8188dbe43fda1c39b3b97e8858db8a97e3 38265400792",
+      "exitCode": 0,
+      "log": "preflight-logs/audit-2.log"
+    },
+    {
+      "index": 3,
+      "command": "python3 tools/v010-deepen/reaudit.py doc/v010-deepen/completed 02335fc03e9ee2ef226c8b226c03d3f8e919456f d4163c3c171117b1fce7dd30b39faad733605418 38271005778",
+      "exitCode": 0,
+      "log": "preflight-logs/audit-3.log"
+    },
+    {
+      "index": 4,
+      "command": "python3 tools/v010-pn007/reaudit.py doc/v010-pn007/completed 5f44f34a3a279b232d3045b5b3edaad48096ac0d ce52d57f4a25d40664f1e12de8559691577af1c0 38313259149",
+      "exitCode": 0,
+      "log": "preflight-logs/audit-4.log"
+    },
+    {
+      "index": 5,
+      "command": "python3 tools/v010-retro008/reaudit.py doc/v010-retro008/completed 6de6bcdbf5a315f33f19114608d78700b341992c c19aca2d13e7a2306096ef151f418fcc6ba6e2d8 38415683995",
+      "exitCode": 0,
+      "log": "preflight-logs/audit-5.log"
+    },
+    {
+      "index": 6,
+      "command": "python3 tools/v010-deepen009/reaudit.py doc/v010-deepen009/completed 0b220daec7762254eb38a72019dc44f62c9f5a62 6f29c2bce728cba617ee2b72aa1733468891e28c 38423055308",
+      "exitCode": 0,
+      "log": "preflight-logs/audit-6.log"
+    },
+    {
+      "index": 7,
+      "command": "python3 tools/v010-retro010/reaudit.py doc/v010-retro010/completed 536a62cb876760afcda2720b37617f1340817691 2ac3e0da431f8e88a7b7f7317aa53d29c108a12c 38667352032",
+      "exitCode": 0,
+      "log": "preflight-logs/audit-7.log"
+    },
+    {
+      "index": 8,
+      "command": "python3 tools/v010-retro011-integration/reaudit.py doc/v010-retro011/completed 68ba0b43ec2b6761fbb3d2a75667776a497432cd 682ad7e0f9dd997348c8766c073c2fe18b9005ca 38679332213",
+      "exitCode": 0,
+      "log": "preflight-logs/audit-8.log"
+    },
+    {
+      "index": 9,
+      "command": "python3 tools/v010-deepen012/reaudit.py doc/v010-deepen012/completed 958bd2d512468f11fa870b432c10cf231e77c968 b389875686726125e6fb30fb899e6b813cb3ec50 38734817122",
+      "exitCode": 0,
+      "log": "preflight-logs/audit-9.log"
+    },
+    {
+      "index": 10,
+      "command": "python3 tools/v010-split013/reaudit.py doc/v010-split013/completed 590780779601115cc5af4dd31307792adf846ba1 b0bdd634dc7c31b8adc29cf07cdb92969954eb97 38863188124",
+      "exitCode": 0,
+      "log": "preflight-logs/audit-10.log"
+    },
+    {
+      "index": 11,
+      "command": "python3 tools/v010-split014/reaudit.py doc/v010-split014/completed 972f441197148d9a7a1bce910a77ac39e1049683 23ddc84ed40041efc1afa13920cd31d7cc1e074a 39033955570",
+      "exitCode": 0,
+      "log": "preflight-logs/audit-11.log"
+    }
+  ],
+  "newGames": 0,
+  "newProofSearches": 0
+}

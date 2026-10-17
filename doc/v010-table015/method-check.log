@@ -1,0 +1,14 @@
+✔ FIFO at caps 1, 3 and 32 agrees with normal exhaustive values, both targets/depths 0-4 (836.517795ms)
+✔ stop mode matches the frozen 007 status/visits/certificates at identical finite inputs (26.481306ms)
+✔ eviction preserves a positive certificate, all opponent replies, and finite refutation stays UNKNOWN (6.544385ms)
+✔ resource and safety stops remain UNKNOWN without normal-win certificates (0.703279ms)
+✔ known opponent proof is reused only with its normal certificate; storage budget cannot manufacture a win (6.682456ms)
+✔ phase aggregation preserves FIFO identity/counters even when time expires before a phase (2.525116ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1061.211427
