@@ -1,0 +1,26 @@
+name: v0.10.0 study 016 integration checks
+on:
+  pull_request:
+    paths: ['tools/v010-partition016/**', 'doc/V010_PARTITION016_*', 'doc/v010-partition016/**', '.github/workflows/v010-partition016-*.yml']
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --expose-gc --test tools/v010-table015/method.test.cjs tools/v010-partition016/check.test.cjs
+      - run: node tools/v010-partition016/study.cjs manifest
+      - run: node -e "require('./tools/v010-partition016/verify-comparison.cjs').verify('doc/v010-partition016')"
+      - run: python3 tools/v010-partition016/reaudit.py doc/v010-partition016/completed e6cdfac8627df8e94ce81465ee6169bf600185a8 d69eeeab2db780a9a3522fce02c37925151e6420 39075132061
+      - name: Preserve frozen sources and original bytes
+        run: |
+          git diff --exit-code d69eeeab2db780a9a3522fce02c37925151e6420 -- prototype trials tools/v010-partition016 doc/V010_PARTITION016_PLAN_20261018.md .github/workflows/v010-partition016-study.yml doc/v010-partition016 ':(exclude)doc/v010-partition016/completed' ':(exclude)doc/v010-partition016/independent-reaudit.json'
+          git diff --exit-code e6cdfac8627df8e94ce81465ee6169bf600185a8 -- doc/v010-partition016/completed
+          git diff --check

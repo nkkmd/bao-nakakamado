@@ -1,0 +1,74 @@
+TAP version 13
+# {"root":"primary-before-13-move-3-reply-0-move-1-reply-0-move-0","target":0,"tablePolicy":"fifo","evictions":0,"depth":13,"status":"NODE_BUDGET","visits":1,"totalVisits":1,"elapsedMs":0.6454740000190213,"tableEntries":1,"storedNodes":0,"finiteHorizonRefuted":false,"proofNumber":1,"disproofNumber":1}
+# {"root":"primary-before-13-move-3-reply-0-move-1-reply-0-move-0","target":1,"tablePolicy":"fifo","evictions":0,"depth":13,"status":"NODE_BUDGET","visits":1,"totalVisits":1,"elapsedMs":0.17225999999209307,"tableEntries":1,"storedNodes":0,"finiteHorizonRefuted":false,"proofNumber":1,"disproofNumber":1}
+# {"root":"primary-before-13-move-3-reply-0-move-1-reply-0-move-1","target":0,"tablePolicy":"fifo","evictions":0,"depth":13,"status":"NODE_BUDGET","visits":1,"totalVisits":1,"elapsedMs":0.32085399999050424,"tableEntries":1,"storedNodes":0,"finiteHorizonRefuted":false,"proofNumber":1,"disproofNumber":1}
+# {"root":"primary-before-13-move-3-reply-0-move-1-reply-0-move-1","target":1,"tablePolicy":"fifo","evictions":0,"depth":13,"status":"NODE_BUDGET","visits":1,"totalVisits":1,"elapsedMs":0.229695999994874,"tableEntries":1,"storedNodes":0,"finiteHorizonRefuted":false,"proofNumber":1,"disproofNumber":1}
+# {"root":"primary-before-13-move-3-reply-0-move-1-reply-0-move-2","target":0,"tablePolicy":"fifo","evictions":0,"depth":13,"status":"NODE_BUDGET","visits":1,"totalVisits":1,"elapsedMs":0.2172279999940656,"tableEntries":1,"storedNodes":0,"finiteHorizonRefuted":false,"proofNumber":1,"disproofNumber":1}
+# {"root":"primary-before-13-move-3-reply-0-move-1-reply-0-move-2","target":1,"tablePolicy":"fifo","evictions":0,"depth":13,"status":"NODE_BUDGET","visits":1,"totalVisits":1,"elapsedMs":0.21603599999798462,"tableEntries":1,"storedNodes":0,"finiteHorizonRefuted":false,"proofNumber":1,"disproofNumber":1}
+# {"root":"primary-before-13-move-3-reply-0-move-1-reply-0-move-3","target":0,"tablePolicy":"fifo","evictions":0,"depth":13,"status":"NODE_BUDGET","visits":1,"totalVisits":1,"elapsedMs":0.2725009999994654,"tableEntries":1,"storedNodes":0,"finiteHorizonRefuted":false,"proofNumber":1,"disproofNumber":1}
+# {"root":"primary-before-13-move-3-reply-0-move-1-reply-0-move-3","target":1,"tablePolicy":"fifo","evictions":0,"depth":13,"status":"NODE_BUDGET","visits":1,"totalVisits":1,"elapsedMs":0.19848900000215508,"tableEntries":1,"storedNodes":0,"finiteHorizonRefuted":false,"proofNumber":1,"disproofNumber":1}
+# {"root":"primary-before-13-move-3-reply-0-move-1-reply-0-move-4","target":0,"tablePolicy":"fifo","evictions":0,"depth":13,"status":"NODE_BUDGET","visits":1,"totalVisits":1,"elapsedMs":0.20180399998207577,"tableEntries":1,"storedNodes":0,"finiteHorizonRefuted":false,"proofNumber":1,"disproofNumber":1}
+# {"root":"primary-before-13-move-3-reply-0-move-1-reply-0-move-4","target":1,"tablePolicy":"fifo","evictions":0,"depth":13,"status":"NODE_BUDGET","visits":1,"totalVisits":1,"elapsedMs":0.2100559999817051,"tableEntries":1,"storedNodes":0,"finiteHorizonRefuted":false,"proofNumber":1,"disproofNumber":1}
+# {"root":"primary-before-13-move-3-reply-0-move-1-reply-0-move-5","target":0,"tablePolicy":"fifo","evictions":0,"depth":13,"status":"NODE_BUDGET","visits":1,"totalVisits":1,"elapsedMs":0.214042999985395,"tableEntries":1,"storedNodes":0,"finiteHorizonRefuted":false,"proofNumber":1,"disproofNumber":1}
+# {"root":"primary-before-13-move-3-reply-0-move-1-reply-0-move-5","target":1,"tablePolicy":"fifo","evictions":0,"depth":13,"status":"NODE_BUDGET","visits":1,"totalVisits":1,"elapsedMs":0.17796800000360236,"tableEntries":1,"storedNodes":0,"finiteHorizonRefuted":false,"proofNumber":1,"disproofNumber":1}
+# {"root":"primary-before-13-move-3-reply-0-move-1-reply-1-move-0","target":0,"tablePolicy":"fifo","evictions":0,"depth":13,"status":"NODE_BUDGET","visits":1,"totalVisits":1,"elapsedMs":0.20007200000691228,"tableEntries":1,"storedNodes":0,"finiteHorizonRefuted":false,"proofNumber":1,"disproofNumber":1}
+# {"root":"primary-before-13-move-3-reply-0-move-1-reply-1-move-0","target":1,"tablePolicy":"fifo","evictions":0,"depth":13,"status":"NODE_BUDGET","visits":1,"totalVisits":1,"elapsedMs":0.1944039999798406,"tableEntries":1,"storedNodes":0,"finiteHorizonRefuted":false,"proofNumber":1,"disproofNumber":1}
+# {"root":"primary-before-13-move-3-reply-0-move-1-reply-1-move-1","target":0,"tablePolicy":"fifo","evictions":0,"depth":13,"status":"NODE_BUDGET","visits":1,"totalVisits":1,"elapsedMs":0.24470899999141693,"tableEntries":1,"storedNodes":0,"finiteHorizonRefuted":false,"proofNumber":1,"disproofNumber":1}
+# {"root":"primary-before-13-move-3-reply-0-move-1-reply-1-move-1","target":1,"tablePolicy":"fifo","evictions":0,"depth":13,"status":"NODE_BUDGET","visits":1,"totalVisits":1,"elapsedMs":0.21767799998633564,"tableEntries":1,"storedNodes":0,"finiteHorizonRefuted":false,"proofNumber":1,"disproofNumber":1}
+# Subtest: 014 inputs remain unknown; new eight-way split; original and initial legal partitions and preserved proofs match normal engine
+ok 1 - 014 inputs remain unknown; new eight-way split; original and initial legal partitions and preserved proofs match normal engine
+  ---
+  duration_ms: 143607.067163
+  type: 'test'
+  ...
+# Subtest: new-ID development goals use FIFO, retain all synthesis boundaries, reject bad metrics and safely reuse or HOLD
+ok 2 - new-ID development goals use FIFO, retain all synthesis boundaries, reject bad metrics and safely reuse or HOLD
+  ---
+  duration_ms: 14306.432942
+  type: 'test'
+  ...
+# Subtest: FIFO at caps 1, 3 and 32 agrees with normal exhaustive values, both targets/depths 0-4
+ok 3 - FIFO at caps 1, 3 and 32 agrees with normal exhaustive values, both targets/depths 0-4
+  ---
+  duration_ms: 1104.514247
+  type: 'test'
+  ...
+# Subtest: stop mode matches the frozen 007 status/visits/certificates at identical finite inputs
+ok 4 - stop mode matches the frozen 007 status/visits/certificates at identical finite inputs
+  ---
+  duration_ms: 20.596111
+  type: 'test'
+  ...
+# Subtest: eviction preserves a positive certificate, all opponent replies, and finite refutation stays UNKNOWN
+ok 5 - eviction preserves a positive certificate, all opponent replies, and finite refutation stays UNKNOWN
+  ---
+  duration_ms: 5.172093
+  type: 'test'
+  ...
+# Subtest: resource and safety stops remain UNKNOWN without normal-win certificates
+ok 6 - resource and safety stops remain UNKNOWN without normal-win certificates
+  ---
+  duration_ms: 0.620236
+  type: 'test'
+  ...
+# Subtest: known opponent proof is reused only with its normal certificate; storage budget cannot manufacture a win
+ok 7 - known opponent proof is reused only with its normal certificate; storage budget cannot manufacture a win
+  ---
+  duration_ms: 5.330211
+  type: 'test'
+  ...
+# Subtest: phase aggregation preserves FIFO identity/counters even when time expires before a phase
+ok 8 - phase aggregation preserves FIFO identity/counters even when time expires before a phase
+  ---
+  duration_ms: 2.667074
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 158187.713742

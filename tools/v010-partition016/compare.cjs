@@ -1,0 +1,16 @@
+'use strict';
+// MIT. Candidate screening only: never added to a formal proof book.
+const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process'),assert=require('node:assert/strict');
+const C=require('../v010-balance/core.cjs'),I=require('../v010-table015/inputs.cjs'),P=require('../v010-table015/prover.cjs'),V=require('../v010-balance/diagnostics/proof.cjs'),S=require('../v010-branch/study.cjs');
+assert.equal(typeof global.gc,'function');const out=process.argv[2];fs.mkdirSync(out,{recursive:true});assert.ok(!fs.existsSync(path.join(out,'comparison.json')));
+const archive='doc/v010-table015/completed/original-records-001.zip';
+const prior=JSON.parse(cp.execFileSync('python3',['-c','import zipfile,gzip,json,sys; z=zipfile.ZipFile(sys.argv[1]); print(json.dumps([json.loads(gzip.decompress(z.read(n))) for n in z.namelist() if n.startswith("proof-") and n.endswith(".json.gz")]))',archive],{maxBuffer:128*1024*1024}));
+const groups={splitStop:{roots:I.deeperRoots(),tablePolicy:'stop'},splitFifo:{roots:I.deeperRoots(),tablePolicy:'fifo'},deferred:{roots:I.deferredChildren(),tablePolicy:'stop'},held:{roots:I.heldRoots(),tablePolicy:'stop'},initial:{roots:I.initialRoots(),tablePolicy:'stop'}};
+const input=I.prepare(),rows=[],inventory=[];
+for(const [group,{roots,tablePolicy}]of Object.entries(groups)){
+ const goals=roots.length*2,limits={maxDepth:30,maxNodes:Math.floor(200000/goals),wallMs:Math.floor(10000/goals),maxTableEntries:10000,maxStoredNodes:50000,maxHeapBytes:512*1024*1024,tablePolicy};
+ inventory.push({group,roots:roots.length,unique:new Set(roots.map(r=>C.Q.stateKey(r.state))).size,goals,limits,requestedVisits:goals*limits.maxNodes,requestedWallMs:goals*limits.wallMs,legalMoves:roots.map(r=>({id:r.id,count:C.S.moveVariants({board:r.state,history:[]}).length,turn:r.state.turn}))});
+ for(const root of roots)for(const target of [0,1]){global.gc();const result=P.prove(root.state,target,{...input,...limits});if(result.certificate){V.verify(result.certificate);assert.deepEqual(result.certificate.start,root.state);}const file=`${group}-${root.id}-${target}.json.gz`;S.write(path.join(out,file),{classification:'EXPLORATORY-NOT-FORMAL',group,rootId:root.id,state:root.state,target,limits,result});const row={group,rootId:root.id,target,status:result.status,winner:result.winner,depth:result.certificate?.depth??null,visits:result.visits,elapsedMs:result.elapsedMs,evictions:result.evictions,tableEntries:result.tableEntries,file,sha256:C.hash(fs.readFileSync(path.join(out,file)))};rows.push(row);console.log(JSON.stringify(row));}
+}
+const sourceFiles=['tools/v010-partition016/compare.cjs','tools/v010-table015/inputs.cjs','tools/v010-table015/prover.cjs',archive];
+fs.writeFileSync(path.join(out,'comparison.json'),JSON.stringify({classification:'EXPLORATORY-NOT-FORMAL',baseline:'d6d5bb5a481c38d212c24b674e132dd31401ff91',sources:Object.fromEntries(sourceFiles.map(p=>[p,C.hash(fs.readFileSync(p))])),priorStages:prior.map(r=>({index:r.index,target:r.target,attempts:r.result.attempts})),verifiedStates:input.verifiedStates,inventory,rows,newGames:0,formalJobs:0,interpretation:'Equal group ceilings, different executed visits and origin depths; screening is not a performance test or proof of impossibility. No screening certificate enters formal book.'},null,2)+'\n',{flag:'wx'});

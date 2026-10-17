@@ -1,0 +1,1165 @@
+{
+  "status": "AUDITED-COMPLETE",
+  "digest": "c96d769fb97c9b88a0bfb7884200bf4b7cdb642b6dcf7a79dcffe99d12c2d70a",
+  "proofJobs": 16,
+  "games": 0,
+  "newGames": 0,
+  "parents": [
+    {
+      "id": "primary-before-13-move-0",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 0,
+        "direction": "right",
+        "side": "left"
+      },
+      "winner": null,
+      "depth": null,
+      "keptKnown": false,
+      "replies": [
+        {
+          "id": "primary-before-13-move-0-reply-0",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 0,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-0-reply-1",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-0-reply-2",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-0-reply-3",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-0-reply-4",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-0-reply-5",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-0-reply-6",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-0-reply-7",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        }
+      ]
+    },
+    {
+      "id": "primary-before-13-move-1",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 2,
+        "direction": "right",
+        "side": "left"
+      },
+      "winner": 1,
+      "depth": 51,
+      "keptKnown": true,
+      "replies": [
+        {
+          "id": "primary-before-13-move-1-reply-0",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 0,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-1-reply-1",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-1-reply-2",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": 1,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": true
+        },
+        {
+          "id": "primary-before-13-move-1-reply-3",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-1-reply-4",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        }
+      ]
+    },
+    {
+      "id": "primary-before-13-move-2",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 2,
+        "direction": "left",
+        "side": "right"
+      },
+      "winner": null,
+      "depth": null,
+      "keptKnown": false,
+      "replies": [
+        {
+          "id": "primary-before-13-move-2-reply-0",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 0,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-2-reply-1",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-2-reply-2",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-2-reply-3",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-2-reply-4",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-2-reply-5",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-2-reply-6",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        }
+      ]
+    },
+    {
+      "id": "primary-before-13-move-3",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 4,
+        "direction": "right",
+        "side": "left"
+      },
+      "winner": null,
+      "depth": null,
+      "keptKnown": false,
+      "replies": [
+        {
+          "id": "primary-before-13-move-3-reply-0",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": true,
+          "partitioned": true,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-3-reply-1",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": true,
+          "partitioned": true,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-3-reply-2",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": true,
+          "partitioned": true,
+          "pinnedInput": false
+        }
+      ]
+    },
+    {
+      "id": "primary-before-13-move-4",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 4,
+        "direction": "left",
+        "side": "right"
+      },
+      "winner": null,
+      "depth": null,
+      "keptKnown": false,
+      "replies": [
+        {
+          "id": "primary-before-13-move-4-reply-0",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 0,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-4-reply-1",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": 0,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": true
+        },
+        {
+          "id": "primary-before-13-move-4-reply-2",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-4-reply-3",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        }
+      ]
+    },
+    {
+      "id": "primary-before-13-move-5",
+      "move": {
+        "type": "capture",
+        "phase": "namua",
+        "row": 0,
+        "index": 7,
+        "direction": "left",
+        "side": "right"
+      },
+      "winner": 1,
+      "depth": 53,
+      "keptKnown": true,
+      "replies": [
+        {
+          "id": "primary-before-13-move-5-reply-0",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-5-reply-1",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-5-reply-2",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-5-reply-3",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-5-reply-4",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": null,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": false
+        },
+        {
+          "id": "primary-before-13-move-5-reply-5",
+          "move": {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          "winner": 1,
+          "explored": false,
+          "partitioned": false,
+          "pinnedInput": true
+        }
+      ]
+    }
+  ],
+  "leafParents": [
+    {
+      "id": "primary-before-13-move-3-reply-0-move-1-reply-0",
+      "winner": null,
+      "depth": null,
+      "covered": 1,
+      "total": 6
+    },
+    {
+      "id": "primary-before-13-move-3-reply-0-move-1-reply-1",
+      "winner": null,
+      "depth": null,
+      "covered": 0,
+      "total": 2
+    }
+  ],
+  "splitChildren": [
+    {
+      "id": "primary-before-13-move-3-reply-0-move-1",
+      "winner": null,
+      "depth": null,
+      "covered": 0,
+      "total": 2
+    }
+  ],
+  "splitRoots": [
+    {
+      "id": "primary-before-13-move-3-reply-0",
+      "winner": null,
+      "depth": null,
+      "covered": 1,
+      "total": 2
+    },
+    {
+      "id": "primary-before-13-move-3-reply-1",
+      "winner": null,
+      "depth": null,
+      "covered": 0,
+      "total": 2
+    },
+    {
+      "id": "primary-before-13-move-3-reply-2",
+      "winner": null,
+      "depth": null,
+      "covered": 2,
+      "total": 4
+    }
+  ],
+  "results": [
+    {
+      "rootId": "primary-before-13-move-3-reply-0-move-1-reply-0-move-0",
+      "splitChildId": "primary-before-13-move-3-reply-0-move-1-reply-0",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "WALL_BUDGET",
+          "winner": null,
+          "depth": null,
+          "visits": 1837924,
+          "evictions": 2185,
+          "tablePolicy": "fifo",
+          "elapsedMs": 43355.477710999985,
+          "attemptedHorizons": [
+            13,
+            17,
+            21,
+            29,
+            45,
+            75
+          ],
+          "fullyRefutedHorizons": []
+        },
+        {
+          "target": 1,
+          "status": "WALL_BUDGET",
+          "winner": null,
+          "depth": null,
+          "visits": 1771716,
+          "evictions": 0,
+          "tablePolicy": "fifo",
+          "elapsedMs": 44574.535808,
+          "attemptedHorizons": [
+            13,
+            17,
+            21,
+            29,
+            45,
+            75
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-13-move-3-reply-0-move-1-reply-0-move-1",
+      "splitChildId": "primary-before-13-move-3-reply-0-move-1-reply-0",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "WALL_BUDGET",
+          "winner": null,
+          "depth": null,
+          "visits": 1897281,
+          "evictions": 32641,
+          "tablePolicy": "fifo",
+          "elapsedMs": 42410.96554600001,
+          "attemptedHorizons": [
+            13,
+            17,
+            21,
+            29,
+            45,
+            75
+          ],
+          "fullyRefutedHorizons": []
+        },
+        {
+          "target": 1,
+          "status": "WALL_BUDGET",
+          "winner": null,
+          "depth": null,
+          "visits": 2084643,
+          "evictions": 102020,
+          "tablePolicy": "fifo",
+          "elapsedMs": 39439.572594,
+          "attemptedHorizons": [
+            13,
+            17,
+            21,
+            29,
+            45,
+            75
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-13-move-3-reply-0-move-1-reply-0-move-2",
+      "splitChildId": "primary-before-13-move-3-reply-0-move-1-reply-0",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "WALL_BUDGET",
+          "winner": null,
+          "depth": null,
+          "visits": 2066570,
+          "evictions": 72677,
+          "tablePolicy": "fifo",
+          "elapsedMs": 39474.60202199999,
+          "attemptedHorizons": [
+            13,
+            17,
+            21,
+            29,
+            45,
+            75
+          ],
+          "fullyRefutedHorizons": [
+            13
+          ]
+        },
+        {
+          "target": 1,
+          "status": "WALL_BUDGET",
+          "winner": null,
+          "depth": null,
+          "visits": 1924831,
+          "evictions": 33686,
+          "tablePolicy": "fifo",
+          "elapsedMs": 42195.190521,
+          "attemptedHorizons": [
+            13,
+            17,
+            21,
+            29,
+            45,
+            75
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-13-move-3-reply-0-move-1-reply-0-move-3",
+      "splitChildId": "primary-before-13-move-3-reply-0-move-1-reply-0",
+      "winner": 1,
+      "targets": [
+        {
+          "target": 0,
+          "status": "UNKNOWN",
+          "winner": null,
+          "depth": null,
+          "visits": 1860817,
+          "evictions": 0,
+          "tablePolicy": "fifo",
+          "elapsedMs": 34512.365748,
+          "attemptedHorizons": [
+            13,
+            17,
+            21,
+            29,
+            45,
+            75
+          ],
+          "fullyRefutedHorizons": [
+            45,
+            75
+          ]
+        },
+        {
+          "target": 1,
+          "status": "PROVED",
+          "winner": 1,
+          "depth": 43,
+          "visits": 1307609,
+          "evictions": 0,
+          "tablePolicy": "fifo",
+          "elapsedMs": 16761.878659,
+          "attemptedHorizons": [
+            13,
+            17,
+            21,
+            29,
+            45
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-13-move-3-reply-0-move-1-reply-0-move-4",
+      "splitChildId": "primary-before-13-move-3-reply-0-move-1-reply-0",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "WALL_BUDGET",
+          "winner": null,
+          "depth": null,
+          "visits": 2373469,
+          "evictions": 188030,
+          "tablePolicy": "fifo",
+          "elapsedMs": 34297.65354400001,
+          "attemptedHorizons": [
+            13,
+            17,
+            21,
+            29,
+            45,
+            75
+          ],
+          "fullyRefutedHorizons": []
+        },
+        {
+          "target": 1,
+          "status": "WALL_BUDGET",
+          "winner": null,
+          "depth": null,
+          "visits": 2361950,
+          "evictions": 183075,
+          "tablePolicy": "fifo",
+          "elapsedMs": 34286.10273599999,
+          "attemptedHorizons": [
+            13,
+            17,
+            21,
+            29,
+            45,
+            75
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-13-move-3-reply-0-move-1-reply-0-move-5",
+      "splitChildId": "primary-before-13-move-3-reply-0-move-1-reply-0",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "WALL_BUDGET",
+          "winner": null,
+          "depth": null,
+          "visits": 1884835,
+          "evictions": 15037,
+          "tablePolicy": "fifo",
+          "elapsedMs": 42526.15171800001,
+          "attemptedHorizons": [
+            13,
+            17,
+            21,
+            29,
+            45,
+            75
+          ],
+          "fullyRefutedHorizons": []
+        },
+        {
+          "target": 1,
+          "status": "WALL_BUDGET",
+          "winner": null,
+          "depth": null,
+          "visits": 1900973,
+          "evictions": 18613,
+          "tablePolicy": "fifo",
+          "elapsedMs": 42443.601392,
+          "attemptedHorizons": [
+            13,
+            17,
+            21,
+            29,
+            45,
+            75
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-13-move-3-reply-0-move-1-reply-1-move-0",
+      "splitChildId": "primary-before-13-move-3-reply-0-move-1-reply-1",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "WALL_BUDGET",
+          "winner": null,
+          "depth": null,
+          "visits": 1976767,
+          "evictions": 54475,
+          "tablePolicy": "fifo",
+          "elapsedMs": 41331.122196,
+          "attemptedHorizons": [
+            13,
+            17,
+            21,
+            29,
+            45,
+            75
+          ],
+          "fullyRefutedHorizons": []
+        },
+        {
+          "target": 1,
+          "status": "WALL_BUDGET",
+          "winner": null,
+          "depth": null,
+          "visits": 1888878,
+          "evictions": 28262,
+          "tablePolicy": "fifo",
+          "elapsedMs": 42681.044433999996,
+          "attemptedHorizons": [
+            13,
+            17,
+            21,
+            29,
+            45,
+            75
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    },
+    {
+      "rootId": "primary-before-13-move-3-reply-0-move-1-reply-1-move-1",
+      "splitChildId": "primary-before-13-move-3-reply-0-move-1-reply-1",
+      "winner": null,
+      "targets": [
+        {
+          "target": 0,
+          "status": "WALL_BUDGET",
+          "winner": null,
+          "depth": null,
+          "visits": 1851184,
+          "evictions": 10780,
+          "tablePolicy": "fifo",
+          "elapsedMs": 41833.344337999995,
+          "attemptedHorizons": [
+            13,
+            17,
+            21,
+            29,
+            45,
+            75
+          ],
+          "fullyRefutedHorizons": [
+            13
+          ]
+        },
+        {
+          "target": 1,
+          "status": "WALL_BUDGET",
+          "winner": null,
+          "depth": null,
+          "visits": 1834329,
+          "evictions": 0,
+          "tablePolicy": "fifo",
+          "elapsedMs": 43675.78539799999,
+          "attemptedHorizons": [
+            13,
+            17,
+            21,
+            29,
+            45,
+            75
+          ],
+          "fullyRefutedHorizons": []
+        }
+      ]
+    }
+  ],
+  "primaryBefore13": {
+    "status": "UNKNOWN",
+    "winner": null,
+    "depth": null,
+    "coveredBranches": 2,
+    "totalBranches": 6
+  },
+  "preservedPrimaryBefore15": {
+    "status": "PROVED",
+    "winner": 1,
+    "depth": 52
+  },
+  "heldRoots": [
+    {
+      "id": "primary-before-13-move-0-reply-0",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-016"
+    },
+    {
+      "id": "primary-before-13-move-0-reply-1",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-016"
+    },
+    {
+      "id": "primary-before-13-move-0-reply-2",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-016"
+    },
+    {
+      "id": "primary-before-13-move-0-reply-3",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-016"
+    },
+    {
+      "id": "primary-before-13-move-0-reply-4",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-016"
+    },
+    {
+      "id": "primary-before-13-move-0-reply-5",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-016"
+    },
+    {
+      "id": "primary-before-13-move-0-reply-6",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-016"
+    },
+    {
+      "id": "primary-before-13-move-0-reply-7",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-016"
+    },
+    {
+      "id": "primary-before-13-move-2-reply-0",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-016"
+    },
+    {
+      "id": "primary-before-13-move-2-reply-1",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-016"
+    },
+    {
+      "id": "primary-before-13-move-2-reply-2",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-016"
+    },
+    {
+      "id": "primary-before-13-move-2-reply-3",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-016"
+    },
+    {
+      "id": "primary-before-13-move-2-reply-4",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-016"
+    },
+    {
+      "id": "primary-before-13-move-2-reply-5",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-016"
+    },
+    {
+      "id": "primary-before-13-move-2-reply-6",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-016"
+    },
+    {
+      "id": "primary-before-13-move-4-reply-0",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-016"
+    },
+    {
+      "id": "primary-before-13-move-4-reply-2",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-016"
+    },
+    {
+      "id": "primary-before-13-move-4-reply-3",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-016"
+    }
+  ],
+  "deferredChildren": [
+    {
+      "id": "primary-before-13-move-3-reply-1-move-0",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-016"
+    },
+    {
+      "id": "primary-before-13-move-3-reply-1-move-1",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-016"
+    },
+    {
+      "id": "primary-before-13-move-3-reply-2-move-1",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-016"
+    },
+    {
+      "id": "primary-before-13-move-3-reply-2-move-2",
+      "reason": "DEFERRED-NOT-SEARCHED-IN-016"
+    }
+  ],
+  "pinnedChildren": [
+    {
+      "id": "primary-before-13-move-3-reply-0-move-0",
+      "winner": 1,
+      "depth": 3,
+      "sha256": "8148ec8f098b4c23252d30016704e9949a0a6be61bbe43ff8b1e501be08ee3c0"
+    },
+    {
+      "id": "primary-before-13-move-3-reply-2-move-0",
+      "winner": 1,
+      "depth": 47,
+      "sha256": "5f4b16522cd4add20ea72f1fc2b5f0385930822f500493c245ff29a26530e2d1"
+    },
+    {
+      "id": "primary-before-13-move-3-reply-2-move-3",
+      "winner": 1,
+      "depth": 19,
+      "sha256": "bc01ce39281f27823d42cb372a183a2851fe36abb36486bd38dda87788af31e0"
+    }
+  ],
+  "pinnedReplies": [
+    {
+      "id": "primary-before-13-move-1-reply-2",
+      "winner": 1,
+      "height": 50,
+      "stateKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,0,0,3,0],[0,0,0,0,0,0,1,2]],[[5,4,1,0,6,4,3,1],[1,0,1,3,0,2,0,1]]],[13,13],[0,0],[false,false],0,\"namua\",null,\"\",[0,0],15,null]"
+    },
+    {
+      "id": "primary-before-13-move-4-reply-1",
+      "winner": 0,
+      "height": 1,
+      "stateKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[1,0,0,0,2,1,4,4],[0,0,0,0,0,0,1,2]],[[2,1,1,0,2,3,3,1],[0,2,0,2,1,1,2,0]]],[14,14],[0,0],[false,false],0,\"namua\",null,\"\",[0,0],15,null]"
+    },
+    {
+      "id": "primary-before-13-move-5-reply-5",
+      "winner": 1,
+      "height": 52,
+      "stateKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,0,2,0,1],[0,0,0,0,0,0,1,2]],[[0,3,1,5,5,0,8,4],[0,2,0,2,1,1,2,0]]],[12,12],[0,0],[false,false],0,\"namua\",null,\"\",[0,0],15,null]"
+    }
+  ],
+  "initial": {
+    "status": "UNKNOWN",
+    "winner": null
+  },
+  "interpretation": "Exhaustive 17th-move partition; FIFO cache eviction never changes state/depth keys or evicts certificate nodes. All legal split moves retained. Winning-player existence and opponent universal conditions are checked by normal engine. Budget stops and finite horizon refutations stay UNKNOWN. Not an initial-position or fairness proof."
+}
