@@ -1,0 +1,5 @@
+'use strict';
+// MIT. Normal engine enumeration only, not a proof.
+const fs=require('node:fs'),assert=require('node:assert/strict'),C=require('../v010-balance/core.cjs'),m=require('../v010-split014/manifest.json');
+const rows=m.roots.map(r=>{const one=C.S.moveVariants({board:r.state,history:[]}).map((move,i)=>{const state=C.S.apply({board:r.state,history:[]},move).board;assert.deepEqual(state,C.Q.applyMove(r.state,move).state);return {id:r.id+'-move-'+i,move,state};}),two=one.flatMap(c=>C.S.moveVariants({board:c.state,history:[]}).map(move=>C.S.apply({board:c.state,history:[]},move).board));return {id:r.id,state:r.state,onePly:one.length,twoPly:two.length,oneUnique:new Set(one.map(c=>C.Q.stateKey(c.state))).size,twoUnique:new Set(two.map(C.Q.stateKey)).size,one};});
+fs.writeFileSync(process.argv[2],JSON.stringify({classification:'READ-ONLY-LEGAL-PARTITION-NOT-PROOF',sourceManifestSha256:C.hash(fs.readFileSync('tools/v010-split014/manifest.json')),rows,newProofSearches:0},null,2)+'\n',{flag:'wx'});
