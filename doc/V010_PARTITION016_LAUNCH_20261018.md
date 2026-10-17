@@ -19,3 +19,7 @@
 - GitHubとローカルの139差分ファイルのtree一致を確認。結果branchはsourceと同じcommitから事前作成し、その後研究branchをsourceへ進めて一度だけ起動した。
 
 本追記は正式source確定後の起動記録で、固定計画・manifest・入力・方法を変更しない。正式runは旧記録監査→preflight→16目標→全階層集計→原記録保存の順に進む。起動時点では正式結果未確定。中断・失敗の場合は原記録を確認し、完成済みjobだけを再利用、未完はHOLDとする。無断のrun再試行・追加探索をしない。結果commitと独立再監査receiptは完了後に追記する。
+
+## 完了の追記
+
+正式runは2026年10月18日07時56分55秒JSTに全31job成功で完了。結果commit `e6cdfac8627df8e94ce81465ee6169bf600185a8` に130原ファイル・summary・receiptを保存した。PROVED1・WALL_BUDGET14・UNKNOWN1、新規1局面で後攻43着手以内。上位合成と初期配置は未確定。[結果報告](V010_PARTITION016_RESULTS_20261018.md)と[独立再監査receipt](v010-partition016/independent-reaudit.json)を参照。実際の統合・CIはPR #53を基準とする。元の起動記録・source・固定計画を保持する。
