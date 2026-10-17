@@ -1,0 +1,444 @@
+{
+  "decision": "SELECT-EXHAUSTIVE-EIGHT-LEAF-PARTITION",
+  "dateJST": "2026-10-18",
+  "baseline": "d6d5bb5a481c38d212c24b674e132dd31401ff91",
+  "comparisonSha256": "946708fa8bc81576369b83b1666f55d6a2c7f0dd6897d84e069e287e6f3dad2c",
+  "comparison": [
+    {
+      "group": "splitStop",
+      "roots": 8,
+      "uniqueRoots": 8,
+      "goals": 16,
+      "statuses": {
+        "NODE_BUDGET": 16
+      },
+      "visits": 200000,
+      "evictions": 0,
+      "certificates": 0
+    },
+    {
+      "group": "splitFifo",
+      "roots": 8,
+      "uniqueRoots": 8,
+      "goals": 16,
+      "statuses": {
+        "NODE_BUDGET": 16
+      },
+      "visits": 200000,
+      "evictions": 0,
+      "certificates": 0
+    },
+    {
+      "group": "deferred",
+      "roots": 4,
+      "uniqueRoots": 4,
+      "goals": 8,
+      "statuses": {
+        "TABLE_BUDGET": 8
+      },
+      "visits": 167122,
+      "evictions": 0,
+      "certificates": 0
+    },
+    {
+      "group": "held",
+      "roots": 18,
+      "uniqueRoots": 18,
+      "goals": 36,
+      "statuses": {
+        "NODE_BUDGET": 36
+      },
+      "visits": 199980,
+      "evictions": 0,
+      "certificates": 0
+    },
+    {
+      "group": "initial",
+      "roots": 14,
+      "uniqueRoots": 14,
+      "goals": 28,
+      "statuses": {
+        "NODE_BUDGET": 28
+      },
+      "visits": 199976,
+      "evictions": 0,
+      "certificates": 0
+    }
+  ],
+  "rationale": [
+    "All 104 screening goals remained unproved; this is not evidence that wins are absent.",
+    "Split stop and FIFO both exhausted visit ceilings with zero evictions: screening demonstrates no FIFO benefit.",
+    "Choose all eight legal first-player continuations of the two previously unresolved roots to expose independently auditable obligations and compose all required branches. This is a coverage decision, not an observed performance advantage.",
+    "Keep total formal visit and requested search-wall ceilings equal to 015 by allocating them over 16 goals. Each goal has less budget; no improvement is promised.",
+    "Four held children, 18 held original roots, and all initial 4 first moves / 14 replies remain valid alternative research targets. No screening certificate enters the formal book."
+  ],
+  "priorStages": [
+    {
+      "index": 0,
+      "target": 0,
+      "attempts": [
+        {
+          "tablePolicy": "fifo",
+          "evictions": 0,
+          "depth": 14,
+          "status": "NODE_BUDGET",
+          "visits": 200000,
+          "totalVisits": 200000,
+          "elapsedMs": 4333.541719000001,
+          "tableEntries": 98472,
+          "storedNodes": 737,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 99,
+          "disproofNumber": 314
+        },
+        {
+          "tablePolicy": "fifo",
+          "evictions": 0,
+          "depth": 18,
+          "status": "NODE_BUDGET",
+          "visits": 400000,
+          "totalVisits": 600000,
+          "elapsedMs": 8648.130988999997,
+          "tableEntries": 191056,
+          "storedNodes": 1500,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 129,
+          "disproofNumber": 548
+        },
+        {
+          "tablePolicy": "fifo",
+          "evictions": 0,
+          "depth": 22,
+          "status": "NODE_BUDGET",
+          "visits": 800000,
+          "totalVisits": 1400000,
+          "elapsedMs": 18088.004451,
+          "tableEntries": 376445,
+          "storedNodes": 3147,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 182,
+          "disproofNumber": 771
+        },
+        {
+          "tablePolicy": "fifo",
+          "evictions": 0,
+          "depth": 30,
+          "status": "NODE_BUDGET",
+          "visits": 1600000,
+          "totalVisits": 3000000,
+          "elapsedMs": 37794.32150800001,
+          "tableEntries": 742902,
+          "storedNodes": 6480,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 263,
+          "disproofNumber": 1059
+        },
+        {
+          "tablePolicy": "fifo",
+          "evictions": 0,
+          "depth": 46,
+          "status": "WALL_BUDGET",
+          "visits": 2149374,
+          "totalVisits": 5149374,
+          "elapsedMs": 50000.11036800002,
+          "tableEntries": 996228,
+          "storedNodes": 8980,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 304,
+          "disproofNumber": 1226
+        },
+        {
+          "tablePolicy": "fifo",
+          "evictions": 0,
+          "depth": 76,
+          "status": "WALL_BUDGET",
+          "visits": 2156814,
+          "totalVisits": 7306188,
+          "elapsedMs": 50000.059767,
+          "tableEntries": 999776,
+          "storedNodes": 9020,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 305,
+          "disproofNumber": 1232
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "target": 1,
+      "attempts": [
+        {
+          "tablePolicy": "fifo",
+          "evictions": 0,
+          "depth": 14,
+          "status": "NODE_BUDGET",
+          "visits": 200000,
+          "totalVisits": 200000,
+          "elapsedMs": 4330.030985000005,
+          "tableEntries": 100210,
+          "storedNodes": 1068,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 473,
+          "disproofNumber": 73
+        },
+        {
+          "tablePolicy": "fifo",
+          "evictions": 0,
+          "depth": 18,
+          "status": "NODE_BUDGET",
+          "visits": 400000,
+          "totalVisits": 600000,
+          "elapsedMs": 8601.75275,
+          "tableEntries": 190209,
+          "storedNodes": 2372,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 563,
+          "disproofNumber": 124
+        },
+        {
+          "tablePolicy": "fifo",
+          "evictions": 0,
+          "depth": 22,
+          "status": "NODE_BUDGET",
+          "visits": 800000,
+          "totalVisits": 1400000,
+          "elapsedMs": 17912.28511499999,
+          "tableEntries": 375550,
+          "storedNodes": 4589,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 771,
+          "disproofNumber": 180
+        },
+        {
+          "tablePolicy": "fifo",
+          "evictions": 0,
+          "depth": 30,
+          "status": "NODE_BUDGET",
+          "visits": 1600000,
+          "totalVisits": 3000000,
+          "elapsedMs": 36824.941296000005,
+          "tableEntries": 742829,
+          "storedNodes": 9296,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 1060,
+          "disproofNumber": 262
+        },
+        {
+          "tablePolicy": "fifo",
+          "evictions": 2450,
+          "depth": 46,
+          "status": "WALL_BUDGET",
+          "visits": 2162520,
+          "totalVisits": 5162520,
+          "elapsedMs": 50000.080923,
+          "tableEntries": 1000000,
+          "storedNodes": 12768,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 1232,
+          "disproofNumber": 305
+        },
+        {
+          "tablePolicy": "fifo",
+          "evictions": 512,
+          "depth": 76,
+          "status": "WALL_BUDGET",
+          "visits": 2158613,
+          "totalVisits": 7321133,
+          "elapsedMs": 50000.05585800001,
+          "tableEntries": 1000000,
+          "storedNodes": 12746,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 1232,
+          "disproofNumber": 305
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "target": 0,
+      "attempts": [
+        {
+          "tablePolicy": "fifo",
+          "evictions": 0,
+          "depth": 14,
+          "status": "NODE_BUDGET",
+          "visits": 200000,
+          "totalVisits": 200000,
+          "elapsedMs": 5182.337409,
+          "tableEntries": 99697,
+          "storedNodes": 557,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 160,
+          "disproofNumber": 46
+        },
+        {
+          "tablePolicy": "fifo",
+          "evictions": 0,
+          "depth": 18,
+          "status": "NODE_BUDGET",
+          "visits": 400000,
+          "totalVisits": 600000,
+          "elapsedMs": 10672.136180000001,
+          "tableEntries": 192930,
+          "storedNodes": 1143,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 445,
+          "disproofNumber": 164
+        },
+        {
+          "tablePolicy": "fifo",
+          "evictions": 0,
+          "depth": 22,
+          "status": "NODE_BUDGET",
+          "visits": 800000,
+          "totalVisits": 1400000,
+          "elapsedMs": 22227.70446399998,
+          "tableEntries": 375636,
+          "storedNodes": 2394,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 632,
+          "disproofNumber": 221
+        },
+        {
+          "tablePolicy": "fifo",
+          "evictions": 0,
+          "depth": 30,
+          "status": "NODE_BUDGET",
+          "visits": 1600000,
+          "totalVisits": 3000000,
+          "elapsedMs": 46183.62596100001,
+          "tableEntries": 727832,
+          "storedNodes": 5070,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 923,
+          "disproofNumber": 266
+        },
+        {
+          "tablePolicy": "fifo",
+          "evictions": 0,
+          "depth": 46,
+          "status": "WALL_BUDGET",
+          "visits": 1731470,
+          "totalVisits": 4731470,
+          "elapsedMs": 50000.13067099996,
+          "tableEntries": 785774,
+          "storedNodes": 5605,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 962,
+          "disproofNumber": 294
+        },
+        {
+          "tablePolicy": "fifo",
+          "evictions": 0,
+          "depth": 76,
+          "status": "WALL_BUDGET",
+          "visits": 1731084,
+          "totalVisits": 6462554,
+          "elapsedMs": 50000.14045299997,
+          "tableEntries": 785603,
+          "storedNodes": 5605,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 962,
+          "disproofNumber": 294
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "target": 1,
+      "attempts": [
+        {
+          "tablePolicy": "fifo",
+          "evictions": 0,
+          "depth": 14,
+          "status": "NODE_BUDGET",
+          "visits": 200000,
+          "totalVisits": 200000,
+          "elapsedMs": 4382.590878000003,
+          "tableEntries": 98176,
+          "storedNodes": 1387,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 108,
+          "disproofNumber": 237
+        },
+        {
+          "tablePolicy": "fifo",
+          "evictions": 0,
+          "depth": 18,
+          "status": "NODE_BUDGET",
+          "visits": 400000,
+          "totalVisits": 600000,
+          "elapsedMs": 8731.57405000001,
+          "tableEntries": 192987,
+          "storedNodes": 2649,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 169,
+          "disproofNumber": 439
+        },
+        {
+          "tablePolicy": "fifo",
+          "evictions": 0,
+          "depth": 22,
+          "status": "NODE_BUDGET",
+          "visits": 800000,
+          "totalVisits": 1400000,
+          "elapsedMs": 18066.178371,
+          "tableEntries": 376773,
+          "storedNodes": 5842,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 226,
+          "disproofNumber": 626
+        },
+        {
+          "tablePolicy": "fifo",
+          "evictions": 0,
+          "depth": 30,
+          "status": "NODE_BUDGET",
+          "visits": 1600000,
+          "totalVisits": 3000000,
+          "elapsedMs": 37246.22026999999,
+          "tableEntries": 731472,
+          "storedNodes": 13015,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 289,
+          "disproofNumber": 922
+        },
+        {
+          "tablePolicy": "fifo",
+          "evictions": 0,
+          "depth": 46,
+          "status": "WALL_BUDGET",
+          "visits": 2150615,
+          "totalVisits": 5150615,
+          "elapsedMs": 50000.08652499999,
+          "tableEntries": 948496,
+          "storedNodes": 18738,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 246,
+          "disproofNumber": 1085
+        },
+        {
+          "tablePolicy": "fifo",
+          "evictions": 0,
+          "depth": 76,
+          "status": "WALL_BUDGET",
+          "visits": 2114606,
+          "totalVisits": 7265221,
+          "elapsedMs": 50000.063326,
+          "tableEntries": 933934,
+          "storedNodes": 18336,
+          "finiteHorizonRefuted": false,
+          "proofNumber": 242,
+          "disproofNumber": 1076
+        }
+      ]
+    }
+  ],
+  "limits": {
+    "goals": 16,
+    "totalVisits": 40000000,
+    "requestedSearchWallMs": 1200000,
+    "perGoalTableEntries": 250000
+  },
+  "formalJobsStarted": 0
+}
