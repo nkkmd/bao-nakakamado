@@ -1,0 +1,45 @@
+{
+  "decision": "SELECT-ALL-TWO-LEGAL-16TH-MOVE-SUCCESSORS",
+  "sourcePilot": "pilot.json",
+  "stats": {
+    "direct": {
+      "goals": 2,
+      "statuses": {
+        "NODE_BUDGET": 2
+      },
+      "visits": 400000,
+      "elapsedMs": 7579.98933099999,
+      "heapBeforeBytesMin": 454322672,
+      "heapBeforeBytesMax": 454334576
+    },
+    "split": {
+      "goals": 4,
+      "statuses": {
+        "NODE_BUDGET": 4
+      },
+      "visits": 400000,
+      "elapsedMs": 7312.999355000022,
+      "heapBeforeBytesMin": 454300576,
+      "heapBeforeBytesMax": 454337960
+    },
+    "initial": {
+      "goals": 28,
+      "statuses": {
+        "NODE_BUDGET": 28
+      },
+      "visits": 399980,
+      "elapsedMs": 5672.223993000036,
+      "heapBeforeBytesMin": 454323992,
+      "heapBeforeBytesMax": 456924448
+    }
+  },
+  "reason": "All 34 goals stopped at visit budgets without proof. No speedup or proof-yield claim. Choose the complete two-reply partition because this sole missing 15th-move branch could complete an original response root and then one 13th-move parent; four formal goals keep the scope bounded.",
+  "excludedPilot": "preliminary-pilot/receipt.json",
+  "initialCoverage": {
+    "firstMoves": 4,
+    "responses": 14,
+    "status": "UNKNOWN"
+  },
+  "formalBookExcludesPilotCertificates": true,
+  "formalJobsAtSelection": 0
+}

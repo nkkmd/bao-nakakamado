@@ -1,0 +1,10 @@
+{
+  "classification": "EXCLUDED-PREPARATION-TEST-FAILURE",
+  "originalFile": "preliminary-check.log",
+  "originalBytes": 2540,
+  "originalSha256": "2ec492ebc61df88b012c123261b2029dfbeda1777d58f5e351f1a44cf0ade7ce",
+  "archive": "preliminary-check.log.gz",
+  "archiveSha256": "eb4d0cecbfb2be4f2141c24fea244c028f872a188d355a6c3f823acdea2325f5",
+  "reason": "Original failing-test log retained as exact gzip bytes; original blank-line whitespace is preserved without treating raw log text as source whitespace. Fixed fixture and passing checks are separately retained.",
+  "formalJobs": 0
+}

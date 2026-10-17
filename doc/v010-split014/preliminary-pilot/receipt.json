@@ -1,0 +1,12 @@
+{
+  "classification": "EXCLUDED-PILOT-RESOURCE-CARRYOVER",
+  "reason": "No per-goal GC in sequential pilot; memory carried over, 33 of 34 goals stopped before any visits. Not a speed or solvability comparison. Corrected pilot uses explicit GC before each goal and retains the same search limits.",
+  "formalJobs": 0,
+  "newGames": 0,
+  "originalSources": {
+    "tools/v010-split014/pilot.cjs": "d1dcc0e051286049314c4a7ebb5c00b6d62ead688f500cfbb39b540b731cff4a",
+    "tools/v010-split014/inputs.cjs": "2c115dcc7fed8379c1c40e494a6e142c249d55107a2a020563a1efe0f5c5df66",
+    "tools/v010-split014/schedule.cjs": "24dcd60735623facd6bb6704bd76af0fa6c738072447adf6030b1f79af08e4b6",
+    "tools/v010-pn007/prover.cjs": "64f4f0e924ea0baaf052039e47523fa94cd001f5da0abe166cca28708b18c7ae"
+  }
+}
