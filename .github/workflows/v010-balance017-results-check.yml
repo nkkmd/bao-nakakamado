@@ -1,0 +1,28 @@
+name: v0.10.0 study017 completed results audit
+on:
+  push:
+    branches: ['main', 'research/v010-balance017-results-20261018']
+    paths: ['tools/v010-*/**', 'doc/V010_*', 'doc/v010-*/**', '.github/workflows/v010-*.yml']
+  pull_request:
+    paths: ['tools/v010-*/**', 'doc/V010_*', 'doc/v010-*/**', '.github/workflows/v010-*.yml']
+permissions:
+  contents: read
+jobs:
+  audit017:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Independently replay preserved games and verify immutable result bytes
+        run: python3 tools/v010-balance017/reaudit.py doc/v010-balance017/completed 81232071da28e2a7eeda09c4260aa4ed9b723dde 033d309e42f6c9396207d96699a828511bb38e9c 39082844578
+      - name: Independently recompute statistics and render report without searches
+        run: |
+          python3 tools/v010-balance017-results/analyse.py
+          python3 tools/v010-balance017-results/report.py
+          git diff --exit-code -- doc/v010-balance017/results-analysis.json doc/V010_BALANCE017_RESULTS_20261018.md
+          git diff --check

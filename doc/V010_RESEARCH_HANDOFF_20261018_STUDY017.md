@@ -1,5 +1,7 @@
 # v0.10.0：実戦バランス評価への切替・調査017の引き継ぎ
 
+> 完了追記：017正式試験は全50 job成功、1,440組・2,880局を保存し、独立再生監査とPython原記録再集計が一致した。[結果報告](V010_BALANCE017_RESULTS_20261018.md)。実戦全体は判断保留、初期理論値はUNKNOWN。以下の「実行中」は起動時点の履歴であり、未完jobはない。結果統合PRは別途CIで監査する。
+
 記録日：2026年10月18日（Asia/Tokyo）。旧main基準 `f8048a7f37f7ef63a2a0df5f022878fae798c230`、[016までの完了記録と全14監査手順](V010_RESEARCH_HANDOFF_20261018_STUDY016.md)を保持する。[再整理](V010_BALANCE_REASSESSMENT_20261018.md)／[017計画](V010_BALANCE017_PLAN_20261018.md)／[manifest](../tools/v010-balance017/manifest.json)／[起動記録](V010_BALANCE017_LAUNCH_20261018.md)／[PR #55](https://github.com/nkkmd/bao-nakakamado/pull/55)。
 
 ## 実行中の正式試験
