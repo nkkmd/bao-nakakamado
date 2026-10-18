@@ -2,6 +2,12 @@
 
 記録日：2026年10月18日（Asia/Tokyo）。旧main基準 `f8048a7f37f7ef63a2a0df5f022878fae798c230`、[016までの完了記録と全14監査手順](V010_RESEARCH_HANDOFF_20261018_STUDY016.md)を保持する。[再整理](V010_BALANCE_REASSESSMENT_20261018.md)／[017計画](V010_BALANCE017_PLAN_20261018.md)／[manifest](../tools/v010-balance017/manifest.json)／[起動記録](V010_BALANCE017_LAUNCH_20261018.md)／[PR #55](https://github.com/nkkmd/bao-nakakamado/pull/55)。
 
+## 実行中の正式試験
+
+017を[run 39082844578](https://github.com/nkkmd/bao-nakakamado/actions/runs/39082844578)で起動した。source SHAは `033d309e42f6c9396207d96699a828511bb38e9c`、manifest digestは `680a7565d7cb21078e2342ab30cbac37c1b59614e7dfe223cc861752a15fa53d`。preflight成功後に4分割が計測を開始した。1,440組・2,880局を予定し、正式結果はまだない。sourceから事前作成した結果branchは `results/v010-balance-study-017`。未完jobを再起動しない。
+
+[全14監査receipt](v010-balance017/prior-14-reaudit.json)はPR #55のCI全14job成功を記録する。旧正式対局・証明jobは再実行していない。
+
 ## 現在の結論
 
 - 実戦上の先後差によるバランス破綻：**判断保留**。既存AI条件で大きな差があるが、探索量と初手／応手で勝者が反転し、対抗策不在は未確認。
@@ -31,5 +37,7 @@
 5. 結果を踏まえ、初期理論解析の次対象と必要な対抗確認試験を新IDで固定する。局所証明を増やすだけで研究完了にしない。017の正式完了前に同じ計算を再起動しない。
 
 公開ルール・初期配置・公開AIは変更していない。研究用の全root同評価選択と可動性評価を公開AIの成績へ読み替えない。次の正式IDは018候補で、計画・予算・manifestは未固定。
+
+2026年10月18日追記：ローカル独立の全14監査も全件成功しました。[独立監査receipt](v010-balance017/local-prior-14-reaudit.json)と原出力を保存しました。新規対局・証明探索0。正式起動時の[機械可読receipt](v010-balance017/launch-receipt.json)にはsource・run・preflight成功・最初の4計測stepの開始を記録しています。
 
 本文 © 2026 nkkmd and Bao Nakakamado contributors、[CC BY-SA 4.0](../LICENSE-CC-BY-SA-4.0.txt)。
