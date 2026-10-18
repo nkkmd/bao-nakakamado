@@ -1,0 +1,28 @@
+name: v0.10.0 study018 integration checks
+on:
+  pull_request:
+    paths: ['tools/v010-balance018/**', 'doc/V010_BALANCE*', 'doc/v010-balance018/**', '.github/workflows/v010-balance018-*.yml']
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --test tools/v010-balance018/check.test.cjs
+      - name: Verify operational pilot and frozen manifest when sealed
+        run: |
+          if test -f tools/v010-balance018/manifest.json; then
+            node tools/v010-balance018/pilot.cjs verify doc/v010-balance018/pilot
+            node tools/v010-balance018/freeze.cjs
+            node tools/v010-balance018/study.cjs manifest
+          else
+            echo 'UNSEALED: operational pilot only; formal study cannot pass preflight'
+          fi
+      - run: git diff --exit-code e5180b02cc18d560e602f978f9c2d82d2e0561e2 -- prototype trials tools/v010-balance017 tools/v010-followup tools/v010-balance doc/v010-balance017

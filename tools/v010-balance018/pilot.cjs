@@ -1,0 +1,18 @@
+'use strict';
+// MIT. Separate operational pilot; collect only replays completed bytes.
+const fs=require('node:fs'),path=require('node:path'),z=require('node:zlib'),assert=require('node:assert/strict'),os=require('node:os');
+const T=require('./study.cjs'),K=require('../v010-followup/core.cjs'),{C}=K;
+function verify(out){let games=0;const rows=[];const sources=new Set(),runs=new Set();
+ for(const [i,cell]of T.cells().entries()){
+ const file=`pilot-${i}.json.gz`,raw=fs.readFileSync(path.join(out,file)),row=JSON.parse(z.gunzipSync(raw)),receipt=JSON.parse(fs.readFileSync(path.join(out,`pilot-receipt-${i}.json`)));
+ const seed=parseInt(C.hash(['BALANCE018-OPERATIONAL-PILOT-v1',cell.id]).slice(0,8),16);assert.equal(row.seed,seed);assert.equal(row.classification,'OPERATIONAL-NOT-FORMAL');assert.deepEqual(row.cell,cell);assert.deepEqual(receipt.sources,T.fingerprint());assert.equal(receipt.sha256,C.hash(raw));sources.add(receipt.sourceCommit);runs.add(receipt.runId);assert.equal(row.games.length,2);
+ row.games.forEach((g,side)=>{assert.equal(g.firstPlayer,side);assert.equal(g.seed,seed);assert.equal(g.profile,cell.profiles.map(p=>p.id).join('/'));K.audit(g,cell.opening,cell.profiles);games++;});assert.equal(row.games[0].trajectory,row.games[1].trajectory);assert.deepEqual(row.games[1].final,C.mirror(row.games[0].final));assert.deepEqual(receipt.operations,C.operations(row.games));rows.push({...receipt,file,cellId:cell.id});
+ }assert.equal(sources.size,1);assert.equal(runs.size,1);return {classification:'OPERATIONAL-NOT-FORMAL',sourceCommit:[...sources][0],runId:[...runs][0],gamesVerified:games,newGames:0,newProofSearches:0,rows,projectedShardMs:rows.reduce((s,r)=>s+r.pairElapsedMs,0),projectedRunnerMs:rows.reduce((s,r)=>s+r.pairElapsedMs,0)*64};}
+const [cmd,out,arg]=process.argv.slice(2);
+if(cmd==='pair'){
+ const i=Number(arg),cell=T.cells()[i];assert.ok(cell);fs.mkdirSync(out,{recursive:true});const file=`pilot-${i}.json.gz`;assert.ok(!fs.existsSync(path.join(out,file)));assert.ok(!fs.existsSync(path.join(out,file+'.started')));fs.writeFileSync(path.join(out,file+'.started'),JSON.stringify({cell:cell.id}),{flag:'wx'});
+ const seed=parseInt(C.hash(['BALANCE018-OPERATIONAL-PILOT-v1',cell.id]).slice(0,8),16),begin=performance.now(),games=[0,1].map(side=>K.play(cell.opening,cell.profiles,seed,side));const raw=z.gzipSync(JSON.stringify({classification:'OPERATIONAL-NOT-FORMAL',cell,seed,games}),{level:9});fs.writeFileSync(path.join(out,file),raw,{flag:'wx'});
+ const receipt={sourceCommit:process.env.GITHUB_SHA||null,runId:process.env.GITHUB_RUN_ID||null,sources:T.fingerprint(),sha256:C.hash(raw),pairElapsedMs:performance.now()-begin,peakRssBytes:process.resourceUsage().maxRSS*1024,bytes:raw.length,operations:C.operations(games),environment:{node:process.version,cpu:os.cpus()[0]?.model}};fs.writeFileSync(path.join(out,`pilot-receipt-${i}.json`),JSON.stringify(receipt,null,2)+'\n');console.log(JSON.stringify({cell:cell.id,pairElapsedMs:receipt.pairElapsedMs}));
+}else if(cmd==='collect'){const r=verify(out);fs.writeFileSync(path.join(out,'pilot.json'),JSON.stringify(r,null,2)+'\n');console.log(JSON.stringify({gamesVerified:r.gamesVerified,projectedShardMinutes:r.projectedShardMs/60000,projectedRunnerHours:r.projectedRunnerMs/3600000}));}
+else if(cmd==='verify'){const r=verify(out);assert.deepEqual(JSON.parse(fs.readFileSync(path.join(out,'pilot.json'))),r);console.log(JSON.stringify({status:'PILOT-48-INDEPENDENT-NORMAL-REPLAYS-VERIFIED',gamesVerified:r.gamesVerified,newGames:0,newProofSearches:0}));}
+else throw Error('pair|collect|verify');
