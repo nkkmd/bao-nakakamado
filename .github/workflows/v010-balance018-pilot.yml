@@ -1,0 +1,76 @@
+name: v0.10.0 study018 operational pilot
+on:
+  push:
+    branches: ['research/v010-balance018-20261018']
+permissions:
+  contents: read
+jobs:
+  preflight:
+    if: startsWith(github.event.head_commit.message, 'Start v0.10.0 balance study 018 operational pilot') && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --test tools/v010-balance018/check.test.cjs
+      - run: test "$(git ls-remote origin refs/heads/results/v010-balance018-pilot | cut -f1)" = "$GITHUB_SHA"
+  pilot:
+    needs: preflight
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        cell: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node tools/v010-balance018/pilot.cjs pair "$RUNNER_TEMP/pilot" "${{ matrix.cell }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v010-balance018-pilot-${{ matrix.cell }}
+          path: ${{ runner.temp }}/pilot/
+          retention-days: 90
+  collect:
+    needs: pilot
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: v010-balance018-pilot-*
+          merge-multiple: true
+          path: doc/v010-balance018/pilot
+      - run: node tools/v010-balance018/pilot.cjs collect doc/v010-balance018/pilot
+      - run: node tools/v010-balance018/pilot.cjs verify doc/v010-balance018/pilot
+      - name: Preserve exact operational bytes, no formal games
+        run: |
+          test "$(git ls-remote origin refs/heads/results/v010-balance018-pilot | cut -f1)" = "$GITHUB_SHA"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git switch -c results/v010-balance018-pilot
+          git add doc/v010-balance018/pilot
+          git commit -m 'Preserve study018 operational pilot originals'
+          git push origin HEAD:refs/heads/results/v010-balance018-pilot
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v010-balance018-pilot-preserved
+          path: doc/v010-balance018/pilot/
+          retention-days: 90
