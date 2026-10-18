@@ -1,0 +1,135 @@
+{
+  "classification": "OPERATIONAL-PILOT-NOT-FORMAL",
+  "node": "v24.19.0",
+  "cpu": "AMD EPYC 9V74 80-Core Processor",
+  "rows": [
+    {
+      "profile": "base-2048",
+      "pairElapsedMs": 24642.313636,
+      "sha256": "d250647d84b6fe305d46d69e7af71b41cd62591fef3feea9da9fbc49f393f9ae",
+      "file": "base-2048.json.gz",
+      "operations": {
+        "games": 2,
+        "turns": 126,
+        "searchTurns": 126,
+        "depthZero": 0,
+        "medianDepth": 5,
+        "p95Ms": 349.14804300000014,
+        "maxMs": 433.57997199999954,
+        "uniqueTrajectories": 1,
+        "distinctFirstMoves": 1,
+        "normal": 2,
+        "safetyStops": 0,
+        "repeats": 0,
+        "plyLimits": 0
+      }
+    },
+    {
+      "profile": "base-8192",
+      "pairElapsedMs": 63569.904137000005,
+      "sha256": "59525465994fa4c1aa8b0198097492e22b18c25a4e5e9d9bd96fc74283101aaa",
+      "file": "base-8192.json.gz",
+      "operations": {
+        "games": 2,
+        "turns": 76,
+        "searchTurns": 76,
+        "depthZero": 0,
+        "medianDepth": 6,
+        "p95Ms": 1476.494955000002,
+        "maxMs": 1655.276353000001,
+        "uniqueTrajectories": 1,
+        "distinctFirstMoves": 1,
+        "normal": 2,
+        "safetyStops": 0,
+        "repeats": 0,
+        "plyLimits": 0
+      }
+    },
+    {
+      "profile": "base-32768",
+      "pairElapsedMs": 263060.229259,
+      "sha256": "d744d2903a085493600bb7c483e422afc3deb86db01f7053e039048cb04f6d8a",
+      "file": "base-32768.json.gz",
+      "operations": {
+        "games": 2,
+        "turns": 80,
+        "searchTurns": 80,
+        "depthZero": 0,
+        "medianDepth": 9,
+        "p95Ms": 4409.2596360000025,
+        "maxMs": 5287.57778500003,
+        "uniqueTrajectories": 1,
+        "distinctFirstMoves": 1,
+        "normal": 2,
+        "safetyStops": 0,
+        "repeats": 0,
+        "plyLimits": 0
+      }
+    },
+    {
+      "profile": "mobility-2048",
+      "pairElapsedMs": 14583.44219599996,
+      "sha256": "28cf8cf9a4ba52c65564c6e8784ba266df94a1478f7d59d0b2a80556afc382ca",
+      "file": "mobility-2048.json.gz",
+      "operations": {
+        "games": 2,
+        "turns": 88,
+        "searchTurns": 88,
+        "depthZero": 0,
+        "medianDepth": 6,
+        "p95Ms": 264.0068930000416,
+        "maxMs": 301.2051109999884,
+        "uniqueTrajectories": 1,
+        "distinctFirstMoves": 1,
+        "normal": 2,
+        "safetyStops": 0,
+        "repeats": 0,
+        "plyLimits": 0
+      }
+    },
+    {
+      "profile": "mobility-8192",
+      "pairElapsedMs": 65750.21577499999,
+      "sha256": "1003f02e1309687035b7bf0176a4b7e502a4b625e1f69be3a0da49a27daec69c",
+      "file": "mobility-8192.json.gz",
+      "operations": {
+        "games": 2,
+        "turns": 64,
+        "searchTurns": 64,
+        "depthZero": 0,
+        "medianDepth": 5,
+        "p95Ms": 1652.3308819999802,
+        "maxMs": 1771.1660339999944,
+        "uniqueTrajectories": 1,
+        "distinctFirstMoves": 1,
+        "normal": 2,
+        "safetyStops": 0,
+        "repeats": 0,
+        "plyLimits": 0
+      }
+    },
+    {
+      "profile": "mobility-32768",
+      "pairElapsedMs": 299679.016591,
+      "sha256": "7222e5c6161b644aebc566a5821f60eecd15634596edeb06d08c28d4fa62739e",
+      "file": "mobility-32768.json.gz",
+      "operations": {
+        "games": 2,
+        "turns": 80,
+        "searchTurns": 80,
+        "depthZero": 0,
+        "medianDepth": 8,
+        "p95Ms": 5383.646408999979,
+        "maxMs": 6595.379325999995,
+        "uniqueTrajectories": 1,
+        "distinctFirstMoves": 1,
+        "normal": 2,
+        "safetyStops": 0,
+        "repeats": 0,
+        "plyLimits": 0
+      }
+    }
+  ],
+  "newGames": 12,
+  "notUsedForWinRateOrPolicySelection": true
+}

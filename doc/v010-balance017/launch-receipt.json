@@ -1,0 +1,45 @@
+{
+  "study": "NAKAKAMADO-V010-BALANCE-017",
+  "sourceCommit": "033d309e42f6c9396207d96699a828511bb38e9c",
+  "manifestDigest": "680a7565d7cb21078e2342ab30cbac37c1b59614e7dfe223cc861752a15fa53d",
+  "runId": 39082844578,
+  "runAttempt": 1,
+  "createdAtUTC": "2026-10-18T00:27:53Z",
+  "createdAtAsiaTokyo": "2026-10-18T09:27:53+09:00",
+  "resultsBranch": "results/v010-balance-study-017",
+  "plannedPairs": 1440,
+  "plannedGames": 2880,
+  "plannedShards": 48,
+  "preflight": [
+    {
+      "id": 117543217793,
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "initialMeasuringJobs": [
+    {
+      "id": 117543265887,
+      "name": "matches (3)",
+      "measurementStepStarted": true
+    },
+    {
+      "id": 117543265898,
+      "name": "matches (1)",
+      "measurementStepStarted": true
+    },
+    {
+      "id": 117543265939,
+      "name": "matches (0)",
+      "measurementStepStarted": true
+    },
+    {
+      "id": 117543266064,
+      "name": "matches (2)",
+      "measurementStepStarted": true
+    }
+  ],
+  "state": "IN-PROGRESS-NOT-A-COMPLETED-RESULT",
+  "initialTheoreticalValue": "UNKNOWN",
+  "practicalBalanceAssessment": "HOLD"
+}

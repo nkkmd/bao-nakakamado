@@ -1,0 +1,26 @@
+name: v0.10.0 study 017 integration checks
+on:
+  pull_request:
+    paths: ['tools/v010-balance017/**', 'doc/V010_BALANCE*', 'doc/v010-balance017/**', '.github/workflows/v010-balance017-*.yml']
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --test tools/v010-balance017/check.test.cjs
+      - run: node tools/v010-balance017/verify-pilot.cjs
+      - run: node tools/v010-balance017/freeze.cjs
+      - run: node tools/v010-balance017/study.cjs manifest
+      - run: python3 tools/v010-balance017/reanalyse.py
+      - run: python3 tools/v010-balance017/verify-reanalysis.py
+      - run: python3 tools/v010-balance017/report.py
+      - run: git diff --exit-code -- doc/v010-balance017/exploratory-reanalysis.json doc/v010-balance017/reanalysis-reaudit.json doc/V010_BALANCE_REASSESSMENT_20261018.md
+      - run: git diff --exit-code f8048a7f37f7ef63a2a0df5f022878fae798c230 -- prototype trials tools/v010-balance tools/v010-followup

@@ -1,0 +1,3416 @@
+{
+  "classification": "EXPLORATORY-READONLY-NOT-CONFIRMATORY",
+  "baseline": "f8048a7f37f7ef63a2a0df5f022878fae798c230",
+  "formalManifest": "be9e0d009a4103ce65cba23e34a7e9e1d99538bc4ff8ef0796c387da3d7dedbe",
+  "sourceArchiveSha256": "a324da31ee7f193e1accf38128e0223fdb3d31abc4056844f4667da5f2fdeefc",
+  "newGames": 0,
+  "newProofSearches": 0,
+  "profiles": [
+    {
+      "profile": {
+        "id": "primary-8192",
+        "kind": "research",
+        "role": "primary",
+        "nodes": 8192,
+        "pairs": 4096
+      },
+      "pairs": 4096,
+      "games": 8192,
+      "firstWins": 0,
+      "secondWins": 8192,
+      "stops": {
+        "normal-terminal": 8192
+      },
+      "naturalOpenings": {
+        "takata:namua:0:5:right:::false -> takata:namua:0:6:right:::false": 8192
+      },
+      "uniqueSeeds": 4096,
+      "seedCollisions": 0,
+      "seatSymmetryFailures": 0,
+      "distinctNormalizedTrajectories": 143,
+      "largestTrajectoryClusterPairs": 663,
+      "duplicateTrajectoryPairs": 3953,
+      "firstDivergentPrefixPly": 34,
+      "actualSearch": {
+        "turns": 311296,
+        "medianNodes": 8192,
+        "maxNodes": 8192,
+        "medianDepth": 6,
+        "depthZero": 0,
+        "elapsedP50Ms": 663.3605560001452,
+        "elapsedP95Ms": 1306.5481859999709
+      }
+    },
+    {
+      "profile": {
+        "id": "low-512",
+        "kind": "research",
+        "role": "supplementary",
+        "nodes": 512,
+        "pairs": 512
+      },
+      "pairs": 512,
+      "games": 1024,
+      "firstWins": 0,
+      "secondWins": 1024,
+      "stops": {
+        "normal-terminal": 1024
+      },
+      "naturalOpenings": {
+        "takata:namua:0:5:right:::false -> takata:namua:0:6:left:::false": 1024
+      },
+      "uniqueSeeds": 512,
+      "seedCollisions": 0,
+      "seatSymmetryFailures": 0,
+      "distinctNormalizedTrajectories": 14,
+      "largestTrajectoryClusterPairs": 67,
+      "duplicateTrajectoryPairs": 498,
+      "firstDivergentPrefixPly": 50,
+      "actualSearch": {
+        "turns": 55296,
+        "medianNodes": 512,
+        "maxNodes": 512,
+        "medianDepth": 4,
+        "depthZero": 0,
+        "elapsedP50Ms": 32.71328600007109,
+        "elapsedP95Ms": 84.04840600001626
+      }
+    },
+    {
+      "profile": {
+        "id": "middle-2048",
+        "kind": "research",
+        "role": "supplementary",
+        "nodes": 2048,
+        "pairs": 512
+      },
+      "pairs": 512,
+      "games": 1024,
+      "firstWins": 1024,
+      "secondWins": 0,
+      "stops": {
+        "normal-terminal": 1024
+      },
+      "naturalOpenings": {
+        "takata:namua:0:6:right:::false -> takata:namua:0:6:right:::false": 1024
+      },
+      "uniqueSeeds": 512,
+      "seedCollisions": 0,
+      "seatSymmetryFailures": 0,
+      "distinctNormalizedTrajectories": 225,
+      "largestTrajectoryClusterPairs": 41,
+      "duplicateTrajectoryPairs": 287,
+      "firstDivergentPrefixPly": 57,
+      "actualSearch": {
+        "turns": 64512,
+        "medianNodes": 2048,
+        "maxNodes": 2048,
+        "medianDepth": 5,
+        "depthZero": 0,
+        "elapsedP50Ms": 141.02147000003606,
+        "elapsedP95Ms": 285.4777180000674
+      }
+    }
+  ],
+  "openingCoverage": [
+    {
+      "id": "opening-0-0",
+      "firstIndex": 0,
+      "replyIndex": 0,
+      "moves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "right",
+          "side": "left"
+        }
+      ],
+      "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,1,0,7,0,2,0],[0,0,0,0,0,0,0,0]],[[1,0,0,0,7,2,2,0],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+      "formal10240Games": 0,
+      "study001Cells": [
+        {
+          "openingId": "opening-0-0",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 148,
+          "searchTurns": 140,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-0-0",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 144,
+          "searchTurns": 136,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-0-0",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 128,
+          "searchTurns": 120,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-0-0",
+          "forced": true,
+          "first": "base-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 1,
+          "turns": 212,
+          "searchTurns": 204,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-0-0",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 168,
+          "searchTurns": 160,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-0-0",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 120,
+          "searchTurns": 112,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-0-0",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 192,
+          "searchTurns": 184,
+          "depthZero": 0,
+          "interpretationHold": false
+        }
+      ]
+    },
+    {
+      "id": "opening-0-1",
+      "firstIndex": 0,
+      "replyIndex": 1,
+      "moves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right"
+        }
+      ],
+      "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,1,0,7,0,2,0],[0,0,0,0,0,0,0,0]],[[0,0,0,0,7,2,2,1],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+      "formal10240Games": 0,
+      "study001Cells": [
+        {
+          "openingId": "opening-0-1",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 1,
+          "turns": 144,
+          "searchTurns": 136,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-0-1",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 168,
+          "searchTurns": 160,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-0-1",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 204,
+          "searchTurns": 196,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-0-1",
+          "forced": true,
+          "first": "base-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 232,
+          "searchTurns": 224,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-0-1",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 168,
+          "searchTurns": 160,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-0-1",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 152,
+          "searchTurns": 144,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-0-1",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 268,
+          "searchTurns": 260,
+          "depthZero": 0,
+          "interpretationHold": false
+        }
+      ]
+    },
+    {
+      "id": "opening-0-2",
+      "firstIndex": 0,
+      "replyIndex": 2,
+      "moves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right",
+          "side": "left"
+        }
+      ],
+      "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,1,7,0,2,0],[0,0,0,0,0,0,0,0]],[[1,0,0,0,6,3,2,0],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+      "formal10240Games": 0,
+      "study001Cells": [
+        {
+          "openingId": "opening-0-2",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 216,
+          "searchTurns": 208,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-0-2",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 172,
+          "searchTurns": 164,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-0-2",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 268,
+          "searchTurns": 260,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-0-2",
+          "forced": true,
+          "first": "base-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 216,
+          "searchTurns": 208,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-0-2",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 1,
+          "turns": 212,
+          "searchTurns": 204,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-0-2",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 148,
+          "searchTurns": 140,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-0-2",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 164,
+          "searchTurns": 156,
+          "depthZero": 0,
+          "interpretationHold": false
+        }
+      ]
+    },
+    {
+      "id": "opening-0-3",
+      "firstIndex": 0,
+      "replyIndex": 3,
+      "moves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left",
+          "side": "right"
+        }
+      ],
+      "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,1,7,0,2,0],[0,0,0,0,0,0,0,0]],[[0,0,0,0,6,3,2,1],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+      "formal10240Games": 0,
+      "study001Cells": [
+        {
+          "openingId": "opening-0-3",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 144,
+          "searchTurns": 136,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-0-3",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 168,
+          "searchTurns": 160,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-0-3",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 1,
+          "turns": 160,
+          "searchTurns": 152,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-0-3",
+          "forced": true,
+          "first": "base-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 144,
+          "searchTurns": 136,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-0-3",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 140,
+          "searchTurns": 132,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-0-3",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 132,
+          "searchTurns": 124,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-0-3",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 156,
+          "searchTurns": 148,
+          "depthZero": 0,
+          "interpretationHold": false
+        }
+      ]
+    },
+    {
+      "id": "opening-1-0",
+      "firstIndex": 1,
+      "replyIndex": 0,
+      "moves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        }
+      ],
+      "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,6,0,3,1],[0,0,0,0,0,0,0,1]],[[0,0,1,1,7,0,2,0],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+      "formal10240Games": 0,
+      "study001Cells": [
+        {
+          "openingId": "opening-1-0",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 160,
+          "searchTurns": 152,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-1-0",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 1,
+          "turns": 164,
+          "searchTurns": 156,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-1-0",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 180,
+          "searchTurns": 172,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-1-0",
+          "forced": true,
+          "first": "base-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 188,
+          "searchTurns": 180,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-1-0",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 128,
+          "searchTurns": 120,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-1-0",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 152,
+          "searchTurns": 144,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-1-0",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 204,
+          "searchTurns": 196,
+          "depthZero": 0,
+          "interpretationHold": false
+        }
+      ]
+    },
+    {
+      "id": "opening-1-1",
+      "firstIndex": 1,
+      "replyIndex": 1,
+      "moves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        }
+      ],
+      "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,6,0,3,1],[0,0,0,0,0,0,0,1]],[[0,0,0,0,6,0,3,1],[0,0,0,0,0,0,0,1]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+      "formal10240Games": 0,
+      "study001Cells": [
+        {
+          "openingId": "opening-1-1",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 1,
+          "turns": 136,
+          "searchTurns": 128,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-1-1",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 1,
+          "turns": 152,
+          "searchTurns": 144,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-1-1",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 252,
+          "searchTurns": 244,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-1-1",
+          "forced": true,
+          "first": "base-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 148,
+          "searchTurns": 140,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-1-1",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 160,
+          "searchTurns": 152,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-1-1",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 192,
+          "searchTurns": 184,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-1-1",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 168,
+          "searchTurns": 160,
+          "depthZero": 0,
+          "interpretationHold": false
+        }
+      ]
+    },
+    {
+      "id": "opening-1-2",
+      "firstIndex": 1,
+      "replyIndex": 2,
+      "moves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left"
+        }
+      ],
+      "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,6,0,3,1],[0,0,0,0,0,0,0,1]],[[0,0,0,1,7,3,0,0],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+      "formal10240Games": 1024,
+      "study001Cells": [
+        {
+          "openingId": "opening-1-2",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 180,
+          "searchTurns": 172,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-1-2",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 256,
+          "searchTurns": 248,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-1-2",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 160,
+          "searchTurns": 152,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-1-2",
+          "forced": true,
+          "first": "base-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 160,
+          "searchTurns": 152,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-1-2",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 144,
+          "searchTurns": 136,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-1-2",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 216,
+          "searchTurns": 208,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-1-2",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 172,
+          "searchTurns": 164,
+          "depthZero": 0,
+          "interpretationHold": false
+        }
+      ]
+    },
+    {
+      "id": "opening-1-3",
+      "firstIndex": 1,
+      "replyIndex": 3,
+      "moves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "right"
+        }
+      ],
+      "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,6,0,3,1],[0,0,0,0,0,0,0,1]],[[0,0,0,0,6,2,0,1],[0,0,0,0,0,0,1,1]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+      "formal10240Games": 8192,
+      "study001Cells": [
+        {
+          "openingId": "opening-1-3",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 152,
+          "searchTurns": 144,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-1-3",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 160,
+          "searchTurns": 152,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-1-3",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 144,
+          "searchTurns": 136,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-1-3",
+          "forced": true,
+          "first": "base-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 152,
+          "searchTurns": 144,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-1-3",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 152,
+          "searchTurns": 144,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-1-3",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 1,
+          "turns": 144,
+          "searchTurns": 136,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-1-3",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 196,
+          "searchTurns": 188,
+          "depthZero": 0,
+          "interpretationHold": false
+        }
+      ]
+    },
+    {
+      "id": "opening-2-0",
+      "firstIndex": 2,
+      "replyIndex": 0,
+      "moves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "right",
+          "side": "left"
+        }
+      ],
+      "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[1,0,0,0,7,2,2,0],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+      "formal10240Games": 0,
+      "study001Cells": [
+        {
+          "openingId": "opening-2-0",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 180,
+          "searchTurns": 172,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-2-0",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 140,
+          "searchTurns": 132,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-2-0",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 148,
+          "searchTurns": 140,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-2-0",
+          "forced": true,
+          "first": "base-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 244,
+          "searchTurns": 236,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-2-0",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 136,
+          "searchTurns": 128,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-2-0",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 1,
+          "turns": 160,
+          "searchTurns": 152,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-2-0",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 140,
+          "searchTurns": 132,
+          "depthZero": 0,
+          "interpretationHold": false
+        }
+      ]
+    },
+    {
+      "id": "opening-2-1",
+      "firstIndex": 2,
+      "replyIndex": 1,
+      "moves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left"
+        },
+        {
+          "type": "capture",
+          "phase": "namua",
+          "row": 0,
+          "index": 4,
+          "direction": "left",
+          "side": "right"
+        }
+      ],
+      "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[0,0,0,0,7,2,2,1],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+      "formal10240Games": 0,
+      "study001Cells": [
+        {
+          "openingId": "opening-2-1",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 168,
+          "searchTurns": 160,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-2-1",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 152,
+          "searchTurns": 144,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-2-1",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 124,
+          "searchTurns": 116,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-2-1",
+          "forced": true,
+          "first": "base-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 1,
+          "turns": 116,
+          "searchTurns": 108,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-2-1",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 152,
+          "searchTurns": 144,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-2-1",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 136,
+          "searchTurns": 128,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-2-1",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 172,
+          "searchTurns": 164,
+          "depthZero": 0,
+          "interpretationHold": false
+        }
+      ]
+    },
+    {
+      "id": "opening-3-0",
+      "firstIndex": 3,
+      "replyIndex": 0,
+      "moves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        }
+      ],
+      "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,6,2,0,1],[0,0,0,0,0,0,1,1]],[[0,0,1,1,7,0,2,0],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+      "formal10240Games": 0,
+      "study001Cells": [
+        {
+          "openingId": "opening-3-0",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 168,
+          "searchTurns": 160,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-3-0",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 248,
+          "searchTurns": 240,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-3-0",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 140,
+          "searchTurns": 132,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-3-0",
+          "forced": true,
+          "first": "base-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 1,
+          "turns": 152,
+          "searchTurns": 144,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-3-0",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 128,
+          "searchTurns": 120,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-3-0",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 176,
+          "searchTurns": 168,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-3-0",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 192,
+          "searchTurns": 184,
+          "depthZero": 0,
+          "interpretationHold": false
+        }
+      ]
+    },
+    {
+      "id": "opening-3-1",
+      "firstIndex": 3,
+      "replyIndex": 1,
+      "moves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        }
+      ],
+      "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,6,2,0,1],[0,0,0,0,0,0,1,1]],[[0,0,0,0,6,0,3,1],[0,0,0,0,0,0,0,1]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+      "formal10240Games": 0,
+      "study001Cells": [
+        {
+          "openingId": "opening-3-1",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 192,
+          "searchTurns": 184,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-3-1",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 1,
+          "turns": 160,
+          "searchTurns": 152,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-3-1",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 140,
+          "searchTurns": 132,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-3-1",
+          "forced": true,
+          "first": "base-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 1,
+          "turns": 184,
+          "searchTurns": 176,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-3-1",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 1,
+          "turns": 192,
+          "searchTurns": 184,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-3-1",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 188,
+          "searchTurns": 180,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-3-1",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 220,
+          "searchTurns": 212,
+          "depthZero": 0,
+          "interpretationHold": false
+        }
+      ]
+    },
+    {
+      "id": "opening-3-2",
+      "firstIndex": 3,
+      "replyIndex": 2,
+      "moves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "left"
+        }
+      ],
+      "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,6,2,0,1],[0,0,0,0,0,0,1,1]],[[0,0,0,1,7,3,0,0],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+      "formal10240Games": 0,
+      "study001Cells": [
+        {
+          "openingId": "opening-3-2",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 1,
+          "turns": 200,
+          "searchTurns": 192,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-3-2",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 188,
+          "searchTurns": 180,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-3-2",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 152,
+          "searchTurns": 144,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-3-2",
+          "forced": true,
+          "first": "base-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 1,
+          "turns": 260,
+          "searchTurns": 252,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-3-2",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 152,
+          "searchTurns": 144,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-3-2",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 1,
+          "turns": 160,
+          "searchTurns": 152,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-3-2",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 180,
+          "searchTurns": 172,
+          "depthZero": 0,
+          "interpretationHold": false
+        }
+      ]
+    },
+    {
+      "id": "opening-3-3",
+      "firstIndex": 3,
+      "replyIndex": 3,
+      "moves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "right"
+        },
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 6,
+          "direction": "right"
+        }
+      ],
+      "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,6,2,0,1],[0,0,0,0,0,0,1,1]],[[0,0,0,0,6,2,0,1],[0,0,0,0,0,0,1,1]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+      "formal10240Games": 1024,
+      "study001Cells": [
+        {
+          "openingId": "opening-3-3",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 152,
+          "searchTurns": 144,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-3-3",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 176,
+          "searchTurns": 168,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-3-3",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 2,
+          "secondWins": 2,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 222,
+          "searchTurns": 214,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-3-3",
+          "forced": true,
+          "first": "base-8192",
+          "second": "mobility-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 192,
+          "searchTurns": 184,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-3-3",
+          "forced": true,
+          "first": "mobility-8192",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 140,
+          "searchTurns": 132,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-3-3",
+          "forced": true,
+          "first": "base-8192",
+          "second": "base-32768",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 0,
+          "secondWins": 4,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 0,
+              "upper": 0
+            },
+            {
+              "seedIndex": 1,
+              "lower": 0,
+              "upper": 0
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 152,
+          "searchTurns": 144,
+          "depthZero": 0,
+          "interpretationHold": false
+        },
+        {
+          "openingId": "opening-3-3",
+          "forced": true,
+          "first": "base-32768",
+          "second": "base-8192",
+          "seedPairs": 2,
+          "games": 4,
+          "firstWins": 4,
+          "secondWins": 0,
+          "unresolved": 0,
+          "scores": [
+            {
+              "seedIndex": 0,
+              "lower": 1,
+              "upper": 1
+            },
+            {
+              "seedIndex": 1,
+              "lower": 1,
+              "upper": 1
+            }
+          ],
+          "uniqueTrajectories": 2,
+          "turns": 196,
+          "searchTurns": 188,
+          "depthZero": 0,
+          "interpretationHold": false
+        }
+      ]
+    }
+  ],
+  "naturalStudy001": [
+    {
+      "openingId": "reference",
+      "forced": false,
+      "first": "base-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 152,
+      "searchTurns": 152,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "reference",
+      "forced": false,
+      "first": "base-32768",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 160,
+      "searchTurns": 160,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "reference",
+      "forced": false,
+      "first": "mobility-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 128,
+      "searchTurns": 128,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "reference",
+      "forced": false,
+      "first": "base-8192",
+      "second": "mobility-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 148,
+      "searchTurns": 148,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "reference",
+      "forced": false,
+      "first": "mobility-8192",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 168,
+      "searchTurns": 168,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "reference",
+      "forced": false,
+      "first": "base-8192",
+      "second": "base-32768",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 0,
+      "secondWins": 4,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 0,
+          "upper": 0
+        },
+        {
+          "seedIndex": 1,
+          "lower": 0,
+          "upper": 0
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 144,
+      "searchTurns": 144,
+      "depthZero": 0,
+      "interpretationHold": false
+    },
+    {
+      "openingId": "reference",
+      "forced": false,
+      "first": "base-32768",
+      "second": "base-8192",
+      "seedPairs": 2,
+      "games": 4,
+      "firstWins": 4,
+      "secondWins": 0,
+      "unresolved": 0,
+      "scores": [
+        {
+          "seedIndex": 0,
+          "lower": 1,
+          "upper": 1
+        },
+        {
+          "seedIndex": 1,
+          "lower": 1,
+          "upper": 1
+        }
+      ],
+      "uniqueTrajectories": 2,
+      "turns": 196,
+      "searchTurns": 196,
+      "depthZero": 0,
+      "interpretationHold": false
+    }
+  ],
+  "interpretation": "Seat mirrors are paired; trajectory duplicates are not independent opening evidence. Seed-conditioned intervals do not estimate game-wide fairness."
+}
