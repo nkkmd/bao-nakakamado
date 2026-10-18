@@ -15,7 +15,7 @@
 - 実装・低予算の役割固定／正常再生／改ざん・未完拒否／完成bytes再利用のテストを完了。
 - 24条件48局の運用試走と保存、独立再監査を完了。全局通常終局、深度0なし。正式標本には数えない。
 - [manifest](../tools/v010-balance018/manifest.json)を封印。digest `8bd3045b41a2392376a0ae18f84e0173b4f2c19db44689724021045a190f3369`。計画件数3,072局・予算・閾値は変更していない。
-- 初版時点では封印後PRチェック待ち、正式試験未起動。正式source・run・開始状態は[起動記録](V010_BALANCE018_LAUNCH_20261019.md)の追記を基準とする。
+- **正式試験は実行中。** source `80ba721ef8e2377f06931393318ae13104c74bae`、[run 39139965350](https://github.com/nkkmd/bao-nakakamado/actions/runs/39139965350)、初回attemptでpreflight成功・4分割開始を確認。全3,072局の結果はまだない。結果branchは `results/v010-balance-study-018`。正式sourceと起動記録追記commitを区別する。
 
 ## 再開・保存・監査
 
