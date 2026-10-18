@@ -1,0 +1,1117 @@
+{
+  "contract": {
+    "id": "NAKAKAMADO-V010-BALANCE-018",
+    "baseline": "e5180b02cc18d560e602f978f9c2d82d2e0561e2",
+    "seedDomain": "BALANCE018-COUNTERPLAY-20261018-v1",
+    "rules": "0.10.0",
+    "profiles": [
+      {
+        "id": "base-2048",
+        "evaluator": "base",
+        "nodes": 2048
+      },
+      {
+        "id": "base-8192",
+        "evaluator": "base",
+        "nodes": 8192
+      },
+      {
+        "id": "base-32768",
+        "evaluator": "base",
+        "nodes": 32768
+      },
+      {
+        "id": "mobility-2048",
+        "evaluator": "mobility",
+        "nodes": 2048
+      },
+      {
+        "id": "mobility-8192",
+        "evaluator": "mobility",
+        "nodes": 8192
+      },
+      {
+        "id": "mobility-32768",
+        "evaluator": "mobility",
+        "nodes": 32768
+      }
+    ],
+    "pairsPerCell": 64,
+    "shards": 64,
+    "maxPlies": 400,
+    "quiescenceDepth": 1,
+    "maxDepth": 32,
+    "alpha": 0.05,
+    "family": 24,
+    "severe": [
+      0.25,
+      0.75
+    ],
+    "counterThreshold": 0.25,
+    "maxUnresolvedFraction": 0.01,
+    "depthZeroHoldFraction": 0.01,
+    "maxParallel": 4,
+    "shardTimeoutMinutes": 90,
+    "maxRunnerHours": 96,
+    "noAutomaticRerun": true
+  },
+  "cells": [
+    {
+      "id": "opening-2-0-base-base-2048",
+      "opening": {
+        "id": "opening-2-0",
+        "firstIndex": 2,
+        "replyIndex": 0,
+        "moves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          }
+        ],
+        "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[1,0,0,0,7,2,2,0],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+        "forced": true
+      },
+      "profiles": [
+        {
+          "id": "base-2048",
+          "evaluator": "base",
+          "nodes": 2048
+        },
+        {
+          "id": "base-2048",
+          "evaluator": "base",
+          "nodes": 2048
+        }
+      ]
+    },
+    {
+      "id": "opening-2-0-base-mobility-2048",
+      "opening": {
+        "id": "opening-2-0",
+        "firstIndex": 2,
+        "replyIndex": 0,
+        "moves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          }
+        ],
+        "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[1,0,0,0,7,2,2,0],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+        "forced": true
+      },
+      "profiles": [
+        {
+          "id": "base-2048",
+          "evaluator": "base",
+          "nodes": 2048
+        },
+        {
+          "id": "mobility-2048",
+          "evaluator": "mobility",
+          "nodes": 2048
+        }
+      ]
+    },
+    {
+      "id": "opening-2-0-mobility-base-2048",
+      "opening": {
+        "id": "opening-2-0",
+        "firstIndex": 2,
+        "replyIndex": 0,
+        "moves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          }
+        ],
+        "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[1,0,0,0,7,2,2,0],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+        "forced": true
+      },
+      "profiles": [
+        {
+          "id": "mobility-2048",
+          "evaluator": "mobility",
+          "nodes": 2048
+        },
+        {
+          "id": "base-2048",
+          "evaluator": "base",
+          "nodes": 2048
+        }
+      ]
+    },
+    {
+      "id": "opening-2-0-mobility-mobility-2048",
+      "opening": {
+        "id": "opening-2-0",
+        "firstIndex": 2,
+        "replyIndex": 0,
+        "moves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          }
+        ],
+        "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[1,0,0,0,7,2,2,0],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+        "forced": true
+      },
+      "profiles": [
+        {
+          "id": "mobility-2048",
+          "evaluator": "mobility",
+          "nodes": 2048
+        },
+        {
+          "id": "mobility-2048",
+          "evaluator": "mobility",
+          "nodes": 2048
+        }
+      ]
+    },
+    {
+      "id": "opening-2-0-base-base-8192",
+      "opening": {
+        "id": "opening-2-0",
+        "firstIndex": 2,
+        "replyIndex": 0,
+        "moves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          }
+        ],
+        "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[1,0,0,0,7,2,2,0],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+        "forced": true
+      },
+      "profiles": [
+        {
+          "id": "base-8192",
+          "evaluator": "base",
+          "nodes": 8192
+        },
+        {
+          "id": "base-8192",
+          "evaluator": "base",
+          "nodes": 8192
+        }
+      ]
+    },
+    {
+      "id": "opening-2-0-base-mobility-8192",
+      "opening": {
+        "id": "opening-2-0",
+        "firstIndex": 2,
+        "replyIndex": 0,
+        "moves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          }
+        ],
+        "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[1,0,0,0,7,2,2,0],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+        "forced": true
+      },
+      "profiles": [
+        {
+          "id": "base-8192",
+          "evaluator": "base",
+          "nodes": 8192
+        },
+        {
+          "id": "mobility-8192",
+          "evaluator": "mobility",
+          "nodes": 8192
+        }
+      ]
+    },
+    {
+      "id": "opening-2-0-mobility-base-8192",
+      "opening": {
+        "id": "opening-2-0",
+        "firstIndex": 2,
+        "replyIndex": 0,
+        "moves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          }
+        ],
+        "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[1,0,0,0,7,2,2,0],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+        "forced": true
+      },
+      "profiles": [
+        {
+          "id": "mobility-8192",
+          "evaluator": "mobility",
+          "nodes": 8192
+        },
+        {
+          "id": "base-8192",
+          "evaluator": "base",
+          "nodes": 8192
+        }
+      ]
+    },
+    {
+      "id": "opening-2-0-mobility-mobility-8192",
+      "opening": {
+        "id": "opening-2-0",
+        "firstIndex": 2,
+        "replyIndex": 0,
+        "moves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          }
+        ],
+        "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[1,0,0,0,7,2,2,0],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+        "forced": true
+      },
+      "profiles": [
+        {
+          "id": "mobility-8192",
+          "evaluator": "mobility",
+          "nodes": 8192
+        },
+        {
+          "id": "mobility-8192",
+          "evaluator": "mobility",
+          "nodes": 8192
+        }
+      ]
+    },
+    {
+      "id": "opening-2-0-base-base-32768",
+      "opening": {
+        "id": "opening-2-0",
+        "firstIndex": 2,
+        "replyIndex": 0,
+        "moves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          }
+        ],
+        "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[1,0,0,0,7,2,2,0],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+        "forced": true
+      },
+      "profiles": [
+        {
+          "id": "base-32768",
+          "evaluator": "base",
+          "nodes": 32768
+        },
+        {
+          "id": "base-32768",
+          "evaluator": "base",
+          "nodes": 32768
+        }
+      ]
+    },
+    {
+      "id": "opening-2-0-base-mobility-32768",
+      "opening": {
+        "id": "opening-2-0",
+        "firstIndex": 2,
+        "replyIndex": 0,
+        "moves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          }
+        ],
+        "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[1,0,0,0,7,2,2,0],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+        "forced": true
+      },
+      "profiles": [
+        {
+          "id": "base-32768",
+          "evaluator": "base",
+          "nodes": 32768
+        },
+        {
+          "id": "mobility-32768",
+          "evaluator": "mobility",
+          "nodes": 32768
+        }
+      ]
+    },
+    {
+      "id": "opening-2-0-mobility-base-32768",
+      "opening": {
+        "id": "opening-2-0",
+        "firstIndex": 2,
+        "replyIndex": 0,
+        "moves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          }
+        ],
+        "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[1,0,0,0,7,2,2,0],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+        "forced": true
+      },
+      "profiles": [
+        {
+          "id": "mobility-32768",
+          "evaluator": "mobility",
+          "nodes": 32768
+        },
+        {
+          "id": "base-32768",
+          "evaluator": "base",
+          "nodes": 32768
+        }
+      ]
+    },
+    {
+      "id": "opening-2-0-mobility-mobility-32768",
+      "opening": {
+        "id": "opening-2-0",
+        "firstIndex": 2,
+        "replyIndex": 0,
+        "moves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          }
+        ],
+        "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[1,0,0,0,7,2,2,0],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+        "forced": true
+      },
+      "profiles": [
+        {
+          "id": "mobility-32768",
+          "evaluator": "mobility",
+          "nodes": 32768
+        },
+        {
+          "id": "mobility-32768",
+          "evaluator": "mobility",
+          "nodes": 32768
+        }
+      ]
+    },
+    {
+      "id": "opening-2-1-base-base-2048",
+      "opening": {
+        "id": "opening-2-1",
+        "firstIndex": 2,
+        "replyIndex": 1,
+        "moves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          }
+        ],
+        "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[0,0,0,0,7,2,2,1],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+        "forced": true
+      },
+      "profiles": [
+        {
+          "id": "base-2048",
+          "evaluator": "base",
+          "nodes": 2048
+        },
+        {
+          "id": "base-2048",
+          "evaluator": "base",
+          "nodes": 2048
+        }
+      ]
+    },
+    {
+      "id": "opening-2-1-base-mobility-2048",
+      "opening": {
+        "id": "opening-2-1",
+        "firstIndex": 2,
+        "replyIndex": 1,
+        "moves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          }
+        ],
+        "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[0,0,0,0,7,2,2,1],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+        "forced": true
+      },
+      "profiles": [
+        {
+          "id": "base-2048",
+          "evaluator": "base",
+          "nodes": 2048
+        },
+        {
+          "id": "mobility-2048",
+          "evaluator": "mobility",
+          "nodes": 2048
+        }
+      ]
+    },
+    {
+      "id": "opening-2-1-mobility-base-2048",
+      "opening": {
+        "id": "opening-2-1",
+        "firstIndex": 2,
+        "replyIndex": 1,
+        "moves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          }
+        ],
+        "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[0,0,0,0,7,2,2,1],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+        "forced": true
+      },
+      "profiles": [
+        {
+          "id": "mobility-2048",
+          "evaluator": "mobility",
+          "nodes": 2048
+        },
+        {
+          "id": "base-2048",
+          "evaluator": "base",
+          "nodes": 2048
+        }
+      ]
+    },
+    {
+      "id": "opening-2-1-mobility-mobility-2048",
+      "opening": {
+        "id": "opening-2-1",
+        "firstIndex": 2,
+        "replyIndex": 1,
+        "moves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          }
+        ],
+        "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[0,0,0,0,7,2,2,1],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+        "forced": true
+      },
+      "profiles": [
+        {
+          "id": "mobility-2048",
+          "evaluator": "mobility",
+          "nodes": 2048
+        },
+        {
+          "id": "mobility-2048",
+          "evaluator": "mobility",
+          "nodes": 2048
+        }
+      ]
+    },
+    {
+      "id": "opening-2-1-base-base-8192",
+      "opening": {
+        "id": "opening-2-1",
+        "firstIndex": 2,
+        "replyIndex": 1,
+        "moves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          }
+        ],
+        "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[0,0,0,0,7,2,2,1],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+        "forced": true
+      },
+      "profiles": [
+        {
+          "id": "base-8192",
+          "evaluator": "base",
+          "nodes": 8192
+        },
+        {
+          "id": "base-8192",
+          "evaluator": "base",
+          "nodes": 8192
+        }
+      ]
+    },
+    {
+      "id": "opening-2-1-base-mobility-8192",
+      "opening": {
+        "id": "opening-2-1",
+        "firstIndex": 2,
+        "replyIndex": 1,
+        "moves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          }
+        ],
+        "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[0,0,0,0,7,2,2,1],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+        "forced": true
+      },
+      "profiles": [
+        {
+          "id": "base-8192",
+          "evaluator": "base",
+          "nodes": 8192
+        },
+        {
+          "id": "mobility-8192",
+          "evaluator": "mobility",
+          "nodes": 8192
+        }
+      ]
+    },
+    {
+      "id": "opening-2-1-mobility-base-8192",
+      "opening": {
+        "id": "opening-2-1",
+        "firstIndex": 2,
+        "replyIndex": 1,
+        "moves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          }
+        ],
+        "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[0,0,0,0,7,2,2,1],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+        "forced": true
+      },
+      "profiles": [
+        {
+          "id": "mobility-8192",
+          "evaluator": "mobility",
+          "nodes": 8192
+        },
+        {
+          "id": "base-8192",
+          "evaluator": "base",
+          "nodes": 8192
+        }
+      ]
+    },
+    {
+      "id": "opening-2-1-mobility-mobility-8192",
+      "opening": {
+        "id": "opening-2-1",
+        "firstIndex": 2,
+        "replyIndex": 1,
+        "moves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          }
+        ],
+        "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[0,0,0,0,7,2,2,1],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+        "forced": true
+      },
+      "profiles": [
+        {
+          "id": "mobility-8192",
+          "evaluator": "mobility",
+          "nodes": 8192
+        },
+        {
+          "id": "mobility-8192",
+          "evaluator": "mobility",
+          "nodes": 8192
+        }
+      ]
+    },
+    {
+      "id": "opening-2-1-base-base-32768",
+      "opening": {
+        "id": "opening-2-1",
+        "firstIndex": 2,
+        "replyIndex": 1,
+        "moves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          }
+        ],
+        "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[0,0,0,0,7,2,2,1],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+        "forced": true
+      },
+      "profiles": [
+        {
+          "id": "base-32768",
+          "evaluator": "base",
+          "nodes": 32768
+        },
+        {
+          "id": "base-32768",
+          "evaluator": "base",
+          "nodes": 32768
+        }
+      ]
+    },
+    {
+      "id": "opening-2-1-base-mobility-32768",
+      "opening": {
+        "id": "opening-2-1",
+        "firstIndex": 2,
+        "replyIndex": 1,
+        "moves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          }
+        ],
+        "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[0,0,0,0,7,2,2,1],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+        "forced": true
+      },
+      "profiles": [
+        {
+          "id": "base-32768",
+          "evaluator": "base",
+          "nodes": 32768
+        },
+        {
+          "id": "mobility-32768",
+          "evaluator": "mobility",
+          "nodes": 32768
+        }
+      ]
+    },
+    {
+      "id": "opening-2-1-mobility-base-32768",
+      "opening": {
+        "id": "opening-2-1",
+        "firstIndex": 2,
+        "replyIndex": 1,
+        "moves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          }
+        ],
+        "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[0,0,0,0,7,2,2,1],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+        "forced": true
+      },
+      "profiles": [
+        {
+          "id": "mobility-32768",
+          "evaluator": "mobility",
+          "nodes": 32768
+        },
+        {
+          "id": "base-32768",
+          "evaluator": "base",
+          "nodes": 32768
+        }
+      ]
+    },
+    {
+      "id": "opening-2-1-mobility-mobility-32768",
+      "opening": {
+        "id": "opening-2-1",
+        "firstIndex": 2,
+        "replyIndex": 1,
+        "moves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          }
+        ],
+        "startKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[0,0,0,0,7,2,2,1],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+        "forced": true
+      },
+      "profiles": [
+        {
+          "id": "mobility-32768",
+          "evaluator": "mobility",
+          "nodes": 32768
+        },
+        {
+          "id": "mobility-32768",
+          "evaluator": "mobility",
+          "nodes": 32768
+        }
+      ]
+    }
+  ],
+  "sources": {
+    "prototype/end-pit-engine.js": "d57dc799fbe6db61916ba632a6472264bead666f1f9e9b77c3f70fc15d5de21c",
+    "prototype/end-pit-rules.js": "e51aa17641802669cc5986a8891d6db1dce122b70a799afeba992c78736b5e8a",
+    "prototype/end-pit-search-transition.js": "594877db0d07501997cb943d01400281083df44ab0fe0fc456a93c063d24a59e",
+    "prototype/end-pit-search-ai.js": "35c6b5ec555efbd8fb0ca14ab55ad9eb2a75bc60b76573316ef5b94c11a7309e",
+    "prototype/end-pit-search-evaluator.js": "9bd4959c9eebb0a3fd93d3c33e4405b97734142d9fbef036cf63261422df51e3",
+    "prototype/end-pit-simple-ai.js": "a20fb0bb597245dc125595df85f4d25bfe348e1b37a1ea6d9a107d1688e06c7b",
+    "tools/v010-balance/research-search.cjs": "310e2d92e66e22889a949789c9b6630fde3d83b7d513de927c3cc060e6e7f0ab",
+    "tools/v010-balance/core.cjs": "ae90f5fc692d9b970590b279e12e28917c8b07ec20c613c2f4bc0abce7cf3aba",
+    "tools/v010-balance/run.cjs": "2b44206af5bea4a0231561f26d5d4b455ddc4aa367b84791f2b4f9e61f872a46",
+    "tools/v010-followup/policies.cjs": "b6930e38c052e6ca615f82d7d870d2efa6707a635399d9c3565a60b212a1528b",
+    "tools/v010-followup/registry.cjs": "8f8d273d0bbba28d18a189e6cd73a3f12ee6fa6e7d3e16e8c738ed2a7f92f2f4",
+    "tools/v010-followup/book.cjs": "ba845f8c4f7c7c4ce727a55d0acf03e957e4a83bfea81fef294165f21b345e74",
+    "tools/v010-followup/prover.cjs": "f71de18ae222c26dff1ccfd68688f868bd5e3bfbeac4918ffba353f2d97387f2",
+    "tools/v010-followup/core.cjs": "389d057957499501008e063de7fbd9f6deb14fae37a48629b811e1e479cea94d",
+    "tools/v010-followup/study.cjs": "9554b923d53484740c190392e567b2a687d3008594318de1478c47cc1bca862f",
+    "tools/v010-followup/freeze.cjs": "0efe79f21d559d686f1fc04624d76f82b8c4fdaad588fa42388d9b7e4ff9334b",
+    "tools/v010-followup/check.test.cjs": "73167f6639a37b8a6f5fdb26793e044fc77ac5fdfc21bc744efb6914a09ef866",
+    "tools/v010-followup/archive.py": "6b2fb06e6153f3d7e6a199f5f152027f04568188fd9c691e5cd7af88ce483389",
+    "tools/v010-followup/inputs/primary-8192-0.json.gz": "e3f93e1593976b60b62379eb63981f93d32f38c3d54e743121ccf5d61b6b3f72",
+    "tools/v010-followup/inputs/low-512-0.json.gz": "deab00a6617b92443d960eeca58fcf606bee9d910e08ff2ae46a89a8e9cebfab",
+    "tools/v010-followup/inputs/middle-2048-0.json.gz": "2e0c42fc7b19dc93e39041625afbe726c10101c7d73e3c14c4aa237e2a08baea",
+    "doc/v010-balance/diagnostics/intervention-records.zip": "11764e52bfaf420e3b936fffffaae7ebe0df660f1c63be4f043e32c2f558e9dc",
+    "doc/v010-balance/diagnostics/primary-8192-ply29.json.gz": "2b669b09adb692916d1577060964c67f04735d496643d2283d20a09a4a203541",
+    "doc/v010-balance/diagnostics/low-512-ply51.json.gz": "857b7f64be8977a600ffe24a1d5cc991c619669f6ea775e7e1ea3dac29fbf845",
+    "doc/v010-balance/diagnostics/middle-2048-ply55.json.gz": "637560ee1b1c4a35e91e4e6af81078f7dab677c379978ae3adef8aea5592c0a9",
+    ".github/workflows/v010-followup-study.yml": "b136b60dd714475d57f2e5aaaaf1347de01a630a72391e045dba755cb7e55e0c",
+    "tools/v010-balance018/study.cjs": "c6f06e68c77ab0905feda6ee15116d7772030b9357b048995f26a84628e3df0a",
+    "tools/v010-balance018/check.test.cjs": "ffc3af7c7fcdf8cc82366ae9987068ff8a8f8c16236df61a23995371f4be6607",
+    "tools/v010-balance018/pilot.cjs": "6b5747525e858b42beb56ea6b01c1970edf9084383a999d85e52bff8413c49c4",
+    "tools/v010-balance018/freeze.cjs": "5491d8a3b96d54485c4e9d138b0f6b88b6975e21573a031d35522680dc5e11a2",
+    "tools/v010-balance018/reaudit.py": "e64f8ff2bc4f9c249e0c0643b86360468b3da6ed7d032da8af794982dec349d0",
+    "tools/v010-balance018/README.md": "f23cf42af9d8c2c985542d6e8a5df5383681889707b11d395275a87db16f94fd",
+    ".github/workflows/v010-balance018-check.yml": "ce1081023dabb34f066b37057cf1b8609c0558faa7d9c4f051b0c387b9296eeb",
+    ".github/workflows/v010-balance018-study.yml": "f1497858433cab23185565a0c82bb98b343d2e6d85ef0431a16c3534d3839bc9",
+    ".github/workflows/v010-balance018-pilot.yml": "6cf82c3fa7746d20a7b2136d58f45a7906cd3642d304c7e4c1a98f8df10e07a6",
+    "doc/V010_BALANCE018_PLAN_20261018.md": "5100635a168f9d162fd84bf812dae53308174c5816c97e40201e5f0b34209c59"
+  },
+  "pilot": {
+    "sourceCommit": "5d3b7d94a87190dfedc3769d63d04d2045933c6d",
+    "runId": "39137996718",
+    "priorAuditSha256": "9c1dd580d5c3f7f615c3b50506ca4c1c9a555aa7380be0904b5f9cd8033f94fa",
+    "files": {
+      "pilot-0.json.gz": "e4e3af79e851c11a2eeb4cf9847438089d1066c523081ed6d84d61e69b21db73",
+      "pilot-0.json.gz.started": "40f852f4807210c9fe30263eac3eab60b107fd965aee99e0d1a11d9dbaed6c6c",
+      "pilot-1.json.gz": "91a3a2b0f57c37dded19ba53a7455216c50339c21d3e9ee16c1a1f2e33bd1ed2",
+      "pilot-1.json.gz.started": "3b3b35189e841687bc4c45bc81d6f8b10c8fc92b2b13ff455c5ec81321ebeced",
+      "pilot-10.json.gz": "3ad2d88f5a2cb44c3fd6fcd485eecb5ed67be4fb62bb5a8055decec0b3d05983",
+      "pilot-10.json.gz.started": "1ea52b55f70c37e1b52083c388dbe7aef227d8fcaa7759dada8f15a23833b88c",
+      "pilot-11.json.gz": "3014b6d33d4214a5879701a4817cd0d7c134f8a0775d750d69971298a304f0d0",
+      "pilot-11.json.gz.started": "00b0e80d08c0cad693aed17b22dfb17de22d5c09ffafe92b66d7bf92c68106bb",
+      "pilot-12.json.gz": "8e2f880256b07c1eca1eca13473aedffeabff6e69bc9e0a9e5fe7222d77cf061",
+      "pilot-12.json.gz.started": "99fea1cab933ae72b3dcdff7555cc55175cecee18ae0a30b15a7dbc8c2b47508",
+      "pilot-13.json.gz": "1133e36a9e07a1b66cb225a4437c0198012f78a644d5fb2df6d186b59bd89d9c",
+      "pilot-13.json.gz.started": "16aba4765190b70a221a40a2e806c6fcf5298f29c7270e456b22dad3a1d362cf",
+      "pilot-14.json.gz": "f3336819728713363666e5af2b9a953172a588b1ef5d19a341a76cf41cb5d5a1",
+      "pilot-14.json.gz.started": "62924dd022720dfac711a6375efd6fd3704e1597a1e70f9945cbde922b98b14d",
+      "pilot-15.json.gz": "92af8b84da72bae01085ae14857d854aa02377c3308ba89ab3714c5c6b9ccaaf",
+      "pilot-15.json.gz.started": "5a8c0fc795da4097d7c8c379c95a319bd86985476888a2093f9645f65530cc92",
+      "pilot-16.json.gz": "81947e79a22d767ef02475b23ed36ad518127dae23d254b695f1f8f89bf7aae1",
+      "pilot-16.json.gz.started": "54e6a585eda4b3163dd13a1d30a5f798866183ed6b9e5cd40778e4f26bf41772",
+      "pilot-17.json.gz": "6eedf987a93fb58c700893e751f5686ffae5eec8083ac6020f1e5c33d00c8d9b",
+      "pilot-17.json.gz.started": "26f360ce1802519bea99c5d9a691731fc331792076f7c24a389e1548c1d9170f",
+      "pilot-18.json.gz": "9601bec54ef16059bcbe000fc70f5c854b1946f2ef5c1a69b94c1c0e6c4ac088",
+      "pilot-18.json.gz.started": "6cb3b885dc0a01d2fa8a850ffed01bd8d7e18d144b05fb868b2fe877a47db56f",
+      "pilot-19.json.gz": "3b9d73ee34b03adaa179dfcae211500b9fa16dc7518765102cc4e701d35c1736",
+      "pilot-19.json.gz.started": "db2f13fffdd3e4cb4fbd665552c1d3abc1dd18d930713beaabf9c4b2a6b390cd",
+      "pilot-2.json.gz": "71b7fd1cb7e8d99c37cdc8a64fd7e6823d6b6612bdfbfdb3c607f6de5291be7d",
+      "pilot-2.json.gz.started": "bf7ff6b53378202e682c8c52fd4e831239a0f1514ed67cf9d7b24742dcf201a8",
+      "pilot-20.json.gz": "03634382f46f7005edcd7be7dc85d38952d33f43cf763d54ef09d0d29618890f",
+      "pilot-20.json.gz.started": "4129cf3510ef0c3aafa60e993bb95098b2beafdd18e583bab53fc6cc1268909a",
+      "pilot-21.json.gz": "515c7469cf4c2e9ee9621948f2a54e92fda61c04bebd174162400d5f84ef5251",
+      "pilot-21.json.gz.started": "a908e98352f4e9e53ff57752e384b99285fc19f6a633d2400d8e48852a429192",
+      "pilot-22.json.gz": "1799c2da5463e8d7f0ea1a607aec213ad14256d3770ff178d5420338f4775445",
+      "pilot-22.json.gz.started": "2eac272326281ae338e27ddb66e918ebd0dc76c3ea412506d58fd66eb5126815",
+      "pilot-23.json.gz": "39dc20b36c1d641e2754ebd1e98d6cf11d281f0baf2926e24d707e204ba8e345",
+      "pilot-23.json.gz.started": "2ab773a921a7a073cd69d61b0dd243a0c25fea7b3ea102026324f923fe7595d5",
+      "pilot-3.json.gz": "d730ee6c27a34e813dbcbb0f76a651d68791907eafff19373955928b7790e44f",
+      "pilot-3.json.gz.started": "c1b1f5eb250fbf771a393ca4a170c25c4ebd3dad863b8c94319053e2dcf4f299",
+      "pilot-4.json.gz": "b1e364b8731ed289f5ca12512b66a7f5d96404cfe29bb75ae7df566c8d123f03",
+      "pilot-4.json.gz.started": "562561aa5246a861de0210a2d2f2197aa627a50a2cee7d85c8fdb476412c31cd",
+      "pilot-5.json.gz": "735113cc0d7295cc01bff5f6ec0ac730ba0f4a314f15eccd5b6e639dac17090f",
+      "pilot-5.json.gz.started": "efebbfbd87293611493745a8a3458ff9e9a247d0674bc6c7ec5625c468d08a64",
+      "pilot-6.json.gz": "39626110ee81296c19fa84acec1bf1dbad3423bf5fee5706010fc20618bc3e59",
+      "pilot-6.json.gz.started": "c1271a11c6b138dcda656bebc4d147c77dd798d397da51a41767b01f16f26f19",
+      "pilot-7.json.gz": "7c97b9466d37fe415f196f743f9e98d084a3dc84d70531867b9c729ba3b61b5e",
+      "pilot-7.json.gz.started": "8177eb0138fdf6994ce0dfae5d8f94e74a70f7e23ba4544376bd6704cb65d5ae",
+      "pilot-8.json.gz": "b09b5b61631e3d2e63ef6c4bd43e60b5e8b6ea1ef1c2acf7c3092d7240e5e8ae",
+      "pilot-8.json.gz.started": "f816236fb526eae0ffeedaf700e82bd402454e2d8c5b2d582e8eb1342aa3ceb0",
+      "pilot-9.json.gz": "dc8ad142c3aa00c05610d745eae1c75971a8336cb4841d9927bc623c792a2f58",
+      "pilot-9.json.gz.started": "7d66dac3dca9f4de723306418a3c6f456a14334c11e2ebac8c6ff1c74957c8f0",
+      "pilot-receipt-0.json": "683aec477b4bc9c11cc6ecfa6849aab7f34bccc331d66c4a5a2ff2cc37a0b45f",
+      "pilot-receipt-1.json": "fee60b84e17afc8cdac705c6a40e7477f0a1c924b82e54a49d08ab5ba1d65911",
+      "pilot-receipt-10.json": "6d4d43d0bbbf84e6ac8ff49e3c16503d7c734673141b057b7a12e630b7ddd412",
+      "pilot-receipt-11.json": "d88375223ec0723449ab4e4eb2da7397d0bcf45f393b67fc676dea3209b6a441",
+      "pilot-receipt-12.json": "8725b3672166a0593ede04b0a398b0fffdc89dbed56063508249486e6e658666",
+      "pilot-receipt-13.json": "359ca61eb39dad2659fde1fed7f48e34c6340dde65984ee4f16c9a669c5e9f65",
+      "pilot-receipt-14.json": "ed2634d56d03b2ea5b90312150c8a2b615870c4c667d71a22152e52740e07648",
+      "pilot-receipt-15.json": "0a1c0a22d73e9b8b9a45195b5c88b218f8f0aedbaa4790d09cbd6edcdf70a9db",
+      "pilot-receipt-16.json": "3d4fe6e006b1cd6a9008122471f37ad796158a01bc78252b54ab132b3eea9585",
+      "pilot-receipt-17.json": "5defdb984e165a5308ba8883934b03035f9be56d8a9f52610f75a91dd273536d",
+      "pilot-receipt-18.json": "1e92b653cffd5fba21ed1276519abb7bcf56d51a69a9e78fa6d3a4922729b489",
+      "pilot-receipt-19.json": "a31136793e6238ec91fee10632e85928cf12eea0e817d71dc2e09947cd157974",
+      "pilot-receipt-2.json": "5ee9f5176f5d8716d6cc1ff3ad9f1be63e615b2e89750b09a0c9543785e82501",
+      "pilot-receipt-20.json": "e51751bf1fc9e6db68bc4d7fc9152017d216e44e305bbcadeadd351afab98722",
+      "pilot-receipt-21.json": "03444bc94c73bfda4bcc03feddcaf577a6a7c57002cdc8f37bdaf6cff608379d",
+      "pilot-receipt-22.json": "8a287aa663fed5468a90866c3b182538d3b8bc28ad0e79b0fbc2e624209c7668",
+      "pilot-receipt-23.json": "bb2451b6dcf0587aef24a6174ef51fdc8ba964363412b61925ce422607de4f57",
+      "pilot-receipt-3.json": "8929d0155dddda39fc51a9f6da625b7d242061649c50829dd03a994f5ece37ef",
+      "pilot-receipt-4.json": "5f76379662c12cd272bffb42008280e9466f0e17cfc6e1ca95c2274212a9e71c",
+      "pilot-receipt-5.json": "fbdd11c244c5c3dd8ab55820b47bf9fc26352a0f6ed854545e21faf95768f64e",
+      "pilot-receipt-6.json": "3a375a6e6398edff299543b00c79faa09e34edbbd0928dd5f070c2788d29d1f1",
+      "pilot-receipt-7.json": "bf359c150e12e7017aa4014996a58d5a00119406f53be9b8cc9578ef3e3226b6",
+      "pilot-receipt-8.json": "8988ae54aca2fbff86bcd08160f6837d488c323e705bf5a250dcc4f35835837b",
+      "pilot-receipt-9.json": "ca101c6203ad71df5937c034abf6f74b3b382ac561294569e96f26d851d5f9a9",
+      "pilot.json": "105d4e25933430686272e6c774862b160f484517b1887a18d5e4763c47f9d1b1"
+    },
+    "projectedRunnerMs": 188621738.08057597,
+    "projectedShardMs": 2947214.6575090005
+  },
+  "digest": "8bd3045b41a2392376a0ae18f84e0173b4f2c19db44689724021045a190f3369"
+}
