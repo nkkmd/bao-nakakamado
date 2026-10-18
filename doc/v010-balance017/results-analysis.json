@@ -1,0 +1,4022 @@
+{
+  "status": "INDEPENDENT-PYTHON-RAW-REAGGREGATION-MATCH",
+  "resultCommit": "81232071da28e2a7eeda09c4260aa4ed9b723dde",
+  "sourceCommit": "033d309e42f6c9396207d96699a828511bb38e9c",
+  "runId": "39082844578",
+  "manifestDigest": "680a7565d7cb21078e2342ab30cbac37c1b59614e7dfe223cc861752a15fa53d",
+  "summarySha256": "922f167f41c4486fab9612e2ec310e11aa5f5e5bd5fb75a77e83dfd44fbe4d60",
+  "archiveSha256": {
+    "original-records-001.zip": "cded0421f9913d27829668ef2c7a68e679fa75f1f6cf0b4e2d37c4c667b69bce"
+  },
+  "pairs": 1440,
+  "games": 2880,
+  "normalGames": 2880,
+  "unresolved": 0,
+  "depthZero": 0,
+  "cells": [
+    {
+      "openingId": "reference",
+      "profile": "base-2048",
+      "forced": false,
+      "pairs": 128,
+      "games": 256,
+      "firstWins": 256,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 256
+      },
+      "plyDistribution": {
+        "63": 256
+      },
+      "completedDepthDistribution": {
+        "5": 3696,
+        "6": 3418,
+        "7": 1816,
+        "4": 4840,
+        "3": 512,
+        "8": 552,
+        "9": 476,
+        "32": 396,
+        "15": 140,
+        "18": 140,
+        "21": 40,
+        "14": 4,
+        "16": 58,
+        "30": 2,
+        "11": 6,
+        "10": 8,
+        "20": 6,
+        "12": 18
+      },
+      "uniqueTrajectories": 87,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 57,
+      "sharedPrefixPlies": 56,
+      "naturalOpenings": {
+        "7右 → 7右": 128
+      },
+      "searchTurns": 16128,
+      "depthZero": 0,
+      "actualNodes": 32373616,
+      "nodesMedian": 2048.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 2777156.0675790003,
+      "interval": {
+        "lower": 0.8536827221606941,
+        "upper": 1,
+        "halfWidth": 0.14631727783930595
+      }
+    },
+    {
+      "openingId": "reference",
+      "profile": "base-8192",
+      "forced": false,
+      "pairs": 128,
+      "games": 256,
+      "firstWins": 0,
+      "secondWins": 256,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 256
+      },
+      "plyDistribution": {
+        "38": 256
+      },
+      "completedDepthDistribution": {
+        "7": 2134,
+        "8": 1536,
+        "6": 3072,
+        "5": 1280,
+        "4": 512,
+        "9": 380,
+        "32": 366,
+        "10": 72,
+        "12": 190,
+        "11": 186
+      },
+      "uniqueTrajectories": 61,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 34,
+      "sharedPrefixPlies": 33,
+      "naturalOpenings": {
+        "6右 → 7右": 128
+      },
+      "searchTurns": 9728,
+      "depthZero": 0,
+      "actualNodes": 76932578,
+      "nodesMedian": 8192.0,
+      "depthMedian": 6.5,
+      "actualElapsedMs": 7482328.768559001,
+      "interval": {
+        "lower": 0,
+        "upper": 0.14631727783930595,
+        "halfWidth": 0.14631727783930595
+      }
+    },
+    {
+      "openingId": "reference",
+      "profile": "base-32768",
+      "forced": false,
+      "pairs": 128,
+      "games": 256,
+      "firstWins": 0,
+      "secondWins": 256,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 256
+      },
+      "plyDistribution": {
+        "40": 256
+      },
+      "completedDepthDistribution": {
+        "9": 2106,
+        "10": 2350,
+        "8": 2304,
+        "7": 1280,
+        "11": 986,
+        "12": 708,
+        "13": 336,
+        "15": 26,
+        "14": 52,
+        "32": 92
+      },
+      "uniqueTrajectories": 19,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 32,
+      "sharedPrefixPlies": 31,
+      "naturalOpenings": {
+        "6右 → 7右": 128
+      },
+      "searchTurns": 10240,
+      "depthZero": 0,
+      "actualNodes": 332611038,
+      "nodesMedian": 32768.0,
+      "depthMedian": 9.0,
+      "actualElapsedMs": 32406923.866334,
+      "interval": {
+        "lower": 0,
+        "upper": 0.14631727783930595,
+        "halfWidth": 0.14631727783930595
+      }
+    },
+    {
+      "openingId": "reference",
+      "profile": "mobility-2048",
+      "forced": false,
+      "pairs": 128,
+      "games": 256,
+      "firstWins": 0,
+      "secondWins": 256,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 256
+      },
+      "plyDistribution": {
+        "44": 256
+      },
+      "completedDepthDistribution": {
+        "5": 4352,
+        "6": 2560,
+        "4": 1024,
+        "7": 1280,
+        "8": 512,
+        "9": 512,
+        "10": 256,
+        "11": 256,
+        "32": 512
+      },
+      "uniqueTrajectories": 6,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 43,
+      "sharedPrefixPlies": 42,
+      "naturalOpenings": {
+        "7右 → 7右": 128
+      },
+      "searchTurns": 11264,
+      "depthZero": 0,
+      "actualNodes": 22295030,
+      "nodesMedian": 2048.0,
+      "depthMedian": 6.0,
+      "actualElapsedMs": 1931627.4117249872,
+      "interval": {
+        "lower": 0,
+        "upper": 0.14631727783930595,
+        "halfWidth": 0.14631727783930595
+      }
+    },
+    {
+      "openingId": "reference",
+      "profile": "mobility-8192",
+      "forced": false,
+      "pairs": 128,
+      "games": 256,
+      "firstWins": 0,
+      "secondWins": 256,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 256
+      },
+      "plyDistribution": {
+        "32": 256
+      },
+      "completedDepthDistribution": {
+        "7": 1148,
+        "8": 512,
+        "6": 1280,
+        "5": 2560,
+        "4": 1536,
+        "9": 504,
+        "32": 528,
+        "10": 124
+      },
+      "uniqueTrajectories": 14,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 18,
+      "sharedPrefixPlies": 17,
+      "naturalOpenings": {
+        "6左 → 5右": 128
+      },
+      "searchTurns": 8192,
+      "depthZero": 0,
+      "actualNodes": 62896476,
+      "nodesMedian": 8192.0,
+      "depthMedian": 5.5,
+      "actualElapsedMs": 7532842.839660015,
+      "interval": {
+        "lower": 0,
+        "upper": 0.14631727783930595,
+        "halfWidth": 0.14631727783930595
+      }
+    },
+    {
+      "openingId": "reference",
+      "profile": "mobility-32768",
+      "forced": false,
+      "pairs": 128,
+      "games": 256,
+      "firstWins": 0,
+      "secondWins": 256,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 256
+      },
+      "plyDistribution": {
+        "40": 256
+      },
+      "completedDepthDistribution": {
+        "9": 1604,
+        "10": 710,
+        "8": 1536,
+        "7": 2048,
+        "6": 1792,
+        "11": 1088,
+        "13": 372,
+        "12": 590,
+        "14": 270,
+        "17": 60,
+        "16": 74,
+        "15": 96
+      },
+      "uniqueTrajectories": 24,
+      "unique12PlyPrefixes": 2,
+      "firstDivergentPrefixPly": 6,
+      "sharedPrefixPlies": 5,
+      "naturalOpenings": {
+        "6左 → 5右": 128
+      },
+      "searchTurns": 10240,
+      "depthZero": 0,
+      "actualNodes": 335544320,
+      "nodesMedian": 32768.0,
+      "depthMedian": 8.0,
+      "actualElapsedMs": 37945633.973110996,
+      "interval": {
+        "lower": 0,
+        "upper": 0.14631727783930595,
+        "halfWidth": 0.14631727783930595
+      }
+    },
+    {
+      "openingId": "opening-0-0",
+      "profile": "base-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "42": 4,
+        "36": 6,
+        "34": 4,
+        "30": 2
+      },
+      "completedDepthDistribution": {
+        "6": 74,
+        "4": 144,
+        "3": 104,
+        "5": 120,
+        "8": 26,
+        "7": 36,
+        "11": 10,
+        "32": 16,
+        "10": 14,
+        "13": 2,
+        "14": 2
+      },
+      "uniqueTrajectories": 6,
+      "unique12PlyPrefixes": 4,
+      "firstDivergentPrefixPly": 9,
+      "sharedPrefixPlies": 8,
+      "naturalOpenings": null,
+      "searchTurns": 548,
+      "depthZero": 0,
+      "actualNodes": 1095120,
+      "nodesMedian": 2048.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 117615.26270400005,
+      "interval": null
+    },
+    {
+      "openingId": "opening-0-0",
+      "profile": "base-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "37": 16
+      },
+      "completedDepthDistribution": {
+        "8": 64,
+        "6": 80,
+        "5": 128,
+        "7": 112,
+        "4": 48,
+        "9": 76,
+        "10": 8,
+        "11": 18,
+        "12": 8,
+        "32": 18
+      },
+      "uniqueTrajectories": 5,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 29,
+      "sharedPrefixPlies": 28,
+      "naturalOpenings": null,
+      "searchTurns": 560,
+      "depthZero": 0,
+      "actualNodes": 4457716,
+      "nodesMedian": 8192.0,
+      "depthMedian": 7.0,
+      "actualElapsedMs": 473551.5737229998,
+      "interval": null
+    },
+    {
+      "openingId": "opening-0-0",
+      "profile": "base-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "36": 16
+      },
+      "completedDepthDistribution": {
+        "10": 62,
+        "8": 78,
+        "9": 156,
+        "7": 128,
+        "6": 32,
+        "13": 26,
+        "11": 26,
+        "12": 16,
+        "32": 12,
+        "16": 8
+      },
+      "uniqueTrajectories": 8,
+      "unique12PlyPrefixes": 2,
+      "firstDivergentPrefixPly": 6,
+      "sharedPrefixPlies": 5,
+      "naturalOpenings": null,
+      "searchTurns": 544,
+      "depthZero": 0,
+      "actualNodes": 17445382,
+      "nodesMedian": 32768.0,
+      "depthMedian": 9.0,
+      "actualElapsedMs": 1965821.0813310002,
+      "interval": null
+    },
+    {
+      "openingId": "opening-0-0",
+      "profile": "mobility-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "40": 16
+      },
+      "completedDepthDistribution": {
+        "6": 32,
+        "8": 88,
+        "7": 40,
+        "5": 64,
+        "4": 192,
+        "3": 144,
+        "11": 16,
+        "10": 16,
+        "9": 16
+      },
+      "uniqueTrajectories": 2,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 39,
+      "sharedPrefixPlies": 38,
+      "naturalOpenings": null,
+      "searchTurns": 608,
+      "depthZero": 0,
+      "actualNodes": 1245184,
+      "nodesMedian": 2048.0,
+      "depthMedian": 4.0,
+      "actualElapsedMs": 136378.5138210007,
+      "interval": null
+    },
+    {
+      "openingId": "opening-0-0",
+      "profile": "mobility-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "32": 16
+      },
+      "completedDepthDistribution": {
+        "8": 32,
+        "6": 80,
+        "5": 160,
+        "4": 96,
+        "7": 42,
+        "9": 36,
+        "10": 10,
+        "32": 24
+      },
+      "uniqueTrajectories": 8,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 18,
+      "sharedPrefixPlies": 17,
+      "naturalOpenings": null,
+      "searchTurns": 480,
+      "depthZero": 0,
+      "actualNodes": 3740618,
+      "nodesMedian": 8192.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 460849.3414949984,
+      "interval": null
+    },
+    {
+      "openingId": "opening-0-0",
+      "profile": "mobility-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "40": 16
+      },
+      "completedDepthDistribution": {
+        "10": 44,
+        "8": 96,
+        "9": 54,
+        "7": 128,
+        "6": 112,
+        "11": 68,
+        "13": 24,
+        "12": 44,
+        "14": 16,
+        "17": 10,
+        "16": 10,
+        "15": 2
+      },
+      "uniqueTrajectories": 5,
+      "unique12PlyPrefixes": 2,
+      "firstDivergentPrefixPly": 6,
+      "sharedPrefixPlies": 5,
+      "naturalOpenings": null,
+      "searchTurns": 608,
+      "depthZero": 0,
+      "actualNodes": 19922944,
+      "nodesMedian": 32768.0,
+      "depthMedian": 8.0,
+      "actualElapsedMs": 2285772.152328996,
+      "interval": null
+    },
+    {
+      "openingId": "opening-0-1",
+      "profile": "base-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "36": 16
+      },
+      "completedDepthDistribution": {
+        "6": 52,
+        "7": 24,
+        "5": 142,
+        "4": 176,
+        "3": 80,
+        "8": 28,
+        "14": 4,
+        "9": 8,
+        "11": 2,
+        "32": 24,
+        "10": 4
+      },
+      "uniqueTrajectories": 7,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 21,
+      "sharedPrefixPlies": 20,
+      "naturalOpenings": null,
+      "searchTurns": 544,
+      "depthZero": 0,
+      "actualNodes": 1070212,
+      "nodesMedian": 2048.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 107243.37994200003,
+      "interval": null
+    },
+    {
+      "openingId": "opening-0-1",
+      "profile": "base-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "36": 16
+      },
+      "completedDepthDistribution": {
+        "8": 48,
+        "7": 48,
+        "6": 144,
+        "5": 64,
+        "4": 112,
+        "13": 16,
+        "9": 32,
+        "12": 16,
+        "32": 48,
+        "15": 16
+      },
+      "uniqueTrajectories": 1,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": null,
+      "sharedPrefixPlies": 36,
+      "naturalOpenings": null,
+      "searchTurns": 544,
+      "depthZero": 0,
+      "actualNodes": 4090976,
+      "nodesMedian": 8192.0,
+      "depthMedian": 6.0,
+      "actualElapsedMs": 481637.8781559997,
+      "interval": null
+    },
+    {
+      "openingId": "opening-0-1",
+      "profile": "base-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "42": 16
+      },
+      "completedDepthDistribution": {
+        "10": 48,
+        "9": 96,
+        "8": 48,
+        "7": 128,
+        "6": 16,
+        "12": 112,
+        "11": 96,
+        "13": 32,
+        "14": 16,
+        "18": 16,
+        "32": 32
+      },
+      "uniqueTrajectories": 2,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 41,
+      "sharedPrefixPlies": 40,
+      "naturalOpenings": null,
+      "searchTurns": 640,
+      "depthZero": 0,
+      "actualNodes": 19926560,
+      "nodesMedian": 32768.0,
+      "depthMedian": 10.0,
+      "actualElapsedMs": 2069418.5993179968,
+      "interval": null
+    },
+    {
+      "openingId": "opening-0-1",
+      "profile": "mobility-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "44": 16
+      },
+      "completedDepthDistribution": {
+        "7": 60,
+        "6": 102,
+        "5": 112,
+        "4": 208,
+        "3": 80,
+        "8": 28,
+        "9": 32,
+        "10": 10,
+        "32": 40
+      },
+      "uniqueTrajectories": 6,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 37,
+      "sharedPrefixPlies": 36,
+      "naturalOpenings": null,
+      "searchTurns": 672,
+      "depthZero": 0,
+      "actualNodes": 1327770,
+      "nodesMedian": 2048.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 125957.274395996,
+      "interval": null
+    },
+    {
+      "openingId": "opening-0-1",
+      "profile": "mobility-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "44": 12,
+        "58": 4
+      },
+      "completedDepthDistribution": {
+        "8": 108,
+        "9": 78,
+        "7": 106,
+        "6": 96,
+        "5": 154,
+        "4": 84,
+        "12": 24,
+        "11": 30,
+        "10": 22,
+        "32": 4,
+        "13": 16,
+        "14": 6
+      },
+      "uniqueTrajectories": 6,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 19,
+      "sharedPrefixPlies": 18,
+      "naturalOpenings": null,
+      "searchTurns": 728,
+      "depthZero": 0,
+      "actualNodes": 5934652,
+      "nodesMedian": 8192.0,
+      "depthMedian": 7.0,
+      "actualElapsedMs": 582950.5903110045,
+      "interval": null
+    },
+    {
+      "openingId": "opening-0-1",
+      "profile": "mobility-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "53": 16
+      },
+      "completedDepthDistribution": {
+        "10": 208,
+        "8": 128,
+        "7": 112,
+        "9": 112,
+        "6": 64,
+        "12": 64,
+        "11": 16,
+        "14": 36,
+        "16": 16,
+        "15": 28,
+        "13": 32
+      },
+      "uniqueTrajectories": 2,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 52,
+      "sharedPrefixPlies": 51,
+      "naturalOpenings": null,
+      "searchTurns": 816,
+      "depthZero": 0,
+      "actualNodes": 26738688,
+      "nodesMedian": 32768.0,
+      "depthMedian": 9.0,
+      "actualElapsedMs": 2735002.839017006,
+      "interval": null
+    },
+    {
+      "openingId": "opening-0-2",
+      "profile": "base-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "52": 16
+      },
+      "completedDepthDistribution": {
+        "5": 230,
+        "4": 170,
+        "3": 208,
+        "6": 54,
+        "7": 54,
+        "8": 74,
+        "9": 10
+      },
+      "uniqueTrajectories": 5,
+      "unique12PlyPrefixes": 2,
+      "firstDivergentPrefixPly": 6,
+      "sharedPrefixPlies": 5,
+      "naturalOpenings": null,
+      "searchTurns": 800,
+      "depthZero": 0,
+      "actualNodes": 1638400,
+      "nodesMedian": 2048.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 165252.84518400015,
+      "interval": null
+    },
+    {
+      "openingId": "opening-0-2",
+      "profile": "base-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "54": 16
+      },
+      "completedDepthDistribution": {
+        "7": 144,
+        "6": 128,
+        "5": 128,
+        "4": 80,
+        "12": 40,
+        "11": 32,
+        "10": 84,
+        "9": 72,
+        "8": 76,
+        "16": 6,
+        "32": 28,
+        "13": 8,
+        "14": 2,
+        "17": 2,
+        "15": 2
+      },
+      "uniqueTrajectories": 8,
+      "unique12PlyPrefixes": 2,
+      "firstDivergentPrefixPly": 6,
+      "sharedPrefixPlies": 5,
+      "naturalOpenings": null,
+      "searchTurns": 832,
+      "depthZero": 0,
+      "actualNodes": 6631666,
+      "nodesMedian": 8192.0,
+      "depthMedian": 7.0,
+      "actualElapsedMs": 643935.0011620007,
+      "interval": null
+    },
+    {
+      "openingId": "opening-0-2",
+      "profile": "base-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "43": 16
+      },
+      "completedDepthDistribution": {
+        "9": 98,
+        "8": 128,
+        "6": 32,
+        "7": 112,
+        "12": 108,
+        "10": 72,
+        "11": 52,
+        "13": 22,
+        "14": 10,
+        "32": 18,
+        "16": 2,
+        "15": 2
+      },
+      "uniqueTrajectories": 8,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 37,
+      "sharedPrefixPlies": 36,
+      "naturalOpenings": null,
+      "searchTurns": 656,
+      "depthZero": 0,
+      "actualNodes": 20911490,
+      "nodesMedian": 32768.0,
+      "depthMedian": 9.0,
+      "actualElapsedMs": 2254278.6714239987,
+      "interval": null
+    },
+    {
+      "openingId": "opening-0-2",
+      "profile": "mobility-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "32": 16
+      },
+      "completedDepthDistribution": {
+        "5": 166,
+        "4": 160,
+        "3": 64,
+        "6": 42,
+        "7": 26,
+        "10": 10,
+        "11": 6,
+        "9": 6
+      },
+      "uniqueTrajectories": 3,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 27,
+      "sharedPrefixPlies": 26,
+      "naturalOpenings": null,
+      "searchTurns": 480,
+      "depthZero": 0,
+      "actualNodes": 983040,
+      "nodesMedian": 2048.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 110825.48705699923,
+      "interval": null
+    },
+    {
+      "openingId": "opening-0-2",
+      "profile": "mobility-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "67": 16
+      },
+      "completedDepthDistribution": {
+        "7": 160,
+        "6": 144,
+        "5": 144,
+        "4": 48,
+        "10": 128,
+        "11": 76,
+        "9": 146,
+        "12": 34,
+        "8": 98,
+        "13": 20,
+        "32": 34,
+        "15": 4,
+        "14": 4
+      },
+      "uniqueTrajectories": 8,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 59,
+      "sharedPrefixPlies": 58,
+      "naturalOpenings": null,
+      "searchTurns": 1040,
+      "depthZero": 0,
+      "actualNodes": 8271592,
+      "nodesMedian": 8192.0,
+      "depthMedian": 8.0,
+      "actualElapsedMs": 825991.2993120018,
+      "interval": null
+    },
+    {
+      "openingId": "opening-0-2",
+      "profile": "mobility-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "36": 12,
+        "38": 4
+      },
+      "completedDepthDistribution": {
+        "8": 112,
+        "7": 96,
+        "6": 160,
+        "9": 42,
+        "13": 22,
+        "11": 30,
+        "12": 20,
+        "10": 32,
+        "14": 8,
+        "32": 28,
+        "17": 2
+      },
+      "uniqueTrajectories": 7,
+      "unique12PlyPrefixes": 2,
+      "firstDivergentPrefixPly": 6,
+      "sharedPrefixPlies": 5,
+      "naturalOpenings": null,
+      "searchTurns": 552,
+      "depthZero": 0,
+      "actualNodes": 17214886,
+      "nodesMedian": 32768.0,
+      "depthMedian": 8.0,
+      "actualElapsedMs": 2000402.089494999,
+      "interval": null
+    },
+    {
+      "openingId": "opening-0-3",
+      "profile": "base-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "32": 16
+      },
+      "completedDepthDistribution": {
+        "5": 48,
+        "4": 232,
+        "3": 120,
+        "6": 48,
+        "7": 12,
+        "11": 4,
+        "10": 4,
+        "8": 4,
+        "32": 8
+      },
+      "uniqueTrajectories": 5,
+      "unique12PlyPrefixes": 2,
+      "firstDivergentPrefixPly": 8,
+      "sharedPrefixPlies": 7,
+      "naturalOpenings": null,
+      "searchTurns": 480,
+      "depthZero": 0,
+      "actualNodes": 968072,
+      "nodesMedian": 2048.0,
+      "depthMedian": 4.0,
+      "actualElapsedMs": 116205.41921899996,
+      "interval": null
+    },
+    {
+      "openingId": "opening-0-3",
+      "profile": "base-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "36": 16
+      },
+      "completedDepthDistribution": {
+        "7": 32,
+        "6": 112,
+        "4": 96,
+        "5": 160,
+        "9": 40,
+        "8": 24,
+        "11": 16,
+        "32": 40,
+        "10": 24
+      },
+      "uniqueTrajectories": 3,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 31,
+      "sharedPrefixPlies": 30,
+      "naturalOpenings": null,
+      "searchTurns": 544,
+      "depthZero": 0,
+      "actualNodes": 4178176,
+      "nodesMedian": 8192.0,
+      "depthMedian": 6.0,
+      "actualElapsedMs": 496311.3701399998,
+      "interval": null
+    },
+    {
+      "openingId": "opening-0-3",
+      "profile": "base-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "42": 16
+      },
+      "completedDepthDistribution": {
+        "9": 100,
+        "8": 144,
+        "7": 112,
+        "11": 104,
+        "10": 58,
+        "6": 16,
+        "12": 38,
+        "32": 38,
+        "15": 8,
+        "16": 4,
+        "13": 4,
+        "17": 6,
+        "14": 4,
+        "18": 2,
+        "31": 2
+      },
+      "uniqueTrajectories": 8,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 34,
+      "sharedPrefixPlies": 33,
+      "naturalOpenings": null,
+      "searchTurns": 640,
+      "depthZero": 0,
+      "actualNodes": 19777076,
+      "nodesMedian": 32768.0,
+      "depthMedian": 9.0,
+      "actualElapsedMs": 2154931.578479997,
+      "interval": null
+    },
+    {
+      "openingId": "opening-0-3",
+      "profile": "mobility-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "53": 16
+      },
+      "completedDepthDistribution": {
+        "5": 212,
+        "4": 224,
+        "3": 112,
+        "6": 106,
+        "11": 16,
+        "10": 16,
+        "9": 16,
+        "7": 66,
+        "8": 46,
+        "32": 2
+      },
+      "uniqueTrajectories": 6,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 47,
+      "sharedPrefixPlies": 46,
+      "naturalOpenings": null,
+      "searchTurns": 816,
+      "depthZero": 0,
+      "actualNodes": 1667264,
+      "nodesMedian": 2048.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 166849.75833299838,
+      "interval": null
+    },
+    {
+      "openingId": "opening-0-3",
+      "profile": "mobility-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "40": 16
+      },
+      "completedDepthDistribution": {
+        "7": 88,
+        "6": 88,
+        "4": 48,
+        "5": 208,
+        "9": 52,
+        "8": 48,
+        "10": 26,
+        "13": 12,
+        "12": 6,
+        "11": 14,
+        "32": 14,
+        "14": 2,
+        "20": 2
+      },
+      "uniqueTrajectories": 7,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 33,
+      "sharedPrefixPlies": 32,
+      "naturalOpenings": null,
+      "searchTurns": 608,
+      "depthZero": 0,
+      "actualNodes": 4872108,
+      "nodesMedian": 8192.0,
+      "depthMedian": 6.0,
+      "actualElapsedMs": 532908.7971330001,
+      "interval": null
+    },
+    {
+      "openingId": "opening-0-3",
+      "profile": "mobility-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "54": 16
+      },
+      "completedDepthDistribution": {
+        "9": 64,
+        "8": 128,
+        "7": 128,
+        "6": 144,
+        "10": 88,
+        "12": 64,
+        "11": 150,
+        "13": 42,
+        "14": 16,
+        "16": 6,
+        "17": 2
+      },
+      "uniqueTrajectories": 3,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 44,
+      "sharedPrefixPlies": 43,
+      "naturalOpenings": null,
+      "searchTurns": 832,
+      "depthZero": 0,
+      "actualNodes": 27262976,
+      "nodesMedian": 32768.0,
+      "depthMedian": 9.0,
+      "actualElapsedMs": 3066849.0287130014,
+      "interval": null
+    },
+    {
+      "openingId": "opening-1-0",
+      "profile": "base-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "48": 16
+      },
+      "completedDepthDistribution": {
+        "7": 68,
+        "6": 112,
+        "5": 160,
+        "4": 224,
+        "3": 64,
+        "8": 34,
+        "10": 16,
+        "9": 22,
+        "32": 36
+      },
+      "uniqueTrajectories": 8,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 44,
+      "sharedPrefixPlies": 43,
+      "naturalOpenings": null,
+      "searchTurns": 736,
+      "depthZero": 0,
+      "actualNodes": 1447848,
+      "nodesMedian": 2048.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 139891.42439499983,
+      "interval": null
+    },
+    {
+      "openingId": "opening-1-0",
+      "profile": "base-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 8,
+      "secondWins": 8,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "49": 8,
+        "40": 8
+      },
+      "completedDepthDistribution": {
+        "8": 136,
+        "6": 160,
+        "7": 110,
+        "5": 64,
+        "9": 102,
+        "10": 58,
+        "12": 10,
+        "11": 22,
+        "4": 8,
+        "32": 8,
+        "13": 2
+      },
+      "uniqueTrajectories": 6,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 18,
+      "sharedPrefixPlies": 17,
+      "naturalOpenings": null,
+      "searchTurns": 680,
+      "depthZero": 0,
+      "actualNodes": 5510926,
+      "nodesMedian": 8192.0,
+      "depthMedian": 7.0,
+      "actualElapsedMs": 571447.4597980003,
+      "interval": null
+    },
+    {
+      "openingId": "opening-1-0",
+      "profile": "base-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "41": 16
+      },
+      "completedDepthDistribution": {
+        "10": 112,
+        "8": 144,
+        "7": 160,
+        "9": 48,
+        "6": 16,
+        "12": 32,
+        "11": 64,
+        "13": 32,
+        "14": 16
+      },
+      "uniqueTrajectories": 1,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": null,
+      "sharedPrefixPlies": 41,
+      "naturalOpenings": null,
+      "searchTurns": 624,
+      "depthZero": 0,
+      "actualNodes": 20447232,
+      "nodesMedian": 32768.0,
+      "depthMedian": 8.0,
+      "actualElapsedMs": 2238606.6542140017,
+      "interval": null
+    },
+    {
+      "openingId": "opening-1-0",
+      "profile": "mobility-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "33": 16
+      },
+      "completedDepthDistribution": {
+        "7": 32,
+        "6": 64,
+        "5": 128,
+        "4": 128,
+        "3": 112,
+        "11": 16,
+        "9": 16
+      },
+      "uniqueTrajectories": 1,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": null,
+      "sharedPrefixPlies": 33,
+      "naturalOpenings": null,
+      "searchTurns": 496,
+      "depthZero": 0,
+      "actualNodes": 1015808,
+      "nodesMedian": 2048.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 105587.96333200322,
+      "interval": null
+    },
+    {
+      "openingId": "opening-1-0",
+      "profile": "mobility-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "35": 10,
+        "45": 6
+      },
+      "completedDepthDistribution": {
+        "8": 52,
+        "7": 104,
+        "6": 38,
+        "5": 140,
+        "4": 120,
+        "9": 46,
+        "17": 6,
+        "12": 12,
+        "32": 20,
+        "10": 26,
+        "11": 14,
+        "13": 4,
+        "16": 2,
+        "15": 2,
+        "14": 2
+      },
+      "uniqueTrajectories": 8,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 16,
+      "sharedPrefixPlies": 15,
+      "naturalOpenings": null,
+      "searchTurns": 588,
+      "depthZero": 0,
+      "actualNodes": 4675740,
+      "nodesMedian": 8192.0,
+      "depthMedian": 6.0,
+      "actualElapsedMs": 540883.5222289991,
+      "interval": null
+    },
+    {
+      "openingId": "opening-1-0",
+      "profile": "mobility-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "46": 16
+      },
+      "completedDepthDistribution": {
+        "10": 126,
+        "11": 124,
+        "9": 112,
+        "8": 64,
+        "6": 112,
+        "7": 112,
+        "15": 4,
+        "14": 6,
+        "13": 14,
+        "17": 4,
+        "32": 18,
+        "12": 4,
+        "19": 4
+      },
+      "uniqueTrajectories": 8,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 39,
+      "sharedPrefixPlies": 38,
+      "naturalOpenings": null,
+      "searchTurns": 704,
+      "depthZero": 0,
+      "actualNodes": 22487160,
+      "nodesMedian": 32768.0,
+      "depthMedian": 9.0,
+      "actualElapsedMs": 2717744.468927004,
+      "interval": null
+    },
+    {
+      "openingId": "opening-1-1",
+      "profile": "base-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "36": 14,
+        "38": 2
+      },
+      "completedDepthDistribution": {
+        "5": 116,
+        "6": 92,
+        "4": 146,
+        "3": 50,
+        "12": 16,
+        "11": 18,
+        "10": 20,
+        "8": 46,
+        "7": 32,
+        "9": 2,
+        "29": 2,
+        "32": 6,
+        "23": 2
+      },
+      "uniqueTrajectories": 8,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 29,
+      "sharedPrefixPlies": 28,
+      "naturalOpenings": null,
+      "searchTurns": 548,
+      "depthZero": 0,
+      "actualNodes": 1114054,
+      "nodesMedian": 2048.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 96933.84522500001,
+      "interval": null
+    },
+    {
+      "openingId": "opening-1-1",
+      "profile": "base-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "34": 16
+      },
+      "completedDepthDistribution": {
+        "7": 128,
+        "8": 80,
+        "5": 128,
+        "6": 80,
+        "9": 48,
+        "10": 32,
+        "11": 16
+      },
+      "uniqueTrajectories": 2,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 33,
+      "sharedPrefixPlies": 32,
+      "naturalOpenings": null,
+      "searchTurns": 512,
+      "depthZero": 0,
+      "actualNodes": 4194304,
+      "nodesMedian": 8192.0,
+      "depthMedian": 7.0,
+      "actualElapsedMs": 393255.1954860011,
+      "interval": null
+    },
+    {
+      "openingId": "opening-1-1",
+      "profile": "base-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "38": 16
+      },
+      "completedDepthDistribution": {
+        "9": 80,
+        "10": 64,
+        "8": 144,
+        "7": 144,
+        "12": 62,
+        "11": 46,
+        "13": 16,
+        "14": 18,
+        "21": 2
+      },
+      "uniqueTrajectories": 3,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 32,
+      "sharedPrefixPlies": 31,
+      "naturalOpenings": null,
+      "searchTurns": 576,
+      "depthZero": 0,
+      "actualNodes": 18874368,
+      "nodesMedian": 32768.0,
+      "depthMedian": 8.5,
+      "actualElapsedMs": 1707990.6740899961,
+      "interval": null
+    },
+    {
+      "openingId": "opening-1-1",
+      "profile": "mobility-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "41": 16
+      },
+      "completedDepthDistribution": {
+        "5": 188,
+        "6": 224,
+        "7": 36,
+        "4": 144,
+        "3": 16,
+        "8": 16
+      },
+      "uniqueTrajectories": 3,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 36,
+      "sharedPrefixPlies": 35,
+      "naturalOpenings": null,
+      "searchTurns": 624,
+      "depthZero": 0,
+      "actualNodes": 1277952,
+      "nodesMedian": 2048.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 98859.17411699693,
+      "interval": null
+    },
+    {
+      "openingId": "opening-1-1",
+      "profile": "mobility-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "63": 16
+      },
+      "completedDepthDistribution": {
+        "7": 312,
+        "8": 296,
+        "9": 254,
+        "10": 50,
+        "12": 18,
+        "11": 18,
+        "32": 18,
+        "13": 4,
+        "14": 4,
+        "15": 2
+      },
+      "uniqueTrajectories": 8,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 58,
+      "sharedPrefixPlies": 57,
+      "naturalOpenings": null,
+      "searchTurns": 976,
+      "depthZero": 0,
+      "actualNodes": 7853728,
+      "nodesMedian": 8192.0,
+      "depthMedian": 8.0,
+      "actualElapsedMs": 514602.1648540066,
+      "interval": null
+    },
+    {
+      "openingId": "opening-1-1",
+      "profile": "mobility-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "50": 16
+      },
+      "completedDepthDistribution": {
+        "9": 158,
+        "10": 116,
+        "8": 112,
+        "7": 144,
+        "11": 120,
+        "6": 32,
+        "15": 20,
+        "14": 20,
+        "12": 34,
+        "13": 12
+      },
+      "uniqueTrajectories": 4,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 44,
+      "sharedPrefixPlies": 43,
+      "naturalOpenings": null,
+      "searchTurns": 768,
+      "depthZero": 0,
+      "actualNodes": 25165824,
+      "nodesMedian": 32768.0,
+      "depthMedian": 9.0,
+      "actualElapsedMs": 2347360.6729339985,
+      "interval": null
+    },
+    {
+      "openingId": "opening-1-2",
+      "profile": "base-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "38": 16
+      },
+      "completedDepthDistribution": {
+        "7": 120,
+        "8": 60,
+        "6": 92,
+        "5": 64,
+        "3": 112,
+        "4": 96,
+        "9": 20,
+        "11": 4,
+        "10": 6,
+        "32": 2
+      },
+      "uniqueTrajectories": 5,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 33,
+      "sharedPrefixPlies": 32,
+      "naturalOpenings": null,
+      "searchTurns": 576,
+      "depthZero": 0,
+      "actualNodes": 1175680,
+      "nodesMedian": 2048.0,
+      "depthMedian": 6.0,
+      "actualElapsedMs": 113536.5847209999,
+      "interval": null
+    },
+    {
+      "openingId": "opening-1-2",
+      "profile": "base-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "45": 16
+      },
+      "completedDepthDistribution": {
+        "9": 64,
+        "8": 38,
+        "6": 272,
+        "5": 96,
+        "7": 100,
+        "10": 44,
+        "11": 28,
+        "14": 4,
+        "12": 4,
+        "32": 30,
+        "24": 2,
+        "23": 2,
+        "16": 2,
+        "13": 2
+      },
+      "uniqueTrajectories": 8,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 38,
+      "sharedPrefixPlies": 37,
+      "naturalOpenings": null,
+      "searchTurns": 688,
+      "depthZero": 0,
+      "actualNodes": 5413004,
+      "nodesMedian": 8192.0,
+      "depthMedian": 6.0,
+      "actualElapsedMs": 542834.1809670001,
+      "interval": null
+    },
+    {
+      "openingId": "opening-1-2",
+      "profile": "base-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "64": 16
+      },
+      "completedDepthDistribution": {
+        "11": 138,
+        "10": 192,
+        "8": 128,
+        "9": 160,
+        "7": 112,
+        "12": 144,
+        "13": 48,
+        "15": 22,
+        "14": 20,
+        "32": 8,
+        "19": 8,
+        "16": 6,
+        "20": 4,
+        "21": 2
+      },
+      "uniqueTrajectories": 8,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 61,
+      "sharedPrefixPlies": 60,
+      "naturalOpenings": null,
+      "searchTurns": 992,
+      "depthZero": 0,
+      "actualNodes": 32246834,
+      "nodesMedian": 32768.0,
+      "depthMedian": 10.0,
+      "actualElapsedMs": 3316521.1272099987,
+      "interval": null
+    },
+    {
+      "openingId": "opening-1-2",
+      "profile": "mobility-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "36": 16
+      },
+      "completedDepthDistribution": {
+        "7": 78,
+        "8": 28,
+        "6": 138,
+        "5": 80,
+        "3": 112,
+        "4": 102,
+        "11": 6
+      },
+      "uniqueTrajectories": 3,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 33,
+      "sharedPrefixPlies": 32,
+      "naturalOpenings": null,
+      "searchTurns": 544,
+      "depthZero": 0,
+      "actualNodes": 1114112,
+      "nodesMedian": 2048.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 115353.79980399855,
+      "interval": null
+    },
+    {
+      "openingId": "opening-1-2",
+      "profile": "mobility-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "40": 16
+      },
+      "completedDepthDistribution": {
+        "9": 96,
+        "10": 70,
+        "8": 72,
+        "7": 58,
+        "5": 192,
+        "6": 64,
+        "12": 16,
+        "11": 32,
+        "13": 4,
+        "18": 4
+      },
+      "uniqueTrajectories": 7,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 37,
+      "sharedPrefixPlies": 36,
+      "naturalOpenings": null,
+      "searchTurns": 608,
+      "depthZero": 0,
+      "actualNodes": 4980736,
+      "nodesMedian": 8192.0,
+      "depthMedian": 7.0,
+      "actualElapsedMs": 510416.2871320029,
+      "interval": null
+    },
+    {
+      "openingId": "opening-1-2",
+      "profile": "mobility-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "41": 16
+      },
+      "completedDepthDistribution": {
+        "11": 64,
+        "10": 52,
+        "8": 128,
+        "9": 88,
+        "12": 44,
+        "7": 144,
+        "6": 16,
+        "14": 16,
+        "16": 2,
+        "13": 26,
+        "32": 36,
+        "20": 2,
+        "19": 2,
+        "18": 2,
+        "21": 2
+      },
+      "uniqueTrajectories": 8,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 33,
+      "sharedPrefixPlies": 32,
+      "naturalOpenings": null,
+      "searchTurns": 624,
+      "depthZero": 0,
+      "actualNodes": 19303454,
+      "nodesMedian": 32768.0,
+      "depthMedian": 9.0,
+      "actualElapsedMs": 2172441.5142680043,
+      "interval": null
+    },
+    {
+      "openingId": "opening-1-3",
+      "profile": "base-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 14,
+      "secondWins": 2,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "41": 14,
+        "46": 2
+      },
+      "completedDepthDistribution": {
+        "5": 174,
+        "7": 66,
+        "6": 206,
+        "4": 106,
+        "3": 48,
+        "9": 20,
+        "8": 4,
+        "32": 8,
+        "10": 2
+      },
+      "uniqueTrajectories": 4,
+      "unique12PlyPrefixes": 2,
+      "firstDivergentPrefixPly": 11,
+      "sharedPrefixPlies": 10,
+      "naturalOpenings": null,
+      "searchTurns": 634,
+      "depthZero": 0,
+      "actualNodes": 1282754,
+      "nodesMedian": 2048.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 105620.85636199976,
+      "interval": null
+    },
+    {
+      "openingId": "opening-1-3",
+      "profile": "base-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "38": 16
+      },
+      "completedDepthDistribution": {
+        "7": 98,
+        "8": 96,
+        "6": 192,
+        "5": 80,
+        "4": 32,
+        "9": 22,
+        "11": 10,
+        "12": 14,
+        "32": 24,
+        "10": 8
+      },
+      "uniqueTrajectories": 8,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 34,
+      "sharedPrefixPlies": 33,
+      "naturalOpenings": null,
+      "searchTurns": 576,
+      "depthZero": 0,
+      "actualNodes": 4541490,
+      "nodesMedian": 8192.0,
+      "depthMedian": 6.0,
+      "actualElapsedMs": 448166.9129229998,
+      "interval": null
+    },
+    {
+      "openingId": "opening-1-3",
+      "profile": "base-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "40": 16
+      },
+      "completedDepthDistribution": {
+        "9": 106,
+        "10": 148,
+        "8": 144,
+        "7": 80,
+        "11": 64,
+        "12": 36,
+        "13": 28,
+        "14": 2
+      },
+      "uniqueTrajectories": 6,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 32,
+      "sharedPrefixPlies": 31,
+      "naturalOpenings": null,
+      "searchTurns": 608,
+      "depthZero": 0,
+      "actualNodes": 19922944,
+      "nodesMedian": 32768.0,
+      "depthMedian": 9.0,
+      "actualElapsedMs": 1934355.5503820018,
+      "interval": null
+    },
+    {
+      "openingId": "opening-1-3",
+      "profile": "mobility-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "36": 16
+      },
+      "completedDepthDistribution": {
+        "5": 132,
+        "6": 80,
+        "4": 112,
+        "3": 160,
+        "9": 8,
+        "7": 10,
+        "8": 20,
+        "10": 14,
+        "32": 8
+      },
+      "uniqueTrajectories": 7,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 13,
+      "sharedPrefixPlies": 12,
+      "naturalOpenings": null,
+      "searchTurns": 544,
+      "depthZero": 0,
+      "actualNodes": 1098632,
+      "nodesMedian": 2048.0,
+      "depthMedian": 4.5,
+      "actualElapsedMs": 117568.2982040015,
+      "interval": null
+    },
+    {
+      "openingId": "opening-1-3",
+      "profile": "mobility-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "36": 16
+      },
+      "completedDepthDistribution": {
+        "7": 80,
+        "8": 64,
+        "6": 128,
+        "9": 26,
+        "5": 160,
+        "10": 14,
+        "13": 10,
+        "32": 28,
+        "11": 20,
+        "14": 6,
+        "16": 2,
+        "12": 6
+      },
+      "uniqueTrajectories": 8,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 30,
+      "sharedPrefixPlies": 29,
+      "naturalOpenings": null,
+      "searchTurns": 544,
+      "depthZero": 0,
+      "actualNodes": 4235828,
+      "nodesMedian": 8192.0,
+      "depthMedian": 6.0,
+      "actualElapsedMs": 436966.0085019949,
+      "interval": null
+    },
+    {
+      "openingId": "opening-1-3",
+      "profile": "mobility-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "44": 16
+      },
+      "completedDepthDistribution": {
+        "9": 128,
+        "11": 42,
+        "10": 86,
+        "8": 96,
+        "7": 106,
+        "6": 54,
+        "5": 16,
+        "14": 46,
+        "12": 40,
+        "13": 10,
+        "15": 4,
+        "22": 6,
+        "32": 30,
+        "19": 4,
+        "21": 2,
+        "20": 2
+      },
+      "uniqueTrajectories": 7,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 36,
+      "sharedPrefixPlies": 35,
+      "naturalOpenings": null,
+      "searchTurns": 672,
+      "depthZero": 0,
+      "actualNodes": 21199642,
+      "nodesMedian": 32768.0,
+      "depthMedian": 9.0,
+      "actualElapsedMs": 2187171.879720005,
+      "interval": null
+    },
+    {
+      "openingId": "opening-2-0",
+      "profile": "base-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "40": 16
+      },
+      "completedDepthDistribution": {
+        "6": 68,
+        "8": 46,
+        "5": 204,
+        "3": 48,
+        "4": 144,
+        "9": 44,
+        "7": 40,
+        "32": 14
+      },
+      "uniqueTrajectories": 4,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 34,
+      "sharedPrefixPlies": 33,
+      "naturalOpenings": null,
+      "searchTurns": 608,
+      "depthZero": 0,
+      "actualNodes": 1223966,
+      "nodesMedian": 2048.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 119881.45189000004,
+      "interval": null
+    },
+    {
+      "openingId": "opening-2-0",
+      "profile": "base-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "45": 16
+      },
+      "completedDepthDistribution": {
+        "8": 130,
+        "10": 64,
+        "7": 82,
+        "5": 192,
+        "6": 136,
+        "9": 28,
+        "11": 6,
+        "13": 14,
+        "32": 28,
+        "12": 8
+      },
+      "uniqueTrajectories": 8,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 35,
+      "sharedPrefixPlies": 34,
+      "naturalOpenings": null,
+      "searchTurns": 688,
+      "depthZero": 0,
+      "actualNodes": 5411844,
+      "nodesMedian": 8192.0,
+      "depthMedian": 7.0,
+      "actualElapsedMs": 554567.6708120002,
+      "interval": null
+    },
+    {
+      "openingId": "opening-2-0",
+      "profile": "base-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "35": 16
+      },
+      "completedDepthDistribution": {
+        "10": 64,
+        "12": 40,
+        "9": 54,
+        "7": 144,
+        "6": 112,
+        "8": 64,
+        "11": 30,
+        "13": 18,
+        "32": 2
+      },
+      "uniqueTrajectories": 5,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 32,
+      "sharedPrefixPlies": 31,
+      "naturalOpenings": null,
+      "searchTurns": 528,
+      "depthZero": 0,
+      "actualNodes": 17236096,
+      "nodesMedian": 32768.0,
+      "depthMedian": 8.0,
+      "actualElapsedMs": 2085693.4880889985,
+      "interval": null
+    },
+    {
+      "openingId": "opening-2-0",
+      "profile": "mobility-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "41": 16
+      },
+      "completedDepthDistribution": {
+        "6": 106,
+        "4": 224,
+        "3": 128,
+        "8": 64,
+        "7": 32,
+        "5": 58,
+        "9": 6,
+        "10": 6
+      },
+      "uniqueTrajectories": 4,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 36,
+      "sharedPrefixPlies": 35,
+      "naturalOpenings": null,
+      "searchTurns": 624,
+      "depthZero": 0,
+      "actualNodes": 1277952,
+      "nodesMedian": 2048.0,
+      "depthMedian": 4.0,
+      "actualElapsedMs": 141511.99525099713,
+      "interval": null
+    },
+    {
+      "openingId": "opening-2-0",
+      "profile": "mobility-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "37": 16
+      },
+      "completedDepthDistribution": {
+        "7": 142,
+        "10": 20,
+        "8": 78,
+        "5": 96,
+        "6": 148,
+        "9": 30,
+        "11": 16,
+        "13": 6,
+        "12": 16,
+        "32": 8
+      },
+      "uniqueTrajectories": 7,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 31,
+      "sharedPrefixPlies": 30,
+      "naturalOpenings": null,
+      "searchTurns": 560,
+      "depthZero": 0,
+      "actualNodes": 4527952,
+      "nodesMedian": 8192.0,
+      "depthMedian": 7.0,
+      "actualElapsedMs": 530027.9470570004,
+      "interval": null
+    },
+    {
+      "openingId": "opening-2-0",
+      "profile": "mobility-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "55": 16
+      },
+      "completedDepthDistribution": {
+        "9": 150,
+        "12": 50,
+        "10": 86,
+        "7": 96,
+        "6": 112,
+        "8": 48,
+        "5": 16,
+        "11": 114,
+        "13": 90,
+        "17": 18,
+        "15": 28,
+        "14": 24,
+        "32": 10,
+        "21": 2,
+        "20": 2,
+        "18": 2
+      },
+      "uniqueTrajectories": 6,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 41,
+      "sharedPrefixPlies": 40,
+      "naturalOpenings": null,
+      "searchTurns": 848,
+      "depthZero": 0,
+      "actualNodes": 27470604,
+      "nodesMedian": 32768.0,
+      "depthMedian": 10.0,
+      "actualElapsedMs": 3033378.554542008,
+      "interval": null
+    },
+    {
+      "openingId": "opening-2-1",
+      "profile": "base-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "48": 16
+      },
+      "completedDepthDistribution": {
+        "6": 112,
+        "4": 112,
+        "7": 128,
+        "5": 160,
+        "3": 80,
+        "8": 64,
+        "10": 32,
+        "9": 32,
+        "11": 16
+      },
+      "uniqueTrajectories": 1,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": null,
+      "sharedPrefixPlies": 48,
+      "naturalOpenings": null,
+      "searchTurns": 736,
+      "depthZero": 0,
+      "actualNodes": 1507328,
+      "nodesMedian": 2048.0,
+      "depthMedian": 6.0,
+      "actualElapsedMs": 143739.7824389999,
+      "interval": null
+    },
+    {
+      "openingId": "opening-2-1",
+      "profile": "base-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "42": 8,
+        "44": 8
+      },
+      "completedDepthDistribution": {
+        "8": 122,
+        "6": 112,
+        "9": 82,
+        "7": 120,
+        "4": 72,
+        "5": 72,
+        "12": 8,
+        "10": 48,
+        "32": 12,
+        "14": 2,
+        "11": 4,
+        "18": 2
+      },
+      "uniqueTrajectories": 8,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 14,
+      "sharedPrefixPlies": 13,
+      "naturalOpenings": null,
+      "searchTurns": 656,
+      "depthZero": 0,
+      "actualNodes": 5277000,
+      "nodesMedian": 8192.0,
+      "depthMedian": 7.0,
+      "actualElapsedMs": 563445.5848899995,
+      "interval": null
+    },
+    {
+      "openingId": "opening-2-1",
+      "profile": "base-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "38": 16
+      },
+      "completedDepthDistribution": {
+        "10": 80,
+        "8": 80,
+        "12": 108,
+        "9": 74,
+        "7": 80,
+        "6": 32,
+        "11": 80,
+        "14": 20,
+        "15": 10,
+        "23": 10,
+        "16": 2
+      },
+      "uniqueTrajectories": 3,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 29,
+      "sharedPrefixPlies": 28,
+      "naturalOpenings": null,
+      "searchTurns": 576,
+      "depthZero": 0,
+      "actualNodes": 18874368,
+      "nodesMedian": 32768.0,
+      "depthMedian": 10.0,
+      "actualElapsedMs": 1971475.310353004,
+      "interval": null
+    },
+    {
+      "openingId": "opening-2-1",
+      "profile": "mobility-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "39": 16
+      },
+      "completedDepthDistribution": {
+        "6": 122,
+        "4": 176,
+        "8": 32,
+        "7": 36,
+        "5": 160,
+        "3": 16,
+        "9": 20,
+        "10": 10,
+        "32": 20
+      },
+      "uniqueTrajectories": 5,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 34,
+      "sharedPrefixPlies": 33,
+      "naturalOpenings": null,
+      "searchTurns": 592,
+      "depthZero": 0,
+      "actualNodes": 1206800,
+      "nodesMedian": 2048.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 114218.35496200097,
+      "interval": null
+    },
+    {
+      "openingId": "opening-2-1",
+      "profile": "mobility-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "31": 16
+      },
+      "completedDepthDistribution": {
+        "8": 64,
+        "6": 128,
+        "10": 20,
+        "7": 92,
+        "5": 80,
+        "4": 16,
+        "12": 4,
+        "11": 4,
+        "32": 32,
+        "15": 12,
+        "9": 12
+      },
+      "uniqueTrajectories": 6,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 25,
+      "sharedPrefixPlies": 24,
+      "naturalOpenings": null,
+      "searchTurns": 464,
+      "depthZero": 0,
+      "actualNodes": 3548944,
+      "nodesMedian": 8192.0,
+      "depthMedian": 7.0,
+      "actualElapsedMs": 415956.3783460022,
+      "interval": null
+    },
+    {
+      "openingId": "opening-2-1",
+      "profile": "mobility-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "51": 16
+      },
+      "completedDepthDistribution": {
+        "10": 22,
+        "7": 144,
+        "11": 170,
+        "9": 144,
+        "8": 88,
+        "6": 64,
+        "12": 76,
+        "14": 32,
+        "16": 8,
+        "32": 30,
+        "13": 4,
+        "17": 2
+      },
+      "uniqueTrajectories": 6,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 42,
+      "sharedPrefixPlies": 41,
+      "naturalOpenings": null,
+      "searchTurns": 784,
+      "depthZero": 0,
+      "actualNodes": 24826812,
+      "nodesMedian": 32768.0,
+      "depthMedian": 9.0,
+      "actualElapsedMs": 2652640.560718001,
+      "interval": null
+    },
+    {
+      "openingId": "opening-3-0",
+      "profile": "base-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "30": 16
+      },
+      "completedDepthDistribution": {
+        "5": 50,
+        "6": 102,
+        "7": 62,
+        "3": 80,
+        "4": 112,
+        "8": 18,
+        "12": 10,
+        "9": 14
+      },
+      "uniqueTrajectories": 4,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 25,
+      "sharedPrefixPlies": 24,
+      "naturalOpenings": null,
+      "searchTurns": 448,
+      "depthZero": 0,
+      "actualNodes": 917504,
+      "nodesMedian": 2048.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 101739.98745200007,
+      "interval": null
+    },
+    {
+      "openingId": "opening-3-0",
+      "profile": "base-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "36": 10,
+        "42": 6
+      },
+      "completedDepthDistribution": {
+        "7": 66,
+        "8": 92,
+        "9": 70,
+        "6": 104,
+        "5": 128,
+        "4": 36,
+        "10": 36,
+        "12": 16,
+        "11": 14,
+        "32": 14,
+        "14": 2,
+        "13": 2
+      },
+      "uniqueTrajectories": 8,
+      "unique12PlyPrefixes": 2,
+      "firstDivergentPrefixPly": 11,
+      "sharedPrefixPlies": 10,
+      "naturalOpenings": null,
+      "searchTurns": 580,
+      "depthZero": 0,
+      "actualNodes": 4644578,
+      "nodesMedian": 8192.0,
+      "depthMedian": 7.0,
+      "actualElapsedMs": 485486.08323500026,
+      "interval": null
+    },
+    {
+      "openingId": "opening-3-0",
+      "profile": "base-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 10,
+      "secondWins": 6,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "49": 10,
+        "62": 6
+      },
+      "completedDepthDistribution": {
+        "9": 116,
+        "11": 176,
+        "10": 128,
+        "12": 90,
+        "8": 102,
+        "6": 10,
+        "7": 38,
+        "13": 56,
+        "15": 40,
+        "14": 18,
+        "32": 28,
+        "18": 6,
+        "17": 6,
+        "16": 10,
+        "21": 2,
+        "19": 4
+      },
+      "uniqueTrajectories": 7,
+      "unique12PlyPrefixes": 2,
+      "firstDivergentPrefixPly": 6,
+      "sharedPrefixPlies": 5,
+      "naturalOpenings": null,
+      "searchTurns": 830,
+      "depthZero": 0,
+      "actualNodes": 26353138,
+      "nodesMedian": 32768.0,
+      "depthMedian": 11.0,
+      "actualElapsedMs": 2699497.9360639993,
+      "interval": null
+    },
+    {
+      "openingId": "opening-3-0",
+      "profile": "mobility-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "32": 16
+      },
+      "completedDepthDistribution": {
+        "5": 32,
+        "6": 94,
+        "7": 92,
+        "4": 32,
+        "3": 208,
+        "8": 16,
+        "10": 2,
+        "9": 4
+      },
+      "uniqueTrajectories": 2,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 26,
+      "sharedPrefixPlies": 25,
+      "naturalOpenings": null,
+      "searchTurns": 480,
+      "depthZero": 0,
+      "actualNodes": 983040,
+      "nodesMedian": 2048.0,
+      "depthMedian": 4.5,
+      "actualElapsedMs": 116228.74818499922,
+      "interval": null
+    },
+    {
+      "openingId": "opening-3-0",
+      "profile": "mobility-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "35": 16
+      },
+      "completedDepthDistribution": {
+        "7": 80,
+        "8": 58,
+        "9": 66,
+        "6": 64,
+        "4": 48,
+        "5": 112,
+        "10": 40,
+        "13": 10,
+        "11": 6,
+        "32": 24,
+        "12": 8,
+        "16": 4,
+        "14": 8
+      },
+      "uniqueTrajectories": 5,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 26,
+      "sharedPrefixPlies": 25,
+      "naturalOpenings": null,
+      "searchTurns": 528,
+      "depthZero": 0,
+      "actualNodes": 4147846,
+      "nodesMedian": 8192.0,
+      "depthMedian": 7.0,
+      "actualElapsedMs": 459891.91924799816,
+      "interval": null
+    },
+    {
+      "openingId": "opening-3-0",
+      "profile": "mobility-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "65": 16
+      },
+      "completedDepthDistribution": {
+        "9": 254,
+        "11": 148,
+        "10": 216,
+        "8": 106,
+        "7": 48,
+        "14": 30,
+        "15": 28,
+        "12": 100,
+        "13": 54,
+        "32": 16,
+        "17": 8
+      },
+      "uniqueTrajectories": 6,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 56,
+      "sharedPrefixPlies": 55,
+      "naturalOpenings": null,
+      "searchTurns": 1008,
+      "depthZero": 0,
+      "actualNodes": 32521144,
+      "nodesMedian": 32768.0,
+      "depthMedian": 10.0,
+      "actualElapsedMs": 3333277.9313610117,
+      "interval": null
+    },
+    {
+      "openingId": "opening-3-1",
+      "profile": "base-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "53": 16
+      },
+      "completedDepthDistribution": {
+        "5": 274,
+        "7": 92,
+        "6": 174,
+        "8": 58,
+        "4": 116,
+        "3": 16,
+        "9": 56,
+        "11": 16,
+        "14": 2,
+        "22": 2,
+        "32": 10
+      },
+      "uniqueTrajectories": 8,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 48,
+      "sharedPrefixPlies": 47,
+      "naturalOpenings": null,
+      "searchTurns": 816,
+      "depthZero": 0,
+      "actualNodes": 1652104,
+      "nodesMedian": 2048.0,
+      "depthMedian": 6.0,
+      "actualElapsedMs": 114834.64551899993,
+      "interval": null
+    },
+    {
+      "openingId": "opening-3-1",
+      "profile": "base-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "48": 16
+      },
+      "completedDepthDistribution": {
+        "7": 200,
+        "8": 78,
+        "6": 128,
+        "5": 48,
+        "9": 182,
+        "10": 60,
+        "12": 26,
+        "11": 12,
+        "32": 2
+      },
+      "uniqueTrajectories": 6,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 42,
+      "sharedPrefixPlies": 41,
+      "naturalOpenings": null,
+      "searchTurns": 736,
+      "depthZero": 0,
+      "actualNodes": 6013184,
+      "nodesMedian": 8192.0,
+      "depthMedian": 7.0,
+      "actualElapsedMs": 511900.947832,
+      "interval": null
+    },
+    {
+      "openingId": "opening-3-1",
+      "profile": "base-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "40": 16
+      },
+      "completedDepthDistribution": {
+        "9": 64,
+        "10": 80,
+        "11": 48,
+        "8": 192,
+        "7": 96,
+        "6": 48,
+        "12": 16,
+        "32": 64
+      },
+      "uniqueTrajectories": 1,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": null,
+      "sharedPrefixPlies": 40,
+      "naturalOpenings": null,
+      "searchTurns": 608,
+      "depthZero": 0,
+      "actualNodes": 17832992,
+      "nodesMedian": 32768.0,
+      "depthMedian": 8.0,
+      "actualElapsedMs": 1589372.6418300015,
+      "interval": null
+    },
+    {
+      "openingId": "opening-3-1",
+      "profile": "mobility-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "41": 6,
+        "47": 6,
+        "53": 4
+      },
+      "completedDepthDistribution": {
+        "5": 214,
+        "6": 164,
+        "4": 144,
+        "3": 44,
+        "8": 42,
+        "10": 8,
+        "9": 16,
+        "11": 12,
+        "7": 36,
+        "13": 8,
+        "12": 4,
+        "32": 16
+      },
+      "uniqueTrajectories": 5,
+      "unique12PlyPrefixes": 2,
+      "firstDivergentPrefixPly": 7,
+      "sharedPrefixPlies": 6,
+      "naturalOpenings": null,
+      "searchTurns": 708,
+      "depthZero": 0,
+      "actualNodes": 1422420,
+      "nodesMedian": 2048.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 108595.60573700094,
+      "interval": null
+    },
+    {
+      "openingId": "opening-3-1",
+      "profile": "mobility-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "35": 16
+      },
+      "completedDepthDistribution": {
+        "7": 84,
+        "8": 102,
+        "6": 132,
+        "5": 128,
+        "4": 32,
+        "13": 10,
+        "10": 20,
+        "11": 20
+      },
+      "uniqueTrajectories": 5,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 30,
+      "sharedPrefixPlies": 29,
+      "naturalOpenings": null,
+      "searchTurns": 528,
+      "depthZero": 0,
+      "actualNodes": 4325376,
+      "nodesMedian": 8192.0,
+      "depthMedian": 6.0,
+      "actualElapsedMs": 397424.3779870004,
+      "interval": null
+    },
+    {
+      "openingId": "opening-3-1",
+      "profile": "mobility-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "41": 16
+      },
+      "completedDepthDistribution": {
+        "9": 144,
+        "10": 86,
+        "8": 112,
+        "7": 80,
+        "11": 84,
+        "15": 22,
+        "14": 20,
+        "13": 16,
+        "32": 54,
+        "12": 4,
+        "17": 2
+      },
+      "uniqueTrajectories": 8,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 34,
+      "sharedPrefixPlies": 33,
+      "naturalOpenings": null,
+      "searchTurns": 624,
+      "depthZero": 0,
+      "actualNodes": 18758788,
+      "nodesMedian": 32768.0,
+      "depthMedian": 9.0,
+      "actualElapsedMs": 1731017.0867750016,
+      "interval": null
+    },
+    {
+      "openingId": "opening-3-2",
+      "profile": "base-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "67": 16
+      },
+      "completedDepthDistribution": {
+        "6": 208,
+        "5": 272,
+        "7": 182,
+        "3": 112,
+        "4": 144,
+        "8": 70,
+        "10": 10,
+        "9": 10,
+        "32": 32
+      },
+      "uniqueTrajectories": 6,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 63,
+      "sharedPrefixPlies": 62,
+      "naturalOpenings": null,
+      "searchTurns": 1040,
+      "depthZero": 0,
+      "actualNodes": 2071384,
+      "nodesMedian": 2048.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 185469.47990899967,
+      "interval": null
+    },
+    {
+      "openingId": "opening-3-2",
+      "profile": "base-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "50": 16
+      },
+      "completedDepthDistribution": {
+        "8": 120,
+        "9": 140,
+        "10": 58,
+        "7": 126,
+        "5": 64,
+        "6": 198,
+        "11": 18,
+        "12": 32,
+        "17": 2,
+        "16": 2,
+        "32": 8
+      },
+      "uniqueTrajectories": 6,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 45,
+      "sharedPrefixPlies": 44,
+      "naturalOpenings": null,
+      "searchTurns": 768,
+      "depthZero": 0,
+      "actualNodes": 6234110,
+      "nodesMedian": 8192.0,
+      "depthMedian": 7.0,
+      "actualElapsedMs": 615237.9556489999,
+      "interval": null
+    },
+    {
+      "openingId": "opening-3-2",
+      "profile": "base-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "47": 16
+      },
+      "completedDepthDistribution": {
+        "10": 192,
+        "9": 68,
+        "11": 232,
+        "12": 80,
+        "8": 64,
+        "13": 76,
+        "14": 8
+      },
+      "uniqueTrajectories": 4,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 39,
+      "sharedPrefixPlies": 38,
+      "naturalOpenings": null,
+      "searchTurns": 720,
+      "depthZero": 0,
+      "actualNodes": 23592960,
+      "nodesMedian": 32768.0,
+      "depthMedian": 11.0,
+      "actualElapsedMs": 2569024.983146001,
+      "interval": null
+    },
+    {
+      "openingId": "opening-3-2",
+      "profile": "mobility-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "42": 16
+      },
+      "completedDepthDistribution": {
+        "6": 104,
+        "7": 48,
+        "8": 16,
+        "3": 112,
+        "5": 148,
+        "4": 120,
+        "11": 16,
+        "13": 8,
+        "32": 50,
+        "17": 8,
+        "19": 8,
+        "9": 2
+      },
+      "uniqueTrajectories": 6,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 36,
+      "sharedPrefixPlies": 35,
+      "naturalOpenings": null,
+      "searchTurns": 640,
+      "depthZero": 0,
+      "actualNodes": 1238910,
+      "nodesMedian": 2048.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 125773.43843099615,
+      "interval": null
+    },
+    {
+      "openingId": "opening-3-2",
+      "profile": "mobility-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "40": 10,
+        "36": 6
+      },
+      "completedDepthDistribution": {
+        "8": 84,
+        "9": 34,
+        "10": 26,
+        "7": 122,
+        "5": 126,
+        "6": 104,
+        "4": 32,
+        "32": 32,
+        "11": 12,
+        "12": 6,
+        "14": 2,
+        "13": 4
+      },
+      "uniqueTrajectories": 7,
+      "unique12PlyPrefixes": 2,
+      "firstDivergentPrefixPly": 9,
+      "sharedPrefixPlies": 8,
+      "naturalOpenings": null,
+      "searchTurns": 584,
+      "depthZero": 0,
+      "actualNodes": 4527540,
+      "nodesMedian": 8192.0,
+      "depthMedian": 7.0,
+      "actualElapsedMs": 513852.7691619969,
+      "interval": null
+    },
+    {
+      "openingId": "opening-3-2",
+      "profile": "mobility-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "51": 2,
+        "77": 8,
+        "45": 6
+      },
+      "completedDepthDistribution": {
+        "10": 234,
+        "9": 98,
+        "11": 272,
+        "12": 82,
+        "13": 60,
+        "8": 54,
+        "7": 44,
+        "19": 10,
+        "14": 48,
+        "20": 8,
+        "18": 8,
+        "17": 8,
+        "15": 8,
+        "32": 16,
+        "6": 6
+      },
+      "uniqueTrajectories": 7,
+      "unique12PlyPrefixes": 2,
+      "firstDivergentPrefixPly": 10,
+      "sharedPrefixPlies": 9,
+      "naturalOpenings": null,
+      "searchTurns": 956,
+      "depthZero": 0,
+      "actualNodes": 30806514,
+      "nodesMedian": 32768.0,
+      "depthMedian": 11.0,
+      "actualElapsedMs": 3119766.200514994,
+      "interval": null
+    },
+    {
+      "openingId": "opening-3-3",
+      "profile": "base-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 16,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "63": 16
+      },
+      "completedDepthDistribution": {
+        "5": 192,
+        "6": 210,
+        "7": 114,
+        "4": 292,
+        "3": 32,
+        "8": 32,
+        "9": 34,
+        "15": 14,
+        "18": 14,
+        "16": 4,
+        "32": 28,
+        "21": 8,
+        "12": 2
+      },
+      "uniqueTrajectories": 6,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 57,
+      "sharedPrefixPlies": 56,
+      "naturalOpenings": null,
+      "searchTurns": 976,
+      "depthZero": 0,
+      "actualNodes": 1956302,
+      "nodesMedian": 2048.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 165431.0366930001,
+      "interval": null
+    },
+    {
+      "openingId": "opening-3-3",
+      "profile": "base-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "38": 16
+      },
+      "completedDepthDistribution": {
+        "7": 160,
+        "8": 114,
+        "6": 50,
+        "9": 68,
+        "5": 96,
+        "10": 18,
+        "12": 22,
+        "11": 26,
+        "32": 14,
+        "14": 4,
+        "13": 4
+      },
+      "uniqueTrajectories": 7,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 33,
+      "sharedPrefixPlies": 32,
+      "naturalOpenings": null,
+      "searchTurns": 576,
+      "depthZero": 0,
+      "actualNodes": 4618742,
+      "nodesMedian": 8192.0,
+      "depthMedian": 7.0,
+      "actualElapsedMs": 413588.9038450004,
+      "interval": null
+    },
+    {
+      "openingId": "opening-3-3",
+      "profile": "base-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "44": 16
+      },
+      "completedDepthDistribution": {
+        "9": 136,
+        "10": 110,
+        "11": 42,
+        "8": 150,
+        "7": 144,
+        "6": 16,
+        "13": 12,
+        "12": 18,
+        "32": 26,
+        "19": 2,
+        "17": 4,
+        "24": 2,
+        "16": 4,
+        "14": 2,
+        "15": 4
+      },
+      "uniqueTrajectories": 8,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 36,
+      "sharedPrefixPlies": 35,
+      "naturalOpenings": null,
+      "searchTurns": 672,
+      "depthZero": 0,
+      "actualNodes": 21273554,
+      "nodesMedian": 32768.0,
+      "depthMedian": 9.0,
+      "actualElapsedMs": 2079553.9014480005,
+      "interval": null
+    },
+    {
+      "openingId": "opening-3-3",
+      "profile": "mobility-2048",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 0,
+      "secondWins": 16,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "44": 16
+      },
+      "completedDepthDistribution": {
+        "5": 240,
+        "6": 160,
+        "4": 64,
+        "7": 80,
+        "8": 32,
+        "9": 32,
+        "10": 16,
+        "11": 16,
+        "32": 32
+      },
+      "uniqueTrajectories": 4,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 43,
+      "sharedPrefixPlies": 42,
+      "naturalOpenings": null,
+      "searchTurns": 672,
+      "depthZero": 0,
+      "actualNodes": 1328870,
+      "nodesMedian": 2048.0,
+      "depthMedian": 6.0,
+      "actualElapsedMs": 116799.44836600102,
+      "interval": null
+    },
+    {
+      "openingId": "opening-3-3",
+      "profile": "mobility-8192",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 6,
+      "secondWins": 10,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "36": 10,
+        "75": 6
+      },
+      "completedDepthDistribution": {
+        "7": 178,
+        "8": 162,
+        "6": 76,
+        "9": 116,
+        "5": 68,
+        "15": 6,
+        "11": 42,
+        "10": 74,
+        "14": 6,
+        "13": 12,
+        "12": 14,
+        "18": 2,
+        "32": 22
+      },
+      "uniqueTrajectories": 6,
+      "unique12PlyPrefixes": 2,
+      "firstDivergentPrefixPly": 7,
+      "sharedPrefixPlies": 6,
+      "naturalOpenings": null,
+      "searchTurns": 778,
+      "depthZero": 0,
+      "actualNodes": 6216006,
+      "nodesMedian": 8192.0,
+      "depthMedian": 8.0,
+      "actualElapsedMs": 579662.0455019954,
+      "interval": null
+    },
+    {
+      "openingId": "opening-3-3",
+      "profile": "mobility-32768",
+      "forced": true,
+      "pairs": 8,
+      "games": 16,
+      "firstWins": 4,
+      "secondWins": 12,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 16
+      },
+      "plyDistribution": {
+        "42": 12,
+        "55": 4
+      },
+      "completedDepthDistribution": {
+        "9": 104,
+        "10": 112,
+        "11": 84,
+        "8": 60,
+        "7": 180,
+        "6": 12,
+        "12": 56,
+        "15": 16,
+        "13": 52,
+        "14": 8,
+        "32": 8
+      },
+      "uniqueTrajectories": 3,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 19,
+      "sharedPrefixPlies": 18,
+      "naturalOpenings": null,
+      "searchTurns": 692,
+      "depthZero": 0,
+      "actualNodes": 22416170,
+      "nodesMedian": 32768.0,
+      "depthMedian": 9.0,
+      "actualElapsedMs": 2291004.3626409946,
+      "interval": null
+    }
+  ],
+  "openingWinnerReversalsAcrossConditions": [
+    "opening-0-0",
+    "opening-0-1",
+    "opening-0-2",
+    "opening-0-3",
+    "opening-1-0",
+    "opening-1-1",
+    "opening-1-2",
+    "opening-2-0",
+    "opening-2-1",
+    "opening-3-0",
+    "opening-3-1",
+    "opening-3-2",
+    "opening-3-3"
+  ],
+  "firstReplyCoverage": [
+    {
+      "profile": "base-2048",
+      "firstIndex": 0,
+      "replies": 4,
+      "firstAllObservedWinsAcrossEveryReply": false,
+      "secondAllObservedWinsReplyIds": [
+        "opening-0-0",
+        "opening-0-1",
+        "opening-0-2",
+        "opening-0-3"
+      ],
+      "warning": "Fixed continuation only; not a minimax certificate."
+    },
+    {
+      "profile": "base-2048",
+      "firstIndex": 1,
+      "replies": 4,
+      "firstAllObservedWinsAcrossEveryReply": false,
+      "secondAllObservedWinsReplyIds": [
+        "opening-1-0",
+        "opening-1-1",
+        "opening-1-2"
+      ],
+      "warning": "Fixed continuation only; not a minimax certificate."
+    },
+    {
+      "profile": "base-2048",
+      "firstIndex": 2,
+      "replies": 2,
+      "firstAllObservedWinsAcrossEveryReply": false,
+      "secondAllObservedWinsReplyIds": [
+        "opening-2-0",
+        "opening-2-1"
+      ],
+      "warning": "Fixed continuation only; not a minimax certificate."
+    },
+    {
+      "profile": "base-2048",
+      "firstIndex": 3,
+      "replies": 4,
+      "firstAllObservedWinsAcrossEveryReply": false,
+      "secondAllObservedWinsReplyIds": [
+        "opening-3-0"
+      ],
+      "warning": "Fixed continuation only; not a minimax certificate."
+    },
+    {
+      "profile": "base-8192",
+      "firstIndex": 0,
+      "replies": 4,
+      "firstAllObservedWinsAcrossEveryReply": false,
+      "secondAllObservedWinsReplyIds": [
+        "opening-0-1",
+        "opening-0-2",
+        "opening-0-3"
+      ],
+      "warning": "Fixed continuation only; not a minimax certificate."
+    },
+    {
+      "profile": "base-8192",
+      "firstIndex": 1,
+      "replies": 4,
+      "firstAllObservedWinsAcrossEveryReply": false,
+      "secondAllObservedWinsReplyIds": [
+        "opening-1-1",
+        "opening-1-3"
+      ],
+      "warning": "Fixed continuation only; not a minimax certificate."
+    },
+    {
+      "profile": "base-8192",
+      "firstIndex": 2,
+      "replies": 2,
+      "firstAllObservedWinsAcrossEveryReply": false,
+      "secondAllObservedWinsReplyIds": [
+        "opening-2-1"
+      ],
+      "warning": "Fixed continuation only; not a minimax certificate."
+    },
+    {
+      "profile": "base-8192",
+      "firstIndex": 3,
+      "replies": 4,
+      "firstAllObservedWinsAcrossEveryReply": false,
+      "secondAllObservedWinsReplyIds": [
+        "opening-3-0",
+        "opening-3-1",
+        "opening-3-2",
+        "opening-3-3"
+      ],
+      "warning": "Fixed continuation only; not a minimax certificate."
+    },
+    {
+      "profile": "base-32768",
+      "firstIndex": 0,
+      "replies": 4,
+      "firstAllObservedWinsAcrossEveryReply": false,
+      "secondAllObservedWinsReplyIds": [
+        "opening-0-0",
+        "opening-0-1",
+        "opening-0-3"
+      ],
+      "warning": "Fixed continuation only; not a minimax certificate."
+    },
+    {
+      "profile": "base-32768",
+      "firstIndex": 1,
+      "replies": 4,
+      "firstAllObservedWinsAcrossEveryReply": false,
+      "secondAllObservedWinsReplyIds": [
+        "opening-1-1",
+        "opening-1-2",
+        "opening-1-3"
+      ],
+      "warning": "Fixed continuation only; not a minimax certificate."
+    },
+    {
+      "profile": "base-32768",
+      "firstIndex": 2,
+      "replies": 2,
+      "firstAllObservedWinsAcrossEveryReply": false,
+      "secondAllObservedWinsReplyIds": [
+        "opening-2-1"
+      ],
+      "warning": "Fixed continuation only; not a minimax certificate."
+    },
+    {
+      "profile": "base-32768",
+      "firstIndex": 3,
+      "replies": 4,
+      "firstAllObservedWinsAcrossEveryReply": false,
+      "secondAllObservedWinsReplyIds": [
+        "opening-3-1",
+        "opening-3-3"
+      ],
+      "warning": "Fixed continuation only; not a minimax certificate."
+    },
+    {
+      "profile": "mobility-2048",
+      "firstIndex": 0,
+      "replies": 4,
+      "firstAllObservedWinsAcrossEveryReply": false,
+      "secondAllObservedWinsReplyIds": [
+        "opening-0-0",
+        "opening-0-1",
+        "opening-0-2"
+      ],
+      "warning": "Fixed continuation only; not a minimax certificate."
+    },
+    {
+      "profile": "mobility-2048",
+      "firstIndex": 1,
+      "replies": 4,
+      "firstAllObservedWinsAcrossEveryReply": false,
+      "secondAllObservedWinsReplyIds": [
+        "opening-1-2",
+        "opening-1-3"
+      ],
+      "warning": "Fixed continuation only; not a minimax certificate."
+    },
+    {
+      "profile": "mobility-2048",
+      "firstIndex": 2,
+      "replies": 2,
+      "firstAllObservedWinsAcrossEveryReply": true,
+      "secondAllObservedWinsReplyIds": [],
+      "warning": "Fixed continuation only; not a minimax certificate."
+    },
+    {
+      "profile": "mobility-2048",
+      "firstIndex": 3,
+      "replies": 4,
+      "firstAllObservedWinsAcrossEveryReply": false,
+      "secondAllObservedWinsReplyIds": [
+        "opening-3-0",
+        "opening-3-2",
+        "opening-3-3"
+      ],
+      "warning": "Fixed continuation only; not a minimax certificate."
+    },
+    {
+      "profile": "mobility-8192",
+      "firstIndex": 0,
+      "replies": 4,
+      "firstAllObservedWinsAcrossEveryReply": false,
+      "secondAllObservedWinsReplyIds": [
+        "opening-0-0",
+        "opening-0-1",
+        "opening-0-3"
+      ],
+      "warning": "Fixed continuation only; not a minimax certificate."
+    },
+    {
+      "profile": "mobility-8192",
+      "firstIndex": 1,
+      "replies": 4,
+      "firstAllObservedWinsAcrossEveryReply": false,
+      "secondAllObservedWinsReplyIds": [
+        "opening-1-2",
+        "opening-1-3"
+      ],
+      "warning": "Fixed continuation only; not a minimax certificate."
+    },
+    {
+      "profile": "mobility-8192",
+      "firstIndex": 2,
+      "replies": 2,
+      "firstAllObservedWinsAcrossEveryReply": true,
+      "secondAllObservedWinsReplyIds": [],
+      "warning": "Fixed continuation only; not a minimax certificate."
+    },
+    {
+      "profile": "mobility-8192",
+      "firstIndex": 3,
+      "replies": 4,
+      "firstAllObservedWinsAcrossEveryReply": false,
+      "secondAllObservedWinsReplyIds": [
+        "opening-3-2"
+      ],
+      "warning": "Fixed continuation only; not a minimax certificate."
+    },
+    {
+      "profile": "mobility-32768",
+      "firstIndex": 0,
+      "replies": 4,
+      "firstAllObservedWinsAcrossEveryReply": false,
+      "secondAllObservedWinsReplyIds": [
+        "opening-0-0",
+        "opening-0-2",
+        "opening-0-3"
+      ],
+      "warning": "Fixed continuation only; not a minimax certificate."
+    },
+    {
+      "profile": "mobility-32768",
+      "firstIndex": 1,
+      "replies": 4,
+      "firstAllObservedWinsAcrossEveryReply": false,
+      "secondAllObservedWinsReplyIds": [
+        "opening-1-0",
+        "opening-1-1",
+        "opening-1-3"
+      ],
+      "warning": "Fixed continuation only; not a minimax certificate."
+    },
+    {
+      "profile": "mobility-32768",
+      "firstIndex": 2,
+      "replies": 2,
+      "firstAllObservedWinsAcrossEveryReply": true,
+      "secondAllObservedWinsReplyIds": [],
+      "warning": "Fixed continuation only; not a minimax certificate."
+    },
+    {
+      "profile": "mobility-32768",
+      "firstIndex": 3,
+      "replies": 4,
+      "firstAllObservedWinsAcrossEveryReply": false,
+      "secondAllObservedWinsReplyIds": [],
+      "warning": "Fixed continuation only; not a minimax certificate."
+    }
+  ],
+  "practicalBalanceAssessment": "HOLD",
+  "initialTheoreticalValue": "UNKNOWN",
+  "newGames": 0,
+  "newProofSearches": 0
+}
