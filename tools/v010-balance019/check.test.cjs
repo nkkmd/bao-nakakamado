@@ -17,7 +17,7 @@ test('all forced prefixes replay with physical exchange and asymmetric roles',()
 });
 test('normal complete pair, budget and role tamper rejection, interruption HOLD, exact-byte reuse',()=>{
  const ps=[{id:'base-32',evaluator:'base',nodes:32},{id:'mobility-32',evaluator:'mobility',nodes:32}],cell={id:'test-cell',opening:T.openings()[0],profiles:ps},m={digest:'TEST',contract:{...T.contract,pairsPerCell:1,shards:1},cells:[cell]},t=T.tasks(m)[0],out=fs.mkdtempSync(path.join(os.tmpdir(),'balance019-test-'));
- try{fs.writeFileSync(path.join(out,t.id+'.json.gz.started'),'{}');assert.throws(()=>T.shard(out,0,m),/HOLD/);fs.unlinkSync(path.join(out,t.id+'.json.gz.started'));assert.equal(T.shard(out,0,m).newPairs,1);const original=fs.readFileSync(path.join(out,t.id+'.json.gz')),row=T.read(path.join(out,t.id+'.json.gz'));T.audit(row,t,m);
+ try{fs.writeFileSync(path.join(out,t.id+'.json.gz.started'),'{}');assert.throws(()=>T.shard(out,0,m),/HOLD/);fs.unlinkSync(path.join(out,t.id+'.json.gz.started'));assert.equal(T.shard(out,0,m).newPairs,1);const original=fs.readFileSync(path.join(out,t.id+'.json.gz')),row=T.read(path.join(out,t.id+'.json.gz'));T.audit(row,t,m);assert.ok(row.games.every(g=>g.stop==='normal-terminal'));
  assert.equal(T.shard(out,0,m).newPairs,0);assert.deepEqual(fs.readFileSync(path.join(out,t.id+'.json.gz')),original);assert.equal(T.aggregate(out,m).newGamesDuringAggregation,0);
  const j=cell.opening.moves.length;
  for(const mutation of [r=>r.games[1].turns[j].policyId='wrong',r=>r.games[0].turns[j].stats.maxNodes=33,r=>r.games[1].turns.pop(),r=>r.games[0].seed++,r=>r.games[0].firstWin=9,r=>r.games[0].turns[0].forced=false]){const b=structuredClone(row);mutation(b);b.checksum=C.hash(b.games);assert.throws(()=>T.audit(b,t,m));}
