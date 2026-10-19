@@ -3,7 +3,7 @@
 記録日：2026年10月19日（Asia/Tokyo）。基準main `57c7936a5c8d6e80f3979571ae9aa9b3c29e88fa`。
 [計画](V010_BALANCE019_PLAN_20261019.md)／[coverage](v010-balance019/coverage-receipt.json)／[証明義務の照合](v010-balance019/coverage-obligations.json)／[main監査](v010-balance019/main019-plan-postmerge-audit.json)。
 
-実戦全体の判定は**判断保留**。初期配置の理論値は**未確定（UNKNOWN）**。019の正式試験は未封印・未起動。新規証明探索は行わない。
+実戦全体の判定は**判断保留**。初期配置の理論値は**未確定（UNKNOWN）**。正式試験の最新状態は[起動記録](V010_BALANCE019_LAUNCH_20261019.md)を参照。新規証明探索は行わない。
 
 ## 既存記録
 
@@ -56,3 +56,7 @@ CI修正前のmanifest digest：`c7d2aa2a825af63335fbae89555f5cd1b466e5ef01fb59a
 変更前digest `c7d2aa2a825af63335fbae89555f5cd1b466e5ef01fb59a5cb490cb366d7b877` は[修正前の封印](v010-balance019/pre-ci-manifest-c7d2aa2a.json)として保存し、正式起動には使用しない。任意の別CI識別子を設定したローカル再監査・再封印を検証し、修正後headのCI・レビュー成功を待つ。研究条件・対局処理・seed・標本数に変更はない。正式試験は引き続き未起動。
 
 現行の封印済みmanifest digest：`1a517eaa5475b2c9ec8fe3eef9b51b64e580fd5f76d61e98e642308747e8231d`。別CI識別子を設定した再監査・封印は成功。CI・レビュー成功後にこのdigestで初回正式起動する。
+
+## 最新状態：正式初回起動
+
+修正後head d958ecf4d2afe9288008703fac49a3f715c4d3cc の全20チェック成功・自動レビュー指摘0を確認。同一treeの正式source `bf6e7724b663c2918866b5c9637f6547efe7e484`で[run 39241595646](https://github.com/nkkmd/bao-nakakamado/actions/runs/39241595646)を初回起動した。[正式起動記録](V010_BALANCE019_LAUNCH_20261019.md)。結果はまだなく、mainは未統合。上記の未起動記述は各準備工程時点の履歴として保持する。

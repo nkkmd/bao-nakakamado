@@ -1,0 +1,141 @@
+{
+  "classification": "FORMAL-EXPLORATORY-NOT-CONFIRMATORY",
+  "studyId": "019",
+  "sourceCommit": "bf6e7724b663c2918866b5c9637f6547efe7e484",
+  "validatedCommit": "d958ecf4d2afe9288008703fac49a3f715c4d3cc",
+  "tree": "a0d781e79e61801361bcd3e061c5734c366b6778",
+  "manifestDigest": "1a517eaa5475b2c9ec8fe3eef9b51b64e580fd5f76d61e98e642308747e8231d",
+  "runId": 39241595646,
+  "runAttempt": 1,
+  "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/39241595646",
+  "createdAt": "2026-10-19T11:01:15Z",
+  "statusAtRecord": "in_progress",
+  "pairs": 624,
+  "games": 1248,
+  "cells": 156,
+  "roots": 13,
+  "pairsPerCell": 4,
+  "uniqueSeedCount": 4,
+  "seedDomain": "BALANCE019-EARLY-BRANCH-SCREEN-20261019-v1",
+  "shards": 52,
+  "maxParallel": 4,
+  "jobTimeoutMinutes": 108,
+  "maxRunnerHours": 96,
+  "noAutomaticRerun": true,
+  "resultsBranch": "results/v010-balance-study-019",
+  "pilotSource": "3128eca1559eef22f11324f20cd603e40851ff5c",
+  "pilotRun": 39225245641,
+  "pilotResultsCommit": "b3d70ec22bad2ec710e7c1c7adf2ff815b6c6608",
+  "projectedRunnerHours": 20.585504843956674,
+  "projectedMaxJobMinutes": 28.99111893426667,
+  "ci": [
+    {
+      "name": "check019",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/39240811881/job/118020882425"
+    },
+    {
+      "name": "audit017",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/39240811828/job/118020881944"
+    },
+    {
+      "name": "completed-004-016 (008, python3 tools/v010-retro008/reaudit.py doc/v010-retro008/completed 6de6bc...",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/39240811824/job/118020881938"
+    },
+    {
+      "name": "completed-004-016 (006, python3 tools/v010-deepen/reaudit.py doc/v010-deepen/completed 02335fc03e...",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/39240811824/job/118020881857"
+    },
+    {
+      "name": "completed-004-016 (013, python3 tools/v010-split013/reaudit.py doc/v010-split013/completed 590780...",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/39240811824/job/118020881856"
+    },
+    {
+      "name": "completed-004-016 (005, python3 tools/v010-reply/reaudit.py doc/v010-reply/completed 428cf47b3d27...",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/39240811824/job/118020881841"
+    },
+    {
+      "name": "completed-004-016 (012, python3 tools/v010-deepen012/reaudit.py doc/v010-deepen012/completed 958b...",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/39240811824/job/118020881818"
+    },
+    {
+      "name": "completed-004-016 (004, python3 tools/v010-branch/reaudit.py doc/v010-branch/completed b1e9bdbcab...",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/39240811824/job/118020881809"
+    },
+    {
+      "name": "completed-004-016 (009, python3 tools/v010-deepen009/reaudit.py doc/v010-deepen009/completed 0b22...",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/39240811824/job/118020881800"
+    },
+    {
+      "name": "completed-004-016 (010, python3 tools/v010-retro010/reaudit.py doc/v010-retro010/completed 536a62...",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/39240811824/job/118020881775"
+    },
+    {
+      "name": "completed-004-016 (007, python3 tools/v010-pn007/reaudit.py doc/v010-pn007/completed 5f44f34a3a27...",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/39240811824/job/118020881769"
+    },
+    {
+      "name": "check",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/39240811880/job/118020881750"
+    },
+    {
+      "name": "completed-004-016 (014, python3 tools/v010-split014/reaudit.py doc/v010-split014/completed 972f44...",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/39240811824/job/118020881743"
+    },
+    {
+      "name": "completed-004-016 (015, python3 tools/v010-table015/reaudit.py doc/v010-table015/completed 63edba...",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/39240811824/job/118020881701"
+    },
+    {
+      "name": "completed-004-016 (016, python3 tools/v010-partition016/reaudit.py doc/v010-partition016/complete...",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/39240811824/job/118020881683"
+    },
+    {
+      "name": "audit018",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/39240811848/job/118020881661"
+    },
+    {
+      "name": "completed-004-016 (011, python3 tools/v010-retro011-integration/reaudit.py doc/v010-retro011/comp...",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/39240811824/job/118020881605"
+    },
+    {
+      "name": "check",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/39240811845/job/118020881482"
+    },
+    {
+      "name": "audit",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/39240811824/job/118020881327"
+    },
+    {
+      "name": "check019",
+      "conclusion": "success",
+      "url": "https://github.com/nkkmd/bao-nakakamado/actions/runs/39240805452/job/118020861827"
+    }
+  ],
+  "automaticReview": {
+    "commit": "d958ecf4d2afe9288008703fac49a3f715c4d3cc",
+    "status": "completed",
+    "findings": 0
+  },
+  "practicalBalanceAssessment": "HOLD",
+  "initialTheoreticalValue": "UNKNOWN",
+  "newProofSearches": 0
+}
