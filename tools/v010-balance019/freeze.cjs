@@ -1,0 +1,11 @@
+'use strict';
+// MIT. Seal only after completed operational pilot and independent verification.
+const fs=require('node:fs'),assert=require('node:assert/strict'),T=require('./study.cjs'),{C}=require('../v010-followup/core.cjs');
+require('node:child_process').execFileSync(process.execPath,['tools/v010-balance019/pilot.cjs','verify','doc/v010-balance019/pilot'],{stdio:'pipe'});
+const folder='doc/v010-balance019/pilot/',p=JSON.parse(fs.readFileSync(folder+'pilot.json'));
+const priorFile='doc/v010-balance019/main019-plan-postmerge-audit.json',prior=JSON.parse(fs.readFileSync(priorFile));assert.equal(prior.mergeCommit,T.contract.baseline);assert.equal(prior.checks.length,16);assert.ok(prior.checks.every(r=>r.conclusion==='success'));assert.equal(prior.newGames,0);assert.equal(prior.newProofSearches,0);
+assert.equal(p.gamesVerified,312);assert.equal(p.newGames,0);assert.equal(p.rows.length,156);
+assert.ok(p.rows.reduce((s,r)=>s+r.pairElapsedMs,0)<=12*3600000,'HOLD pilot 12 runner hours');
+const costs=new Map(p.rows.map(r=>[r.cellId,r.pairElapsedMs])),loads=Array(T.contract.shards).fill(0);for(const [i,t]of T.tasks({contract:T.contract,cells:T.cells()}).entries())loads[i%T.contract.shards]+=costs.get(t.id.slice(0,t.id.lastIndexOf('-')));const projectedShardMs=Math.max(...loads),projectedRunnerMs=loads.reduce((s,v)=>s+v,0);assert.ok(projectedShardMs<=.7*T.contract.shardTimeoutMinutes*60000,'HOLD shard budget');assert.ok(projectedRunnerMs<=.7*T.contract.maxRunnerHours*3600000,'HOLD total budget');assert.ok(p.rows.every(r=>r.operations.depthZero===0&&r.operations.normal===2),'HOLD pilot operational outcome');
+const pilot={sourceCommit:p.sourceCommit,runId:p.runId,priorAuditSha256:C.hash(fs.readFileSync(priorFile)),files:Object.fromEntries(fs.readdirSync(folder).sort().filter(f=>fs.statSync(folder+f).isFile()).map(f=>[f,C.hash(fs.readFileSync(folder+f))])),projectedRunnerMs,projectedShardMs};
+const body={contract:T.contract,cells:T.cells(),sources:T.fingerprint(),pilot},m={...body,digest:C.hash(body)},f='tools/v010-balance019/manifest.json';if(fs.existsSync(f))assert.deepEqual(JSON.parse(fs.readFileSync(f)),m);else fs.writeFileSync(f,JSON.stringify(m,null,2)+'\n');console.log(JSON.stringify({digest:m.digest,pairs:T.tasks(m).length,projectedRunnerHours:projectedRunnerMs/3600000}));

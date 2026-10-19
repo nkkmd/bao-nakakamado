@@ -2,6 +2,8 @@
 
 更新日：2026年10月19日（Asia/Tokyo）。[AGENTS.md](../AGENTS.md)／[018結果](V010_BALANCE018_RESULTS_20261019.md)／[固定計画](V010_BALANCE018_PLAN_20261018.md)／[起動記録](V010_BALANCE018_LAUNCH_20261019.md)／[manifest](../tools/v010-balance018/manifest.json)／[017結果](V010_BALANCE017_RESULTS_20261018.md)／[旧引き継ぎ](V010_RESEARCH_HANDOFF_20261018_STUDY017.md)。
 
+> 019の着手後の状態は[coverage照合・実装記録](V010_BALANCE019_IMPLEMENTATION_20261019.md)を参照。019の隔離実装と既存記録の索引照合を進めた。正式manifestは未封印、正式試験は未起動。以下の018原記録・数値は保持する。
+
 ## 範囲と現在地
 
 当面の対象は先後差による実戦上のバランス破綻。初期配置の新規理論解析・局所証明探索は起動しない。公開ルールv0.10.0・標準初期配置・公開AI・旧固定記録は変更しない。

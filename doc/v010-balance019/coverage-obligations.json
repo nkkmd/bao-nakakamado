@@ -1,0 +1,738 @@
+{
+  "method": "Join proof rootId only within its fixed study manifest. Seat-normalized full board comparison except turn, rule compatibility inherited from fixed manifest. Separate proof and finite-horizon/budget result; no new verification or search.",
+  "studies": [
+    {
+      "study": "001",
+      "manifest": "tools/v010-followup/manifest.json",
+      "manifestSha256": "993bebf8343fe0fc4dfcce94a40c0cf87e9959a7b01241336d3f47ccaee709c9",
+      "archive": "doc/v010-research-completed/study-001/original-records-001.zip",
+      "archiveSha256": "d51cc469a456b1b35e03d2287940476194a2bd82e27d26a26297fb0cd39599b6",
+      "matchedRoots": {},
+      "jobs": []
+    },
+    {
+      "study": "002",
+      "manifest": "tools/v010-certainty/manifest.json",
+      "manifestSha256": "c3bd16a28c0fccc8ee380467fc99e1db2eb6107b6455c80f82af57a63e74e426",
+      "archive": "doc/v010-research-completed/study-002/original-records-001.zip",
+      "archiveSha256": "9fc4cd03a8ba907e413dcf75c00998561f02a9bfdab8f6d1e94642e8be86c3f4",
+      "matchedRoots": {
+        "opening-2-1": "prefix-2"
+      },
+      "jobs": [
+        {
+          "file": "proof-9-0.json.gz",
+          "sha256": "2037ca014bdfc64affe3f494664e759bd91bc369ae576d7b33263982f5d224f3",
+          "rootId": "opening-2-1",
+          "targetState": "prefix-2",
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "attempts": [
+            {
+              "depth": 1,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 2,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 3,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 4,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 5,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 6,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 7,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 8,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 9,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 10,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 11,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 12,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 13,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 14,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 15,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 16,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 17,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 18,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 19,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 20,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 21,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 22,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 23,
+              "status": "NODE_BUDGET"
+            }
+          ],
+          "classification": "finite-horizon-or-budget-result-not-unbounded-proof"
+        },
+        {
+          "file": "proof-9-1.json.gz",
+          "sha256": "f184e4762a2abf73f4d3ff078e24cdbef4d7a68ab68b825b88d69fc3c0eb018f",
+          "rootId": "opening-2-1",
+          "targetState": "prefix-2",
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "attempts": [
+            {
+              "depth": 1,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 2,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 3,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 4,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 5,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 6,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 7,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 8,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 9,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 10,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 11,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 12,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 13,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 14,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 15,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 16,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 17,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 18,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 19,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 20,
+              "status": "NODE_BUDGET"
+            }
+          ],
+          "classification": "finite-horizon-or-budget-result-not-unbounded-proof"
+        }
+      ]
+    },
+    {
+      "study": "003",
+      "manifest": "tools/v010-gc/manifest.json",
+      "manifestSha256": "c4781523969684c20c5421dca7833a2853e43fb7f32f53faf0c92b78cbbd9d60",
+      "archive": "doc/v010-research-completed/study-003/original-records-001.zip",
+      "archiveSha256": "f1ddd2d366f011c9ff154f261e218d98d49c068b104775ceba9313d0644859d3",
+      "matchedRoots": {
+        "opening-2-1": "prefix-2"
+      },
+      "jobs": [
+        {
+          "file": "proof-9-0.json.gz",
+          "sha256": "77ae756c30ae8fb90a917ba16990ce3490e9adcf2ca7e782182d49366cf9142a",
+          "rootId": "opening-2-1",
+          "targetState": "prefix-2",
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "attempts": [
+            {
+              "depth": 1,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 2,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 3,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 4,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 5,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 6,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 7,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 8,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 9,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 10,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 11,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 12,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 13,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 14,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 15,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 16,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 17,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 18,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 19,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 20,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 21,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 22,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 23,
+              "status": "NODE_BUDGET"
+            }
+          ],
+          "classification": "finite-horizon-or-budget-result-not-unbounded-proof"
+        },
+        {
+          "file": "proof-9-1.json.gz",
+          "sha256": "5a2574abc13201be5e20200cafd5af4a0806b5e306b1bdb15f838cd64c05cb4f",
+          "rootId": "opening-2-1",
+          "targetState": "prefix-2",
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "attempts": [
+            {
+              "depth": 1,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 2,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 3,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 4,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 5,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 6,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 7,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 8,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 9,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 10,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 11,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 12,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 13,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 14,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 15,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 16,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 17,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 18,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 19,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 20,
+              "status": "NODE_BUDGET"
+            }
+          ],
+          "classification": "finite-horizon-or-budget-result-not-unbounded-proof"
+        }
+      ]
+    },
+    {
+      "study": "004",
+      "manifest": "tools/v010-branch/manifest.json",
+      "manifestSha256": "6793fb10bf2161598d6e0423cb50efa48f47240d3c37d23524087fc8f2a33bcb",
+      "archive": "doc/v010-branch/completed/original-records-001.zip",
+      "archiveSha256": "5c997efc5d9a6108904695930b96a1d2418a01d88a18b01034abbcdda714a58e",
+      "matchedRoots": {
+        "opening-2-1": "prefix-2"
+      },
+      "jobs": [
+        {
+          "file": "proof-22-0.json.gz",
+          "sha256": "8e6e2c047b6162ba77afaf3b4738cbfd5ec7cb4be95c53dee18b0db4acbe6307",
+          "rootId": "opening-2-1",
+          "targetState": "prefix-2",
+          "target": 0,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "attempts": [
+            {
+              "depth": 1,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 2,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 3,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 4,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 5,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 6,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 7,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 8,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 9,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 10,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 11,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 12,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 13,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 14,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 15,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 16,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 17,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 18,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 19,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 20,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 21,
+              "status": "NODE_BUDGET"
+            }
+          ],
+          "classification": "finite-horizon-or-budget-result-not-unbounded-proof"
+        },
+        {
+          "file": "proof-22-1.json.gz",
+          "sha256": "a6f8c1f2459d1d7ddff4b4b8b7527f083b1a67bf3638549c933e5e90bfec36ca",
+          "rootId": "opening-2-1",
+          "targetState": "prefix-2",
+          "target": 1,
+          "status": "NODE_BUDGET",
+          "winner": null,
+          "depth": null,
+          "attempts": [
+            {
+              "depth": 1,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 2,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 3,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 4,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 5,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 6,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 7,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 8,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 9,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 10,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 11,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 12,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 13,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 14,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 15,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 16,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 17,
+              "status": "UNKNOWN"
+            },
+            {
+              "depth": 18,
+              "status": "NODE_BUDGET"
+            }
+          ],
+          "classification": "finite-horizon-or-budget-result-not-unbounded-proof"
+        }
+      ]
+    },
+    {
+      "study": "005",
+      "manifest": "tools/v010-reply/manifest.json",
+      "manifestSha256": "639710ed22ca738b632fe311e133fbc2159c385ae37de87098c0026a0bc28d88",
+      "archive": "doc/v010-reply/completed/original-records-001.zip",
+      "archiveSha256": "d25c1dfc9721e9c15fedc69d57165eee33fb0d3cecf8674b20074fd057103bf1",
+      "matchedRoots": {},
+      "jobs": []
+    },
+    {
+      "study": "006",
+      "manifest": "tools/v010-deepen/manifest.json",
+      "manifestSha256": "32b8750f9f565b388c3545fe2d03ccc989e6b213fcf7ef8a3a3bb34e70ec44ad",
+      "archive": "doc/v010-deepen/completed/original-records-001.zip",
+      "archiveSha256": "666f507a20de60b69f19fb479608ab668259e642b82ea0f41e6c4de4d511bbb1",
+      "matchedRoots": {},
+      "jobs": []
+    },
+    {
+      "study": "007",
+      "manifest": "tools/v010-pn007/manifest.json",
+      "manifestSha256": "c8edd25260d50c49139601d73460ac356e1aa7c419871047fb990502b34b2181",
+      "archive": "doc/v010-pn007/completed/original-records-001.zip",
+      "archiveSha256": "a44b81b64fb4ba5dec8925be91ba58c7d9c4003732093cdad7d008b6f4086467",
+      "matchedRoots": {},
+      "jobs": []
+    },
+    {
+      "study": "008",
+      "manifest": "tools/v010-retro008/manifest.json",
+      "manifestSha256": "528c769e6154906095bf143bd48cfbaf640158bb82d5016edeb1735aab173314",
+      "archive": "doc/v010-retro008/completed/original-records-001.zip",
+      "archiveSha256": "26193be89ea296dad8dcb0a54aa42c7f0a48dbdffee79efc929c9fdb77d14c17",
+      "matchedRoots": {},
+      "jobs": []
+    },
+    {
+      "study": "009",
+      "manifest": "tools/v010-deepen009/manifest.json",
+      "manifestSha256": "a600c4584a589797332cacb4313e8d69fa7b9acd8cf8a55fda78124c3b8d59ac",
+      "archive": "doc/v010-deepen009/completed/original-records-001.zip",
+      "archiveSha256": "5c5b5ea0dd22f39e486a46c7dc58ec109207a1a96ffd0da0dfe15396332220db",
+      "matchedRoots": {},
+      "jobs": []
+    },
+    {
+      "study": "010",
+      "manifest": "tools/v010-retro010/manifest.json",
+      "manifestSha256": "0382e89afa1fd1e9dc61684c0c385fffd9fb1beb5076cd4c2e81ab64cc83fa46",
+      "archive": "doc/v010-retro010/completed/original-records-001.zip",
+      "archiveSha256": "f8da9ff3c4f6891f28c90f3dfa33eea6caebaf02b8adb5448add5cd78c823e1c",
+      "matchedRoots": {},
+      "jobs": []
+    },
+    {
+      "study": "011",
+      "manifest": "tools/v010-retro011/manifest.json",
+      "manifestSha256": "eac00151b4f9b953ecb0121a727db3d49d79bf752ffc5deaef1b3a7f5dd4cda9",
+      "archive": "doc/v010-retro011/completed/original-records-001.zip",
+      "archiveSha256": "a042c002c79cc6b45194dc1aad1d0ca6af5a4aa1d5a63c90521e29df69eae2d8",
+      "matchedRoots": {},
+      "jobs": []
+    },
+    {
+      "study": "012",
+      "manifest": "tools/v010-deepen012/manifest.json",
+      "manifestSha256": "41a6cf85aa591a21b0ea162305855adcd67d04bf67a7e2aa627ee6c1ba3f875a",
+      "archive": "doc/v010-deepen012/completed/original-records-001.zip",
+      "archiveSha256": "a1dd24245809456ee3b72de1c521edd73e5e08fc1af6f9bea49b631f5a8f6b64",
+      "matchedRoots": {},
+      "jobs": []
+    },
+    {
+      "study": "013",
+      "manifest": "tools/v010-split013/manifest.json",
+      "manifestSha256": "72e7c6eb1c04b10179ba361742b2f2ae3522c0ba1e4bbd86ec7841b313493e39",
+      "archive": "doc/v010-split013/completed/original-records-001.zip",
+      "archiveSha256": "00bb0b1c82f5382dad32e28db3a3d5a38153184545f83b099bb71abff76bebb9",
+      "matchedRoots": {},
+      "jobs": []
+    },
+    {
+      "study": "014",
+      "manifest": "tools/v010-split014/manifest.json",
+      "manifestSha256": "bbd829aff58996933f007751769ae7e42c87540d8fac6097da3c0c46de2f1211",
+      "archive": "doc/v010-split014/completed/original-records-001.zip",
+      "archiveSha256": "92f94fb4486a8d67cb5b75763d240b650b50d1181519e9b5b5125a8619f0647a",
+      "matchedRoots": {},
+      "jobs": []
+    },
+    {
+      "study": "015",
+      "manifest": "tools/v010-table015/manifest.json",
+      "manifestSha256": "ca00b543fd4efd0e6f0e5316da4e58a9ed6d34b99388cc07cfba1d2b3677ed35",
+      "archive": "doc/v010-table015/completed/original-records-001.zip",
+      "archiveSha256": "679a30d074ec4fd203111e84a48dcc002438ae249f274380ab7ab42c989118a8",
+      "matchedRoots": {},
+      "jobs": []
+    },
+    {
+      "study": "016",
+      "manifest": "tools/v010-partition016/manifest.json",
+      "manifestSha256": "3f51d4f3c724fea972ec11894bda0c415ddc2e0da26a4927e48c4db51784f44f",
+      "archive": "doc/v010-partition016/completed/original-records-001.zip",
+      "archiveSha256": "db7017ad9574762a68a79191689ac6fb00fafb184dda5668fa17edd75a98c29f",
+      "matchedRoots": {},
+      "jobs": []
+    }
+  ],
+  "newGames": 0,
+  "newProofSearches": 0
+}
