@@ -1,0 +1,29 @@
+name: v0.10.0 study018 completed results audit
+on:
+  push:
+    branches: ['main', 'research/v010-balance018-results-20261019']
+    paths: ['tools/v010-*/**', 'doc/V010_*', 'doc/v010-*/**', '.github/workflows/v010-*.yml']
+  pull_request:
+    paths: ['tools/v010-*/**', 'doc/V010_*', 'doc/v010-*/**', '.github/workflows/v010-*.yml']
+permissions:
+  contents: read
+jobs:
+  audit018:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Independently replay preserved games and verify immutable result bytes
+        run: python3 tools/v010-balance018/reaudit.py doc/v010-balance018/completed 6c712782f35f21335d5af12472579ef5e7f4f6d6 80ba721ef8e2377f06931393318ae13104c74bae 39139965350
+      - name: Independently recompute statistics and render report without searches
+        run: |
+          python3 tools/v010-balance018-results/analyse.py
+          node tools/v010-balance018-results/frontier.cjs
+          python3 tools/v010-balance018-results/report.py
+          git diff --exit-code -- doc/v010-balance018/results-analysis.json doc/v010-balance018/decision-frontier.json doc/V010_BALANCE018_RESULTS_20261019.md
+          git diff --check
