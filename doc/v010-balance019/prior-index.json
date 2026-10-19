@@ -1,0 +1,44 @@
+{
+  "method": "Exact turns.before match in preserved gzip records; canonical orientation only; index, not independent replay audit.",
+  "targetStateKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[0,0,0,0,7,2,2,1],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+  "studies": [
+    {
+      "study": "001",
+      "archive": "doc/v010-research-completed/study-001/original-records-001.zip",
+      "sha256": "d51cc469a456b1b35e03d2287940476194a2bd82e27d26a26297fb0cd39599b6",
+      "gamesIndexed": 420,
+      "matchedTurns": 14,
+      "moves": [
+        {
+          "move": {
+            "direction": "left",
+            "index": 5,
+            "phase": "namua",
+            "row": 0,
+            "type": "takata"
+          },
+          "count": 14
+        }
+      ]
+    },
+    {
+      "study": "002",
+      "archive": "doc/v010-research-completed/study-002/original-records-001.zip",
+      "sha256": "9fc4cd03a8ba907e413dcf75c00998561f02a9bfdab8f6d1e94642e8be86c3f4",
+      "gamesIndexed": 0,
+      "matchedTurns": 0,
+      "moves": []
+    },
+    {
+      "study": "003",
+      "archive": "doc/v010-research-completed/study-003/original-records-001.zip",
+      "sha256": "f1ddd2d366f011c9ff154f261e218d98d49c068b104775ceba9313d0644859d3",
+      "gamesIndexed": 0,
+      "matchedTurns": 0,
+      "moves": []
+    }
+  ],
+  "fullHistoricalCoverageComplete": false,
+  "newGames": 0,
+  "newProofSearches": 0
+}
