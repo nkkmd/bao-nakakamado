@@ -1,0 +1,3974 @@
+{
+  "status": "INDEPENDENT-PYTHON-RAW-REAGGREGATION-MATCH",
+  "resultCommit": "6c712782f35f21335d5af12472579ef5e7f4f6d6",
+  "sourceCommit": "80ba721ef8e2377f06931393318ae13104c74bae",
+  "runId": "39139965350",
+  "manifestDigest": "8bd3045b41a2392376a0ae18f84e0173b4f2c19db44689724021045a190f3369",
+  "summarySha256": "6981db14c2a3f677cd3eeaea563ac3f219127bb998406319851bfbbae995a49f",
+  "archiveSha256": {
+    "original-records-001.zip": "daa618e3379b98165e2e3e3ce34d0651277fe9a337964e6ecae6c76eb33af450"
+  },
+  "pairs": 1536,
+  "games": 3072,
+  "normalGames": 3072,
+  "unresolved": 0,
+  "depthZero": 0,
+  "cells": [
+    {
+      "openingId": "opening-2-0",
+      "cellId": "opening-2-0-base-base-2048",
+      "profiles": [
+        "base-2048",
+        "base-2048"
+      ],
+      "matched": true,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 0,
+      "secondWins": 128,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "40": 128
+      },
+      "completedDepthDistribution": {
+        "6": 592,
+        "8": 338,
+        "5": 1606,
+        "3": 384,
+        "4": 1152,
+        "9": 330,
+        "7": 312,
+        "32": 118,
+        "11": 10,
+        "10": 16,
+        "14": 2,
+        "13": 2,
+        "21": 2
+      },
+      "uniqueTrajectories": 25,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 34,
+      "sharedPrefixPlies": 33,
+      "searchTurns": 4864,
+      "depthZero": 0,
+      "actualNodes": 9774490,
+      "nodesMedian": 2048.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 908705.843642,
+      "interval": {
+        "lower": 0,
+        "upper": 0.23162019835251513,
+        "halfWidth": 0.23162019835251513
+      },
+      "representativeTrace": {
+        "pairId": "opening-2-0-base-base-2048-0",
+        "seed": 3802222618,
+        "firstTwelveMoves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 0,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 2,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          }
+        ]
+      },
+      "observedFirstDecisionMoves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        }
+      ],
+      "hold": false,
+      "severeSide": "second",
+      "counterCandidate": false
+    },
+    {
+      "openingId": "opening-2-0",
+      "cellId": "opening-2-0-base-mobility-2048",
+      "profiles": [
+        "base-2048",
+        "mobility-2048"
+      ],
+      "matched": false,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 0,
+      "secondWins": 128,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "46": 128
+      },
+      "completedDepthDistribution": {
+        "6": 706,
+        "8": 512,
+        "5": 1536,
+        "3": 1408,
+        "4": 1152,
+        "9": 128,
+        "7": 190
+      },
+      "uniqueTrajectories": 2,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 45,
+      "sharedPrefixPlies": 44,
+      "searchTurns": 5632,
+      "depthZero": 0,
+      "actualNodes": 11534336,
+      "nodesMedian": 2048.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 1137357.9834859997,
+      "interval": {
+        "lower": 0,
+        "upper": 0.23162019835251513,
+        "halfWidth": 0.23162019835251513
+      },
+      "representativeTrace": {
+        "pairId": "opening-2-0-base-mobility-2048-0",
+        "seed": 3802222618,
+        "firstTwelveMoves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 0,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right"
+          }
+        ]
+      },
+      "observedFirstDecisionMoves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        }
+      ],
+      "hold": false,
+      "severeSide": "second",
+      "counterCandidate": false
+    },
+    {
+      "openingId": "opening-2-0",
+      "cellId": "opening-2-0-mobility-base-2048",
+      "profiles": [
+        "mobility-2048",
+        "base-2048"
+      ],
+      "matched": false,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "53": 54,
+        "25": 74
+      },
+      "completedDepthDistribution": {
+        "6": 586,
+        "4": 1792,
+        "5": 466,
+        "3": 654,
+        "8": 218,
+        "7": 326,
+        "9": 188,
+        "10": 58,
+        "12": 54,
+        "2": 74,
+        "32": 40
+      },
+      "uniqueTrajectories": 26,
+      "unique12PlyPrefixes": 2,
+      "firstDivergentPrefixPly": 4,
+      "sharedPrefixPlies": 3,
+      "searchTurns": 4456,
+      "depthZero": 0,
+      "actualNodes": 9054540,
+      "nodesMedian": 2048.0,
+      "depthMedian": 4.0,
+      "actualElapsedMs": 914520.6225670003,
+      "interval": {
+        "lower": 0.7683798016474849,
+        "upper": 1,
+        "halfWidth": 0.23162019835251513
+      },
+      "representativeTrace": {
+        "pairId": "opening-2-0-mobility-base-2048-0",
+        "seed": 3802222618,
+        "firstTwelveMoves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 0,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 2,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "left",
+            "side": "right"
+          }
+        ]
+      },
+      "observedFirstDecisionMoves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        }
+      ],
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "openingId": "opening-2-0",
+      "cellId": "opening-2-0-mobility-mobility-2048",
+      "profiles": [
+        "mobility-2048",
+        "mobility-2048"
+      ],
+      "matched": true,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "41": 128
+      },
+      "completedDepthDistribution": {
+        "6": 864,
+        "4": 1792,
+        "3": 1024,
+        "8": 542,
+        "7": 256,
+        "5": 450,
+        "9": 32,
+        "10": 32
+      },
+      "uniqueTrajectories": 4,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 36,
+      "sharedPrefixPlies": 35,
+      "searchTurns": 4992,
+      "depthZero": 0,
+      "actualNodes": 10223616,
+      "nodesMedian": 2048.0,
+      "depthMedian": 4.0,
+      "actualElapsedMs": 1049320.867822,
+      "interval": {
+        "lower": 0.7683798016474849,
+        "upper": 1,
+        "halfWidth": 0.23162019835251513
+      },
+      "representativeTrace": {
+        "pairId": "opening-2-0-mobility-mobility-2048-0",
+        "seed": 3802222618,
+        "firstTwelveMoves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 2,
+            "direction": "right",
+            "side": "left",
+            "houseChoice": "use"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 2,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 3,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 2,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          }
+        ]
+      },
+      "observedFirstDecisionMoves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        }
+      ],
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "openingId": "opening-2-0",
+      "cellId": "opening-2-0-base-base-8192",
+      "profiles": [
+        "base-8192",
+        "base-8192"
+      ],
+      "matched": true,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "45": 128
+      },
+      "completedDepthDistribution": {
+        "8": 1066,
+        "10": 462,
+        "7": 688,
+        "5": 1536,
+        "6": 1114,
+        "9": 248,
+        "14": 24,
+        "13": 86,
+        "32": 164,
+        "11": 48,
+        "15": 16,
+        "12": 46,
+        "17": 2,
+        "16": 2,
+        "18": 2
+      },
+      "uniqueTrajectories": 53,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 35,
+      "sharedPrefixPlies": 34,
+      "searchTurns": 5504,
+      "depthZero": 0,
+      "actualNodes": 43812466,
+      "nodesMedian": 8192.0,
+      "depthMedian": 7.0,
+      "actualElapsedMs": 4144951.0020709997,
+      "interval": {
+        "lower": 0.7683798016474849,
+        "upper": 1,
+        "halfWidth": 0.23162019835251513
+      },
+      "representativeTrace": {
+        "pairId": "opening-2-0-base-base-8192-0",
+        "seed": 3802222618,
+        "firstTwelveMoves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 0,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          }
+        ]
+      },
+      "observedFirstDecisionMoves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        }
+      ],
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "openingId": "opening-2-0",
+      "cellId": "opening-2-0-base-mobility-8192",
+      "profiles": [
+        "base-8192",
+        "mobility-8192"
+      ],
+      "matched": false,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "61": 128
+      },
+      "completedDepthDistribution": {
+        "8": 1158,
+        "10": 1044,
+        "7": 896,
+        "5": 1792,
+        "6": 896,
+        "4": 128,
+        "9": 776,
+        "12": 130,
+        "13": 128,
+        "11": 162,
+        "32": 414,
+        "18": 4,
+        "15": 10,
+        "21": 6,
+        "14": 2,
+        "20": 4,
+        "16": 2
+      },
+      "uniqueTrajectories": 57,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 57,
+      "sharedPrefixPlies": 56,
+      "searchTurns": 7552,
+      "depthZero": 0,
+      "actualNodes": 58734118,
+      "nodesMedian": 8192.0,
+      "depthMedian": 8.0,
+      "actualElapsedMs": 5245866.166688999,
+      "interval": {
+        "lower": 0.7683798016474849,
+        "upper": 1,
+        "halfWidth": 0.23162019835251513
+      },
+      "representativeTrace": {
+        "pairId": "opening-2-0-base-mobility-8192-0",
+        "seed": 3802222618,
+        "firstTwelveMoves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 0,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          }
+        ]
+      },
+      "observedFirstDecisionMoves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        }
+      ],
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "openingId": "opening-2-0",
+      "cellId": "opening-2-0-mobility-base-8192",
+      "profiles": [
+        "mobility-8192",
+        "base-8192"
+      ],
+      "matched": false,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 0,
+      "secondWins": 128,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "34": 128
+      },
+      "completedDepthDistribution": {
+        "7": 1152,
+        "10": 256,
+        "8": 640,
+        "5": 896,
+        "6": 384,
+        "4": 384,
+        "9": 160,
+        "12": 128,
+        "32": 66,
+        "11": 30
+      },
+      "uniqueTrajectories": 6,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 33,
+      "sharedPrefixPlies": 32,
+      "searchTurns": 4096,
+      "depthZero": 0,
+      "actualNodes": 33017984,
+      "nodesMedian": 8192.0,
+      "depthMedian": 7.0,
+      "actualElapsedMs": 3534627.332637,
+      "interval": {
+        "lower": 0,
+        "upper": 0.23162019835251513,
+        "halfWidth": 0.23162019835251513
+      },
+      "representativeTrace": {
+        "pairId": "opening-2-0-mobility-base-8192-0",
+        "seed": 3802222618,
+        "firstTwelveMoves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 0,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "stop"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right",
+            "side": "left"
+          }
+        ]
+      },
+      "observedFirstDecisionMoves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        }
+      ],
+      "hold": false,
+      "severeSide": "second",
+      "counterCandidate": false
+    },
+    {
+      "openingId": "opening-2-0",
+      "cellId": "opening-2-0-mobility-mobility-8192",
+      "profiles": [
+        "mobility-8192",
+        "mobility-8192"
+      ],
+      "matched": true,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "37": 128
+      },
+      "completedDepthDistribution": {
+        "7": 1094,
+        "10": 146,
+        "8": 624,
+        "5": 768,
+        "6": 1172,
+        "9": 274,
+        "12": 104,
+        "11": 136,
+        "32": 134,
+        "13": 26,
+        "15": 2
+      },
+      "uniqueTrajectories": 29,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 31,
+      "sharedPrefixPlies": 30,
+      "searchTurns": 4480,
+      "depthZero": 0,
+      "actualNodes": 35644198,
+      "nodesMedian": 8192.0,
+      "depthMedian": 7.0,
+      "actualElapsedMs": 3882452.0860570013,
+      "interval": {
+        "lower": 0.7683798016474849,
+        "upper": 1,
+        "halfWidth": 0.23162019835251513
+      },
+      "representativeTrace": {
+        "pairId": "opening-2-0-mobility-mobility-8192-0",
+        "seed": 3802222618,
+        "firstTwelveMoves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 0,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "stop"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right",
+            "side": "left"
+          }
+        ]
+      },
+      "observedFirstDecisionMoves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        }
+      ],
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "openingId": "opening-2-0",
+      "cellId": "opening-2-0-base-base-32768",
+      "profiles": [
+        "base-32768",
+        "base-32768"
+      ],
+      "matched": true,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "35": 128
+      },
+      "completedDepthDistribution": {
+        "10": 512,
+        "12": 354,
+        "9": 452,
+        "7": 1152,
+        "6": 896,
+        "8": 512,
+        "11": 226,
+        "13": 96,
+        "32": 24
+      },
+      "uniqueTrajectories": 6,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 32,
+      "sharedPrefixPlies": 31,
+      "searchTurns": 4224,
+      "depthZero": 0,
+      "actualNodes": 137627136,
+      "nodesMedian": 32768.0,
+      "depthMedian": 8.0,
+      "actualElapsedMs": 15459311.049014,
+      "interval": {
+        "lower": 0.7683798016474849,
+        "upper": 1,
+        "halfWidth": 0.23162019835251513
+      },
+      "representativeTrace": {
+        "pairId": "opening-2-0-base-base-32768-0",
+        "seed": 3802222618,
+        "firstTwelveMoves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 0,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 2,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          }
+        ]
+      },
+      "observedFirstDecisionMoves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        }
+      ],
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "openingId": "opening-2-0",
+      "cellId": "opening-2-0-base-mobility-32768",
+      "profiles": [
+        "base-32768",
+        "mobility-32768"
+      ],
+      "matched": false,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "35": 128
+      },
+      "completedDepthDistribution": {
+        "10": 512,
+        "12": 354,
+        "9": 452,
+        "7": 1280,
+        "6": 896,
+        "8": 384,
+        "11": 226,
+        "13": 96,
+        "32": 24
+      },
+      "uniqueTrajectories": 6,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 32,
+      "sharedPrefixPlies": 31,
+      "searchTurns": 4224,
+      "depthZero": 0,
+      "actualNodes": 137627136,
+      "nodesMedian": 32768.0,
+      "depthMedian": 7.0,
+      "actualElapsedMs": 15594397.878490007,
+      "interval": {
+        "lower": 0.7683798016474849,
+        "upper": 1,
+        "halfWidth": 0.23162019835251513
+      },
+      "representativeTrace": {
+        "pairId": "opening-2-0-base-mobility-32768-0",
+        "seed": 3802222618,
+        "firstTwelveMoves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 0,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 2,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          }
+        ]
+      },
+      "observedFirstDecisionMoves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        }
+      ],
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "openingId": "opening-2-0",
+      "cellId": "opening-2-0-mobility-base-32768",
+      "profiles": [
+        "mobility-32768",
+        "base-32768"
+      ],
+      "matched": false,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "53": 128
+      },
+      "completedDepthDistribution": {
+        "9": 1078,
+        "12": 332,
+        "10": 1162,
+        "7": 896,
+        "6": 1024,
+        "8": 618,
+        "11": 1014,
+        "13": 312,
+        "14": 6,
+        "32": 42,
+        "15": 26,
+        "17": 8,
+        "16": 10
+      },
+      "uniqueTrajectories": 32,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 44,
+      "sharedPrefixPlies": 43,
+      "searchTurns": 6528,
+      "depthZero": 0,
+      "actualNodes": 212552830,
+      "nodesMedian": 32768.0,
+      "depthMedian": 9.0,
+      "actualElapsedMs": 21700431.548231002,
+      "interval": {
+        "lower": 0.7683798016474849,
+        "upper": 1,
+        "halfWidth": 0.23162019835251513
+      },
+      "representativeTrace": {
+        "pairId": "opening-2-0-mobility-base-32768-0",
+        "seed": 3802222618,
+        "firstTwelveMoves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 0,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 2,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          }
+        ]
+      },
+      "observedFirstDecisionMoves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        }
+      ],
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "openingId": "opening-2-0",
+      "cellId": "opening-2-0-mobility-mobility-32768",
+      "profiles": [
+        "mobility-32768",
+        "mobility-32768"
+      ],
+      "matched": true,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "55": 128
+      },
+      "completedDepthDistribution": {
+        "9": 1224,
+        "12": 386,
+        "10": 712,
+        "7": 768,
+        "6": 896,
+        "8": 384,
+        "5": 128,
+        "11": 920,
+        "13": 568,
+        "17": 144,
+        "15": 272,
+        "14": 226,
+        "20": 22,
+        "18": 22,
+        "16": 10,
+        "32": 76,
+        "21": 26
+      },
+      "uniqueTrajectories": 20,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 41,
+      "sharedPrefixPlies": 40,
+      "searchTurns": 6784,
+      "depthZero": 0,
+      "actualNodes": 219945042,
+      "nodesMedian": 32768.0,
+      "depthMedian": 9.0,
+      "actualElapsedMs": 22674564.296218,
+      "interval": {
+        "lower": 0.7683798016474849,
+        "upper": 1,
+        "halfWidth": 0.23162019835251513
+      },
+      "representativeTrace": {
+        "pairId": "opening-2-0-mobility-mobility-32768-0",
+        "seed": 3802222618,
+        "firstTwelveMoves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 0,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 2,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          }
+        ]
+      },
+      "observedFirstDecisionMoves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "right"
+        }
+      ],
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "openingId": "opening-2-1",
+      "cellId": "opening-2-1-base-base-2048",
+      "profiles": [
+        "base-2048",
+        "base-2048"
+      ],
+      "matched": true,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 0,
+      "secondWins": 128,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "48": 128
+      },
+      "completedDepthDistribution": {
+        "6": 896,
+        "4": 896,
+        "7": 1024,
+        "5": 1280,
+        "3": 640,
+        "8": 512,
+        "10": 256,
+        "9": 256,
+        "11": 128
+      },
+      "uniqueTrajectories": 1,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": null,
+      "sharedPrefixPlies": 48,
+      "searchTurns": 5888,
+      "depthZero": 0,
+      "actualNodes": 12058624,
+      "nodesMedian": 2048.0,
+      "depthMedian": 6.0,
+      "actualElapsedMs": 1102669.6049630018,
+      "interval": {
+        "lower": 0,
+        "upper": 0.23162019835251513,
+        "halfWidth": 0.23162019835251513
+      },
+      "representativeTrace": {
+        "pairId": "opening-2-1-base-base-2048-0",
+        "seed": 3760317417,
+        "firstTwelveMoves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          }
+        ]
+      },
+      "observedFirstDecisionMoves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        }
+      ],
+      "hold": false,
+      "severeSide": "second",
+      "counterCandidate": false
+    },
+    {
+      "openingId": "opening-2-1",
+      "cellId": "opening-2-1-base-mobility-2048",
+      "profiles": [
+        "base-2048",
+        "mobility-2048"
+      ],
+      "matched": false,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "37": 54,
+        "39": 74
+      },
+      "completedDepthDistribution": {
+        "6": 884,
+        "4": 1624,
+        "7": 488,
+        "5": 1120,
+        "3": 128,
+        "8": 126,
+        "32": 120,
+        "10": 24,
+        "12": 8,
+        "9": 100,
+        "20": 2,
+        "22": 2,
+        "13": 2
+      },
+      "uniqueTrajectories": 24,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 15,
+      "sharedPrefixPlies": 14,
+      "searchTurns": 4628,
+      "depthZero": 0,
+      "actualNodes": 9314342,
+      "nodesMedian": 2048.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 862148.0571900038,
+      "interval": {
+        "lower": 0.7683798016474849,
+        "upper": 1,
+        "halfWidth": 0.23162019835251513
+      },
+      "representativeTrace": {
+        "pairId": "opening-2-1-base-mobility-2048-0",
+        "seed": 3760317417,
+        "firstTwelveMoves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          }
+        ]
+      },
+      "observedFirstDecisionMoves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        }
+      ],
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "openingId": "opening-2-1",
+      "cellId": "opening-2-1-mobility-base-2048",
+      "profiles": [
+        "mobility-2048",
+        "base-2048"
+      ],
+      "matched": false,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 0,
+      "secondWins": 128,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "36": 128
+      },
+      "completedDepthDistribution": {
+        "6": 460,
+        "4": 896,
+        "8": 384,
+        "7": 438,
+        "5": 470,
+        "3": 640,
+        "13": 128,
+        "10": 256,
+        "12": 128,
+        "11": 202,
+        "9": 128,
+        "23": 74,
+        "32": 148
+      },
+      "uniqueTrajectories": 9,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 32,
+      "sharedPrefixPlies": 31,
+      "searchTurns": 4352,
+      "depthZero": 0,
+      "actualNodes": 8664102,
+      "nodesMedian": 2048.0,
+      "depthMedian": 6.0,
+      "actualElapsedMs": 807877.5983920028,
+      "interval": {
+        "lower": 0,
+        "upper": 0.23162019835251513,
+        "halfWidth": 0.23162019835251513
+      },
+      "representativeTrace": {
+        "pairId": "opening-2-1-mobility-base-2048-0",
+        "seed": 3760317417,
+        "firstTwelveMoves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          }
+        ]
+      },
+      "observedFirstDecisionMoves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        }
+      ],
+      "hold": false,
+      "severeSide": "second",
+      "counterCandidate": false
+    },
+    {
+      "openingId": "opening-2-1",
+      "cellId": "opening-2-1-mobility-mobility-2048",
+      "profiles": [
+        "mobility-2048",
+        "mobility-2048"
+      ],
+      "matched": true,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "39": 128
+      },
+      "completedDepthDistribution": {
+        "6": 1002,
+        "4": 1408,
+        "8": 262,
+        "7": 370,
+        "5": 1280,
+        "3": 128,
+        "9": 136,
+        "10": 56,
+        "12": 12,
+        "32": 76,
+        "20": 6
+      },
+      "uniqueTrajectories": 15,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 34,
+      "sharedPrefixPlies": 33,
+      "searchTurns": 4736,
+      "depthZero": 0,
+      "actualNodes": 9657050,
+      "nodesMedian": 2048.0,
+      "depthMedian": 5.0,
+      "actualElapsedMs": 880635.7288640026,
+      "interval": {
+        "lower": 0.7683798016474849,
+        "upper": 1,
+        "halfWidth": 0.23162019835251513
+      },
+      "representativeTrace": {
+        "pairId": "opening-2-1-mobility-mobility-2048-0",
+        "seed": 3760317417,
+        "firstTwelveMoves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          }
+        ]
+      },
+      "observedFirstDecisionMoves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        }
+      ],
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "openingId": "opening-2-1",
+      "cellId": "opening-2-1-base-base-8192",
+      "profiles": [
+        "base-8192",
+        "base-8192"
+      ],
+      "matched": true,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 0,
+      "secondWins": 128,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "44": 60,
+        "42": 68
+      },
+      "completedDepthDistribution": {
+        "8": 976,
+        "6": 896,
+        "9": 662,
+        "7": 920,
+        "4": 572,
+        "5": 572,
+        "10": 382,
+        "14": 14,
+        "11": 34,
+        "13": 14,
+        "18": 12,
+        "32": 110,
+        "12": 70,
+        "22": 4,
+        "21": 2
+      },
+      "uniqueTrajectories": 23,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 14,
+      "sharedPrefixPlies": 13,
+      "searchTurns": 5240,
+      "depthZero": 0,
+      "actualNodes": 42048376,
+      "nodesMedian": 8192.0,
+      "depthMedian": 7.0,
+      "actualElapsedMs": 4307182.986798999,
+      "interval": {
+        "lower": 0,
+        "upper": 0.23162019835251513,
+        "halfWidth": 0.23162019835251513
+      },
+      "representativeTrace": {
+        "pairId": "opening-2-1-base-base-8192-0",
+        "seed": 3760317417,
+        "firstTwelveMoves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 2,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 2,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 2,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          }
+        ]
+      },
+      "observedFirstDecisionMoves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        }
+      ],
+      "hold": false,
+      "severeSide": "second",
+      "counterCandidate": false
+    },
+    {
+      "openingId": "opening-2-1",
+      "cellId": "opening-2-1-base-mobility-8192",
+      "profiles": [
+        "base-8192",
+        "mobility-8192"
+      ],
+      "matched": false,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "29": 128
+      },
+      "completedDepthDistribution": {
+        "8": 506,
+        "6": 1280,
+        "9": 208,
+        "7": 364,
+        "5": 640,
+        "4": 128,
+        "10": 80,
+        "11": 64,
+        "32": 166,
+        "12": 14,
+        "14": 4,
+        "13": 2
+      },
+      "uniqueTrajectories": 36,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 24,
+      "sharedPrefixPlies": 23,
+      "searchTurns": 3456,
+      "depthZero": 0,
+      "actualNodes": 27043120,
+      "nodesMedian": 8192.0,
+      "depthMedian": 6.0,
+      "actualElapsedMs": 3090880.5265909988,
+      "interval": {
+        "lower": 0.7683798016474849,
+        "upper": 1,
+        "halfWidth": 0.23162019835251513
+      },
+      "representativeTrace": {
+        "pairId": "opening-2-1-base-mobility-8192-0",
+        "seed": 3760317417,
+        "firstTwelveMoves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 2,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          }
+        ]
+      },
+      "observedFirstDecisionMoves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        }
+      ],
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "openingId": "opening-2-1",
+      "cellId": "opening-2-1-mobility-base-8192",
+      "profiles": [
+        "mobility-8192",
+        "base-8192"
+      ],
+      "matched": false,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 0,
+      "secondWins": 128,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "42": 60,
+        "38": 68
+      },
+      "completedDepthDistribution": {
+        "8": 634,
+        "6": 820,
+        "10": 220,
+        "9": 380,
+        "7": 1006,
+        "4": 572,
+        "5": 708,
+        "13": 22,
+        "11": 184,
+        "12": 108,
+        "32": 156,
+        "17": 18,
+        "31": 10,
+        "14": 8,
+        "16": 2
+      },
+      "uniqueTrajectories": 30,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 14,
+      "sharedPrefixPlies": 13,
+      "searchTurns": 4848,
+      "depthZero": 0,
+      "actualNodes": 38684360,
+      "nodesMedian": 8192.0,
+      "depthMedian": 7.0,
+      "actualElapsedMs": 4039263.821118005,
+      "interval": {
+        "lower": 0,
+        "upper": 0.23162019835251513,
+        "halfWidth": 0.23162019835251513
+      },
+      "representativeTrace": {
+        "pairId": "opening-2-1-mobility-base-8192-0",
+        "seed": 3760317417,
+        "firstTwelveMoves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 2,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 2,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 2,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          }
+        ]
+      },
+      "observedFirstDecisionMoves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        }
+      ],
+      "hold": false,
+      "severeSide": "second",
+      "counterCandidate": false
+    },
+    {
+      "openingId": "opening-2-1",
+      "cellId": "opening-2-1-mobility-mobility-8192",
+      "profiles": [
+        "mobility-8192",
+        "mobility-8192"
+      ],
+      "matched": true,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "31": 128
+      },
+      "completedDepthDistribution": {
+        "8": 556,
+        "6": 1024,
+        "10": 202,
+        "7": 706,
+        "5": 640,
+        "4": 128,
+        "15": 70,
+        "9": 156,
+        "32": 162,
+        "12": 24,
+        "11": 38,
+        "16": 6
+      },
+      "uniqueTrajectories": 26,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 25,
+      "sharedPrefixPlies": 24,
+      "searchTurns": 3712,
+      "depthZero": 0,
+      "actualNodes": 29139656,
+      "nodesMedian": 8192.0,
+      "depthMedian": 7.0,
+      "actualElapsedMs": 3235280.584820999,
+      "interval": {
+        "lower": 0.7683798016474849,
+        "upper": 1,
+        "halfWidth": 0.23162019835251513
+      },
+      "representativeTrace": {
+        "pairId": "opening-2-1-mobility-mobility-8192-0",
+        "seed": 3760317417,
+        "firstTwelveMoves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 2,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "right",
+            "side": "left"
+          }
+        ]
+      },
+      "observedFirstDecisionMoves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        }
+      ],
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "openingId": "opening-2-1",
+      "cellId": "opening-2-1-base-base-32768",
+      "profiles": [
+        "base-32768",
+        "base-32768"
+      ],
+      "matched": true,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 0,
+      "secondWins": 128,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "38": 128
+      },
+      "completedDepthDistribution": {
+        "10": 640,
+        "8": 640,
+        "12": 900,
+        "9": 614,
+        "7": 640,
+        "6": 256,
+        "11": 640,
+        "14": 124,
+        "15": 62,
+        "23": 62,
+        "16": 30
+      },
+      "uniqueTrajectories": 4,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 29,
+      "sharedPrefixPlies": 28,
+      "searchTurns": 4608,
+      "depthZero": 0,
+      "actualNodes": 150994944,
+      "nodesMedian": 32768.0,
+      "depthMedian": 10.0,
+      "actualElapsedMs": 14942907.042768,
+      "interval": {
+        "lower": 0,
+        "upper": 0.23162019835251513,
+        "halfWidth": 0.23162019835251513
+      },
+      "representativeTrace": {
+        "pairId": "opening-2-1-base-base-32768-0",
+        "seed": 3760317417,
+        "firstTwelveMoves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          }
+        ]
+      },
+      "observedFirstDecisionMoves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        }
+      ],
+      "hold": false,
+      "severeSide": "second",
+      "counterCandidate": false
+    },
+    {
+      "openingId": "opening-2-1",
+      "cellId": "opening-2-1-base-mobility-32768",
+      "profiles": [
+        "base-32768",
+        "mobility-32768"
+      ],
+      "matched": false,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 0,
+      "secondWins": 128,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "42": 128
+      },
+      "completedDepthDistribution": {
+        "10": 768,
+        "7": 896,
+        "12": 768,
+        "9": 640,
+        "8": 384,
+        "6": 256,
+        "13": 640,
+        "11": 768
+      },
+      "uniqueTrajectories": 1,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": null,
+      "sharedPrefixPlies": 42,
+      "searchTurns": 5120,
+      "depthZero": 0,
+      "actualNodes": 167772160,
+      "nodesMedian": 32768.0,
+      "depthMedian": 10.0,
+      "actualElapsedMs": 16715972.088784976,
+      "interval": {
+        "lower": 0,
+        "upper": 0.23162019835251513,
+        "halfWidth": 0.23162019835251513
+      },
+      "representativeTrace": {
+        "pairId": "opening-2-1-base-mobility-32768-0",
+        "seed": 3760317417,
+        "firstTwelveMoves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          }
+        ]
+      },
+      "observedFirstDecisionMoves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        }
+      ],
+      "hold": false,
+      "severeSide": "second",
+      "counterCandidate": false
+    },
+    {
+      "openingId": "opening-2-1",
+      "cellId": "opening-2-1-mobility-base-32768",
+      "profiles": [
+        "mobility-32768",
+        "base-32768"
+      ],
+      "matched": false,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 0,
+      "secondWins": 128,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "50": 128
+      },
+      "completedDepthDistribution": {
+        "10": 494,
+        "8": 838,
+        "11": 670,
+        "9": 714,
+        "7": 958,
+        "6": 256,
+        "12": 1034,
+        "14": 280,
+        "13": 718,
+        "16": 20,
+        "17": 4,
+        "32": 74,
+        "15": 76,
+        "18": 8
+      },
+      "uniqueTrajectories": 30,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 43,
+      "sharedPrefixPlies": 42,
+      "searchTurns": 6144,
+      "depthZero": 0,
+      "actualNodes": 198957612,
+      "nodesMedian": 32768.0,
+      "depthMedian": 10.0,
+      "actualElapsedMs": 20119247.648835994,
+      "interval": {
+        "lower": 0,
+        "upper": 0.23162019835251513,
+        "halfWidth": 0.23162019835251513
+      },
+      "representativeTrace": {
+        "pairId": "opening-2-1-mobility-base-32768-0",
+        "seed": 3760317417,
+        "firstTwelveMoves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          }
+        ]
+      },
+      "observedFirstDecisionMoves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        }
+      ],
+      "hold": false,
+      "severeSide": "second",
+      "counterCandidate": false
+    },
+    {
+      "openingId": "opening-2-1",
+      "cellId": "opening-2-1-mobility-mobility-32768",
+      "profiles": [
+        "mobility-32768",
+        "mobility-32768"
+      ],
+      "matched": true,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "51": 128
+      },
+      "completedDepthDistribution": {
+        "10": 164,
+        "7": 1152,
+        "11": 1376,
+        "9": 1144,
+        "8": 698,
+        "6": 512,
+        "12": 596,
+        "14": 276,
+        "16": 50,
+        "32": 220,
+        "13": 64,
+        "15": 6,
+        "17": 14
+      },
+      "uniqueTrajectories": 26,
+      "unique12PlyPrefixes": 1,
+      "firstDivergentPrefixPly": 42,
+      "sharedPrefixPlies": 41,
+      "searchTurns": 6272,
+      "depthZero": 0,
+      "actualNodes": 198730910,
+      "nodesMedian": 32768.0,
+      "depthMedian": 9.0,
+      "actualElapsedMs": 20174576.94103,
+      "interval": {
+        "lower": 0.7683798016474849,
+        "upper": 1,
+        "halfWidth": 0.23162019835251513
+      },
+      "representativeTrace": {
+        "pairId": "opening-2-1-mobility-mobility-32768-0",
+        "seed": 3760317417,
+        "firstTwelveMoves": [
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 6,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 7,
+            "direction": "left",
+            "side": "right"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 1,
+            "direction": "right",
+            "side": "left"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          },
+          {
+            "type": "capture",
+            "phase": "namua",
+            "row": 0,
+            "index": 4,
+            "direction": "left",
+            "side": "right",
+            "houseChoice": "use"
+          }
+        ]
+      },
+      "observedFirstDecisionMoves": [
+        {
+          "type": "takata",
+          "phase": "namua",
+          "row": 0,
+          "index": 5,
+          "direction": "left"
+        }
+      ],
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    }
+  ],
+  "candidateRobustness": [
+    {
+      "firstEvaluator": "base",
+      "cells": 12,
+      "counterCells": 6,
+      "allTwelveSupported": false,
+      "failedCellIds": [
+        "opening-2-0-base-base-2048",
+        "opening-2-0-base-mobility-2048",
+        "opening-2-1-base-base-2048",
+        "opening-2-1-base-base-8192",
+        "opening-2-1-base-base-32768",
+        "opening-2-1-base-mobility-32768"
+      ]
+    },
+    {
+      "firstEvaluator": "mobility",
+      "cells": 12,
+      "counterCells": 8,
+      "allTwelveSupported": false,
+      "failedCellIds": [
+        "opening-2-0-mobility-base-8192",
+        "opening-2-1-mobility-base-2048",
+        "opening-2-1-mobility-base-8192",
+        "opening-2-1-mobility-base-32768"
+      ]
+    }
+  ],
+  "matchedFirstSevereCells": 8,
+  "matchedSecondSevereCells": 4,
+  "matchedDirectionAgreementWith017": 12,
+  "prior017FirstDecisionChoices": {
+    "opening-2-0": [
+      {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "right"
+      },
+      {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "left"
+      }
+    ],
+    "opening-2-1": [
+      {
+        "type": "takata",
+        "phase": "namua",
+        "row": 0,
+        "index": 5,
+        "direction": "left"
+      }
+    ]
+  },
+  "practicalBalanceAssessment": "HOLD",
+  "initialTheoreticalValue": "UNKNOWN",
+  "newGames": 0,
+  "newProofSearches": 0
+}

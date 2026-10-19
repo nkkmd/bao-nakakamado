@@ -1,0 +1,70 @@
+{
+  "openings": [
+    {
+      "openingId": "opening-2-0",
+      "stateKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[1,0,0,0,7,2,2,0],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+      "plyBefore": 3,
+      "legalFirstDecisionMoves": [
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          "observedInStudy018": true,
+          "observedInStudy017": true
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          "observedInStudy018": true,
+          "observedInStudy017": true
+        }
+      ],
+      "legalCount": 2,
+      "observedCount": 2,
+      "warning": "Enumeration and observed AI choice only; no continuation search or proof."
+    },
+    {
+      "openingId": "opening-2-1",
+      "stateKey": "[\"takasia-namua-end-pit-two-protect-last-two-row-ring-hand22\",\"0.10.0\",\"BAO-RULES-V0.2.0-TAKASIA-001\",[[[0,0,0,0,7,3,0,0],[0,0,0,0,0,0,0,0]],[[0,0,0,0,7,2,2,1],[0,0,0,0,0,0,0,0]]],[21,21],[0,0],[true,true],0,\"namua\",null,\"\",[0,0],3,null]",
+      "plyBefore": 3,
+      "legalFirstDecisionMoves": [
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "left"
+          },
+          "observedInStudy018": true,
+          "observedInStudy017": true
+        },
+        {
+          "move": {
+            "type": "takata",
+            "phase": "namua",
+            "row": 0,
+            "index": 5,
+            "direction": "right"
+          },
+          "observedInStudy018": false,
+          "observedInStudy017": false
+        }
+      ],
+      "legalCount": 2,
+      "observedCount": 1,
+      "warning": "Enumeration and observed AI choice only; no continuation search or proof."
+    }
+  ],
+  "newGames": 0,
+  "newProofSearches": 0
+}
