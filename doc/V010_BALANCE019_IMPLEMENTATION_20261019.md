@@ -47,4 +47,12 @@ PR #60統合後の旧14監査・017監査・018監査の全16 job成功をGitHub
 
 現在、封印後ソースのPR検証と自動レビューを確認する段階。正式run・正式sourceはまだ未作成で、実戦全体は判断保留、初期理論値UNKNOWNを維持する。
 
-再封印済みmanifest digest：`c7d2aa2a825af63335fbae89555f5cd1b466e5ef01fb59a5cb490cb366d7b877`。初回正式起動はこのdigestの検証成功後に限る。
+CI修正前のmanifest digest：`c7d2aa2a825af63335fbae89555f5cd1b466e5ef01fb59a5cb490cb366d7b877`。下記の修正により更新し、正式起動には使用しない。
+
+## 封印後CIで見つかった監査環境の修正
+
+封印後head `4ffe7c3cee8f114443e8e7a4aa73c71f397a8004` の019専用CIが、読取り専用監査時の `GITHUB_SHA`／`GITHUB_RUN_ID` を過去の試走source／runへ比較して停止した。原bytesや試走の再生不一致ではなく、監査対象と監査実行の識別子を混同する呼出し側の不具合だった。監査子プロセスではこの2環境変数を外し、対象は固定Git blob・launch receipt・原receiptで照合する。試走実行・保存時のsource/run検査は保持する。
+
+変更前digest `c7d2aa2a825af63335fbae89555f5cd1b466e5ef01fb59a5cb490cb366d7b877` は[修正前の封印](v010-balance019/pre-ci-manifest-c7d2aa2a.json)として保存し、正式起動には使用しない。任意の別CI識別子を設定したローカル再監査・再封印を検証し、修正後headのCI・レビュー成功を待つ。研究条件・対局処理・seed・標本数に変更はない。正式試験は引き続き未起動。
+
+現行の封印済みmanifest digest：`1a517eaa5475b2c9ec8fe3eef9b51b64e580fd5f76d61e98e642308747e8231d`。別CI識別子を設定した再監査・封印は成功。CI・レビュー成功後にこのdigestで初回正式起動する。

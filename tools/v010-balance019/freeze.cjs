@@ -1,8 +1,9 @@
 'use strict';
 // MIT. Seal only after completed operational pilot and independent verification.
 const fs=require('node:fs'),assert=require('node:assert/strict'),T=require('./study.cjs'),{C}=require('../v010-followup/core.cjs');
-require('node:child_process').execFileSync(process.execPath,['tools/v010-balance019/pilot.cjs','verify','doc/v010-balance019/pilot'],{stdio:'pipe'});
-require('node:child_process').execFileSync('python3',['tools/v010-balance019/pilot-reaudit.py'],{stdio:'pipe'});
+const auditEnv=Object.fromEntries(Object.entries(process.env).filter(([k])=>!['GITHUB_SHA','GITHUB_RUN_ID'].includes(k)));
+require('node:child_process').execFileSync(process.execPath,['tools/v010-balance019/pilot.cjs','verify','doc/v010-balance019/pilot'],{stdio:'pipe',env:auditEnv});
+require('node:child_process').execFileSync('python3',['tools/v010-balance019/pilot-reaudit.py'],{stdio:'pipe',env:auditEnv});
 const independent=JSON.parse(fs.readFileSync('doc/v010-balance019/pilot-independent-reaudit.json'));assert.equal(independent.status,'PINNED-BYTES-PYTHON-AGGREGATION-AND-NORMAL-REPLAY-MATCH');assert.equal(independent.verifiedOriginalFiles,469);assert.equal(independent.games,312);assert.equal(independent.newGames,0);assert.equal(independent.newProofSearches,0);assert.ok(independent.allJobsRunnerHours<=12);
 const folder='doc/v010-balance019/pilot/',p=JSON.parse(fs.readFileSync(folder+'pilot.json'));
 const priorFile='doc/v010-balance019/main019-plan-postmerge-audit.json',prior=JSON.parse(fs.readFileSync(priorFile));assert.equal(prior.mergeCommit,T.contract.baseline);assert.equal(prior.checks.length,16);assert.ok(prior.checks.every(r=>r.conclusion==='success'));assert.equal(prior.newGames,0);assert.equal(prior.newProofSearches,0);

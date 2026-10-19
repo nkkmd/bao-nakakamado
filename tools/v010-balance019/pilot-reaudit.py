@@ -1,6 +1,6 @@
 """MIT. Independent pinned-byte and Python raw pilot aggregation; no play/search."""
 from pathlib import Path
-import collections,gzip,hashlib,json,math,subprocess
+import collections,gzip,hashlib,json,math,subprocess,os
 R=Path(__file__).resolve().parents[2];D=R/'doc/v010-balance019';P=D/'pilot'
 SOURCE='3128eca1559eef22f11324f20cd603e40851ff5c';RESULT='b3d70ec22bad2ec710e7c1c7adf2ff815b6c6608';RUN='39225245641'
 def sha(b):return hashlib.sha256(b).hexdigest()
@@ -41,7 +41,7 @@ for x in expected:
  expected_rec=summary['rows'][i];assert expected_rec['cellId']==x['id'];assert all(rec[k]==expected_rec[k] for k in rec)
  metrics.append(dict(cellId=x['id'],pairElapsedMs=rec['pairElapsedMs'],peakRssBytes=rec['peakRssBytes'],bytes=len(raw),normal=2,depthZero=0,actualNodes=nodes))
 # Normal engine legal replay is independent of trial execution; never call pair/batch.
-subprocess.run(['node','tools/v010-balance019/pilot.cjs','verify',str(P)],cwd=R,check=True,capture_output=True)
+subprocess.run(['node','tools/v010-balance019/pilot.cjs','verify',str(P)],cwd=R,check=True,capture_output=True,env={k:v for k,v in os.environ.items() if k not in ('GITHUB_SHA','GITHUB_RUN_ID')})
 run=json.loads((D/'pilot-run-audit.json').read_text());assert len(run['jobs'])==30 and all(j['conclusion']=='success' for j in run['jobs']);assert run['runnerHours']<12
 r=dict(status='PINNED-BYTES-PYTHON-AGGREGATION-AND-NORMAL-REPLAY-MATCH',sourceCommit=SOURCE,resultCommit=RESULT,runId=RUN,files=files,verifiedOriginalFiles=len(files),games=312,normal=312,depthZero=0,verifiedSourceFiles=verified_sources,pairRunnerHours=sum(x['pairElapsedMs'] for x in metrics)/3600000,allJobsRunnerHours=run['runnerHours'],peakRssBytes=max(x['peakRssBytes'] for x in metrics),rawGameBytes=sum(x['bytes'] for x in metrics),cells=metrics,newGames=0,newProofSearches=0)
 (D/'pilot-independent-reaudit.json').write_text(json.dumps(r,ensure_ascii=False,indent=2)+'\n');print(json.dumps({k:v for k,v in r.items() if k not in ('files','cells','verifiedSourceFiles')}))
