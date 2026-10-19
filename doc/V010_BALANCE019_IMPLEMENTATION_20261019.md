@@ -1,6 +1,6 @@
 # 調査019：coverage照合と実装・運用試走の準備
 
-> 2026年10月20日追記：019正式試験は全1,248局通常終局で完了し、保存・独立再監査・別実装集計が一致。[正式結果](V010_BALANCE019_RESULTS_20261020.md)／[最新引き継ぎ](V010_RESEARCH_HANDOFF_20261020_STUDY019.md)。main統合前で停止。以下の未起動・実行中の記述は各準備工程時点の履歴として保持する。
+> 2026年10月20日追記：019正式試験は全1,248局通常終局で完了し、保存・独立再監査・別実装集計が一致。[正式結果](V010_BALANCE019_RESULTS_20261020.md)／[最新引き継ぎ](V010_RESEARCH_HANDOFF_20261020_STUDY019.md)。当初はmain統合前で停止し、その後の追加指示で統合・統合後監査が許可された。最新の統合状態はPR #61を参照。以下の未起動・実行中の記述は各準備工程時点の履歴として保持する。
 
 記録日：2026年10月19日（Asia/Tokyo）。基準main `57c7936a5c8d6e80f3979571ae9aa9b3c29e88fa`。
 [計画](V010_BALANCE019_PLAN_20261019.md)／[coverage](v010-balance019/coverage-receipt.json)／[証明義務の照合](v010-balance019/coverage-obligations.json)／[main監査](v010-balance019/main019-plan-postmerge-audit.json)。

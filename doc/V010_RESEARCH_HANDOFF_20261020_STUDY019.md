@@ -1,12 +1,12 @@
-# v0.10.0：調査019完了・main統合前の引き継ぎ
+# v0.10.0：調査019完了・結果と再開手順
 
 更新日：2026年10月20日（Asia/Tokyo）。[AGENTS.md](../AGENTS.md)／[019結果](V010_BALANCE019_RESULTS_20261020.md)／[固定計画](V010_BALANCE019_PLAN_20261019.md)／[起動記録](V010_BALANCE019_LAUNCH_20261019.md)／[manifest](../tools/v010-balance019/manifest.json)／[旧018引き継ぎ](V010_RESEARCH_HANDOFF_20261019_STUDY018.md)。
 
-## 現在地と停止位置
+## 現在地と統合状態
 
 対象は先後差による実戦上のゲームバランス破綻。**実戦全体は判断保留、初期配置の理論値は未確定（UNKNOWN）**を別に報告する。公開ルールv0.10.0・標準初期配置・公開AI・旧原記録は変更しない。新しい理論解析・局所証明は起動しない。
 
-調査019の対局・保存・固定原記録の独立再監査・別実装集計・敗局frontier・報告整理が完了。結果は[PR #61](https://github.com/nkkmd/bao-nakakamado/pull/61)で確認する。ユーザーの2026年10月20日の指示により**main統合前で停止する**。mainはPR #60統合commit `57c7936a5c8d6e80f3979571ae9aa9b3c29e88fa`、019は未統合。CI・レビューの最終状態はGitHubを参照し、未確認を成功と記録しない。
+調査019の対局・保存・固定原記録の独立再監査・別実装集計・敗局frontier・報告整理が完了。結果は[PR #61](https://github.com/nkkmd/bao-nakakamado/pull/61)で確認する。当初の指示ではmain統合前で停止した。その後の2026年10月20日の追加指示により、main統合と統合後監査が許可された。統合前の基準mainはPR #60統合commit `57c7936a5c8d6e80f3979571ae9aa9b3c29e88fa`。最新の統合commit・CI・レビュー・統合後監査の状態はPR #61とGitHub Actionsを参照し、未確認を成功と記録しない。
 
 ## 正式sourceと原記録
 
@@ -42,6 +42,6 @@ git diff --exit-code -- doc/v010-balance019/results-analysis.json doc/v010-balan
 
 Gitの完全履歴を取得し、旧全16監査と019結果監査を維持する。固定019ソース・plan・manifestを編集せず、結果branchの旧文書でmainや研究branchを巻き戻さない。原記録のディレクトリだけ同一blobで取り込む。中断したjobの再探索・run_attempt>1を自動起動しない。
 
-この時点でmain統合は許可されていない。次の調査は未計画・未起動。019の結果から候補を選ぶ場合も、別ID・別seed・別manifestによる探索／独立確認を区別する。人間の全技能水準や別系列AIへ一般化しない。
+2026年10月20日の追加指示によりmain統合と統合後監査が許可された。研究結果の確定と技術的な統合・監査の完了を区別する。次の調査は未計画・未起動。019の結果から候補を選ぶ場合も、別ID・別seed・別manifestによる探索／独立確認を区別する。人間の全技能水準や別系列AIへ一般化しない。
 
 本文 © 2026 nkkmd and Bao Nakakamado contributors、[CC BY-SA 4.0](../LICENSE-CC-BY-SA-4.0.txt)。

@@ -43,7 +43,7 @@ line();line('先頭12手prefixは140セルで1種類、14セルで2種類、2セ
 line();line('## 総合判定・残る工程')
 line();line('**実戦全体：判断保留。** 早い別合法手6右にも勝つ条件があり、指定した4固定候補はいずれも相手変更と全応手に対する探索上の優先基準を満たさなかった。これだけで、ゲーム全体の公平・破綻・対抗策不存在のいずれも確定しない。全初手からの自然な選択、別系列の強いAI、人間の技能水準、5手目以降の他の合法継続は未確認。旧全4初手・14応手の被覆表も[017結果](V010_BALANCE017_RESULTS_20261018.md)として保持する。')
 line();line('**初期配置の理論値：未確定（UNKNOWN）。** 新規証明探索0。既存の52着手／43着手局所証明・未証明親・有限手数の結果は従来の範囲で保持し、019の対局を無期限の理論証明に昇格しない。')
-line();line('019は全設計セルの保存・独立再監査・別実装集計・報告整理を完了。ユーザーの2026年10月20日の指定によりmain統合前まで。次の候補探索・独立確認は未計画・未起動であり、実施するなら別ID・別seed・別manifestとし、019の結果から有利な条件だけを選んで独立確認済みとしない。')
+line();line('019は全設計セルの保存・独立再監査・別実装集計・報告整理を完了。当初はユーザー指定でmain統合前に停止し、その後の2026年10月20日の追加指示で統合・統合後監査が許可された。統合状態は[PR #61](https://github.com/nkkmd/bao-nakakamado/pull/61)を基準とする。次の候補探索・独立確認は未計画・未起動であり、実施するなら別ID・別seed・別manifestとし、019の結果から有利な条件だけを選んで独立確認済みとしない。')
 line();line('## 読取り専用の再現')
 line();line('```sh');line('python3 tools/v010-balance019/reaudit.py doc/v010-balance019/completed 5015ee1f968a3ced31a83648524b9ac0132e3369 bf6e7724b663c2918866b5c9637f6547efe7e484 39241595646');line('python3 tools/v010-balance019-results/analyse.py');line('node tools/v010-balance019-results/frontier.cjs');line('python3 tools/v010-balance019-results/report.py');line('git diff --exit-code -- doc/v010-balance019/results-analysis.json doc/v010-balance019/loss-frontier.json doc/V010_BALANCE019_RESULTS_20261020.md');line('```')
 line();line('本文 © 2026 nkkmd and Bao Nakakamado contributors、[CC BY-SA 4.0](../LICENSE-CC-BY-SA-4.0.txt)。')
