@@ -8,6 +8,6 @@ v0.10.0の早期別合法手・全応手の探索。公開実装と過去の固�
 `study.cjs` の正式入口は、試走監査と封印済みmanifestを必須とする。未完started markerは消さずHOLDとする。
 `pilot.cjs` は別seed domainの運用試走専用。各156セル1交換組で、正式成績へ混ぜない。
 
-現時点では正式manifest未封印・正式試験未起動。
+封印・起動の最新状況は[実装記録](../../doc/V010_BALANCE019_IMPLEMENTATION_20261019.md)と各起動receiptを参照する。試走の成績を正式標本へ合算しない。
 
 本文 © 2026 nkkmd and Bao Nakakamado contributors、[CC BY-SA 4.0](../../LICENSE-CC-BY-SA-4.0.txt)。

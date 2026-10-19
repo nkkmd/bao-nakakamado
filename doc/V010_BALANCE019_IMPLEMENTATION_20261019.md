@@ -36,3 +36,15 @@ PR #60統合後の旧14監査・017監査・018監査の全16 job成功をGitHub
 起動済み運用試走の完了・保存、原記録の独立監査、実測予算の確認、manifest封印、正式試験の初回起動、結果の保存・独立集計、報告とmain統合後監査が残る。試走結果を正式成績へ混ぜない。
 
 本文 © 2026 nkkmd and Bao Nakakamado contributors、[CC BY-SA 4.0](../LICENSE-CC-BY-SA-4.0.txt)。
+
+## 試走完了と独立監査・封印準備
+
+試走run 39225245641は2026年10月19日19時10分50秒（日本時間）に全30 job成功、初回attemptで終了。結果commit `b3d70ec22bad2ec710e7c1c7adf2ff815b6c6608` の469原ファイルを同じGit blobのまま取り込んだ。312局すべて通常終局、深度0は0。通常エンジン再生・別実装Python原集計・固定source fingerprint・原bytes SHAが一致した。[独立監査](v010-balance019/pilot-independent-reaudit.json)／[全jobの時間監査](v010-balance019/pilot-run-audit.json)。新規対局・証明探索0。
+
+対局処理5.1464 runner時間、全job合計5.2775 runner時間、最大RSS約293.87 MiB、原対局gzip計1,817,578 bytes。正式予測は20.5855 runner時間・最長分割28.99分で、67.2時間／75.6分の封印条件を満たす。前後処理を除く同時4分割の予測は約5時間9分。将来のrunner性能や対局長の保証ではなく、108分job上限と停止・HOLDを維持する。
+
+初回の準備manifest digest `09014c62f20331417f6304374b6b14554d445e7a0fc0b91ad8939b61dc1934d6` は[準備履歴](v010-balance019/pre-review-manifest-09014c62.json)として保持。READMEの初回実装時の「未封印」記載を最新記録への恒常的な導線へ修正したため、source fingerprintを更新して再封印する。根・方針・seed・標本数・分割・予算・停止条件の変更はない。準備履歴を正式起動に使用しない。
+
+現在、封印後ソースのPR検証と自動レビューを確認する段階。正式run・正式sourceはまだ未作成で、実戦全体は判断保留、初期理論値UNKNOWNを維持する。
+
+再封印済みmanifest digest：`c7d2aa2a825af63335fbae89555f5cd1b466e5ef01fb59a5cb490cb366d7b877`。初回正式起動はこのdigestの検証成功後に限る。

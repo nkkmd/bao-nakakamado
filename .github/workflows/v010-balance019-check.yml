@@ -18,4 +18,8 @@ jobs:
         with:
           node-version: '24'
       - run: node --test tools/v010-balance019/check.test.cjs
+      - run: python3 tools/v010-balance019/pilot-reaudit.py
+      - run: node tools/v010-balance019/freeze.cjs
+      - run: node tools/v010-balance019/study.cjs manifest
+      - run: git diff --exit-code -- tools/v010-balance019/manifest.json doc/v010-balance019/pilot-independent-reaudit.json
       - run: git diff --check
