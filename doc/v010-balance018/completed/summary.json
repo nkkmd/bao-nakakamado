@@ -1,0 +1,1192 @@
+{
+  "status": "AUDITED-COMPLETE",
+  "digest": "8bd3045b41a2392376a0ae18f84e0173b4f2c19db44689724021045a190f3369",
+  "sourceCommit": "80ba721ef8e2377f06931393318ae13104c74bae",
+  "runId": "39139965350",
+  "pairs": 1536,
+  "games": 3072,
+  "cells": [
+    {
+      "cellId": "opening-2-0-base-base-2048",
+      "openingId": "opening-2-0",
+      "profiles": [
+        "base-2048",
+        "base-2048"
+      ],
+      "matched": true,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 0,
+      "secondWins": 128,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "40": 128
+      },
+      "completedDepthDistribution": {
+        "3": 384,
+        "4": 1152,
+        "5": 1606,
+        "6": 592,
+        "7": 312,
+        "8": 338,
+        "9": 330,
+        "10": 16,
+        "11": 10,
+        "13": 2,
+        "14": 2,
+        "21": 2,
+        "32": 118
+      },
+      "uniqueTrajectories": 25,
+      "unique12PlyPrefixes": 1,
+      "searchTurns": 4864,
+      "depthZero": 0,
+      "actualNodes": 9774490,
+      "actualElapsedMs": 908705.8436420027,
+      "interval": {
+        "pairs": 64,
+        "halfWidth": 0.23162019835251513,
+        "lower": 0,
+        "upper": 0.23162019835251513
+      },
+      "hold": false,
+      "severeSide": "second",
+      "counterCandidate": false
+    },
+    {
+      "cellId": "opening-2-0-base-mobility-2048",
+      "openingId": "opening-2-0",
+      "profiles": [
+        "base-2048",
+        "mobility-2048"
+      ],
+      "matched": false,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 0,
+      "secondWins": 128,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "46": 128
+      },
+      "completedDepthDistribution": {
+        "3": 1408,
+        "4": 1152,
+        "5": 1536,
+        "6": 706,
+        "7": 190,
+        "8": 512,
+        "9": 128
+      },
+      "uniqueTrajectories": 2,
+      "unique12PlyPrefixes": 1,
+      "searchTurns": 5632,
+      "depthZero": 0,
+      "actualNodes": 11534336,
+      "actualElapsedMs": 1137357.9834860018,
+      "interval": {
+        "pairs": 64,
+        "halfWidth": 0.23162019835251513,
+        "lower": 0,
+        "upper": 0.23162019835251513
+      },
+      "hold": false,
+      "severeSide": "second",
+      "counterCandidate": false
+    },
+    {
+      "cellId": "opening-2-0-mobility-base-2048",
+      "openingId": "opening-2-0",
+      "profiles": [
+        "mobility-2048",
+        "base-2048"
+      ],
+      "matched": false,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "25": 74,
+        "53": 54
+      },
+      "completedDepthDistribution": {
+        "2": 74,
+        "3": 654,
+        "4": 1792,
+        "5": 466,
+        "6": 586,
+        "7": 326,
+        "8": 218,
+        "9": 188,
+        "10": 58,
+        "12": 54,
+        "32": 40
+      },
+      "uniqueTrajectories": 26,
+      "unique12PlyPrefixes": 2,
+      "searchTurns": 4456,
+      "depthZero": 0,
+      "actualNodes": 9054540,
+      "actualElapsedMs": 914520.622566999,
+      "interval": {
+        "pairs": 64,
+        "halfWidth": 0.23162019835251513,
+        "lower": 0.7683798016474849,
+        "upper": 1
+      },
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "cellId": "opening-2-0-mobility-mobility-2048",
+      "openingId": "opening-2-0",
+      "profiles": [
+        "mobility-2048",
+        "mobility-2048"
+      ],
+      "matched": true,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "41": 128
+      },
+      "completedDepthDistribution": {
+        "3": 1024,
+        "4": 1792,
+        "5": 450,
+        "6": 864,
+        "7": 256,
+        "8": 542,
+        "9": 32,
+        "10": 32
+      },
+      "uniqueTrajectories": 4,
+      "unique12PlyPrefixes": 1,
+      "searchTurns": 4992,
+      "depthZero": 0,
+      "actualNodes": 10223616,
+      "actualElapsedMs": 1049320.867821998,
+      "interval": {
+        "pairs": 64,
+        "halfWidth": 0.23162019835251513,
+        "lower": 0.7683798016474849,
+        "upper": 1
+      },
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "cellId": "opening-2-0-base-base-8192",
+      "openingId": "opening-2-0",
+      "profiles": [
+        "base-8192",
+        "base-8192"
+      ],
+      "matched": true,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "45": 128
+      },
+      "completedDepthDistribution": {
+        "5": 1536,
+        "6": 1114,
+        "7": 688,
+        "8": 1066,
+        "9": 248,
+        "10": 462,
+        "11": 48,
+        "12": 46,
+        "13": 86,
+        "14": 24,
+        "15": 16,
+        "16": 2,
+        "17": 2,
+        "18": 2,
+        "32": 164
+      },
+      "uniqueTrajectories": 53,
+      "unique12PlyPrefixes": 1,
+      "searchTurns": 5504,
+      "depthZero": 0,
+      "actualNodes": 43812466,
+      "actualElapsedMs": 4144951.0020710086,
+      "interval": {
+        "pairs": 64,
+        "halfWidth": 0.23162019835251513,
+        "lower": 0.7683798016474849,
+        "upper": 1
+      },
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "cellId": "opening-2-0-base-mobility-8192",
+      "openingId": "opening-2-0",
+      "profiles": [
+        "base-8192",
+        "mobility-8192"
+      ],
+      "matched": false,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "61": 128
+      },
+      "completedDepthDistribution": {
+        "4": 128,
+        "5": 1792,
+        "6": 896,
+        "7": 896,
+        "8": 1158,
+        "9": 776,
+        "10": 1044,
+        "11": 162,
+        "12": 130,
+        "13": 128,
+        "14": 2,
+        "15": 10,
+        "16": 2,
+        "18": 4,
+        "20": 4,
+        "21": 6,
+        "32": 414
+      },
+      "uniqueTrajectories": 57,
+      "unique12PlyPrefixes": 1,
+      "searchTurns": 7552,
+      "depthZero": 0,
+      "actualNodes": 58734118,
+      "actualElapsedMs": 5245866.166688993,
+      "interval": {
+        "pairs": 64,
+        "halfWidth": 0.23162019835251513,
+        "lower": 0.7683798016474849,
+        "upper": 1
+      },
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "cellId": "opening-2-0-mobility-base-8192",
+      "openingId": "opening-2-0",
+      "profiles": [
+        "mobility-8192",
+        "base-8192"
+      ],
+      "matched": false,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 0,
+      "secondWins": 128,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "34": 128
+      },
+      "completedDepthDistribution": {
+        "4": 384,
+        "5": 896,
+        "6": 384,
+        "7": 1152,
+        "8": 640,
+        "9": 160,
+        "10": 256,
+        "11": 30,
+        "12": 128,
+        "32": 66
+      },
+      "uniqueTrajectories": 6,
+      "unique12PlyPrefixes": 1,
+      "searchTurns": 4096,
+      "depthZero": 0,
+      "actualNodes": 33017984,
+      "actualElapsedMs": 3534627.3326369934,
+      "interval": {
+        "pairs": 64,
+        "halfWidth": 0.23162019835251513,
+        "lower": 0,
+        "upper": 0.23162019835251513
+      },
+      "hold": false,
+      "severeSide": "second",
+      "counterCandidate": false
+    },
+    {
+      "cellId": "opening-2-0-mobility-mobility-8192",
+      "openingId": "opening-2-0",
+      "profiles": [
+        "mobility-8192",
+        "mobility-8192"
+      ],
+      "matched": true,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "37": 128
+      },
+      "completedDepthDistribution": {
+        "5": 768,
+        "6": 1172,
+        "7": 1094,
+        "8": 624,
+        "9": 274,
+        "10": 146,
+        "11": 136,
+        "12": 104,
+        "13": 26,
+        "15": 2,
+        "32": 134
+      },
+      "uniqueTrajectories": 29,
+      "unique12PlyPrefixes": 1,
+      "searchTurns": 4480,
+      "depthZero": 0,
+      "actualNodes": 35644198,
+      "actualElapsedMs": 3882452.0860570027,
+      "interval": {
+        "pairs": 64,
+        "halfWidth": 0.23162019835251513,
+        "lower": 0.7683798016474849,
+        "upper": 1
+      },
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "cellId": "opening-2-0-base-base-32768",
+      "openingId": "opening-2-0",
+      "profiles": [
+        "base-32768",
+        "base-32768"
+      ],
+      "matched": true,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "35": 128
+      },
+      "completedDepthDistribution": {
+        "6": 896,
+        "7": 1152,
+        "8": 512,
+        "9": 452,
+        "10": 512,
+        "11": 226,
+        "12": 354,
+        "13": 96,
+        "32": 24
+      },
+      "uniqueTrajectories": 6,
+      "unique12PlyPrefixes": 1,
+      "searchTurns": 4224,
+      "depthZero": 0,
+      "actualNodes": 137627136,
+      "actualElapsedMs": 15459311.04901397,
+      "interval": {
+        "pairs": 64,
+        "halfWidth": 0.23162019835251513,
+        "lower": 0.7683798016474849,
+        "upper": 1
+      },
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "cellId": "opening-2-0-base-mobility-32768",
+      "openingId": "opening-2-0",
+      "profiles": [
+        "base-32768",
+        "mobility-32768"
+      ],
+      "matched": false,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "35": 128
+      },
+      "completedDepthDistribution": {
+        "6": 896,
+        "7": 1280,
+        "8": 384,
+        "9": 452,
+        "10": 512,
+        "11": 226,
+        "12": 354,
+        "13": 96,
+        "32": 24
+      },
+      "uniqueTrajectories": 6,
+      "unique12PlyPrefixes": 1,
+      "searchTurns": 4224,
+      "depthZero": 0,
+      "actualNodes": 137627136,
+      "actualElapsedMs": 15594397.87848998,
+      "interval": {
+        "pairs": 64,
+        "halfWidth": 0.23162019835251513,
+        "lower": 0.7683798016474849,
+        "upper": 1
+      },
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "cellId": "opening-2-0-mobility-base-32768",
+      "openingId": "opening-2-0",
+      "profiles": [
+        "mobility-32768",
+        "base-32768"
+      ],
+      "matched": false,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "53": 128
+      },
+      "completedDepthDistribution": {
+        "6": 1024,
+        "7": 896,
+        "8": 618,
+        "9": 1078,
+        "10": 1162,
+        "11": 1014,
+        "12": 332,
+        "13": 312,
+        "14": 6,
+        "15": 26,
+        "16": 10,
+        "17": 8,
+        "32": 42
+      },
+      "uniqueTrajectories": 32,
+      "unique12PlyPrefixes": 1,
+      "searchTurns": 6528,
+      "depthZero": 0,
+      "actualNodes": 212552830,
+      "actualElapsedMs": 21700431.548231065,
+      "interval": {
+        "pairs": 64,
+        "halfWidth": 0.23162019835251513,
+        "lower": 0.7683798016474849,
+        "upper": 1
+      },
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "cellId": "opening-2-0-mobility-mobility-32768",
+      "openingId": "opening-2-0",
+      "profiles": [
+        "mobility-32768",
+        "mobility-32768"
+      ],
+      "matched": true,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "55": 128
+      },
+      "completedDepthDistribution": {
+        "5": 128,
+        "6": 896,
+        "7": 768,
+        "8": 384,
+        "9": 1224,
+        "10": 712,
+        "11": 920,
+        "12": 386,
+        "13": 568,
+        "14": 226,
+        "15": 272,
+        "16": 10,
+        "17": 144,
+        "18": 22,
+        "20": 22,
+        "21": 26,
+        "32": 76
+      },
+      "uniqueTrajectories": 20,
+      "unique12PlyPrefixes": 1,
+      "searchTurns": 6784,
+      "depthZero": 0,
+      "actualNodes": 219945042,
+      "actualElapsedMs": 22674564.296217944,
+      "interval": {
+        "pairs": 64,
+        "halfWidth": 0.23162019835251513,
+        "lower": 0.7683798016474849,
+        "upper": 1
+      },
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "cellId": "opening-2-1-base-base-2048",
+      "openingId": "opening-2-1",
+      "profiles": [
+        "base-2048",
+        "base-2048"
+      ],
+      "matched": true,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 0,
+      "secondWins": 128,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "48": 128
+      },
+      "completedDepthDistribution": {
+        "3": 640,
+        "4": 896,
+        "5": 1280,
+        "6": 896,
+        "7": 1024,
+        "8": 512,
+        "9": 256,
+        "10": 256,
+        "11": 128
+      },
+      "uniqueTrajectories": 1,
+      "unique12PlyPrefixes": 1,
+      "searchTurns": 5888,
+      "depthZero": 0,
+      "actualNodes": 12058624,
+      "actualElapsedMs": 1102669.604963002,
+      "interval": {
+        "pairs": 64,
+        "halfWidth": 0.23162019835251513,
+        "lower": 0,
+        "upper": 0.23162019835251513
+      },
+      "hold": false,
+      "severeSide": "second",
+      "counterCandidate": false
+    },
+    {
+      "cellId": "opening-2-1-base-mobility-2048",
+      "openingId": "opening-2-1",
+      "profiles": [
+        "base-2048",
+        "mobility-2048"
+      ],
+      "matched": false,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "37": 54,
+        "39": 74
+      },
+      "completedDepthDistribution": {
+        "3": 128,
+        "4": 1624,
+        "5": 1120,
+        "6": 884,
+        "7": 488,
+        "8": 126,
+        "9": 100,
+        "10": 24,
+        "12": 8,
+        "13": 2,
+        "20": 2,
+        "22": 2,
+        "32": 120
+      },
+      "uniqueTrajectories": 24,
+      "unique12PlyPrefixes": 1,
+      "searchTurns": 4628,
+      "depthZero": 0,
+      "actualNodes": 9314342,
+      "actualElapsedMs": 862148.0571900038,
+      "interval": {
+        "pairs": 64,
+        "halfWidth": 0.23162019835251513,
+        "lower": 0.7683798016474849,
+        "upper": 1
+      },
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "cellId": "opening-2-1-mobility-base-2048",
+      "openingId": "opening-2-1",
+      "profiles": [
+        "mobility-2048",
+        "base-2048"
+      ],
+      "matched": false,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 0,
+      "secondWins": 128,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "36": 128
+      },
+      "completedDepthDistribution": {
+        "3": 640,
+        "4": 896,
+        "5": 470,
+        "6": 460,
+        "7": 438,
+        "8": 384,
+        "9": 128,
+        "10": 256,
+        "11": 202,
+        "12": 128,
+        "13": 128,
+        "23": 74,
+        "32": 148
+      },
+      "uniqueTrajectories": 9,
+      "unique12PlyPrefixes": 1,
+      "searchTurns": 4352,
+      "depthZero": 0,
+      "actualNodes": 8664102,
+      "actualElapsedMs": 807877.5983920028,
+      "interval": {
+        "pairs": 64,
+        "halfWidth": 0.23162019835251513,
+        "lower": 0,
+        "upper": 0.23162019835251513
+      },
+      "hold": false,
+      "severeSide": "second",
+      "counterCandidate": false
+    },
+    {
+      "cellId": "opening-2-1-mobility-mobility-2048",
+      "openingId": "opening-2-1",
+      "profiles": [
+        "mobility-2048",
+        "mobility-2048"
+      ],
+      "matched": true,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "39": 128
+      },
+      "completedDepthDistribution": {
+        "3": 128,
+        "4": 1408,
+        "5": 1280,
+        "6": 1002,
+        "7": 370,
+        "8": 262,
+        "9": 136,
+        "10": 56,
+        "12": 12,
+        "20": 6,
+        "32": 76
+      },
+      "uniqueTrajectories": 15,
+      "unique12PlyPrefixes": 1,
+      "searchTurns": 4736,
+      "depthZero": 0,
+      "actualNodes": 9657050,
+      "actualElapsedMs": 880635.7288640026,
+      "interval": {
+        "pairs": 64,
+        "halfWidth": 0.23162019835251513,
+        "lower": 0.7683798016474849,
+        "upper": 1
+      },
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "cellId": "opening-2-1-base-base-8192",
+      "openingId": "opening-2-1",
+      "profiles": [
+        "base-8192",
+        "base-8192"
+      ],
+      "matched": true,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 0,
+      "secondWins": 128,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "42": 68,
+        "44": 60
+      },
+      "completedDepthDistribution": {
+        "4": 572,
+        "5": 572,
+        "6": 896,
+        "7": 920,
+        "8": 976,
+        "9": 662,
+        "10": 382,
+        "11": 34,
+        "12": 70,
+        "13": 14,
+        "14": 14,
+        "18": 12,
+        "21": 2,
+        "22": 4,
+        "32": 110
+      },
+      "uniqueTrajectories": 23,
+      "unique12PlyPrefixes": 1,
+      "searchTurns": 5240,
+      "depthZero": 0,
+      "actualNodes": 42048376,
+      "actualElapsedMs": 4307182.986798989,
+      "interval": {
+        "pairs": 64,
+        "halfWidth": 0.23162019835251513,
+        "lower": 0,
+        "upper": 0.23162019835251513
+      },
+      "hold": false,
+      "severeSide": "second",
+      "counterCandidate": false
+    },
+    {
+      "cellId": "opening-2-1-base-mobility-8192",
+      "openingId": "opening-2-1",
+      "profiles": [
+        "base-8192",
+        "mobility-8192"
+      ],
+      "matched": false,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "29": 128
+      },
+      "completedDepthDistribution": {
+        "4": 128,
+        "5": 640,
+        "6": 1280,
+        "7": 364,
+        "8": 506,
+        "9": 208,
+        "10": 80,
+        "11": 64,
+        "12": 14,
+        "13": 2,
+        "14": 4,
+        "32": 166
+      },
+      "uniqueTrajectories": 36,
+      "unique12PlyPrefixes": 1,
+      "searchTurns": 3456,
+      "depthZero": 0,
+      "actualNodes": 27043120,
+      "actualElapsedMs": 3090880.5265909964,
+      "interval": {
+        "pairs": 64,
+        "halfWidth": 0.23162019835251513,
+        "lower": 0.7683798016474849,
+        "upper": 1
+      },
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "cellId": "opening-2-1-mobility-base-8192",
+      "openingId": "opening-2-1",
+      "profiles": [
+        "mobility-8192",
+        "base-8192"
+      ],
+      "matched": false,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 0,
+      "secondWins": 128,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "38": 68,
+        "42": 60
+      },
+      "completedDepthDistribution": {
+        "4": 572,
+        "5": 708,
+        "6": 820,
+        "7": 1006,
+        "8": 634,
+        "9": 380,
+        "10": 220,
+        "11": 184,
+        "12": 108,
+        "13": 22,
+        "14": 8,
+        "16": 2,
+        "17": 18,
+        "31": 10,
+        "32": 156
+      },
+      "uniqueTrajectories": 30,
+      "unique12PlyPrefixes": 1,
+      "searchTurns": 4848,
+      "depthZero": 0,
+      "actualNodes": 38684360,
+      "actualElapsedMs": 4039263.821118011,
+      "interval": {
+        "pairs": 64,
+        "halfWidth": 0.23162019835251513,
+        "lower": 0,
+        "upper": 0.23162019835251513
+      },
+      "hold": false,
+      "severeSide": "second",
+      "counterCandidate": false
+    },
+    {
+      "cellId": "opening-2-1-mobility-mobility-8192",
+      "openingId": "opening-2-1",
+      "profiles": [
+        "mobility-8192",
+        "mobility-8192"
+      ],
+      "matched": true,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "31": 128
+      },
+      "completedDepthDistribution": {
+        "4": 128,
+        "5": 640,
+        "6": 1024,
+        "7": 706,
+        "8": 556,
+        "9": 156,
+        "10": 202,
+        "11": 38,
+        "12": 24,
+        "15": 70,
+        "16": 6,
+        "32": 162
+      },
+      "uniqueTrajectories": 26,
+      "unique12PlyPrefixes": 1,
+      "searchTurns": 3712,
+      "depthZero": 0,
+      "actualNodes": 29139656,
+      "actualElapsedMs": 3235280.5848209946,
+      "interval": {
+        "pairs": 64,
+        "halfWidth": 0.23162019835251513,
+        "lower": 0.7683798016474849,
+        "upper": 1
+      },
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    },
+    {
+      "cellId": "opening-2-1-base-base-32768",
+      "openingId": "opening-2-1",
+      "profiles": [
+        "base-32768",
+        "base-32768"
+      ],
+      "matched": true,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 0,
+      "secondWins": 128,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "38": 128
+      },
+      "completedDepthDistribution": {
+        "6": 256,
+        "7": 640,
+        "8": 640,
+        "9": 614,
+        "10": 640,
+        "11": 640,
+        "12": 900,
+        "14": 124,
+        "15": 62,
+        "16": 30,
+        "23": 62
+      },
+      "uniqueTrajectories": 4,
+      "unique12PlyPrefixes": 1,
+      "searchTurns": 4608,
+      "depthZero": 0,
+      "actualNodes": 150994944,
+      "actualElapsedMs": 14942907.042767994,
+      "interval": {
+        "pairs": 64,
+        "halfWidth": 0.23162019835251513,
+        "lower": 0,
+        "upper": 0.23162019835251513
+      },
+      "hold": false,
+      "severeSide": "second",
+      "counterCandidate": false
+    },
+    {
+      "cellId": "opening-2-1-base-mobility-32768",
+      "openingId": "opening-2-1",
+      "profiles": [
+        "base-32768",
+        "mobility-32768"
+      ],
+      "matched": false,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 0,
+      "secondWins": 128,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "42": 128
+      },
+      "completedDepthDistribution": {
+        "6": 256,
+        "7": 896,
+        "8": 384,
+        "9": 640,
+        "10": 768,
+        "11": 768,
+        "12": 768,
+        "13": 640
+      },
+      "uniqueTrajectories": 1,
+      "unique12PlyPrefixes": 1,
+      "searchTurns": 5120,
+      "depthZero": 0,
+      "actualNodes": 167772160,
+      "actualElapsedMs": 16715972.08878495,
+      "interval": {
+        "pairs": 64,
+        "halfWidth": 0.23162019835251513,
+        "lower": 0,
+        "upper": 0.23162019835251513
+      },
+      "hold": false,
+      "severeSide": "second",
+      "counterCandidate": false
+    },
+    {
+      "cellId": "opening-2-1-mobility-base-32768",
+      "openingId": "opening-2-1",
+      "profiles": [
+        "mobility-32768",
+        "base-32768"
+      ],
+      "matched": false,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 0,
+      "secondWins": 128,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "50": 128
+      },
+      "completedDepthDistribution": {
+        "6": 256,
+        "7": 958,
+        "8": 838,
+        "9": 714,
+        "10": 494,
+        "11": 670,
+        "12": 1034,
+        "13": 718,
+        "14": 280,
+        "15": 76,
+        "16": 20,
+        "17": 4,
+        "18": 8,
+        "32": 74
+      },
+      "uniqueTrajectories": 30,
+      "unique12PlyPrefixes": 1,
+      "searchTurns": 6144,
+      "depthZero": 0,
+      "actualNodes": 198957612,
+      "actualElapsedMs": 20119247.648836013,
+      "interval": {
+        "pairs": 64,
+        "halfWidth": 0.23162019835251513,
+        "lower": 0,
+        "upper": 0.23162019835251513
+      },
+      "hold": false,
+      "severeSide": "second",
+      "counterCandidate": false
+    },
+    {
+      "cellId": "opening-2-1-mobility-mobility-32768",
+      "openingId": "opening-2-1",
+      "profiles": [
+        "mobility-32768",
+        "mobility-32768"
+      ],
+      "matched": true,
+      "pairs": 64,
+      "games": 128,
+      "firstWins": 128,
+      "secondWins": 0,
+      "unresolved": 0,
+      "stops": {
+        "normal-terminal": 128
+      },
+      "plyDistribution": {
+        "51": 128
+      },
+      "completedDepthDistribution": {
+        "6": 512,
+        "7": 1152,
+        "8": 698,
+        "9": 1144,
+        "10": 164,
+        "11": 1376,
+        "12": 596,
+        "13": 64,
+        "14": 276,
+        "15": 6,
+        "16": 50,
+        "17": 14,
+        "32": 220
+      },
+      "uniqueTrajectories": 26,
+      "unique12PlyPrefixes": 1,
+      "searchTurns": 6272,
+      "depthZero": 0,
+      "actualNodes": 198730910,
+      "actualElapsedMs": 20174576.94102993,
+      "interval": {
+        "pairs": 64,
+        "halfWidth": 0.23162019835251513,
+        "lower": 0.7683798016474849,
+        "upper": 1
+      },
+      "hold": false,
+      "severeSide": "first",
+      "counterCandidate": true
+    }
+  ],
+  "newGamesDuringAggregation": 0,
+  "newProofSearches": 0,
+  "assessment": "REQUIRES-COUNTERPLAY-AND-ROBUSTNESS-REVIEW",
+  "initialTheoreticalValue": "UNKNOWN"
+}
