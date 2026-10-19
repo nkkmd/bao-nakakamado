@@ -1,0 +1,85 @@
+name: v0.10.0 practical balance study 019
+on:
+  push:
+    branches: ['research/v010-balance019-20261019']
+permissions:
+  contents: read
+jobs:
+  preflight:
+    if: startsWith(github.event.head_commit.message, 'Start v0.10.0 balance study 019 formal') && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --test tools/v010-balance019/check.test.cjs
+      - run: node tools/v010-balance019/study.cjs manifest
+      - run: test "$(git ls-remote origin refs/heads/results/v010-balance-study-019 | cut -f1)" = "$GITHUB_SHA"
+      - run: git diff --exit-code 57c7936a5c8d6e80f3979571ae9aa9b3c29e88fa -- prototype trials tools/v010-balance tools/v010-followup
+  matches:
+    needs: preflight
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 108
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node tools/v010-balance019/study.cjs shard "$RUNNER_TEMP/matches" "${{ matrix.shard }}"
+      - name: Completed records audit only, zero new games
+        run: node tools/v010-balance019/study.cjs shard "$RUNNER_TEMP/matches" "${{ matrix.shard }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v010-balance019-${{ matrix.shard }}
+          path: ${{ runner.temp }}/matches/
+          retention-days: 90
+  aggregate:
+    needs: matches
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: v010-balance019-*
+          merge-multiple: true
+          path: ${{ runner.temp }}/matches
+      - run: node tools/v010-balance019/study.cjs aggregate "$RUNNER_TEMP/matches"
+      - name: Save original bytes, summary and receipt to precreated source branch
+        env:
+          STUDY_SOURCE_SHA: ${{ github.sha }}
+          STUDY_RUN_ID: ${{ github.run_id }}
+        run: |
+          test "$(git ls-remote origin refs/heads/results/v010-balance-study-019 | cut -f1)" = "$GITHUB_SHA"
+          python3 tools/v010-followup/archive.py "$RUNNER_TEMP/matches" doc/v010-balance019/completed
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git switch -c results/v010-balance-study-019
+          git add doc/v010-balance019/completed
+          git commit -m 'Preserve study 019 practical balance original records'
+          git push origin HEAD:refs/heads/results/v010-balance-study-019
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v010-balance019-summary
+          path: |
+            ${{ runner.temp }}/matches/summary.json
+            doc/v010-balance019/completed/
+          retention-days: 90

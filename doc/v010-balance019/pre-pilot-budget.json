@@ -1,0 +1,27 @@
+{
+  "classification": "PRE-PILOT-OPERATIONS-ESTIMATE-NOT-GUARANTEE",
+  "basis": "Study018 preserved pilot maximum pair cost per node budget, 1.2 multiplier, 60s setup allowance per shard, 40min preflight/collect cap.",
+  "basisSha256": "105d4e25933430686272e6c774862b160f484517b1887a18d5e4763c47f9d1b1",
+  "priorMaxPairMsByNodes": {
+    "2048": 22039.141049,
+    "8192": 86593.76533099999,
+    "32768": 469286.826607
+  },
+  "costMultiplier": 1.2,
+  "shards": 28,
+  "jobTimeoutMinutes": 24,
+  "maxParallel": 4,
+  "pilotRunnerCapHours": 12,
+  "projectedRunnerHours": 11.150608705107999,
+  "projectedMaxJobMinutes": 22.82569683383999,
+  "configuredRunnerUpperHours": 11.866666666666667,
+  "decision": "READY-FOR-PILOT",
+  "formalNotSealed": true,
+  "previousPartition": {
+    "shards": 26,
+    "timeoutMinutes": 24,
+    "projectedMaxJobMinutes": 24.11678931948,
+    "decision": "HOLD"
+  },
+  "reason": "26-way projection exceeded 24min per job; 28 balanced shards retain all 156 cells and 312 games within 12 runner hours."
+}
