@@ -8,6 +8,12 @@
 
 調査019の対局・保存・固定原記録の独立再監査・別実装集計・敗局frontier・報告整理が完了。結果は[PR #61](https://github.com/nkkmd/bao-nakakamado/pull/61)で確認する。当初の指示ではmain統合前で停止した。その後の2026年10月20日の追加指示により、main統合と統合後監査が許可された。統合前の基準mainはPR #60統合commit `57c7936a5c8d6e80f3979571ae9aa9b3c29e88fa`。最新の統合commit・CI・レビュー・統合後監査の状態はPR #61とGitHub Actionsを参照し、未確認を成功と記録しない。
 
+## main統合・統合後監査の完了
+
+[PR #61](https://github.com/nkkmd/bao-nakakamado/pull/61)はmain統合済み。統合commitは `a05137477cebe18f043b5f2b54f24616a15f2ce4`。最終head `f964a38ed2e683847307b5c0af88ac79b55b7a2c` の全22チェック成功・自動レビュー指摘0を確認して統合した。統合後も旧14監査・017／018／019結果監査の全17件が成功。[固定監査記録](v010-balance019/main019-postmerge-audit.json)。
+
+統合後のtreeは検証済みPRと同一で、固定source・manifest・plan・公開実装を保持し、正式原3ファイルも固定結果commitと同一Git blobだった。統合commit・結果commit・正式計測sourceを混同しない。上記の統合前停止・追加許可は経緯として保持する。
+
 ## 正式sourceと原記録
 
 - [run 39241595646](https://github.com/nkkmd/bao-nakakamado/actions/runs/39241595646)、attempt=1、全54 job成功。
