@@ -17,6 +17,7 @@ line();line('正式source `bf6e7724b663c2918866b5c9637f6547efe7e484`、結果com
 line();line('原ZIP・summary・preservation receiptの3ファイルを固定結果commitと同一Git blobで保存。原1,353ファイルのSHA・source/run/manifest・全局の通常エンジン再生・再生成summaryのbyte一致を確認した。[独立再監査receipt](v010-balance019/independent-reaudit.json)。別実装Pythonも全156セルの勝敗・停止・seed・交換対応・探索量・深度・重複・同時区間を原gzipから再集計して一致。新規対局・証明探索0。')
 line();line('全54 jobの実測合計は約20.97 runner時間で、96時間上限内。[job時刻と成功の監査](v010-balance019/formal-run-audit.json)。')
 line();line('原ZIP SHA-256：`'+a['archiveSha256']['original-records-001.zip']+'`。試走312局・旧研究を正式標本へ合算していない。公開ルール・初期配置・公開AI・旧固定sourceと原記録は保持する。')
+line();line('調査019は[PR #61](https://github.com/nkkmd/bao-nakakamado/pull/61)、commit `a05137477cebe18f043b5f2b54f24616a15f2ce4` でmain統合済み。統合後の旧14監査と017／018／019結果監査の全17件が成功した。[統合後監査記録](v010-balance019/main019-postmerge-audit.json)。技術的な統合・監査完了を、ゲーム全体の破綻判定や初期理論値の確定と混同しない。')
 line();line('## 読み方と標本の限界')
 line();line('共通prefixは7左→5左。3手目6左／6右を強制した2根では4手目以降をAIが選び、4手目まで強制した11根では5手目以降をAIが選ぶ。前者も初期配置からの自然対局ではない。両群を合算しない。')
 line();line('B＝base、M＝mobility。順序は先攻→後攻。B→B／M→Mは同方針の条件付き先後比較、B→M／M→Bは相手方針変更の診断で、純粋な手番効果と呼ばない。各表の数値は先攻勝利局数／8局。8は先攻全勝、0は後攻全勝。座席交換2局は同じseed・同じ正規化棋譜・同じ先後勝者で、独立標本単位は4交換組。')
